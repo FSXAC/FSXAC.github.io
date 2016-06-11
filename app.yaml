@@ -25,12 +25,12 @@ handlers:
   static_files: static/\1
   upload: static/(.*\.(gif|png|jpg|ico|bmp|html|css|js))
 
-- url: /home
+- url: /
   static_files: static/landing.html
   upload: static/landing.html
 
 # Dynamic
-- url: /
+- url: /home
   script: main.app
 
 - url: /login

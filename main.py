@@ -22,7 +22,8 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     loader = jinja2.FileSystemLoader('templates'),
     trim_blocks = True)
 
-RANDOM_PYTHON = readSplash()
+##RANDOM_PYTHON = readSplash()
+RANDOM_PYTHON = ["Random message generator is broken :P"]
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -34,5 +35,5 @@ class MainHandler(webapp2.RequestHandler):
         self.response.out.write(home_template.render(template_vars))
 
 app = webapp2.WSGIApplication(routes = [
-    (r'/', MainHandler)
+    (r'/home', MainHandler)
     ], debug=True)
