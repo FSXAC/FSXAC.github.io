@@ -1,0 +1,47 @@
+#TODO: Responsive navbar
+
+application: moochhe
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+# Static
+- url: /img
+  static_dir: static/img
+
+- url: /css
+  static_dir: static/css
+
+- url: /txt
+  static_dir: static/txt
+
+- url: /(.*\.(gif|png|jpg|ico|bmp|html|css|js))
+  static_files: static/\1
+  upload: static/(.*\.(gif|png|jpg|ico|bmp|html|css|js))
+
+- url: /static/(.*\.(gif|png|jpg|ico|bmp|html|css|js))
+  static_files: static/\1
+  upload: static/(.*\.(gif|png|jpg|ico|bmp|html|css|js))
+
+# Dynamic
+- url: /
+  script: main.app
+
+- url: /login
+  script: login.app
+
+- url: /test
+  script: test.app
+
+# 404
+- url: /.*
+  static_files: static/not_found.html
+  upload: static/not_found.html
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest

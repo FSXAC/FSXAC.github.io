@@ -1,0 +1,182 @@
+﻿<html>
+<head>
+	<title>Home | Muchen He</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content = "IE=edge" />
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />
+	<link rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Raleway:300' >
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="/img/icon.png" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div>
+		<!-- Top -->
+		<header>
+			<a href = "/login"><img class = "headshot circular" src = "http://i.imgur.com/g1UoD1D.jpg" alt = "face"></img></a>
+			<h1 class = "title">MUCHEN HE</h1>
+			<a href = "/" class = "navlink"><h3><em>{{isPython}}</em></h3></a>
+			<p>Second Year Applied Science Undergraduate, University of British Columbia</p>
+		</header>
+
+		<!-- Nav bar here -->
+		<nav class = "navbar home-nav">
+			<ul class = "nav home-nav">
+				<li class = "nav home-nav"><a class = "navlink" id = "navlink_about_me"
+					title = "About Me" href = "#about_me">About Me</a></li>
+					<li class = "nav home-nav"><a class = "navlink" id = "navlink_recent_proj"
+						title = "Recent Projects" href = "#recent_proj">Recent Projects</a></li>
+				<li class = "nav home-nav"><a class = "navlink" id = "navlink_contact"
+					title = "Contact" href = "#contact_card">Contact</a></li>
+			</ul>
+		</nav>
+
+		<!--Contents begin here-->
+		<!-- About me -->
+		<div class = "row">
+			<div class = "col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<div class = "content" id = "about_me">
+					<h2>About Me</h2>
+					<hr>
+					<div class = "content-inner no-border">
+						<p>Stuff is here and this is a placeholder</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Recent Project -->
+			<div class = "col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<div class = "content" id = "recent_proj">
+					<h2>Recent Projects</h2>
+					<hr>
+					<div class = "content-inner">
+						<ul class = "nav recent-projects-nav">
+							<a class = "navlink" href = "/login"><li class = "nav recent-projects-nav">
+								<h3>Simple Login</h3>
+								<p>Made using home made python script</p>
+							</li></a>
+							<a class = "navlink" href = "#"><li class = "nav recent-projects-nav">
+								<h3>Guestbook</h3>
+								<p>Still WIP, link does not work</p>
+							</li></a>
+							<a class = "navlink" href = "#"><li class = "nav recent-projects-nav">
+								<h3>Placeholder Link</h3>
+								<p>This is just a placeholder, nothing special</p>
+							</li></a>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Carousel -->
+		<div id = "main_carousel" class = "carousel slide">
+		  <ol class = "carousel-indicators">
+		    <li data-target = "#main_carousel" data-slide-to = "0" class = "active"></li>
+		    <li data-target = "#main_carousel" data-slide-to = "1"></li>
+		    <li data-target = "#main_carousel" data-slide-to = "2"></li>
+		    <li data-target = "#main_carousel" data-slide-to = "3"></li>
+		  </ol>
+		  <div class = "carousel-inner">
+		    <div class = "item active">
+		      <img src = "http://i.imgur.com/u5GM6iu.jpg" alt = "Paul"></img>
+		    </div>
+		    <div class = "item">
+		      <img src = "http://i.imgur.com/oUpZbg7.jpg" alt = "Zoy"></img>
+		    </div>
+		    <div class = "item">
+		      <img src = "http://i.imgur.com/nvOtIDW.jpg" alt = "Pink"></img>
+		    </div>
+		    <div class = "item">
+		      <img src = "http://i.imgur.com/SBUaZz1.jpg" alt = "Closed"></img>
+		    </div>
+		  </div>
+
+		  <!-- Carousel controls -->
+		  <a class = "carousel-control left" href = "#main_carousel" data-slide = "prev">
+		    <span class = "icon-prev"></span>
+		  </a>
+		  <a class = "carousel-control right" href = "#main_carousel" data-slide = "next">
+		    <span class = "icon-next"></span>
+		  </a>
+		</div>
+
+
+		<!-- <div id = "construction_sign" onclick = "disableConstructionSign()">
+		CURRENTLY UNDER DEVELOPMENT <br/> (click to close)
+		</div> -->
+
+		<!-- Footer -->
+		<footer>
+			<table class = "card" id = "contact_card">
+			  <tr>
+			    <th>Contact:</th>
+			    <td>Muchen (Mansur) He</td>
+			  </tr>
+			  <tr>
+			    <th rowspan="2">Email:</th>
+			    <td><a href="mailto:mansurhe@outlook.com">mansurhe@outlook.com</a></td>
+			  </tr>
+			  <tr>
+			    <td><a href="mailto:m.he@alumni.ubc.ca">m.he@alumni.ubc.ca</a></td>
+			  </tr>
+				<tr>
+					<th>Phone:</th>
+					<td>(778) 952-9222</td>
+				</tr>
+			</table>
+
+			<div>
+				<a role="button" class="btn btn-default btn-circular btn-lg" href = "https://www.facebook.com/FSXAC">
+					<i class="fa fa-facebook"></i></a>
+				<a role="button" class="btn btn-default btn-circular btn-lg" href = "https://github.com/FSXAC">
+					<i class="fa fa-github"></i></a>
+				<a role="button" class="btn btn-default btn-circular btn-lg" href = "https://www.youtube.com/fsxaircanada01">
+					<i class="fa fa-youtube"></i></a>
+			</div>
+
+			<hr/>
+
+			<div>
+				<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+				<img alt="Creative Commons License" style="border-width:0; height:1.5em;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+				</a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This website</span> by
+				<span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Muchen He</span>
+				is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+				Creative Commons Attribution-ShareAlike 4.0 International License</a>
+			</div>
+		</footer>
+	</div>
+
+	<!-- Under construction sign js -->
+	<!-- <script>
+		var isUnderConstruction = false;
+		var construction_sign = document.getElementById("construction_sign");
+
+		if (isUnderConstruction) {
+			construction_sign.style.visibility = "visible";
+		} else {
+			construction_sign.style.visibility = "hidden";
+		}
+
+		function disableConstructionSign() {
+			construction_sign.style.visibility = "hidden";
+		}
+	</script> -->
+
+	<!-- Make carousel move on its on -->
+	<script>
+		$('#main_carousel').carousel({
+		  interval: 4000,
+		  pause: "false"
+		});
+	</script>
+
+</body>
+</html>

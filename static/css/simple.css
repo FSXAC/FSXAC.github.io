@@ -1,0 +1,83 @@
+/*Login Page*/
+header {
+	color: #011123;
+	border: 0 solid #03254B;
+	border-bottom-width: 8px;
+	text-align: center;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	color: #011123
+	font-size: 1.5em;
+}
+
+h1 {
+	font-size: 4em;
+}
+
+input {
+	font-size: 1.2em;
+	width: 100%;
+	padding: 5px;
+}
+
+.login {
+	width: 500px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 1.2em;
+}
+
+/*Collapsable login panel*/
+@media screen and (max-width: 520px) {
+	.login {
+		width: 100%;
+	}
+}
+
+.invisible {
+	display: none;
+}
+
+footer {
+	background-color: #05182E;
+	color: white;
+	text-align: center;
+
+	border: 0 solid #03254B;
+	border-top-width: 8px;
+	padding: 10px;
+	margin-top: 8px;
+}
+
+table.card {
+	padding: 10px;
+	color: white;
+	margin: auto;
+}
+
+th, td {
+    padding: 5px;
+}
+
+th {
+	text-align: right;
+}
+
+.btn-circular {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+	vertical-align: middle;
+  padding: 0;
+	padding-top: 8px;
+  font-size: 1.5em;
+  border-radius: 20px;
+	margin: 8px;
+}
+
+hr {
+	margin: 20px;
+}

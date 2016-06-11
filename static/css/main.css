@@ -1,0 +1,152 @@
+header {
+	color: #011123;
+	border: 0 solid #03254B;
+	border-bottom-width: 8px;
+	text-align: center;
+}
+
+img.circular{
+	margin: 10px;
+	border-radius: 150px;
+}
+
+img.headshot {
+	width: 200px;
+}
+
+h1, h2, h3, p {
+	margin: 10px;
+}
+
+
+h1 {
+	font-size: 4em;
+}
+
+h2 {
+	font-size: 2.5em;
+}
+
+ul.home-nav {
+	background-color: #CCC;
+	color: #011123;
+	text-align: center;
+}
+
+li.home-nav {
+	display: inline-block;
+	background-color: #CCC;
+}
+
+li.home-nav:hover {
+	color: white;
+}
+
+li.recent-projects-nav:hover {
+	background-color: #CCC;
+}
+
+a.navlink {
+	color: #011123;
+	text-decoration: none;
+}
+
+.navbar {
+	margin-bottom: 8px;
+	border: 0;
+}
+
+/*Collapsable nav bar*/
+@media screen and (max-width: 600px) {
+	nav.home-nav ul.home-nav li.home-nav {
+		width: 100%;
+		text-align: left;
+		box-sizing: border-box;
+	}
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	color: #011123;
+	font-size: 1.5em;
+}
+
+.row {
+	margin: 0;
+}
+
+.content {
+	margin: 10px 0;
+	border: 1px solid #CCC;
+	border-radius: 10px;
+}
+
+.content-inner {
+	margin: 10px;
+	border: 1px solid #EEE;
+}
+
+footer {
+	background-color: #05182E;
+	color: white;
+	text-align: center;
+
+	border: 0 solid #03254B;
+	border-top-width: 8px;
+	padding: 10px;
+	margin-top: 8px;
+}
+
+table.card {
+	padding: 10px;
+	color: white;
+	margin: auto;
+}
+
+th, td {
+    padding: 5px;
+}
+
+th {
+	text-align: right;
+}
+
+.btn-circular {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+	vertical-align: middle;
+  padding: 0;
+	padding-top: 8px;
+  font-size: 1.5em;
+  border-radius: 20px;
+	margin: 8px;
+}
+
+hr {
+	margin: 10px;
+}
+
+#construction_sign {
+	background-color: #440000;
+	color: #FF0000;
+	border: 3px solid #660000;
+
+	font-family: 'Raleway', sans-serif;
+	font-size: 26px;
+
+	position: fixed;
+	text-align: center;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+
+	margin:auto;
+	padding: 15px;
+
+	width: 300px;
+	height: 150px;
+
+	cursor: pointer;
+}
