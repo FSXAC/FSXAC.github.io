@@ -103,6 +103,10 @@ table.card {
 	margin: auto;
 }
 
+table.card-dark {
+	color: #05182E;
+}
+
 th, td {
     padding: 5px;
 }
