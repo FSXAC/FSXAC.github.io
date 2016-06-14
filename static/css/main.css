@@ -5,6 +5,23 @@ header {
 	text-align: center;
 }
 
+/*LANDING PAGE CSS*/
+.landing {
+	margin: 5px 0px;
+	width: 600px;
+}
+
+@media screen and (max-width: 600px) {
+	.landing {
+		width: 100%;
+		margin: 5px;
+	}
+}
+
+.header-landing {
+	margin-bottom: 10px;
+}
+
 img.circular{
 	margin: 10px;
 	border-radius: 60px;
