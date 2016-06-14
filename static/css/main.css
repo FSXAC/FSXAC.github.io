@@ -57,7 +57,7 @@ a.navlink {
 }
 
 /*Collapsable nav bar*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
 	nav.home-nav ul.home-nav li.home-nav {
 		width: 100%;
 		text-align: left;
