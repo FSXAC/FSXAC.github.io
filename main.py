@@ -3,7 +3,9 @@ import jinja2
 import webapp2
 import random
 
-def readSplash(directory = "static/txt/splash.txt"):
+PROJECT_DIR = os.path.dirname(__file__)
+
+def readSplash(directory = PROJECT_DIR + "/static/txt/splash.txt"):
     splash_file = open(directory, "r")
     splash_list = []
     
@@ -22,8 +24,8 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     loader = jinja2.FileSystemLoader('templates'),
     trim_blocks = True)
 
-##RANDOM_PYTHON = readSplash()
-RANDOM_PYTHON = ["Random message generator is broken :P"]
+RANDOM_PYTHON = readSplash()
+#RANDOM_PYTHON = ["Random message generator is broken :P"]
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -31,6 +33,7 @@ class MainHandler(webapp2.RequestHandler):
         
         template_vars = {
             "isPython": random.choice(RANDOM_PYTHON)
+            #"isPython": PROJECT_DIR
             }
         self.response.out.write(home_template.render(template_vars))
 

@@ -1,17 +1,17 @@
-import os
-import jinja2
-import webapp2
+import random
 
-JINJA_ENVIRONMENT = jinja2.Environment(
-    autoescape = True,
-    loader = jinja2.FileSystemLoader('templates'),
-    trim_blocks = True)
+def readSplash(directory = "static/txt/splash.txt"):
+    splash_file = open(directory, "r")
+    splash_list = []
 
-class MainHandler(webapp2.RequestHandler):
-    def get(self):
-        home_template = JINJA_ENVIRONMENT.get_template("_simple.html")
-        self.response.out.write(home_template.render())
+    if not splash_file.closed:
+        # read file
+        line = splash_file.readline()
+        while line != "":
+            splash_list.append(line)
+            line = splash_file.readline()
 
-app = webapp2.WSGIApplication(routes = [
-    (r'/test', MainHandler)
-    ], debug=True)
+    splash_file.close()
+    return splash_list
+
+print(random.choice(readSplash()))
