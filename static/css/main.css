@@ -7,11 +7,11 @@ header {
 
 img.circular{
 	margin: 10px;
-	border-radius: 150px;
+	border-radius: 60px;
 }
 
 img.headshot {
-	width: 200px;
+	width: 120px;
 }
 
 h1, h2, h3, p {
@@ -20,7 +20,7 @@ h1, h2, h3, p {
 
 
 h1 {
-	font-size: 4em;
+	font-size: 3em;
 }
 
 h2 {
