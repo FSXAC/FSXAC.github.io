@@ -44,6 +44,7 @@ h2 {
 	font-size: 2.5em;
 }
 
+
 ul.home-nav {
 	background-color: #CCC;
 	color: #011123;
@@ -61,6 +62,10 @@ li.home-nav:hover {
 
 li.recent-projects-nav:hover {
 	background-color: #CCC;
+}
+
+a {
+	color: inherit;
 }
 
 a.navlink {
@@ -101,6 +106,15 @@ body {
 .content-inner {
 	margin: 10px;
 	border: 1px solid #EEE;
+}
+
+.flaired {
+	display: inline-block;
+	margin: 0;
+}
+
+.label-inline {
+	display: inline-block;
 }
 
 footer {
