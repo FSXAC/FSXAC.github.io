@@ -90,6 +90,7 @@ body {
 	font-family: 'Raleway', sans-serif;
 	color: #011123;
 	font-size: 1.5em;
+	overflow-x: hidden;
 }
 
 .row {

@@ -13,6 +13,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="js/landing.js"></script>
 </head>
 
 <body>
@@ -22,45 +23,39 @@
 		<p>Second Year Engineering Undergraduate, University of British Columbia</p>
 	</header>
 
-	<div style = "background: #112">
-		<canvas id="demo-canvas"></canvas>
-		<div class = "content landing" style = "margin: auto">
-			<h2>Hello and Welcome!</h2>
-			<hr/>
-			<div class = "content-inner">
-				<table class = "card card-dark" id = "contact_card">
-				  <tr>
-				    <th>Contact:</th>
-				    <td>Muchen (Mansur) He</td>
-				  </tr>
-				  <tr>
-				    <th rowspan="2">Email:</th>
-				    <td><i class="fa fa-external-link" aria-hidden="true"></i> <a href="mailto:i@mansurhe.com">i@mansurhe.com</a></td>
-				  </tr>
-				  <tr>
-				    <td><i class="fa fa-external-link" aria-hidden="true"></i> <a href="mailto:m.he@alumni.ubc.ca">m.he@alumni.ubc.ca</a></td>
-				  </tr>
-					<tr>
-						<th>Phone:</th>
-						<td>(778) 952-9222</td>
-					</tr>
-					<tr>
-						<th rowspan="2">Address:</th>
-						<td>MD0544 2205 Lower Mall</td>
-					</tr>
-					<tr>
-						<td>Vancouver, BC, V6T 1Z4</td>
-					</tr>
-				</table>
-				<ul class = "nav home-nav">
-					<li class = "nav home-nav"><a class = "navlink" title = "About Me" href = "/home">Continue to Home</a></li>
-				</ul>
-			</div>
+	<canvas id = "landing-fx" style = "position:absolute; z-index: -1;"></canvas>
+	<div class = "content landing" style = "margin: auto">
+		<h2>Hello and Welcome!</h2>
+		<hr/>
+		<div class = "content-inner">
+			<table class = "card card-dark" id = "contact_card">
+			  <tr>
+			    <th>Contact:</th>
+			    <td>Muchen (Mansur) He</td>
+			  </tr>
+			  <tr>
+			    <th rowspan="2">Email:</th>
+			    <td><i class="fa fa-external-link" aria-hidden="true"></i> <a href="mailto:i@mansurhe.com">i@mansurhe.com</a></td>
+			  </tr>
+			  <tr>
+			    <td><i class="fa fa-external-link" aria-hidden="true"></i> <a href="mailto:m.he@alumni.ubc.ca">m.he@alumni.ubc.ca</a></td>
+			  </tr>
+				<tr>
+					<th>Phone:</th>
+					<td>(778) 952-9222</td>
+				</tr>
+				<tr>
+					<th rowspan="2">Address:</th>
+					<td>MD0544 2205 Lower Mall</td>
+				</tr>
+				<tr>
+					<td>Vancouver, BC, V6T 1Z4</td>
+				</tr>
+			</table>
+			<ul class = "nav home-nav">
+				<li class = "nav home-nav"><a class = "navlink" title = "About Me" href = "/home">Continue to Home</a></li>
+			</ul>
 		</div>
 	</div>
-	<script src="/js/TweenLite.min.js"></script>
-	<script src="/js/EasePack.min.js"></script>
-	<script src="/js/rAF.js"></script>
-	<script src="/js/landing.js"></script>
 </body>
 </html>
