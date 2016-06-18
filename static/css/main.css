@@ -79,13 +79,6 @@ li.recent-projects-nav:hover {
 	}
 }
 
-/*content section boxes*/
-/*.content {
-	border: 1px solid #CCC;
-	border-radius: 8px;
-}
-.content-inner {border: 1px solid #EEE}*/
-
 /*contact cards*/
 .card {
 	padding: 8px;
@@ -106,6 +99,25 @@ li.recent-projects-nav:hover {
   font-size: 1.5em;
   border-radius: 20px;
 	margin: 8px;
+}
+
+/*login page*/
+.login-input {
+	font-size: 1.2em;
+	width: 100%;
+	padding: 5px;
+}
+.login {
+	width: 500px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 1.2em;
+}
+@media screen and (max-width: 520px) {
+	.login {
+		width: 100%;
+	}
 }
 
 /*Property classes*/

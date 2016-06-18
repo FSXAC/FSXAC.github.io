@@ -1,4 +1,4 @@
-{% extends "_simple_nofooter.html" %}
+{% extends "_simple.html" %}
 {% block st_content %}
 <div class = "panel panel-default login">
   <div class = "panel-body">
@@ -6,7 +6,7 @@
     <form action = "/home">
       <p>Your username is {{login_username}}</p>
       <p>Your password is {{login_password}}</p>
-      <p class="submit"><input type="submit" name="commit" value="Return"></p>
+      <p class="submit"><input class = "login-input" type="submit" name="commit" value="Return"></p>
     </form>
   </div>
 </div>
