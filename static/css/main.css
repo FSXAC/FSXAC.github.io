@@ -126,7 +126,7 @@ li.recent-projects-nav:hover {
 .border-r-md {border-radius: 8px;}
 .display-inline-block {display: inline-block;}
 .float-right {float: right;}
-.no-decor, .no-decor:hover {
+.no-decor, .no-decor:hover, no-decor:focus {
 	text-decoration: none;
 	color:inherit;
 }
