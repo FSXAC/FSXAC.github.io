@@ -1,7 +1,7 @@
 #TODO: Responsive navbar
 
 application: moochhe
-version: 1
+version: 2
 runtime: python27
 api_version: 1
 threadsafe: true
