@@ -25,7 +25,7 @@ window.onload = function() {
   // draw flakes function
   function drawFlakes() {
     canvas_context.clearRect(0, 0, WIDTH, HEIGHT);
-    canvas_context.fillStyle = "#EEE";
+    canvas_context.fillStyle = "#EEF";
     canvas_context.beginPath();
 
     for (var i = 0; i <= MAX_FLAKES; i++) {

@@ -6,9 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content = "IE=edge" />
 
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/main.css" />
 	<link rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Raleway:300' >
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css"/>
 	<link rel="shortcut icon" href="/img/icon.png" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -19,20 +19,20 @@
 	<div>
 		<!-- Top -->
 		<header>
-			<a href = "/login"><img class = "headshot circular" src = "http://i.imgur.com/g1UoD1D.jpg" alt = "face"></img></a>
-			<h1 class = "title">MUCHEN HE</h1>
-			<a href = "/home" class = "navlink"><h3><em>{{isPython}}</em></h3></a>
+			<a href = "/login"><img class = "headshot" src = "http://i.imgur.com/g1UoD1D.jpg" alt = "face"></img></a>
+			<h1>MUCHEN HE</h1>
+			<a href = "/home" class = "no-decor"><h3><em>{{isPython}}</em></h3></a>
 			<p>Second Year Engineering Undergraduate, University of British Columbia</p>
 		</header>
 
 		<!-- Nav bar here -->
-		<nav class = "navbar home-nav navbar-default">
+		<nav class = "navbar home-nav">
 			<ul class = "nav home-nav">
-				<li class = "nav home-nav"><a class = "navlink" id = "navlink_about_me"
+				<li class = "home-nav"><a class = "no-decor" id = "no-decor_about_me"
 					title = "About Me" href = "#about_me">About Me</a></li>
-				<li class = "nav home-nav"><a class = "navlink" id = "navlink_recent_proj"
+				<li class = "home-nav"><a class = "no-decor" id = "no-decor_recent_proj"
 					title = "Recent Projects" href = "#recent_proj">Recent Projects</a></li>
-				<li class = "nav home-nav"><a class = "navlink" id = "navlink_contact"
+				<li class = "home-nav"><a class = "no-decor" id = "no-decor_contact"
 					title = "Contact" href = "#contact_card">Contact</a></li>
 			</ul>
 		</nav>
@@ -44,14 +44,14 @@
 				<div class = "content" id = "about_me">
 					<h2>About Me</h2>
 					<hr>
-					<div class = "content-inner no-border">
+					<div class = "content-inner">
 						<h3>Education</h3>
-						<img src = "img/ubc-icon.png" style = "display: block; height: 4em; float:left; margin: 10px;"></img>
-						<strong class = "flaired"><p><a href = "https://engineering.ubc.ca/">University of British Columbia</a></p></strong>
+						<img src = "img/ubc-icon.png" height = 50></img>
+						<strong class = "display-inline-block"><p><a href = "https://engineering.ubc.ca/">University of British Columbia</a></p></strong>
 						<span class="label label-primary">Enrolled since 2015</span>
 						<p>Currently enrolled as a second year undergraduate student in the faculty of engineering. Likely to enter Electric Engineering option.</p>
 
-						<strong class = "flaired"><p><a href = "http://ainlay.ca/">Harry Ainlay High School</a></p></strong>
+						<strong class = "display-inline-block"><p><a href = "http://ainlay.ca/">Harry Ainlay High School</a></p></strong>
 						<span class = "label label-success">Graduated (2015)</span>
 						<p>Honours student through out all three years of high school. Awarded being <em>Best Student in CTS: Design Studies</em>
 						and one of <em>Best Students in CTS: Computer Science</em>.</p>
@@ -102,17 +102,17 @@
 				<div class = "content" id = "recent_proj">
 					<h2>Recent Projects</h2>
 					<hr>
-					<div class = "content-inner">
+					<div class = "content-inner no-padding">
 						<ul class = "nav recent-projects-nav">
-							<a class = "navlink" href = "/login"><li class = "nav recent-projects-nav">
+							<a class = "no-decor" href = "/login"><li class = "nav recent-projects-nav">
 								<h3>Simple Login</h3>
 								<p>Made using home made python script</p>
 							</li></a>
-							<a class = "navlink" href = "#"><li class = "nav recent-projects-nav">
+							<a class = "no-decor" href = "#"><li class = "nav recent-projects-nav">
 								<h3>Guestbook</h3>
 								<p>Still WIP, link does not work</p>
 							</li></a>
-							<a class = "navlink" href = "#"><li class = "nav recent-projects-nav">
+							<a class = "no-decor" href = "#"><li class = "nav recent-projects-nav">
 								<h3>Placeholder Link</h3>
 								<p>This is just a placeholder, nothing special</p>
 							</li></a>

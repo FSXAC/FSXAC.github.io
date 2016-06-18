@@ -1,83 +1,73 @@
+/*Default styles (alphabetical)*/
+a {color: inherit;}
+body {
+	font-family: 'Raleway', sans-serif;
+	color: #011123;
+	font-size: 1.5em;
+	overflow-x: hidden;
+}
+footer {
+	background-color: #05182E;
+	color: white;
+	text-align: center;
+	border: 0 solid #03254B;
+	border-top-width: 8px;
+	padding: 10px;
+	margin-top: 8px;
+}
+h1 {font-size: 3em;}
+h2 {font-size: 2.5em;}
 header {
 	color: #011123;
 	border: 0 solid #03254B;
 	border-bottom-width: 8px;
 	text-align: center;
 }
+td, th {padding: 5px;}
+th {text-align: right;}
 
-/*LANDING PAGE CSS*/
+/*Landing page*/
 .landing {
 	margin: 5px 0px;
 	width: 600px;
 }
-
 @media screen and (max-width: 600px) {
 	.landing {
 		width: 100%;
 		margin: 5px;
 	}
 }
-
-.header-landing {
+.landing-header {
 	margin-bottom: 10px;
 }
 
-img.circular{
-	margin: 10px;
+/*face shot*/
+.headshot {
+	width: 120px;
+	margin-top: 10px;
 	border-radius: 60px;
 }
 
-img.headshot {
-	width: 120px;
-}
-
-h1, h2, h3, p {
-	margin: 10px;
-}
-
-
-h1 {
-	font-size: 3em;
-}
-
-h2 {
-	font-size: 2.5em;
-}
-
+/*Home navigation*/
 ul.home-nav {
 	background-color: #CCC;
 	color: #011123;
 	text-align: center;
 }
-
 li.home-nav {
 	display: inline-block;
 	background-color: #CCC;
 }
-
 li.home-nav:hover {
 	color: white;
 }
-
 li.recent-projects-nav:hover {
-	background-color: #CCC;
+	background-color: #EEF;
 }
-
-a {
-	color: inherit;
-}
-
-a.navlink {
-	color: #011123;
-	text-decoration: none;
-}
-
 .navbar {
 	margin-bottom: 8px;
 	border: 0;
 }
-
-/*Collapsable nav bar*/
 @media screen and (max-width: 400px) {
 	nav.home-nav ul.home-nav li.home-nav {
 		width: 100%;
@@ -86,64 +76,25 @@ a.navlink {
 	}
 }
 
-body {
-	font-family: 'Raleway', sans-serif;
-	color: #011123;
-	font-size: 1.5em;
-	overflow-x: hidden;
-}
-
-.row {
-	margin: 0;
-}
-
+/*content section boxes*/
 .content {
-	margin: 10px 0;
 	border: 1px solid #CCC;
 	border-radius: 10px;
-}
-
-.content-inner {
-	margin: 10px;
-	border: 1px solid #EEE;
-}
-
-.flaired {
-	display: inline-block;
-	margin: 0;
-}
-
-.label-inline {
-	display: inline-block;
-}
-
-footer {
-	background-color: #05182E;
-	color: white;
-	text-align: center;
-
-	border: 0 solid #03254B;
-	border-top-width: 8px;
 	padding: 10px;
-	margin-top: 8px;
+}
+.content-inner {
+	border: 1px solid #EEE;
+	padding: 10px;
 }
 
-table.card {
+/*contact cards*/
+.card {
 	padding: 10px;
 	color: white;
 	margin: auto;
 }
-
-table.card-dark {
+.card-dark {
 	color: #05182E;
-}
-
-th, td {
-    padding: 5px;
-}
-
-th {
-	text-align: right;
 }
 
 .btn-circular {
@@ -158,30 +109,11 @@ th {
 	margin: 8px;
 }
 
-hr {
-	margin: 10px;
+/*Property classes*/
+.display-inline-block {display: inline-block;}
+.no-decor, .no-decor:hover {
+	text-decoration: none;
+	color:inherit;
 }
-
-#construction_sign {
-	background-color: #440000;
-	color: #FF0000;
-	border: 3px solid #660000;
-
-	font-family: 'Raleway', sans-serif;
-	font-size: 26px;
-
-	position: fixed;
-	text-align: center;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-
-	margin:auto;
-	padding: 15px;
-
-	width: 300px;
-	height: 150px;
-
-	cursor: pointer;
-}
+.no-padding {padding: 0px;}
+.row {padding: 0 15px;}
