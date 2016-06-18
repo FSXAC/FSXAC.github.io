@@ -17,12 +17,15 @@ footer {
 }
 h1 {font-size: 3em;}
 h2 {font-size: 2.5em;}
+h1, h2, h3 {margin: 8px 0;}
+hr {margin: 8px 0;}
 header {
 	color: #011123;
 	border: 0 solid #03254B;
 	border-bottom-width: 8px;
 	text-align: center;
 }
+i {color: inherit;}
 td, th {padding: 5px;}
 th {text-align: right;}
 
@@ -77,11 +80,11 @@ li.recent-projects-nav:hover {
 }
 
 /*content section boxes*/
-.content {
+/*.content {
 	border: 1px solid #CCC;
 	border-radius: 8px;
 }
-.content-inner {border: 1px solid #EEE}
+.content-inner {border: 1px solid #EEE}*/
 
 /*contact cards*/
 .card {
@@ -106,14 +109,17 @@ li.recent-projects-nav:hover {
 }
 
 /*Property classes*/
+.border-md {border: 1px solid #CCC;}
+.border-light {border: 1px solid #EEE;}
+.border-r-md {border-radius: 8px;}
 .display-inline-block {display: inline-block;}
+.float-right {float: right;}
 .no-decor, .no-decor:hover {
 	text-decoration: none;
 	color:inherit;
 }
 .padding-hmd {padding: 0 8px;}
 .padding-md {padding: 8px;}
-/*.padding-none {padding: 0;}*/
-.margin-none {margin: 0;}
 .margin-bsm {margin-bottom: 5px;}
+.margin-md {margin: 8px;}
 .row {padding: 0 15px;}
