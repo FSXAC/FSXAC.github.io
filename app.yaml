@@ -8,11 +8,17 @@ threadsafe: true
 
 handlers:
 # Static
-- url: /img
-  static_dir: static/img
+- url: /fonts
+static_dir: static/fonts
 
 - url: /css
   static_dir: static/css
+
+- url: /img
+  static_dir: static/img
+
+- url: /js
+  static_dir: static/js
 
 - url: /(.*\.(gif|png|jpg|ico|bmp|html|css|js))
   static_files: static/\1
