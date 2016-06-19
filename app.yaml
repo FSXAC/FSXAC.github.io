@@ -9,7 +9,7 @@ threadsafe: true
 handlers:
 # Static
 - url: /fonts
-static_dir: static/fonts
+  static_dir: static/fonts
 
 - url: /css
   static_dir: static/css
