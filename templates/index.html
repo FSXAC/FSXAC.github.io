@@ -44,43 +44,51 @@
 					<h2>About Me</h2>
 					<hr>
 					<div class = "border-light padding-md">
-						<a href = "#"><i class = "glyphicon glyphicon-chevron-down padding-md float-right border-light"></i></a>
+						<a href = "#about_education" data-toggle = "collapse" id = "_about_education">
+							<i class = "glyphicon glyphicon-chevron-up padding-md float-right border-light"></i>
+						</a>
 						<h3>Education</h3>
-						<img src = "img/ubc-icon.png" height = 50></img>
-						<strong class = "display-inline-block"><p><a href = "https://engineering.ubc.ca/">University of British Columbia</a></p></strong>
-						<span class="label label-primary">Enrolled since 2015</span>
-						<p>Currently enrolled as a second year undergraduate student in the faculty of engineering. Likely to enter Electric Engineering option.</p>
+						<div id = "about_education" class = "collapse in">
+							<img src = "img/ubc-icon.png" height = 50></img>
+							<strong class = "display-inline-block"><p><a href = "https://engineering.ubc.ca/">University of British Columbia</a></p></strong>
+							<span class="label label-primary">Enrolled since 2015</span>
+							<p>Currently enrolled as a second year undergraduate student in the faculty of engineering. Likely to enter Electric Engineering option.</p>
 
-						<strong class = "display-inline-block"><p><a href = "http://ainlay.ca/">Harry Ainlay High School</a></p></strong>
-						<span class = "label label-success">Graduated (2015)</span>
-						<p>Honours student through out all three years of high school. Awarded being <em>Best Student in CTS: Design Studies</em>
-						and one of <em>Best Students in CTS: Computer Science</em>.</p>
-						<p>Founded multiple clubs including <em>Film Production Club</em>, <em>3D printing and CNC machining club</em>,
-						and <em>Unmanned Aerial Vehicles (Drones) Club</em>.</p>
-						<p>Teacher's assistant and project advisor for multiple courses including <em>Industrial/Mechanical Design Studies</em>, <em>Architectural Design Studies</em>,
-							<em>Pre-Engineering/Robotics</em>, and <em>Computer Science</em>
-						</p>
+							<strong class = "display-inline-block"><p><a href = "http://ainlay.ca/">Harry Ainlay High School</a></p></strong>
+							<span class = "label label-success">Graduated (2015)</span>
+							<p>Honours student through out all three years of high school. Awarded being <em>Best Student in CTS: Design Studies</em>
+							and one of <em>Best Students in CTS: Computer Science</em>.</p>
+							<p>Founded multiple clubs including <em>Film Production Club</em>, <em>3D printing and CNC machining club</em>,
+							and <em>Unmanned Aerial Vehicles (Drones) Club</em>.</p>
+							<p>Teacher's assistant and project advisor for multiple courses including <em>Industrial/Mechanical Design Studies</em>, <em>Architectural Design Studies</em>,
+								<em>Pre-Engineering/Robotics</em>, and <em>Computer Science</em>
+							</p>
+						</div>
 
 						<hr/>
-						<a href = "#"><i class = "glyphicon glyphicon-chevron-down padding-md float-right border-light"></i></a>
+						<a href = "#about_skills" data-toggle = "collapse" id = "_about_skills">
+							<i class = "glyphicon glyphicon-chevron-up padding-md float-right border-light"></i>
+						</a>
 						<h3>Skills</h3>
-						<ul>
-							<li>Fluent in both English and Mandarin</li>
-							<li>Team worker with strong leadership and effective communications</li>
-							<li>Takes initiatives</li>
-							<li>Patient and helpful when teaching and helping others</li>
-							<li>Great organization skills with ability to divide work among peers</li>
-							<br/>
-							<li>Advanced skills in 3D modelling using programs such as Autodesk Inventor, Solidworks, and Autodesk Revit</li>
-							<li>Various experiences with robotics, electronics, CNC machining, and 3D printing</li>
-							<li>Excellent with technologies including computers and portable devices</li>
-							<li>Excellent with graphics design and other media work</li>
-							<br/>
-							<li>Detail oriented and independent worker</li>
-							<li>Excellent with hands-on and practical tasks</li>
-							<li>Effective and efficient at carrying out tasks and instructions</li>
-							<li>Listener and visual learner</li>
-						</ul>
+						<div id = "about_skills" class = "collapse in">
+							<ul>
+								<li>Fluent in both English and Mandarin</li>
+								<li>Team worker with strong leadership and effective communications</li>
+								<li>Takes initiatives</li>
+								<li>Patient and helpful when teaching and helping others</li>
+								<li>Great organization skills with ability to divide work among peers</li>
+								<br/>
+								<li>Advanced skills in 3D modelling using programs such as Autodesk Inventor, Solidworks, and Autodesk Revit</li>
+								<li>Various experiences with robotics, electronics, CNC machining, and 3D printing</li>
+								<li>Excellent with technologies including computers and portable devices</li>
+								<li>Excellent with graphics design and other media work</li>
+								<br/>
+								<li>Detail oriented and independent worker</li>
+								<li>Excellent with hands-on and practical tasks</li>
+								<li>Effective and efficient at carrying out tasks and instructions</li>
+								<li>Listener and visual learner</li>
+							</ul>
+						</div>
 
 						<hr/>
 						<h3>Work Experience</h3>
@@ -215,9 +223,18 @@
 	</div>
 
 	<script>
+		// carousel movement
 		$('#main_carousel').carousel({
 		  interval: 4000,
 		  pause: "false"
+		});
+
+		// collapsable button glyphicon toggle
+		$('#_about_education').click( function(){
+	    $(this).find('i').toggleClass('glyphicon-chevron-up').toggleClass('glyphicon-chevron-down');
+		});
+		$('#_about_skills').click( function(){
+	    $(this).find('i').toggleClass('glyphicon-chevron-up').toggleClass('glyphicon-chevron-down');
 		});
 	</script>
 
