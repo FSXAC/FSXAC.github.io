@@ -36,8 +36,7 @@ th {text-align: right;}
 }
 @media screen and (max-width: 600px) {
 	.landing {
-		width: 100%;
-		margin: 5px;
+		width: 95%;
 	}
 }
 .landing-header {
@@ -105,15 +104,14 @@ li.recent-projects-nav:hover {
 	padding: 5px;
 }
 .login {
-	width: 786px;
+	width: 500px;
 	margin: auto;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	font-size: 1.2em;
 }
-@media screen and (max-width: 786px) {
-	.login {width: 90%}
-	.row {padding: 0 15px;}
+@media screen and (max-width: 520px) {
+	.login {width: 95%}
 }
 
 /*Property classes*/
