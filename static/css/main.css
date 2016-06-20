@@ -105,16 +105,15 @@ li.recent-projects-nav:hover {
 	padding: 5px;
 }
 .login {
-	width: 500px;
+	width: 786px;
 	margin: auto;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	font-size: 1.2em;
 }
-@media screen and (max-width: 520px) {
-	.login {
-		width: 100%;
-	}
+@media screen and (max-width: 786px) {
+	.login {width: 90%}
+	.row {padding: 0 15px;}
 }
 
 /*Property classes*/
@@ -131,4 +130,7 @@ li.recent-projects-nav:hover {
 .padding-md {padding: 8px;}
 .margin-bsm {margin-bottom: 5px;}
 .margin-md {margin: 8px;}
-.row {padding: 0 15px;}
+.row {padding: 0 100px;}
+	@media screen and (max-width: 786px) {
+		.row {padding: 0 15px;}
+	}
