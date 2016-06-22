@@ -9,7 +9,7 @@ window.onload = function() {
   canvas.height = HEIGHT;
 
   // make snow flakes
-  var MAX_FLAKES = 20;
+  var MAX_FLAKES = 30;
   var flakes = [];
 
   // loop
@@ -51,10 +51,10 @@ window.onload = function() {
       flake.y += Math.pow(flake.density, 2) + 1;
 
       // reset pos when at bottom
-      if (flake.y > HEIGHT) {
+      if (flake.y > HEIGHT + 100) {
         flakes[i] = {
           x: Math.random() * WIDTH,
-          y: 0,
+          y: -100,
           radius: flake.radius,
           density: flake.density
         };
