@@ -33,6 +33,11 @@ handlers:
   static_files: static/landing.html
   upload: static/landing.html
 
+# machine learning notes
+- url: /ml
+  static_files: static/machine-learning-notes.html
+  upload: static/machine-learning-notes.html
+  
 # Dynamic
 - url: /home
   script: main.app
