@@ -37,7 +37,12 @@ handlers:
 - url: /ml
   static_files: static/machine-learning-notes.html
   upload: static/machine-learning-notes.html
-  
+
+# portfolio
+- url: /portfolio
+  static_files: static/portfolio.html
+  upload: portfolio.html
+
 # Dynamic
 - url: /home
   script: main.app
