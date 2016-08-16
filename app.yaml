@@ -41,7 +41,12 @@ handlers:
 # portfolio
 - url: /portfolio
   static_files: static/portfolio.html
-  upload: portfolio.html
+  upload: static/portfolio.html
+
+# processing
+- url: /p5
+  static_files: static/p5/index.html
+  upload: static/p5/index.html
 
 # Dynamic
 - url: /home
