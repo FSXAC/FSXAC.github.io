@@ -9,15 +9,27 @@
   <title>Processing Projects</title>
 
   <link href="/css/bootstrap.min.css" rel="stylesheet">
-  <link href="p5/cover.css" rel="stylesheet">
+  <link href="p5/main.css" rel="stylesheet">
 
   <script language="javascript" type="text/javascript" src="p5/libraries/p5.js"></script>
   <script language="javascript" src="p5/libraries/p5.dom.js"></script>
   <script language="javascript" src="p5/libraries/p5.sound.js"></script>
   <script language="javascript" type="text/javascript" src="p5/sketch.js"></script>
-  <script language="javascript" type="text/javascript" src="p5/main.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+    $(".gif").hover(function() {
+      var src = $(this).attr("src");
+        $(this).attr("src", src.replace(/\.png$/i, ".gif"));
+      },
+    function() {
+      var src = $(this).attr("src");
+      $(this).attr("src", src.replace(/\.gif$/i, ".png"));
+    });
+  });
+  </script>
 </head>
 
 <body>
@@ -30,7 +42,7 @@
     <div class="container row">
       <div class="col-xs-3">
         <a href="#" class="thumbnail">
-          <img src="http://calebgrove.com/box/car-flip.png" class="gif">
+          <img src="http://i.imgur.com/iC6eNqG.png" class="gif">
           <p>hello this is a test</p>
         </a>
       </div>
