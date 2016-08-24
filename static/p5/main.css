@@ -18,10 +18,10 @@ h2 {
 
 canvas {
   z-index: -1;
-  position: fixed;
+  position: static;
 }
 
-.btn {
+.thumbnail {
   background-color: rgba(255, 255, 255, 0.5);
   border: 2px solid #445561;
   border-radius: 10px;
@@ -30,21 +30,22 @@ canvas {
   padding: 10px;
 }
 
-.btn img {
+.thumbnail img {
   max-width: 100%;
   max-height: 100%;
 }
 
 .view {
-  -webkit-transition: all 1s ease;
-     -moz-transition: all 1s ease;
-       -o-transition: all 1s ease;
-      -ms-transition: all 1s ease;
-          transition: all 1s ease;
+  -webkit-transition: all 0.3s ease;
+     -moz-transition: all 0.3s ease;
+       -o-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+          transition: all 0.3s ease;
 }
 
 .view:hover {
   background-color: rgba(20, 20, 50, 0.8);
   border-color: #CCC;
   color: #FFF;
+  text-decoration: none;
 }
