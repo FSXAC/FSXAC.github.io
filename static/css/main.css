@@ -1,5 +1,12 @@
 /*Default styles (alphabetical)*/
-a {color: inherit;}
+a {
+	color: inherit;
+	-webkit-transition: all 0.3s ease;
+     -moz-transition: all 0.3s ease;
+       -o-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+}
 body {
 	font-family: "Segoe UI", sans-serif;
 	color: #011123;
@@ -47,7 +54,16 @@ th {text-align: right;}
 .headshot {
 	width: 120px;
 	margin-top: 10px;
-	border-radius: 60px;
+	border-radius: 50%;
+	-webkit-transition: all 0.3s ease;
+     -moz-transition: all 0.3s ease;
+       -o-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+}
+.headshot:hover {
+	width: 200px;
+	border-radius: 25%;
 }
 
 /*Home navigation*/
@@ -62,6 +78,11 @@ li.home-nav {
 }
 li.recent-projects-nav:hover {
 	background-color: #EEF;
+	-webkit-transition: all 0.3s ease;
+     -moz-transition: all 0.3s ease;
+       -o-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+          transition: all 0.3s ease;
 }
 .navbar {
 	margin-bottom: 8px;
