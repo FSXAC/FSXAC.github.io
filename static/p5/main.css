@@ -3,6 +3,7 @@ body{
   margin: 0;
   padding: 0;
   text-align: center;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -15,6 +16,32 @@ h2 {
   text-shadow: 0 .0 1rem rgba(0,0,0,.2);
 }
 
-#sketch-container {
+canvas {
   z-index: -1;
+  position: fixed;
+}
+
+.btn {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid #445561;
+  border-radius: 10px;
+  color: #445561;
+  overflow: hidden;
+  margin: 20px;
+  width: 75%;
+}
+
+.view {
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+.view:hover {
+  background-color: rgba(20, 20, 50, 0.8);
+  border-color: #FF0;
+  width: 100%;
+  color: #FFF;
 }

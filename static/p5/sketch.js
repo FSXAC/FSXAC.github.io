@@ -5,7 +5,6 @@ var rate = 1;
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0);
-  canvas.id('sketch-container');
 
   noStroke();
 }
