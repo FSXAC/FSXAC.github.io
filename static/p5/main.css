@@ -26,9 +26,13 @@ canvas {
   border: 2px solid #445561;
   border-radius: 10px;
   color: #445561;
-  overflow: hidden;
-  margin: 20px;
-  width: 75%;
+  margin: 10px;
+  padding: 10px;
+}
+
+.btn img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .view {
@@ -41,7 +45,6 @@ canvas {
 
 .view:hover {
   background-color: rgba(20, 20, 50, 0.8);
-  border-color: #FF0;
-  width: 100%;
+  border-color: #CCC;
   color: #FFF;
 }
