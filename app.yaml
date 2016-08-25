@@ -28,6 +28,10 @@ handlers:
   static_files: static/\1
   upload: static/(.*\.(gif|png|jpg|ico|bmp|html|css|js))
 
+- url: /p5/(.*\.(gif|png|jpg|ico|bmp|html|css|js))
+  static_files: static/p5/\1
+  upload: static/p5/(.*\.(gif|png|jpg|ico|bmp|html|css|js))
+
 # Landing page
 - url: /
   static_files: static/landing.html
@@ -47,6 +51,9 @@ handlers:
 - url: /p5
   static_files: static/p5/index.html
   upload: static/p5/index.html
+
+- url: /processing
+  static_dir: static/p5
 
 # Dynamic
 - url: /home

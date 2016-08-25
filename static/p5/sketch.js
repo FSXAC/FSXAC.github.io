@@ -1,21 +1,16 @@
 // p5
-var dia = 10;
-var rate = 1;
+var range = 100;
+var variation = 10;
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0);
-
-  noStroke();
 }
 
-function draw() {
-  if (dia > 255 || dia < 0) {
-    rate*=-1;
-  }
-
-  dia+=rate;
-  fill(255 - dia);
-  diameter = map(dia, 0, 255, 20, 150)
-  ellipse(mouseX, mouseY, diameter, diameter);
+function mouseMoved() {
+  stroke('rgba(20, 20, 50, 0.1)');
+  line(mouseX + random(-variation, variation),
+   mouseY + random(-variation, variation),
+   mouseX + random(-range, range),
+   mouseY + random(-range, range));
 }

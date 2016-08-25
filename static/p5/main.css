@@ -18,7 +18,7 @@ h2 {
 
 canvas {
   z-index: -1;
-  position: static;
+  position: fixed;
 }
 
 .thumbnail {
