@@ -5,7 +5,7 @@ var lifespan = 200;
 var target;
 
 function setup() {
-  canvas = createCanvas(800, 800);
+  canvas = createCanvas(windowWidth, windowHeight);
 
   // create rocket objs
   rockets = new Rockets();
@@ -29,6 +29,10 @@ function draw() {
   noStroke();
   fill("#0F0");
   ellipse(target.x, target.y, 20, 20);
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 // group of rockets as a class
