@@ -43,25 +43,22 @@ function Rockets() {
   }
 }
 
-// DNA class defines behavior of rockets
-function DNA() {
-  this.genes = [];
-  for (var i = 0; i < lifespan; i++) {
-    this.genes[i] = p5.Vector.random2D().setMag(0.5);
-  }
-}
-
 // rocket class
 function Rocket() {
   // attributes
-  this.position = createVector(width / 2, height/2);
-  // this.velocity = createVector();
+  this.position = createVector(width / 2, height - 20);
   this.velocity = p5.Vector.random2D();
   this.acceleration = createVector();
   this.dna = new DNA();
 
   // measures how long it has lived
   this.life = 0;
+
+  // alive when life < lifespan
+  this.isAlive = true;
+
+  // enabled when it hasnt crashed
+  this.isEnabled = true;
 
   // methods
   this.applyForce = function(force) {
@@ -71,6 +68,10 @@ function Rocket() {
     // add dna to acceleration
     this.applyForce(this.dna.genes[this.life]);
     this.life++;
+
+    if (this.life >= lifeSpan) {
+      this.isAlive = false;
+    }
 
     this.velocity.add(this.acceleration);
     this.position.add(this.velocity);
@@ -85,5 +86,21 @@ function Rocket() {
     rectMode(CENTER);
     rect(0, 0, 20, 10);
     pop();
+  }
+
+  this.checkCollision = function() {
+    // checks the collision on the side
+    if (this.position.x >= width || this.position.x <= 0 ||
+    this.position.y >= height || this.position.y <= 0) {
+      this.isEnabled = false;
+    }
+  }
+}
+
+// DNA class defines behavior of rockets
+function DNA() {
+  this.genes = [];
+  for (var i = 0; i < lifespan; i++) {
+    this.genes[i] = p5.Vector.random2D().setMag(0.5);
   }
 }
