@@ -20,6 +20,11 @@ function draw() {
   // update rockets
   rockets.run();
 
+  // reset if everyone is dead, reset
+  if (rockets.allEnabled() == false) {
+    rockets = new Rockets();
+  }
+
   // draw target
   noStroke();
   fill("#0F0");
@@ -37,21 +42,21 @@ function Rockets() {
 
   this.run = function() {
     for (var i = 0; i < this.population; i++) {
-      this.rockets[i].applyForce(createVector(0, 0.01))
+      this.rockets[i].applyForce(createVector(0, 0.05))
       this.rockets[i].update();
       this.rockets[i].show();
     }
   }
 
-  this.isAlive = function() {
-    var allAlive = true;
+  this.allEnabled = function() {
+    var isEnabled = false;
     for (var i = 0; i < this.population; i++) {
-      if (this.rockets[i].isAlive == false) {
-        allAlive = false;
+      if (this.rockets[i].isEnabled == true) {
+        isEnabled = true;
         break;
       }
     }
-    return allAlive;
+    return isEnabled;
   }
 }
 
