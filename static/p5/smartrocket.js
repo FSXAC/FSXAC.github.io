@@ -1,5 +1,5 @@
 var rockets;
-var lifespan = 400;
+var lifespan = 200;
 
 // target
 var target;
@@ -37,9 +37,21 @@ function Rockets() {
 
   this.run = function() {
     for (var i = 0; i < this.population; i++) {
+      this.rockets[i].applyForce(createVector(0, 0.01))
       this.rockets[i].update();
       this.rockets[i].show();
     }
+  }
+
+  this.isAlive = function() {
+    var allAlive = true;
+    for (var i = 0; i < this.population; i++) {
+      if (this.rockets[i].isAlive == false) {
+        allAlive = false;
+        break;
+      }
+    }
+    return allAlive;
   }
 }
 
@@ -69,22 +81,37 @@ function Rocket() {
     this.applyForce(this.dna.genes[this.life]);
     this.life++;
 
-    if (this.life >= lifeSpan) {
+    if (this.life >= lifespan) {
       this.isAlive = false;
     }
 
     this.velocity.add(this.acceleration);
     this.position.add(this.velocity);
     this.acceleration.mult(0);
+
+    // check collision only when still enabled
+    if (this.isEnabled) {
+      this.checkCollision();
+    }
   }
   this.show = function() {
     push()
     translate(this.position.x, this.position.y);
     rotate(this.velocity.heading());
     noStroke();
-    fill(255, 200);
+
+    if (this.isAlive) {
+      fill("#0F0");
+    } else {
+      fill(150);
+    }
+
     rectMode(CENTER);
-    rect(0, 0, 20, 10);
+
+    if (this.isEnabled) {
+      rect(0, 0, 20, 10);
+    }
+
     pop();
   }
 
