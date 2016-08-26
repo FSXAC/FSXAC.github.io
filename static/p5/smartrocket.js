@@ -6,6 +6,7 @@ var target;
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
+  canvas.position(0, 0)
 
   // create rocket objs
   rockets = new Rockets();
