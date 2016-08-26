@@ -14,3 +14,7 @@ function mouseMoved() {
    mouseX + random(-range, range),
    mouseY + random(-range, range));
 }
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
