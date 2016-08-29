@@ -25,7 +25,7 @@ function draw() {
 
   // reset if everyone is dead, reset
   if (rockets.allEnabled() == false) {
-    rockets.printFitness(target);
+    //rockets.printFitness(target);
     rockets = new Rockets();
   }
 
@@ -42,7 +42,7 @@ function windowResized() {
 // group of rockets as a class
 function Rockets() {
   this.rockets = [];
-  this.population = 1;
+  this.population = 100;
 
   for (var i = 0; i < this.population; i++) {
     this.rockets[i] = new Rocket();
@@ -69,7 +69,7 @@ function Rockets() {
 
   this.printFitness = function(target) {
     for (var i = 0; i < this.population; i++) {
-      console.log(this.rockets[i].getFitness(target));
+      console.log(i, this.rockets[i].getFitness(target));
     }
   }
 }
@@ -173,7 +173,7 @@ function Rocket() {
       this.bestfitness *= 1.5;
     } else {
       // stay alive for longer when didnt achieve
-      
+
     }
     return this.bestfitness;
   }
