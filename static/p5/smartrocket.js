@@ -1,7 +1,11 @@
+// rockets
 var rockets;
 var lifespan = 200;
 
 // target
+var targetx = width / 2;
+var targety = 50;
+var targetr = 20;
 var target;
 
 function setup() {
@@ -12,7 +16,7 @@ function setup() {
   rockets = new Rockets();
 
   // create new target
-  target = createVector(width / 2, 50);
+  target = new Target();
 }
 
 function draw() {
@@ -23,13 +27,12 @@ function draw() {
 
   // reset if everyone is dead, reset
   if (rockets.allEnabled() == false) {
+    rockets.printFitness(target);
     rockets = new Rockets();
   }
 
   // draw target
-  noStroke();
-  fill("#0F0");
-  ellipse(target.x, target.y, 20, 20);
+  target.show();
 }
 
 function windowResized() {
@@ -39,7 +42,7 @@ function windowResized() {
 // group of rockets as a class
 function Rockets() {
   this.rockets = [];
-  this.population = 50;
+  this.population = 1;
 
   for (var i = 0; i < this.population; i++) {
     this.rockets[i] = new Rocket();
@@ -63,15 +66,24 @@ function Rockets() {
     }
     return isEnabled;
   }
+
+  this.printFitness = function(target) {
+    for (var i = 0; i < this.population; i++) {
+      console.log(this.rockets[i].getFitness(target));
+    }
+  }
 }
 
 // rocket class
-function Rocket() {
+function Rocket(target) {
   // attributes
   this.position = createVector(width / 2, height - 20);
   this.velocity = p5.Vector.random2D();
   this.acceleration = createVector();
   this.dna = new DNA();
+
+  // target
+  this.target = target.position
 
   // measures how long it has lived
   this.life = 0;
@@ -81,6 +93,13 @@ function Rocket() {
 
   // enabled when it hasnt crashed
   this.isEnabled = true;
+
+  // enabled when it reaches target
+  this.isAchieved = false;
+
+  // fitness
+  this.fitness = 0;
+  this.bestfitness = this.fitness;
 
   // methods
   this.applyForce = function(force) {
@@ -102,6 +121,12 @@ function Rocket() {
     // check collision only when still enabled
     if (this.isEnabled) {
       this.checkCollision();
+    }
+
+    // check fitness and best fitness
+    this.fitness = 1 / dist(this.position.x, this.position.y, targetx, targety);
+    if (this.fitness > this.bestfitness) {
+      this.bestfitness = this.fitness;
     }
   }
   this.show = function() {
@@ -132,6 +157,25 @@ function Rocket() {
       this.isEnabled = false;
     }
   }
+
+  this.checkTarget = function() {
+    // check the collision with the target
+    if (dist(this.position.x, this.position.y, targetx, targety) <= targetr) {
+      this.isEnabled = false;
+      this.isAchieved = true;
+    }
+  }
+
+  this.getFitness = function() {
+    if (this.isAchieved) {
+      // speed bonus
+      this.bestfitness += lifespan - this.life;
+
+      // target bonus
+      this.bestfitness *= 1.5;
+    }
+    return this.bestfitness;
+  }
 }
 
 // DNA class defines behavior of rockets
@@ -139,5 +183,16 @@ function DNA() {
   this.genes = [];
   for (var i = 0; i < lifespan; i++) {
     this.genes[i] = p5.Vector.random2D().setMag(0.5);
+  }
+}
+
+function Target() {
+  this.position = createVector(targetx, targety);
+  this.radius = targetr;
+
+  this.show = function() {
+    noStroke();
+    fill("#0F0");
+    ellipse(this.position.x, this.position.y, this.radius * 2, this.radius * 2);
   }
 }
