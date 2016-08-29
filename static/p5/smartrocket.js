@@ -3,10 +3,8 @@ var rockets;
 var lifespan = 200;
 
 // target
-var targetx = width / 2;
-var targety = 50;
-var targetr = 20;
 var target;
+var tradius = 10;
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
@@ -16,7 +14,7 @@ function setup() {
   rockets = new Rockets();
 
   // create new target
-  target = new Target();
+  target = createVector(width / 2, 50);
 }
 
 function draw() {
@@ -32,7 +30,9 @@ function draw() {
   }
 
   // draw target
-  target.show();
+  noStroke();
+  fill("#0F0");
+  ellipse(target.x, target.y, tradius * 2, tradius * 2);
 }
 
 function windowResized() {
@@ -75,15 +75,12 @@ function Rockets() {
 }
 
 // rocket class
-function Rocket(target) {
+function Rocket() {
   // attributes
   this.position = createVector(width / 2, height - 20);
   this.velocity = p5.Vector.random2D();
   this.acceleration = createVector();
   this.dna = new DNA();
-
-  // target
-  this.target = target.position
 
   // measures how long it has lived
   this.life = 0;
@@ -124,7 +121,7 @@ function Rocket(target) {
     }
 
     // check fitness and best fitness
-    this.fitness = 1 / dist(this.position.x, this.position.y, targetx, targety);
+    this.fitness = 1 / dist(this.position.x, this.position.y, target.x, target.y);
     if (this.fitness > this.bestfitness) {
       this.bestfitness = this.fitness;
     }
@@ -160,19 +157,23 @@ function Rocket(target) {
 
   this.checkTarget = function() {
     // check the collision with the target
-    if (dist(this.position.x, this.position.y, targetx, targety) <= targetr) {
+    if (dist(this.position.x, this.position.y, target.x, target.y) <= tradius) {
       this.isEnabled = false;
       this.isAchieved = true;
     }
   }
 
   this.getFitness = function() {
+    // bonus for achieving
     if (this.isAchieved) {
       // speed bonus
       this.bestfitness += lifespan - this.life;
 
       // target bonus
       this.bestfitness *= 1.5;
+    } else {
+      // stay alive for longer when didnt achieve
+      
     }
     return this.bestfitness;
   }
@@ -183,16 +184,5 @@ function DNA() {
   this.genes = [];
   for (var i = 0; i < lifespan; i++) {
     this.genes[i] = p5.Vector.random2D().setMag(0.5);
-  }
-}
-
-function Target() {
-  this.position = createVector(targetx, targety);
-  this.radius = targetr;
-
-  this.show = function() {
-    noStroke();
-    fill("#0F0");
-    ellipse(this.position.x, this.position.y, this.radius * 2, this.radius * 2);
   }
 }
