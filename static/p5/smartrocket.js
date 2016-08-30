@@ -5,6 +5,9 @@ var lifespan = 300;
 // gene pool
 var pool = [];
 
+// mutation probability (%)
+var mutation = 10;
+
 // target
 var target;
 var tradius = 10;
@@ -40,7 +43,12 @@ function draw() {
       }
     }
 
-    console.log(pool);
+    // randomly select two for breeding
+    var parentA = random(pool);
+    var parentB = random(pool);
+
+    // use two parents to breed
+    rocketGroup.breed(parentA, parentB);
 
     // reset rockets
     rocketGroup = new Rockets();
@@ -73,6 +81,13 @@ function Rockets() {
     }
   }
 
+  this.breed = function(a, b) {
+    for (var i = 0; i < this.population) {
+      var newDNA = selectGenes(a, b);
+      this.rockets[i] = new Rocket(newDNA);
+    }
+  }
+
   this.allEnabled = function() {
     var isEnabled = false;
     for (var i = 0; i < this.population; i++) {
@@ -95,12 +110,18 @@ function Rockets() {
 }
 
 // rocket class
-function Rocket() {
+function Rocket(dna) {
   // attributes
   this.position = createVector(width / 2, height - 20);
   this.velocity = p5.Vector.random2D();
   this.acceleration = createVector();
-  this.dna = new DNA();
+
+  // create or import dna
+  if (dna !== undefined) {
+    this.dna = dna;
+  } else {
+    this.dna = new DNA();
+  }
 
   // measures how long it has lived
   this.life = 0;
