@@ -1,17 +1,22 @@
 // rockets
-var rockets;
-var lifespan = 200;
+var rocketGroup;
+var lifespan = 300;
+
+// gene pool
+var pool = [];
 
 // target
 var target;
 var tradius = 10;
+
+// TODO: select parent -> modify genes -> child
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0)
 
   // create rocket objs
-  rockets = new Rockets();
+  rocketGroup = new Rockets();
 
   // create new target
   target = createVector(width / 2, 50);
@@ -21,12 +26,24 @@ function draw() {
   background(0);
 
   // update rockets
-  rockets.run();
+  rocketGroup.run();
 
   // reset if everyone is dead, reset
-  if (rockets.allEnabled() == false) {
-    //rockets.printFitness(target);
-    rockets = new Rockets();
+  if (rocketGroup.allEnabled() == false) {
+    pool = [];
+
+    // create parent / gene pool
+    var fitnessSum = rocketGroup.getFitnessSum();
+    for (var i = 0; i < rocketGroup.population; i++) {
+      for (var j = 0; j < parseInt(rocketGroup.rockets[i].getFitness()/fitnessSum*100); j++) {
+        pool.push(rocketGroup.rockets[i].dna);
+      }
+    }
+
+    console.log(pool);
+
+    // reset rockets
+    rocketGroup = new Rockets();
   }
 
   // draw target
@@ -35,6 +52,7 @@ function draw() {
   ellipse(target.x, target.y, tradius * 2, tradius * 2);
 }
 
+// resize window
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
@@ -42,7 +60,7 @@ function windowResized() {
 // group of rockets as a class
 function Rockets() {
   this.rockets = [];
-  this.population = 100;
+  this.population = 5;
 
   for (var i = 0; i < this.population; i++) {
     this.rockets[i] = new Rocket();
@@ -50,7 +68,6 @@ function Rockets() {
 
   this.run = function() {
     for (var i = 0; i < this.population; i++) {
-      this.rockets[i].applyForce(createVector(0, 0.05))
       this.rockets[i].update();
       this.rockets[i].show();
     }
@@ -67,10 +84,13 @@ function Rockets() {
     return isEnabled;
   }
 
-  this.printFitness = function(target) {
+  this.getFitnessSum = function() {
+    var allFitness = 0;
     for (var i = 0; i < this.population; i++) {
-      console.log(i, this.rockets[i].getFitness(target));
+      allFitness += this.rockets[i].getFitness();
     }
+
+    return allFitness;
   }
 }
 
@@ -96,7 +116,7 @@ function Rocket() {
 
   // fitness
   this.fitness = 0;
-  this.bestfitness = this.fitness;
+  this.bestfitness = 0;
 
   // methods
   this.applyForce = function(force) {
@@ -143,7 +163,6 @@ function Rocket() {
     if (this.isEnabled) {
       rect(0, 0, 20, 10);
     }
-
     pop();
   }
 
@@ -171,9 +190,6 @@ function Rocket() {
 
       // target bonus
       this.bestfitness *= 1.5;
-    } else {
-      // stay alive for longer when didnt achieve
-
     }
     return this.bestfitness;
   }
