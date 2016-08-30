@@ -12,6 +12,9 @@ var mutation = 10;
 var target;
 var tradius = 10;
 
+// movement rate
+var movement = 2;
+
 // TODO: select parent -> modify genes -> child
 
 function setup() {
@@ -37,10 +40,13 @@ function draw() {
 
     // create parent / gene pool
     var fitnessSum = rocketGroup.getFitnessSum();
+    console.log(fitnessSum);
     for (var i = 0; i < rocketGroup.population; i++) {
       for (var j = 0; j < parseInt(rocketGroup.rockets[i].getFitness()/fitnessSum*100); j++) {
         pool.push(rocketGroup.rockets[i].dna);
       }
+
+
     }
 
     // randomly select two for breeding
@@ -68,7 +74,7 @@ function windowResized() {
 // group of rockets as a class
 function Rockets() {
   this.rockets = [];
-  this.population = 5;
+  this.population = 50;
 
   for (var i = 0; i < this.population; i++) {
     this.rockets[i] = new Rocket();
@@ -76,16 +82,41 @@ function Rockets() {
 
   this.run = function() {
     for (var i = 0; i < this.population; i++) {
+      // gravity force
+      this.rockets[i].applyForce(createVector(0, 0.05));
+
+      // rocket update
       this.rockets[i].update();
       this.rockets[i].show();
     }
   }
 
   this.breed = function(a, b) {
-    for (var i = 0; i < this.population) {
-      var newDNA = selectGenes(a, b);
-      this.rockets[i] = new Rocket(newDNA);
+    for (var i = 0; i < this.population; i++) {
+      this.rockets[i] = new Rocket(this.selectGenes(a, b));
     }
+  }
+
+  this.selectGenes = function(a, b) {
+    var newDNA = new DNA;
+    for (var i = 0; i < a.length; i++) {
+      var whichParent = random(['A', 'B']);
+      var hasMutation = random(0, 100);
+
+      if (hasMutation <= mutation) {
+        newDNA.genes[i] = p5.Vector.random2D().setMag(movement);
+      } else {
+        if (whichParent == 'A') {
+          // choose genes from parent A
+          newDNA.genes[i] = createVector(a.genes[i].x, a.genes[i].y);
+        } else {
+          // choose genes from parent B
+          newDNA.genes[i] = createVector(b.genes[i].x, b.genes[i].y);
+        }
+      }
+    }
+
+    return newDNA;
   }
 
   this.allEnabled = function() {
@@ -162,7 +193,9 @@ function Rocket(dna) {
     }
 
     // check fitness and best fitness
-    this.fitness = 1 / dist(this.position.x, this.position.y, target.x, target.y);
+    this.dist = dist(this.position.x, this.position.y, target.x, target.y);
+    this.fitness = 1 / (this.dist * this.dist);
+    // this.fitness = map(1 / (10 * this.dist * this.dist), 0, 1, 0, 100);
     if (this.fitness > this.bestfitness) {
       this.bestfitness = this.fitness;
     }
@@ -220,6 +253,6 @@ function Rocket(dna) {
 function DNA() {
   this.genes = [];
   for (var i = 0; i < lifespan; i++) {
-    this.genes[i] = p5.Vector.random2D().setMag(0.5);
+    this.genes[i] = p5.Vector.random2D().setMag(movement);
   }
 }
