@@ -1,16 +1,15 @@
 // p5
-var range = 100;
-var variation = 10;
+var range = 50;
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0);
+  canvas.class("pcanvas");
 }
 
 function mouseMoved() {
-  stroke('rgba(20, 20, 50, 0.1)');
-  line(mouseX + random(-variation, variation),
-   mouseY + random(-variation, variation),
+  stroke('rgba(1, 15, 29, 0.1)');
+  line(mouseX, mouseY,
    mouseX + random(-range, range),
    mouseY + random(-range, range));
 }

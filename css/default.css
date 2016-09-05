@@ -1,0 +1,46 @@
+a {
+	color: inherit;
+	transition: all 0.3s ease;
+}
+body {
+	cursor:default;
+	font-family: "Segoe UI", sans-serif;
+	font-size: 1.5em;
+}
+footer {
+	background-color: #05182E;
+	color: white;
+	border: 0 solid #03254B;
+	border-top-width: 8px;
+	padding: 10px;
+	margin-top: 8px;
+}
+header {
+	color: #011123;
+	border: 0 solid #03254B;
+	border-bottom-width: 8px;
+}
+i {color: inherit;}
+h1, h2, h3 {
+	font-weight: 300;
+}
+h1 {font-size: 5rem; margin: 5px 0; vertical-align: middle;}
+h1:hover::before {content="MANSUR HE";}
+/*classes*/
+.headshot {
+	display:inline-block;
+	margin: 10px;
+	transition: all 0.3s ease;
+	vertical-align: middle;
+	width: 100px;
+}
+.headshot:hover {
+	border-radius: 25%;
+	width: 150px;
+}
+.display-inline-block {
+	display:inline-block;
+}
+.pcanvas {
+	z-index: -1;
+}

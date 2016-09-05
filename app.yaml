@@ -7,63 +7,14 @@ api_version: 1
 threadsafe: true
 
 handlers:
-# Static
-- url: /fonts
-  static_dir: static/fonts
-
-- url: /css
-  static_dir: static/css
-
-- url: /img
-  static_dir: static/img
-
-- url: /js
-  static_dir: static/js
-
 - url: /(.*\.(gif|png|jpg|ico|bmp|html|css|js))
-  static_files: static/\1
-  upload: static/(.*\.(gif|png|jpg|ico|bmp|html|css|js))
+  static_files: \1
+  upload: (.*\.(gif|png|jpg|ico|bmp|html|css|js))
 
-- url: /static/(.*\.(gif|png|jpg|ico|bmp|html|css|js))
-  static_files: static/\1
-  upload: static/(.*\.(gif|png|jpg|ico|bmp|html|css|js))
-
-- url: /p5/(.*\.(gif|png|jpg|ico|bmp|html|css|js))
-  static_files: static/p5/\1
-  upload: static/p5/(.*\.(gif|png|jpg|ico|bmp|html|css|js))
-
-# Landing page
+# home
 - url: /
-  static_files: static/landing.html
-  upload: static/landing.html
-
-# machine learning notes
-- url: /ml
-  static_files: static/machine-learning-notes.html
-  upload: static/machine-learning-notes.html
-
-# portfolio
-- url: /portfolio
-  static_files: static/portfolio.html
-  upload: static/portfolio.html
-
-# processing
-- url: /p5
-  static_files: static/p5/index.html
-  upload: static/p5/index.html
-
-- url: /processing
-  static_dir: static/p5
-
-# Dynamic
-- url: /home
-  script: main.app
-
-- url: /login
-  script: login.app
-
-- url: /test
-  script: test.app
+  static_files: index.html
+  upload: index.html
 
 # 404
 - url: /.*
