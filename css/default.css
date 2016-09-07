@@ -30,6 +30,9 @@ h1:hover::before {content="MANSUR HE";}
 .btn {transform: scale(1);}
 .btn-expand:hover {transform: scale(1.1);}
 .btn-shrink:hover {transform: scale(0.9);}
+.display-inline-block {
+	display:inline-block;
+}
 .headshot {
 	display:inline-block;
 	margin: 10px;
@@ -41,8 +44,13 @@ h1:hover::before {content="MANSUR HE";}
 	border-radius: 5%;
 	width: 120px;
 }
-.display-inline-block {
-	display:inline-block;
+.jumbotron: {
+	
+}
+.nav-circular > li{
+	border: 2px solid black;
+	border-radius: 50%;
+	height:100px;
 }
 .pcanvas {
 	z-index: -1;
