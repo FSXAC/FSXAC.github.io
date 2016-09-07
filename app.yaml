@@ -16,6 +16,11 @@ handlers:
   static_files: index.html
   upload: index.html
 
+# projects
+- url: /projects
+  static_files: projects.html
+  upload: projects.html
+
 # 404
 - url: /.*
   static_files: static/not_found.html

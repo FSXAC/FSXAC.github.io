@@ -27,6 +27,9 @@ h1, h2, h3 {
 h1 {font-size: 5rem; margin: 5px 0; vertical-align: middle;}
 h1:hover::before {content="MANSUR HE";}
 /*classes*/
+.btn {transform: scale(1);}
+.btn-expand:hover {transform: scale(1.1);}
+.btn-shrink:hover {transform: scale(0.9);}
 .headshot {
 	display:inline-block;
 	margin: 10px;
@@ -35,8 +38,8 @@ h1:hover::before {content="MANSUR HE";}
 	width: 100px;
 }
 .headshot:hover {
-	border-radius: 25%;
-	width: 150px;
+	border-radius: 5%;
+	width: 120px;
 }
 .display-inline-block {
 	display:inline-block;
