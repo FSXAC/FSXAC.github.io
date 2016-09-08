@@ -28,8 +28,14 @@ h1 {font-size: 5rem; margin: 5px 0; vertical-align: middle;}
 h1:hover::before {content="MANSUR HE";}
 /*classes*/
 .btn {transform: scale(1);}
-.btn-expand:hover {transform: scale(1.1);}
-.btn-shrink:hover {transform: scale(0.9);}
+.btn-expand:hover {
+	transform: scale(1.1);
+	transition: all 0.3s ease;
+}
+.btn-shrink:hover {
+	transform: scale(0.9);
+	transition: all 0.3s ease;
+}
 .display-inline-block {
 	display:inline-block;
 }
@@ -44,13 +50,9 @@ h1:hover::before {content="MANSUR HE";}
 	border-radius: 5%;
 	width: 120px;
 }
-.jumbotron: {
-	
-}
-.nav-circular > li{
-	border: 2px solid black;
-	border-radius: 50%;
-	height:100px;
+.nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
+	color: white;
+	background-color: rgba(21, 50, 76, 1);
 }
 .pcanvas {
 	z-index: -1;
