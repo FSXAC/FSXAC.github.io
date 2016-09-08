@@ -73,6 +73,7 @@ h1:hover {content: "MANSUR HE";}
 }
 .thumbnail, .thumbnail:hover, .thumbnail:active {
 	text-decoration: none;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 /*typewritter effect*/
 .typewriter {
