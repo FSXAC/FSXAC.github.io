@@ -24,8 +24,8 @@ i {color: inherit;}
 h1, h2, h3 {
 	font-weight: 300;
 }
-h1 {font-size: 5rem; margin: 5px 0; vertical-align: middle;}
-h1:hover::before {content="MANSUR HE";}
+h1 {font-size: 5rem; margin: 5px 0; vertical-align: middle; transition: all 0.3s ease}
+h1:hover {content: "MANSUR HE";}
 /*classes*/
 .btn {transform: scale(1);}
 .btn-expand:hover {
@@ -49,12 +49,14 @@ h1:hover::before {content="MANSUR HE";}
 	display:inline-block;
 	margin: 10px;
 	transition: all 0.3s ease;
-	vertical-align: middle;
 	width: 100px;
 }
 .headshot:hover {
 	border-radius: 5%;
 	width: 120px;
+}
+.innershadow {
+	box-shadow: inset 0px 0px 20px #000000;
 }
 .jumbotron {
 	background-attachment: fixed;
@@ -71,11 +73,4 @@ h1:hover::before {content="MANSUR HE";}
 }
 .thumbnail, .thumbnail:hover, .thumbnail:active {
 	text-decoration: none;
-}
-/*IDs*/
-#jumbo-tech {
-	background-image: url('../img/BigE.png');
-}
-#jumbo-graphics {
-	background-image: url('../img/BigFan.bmp');
 }
