@@ -76,12 +76,13 @@ h1:hover {content: "MANSUR HE";}
 }
 /*typewritter effect*/
 .typewriter {
+	border-right: .08em solid #03254B; /* The typwriter cursor */
+	line-height: 1.5;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .08em solid #03254B; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   animation:
     typing 0.3s steps(40, end),
-    blink-caret .5s step-end infinite;
+    blink-caret .75s step-end infinite;
 }
 
 /* The typing effect */
