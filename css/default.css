@@ -36,6 +36,12 @@ h1:hover::before {content="MANSUR HE";}
 	transform: scale(0.9);
 	transition: all 0.3s ease;
 }
+.darkbox {
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 20px;
+	color: white;
+	text-shadow: 0 0 1rem rgba(0,0,0, 0.5);
+}
 .display-inline-block {
 	display:inline-block;
 }
@@ -50,10 +56,23 @@ h1:hover::before {content="MANSUR HE";}
 	border-radius: 5%;
 	width: 120px;
 }
+.jumbotron {
+	background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
 	color: white;
 	background-color: rgba(21, 50, 76, 1);
 }
 .pcanvas {
 	z-index: -1;
+}
+/*IDs*/
+#jumbo-tech {
+	background-image: url('../img/BigE.png');
+}
+#jumbo-graphics {
+	background-image: url('../img/BigFan.bmp');
 }
