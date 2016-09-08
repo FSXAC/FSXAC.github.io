@@ -69,6 +69,9 @@ h1:hover::before {content="MANSUR HE";}
 .pcanvas {
 	z-index: -1;
 }
+.thumbnail, .thumbnail:hover, .thumbnail:active {
+	text-decoration: none;
+}
 /*IDs*/
 #jumbo-tech {
 	background-image: url('../img/BigE.png');
