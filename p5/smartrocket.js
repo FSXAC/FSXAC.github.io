@@ -1,13 +1,13 @@
 // rockets
 var rocketGroup;
-var lifespan = 80
+var lifespan = 300
 var population = 100;
 
 // gene pool
 var pool = [];
 
 // mutation probability (%)
-var mutation = 20;
+var mutation = 15;
 
 // target
 var target;
@@ -15,7 +15,7 @@ var tradius = 10;
 
 // movement rate
 var movement = 0.5;
-var gravity = 0.1;
+var gravity = 0.05;
 
 // show id
 var showID = true;
