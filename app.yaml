@@ -26,6 +26,11 @@ handlers:
   static_files: p5/index.html
   upload: p5/index.html
 
+# lol
+- url: /resume
+  static_files: lol.html
+  upload: lol.html
+
 # 404
 - url: /.*
   static_files: static/not_found.html

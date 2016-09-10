@@ -78,7 +78,7 @@ h1:hover {content: "MANSUR HE";}
 /*typewritter effect*/
 .typewriter {
 	animation:
-		typing 0.3s steps(40, end),
+		typing 0.7s steps(40, end),
 		blink-caret .75s step-end infinite;
 	border-right: .08em solid #03254B; /* The typwriter cursor */
 	line-height: 1.5;
@@ -89,7 +89,7 @@ h1:hover {content: "MANSUR HE";}
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
-  to { width: 25% }
+  to { width: 35% }
 }
 
 /* The typewriter cursor effect */
