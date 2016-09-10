@@ -72,6 +72,11 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
+// reposition the target
+function mousePressed() {
+  target = createVector(mouseX, mouseY);
+}
+
 // group of rockets as a class
 function Rockets() {
   this.rockets = [];
