@@ -1,12 +1,13 @@
 // rockets
 var rocketGroup;
-var lifespan = 300;
+var lifespan = 80
+var population = 100;
 
 // gene pool
 var pool = [];
 
 // mutation probability (%)
-var mutation = 10;
+var mutation = 20;
 
 // target
 var target;
@@ -14,6 +15,10 @@ var tradius = 10;
 
 // movement rate
 var movement = 0.5;
+var gravity = 0.1;
+
+// show id
+var showID = true;
 
 // TODO: select parent -> modify genes -> child
 
@@ -40,15 +45,13 @@ function draw() {
 
     // create parent / gene pool
     var fitnessSum = rocketGroup.getFitnessSum();
-    // console.log(fitnessSum + '\t');
+    console.log(fitnessSum + '\t');
     for (var i = 0; i < rocketGroup.population; i++) {
       var tickets = parseInt(rocketGroup.rockets[i].getFitness()/fitnessSum*100);
-      console.log(i, tickets);
       for (var j = 0; j < tickets; j++) {
         pool.push(rocketGroup.rockets[i].dna);
       }
     }
-    console.log("===============");
 
     // randomly select two for breeding
     var parentA = random(pool);
@@ -56,9 +59,6 @@ function draw() {
 
     // use two parents to breed
     rocketGroup.breed(parentA, parentB);
-
-    // reset rockets
-    rocketGroup = new Rockets();
   }
 
   // draw target
@@ -75,7 +75,7 @@ function windowResized() {
 // group of rockets as a class
 function Rockets() {
   this.rockets = [];
-  this.population = 10;
+  this.population = population;
 
   for (var i = 0; i < this.population; i++) {
     this.rockets[i] = new Rocket();
@@ -85,7 +85,7 @@ function Rockets() {
   this.run = function() {
     for (var i = 0; i < this.population; i++) {
       // gravity force
-      this.rockets[i].applyForce(createVector(0, 0.05));
+      this.rockets[i].applyForce(createVector(0, gravity));
 
       // rocket update
       this.rockets[i].update();
@@ -96,6 +96,7 @@ function Rockets() {
   this.breed = function(a, b) {
     for (var i = 0; i < this.population; i++) {
       this.rockets[i] = new Rocket(this.selectGenes(a, b));
+      this.rockets[i].setId(i);
     }
   }
 
@@ -103,28 +104,20 @@ function Rockets() {
     var newGenes = [];
     var slice = floor(random(a.genes.length));
     for (var i = 0; i < a.genes.length; i++) {
-      // var whichParent = random(['A', 'B']);
-      // var hasMutation = random(0, 100);
-      //
-      // if (hasMutation <= mutation) {
-      //   newDNA.genes[i] = p5.Vector.random2D().setMag(movement);
-      // } else {
-      //   if (whichParent == 'A') {
-      //     // choose genes from parent A
-      //     newDNA.genes[i] = createVector(a.genes[i].x, a.genes[i].y);
-      //   } else {
-      //     // choose genes from parent B
-      //     newDNA.genes[i] = createVector(b.genes[i].x, b.genes[i].y);
-      //   }
-      // }
+      // get chance for mutations
+      var randomvalue = random(100);
 
-      // new breeding
-      if (i < slice) {
-        // take from a
-        newGenes[i] = a.genes[i];
+      if (randomvalue < mutation) {
+        newGenes[i] = p5.Vector.random2D();
       } else {
-        // take from b
-        newGenes[i] = b.genes[i];
+        // new breeding
+        if (i < slice) {
+          // take from a
+          newGenes[i] = a.genes[i];
+        } else {
+          // take from b
+          newGenes[i] = b.genes[i];
+        }
       }
     }
 
@@ -188,32 +181,35 @@ function Rocket(genes) {
     this.acceleration.add(force);
   }
   this.update = function() {
-    // add dna to acceleration
-    this.applyForce(this.dna.genes[this.life]);
-    this.life++;
-
-    if (this.life >= lifespan) {
-      this.isAlive = false;
-    }
-
-    this.velocity.add(this.acceleration);
-    this.position.add(this.velocity);
-    this.acceleration.mult(0);
-
-    // check collision only when still enabled
+    // only update if the rocket is still enabled
     if (this.isEnabled) {
-      this.checkCollision();
-      this.checkTarget();
-    }
+      // add dna to acceleration
+      this.applyForce(this.dna.genes[this.life]);
+      this.life++;
 
-    // check fitness and best fitness
-    this.dist = sq(dist(this.position.x, this.position.y, target.x, target.y));
-    this.fitness = 1/this.dist;
-    // this.fitness = 100 * exp(-0.000003 * this.dist);
-    // this.fitness = map(1 / (10 * this.dist * this.dist), 0, 1, 0, 100);
+      if (this.life >= lifespan) {
+        this.isAlive = false;
+      }
 
-    if (this.fitness > this.bestfitness) {
-      this.bestfitness = this.fitness;
+      this.velocity.add(this.acceleration);
+      this.position.add(this.velocity);
+      this.acceleration.mult(0);
+
+      // check collision only when still enabled
+      if (this.isEnabled) {
+        this.checkCollision();
+        this.checkTarget();
+      }
+
+      // check fitness and best fitness
+      this.dist = sq(dist(this.position.x, this.position.y, target.x, target.y));
+      this.fitness = 1/this.dist;
+      // this.fitness = 100 * exp(-0.000003 * this.dist);
+      // this.fitness = map(1 / (10 * this.dist * this.dist), 0, 1, 0, 100);
+
+      if (this.fitness > this.bestfitness) {
+        this.bestfitness = this.fitness;
+      }
     }
   }
   this.show = function() {
@@ -236,8 +232,10 @@ function Rocket(genes) {
     pop();
 
     // show id
-    textSize(15);
-    text(this.rocketID, this.position.x, this.position.y - 15);
+    if (showID) {
+      textSize(15);
+      text(this.rocketID, this.position.x, this.position.y - 15);
+    }
   }
 
   this.checkCollision = function() {
@@ -268,7 +266,7 @@ function Rocket(genes) {
 
     // short life penalty
     // TODO: maximum distance: 1500 px
-    if (this.life < 100) {
+    if (this.life < lifespan * 0.3) {
       this.bestfitness = 0.0000001
     }
 
