@@ -85,15 +85,40 @@ h1:hover {content: "MANSUR HE";}
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   white-space: nowrap; /* Keeps the content on a single line */
 }
-
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
   to { width: 35% }
 }
-
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: #03254B; }
+}
+
+/*modal*/
+.modalDialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    opacity:0;
+    transition: opacity 0.3s ease-in;
+    pointer-events: none;
+}
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    width: 80%;
+    position: relative;
+    margin: 10% auto;
+    padding: 8px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 1px 1px 10px #000;
 }
