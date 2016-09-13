@@ -7,9 +7,9 @@ api_version: 1
 threadsafe: true
 
 handlers:
-- url: /(.*\.(gif|png|jpg|ico|bmp|html|css|js))
+- url: /(.*\.(gif|png|jpg|ico|bmp|html|css|js|mp3))
   static_files: \1
-  upload: (.*\.(gif|png|jpg|ico|bmp|html|css|js))
+  upload: (.*\.(gif|png|jpg|ico|bmp|html|css|js|mp3))
 
 # home
 - url: /
