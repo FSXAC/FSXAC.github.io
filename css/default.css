@@ -21,6 +21,7 @@ header {
 	border-bottom-width: 8px;
 }
 i {color: inherit;}
+img {width: 100%;}
 h1, h2, h3 {
 	font-weight: 300;
 }
@@ -45,6 +46,12 @@ h1:hover {content: "MANSUR HE";}
 .display-inline-block {
 	display:inline-block;
 }
+.full-width {
+	width: 100%;
+}
+.half-width {
+	width: 50%;
+}
 .headshot {
 	display:inline-block;
 	margin: 10px;
@@ -63,6 +70,9 @@ h1:hover {content: "MANSUR HE";}
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.modal-header {
+	margin-bottom: 1rem;
 }
 .nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
 	color: white;
