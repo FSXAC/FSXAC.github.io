@@ -21,14 +21,12 @@ var diffES;
 var diffEC;
 
 // current time
-var y;
-var m;
 var d;
 var h;
-var min;
+var m;
 var s;
 
-var dy, dm, dd, dh, dmin, dds;
+var dd, dh, dm, dds;
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
@@ -42,6 +40,12 @@ function setup() {
 
   // calculate the difference of time in seconds
   diffES = ENDTIME - STARTTIME;
+
+  dd = Math.floor(diffES / msPerDay);
+  diffES = diffES - (diffES * msPerDay);
+  dh = Math.floor(diffES / msPerHour);
+  diffES = diffES - (diffES * msPerHour);
+  dm = Math.floor//TODO: CONTINUE FROM HERE
 }
 
 function windowResized() {
