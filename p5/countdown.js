@@ -42,10 +42,12 @@ function setup() {
   diffES = ENDTIME - STARTTIME;
 
   dd = Math.floor(diffES / msPerDay);
-  diffES = diffES - (diffES * msPerDay);
+  diffES -= (diffES * msPerDay);
   dh = Math.floor(diffES / msPerHour);
-  diffES = diffES - (diffES * msPerHour);
-  dm = Math.floor//TODO: CONTINUE FROM HERE
+  diffES -= (diffES * msPerHour);
+  dm = Math.floor(diffES / msPerMinute)
+  diffES -= diffES * msPerMinute;
+  ds = Math.floor(diffES / 1000);
 }
 
 function windowResized() {
@@ -53,13 +55,17 @@ function windowResized() {
 }
 
 function draw() {
-  // get time
-  y = year();
-  m = month();
-  d = day();
-  h = hour();
-  min = minute();
-  s = second();
+  // get current time
+  var now = new Date(Date.UTC());
+  diffEC = ENDTIME - now;
+
+  d = Math.floor(diffEC / msPerDay);
+  diffES = diffES - (diffEC * msPerDay);
+  h = Math.floor(diffEC / msPerHour);
+  diffES = diffES - (diffEC * msPerHour);
+  m = Math.floor(diffEC / msPerMinute)
+  diffES = diffES - diffEC * msPerMinute;
+  s = Math.floor(diffEC / 1000);
 
   // clear screen
   background(0);
@@ -71,7 +77,7 @@ function draw() {
   noFill();
   stroke(255);
   strokeWeight(6);
-  arc(width/2, height/2, SCALE[SECOND]*MAX_SIZE, SCALE[SECOND]*MAX_SIZE, -HALF_PI,
+  arc(width/2, height/2, 0.8*MAX_SIZE, 0.8*MAX_SIZE, -HALF_PI,
     2*PI*map(60-s, 0, 60, 0, 0.999)-HALF_PI);
 
   strokeWeight(5);
@@ -80,42 +86,31 @@ function draw() {
 
   strokeWeight(4);
   arc(width/2, height/2, 0.4*MAX_SIZE, 0.4*MAX_SIZE, -HALF_PI,
-    2*PI*map(ENDTIME[HOUR]-h, 0, ENDTIME[HOUR]-STARTTIME[HOUR], 0.001, 0.999)-HALF_PI);
+    2*PI*map(23-h, 0, 23, 0.001, 0.999)-HALF_PI);
 
   strokeWeight(3);
-  arc(width/2, height/2, 0.3*MAX_SIZE, 0.3*MAX_SIZE, -HALF_PI,
-    2*PI*map(ENDTIME[DAY]-d, 0, ENDTIME[DAY]-STARTTIME[DAY], 0.001, 0.999)-HALF_PI);
-
-  strokeWeight(2);
   arc(width/2, height/2, 0.2*MAX_SIZE, 0.2*MAX_SIZE, -HALF_PI,
-    2*PI*map(ENDTIME[MONTH]-min, 0, ENDTIME[MONTH]-STARTTIME[MONTH], 0.001, 0.999)-HALF_PI);
+    2*PI*map(30-d, 0, 30, 0.001, 0.999)-HALF_PI);
 
-  strokeWeight(1);
-  arc(width/2, height/2, 0.1*MAX_SIZE, 0.1*MAX_SIZE, -HALF_PI,
-    2*PI*map(ENDTIME[YEAR]-y, 0, ENDTIME[YEAR]-STARTTIME[YEAR], 0.001, 0.999)-HALF_PI);
-
-  arc(width/2, height/2, (SCALE[YEAR]/2)*MAX_SIZE,(SCALE[YEAR]/2)*MAX_SIZE, -HALF_PI,
+  arc(width/2, height/2, 0.1*MAX_SIZE,0.1*MAX_SIZE, -HALF_PI,
     2*PI*map(1000-millis(), 0, 1000, 0, 1));
 
   // draw text
   textAlign(CENTER)
   fill(255);
   noStroke();
-  text(ENDTIME[SECOND]-s + " seconds", width/2, height/2+(SCALE[SECOND]+0.05)*MAX_SIZE/2);
-  text(ENDTIME[MINUTE]-min + " minutes", width/2, height/2+(SCALE[MINUTE]+0.05)*MAX_SIZE/2);
-  text(ENDTIME[HOUR]-h + " hours", width/2, height/2+(SCALE[HOUR]+0.05)*MAX_SIZE/2);
-
-  text(ENDTIME[DAY]-d + " days", width/2, height/2+(SCALE[DAY]+0.05)*MAX_SIZE/2);
-  text(ENDTIME[MONTH]-m + " months", width/2, height/2+(SCALE[MONTH]+0.05)*MAX_SIZE/2);
-  text(ENDTIME[YEAR]-y + " years", width/2, height/2+(SCALE[YEAR]+0.05)*MAX_SIZE/2);
+  text(60-s + " seconds", width/2, height/2+0.85*MAX_SIZE/2);
+  text(60-m + " minutes", width/2, height/2+0.65*MAX_SIZE/2);
+  text(23-h + " hours", width/2, height/2+0.45*MAX_SIZE/2);
+  text(30-d + " days", width/2, height/2+0.25*MAX_SIZE/2);
 
 }
 
 function drawclock() {
-  for (var i = 0; i < SCALE.length; i++) {
+  for (var i = 1; i < 5; i++) {
     noFill();
     stroke(COLOR2);
     strokeWeight(1);
-    ellipse(width/2, height/2, SCALE[i]*MAX_SIZE, SCALE[i]*MAX_SIZE);
+    ellipse(width/2, height/2, i*0.2, i*0.2);
   }
 }
