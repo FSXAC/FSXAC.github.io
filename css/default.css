@@ -203,7 +203,9 @@ right connector from last child*/
 .tree li a:hover+ul li::before,
 .tree li a:hover+ul::before,
 .tree li a:hover+ul ul::before{
-	border-color:  #94a0b4;
+	border-color: yellow;
+	border-width: 3px;
+	transition: all 0.3s ease;
 }
 
 /*Thats all. I hope you enjoyed it.
