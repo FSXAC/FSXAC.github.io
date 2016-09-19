@@ -187,10 +187,6 @@ right connector from last child*/
 	border-radius: 5px;
 	width: 150px;
 }
-.fa {
-	font-size: 4em;
-	font-weight: 100;
-}
 
 /*Time for some hover effects*/
 /*We will apply the hover effect the the lineage of the element also*/
