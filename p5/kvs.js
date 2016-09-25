@@ -10,11 +10,6 @@ function preload() {
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0);
-
-  // create buzzer
-  // buzzer = p5.TriOsc();
-  // buzzer.amp(1);
-  // buzzer.freq(880);
 }
 
 function windowResized() {
@@ -27,4 +22,5 @@ function draw() {
 
 function mousePressed() {
   buzzer.play();
+  background(255, 0, 255);
 }
