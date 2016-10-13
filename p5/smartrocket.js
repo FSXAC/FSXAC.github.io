@@ -1,6 +1,6 @@
 // rockets
 var rocketGroup;
-var lifespan = 50
+var lifespan = 50;
 var population = 100;
 
 // gene pool
