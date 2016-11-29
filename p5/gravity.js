@@ -16,7 +16,7 @@ function draw() {
   noStroke();
   ellipse(mouseX, mouseY, 20, 20);
 
-  // TODO: WTFFFFF
+  // TODO: WTFFFFFw
   body.applyForce(createVector(0, 0.0001));
   body.display();
 }

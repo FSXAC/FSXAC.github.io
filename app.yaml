@@ -21,6 +21,10 @@ handlers:
   static_files: projects.html
   upload: projects.html
 
+- url: /cpen211l11
+  static_files: cpen211l11.html
+  upload: cpen211l11.html
+
 # p5
 - url: /p5
   static_files: p5/index.html

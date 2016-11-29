@@ -45,7 +45,7 @@ function setup() {
   diffES -= (diffES * msPerDay);
   dh = Math.floor(diffES / msPerHour);
   diffES -= (diffES * msPerHour);
-  dm = Math.floor(diffES / msPerMinute)
+  dm = Math.floor(diffES / msPerMinute);
   diffES -= diffES * msPerMinute;
   ds = Math.floor(diffES / 1000);
 }
