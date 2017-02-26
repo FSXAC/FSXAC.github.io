@@ -1,75 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Home | Muchen He</title>
-	<meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home | Muchen He</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- css -->
-  <link type="text/css" rel="stylesheet" href="css/normalize.css"/>
-  <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.css">
-  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link type="text/css" rel="stylesheet" href="css/default.css"/>
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" href="css/normalize.css"/>
+    <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/default.css"/>
 
-  <!-- js -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 
-  <!-- p5 -->
-  <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
-  <script language="javascript" src="libraries/p5.dom.js"></script>
-  <script language="javascript" type="text/javascript" src="sketch.js"></script>
+    <!-- p5 -->
+    <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+    <script language="javascript" src="libraries/p5.dom.js"></script>
+    <script language="javascript" type="text/javascript" src="sketch.js"></script>
 </head>
 
 <body>
-  <!-- p5 canvas -->
-  <div id = "canvas-container"></div>
+    <!-- p5 canvas -->
+    <div id = "canvas-container"></div>
 
-  <!-- header -->
-  <header class = "container-fluid">
-    <div class = "container">
-      <a href="/"><img class="img-circle headshot" src="img/avatar.jpg" alt="face"></img></a>
-      <h1 class="display-inline-block">MUCHEN HE</h1>
-      <p class="text-muted">Second Year Engineering Undergraduate Student, University of British Columbia</p>
+    <!-- header -->
+    <header class = "container-fluid">
+        <div class = "container">
+            <a href="/"><img class="img-circle headshot" src="img/avatar.jpg" alt="face"></img></a>
+            <h1 class="display-inline-block">MUCHEN HE</h1>
+            <p class="text-muted">Second Year Engineering Undergraduate Student, University of British Columbia</p>
+        </div>
+    </header>
+
+    <div class="container" style = "background-color: rgba(255, 255, 255, 0.8); padding: 10px; border: 1px solid; border-color: rgba(200, 200, 200, 0.8); border-top:0px">
+        <h2>Welcome!</h2>
+        <table class = "table">
+            <tr>
+                <th>Contact:</th>
+                <td>Muchen (Mansur) He</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Email:</th>
+                <td>
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                    <a href="mailto:i@mansurhe.com">i@mansurhe.com</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                    <a href="mailto:m.he@alumni.ubc.ca">m.he@alumni.ubc.ca</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Phone:</th>
+                <td>(778) 952-9222</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Address:</th>
+                <td>MD0544 2205 Lower Mall</td>
+            </tr>
+            <tr>
+                <td>Vancouver, BC, V6T 1Z4</td>
+            </tr>
+        </table>
+        <!-- <a class="btn btn-lg btn-default btn-shrink" href = "#">Continue to Home</a> -->
+        <a class="btn btn-lg btn-warning btn-shrink" href = "resume.html">Resume</a>
+        <a class="btn btn-lg btn-info btn-shrink" href = "https://www.github.com/FSXAC"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+        <a class="btn btn-lg btn-default btn-shrink" href = "projects.html">Projects</a>
+        <a class="btn btn-lg btn-primary btn-shrink" href="p5">p5.js</a>
     </div>
-  </header>
-
-  <div class="container">
-	<h2>Welcome!</h2>
-		<table class = "table">
-		  <tr>
-		    <th>Contact:</th>
-		    <td>Muchen (Mansur) He</td>
-		  </tr>
-		  <tr>
-		    <th rowspan="2">Email:</th>
-		    <td>
-          <i class="fa fa-external-link" aria-hidden="true"></i>
-          <a href="mailto:i@mansurhe.com">i@mansurhe.com</a>
-        </td>
-		  </tr>
-		  <tr>
-		    <td>
-          <i class="fa fa-external-link" aria-hidden="true"></i>
-          <a href="mailto:m.he@alumni.ubc.ca">m.he@alumni.ubc.ca</a>
-        </td>
-		  </tr>
-			<tr>
-				<th>Phone:</th>
-				<td>(778) 952-9222</td>
-			</tr>
-			<tr>
-				<th rowspan="2">Address:</th>
-				<td>MD0544 2205 Lower Mall</td>
-			</tr>
-			<tr>
-				<td>Vancouver, BC, V6T 1Z4</td>
-			</tr>
-		</table>
-    <a class="btn btn-lg btn-default btn-shrink" href = "#">Continue to Home</a>
-    <a class="btn btn-lg btn-primary btn-shrink" href = "/projects">Projects</a>
-    <a class="btn btn-lg btn-warning btn-shrink" href = "#">Resume</a>
-	</div>
 
 </body>
 </html>

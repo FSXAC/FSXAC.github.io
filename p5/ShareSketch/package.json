@@ -1,0 +1,20 @@
+{
+  "name": "sharesketch",
+  "version": "1.0.0",
+  "description": "First socket project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "node",
+    "sockets",
+    "p5.js"
+  ],
+  "author": "Muchen He",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

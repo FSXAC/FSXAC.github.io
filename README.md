@@ -1,2 +1,0 @@
-# mansurhe.com
-Personal Website

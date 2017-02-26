@@ -1,0 +1,86 @@
+a {color: inherit; transition: all 0.3s ease;}
+body {
+    cursor:default;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 1.1rem;
+    background-color: #BBB;
+
+}
+header {color: #011123; border: 0;}
+footer {
+    background-color: #BBB;
+    color: white;
+    height: 100px;
+    padding: 10px;
+}
+i {color: inherit;}
+h1 {font-size: 5rem; font-weight: 300; margin: 5px 0; vertical-align: middle; transition: all 0.3s ease}
+h2 {font-size: 1.75rem; font-weight: 400; color: #13458B;}
+li {list-style-type: square;}
+strong {border-bottom: 1px dotted #13458B; font-size: 1.4rem; font-weight: 600; margin-bottom:0px; width: 100%;}
+table th, table tr {border:0 !important;}
+th {font-weight: 600;}
+/*classes*/
+.bordered {
+    border: 1px solid;
+    border-color: rgba(3, 37, 84, 0.2);
+    border-radius: 10px;
+    padding: 0 10px;
+    margin-top: 10px;
+    transition: all 0.2s ease-in-out;
+}
+.bordered:hover {border-color: rgba(3, 37, 84, 1);}
+.display-inline-block {display:inline-block;}
+.contact {margin: 5px;}
+.content-box {border: 1px dotted #13458B;}
+.container {background:white; padding-bottom:20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+.btn-round {border-radius: 20px; font-size: 1.2rem;}
+.separator {margin: 2px; border-color:rgba(3, 37, 84, 0.2)}
+.coop-status {text-align: center;}
+.coop-status h4 {margin-top:5px;}
+.coop-status .bordered {padding-top:5px;}
+.coop-status icon {font-size: 3rem;vertical-align: middle;}
+.skills {margin-top: 10px;}
+.skills p {margin-bottom: 0px;}
+.skills ul {padding-left: 10px;}
+.work-box-title {background: #F0F0F0; padding: 2px 10px; margin-bottom:2px; transition: all 0.3s ease-in-out;}
+.work-box-title:hover {background: #EAEAEA}
+.work-box p {margin-bottom: 0px;}
+.work-box ul {padding-left: 20px;}
+.focus-select {
+    text-align:center;
+    background:#03254B;
+    border-top: 8px solid #03254B;
+    border-bottom: 8px solid #03254B;
+    transition: all 0.3s ease-in-out;
+    padding: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.focus-attention {background-color:#911; padding: 10px;}
+.focus-select h4 {color:white; display:inline-block; margin:0px; vertical-align:middle; transition: all 0.3s ease-in-out;}
+.focus-select .btn {
+    background-color: #13458B;
+    border: 0;
+    color:white;
+    transition: all 0.3s ease-in-out
+}
+.hobbies .btn {
+    margin: 4px 2px;
+    padding: 2px 10px;
+    background-color: white;
+    border: 0;
+    color: inherit;
+    transition: all 0.3s ease-in-out;
+    cursor: default;
+}
+.focus-select .btn:hover, .focus-select .btn:focus {background-color: white; color:#03254B}
+.hobbies .btn:hover, .hobbies .btn:focus {background-color: #13458B; color:white}
+.title-header {
+    width: 10px;
+    height:30px;
+    background:#03254B;
+    margin-top:20px;
+    padding:5px 10px;
+    overflow:hidden;
+}
+.title-header h2 {white-space:nowrap; color:white; margin: 0;}
