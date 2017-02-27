@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<!--
+	Aerial by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Mansur He</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/css/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><script src="assets/css/ie/respond.min.js"></script><![endif]-->
+	</head>
+	<body class="loading">
+		<div id="wrapper">
+		
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+
+				<!-- Header -->
+					<header id="header">
+						<h1 style = "font-family: Lucida Sans Unicode">Mansur (Muchen) He</h1>
+						<p>Engineering &nbsp;&bull;&nbsp; Building &nbsp;&bull;&nbsp; Procrastinating</p>
+						<nav>
+							<ul>
+								<li><a style = "color:#555555; padding:0" href="#" class="icon fa-cube" title = "Design">
+								<span class="label">Design</span><p>Design</p></a></li>
+								
+								<li><a style = "color:#555555; padding:0" href="#" class="icon fa-camera" title = "Photos">
+								<span class="label">Photos</span><p>Photos</p></a></li>
+								
+								<li><a style = "color:#ffffff" href="https://vimeo.com/129184390" class="icon fa-film" title = "Videos">
+								<span class="label">Videos</span><p>Videos</p></a></li>
+								
+								<li><a style = "color:#555555" href="#" class="icon fa-steam" title = "Gaming">
+								<span class="label">Gaming</span><p>Gaming</p></a></li>
+								
+								<li><a style = "color:#555555" href="#" class="icon fa-code" title = "Computing Science">
+								<span class="label">Computing Science</span><p>CS</p></a></li>
+								
+								<li><a style = "color:#555555" href="#" class="icon fa-rocket" title = "My Hobbies">
+								<span class="label">Hobbies</span><p>Hobbies</p></a></li>
+								
+								<li><a style = "color:#ffffff" href="mailto:mansurhe@outlook.com?Subject=Contacting%20Mansur" 
+								target="_top" class="icon fa-envelope-o" title = "Contact"><span class="label">Contact</span><p>Contact</p></a></li>
+							</ul>
+						</nav>
+					</header>
+					
+					<a href = "http://hemuchen.blog.sohu.com/">
+					<img src = "http://img45.pp.sohu.com/images/blog/2007/2/12/17/12/1114b8734e6.jpg" style = "position:absolute; left:0;" width = "15px">
+					</img></a>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<!--<span class="copyright" style = "font-size: 16px;">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>-->
+						<span class="copyright" style = "font-size: 8px;">Template by <a href="http://html5up.net">HTML5 UP</a>
+					</footer>
+
+			</div>
+		</div>
+		<script>
+			window.onload = function() {
+				document.body.className = ''; 
+			
+				var bg = document.getElementById("bg");
+			
+				switch(Math.floor(Math.random() * 2)) {
+					case 0:
+						bg.style.background = "#000000 url('http://i.imgur.com/C5M3MiP.jpg') bottom right";
+						break;
+					case 1:
+						bg.style.background = "#002580 url('http://i.imgur.com/m0HG8dQ.jpg') bottom left";
+						break;
+				}
+				bgSetup(bg);
+			}
+			
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+			
+			function bgSetup(bg) {
+				bg.style.backgroundRepeat = "repeat-x";
+				bg.style.height = "100%";
+				bg.style.left = "0";
+				bg.style.opacity = "1";
+				bg.style.position = "fixed";
+				bg.style.top = "0";	
+			}
+		</script>
+	</body>
+</html>
