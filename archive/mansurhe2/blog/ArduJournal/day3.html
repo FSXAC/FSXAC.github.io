@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang = "EN-US" style = "background-image:url('journal_background.png');
+background-repeat: no-repeat; background-attachment: fixed; background-size:100% 100%;
+background-color: black;">
+
+	<head> 
+		<title> MODULE 4 - ARDUINO Journal  </title>
+		<meta charset = "UTF-8">
+		<link rel = "stylesheet" type = "text/css" href = "journal.css">
+		<link rel = "shortcut icon" href = "home.ico">
+	</head>
+	
+	<body>
+		<div id = "pageTitle">
+			<h1> Harry Ainlay Advanced Computing Science (CS30) </h1>
+			<h1>Module 4 - Arduino UNO Micro-controller:  Project Journal </h1>
+			<hr id = "titleDivider"></hr>
+			<h1> MANSUR HE </h1>
+		</div>
+		
+		<div id = "navigation">
+			<a class = "Nav" href = "index.html">INDEX</a>
+		</div>
+		
+		<div id = "content">
+			<h3>// Traffic Lights //</h3>
+			<div class = "Entry">
+				<h2>11:30 2014-11-22</h2>
+				<hr/>
+				<p>Last time, when I finished my LCD intro project: StatTrak LCD, I told myself I would use a 
+				photo-resistor / sensor in this project. And I learned about how to use it and I did.</p>
+				<p>Basically a photo-sensor looks like a resistor, and it has two ends, also like a resistor. 
+				One end is for power, adding a resistor between the power and the photo-sensor pin adjusts the sensitivity 
+				which it will capture light. The other end of the photo-sensor is connected to the analog input pins 
+				on the Arduino. It must be analog and not digital since the photo-sensor outputs an analog signal between 0 and 
+				1023 in the Arduino programs depends on the light intensity. </p>
+			</div>
+				
+			<div class = "Entry">
+				<h2> 16:41 2014-11-22</h2>
+				<hr/>
+				<p> The official Arduino's website also has some great resources on learning different components and parts. 
+				Things like the photo-sensor.</p>
+				<p> One thing I personally think is really important when it comes to wiring things up is how COMPACT and EFFICIENT 
+				it is. In this version of my traffic lights (I'm going to be doing more variation of traffic lights in the near future), 
+				I have two sets of lights, each consists of red, yellow and green. The two sets are placed opposite of each other 
+				along the same road, similar to something like this: </p>
+				<center><img src = "img/traffic_1.png" width = 30% /></center>
+				<p> Because the two sets of traffic lights are across each other and controlling the same road of traffic, I can 
+				simplify the pin usage by connecting the similar signals. I connected green of one side to green on the other side, 
+				likewise with other colours. This reduced Arduino used pins down from 7 pins 
+				(6 digital outputs for the 6 LEDs + 1 analog input) to only 4 pins (3 pairs of LEDs + 1 analog input). </p>
+				<p> By reducing the pins used, it also gives me a benefit in programming. Because now, I only need to control 3 outputs. </p>
+			</div>
+			
+			<div class = "Entry">
+				<h2> 17:23 2014-11-22 </h2>
+				<hr/>
+				<p>CONSTRUCTION COMPLETE!</p>
+				<center><img class = "FrameImage" src = "img/traffic_1_schem.png" width = 75%/></center>
+				<p>Now it's up to finish coding. It's not too hard, but I get alot of confusions in the <code>void loop()</code>
+				function because the function itself is looped, and I constantly forget that simply because it looks like a 
+				stand-alone function.</p>
+			</div>
+			
+			<div class = "Entry">
+				<h2> 18:58 2014-11-22 </h2>
+				<hr/>
+				<p> After countless trials, debugging, fixing, waiting, testing... The code is finally finished for this first project 
+				of traffic lights. Here it is below: </p>
+				<pre><code>
+/* 
+// ==variables==
+// pins
+int red = 2;
+int yellow = 3;
+int green = 4;
+int light = A5;
+
+// light
+int lightLevel = 0;
+int lightInput;
+int lightRestriction = 100;
+
+// time
+int yellowTime = 3000;
+int redTime = 20000;
+
+// ==bare minimums==
+void setup() {
+	// setup operations that only run once
+	pinMode(red, OUTPUT);
+	pinMode(yellow, OUTPUT);
+	pinMode(green, OUTPUT);
+	
+	// serial
+	Serial.begin(9600);
+	
+	// calibrates the light sensor for 2 seconds
+	for (int i = 0; i < 50; i++) {
+		// take the average light level
+		int newLightLevel = analogRead(light);
+		lightLevel = (lightLevel + newLightLevel) / 2;
+		delay(40);
+		
+		Serial.println("Calibrating Light Sensor: " + lightLevel.toString());
+	}
+	Serial.println("Light Sensor Calibrated: " + 
+}
+
+void loop() {
+	lightInput = analogRead(light);
+	
+	// without signals, green light is always on
+	digitalWrite(green, HIGH);
+	
+	if (lightInput < (lightLevel - lightRestriction)) {
+		stopLight();
+	}
+}
+
+// ==called when photocell senses shadow==
+void stopLight() {
+	// yellow light
+	digitalWrite(green, LOW);
+	digitalWrite(yellow, HIGH);
+	delay(yellowTime);
+	
+	// red light
+	digitalWrite(yellow, LOW);
+	digitalWrite(red, HIGH);
+	delay(redTime);
+	
+	// turn the red light off and go back to green
+	digitalWrite(red, LOW);
+}
+				</pre></code>
+				<p>Here is a video of it working:</p>
+				<iframe class = "FrameImage" width="560" height="315" 
+				src="http://www.youtube.com/embed/wol-zVsujCU?rel=0&amp;controls=0&amp;showinfo=0" 
+				frameborder="0" allowfullscreen></iframe>
+			</div>
+			<a href = "#top" style = "font-size: 16px; float:right; margin-bottom: 20px;">GO TO TOP</a>
+		</div>
+	</body>
+</html>
