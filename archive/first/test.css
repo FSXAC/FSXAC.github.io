@@ -1,0 +1,35 @@
+h1 {
+	font-family: impact;
+	background-color: black;
+	color: white;
+}
+
+p {
+	font-size: 10;
+	font-family: verdana;
+}
+
+tr {
+	padding: 10px;
+}
+
+td {
+	padding: 10px;
+}
+
+#ids_can_be_assigned_for_exceptions {
+	color: red
+}
+
+#javascript_demo {
+	color:white
+}
+
+#box_text{
+	font-family: Times;
+	border:1px solid black;
+}
+
+.class_name {
+	font-size: 5;
+}
