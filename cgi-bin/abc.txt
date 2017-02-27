@@ -1,0 +1,15 @@
+1. Spelling mistake in apache config file (CGT instead of CGI) 
+
+2. Had to start the cgi server using sudo a2enmod cgi and then restart apache using sudo service apache2 restart
+
+3. Now gave forbidden error instead of file not found
+
+4. In the conf-enabled and conf-available folders .. it was still showing /usr/lib/cgi-bin instead of /var/www/cgi-bin
+
+5. Still have the error
+
+6. Restarted the server
+
+7. Now shows internal server error
+
+8. Fixed the header in the python files so that they work for 2.7
