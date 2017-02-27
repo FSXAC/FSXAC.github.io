@@ -1,0 +1,117 @@
+<html lang="EN-CA">
+
+<head>
+	<title> ZMR250 FLIGHT LOGBOOK </title>
+	<meta charset = "UTF-8">
+</head>
+
+<style>
+	h1 {
+		font-family: Courier New;
+		font-size: 50px;
+		color: orange;
+		margin: auto;
+		padding-left: 180px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	form {
+		font-family: Courier New;
+		font-size: 16px;
+		color: orange;
+	}
+	
+	input, select, textarea {
+		width: 400px;
+		margin-bottom: 30px;
+		margin-top: 5px;
+		font-size: 16px;
+		font-family: Courier New;
+		background-color: rgb(60, 60, 60);
+		border-color: grey;
+		color: orange;		
+	}
+	
+	input[disabled="disabled"], select[disabled="disabled"], textarea[disabled="disabled"] {
+		background-color: #ff0;
+	}
+</style>
+
+<body style = "padding-bottom: 100px; background-color: rgb(10, 10, 10);">
+	<div style = "position:relative; width:100%; margin-right: 10px;">
+		<div style = "background-image:url('carbon_fiber.jpg')";>
+			<img src = "logo.png" style = "height:60px; float:left; padding-top: 10px; 
+			padding-bottom: 10px; margin-left: 10px;"/>
+			<h1> FLIGHT LOGBOOK </h1>
+		</div>
+	</div>
+	<hr style = "border-width:4px; border-style:inset; border-color:grey"/>
+	<div style = "text-align: center">
+		<div style = "margin-left:auto; margin-right:auto; display:inline-block; 
+		background-color:rgb(30, 30, 30); padding:10px; text-align: left;">
+			<form name = "logger" action = "">
+				DATE <br> <input type="date" id = "date"/> <br>
+				TIME <br> <input type="time" id = "time"/> <br>
+				WEATHER CONDITION <br/> <input type="text" id = "wx"/> <br>
+				LOCATION <br> <input type="text" id = "loc"/> <br>
+				FLIGHT NUMBER <br> <input type="number" id = "fltno"/> <br>
+				FLIGHT DURATION (MINUTES) <br> <input type="number" id = "fltdur"/> <br>
+				BATTERY NUMBER <br> <select id = "batno">
+					<option value = "A1" id = "bat_A1"> A1 </option>
+					<option value = "A2" id = "bat_A2"> A2 </option>
+					<option value = "A3" id = "bat_A3"> A3 </option>
+					<option value = "A4" id = "bat_A4"> A4 </option>
+				</select> <br>
+				CRASHED <input type="checkbox" id = "isCrashed" style = "width:auto; height:auto;" onclick = "checkCrashed()"/> <br>
+				REASON OF CRASH <br> <textarea id = "crash" disabled style = "height: 80px;"> </textarea> <br>
+				DAMAGED <input type="checkbox" id = "isDamaged" style = "width:auto; height:auto;" onclick = "checkDamaged()"/> <br>
+				DAMAGE <br> <textarea  id = "damage" disabled style = "height: 80px;"> </textarea> <br>
+				FPV <input type="checkbox" id = "isFPV" style = "width:auto; height:auto;"/> <br>
+				VIDEO <input type="checkbox" id = "isVideo" style = "width:auto; height:auto;" onclick = "checkVideo()"/> <br>
+				VIDEO LINK <br> <input id = "v_link" disabled type="url"/> <br>
+				ADDITIONAL COMMENTS <br> <textarea id = "comments" style = "height: 80px;"> </textarea> <br>
+				<input type="submit" style = "height: 50px; margin-bottom: 0;"/> <br>
+			</form>			
+		</div>
+	</div>
+</body>
+
+<script>
+	var isCrashed = document.getElementById("isCrashed");
+	var crash = document.getElementById("crash");
+	
+	var isDamaged = document.getElementById("isDamaged");
+	var damage = document.getElementById("damage");
+	
+	var isVideo = document.getElementById("isVideo");
+	var v_link = document.getElementById("v_link");
+
+	function checkCrashed() {
+		if (isCrashed.checked) {
+			crash.disabled = false;
+		} else {
+			crash.disabled = true;
+			crash.value = ""
+		}
+	}
+	
+	function checkDamaged() {
+		if (isDamaged.checked) {
+			damage.disabled = false;
+		} else {
+			damage.disabled = true;
+			damage.value = ""
+		}
+	}
+	
+	function checkVideo() {
+		if (isVideo.checked) {
+			v_link.disabled = false;
+		} else {
+			v_link.disabled = true;
+			v_link.value = ""
+		}
+	}
+	
+</script>
