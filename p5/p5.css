@@ -11,6 +11,7 @@
 
 .sidepan-container {
     height:100%;
+    width:100%;
     position:absolute;
 }
 .sidepan-container > h2, .sidepan-container > p{
