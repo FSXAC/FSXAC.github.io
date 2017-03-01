@@ -39,6 +39,7 @@ function setup() {
 
 
 function draw() {
+    // background(0);
     for (var i = 0; i < p.length; i++) {
         p[i].step();
         if (p[i].blocked) p.splice(i, 1);
@@ -49,7 +50,7 @@ function draw() {
     rect(width/2, height/2, side, side);
 
     // draw heart
-    heart();
+    heartbeat();
 }
 
 // particle class
@@ -106,13 +107,26 @@ function Particle(new_location, new_angle) {
     }
 }
 
-var contract     = 100;
+var contract_max = 1.8;
+var contract     = contract_max;
 var contract_tgt = 1;
-function heart() {
-    fill(255);
-    contract = lerp(contract, contract_tgt, 0.1);
+function heartbeat() {
+
+    contract = contract > contract_tgt * 1.05 ? lerp(contract, contract_tgt, 0.1) : contract_max;
     console.log(contract);
-    ellipse(100, 100, contract, contract);
+    // ellipse(width/2-25, height/2-25, contract * 30, contract*30);
+    drawHeart(width/2-25, height/2-25, contract);
+}
+
+function drawHeart(xref, yref, size) {
+    fill(200, 0, 0);
+    noStroke();
+    beginShape();
+    vertex(xref, yref);
+    bezierVertex(xref, -10+yref, 20*size+xref, -5*size+yref, xref, 13*size+yref);
+    vertex(xref, yref);
+    bezierVertex(xref, -10+yref, -20*size+xref, -5*size+yref, xref, 13*size+yref);
+    endShape();
 }
 
 function mouseClicked() {
