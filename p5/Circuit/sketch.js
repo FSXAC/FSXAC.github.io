@@ -102,6 +102,7 @@ function Particle(new_location, new_angle) {
             this.life--;
         } else {
             this.blocked = true;
+            ellipse(this.location.x, this.location.y, 5, 5);
             return;
         }
     }
