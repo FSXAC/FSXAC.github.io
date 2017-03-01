@@ -10,7 +10,8 @@ function setup() {
     smooth();
     strokeWeight(1);
     background(0);
-    stroke(255)
+    stroke(255);
+    rectMode(CENTER);
 
     // particle test
     for (var i = 0; i < 8; i++) {
@@ -33,21 +34,22 @@ function setup() {
             createVector(width/2+side/2-side/8, height/2-side/2+i*side/8+side/16), PI/2
         ));
     }
+
 }
 
 
 function draw() {
-    // one way of writing for loops in JS
-    // for (part of p) {
-    //     part.step();
-    // }
     for (var i = 0; i < p.length; i++) {
         p[i].step();
         if (p[i].blocked) p.splice(i, 1);
     }
-    rectMode(CENTER);
+    stroke(255);
+    strokeWeight(2);
     fill(0);
     rect(width/2, height/2, side, side);
+
+    // draw heart
+    heart();
 }
 
 // particle class
@@ -59,7 +61,7 @@ function Particle(new_location, new_angle) {
 
     // status
     this.blocked = false;
-    this.life = random(1000, 3000);
+    this.life = random(20, 200);
 
     // one step into future
     this.step = function() {
@@ -82,6 +84,7 @@ function Particle(new_location, new_angle) {
         this.angle += (n > 198) ? PI/4 : (n < 1) ? -PI/4 : 0;
 
         // draw line
+        stroke(map(dist(this.location.x, this.location.y, width/2, height/2), 0, 600, 255, 0))
         line(old_x, old_y, this.location.x, this.location.y);
 
         // delete itself if it hits window border
@@ -101,6 +104,15 @@ function Particle(new_location, new_angle) {
             return;
         }
     }
+}
+
+var contract     = 100;
+var contract_tgt = 1;
+function heart() {
+    fill(255);
+    contract = lerp(contract, contract_tgt, 0.1);
+    console.log(contract);
+    ellipse(100, 100, contract, contract);
 }
 
 function mouseClicked() {
