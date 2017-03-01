@@ -1,4 +1,4 @@
-var p;
+var p = new Array();
 
 function setup() {
     canvas = createCanvas(windowWidth, windowHeight);
@@ -12,7 +12,9 @@ function setup() {
     stroke(255, 0.5);
 
     // particle test
-    p = new Particle(createVector(width / 2, height / 2), 0);
+    for (var i = 0; i < 12; i++) {
+        append(p, new Particle(createVector(width / 2, height / 2), i * 2*PI / 12));
+    }
 }
 
 
@@ -20,7 +22,9 @@ function draw() {
     // background(0);
     // fill(255);
     // text(int(frameRate()), 10, 10);
-    p.step();
+    for (part of p) {
+        part.step();
+    }
 }
 
 // particle class
@@ -40,9 +44,12 @@ function Particle(new_location, new_angle) {
         this.location.y += this.speed * cos(this.angle);
 
         // change angle randomly
-        this.angle += random(-0.02, 0.02);
+        this.angle += random(-0.03, 0.03);
 
         // draw line
+        stroke(255);
         line(old_x, old_y, this.location.x, this.location.y);
+
+        // delete itself if it hits window border
     }
 }
