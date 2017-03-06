@@ -1,0 +1,51 @@
+body {
+    padding: 20px;
+    font-family: "Segoe UI", sans-serif;
+}
+
+p {
+    margin: 5px 0;
+}
+
+img.avatar {
+    border-radius: 50%;
+    width: 190px;
+    transition: 0.2s all ease-in-out;
+}
+img.avatar:hover {
+    width: 200px;
+    border-radius: 10%;
+}
+
+h1 {
+    font-weight: 100;
+    font-size: 5rem;
+    margin: 10px;
+}
+
+h2 {
+    font-weight: 200;
+    font-size: 3rem;
+    margin: 5px;
+}
+
+header {
+    text-align: center;
+}
+
+th {
+    text-align: right;
+    font-weight: 600;
+}
+
+td {
+    padding-left: 10px;
+}
+
+.muted {
+    color: #888
+}
+
+.display-inline-block {
+    display: inline-block;
+}
