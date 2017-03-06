@@ -45,9 +45,10 @@ div.circular {
 div.circular:hover {
     color: white;
     background-color: #003;
-    width: 105px;
-    height:105px;
-    line-height: 105px;
+    /*width: 105px;*/
+    /*height:105px;*/
+    /*line-height: 105px;*/
+    box-shadow: 0px 5px 3px 0px #000;
 }
 
 h1 {
