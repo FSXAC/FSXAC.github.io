@@ -1,6 +1,10 @@
 var p = new Array();
 var side = 100;
 
+var heartSize_max = 1.8;
+var heartSize     = heartSize_max;
+var heartSize_tgt = 1;
+
 function setup() {
     canvas = createCanvas(windowWidth, windowHeight);
     canvas.position(0, 0);
@@ -40,14 +44,38 @@ function setup() {
 
 function draw() {
     // background(0);
+
+    stroke(255);
+    strokeWeight(2);
+
     for (var i = 0; i < p.length; i++) {
         p[i].step();
         if (p[i].blocked) p.splice(i, 1);
     }
-    stroke(255);
-    strokeWeight(2);
+
     fill(0);
+    stroke(255);
     rect(width/2, height/2, side, side);
+
+    // make lightning around the mouse
+    // number of branches
+    stroke(255, 50);
+    var branches = random(2);
+    for (var i = 0; i < branches; i++) {
+        var steps = random(6);
+        var x = width/2-25 + random(-10, 10);
+        var y = height/2-25 + random(-10, 10);
+        var weight = 3;
+        for (var j = 0; j < steps; j++) {
+            strokeWeight(weight);
+            weight *= 0.5
+            var next_x = x + random(-50, 50);
+            var next_y = y + random(-50, 50);
+            line(x, y, next_x, next_y);
+            x = next_x;
+            y = next_y;
+        }
+    }
 
     // draw heart
     heartbeat();
@@ -79,8 +107,10 @@ function Particle(new_location, new_angle) {
         // this.location.x += this.speed * sin(angle_prime);
         // this.location.y += this.speed * cos(angle_prime);
 
-        // change angle randomly
+        // change angle randomly (continuous)
         // this.angle += random(-0.01, 0.01);
+
+        // change angle randomly (probability)
         var n = random(200);
         this.angle += (n > 198) ? PI/4 : (n < 1) ? -PI/4 : 0;
 
@@ -108,15 +138,9 @@ function Particle(new_location, new_angle) {
     }
 }
 
-var contract_max = 1.8;
-var contract     = contract_max;
-var contract_tgt = 1;
 function heartbeat() {
-
-    contract = contract > contract_tgt * 1.05 ? lerp(contract, contract_tgt, 0.1) : contract_max;
-    console.log(contract);
-    // ellipse(width/2-25, height/2-25, contract * 30, contract*30);
-    drawHeart(width/2-25, height/2-25, contract);
+    heartSize = heartSize > heartSize_tgt * 1.05 ? lerp(heartSize, heartSize_tgt, 0.1) : heartSize_max;
+    drawHeart(width/2-25, height/2-25, heartSize);
 }
 
 function drawHeart(xref, yref, size) {
