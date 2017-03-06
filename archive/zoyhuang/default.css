@@ -3,6 +3,11 @@ body {
     font-family: "Segoe UI", sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 p {
     margin: 5px 0;
 }
@@ -17,6 +22,34 @@ img.avatar:hover {
     border-radius: 10%;
 }
 
+div.contact {
+    margin: 20px auto;
+}
+
+div.menu {
+    margin-top: 20px;
+    text-align: center;
+}
+
+div.circular {
+    text-align: center;
+    vertical-align: center;
+    border-radius: 50%;
+    border: 2px solid #EEE;
+    width: 100px;
+    height:100px;
+    line-height: 100px;
+    transition: 0.2s all ease-in-out;
+}
+
+div.circular:hover {
+    color: white;
+    background-color: #003;
+    width: 105px;
+    height:105px;
+    line-height: 105px;
+}
+
 h1 {
     font-weight: 100;
     font-size: 5rem;
@@ -27,6 +60,12 @@ h2 {
     font-weight: 200;
     font-size: 3rem;
     margin: 5px;
+}
+
+h3 {
+    font-weight: 200;
+    font-size: 1.5rem;
+    margin: 0;
 }
 
 header {
@@ -42,10 +81,40 @@ td {
     padding-left: 10px;
 }
 
+hr {
+    border: 1px solid #EEE;
+}
+
 .muted {
     color: #888
 }
 
 .display-inline-block {
     display: inline-block;
+}
+
+.ext-link {
+    border-radius: 3px;
+    background-color: #FFF;
+    padding: 1px 3px;
+    border: 1px solid #EEE;
+    transition: 0.2s all ease-in-out;
+}
+
+.ext-link:hover {
+    background-color: #DDD;
+    border: 1px solid #AAA
+}
+
+.center {
+    width: 300px;
+    margin: auto;
+}
+
+.fancy-hover {
+    transition: 0.2s all ease-in-out;
+}
+.fancy-hover:hover {
+    color: white;
+    background-color: #003;
 }
