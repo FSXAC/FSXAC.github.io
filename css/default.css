@@ -20,6 +20,7 @@ footer {
     padding: 10px;
     margin-top: 8px;
 }
+header {margin-top: 20px;}
 header.header-bordered {
     color: #011123;
     border: 0 solid #03254B;
@@ -27,7 +28,7 @@ header.header-bordered {
 }
 th {text-align: right; font-weight: 600;}
 td {padding-left: 10px;}
-hr {border: 1px solid #EEE;}
+hr {border: 1px solid #EEE; margin:10px;}
 ul {margin-left: 25px;}
 /*classes*/
 .board {
@@ -50,10 +51,11 @@ ul {margin-left: 25px;}
 .contact {margin: 5px;}
 .center {margin-left: auto; margin-right: auto;}
 div.circular {
+    background-color: #FFF;
     text-align: center;
     vertical-align: center;
     border-radius: 50%;
-    border: 1px solid #EEE;
+    border: 2px solid #EEE;
     width: 100px;
     margin-left:auto;
     margin-right:auto;
@@ -83,8 +85,8 @@ img.avatar {
     transition: 0.2s all ease-in-out;
 }
 img.avatar:hover {
-    width: 200px;
-    border-radius: 10%;
+    /*width: 200px;*/
+    border-radius: 5%;
 }
 .ext-link {
     border-radius: 3px;
