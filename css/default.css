@@ -4,9 +4,12 @@ body {
     font-size: 1.2rem;
     color: #03254B;
 }
-i {color: inherit;}
 h1 {font-weight: 100; font-size: 5rem; margin: 5px 0; vertical-align: middle;}
 h2 {font-weight: 400; color: #13458B;}
+h3 {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
 a {text-decoration: none; color: inherit; transition: all 0.3s ease;}
 p {margin:5px 0;}
 footer {
@@ -41,6 +44,26 @@ ul {margin-left: 25px;}
 .btn-expand:hover {transform: scale(1.1); transition: all 0.3s ease;}
 .btn-shrink:hover {transform: scale(0.9); transition: all 0.3s ease;}
 .contact {margin: 5px;}
+div.circular {
+    text-align: center;
+    vertical-align: center;
+    border-radius: 50%;
+    border: 1px solid #EEE;
+    width: 100px;
+    margin-left:auto;
+    height:100px;
+    line-height: 100px;
+    transition: 0.2s all ease-in-out;
+}
+div.circular:hover {
+    color: white;
+    background-color: #003;
+    box-shadow: 0px 0px 3px 0px #000;
+}
+
+div.circular:active {
+    transform: rotate(45deg);
+}
 .darkbox {
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 20px;
@@ -68,7 +91,7 @@ img.avatar:hover {
     background-color: #DDD;
     border: 1px solid #AAA
 }
-.headshot:hover {border-radius: 5%; width: 120px;}
+.no-margin{margin: 0;}
 .hidden {display:none;}
 .innershadow {box-shadow: inset 0px 0px 20px #000000;}
 .jumbotron {

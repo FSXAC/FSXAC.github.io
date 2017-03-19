@@ -2,7 +2,7 @@ var p = new Array();
 var side = 100;
 
 var heartSize_max = 1.8;
-var heartSize     = heartSize_max;
+var heartSize = heartSize_max;
 var heartSize_tgt = 1;
 
 function setup() {
