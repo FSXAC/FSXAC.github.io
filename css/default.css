@@ -68,7 +68,6 @@ div.circular:hover {
     background-color: #003;
     box-shadow: 0px 0px 3px 0px #000;
 }
-
 div.circular:active {
     transform: rotate(45deg);
 }
