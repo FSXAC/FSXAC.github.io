@@ -30,6 +30,10 @@ td {padding-left: 10px;}
 hr {border: 1px solid #EEE;}
 ul {margin-left: 25px;}
 /*classes*/
+.board {
+    width: 800px;
+    margin: 0 auto;
+}
 .bordered {
     border: 1px solid;
     border-color: rgba(3, 37, 84, 0.2);
@@ -44,6 +48,7 @@ ul {margin-left: 25px;}
 .btn-expand:hover {transform: scale(1.1); transition: all 0.3s ease;}
 .btn-shrink:hover {transform: scale(0.9); transition: all 0.3s ease;}
 .contact {margin: 5px;}
+.center {margin-left: auto; margin-right: auto;}
 div.circular {
     text-align: center;
     vertical-align: center;
@@ -51,6 +56,7 @@ div.circular {
     border: 1px solid #EEE;
     width: 100px;
     margin-left:auto;
+    margin-right:auto;
     height:100px;
     line-height: 100px;
     transition: 0.2s all ease-in-out;
@@ -113,7 +119,16 @@ img.avatar:hover {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 .white-text {color: #fff;}
-/*specific classes*/
+
+/*MEDIA SPECIFIC*/
+@media screen and (max-width: 800px) {
+    .board {
+        width: 100%;
+    }
+}
+
+
+/*EVERY THING UNDER HERE IS A MESS*/
 /*typewritter effect*/
 .typewriter {
     animation:
@@ -158,7 +173,6 @@ img.avatar:hover {
 }
 
 /*We will use ::before and ::after to draw the connectors*/
-
 .tree li::before, .tree li::after{
     content: '';
     position: absolute; top: 0; right: 50%;

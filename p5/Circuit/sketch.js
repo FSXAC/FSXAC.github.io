@@ -1,8 +1,8 @@
-var p = new Array();
+var p    = new Array();
 var side = 100;
 
 var heartSize_max = 1.8;
-var heartSize = heartSize_max;
+var heartSize     = heartSize_max;
 var heartSize_tgt = 1;
 
 function setup() {
@@ -62,9 +62,9 @@ function draw() {
     stroke(255, 50);
     var branches = random(2);
     for (var i = 0; i < branches; i++) {
-        var steps = random(6);
-        var x = width/2-25 + random(-10, 10);
-        var y = height/2-25 + random(-10, 10);
+        var steps  = random(6);
+        var x      = width/2-25 + random(-10, 10);
+        var y      = height/2-25 + random(-10, 10);
         var weight = 3;
         for (var j = 0; j < steps; j++) {
             strokeWeight(weight);
@@ -85,12 +85,12 @@ function draw() {
 function Particle(new_location, new_angle) {
     // motion attributes
     this.location = new_location;
-    this.angle = new_angle;
-    this.speed = 3;
+    this.angle    = new_angle;
+    this.speed    = 3;
 
     // status
     this.blocked = false;
-    this.life = random(20, 200);
+    this.life    = random(20, 200);
 
     // one step into future
     this.step = function() {
