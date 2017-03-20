@@ -37,6 +37,8 @@ function draw() {
             var phase = 0.07*frameCount;
 
             // second wave
+            var a2 = map(abs(mouseY-0.8*height), 0, height, 2, 6)/(1+50*pow(map(abs(mouseX-w), 0, width, 0, 1), 2));
+
             // frequency
             var f2 = 0.01;
 
@@ -48,13 +50,13 @@ function draw() {
 
             // noise
             // noise amplitude
-            var na = 5;
+            var na = 10;
 
             // noise phase
-            var nphase = 0.01*frameCount;
+            var nphase = 0.02*frameCount;
 
             var noiseOffset = na*noise(w, nphase)-0.5;
-            h += a*sin((f*w) + phase + phaseOffset) * pow(sin((f2*w) + phase2), 2);
+            h += a*sin((f*w) + phase + phaseOffset) * pow(a2*sin((f2*w) + phase2), 2);
             h += noiseOffset;
             curveVertex(w, h);
         }
