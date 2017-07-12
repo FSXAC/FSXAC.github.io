@@ -56,7 +56,7 @@ th {font-weight: 600;}
     padding: 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.focus-attention {background-color:#911; padding: 10px;}
+.focus-attention {background-color:orange; padding: 10px;}
 .focus-select h4 {color:white; display:inline-block; margin:0px; vertical-align:middle; transition: all 0.3s ease-in-out;}
 .focus-select .btn {
     background-color: #13458B;
