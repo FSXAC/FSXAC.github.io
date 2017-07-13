@@ -7,11 +7,13 @@ body {
 h1 {font-weight: 100; font-size: 5rem; margin: 5px 0; vertical-align: middle;}
 h2 {font-weight: 400; }
 h3 {font-weight: 400; font-size: 1.5rem; }
-a {text-decoration: none; color: inherit; transition: all 0.3s ease;}
+/*a {text-decoration: none; color: inherit; transition: all 0.3s ease;}
+a:hover {text-orientation: none}*/
+a {transition: all 0.3s ease-in-out;}
 p {margin:5px 0;}
 th {text-align: right; font-weight: 600;}
 td {padding-left: 10px;}
-hr {border: 1px solid #EEE; margin:10px;}
+hr {border: 1px solid #EEE; margin:10px 0;}
 ul {margin-left: 25px;}
 /*classes*/
 .bordered {
@@ -54,11 +56,9 @@ div.circular:active {
 .display-inline-block {display:inline-block;}
 img.avatar {
     border-radius: 50%;
-    width: 190px;
     transition: 0.2s all ease-in-out;
 }
 img.avatar:hover {
-    /*width: 200px;*/
     border-radius: 5%;
 }
 .ext-link {

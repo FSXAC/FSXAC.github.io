@@ -1,12 +1,11 @@
 var colors;
 
 function setup() {
-    var canvasWidth = document.getElementById('canvasContainer').offsetWidth
-    canvas = createCanvas(canvasWidth-6, 300);
-    // canvas.position(0, 0);
+    // var canvasWidth = document.getElementById('canvasContainer').offsetWidth
+    canvas = createCanvas(windowWidth, 100);
     canvas.class("pcanvas");
     canvas.parent('canvasContainer');
-    strokeWeight(5);
+    strokeWeight(3);
 
     // colors
     colors = [
@@ -30,7 +29,7 @@ function draw() {
             // h += 200 * sin(w * 0.03 + frameCount * 0.07 + i * TWO_PI / 3) * pow(abs(sin(w * 0.001 + frameCount * 0.02)), 5);
 
             // amplitude
-            var a = 10;
+            var a = 2;
 
             // frequency
             var f = 0.05;
@@ -39,7 +38,7 @@ function draw() {
             var phase = 0.07*frameCount;
 
             // second wave
-            var a2 = map(abs(mouseY-0.8*height), 0, height, 2, 6)/(1+50*pow(map(abs(mouseX-w), 0, width, 0, 1), 2));
+            var a2 = map(abs(mouseY-0.5*height), 0, height, 1, 2)/(1+50*pow(map(abs(mouseX-w), 0, width, 0, 1), 2));
 
             // frequency
             var f2 = 0.01;
@@ -52,13 +51,13 @@ function draw() {
 
             // noise
             // noise amplitude
-            var na = 10;
+            var na = 5;
 
             // noise phase
             var nphase = 0.02*frameCount;
 
             var noiseOffset = na*noise(w, nphase)-0.5;
-            h += a*sin((f*w) + phase + phaseOffset) * pow(a2*sin((f2*w) + phase2), 2);
+            h += 1*sin((f*w) + phase + phaseOffset) * pow(a2*sin((f2*w) + phase2), 2);
             h += noiseOffset;
             curveVertex(w, h);
         }
@@ -67,9 +66,5 @@ function draw() {
 }
 
 function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
+    resizeCanvas(windowWidth, 100);
 }
-
-// function mousePressed() {
-//     createP("test P")
-// }
