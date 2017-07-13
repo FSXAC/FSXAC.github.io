@@ -1,9 +1,11 @@
 var colors;
 
 function setup() {
-    canvas = createCanvas(windowWidth, windowHeight);
-    canvas.position(0, 0);
+    var canvasWidth = document.getElementById('canvasContainer').offsetWidth
+    canvas = createCanvas(canvasWidth-6, 300);
+    // canvas.position(0, 0);
     canvas.class("pcanvas");
+    canvas.parent('canvasContainer');
     strokeWeight(5);
 
     // colors
@@ -24,7 +26,7 @@ function draw() {
         stroke(colors[i]);
         beginShape();
         for(var w = -20; w < width + 20; w += 5) {
-            var h = 0.8 * height;
+            var h = 0.5 * height;
             // h += 200 * sin(w * 0.03 + frameCount * 0.07 + i * TWO_PI / 3) * pow(abs(sin(w * 0.001 + frameCount * 0.02)), 5);
 
             // amplitude
@@ -67,3 +69,7 @@ function draw() {
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
 }
+
+// function mousePressed() {
+//     createP("test P")
+// }

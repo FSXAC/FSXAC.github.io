@@ -1,40 +1,19 @@
 body {
     cursor:default;
     font-family: "Segoe UI", sans-serif;
-    font-size: 1.2rem;
-    color: #03254B;
+    /*font-size: 1.2rem;*/
+    color: #111;
 }
 h1 {font-weight: 100; font-size: 5rem; margin: 5px 0; vertical-align: middle;}
-h2 {font-weight: 400; color: #13458B;}
-h3 {
-    font-weight: 400;
-    font-size: 1.5rem;
-}
+h2 {font-weight: 400; }
+h3 {font-weight: 400; font-size: 1.5rem; }
 a {text-decoration: none; color: inherit; transition: all 0.3s ease;}
 p {margin:5px 0;}
-footer {
-    background-color: #05182E;
-    color: white;
-    border: 0 solid #03254B;
-    border-top-width: 8px;
-    padding: 10px;
-    margin-top: 8px;
-}
-header {margin-top: 20px;}
-header.header-bordered {
-    color: #011123;
-    border: 0 solid #03254B;
-    border-bottom-width: 8px;
-}
 th {text-align: right; font-weight: 600;}
 td {padding-left: 10px;}
 hr {border: 1px solid #EEE; margin:10px;}
 ul {margin-left: 25px;}
 /*classes*/
-.board {
-    width: 800px;
-    margin: 0 auto;
-}
 .bordered {
     border: 1px solid;
     border-color: rgba(3, 37, 84, 0.2);
@@ -44,11 +23,6 @@ ul {margin-left: 25px;}
     transition: all 0.2s ease-in-out;
 }
 .bordered:hover {border-color: rgba(3, 37, 84, 1);}
-.bold {font-weight: 500;}
-.btn {transform: scale(1);}
-.btn-expand:hover {transform: scale(1.1); transition: all 0.3s ease;}
-.btn-shrink:hover {transform: scale(0.9); transition: all 0.3s ease;}
-.contact {margin: 5px;}
 .center {margin-left: auto; margin-right: auto;}
 div.circular {
     background-color: #FFF;
@@ -108,18 +82,11 @@ img.avatar:hover {
     background-size: cover;
 }
 .text-center {text-align: center;}
-.text-muted {color: #888;}
-.modal-header {margin-bottom: 1rem;}
-.nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
-    color: white;
-    background-color: #03254B;
-}
 .pcanvas {z-index: -1;}
 .thumbnail, .thumbnail:hover, .thumbnail:active {
     text-decoration: none;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
-.white-text {color: #fff;}
 @media screen and (max-width: 800px) {
     .board {
         width: 100%;
