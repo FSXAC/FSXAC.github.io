@@ -1,58 +1,104 @@
-var gridSize = 20;
+var particles = [];
+
+var PARTICLES = 200;
+var MOVEMENT_MIN = 30;
+var MOVEMENT_MAX = 50;
+var MOVEMENT_TARGET_SIZE = 1;
+var MOVEMENT_LERP_RATE = 0.05;
+
+var MOUSE_RANGE = 150;
+var POINT_DARK = 220;
+var POINT_LIGHT = 255;
+var POINT_MIN = 3;
+var POINT_MAX = 8;
+
+var LINE_WIDTH_MIN = 0.2;
+var LINE_WIDTH_MAX = 1;
+var LINE_LIMIT_PER_POINT = 3;
+var LINE_RANGE = 120;
+var LINE_NEIGHBOUR_EFFECT = 0.5;
+var LINE_DARK = 220;
+var LINE_LIGHT = 255;
 
 function setup() {
-    // canvas = createCanvas(windowWidth, 100);
     canvas = createCanvas(windowWidth, windowHeight);
-    canvas.position(0, 0);
     canvas.class("pcanvas");
-    // canvas.parent('canvasContainer');
-}
+    canvas.position(0, 0);
 
-function draw() {
-    // background(230);
-
-    // draw dots
-    stroke(200);
-    for (var x = 0; x < width/gridSize; x++) {
-        for (var y = 0; y < height/gridSize; y++) {
-            point(x * gridSize, y * gridSize);
-        }
+    for (var i = 0; i < PARTICLES; i++) {
+        particles[i] = new Particle(createVector(randInt(width), randInt(height)));
     }
 }
 
-function mousePressed() {
-    drawChip(mouseX, mouseY, randomInt(10), randomInt(10), "");
-} 
-
-function windowResized() {
-    resizeCanvas(windowWidth, 100);
+function draw() {
+    background(255);
+    for (var i = 0; i < particles.length; i++) {
+        particles[i].draw();
+        particles[i].update();
+    }
 }
 
-function snap(n) {
-    return (gridSize * round(n / gridSize));
+// =========[ UTILITY FUNCTIONS ]=========
+function randInt(n) {
+    return round(random(n));
 }
 
-function randomInt(n) {
-    return floor(random(n));
+function randRange(n1, n2) {
+    return randInt(n2 - n1) + n1;
 }
 
-function drawChip(posX, posY, hPins, vPins, partName) {
-    var w, h;
+function insideCanvas(x, y) {
+    return (x > 0 && x < width) && (y > 0 && y < height);
+}
 
-    // console.log(hPins, vPins);
+// =========[ PARTICLE CLASS ]=========
+function Particle(startingPos) {
+    this.pos = startingPos;
+    this.targetPos;
+    this.size = random(POINT_MIN, POINT_MAX);
+    
+    
+    this.nextTarget = function() {
+        do {
+            var randomMag = random(MOVEMENT_MIN, MOVEMENT_MAX);
+            var randomDirection = p5.Vector.random2D();
+            randomDirection.mult(randomMag);
+            this.targetPos = p5.Vector.add(this.pos, randomDirection);
+        } while (!insideCanvas(this.targetPos.x, this.targetPos.y));
+    }
 
-    // if no pins
-    if (hPins == 0 && vPins == 0) {
-        h = w = gridSize / 2;
-        rect(snap(posX) - w/2, snap(posY) - h/2, w, h);
-    } else {
-        w = (hPins == 0) ? 10 : gridSize * hPins;
-        h = (vPins == 0) ? 10 : gridSize * vPins;
-        rect(snap(posX) - (gridSize / 2), snap(posY) - (gridSize / 2), w, h);
+    this.nextTarget();
 
-        // w = (hPins == 0) ? gridSize / 2 : gridSize * hPins;
-        // h = (vPins == 0) ? gridSize / 2 : gridSize * vPins;
-        console.log(w, h);
-        // rect(snap(posX) - (gridSize / (hPins == 0) ? 4 : 2), snap(posY) - (gridSize / (vPins == 0) ? 4 : 2), w, h);
+    this.draw = function() {
+        var distanceToMouse = dist(mouseX, mouseY, this.pos.x, this.pos.y);
+        var strokeColor = map(distanceToMouse, 0, MOUSE_RANGE, POINT_DARK, POINT_LIGHT)
+        if (distanceToMouse > MOUSE_RANGE) return;
+
+        var limitCount = 0;
+        for (var i = 0; i < particles.length; i++) {
+            if (this == particles[i]) continue;
+            if (limitCount >= LINE_LIMIT_PER_POINT) break;
+
+            var distanceToNeighbour = dist(this.pos.x, this.pos.y, particles[i].pos.x, particles[i].pos.y)
+            if (distanceToNeighbour > LINE_RANGE) continue;
+
+            stroke(LINE_NEIGHBOUR_EFFECT * map(distanceToNeighbour, 0, LINE_RANGE, LINE_DARK, LINE_LIGHT) + (1 - LINE_NEIGHBOUR_EFFECT) * strokeColor);
+            strokeWeight(map(distanceToNeighbour, 0, LINE_RANGE, LINE_WIDTH_MIN, LINE_WIDTH_MAX));
+            line(this.pos.x, this.pos.y, particles[i].pos.x, particles[i].pos.y);
+            limitCount++;
+        }
+
+        strokeWeight(this.size);
+        stroke(strokeColor);
+        point(this.pos.x, this.pos.y);
+    }
+
+    this.update = function() {
+        if (p5.Vector.sub(this.pos, this.targetPos).mag() > MOVEMENT_TARGET_SIZE) {
+            this.pos.x = lerp(this.pos.x, this.targetPos.x, MOVEMENT_LERP_RATE);
+            this.pos.y = lerp(this.pos.y, this.targetPos.y, MOVEMENT_LERP_RATE);
+        } else {
+            this.nextTarget();
+        }
     }
 }

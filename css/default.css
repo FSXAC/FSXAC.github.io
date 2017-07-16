@@ -9,7 +9,8 @@ h2 {font-weight: 400; }
 h3 {font-weight: 400; font-size: 1.5rem; }
 /*a {text-decoration: none; color: inherit; transition: all 0.3s ease;}
 a:hover {text-orientation: none}*/
-a {transition: all 0.3s ease-in-out;}
+footer {margin: 20px 0;}
+a {text-decoration: none; transition: all 0.3s ease-in-out;}
 p {margin:5px 0;}
 th {text-align: right; font-weight: 600;}
 td {padding-left: 10px;}

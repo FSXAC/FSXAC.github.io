@@ -18,8 +18,7 @@ crossorigin="anonymous"></script>
 <!-- p5.js -->
 <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
 <script language="javascript" src="libraries/p5.dom.js"></script>
-<!-- <script language="javascript" type="text/javascript" src="index_sketch.js"></script> -->
-<script language="javascript" type="text/javascript" src="cymkWaves.js"></script>
+<script language="javascript" type="text/javascript" src="index_sketch.js"></script>
 </head>
 <body style="padding-top: 70px;">
 <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" >
@@ -37,13 +36,13 @@ crossorigin="anonymous"></script>
         <div class="collapse navbar-collapse" id="nav-collapsable">
             <ul class="nav navbar-nav">
                 <li role="presentation" class="active"><a href="#index">Index <span class="sr-only">(current)</span></a></li>
-                <li role="presentation"><a href="../about">About</a></li>
-                <li role="presentation"><a href="../blog">Blog</a></li>
-                <li role="presentation"><a href="../contact">Contact</a></li>
-                <li role="presentation"><a href="../documents">Documents</a></li>
-                <li role="presentation"><a href="../projects">Projects</a></li>
-                <li role="presentation"><a href="../resume">Resume</a></li>
-                <li role="presentation"><a href="#">Shenanigans</a></li>
+                <li role="presentation" class="disabled"><a href="about">About</a></li>
+                <li role="presentation" class="disabled"><a href="blog">Blog</a></li>
+                <li role="presentation" class="disabled"><a href="contact">Contact</a></li>
+                <li role="presentation" class="disabled"><a href="documents">Documents</a></li>
+                <li role="presentation" class="disabled"><a href="projects">Projects</a></li>
+                <li role="presentation"><a href="resume">Resume</a></li>
+                <li role="presentation" class="disabled"><a href="#">Shenanigans</a></li>
             </ul>
         </div>
     </div>
@@ -53,26 +52,29 @@ crossorigin="anonymous"></script>
 <div class="container">
     <header class="col-xs-12">
         <h1>Muchen He</h1>
-        <img class="avatar" src="img/avatar-sm.jpg"/ style="width: 100px">
-        <p><strong>Hello internet!</strong></p>
-        <p>I am a second (going into third) year Electrical Engineering student at the University of British Columbia.</p>
-        <p>I am in the engineering Co-op program and I am current in my first Co-op work term (4 months).</p>
+        <img class="avatar" src="img/avatar2-sm.jpg" style="width: 100px">
+        <p><strong>Hello Internet!</strong></p>
+        <p>I am Muchen and I am current a student in Electrical Engineering at University of British Columbia.</p>
+        <p>Currently, I am on my first engineering cooperative work placement (COOP) work term at <a href="http://vitalmechanics.com">Vital Mechanics Research Inc.</a></p>
+        <p>
+            Feel free to contact me via email <a href="mailto:i@mansurhe.com">here</a> or <a href="mailto:mansurhe@outlook.com">here</a>.
+            For more detailed info, find them at the <a href="#">Contacts</a> tab.</p>
+        </p>
     </header>
     <section class="col-xs-12">
         <h2>Content</h2>
         <p>This page provides context and descriptions for each section on my website</p>
         <dl class="dl-horizontal">
-            <dt class="active"><a href="#">Index</a></dt><dd class="active">You are here</dd>
-            <dt><a href="#">About</a></dt><dd>Learn more about me as a person. You can checkout my Resume if you want to see other stuff</dd>
-            <dt><a href="#">Blog</a></dt><dd>This is where I would put my meaningful thoughts... If I had one</dd>
-            <dt><a href="#">Contact</a></dt><dd>Call me maybe</dd>
-            <dt><a href="#">Documents</a></dt><dd>I share my school or project related documents here</dd>
-            <dt><a href="#">Projects</a></dt><dd>This is where my spare time goes to</dd>
-            <dt><a href="#">Resume</a></dt><dd>Job stuff</dd>
-            <dt><a href="#">Shenanigans</a></dt><dd>Fun stuff ... mostly</dd>
+            <dt class="active"><a href="/">Index</a></dt><dd class="active">You are here (hopefully not physically)</dd>
+            <dt><a href="about">About</a></dt><dd>Learn more about me.</dd>
+            <dt><a href="blog">Blog</a></dt><dd>This is where I would put my meaningful thoughts... If I had one.</dd>
+            <dt><a href="contact">Contact</a></dt><dd>Here you can find my e-mails, phone number, and address.</dd>
+            <dt><a href="documents">Documents</a></dt><dd>I share my school or project related documents here.</dd>
+            <dt><a href="projects">Projects</a></dt><dd>This is where my spare time goes to.</dd>
+            <dt><a href="resume">Resume</a></dt><dd>My skills and experiences.</dd>
+            <dt><a href="#">Shenanigans</a></dt><dd>Random stuff.</dd>
         </dl>
-        <br/>
-        <!-- <p>By the way, special thanks to Eugene from <a href="https://eyqs.ca">eyqs.ca</a>, who inspired me to redesign my website.</p> -->
+        <p>Still looking? Maybe try the <a href="#">sitemap</a></p>
     </section>
     <footer class="col-xs-12">
         <small>
@@ -81,6 +83,6 @@ crossorigin="anonymous"></script>
         </small>
     </footer>
 </div>
-<div class="pcanvas" id = "canvasContainer"></div>
+<!-- <div class="pcanvas" id = "canvasContainer"></div> -->
 </body>
 </html>

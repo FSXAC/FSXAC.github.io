@@ -7,15 +7,9 @@ body {
 
 }
 header {color: #011123; border: 0;}
-footer {
-    background-color: #BBB;
-    color: white;
-    height: 100px;
-    padding: 10px;
-}
 i {color: inherit;}
 h1 {font-size: 5rem; font-weight: 300; margin: 5px 0; vertical-align: middle; transition: all 0.3s ease}
-h2 {font-size: 1.75rem; font-weight: 400; color: #13458B;}
+h2.title-header-title {font-family: "Fira Mono", monospace; font-size: 1.75rem; font-weight: 400; color: #13458B;}
 li {list-style-type: square;}
 strong {border-bottom: 1px dotted #13458B; font-size: 1.4rem; font-weight: 600; margin-bottom:0px; width: 100%;}
 table th, table tr {border:0 !important;}
@@ -33,7 +27,7 @@ th {font-weight: 600;}
 .display-inline-block {display:inline-block;}
 .contact {margin: 5px;}
 .content-box {border: 1px dotted #13458B;}
-.container {background:white; padding-bottom:20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+.resumeContainer {background:white; padding-bottom:20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
 .btn-round {border-radius: 20px; font-size: 1.2rem;}
 .separator {margin: 2px; border-color:rgba(3, 37, 84, 0.2)}
 .coop-status {text-align: center;}
@@ -56,7 +50,7 @@ th {font-weight: 600;}
     padding: 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.focus-attention {background-color:orange; padding: 10px;}
+.focus-attention {background-color:#49F; padding: 10px;}
 .focus-select h4 {color:white; display:inline-block; margin:0px; vertical-align:middle; transition: all 0.3s ease-in-out;}
 .focus-select .btn {
     background-color: #13458B;
