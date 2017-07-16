@@ -2,8 +2,8 @@ a {color: inherit; transition: all 0.3s ease;}
 body {
     cursor:default;
     font-family: "Segoe UI", sans-serif;
-    font-size: 1.1rem;
-    background-color: #BBB;
+    /*font-size: 1.1rem;*/
+    /*background-color: #BBB;*/
 
 }
 header {color: #011123; border: 0;}

@@ -7,7 +7,7 @@ var MOVEMENT_TARGET_SIZE = 1;
 var MOVEMENT_LERP_RATE = 0.05;
 
 var MOUSE_RANGE = 150;
-var POINT_DARK = 220;
+var POINT_DARK = 200;
 var POINT_LIGHT = 255;
 var POINT_MIN = 3;
 var POINT_MAX = 8;
@@ -17,7 +17,7 @@ var LINE_WIDTH_MAX = 1;
 var LINE_LIMIT_PER_POINT = 3;
 var LINE_RANGE = 120;
 var LINE_NEIGHBOUR_EFFECT = 0.5;
-var LINE_DARK = 220;
+var LINE_DARK = 200;
 var LINE_LIGHT = 255;
 
 function setup() {

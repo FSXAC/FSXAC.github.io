@@ -1,0 +1,130 @@
+h1{
+	color: rgba(0, 255, 0, 1);
+	font-family: consolas;
+	text-align: center;
+}
+
+h2 {
+	color: rgba(0, 255, 0, 1);
+	font-family: consolas;
+}
+
+h3 {
+	color: rgba(0, 255, 0, 1);
+	font-family: consolas;
+	font-size: 28px;
+}
+
+hr {
+	border-color: rgba(0, 255, 0, 1);
+}
+
+p {
+	color: rgba(0, 255, 0, 1);
+	font-family: consolas;
+}
+
+a {
+	color: rgba(0, 255, 0, 1);
+	font-family: consolas;
+	font-size: 24px;
+	text-decoration: none;
+}
+
+pre {
+	display: inline-block;
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgba(0, 255, 0, 1);
+	padding-left: 10px;
+	padding-right: 10px;
+	color: rgba(0, 255, 0, 1);
+	background-color: rgba(0, 0, 0, 1);
+}
+
+code.Single {
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgba(0, 255, 0, 1);
+	padding-left: 3px;
+	padding-right: 3px;
+	color: rgba(0, 255, 0, 1);
+	background-color: rgba(0, 0, 0, 1);
+}
+
+a.Nav {
+	margin: 40px;
+	color: rgba(0, 0, 0, 1);
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+a.Nav:hover {
+	background-color: rgba(0, 0, 0, 1);
+	color: rgba(0, 255, 0, 1);
+
+}
+
+a.Day {
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgba(0, 255, 0, 1);
+	display:block;
+	padding: 2px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+a.Day:hover {
+	background-color:rgba(0, 255, 0, 1);
+	color: rgba(0, 0, 0, 1);
+}
+
+.FrameImage {
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgba(0, 255, 0, 0.5);
+}
+
+.Entry {
+	background-color: rgba(150, 250, 150, 0.05);
+	padding: 12px;
+	margin-bottom: 20px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgba(50, 50, 0, 1);
+}
+
+.DayBlock {
+	width: 20%;
+	float: left;
+}
+
+#pageTitle {
+	position = "fixed";
+}
+
+#titleDivider {
+	border-width: 4px;
+}
+
+#content {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#menu_content {
+	text-align: center;
+	width: 1000px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#navigation {
+	text-align: center;
+	background-color: rgba(0, 255, 0, 1);
+	margin: 20px;
+}
