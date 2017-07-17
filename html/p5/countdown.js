@@ -3,7 +3,7 @@
 // ALL TIME IN UTC
 // js date format
 var STARTTIME = new Date(Date.UTC(2016,1,1,0,0,0));
-var ENDTIME = new Date(Date.UTC(2016,10,28,0,0,0));
+var ENDTIME = new Date(Date.UTC(2018,10,28,0,0,0));
 
 // time conversion
 var msPerMinute = 1000 * 60;

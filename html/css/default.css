@@ -16,6 +16,7 @@ th {text-align: right; font-weight: 600;}
 td {padding-left: 10px;}
 hr {border: 1px solid #EEE; margin:10px 0;}
 ul {margin-left: 25px;}
+dt {font-weight: 500}
 /*classes*/
 .bordered {
     border: 1px solid;
