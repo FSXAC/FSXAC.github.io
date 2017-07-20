@@ -1,4 +1,4 @@
-var sideLength = 128;
+var sideLength = 64;
 var rows, columns;
 
 var grid = [];
@@ -25,7 +25,7 @@ function setup() {
     currentCell = grid[0];
 
     // drawing setup
-    // colorMode(HSB, 255);
+    colorMode(HSB, 255);
 }
 
 function draw() {
@@ -65,8 +65,8 @@ function getIndex(row, col) {
 function Cell(col, row) {
     this.col = col;
     this.row = row;
-    // this.hue = map(row, 0, rows, 0, 200);
-    // this.brt = map(col, 0, columns, 100, 150);
+    this.hue = map(row, 0, rows, 0, 200);
+    this.brt = map(col, 0, columns, 100, 150);
 
     this.walls = [true, true, true, true];   // top, right, bottom, left
     this.visited = false;
@@ -77,12 +77,12 @@ function Cell(col, row) {
 
         if (this.visited) {
             // fill("#8F8");
-            // fill(this.hue, this.brt, 255);
+            fill(this.hue, this.brt, 255);
             noStroke();
             rect(x, y, sideLength, sideLength);
 
             stroke(0);
-            strokeWeight(3);
+            strokeWeight(10);
             if (this.walls[0]) line(x, y, x + sideLength, y);
             if (this.walls[1]) line(x + sideLength, y, x + sideLength, y + sideLength);
             if (this.walls[2]) line(x + sideLength, y + sideLength, x, y + sideLength);
