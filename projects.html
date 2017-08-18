@@ -290,6 +290,8 @@ $(function() {
     $("#filterDesignButton").on('click', function() { showExclusive('.timeline-icon-success') });
     $("#clearFilterButton").on('click', function() {
         $(".timeline-block").slideDown(200);
+        $(".timeline").slideDown(200);
+        $(".timeline").prev().slideDown(200);
     });
 });
 
@@ -301,6 +303,15 @@ function showExclusive(className) {
             $(this).slideUp(200, function() { blocksUpdateTrigger(); });
         }
     });
+    $(".timeline").each(function() {
+        if ($(this).find(className).length != 0) {
+            $(this).slideDown(200);
+            $(this).prev().slideDown(200);
+        } else {
+            $(this).slideUp(200);
+            $(this).prev().slideUp(200);
+        }
+    })
     // blocksUpdateTrigger();  // call this when animation completes
 }
 </script>
