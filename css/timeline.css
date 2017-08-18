@@ -15,9 +15,9 @@ img { max-width: 100% }
 /* timeline ID specific style */
 .timeline {
     position: relative;
-    padding: 2em 0;
+    padding: 1em 0;
     /*margin-top: 0.5em;*/
-    margin-bottom: 2em;
+    /*margin-bottom: 2em;*/
 }
 .timeline::before {
     /* vertical line */
@@ -37,9 +37,10 @@ img { max-width: 100% }
     text-align: left;
     /*border-bottom: 4px dotted #DDD;*/
     border-bottom: 1px dotted #DDD;
+    padding-top: 50px;
 }
 @media only screen and (min-width: 1100px) {
-    .timeline { margin-top: 0em; margin-bottom: 3em; }
+    .timeline { margin-top: 0em; /*margin-bottom: 3em;*/ }
     .timeline::before { left: 50%; margin-left: -2px; }
     .timeline-year { text-align: center }
 }
@@ -132,7 +133,7 @@ img { max-width: 100% }
     box-shadow: 0 3px 1px #DDD;
 }
 .timeline-body:after { content: ''; display: table; clear: both; }
-.timeline-body h2 { color: #333; margin-top: 0; margin-bottom: 4px; }
+.timeline-body h2 { color: #333; font-size: 1.5em; margin-top: 0; margin-bottom: 4px; }
 .timeline-body::before {
     content: '';
     position: absolute;

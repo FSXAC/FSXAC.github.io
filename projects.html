@@ -19,7 +19,7 @@
         crossorigin="anonymous"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
     </head>
-    <body style="padding-top: 70px;">
+    <body id="root" style="padding-top: 70px;">
         <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" >
             <div class="container">
                 <div class="navbar-header">
@@ -51,12 +51,12 @@
             <header class="page-header">
                 <h1>Projects</h1>
             </header>
-            <section style="margin-bottom: 3em">
+            <section>
                 <div class="btn-group" role="group">
-                    <a class="btn btn-default">2017</a>
-                    <a class="btn btn-default">2016</a>
-                    <a class="btn btn-default">2015</a>
-                    <a class="btn btn-default">2014</a>
+                    <a class="btn btn-default" href="#proj2017">2017</a>
+                    <a class="btn btn-default" href="#proj2016">2016</a>
+                    <a class="btn btn-default" href="#proj2015">2015</a>
+                    <a class="btn btn-default" href="#proj2014">2014</a>
                 </div>
                 <div class='btn-group' role="group">
                     <button class="btn btn-info">Software</button>
@@ -67,8 +67,8 @@
             </section>
 
             <!-- timeline -->
-            <div class="timeline-year">
-                <h2>2017</h2>
+            <div id="proj2017" class="timeline-year">
+                <a href="#root"><h2>2017</h2></a>
             </div>
             <section class="timeline timeline-container">
                 <div class="timeline-block">
@@ -140,8 +140,8 @@
 
             </section>
 
-            <div class="timeline-year">
-                <h2>2016</h2>
+            <div id="proj2016" class="timeline-year">
+                <a href="#root"><h2>2016</h2></a>
             </div>
             <section class="timeline timeline-container">
                 
@@ -206,8 +206,8 @@
                 </div>
             </section>
 
-            <div class="timeline-year">
-                <h2>2015</h2>
+            <div id="proj2015" class="timeline-year">
+                <a href="#root"><h2>2015</h2></a>
             </div>
             <section class="timeline timeline-container">
                 <div class="timeline-block">
@@ -261,8 +261,8 @@
                 </div>
             </section>
 
-            <div class="timeline-year">
-                <h2>2014</h2>
+            <div id="proj2014" class="timeline-year">
+                <a href="#root"><h2>2014</h2></a>
             </div>
             <section class="timeline timeline-container">
                 <div class="timeline-block">
@@ -271,8 +271,6 @@
                     </div>
                     <div class="timeline-body">
                         <h2>Arduino Explorations</h2>
-                        <!-- <p class="text-muted">November 2014 <span class="badge">independent</span></p> -->
-                        <!-- <p class="text-muted">November 2014 <span class="label label-primary">independent</span></p> -->
                         <p class="timeline-date">November 2014</p>
                         <img src="img/arduino_lg.webp">
                         <p class="text-muted">
@@ -288,8 +286,6 @@
                     </div>
                     <div class="timeline-body">
                         <h2>Microscope CAD</h2>
-                        <!-- <p class="text-muted">November 2014 <span class="badge">independent</span></p> -->
-                        <!-- <p class="text-muted">November 2014 <span class="label label-primary">independent</span></p> -->
                         <p class="timeline-date">June 2014</p>
                         <img src="img/microscope_md.webp">
                         <p class="text-muted">
@@ -298,6 +294,12 @@
                     </div>
                 </div>
             </section>
+            <footer>
+                <small>
+                <p>Copyright © 2014-2017 Muchen He</p>
+                This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+                </small>
+            </footer>
         </div>
         <script src="js/timeline.js"></script>
     </body>
