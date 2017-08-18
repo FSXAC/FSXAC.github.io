@@ -1,6 +1,6 @@
 /* primary */
 img { max-width: 100% }
-body { background-color: #f5f5f5; }
+/*body { background-color: #f5f5f5; }*/
 
 /* timeline container */
 .timeline-container { width: 100%; max-width: 1100px; margin: 0 auto; }
@@ -24,7 +24,8 @@ body { background-color: #f5f5f5; }
     background: #CCC;
 }
 @media only screen and (min-width: 1100px) {
-    #timeline { margin-top: 3em; margin-bottom: 3em; }
+    /*#timeline { margin-top: 3em; margin-bottom: 3em; }*/
+    #timeline { margin-top: 0em; margin-bottom: 3em; }
     #timeline::before { left: 50%; margin-left: -2px; }
 }
 
@@ -47,7 +48,7 @@ body { background-color: #f5f5f5; }
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    box-shadow: 0 3px 0 #CCC;
+    box-shadow: 0 3px 1px #DDD;
 }
 .timeline-icon img {
     display: block;
@@ -107,10 +108,10 @@ body { background-color: #f5f5f5; }
 .timeline-body {
     position: relative;
     margin-left: 55px;
-    background: #FFF;
+    background: #F2F2F2;
     border-radius: 0.2em;
     padding: 1em;
-    box-shadow: 0 3px 0 #CCC;
+    box-shadow: 0 3px 1px #DDD;
 }
 .timeline-body:after { content: ''; display: table; clear: both; }
 .timeline-body h2 { color: #333; margin-top: 0;}
@@ -122,18 +123,19 @@ body { background-color: #f5f5f5; }
     height: 0;
     width: 0;
     border: 7px solid transparent;
-    border-right-color: #FFF;
+    border-right-color: #F2F2F2;
 }
+.timeline-body img { border-radius: 4px; box-shadow: 0 3px 1px #DDD; }
 @media only screen and (min-width: 1100px) {
     .timeline-body { margin-left: 0; padding: 1em; width: 47%; }
-    .timeline-body::before { top: 12px; left: 100%; border-color: transparent; border-left-color: #FFF; }
+    .timeline-body::before { top: 12px; left: 100%; border-color: transparent; border-left-color: #F2F2F2; }
     .timeline-block:nth-child(even) .timeline-body { float: right; }
     .timeline-block:nth-child(even) .timeline-body::before {
         top: 12px;
         left: auto;
         right: 100%;
         border-color: transparent;
-        border-right-color: #FFF;
+        border-right-color: #F2F2F2;
     }
     .timeline-body.is-hidden { visibility: hidden; }
     .timeline-body.bounce-in { visibility: visible; animation: anime-slide 0.6s; }
