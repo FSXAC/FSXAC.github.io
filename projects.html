@@ -62,6 +62,7 @@ crossorigin="anonymous"></script>
             <button id="filterSoftwareButton" class="btn btn-info">Software</button>
             <button id="filterHardwareButton" class="btn btn-primary">Hardware</button>
             <button id="filterDesignButton" class="btn btn-success">Design</button>
+            <button id="filterMechanicalButton" class="btn btn-warning">Mechanical</button>
             <button id="clearFilterButton" class="btn btn-default">All</button>
         </div>
     </section>
@@ -84,6 +85,15 @@ crossorigin="anonymous"></script>
                     using JSON.
                 </p>
                 <a class="btn btn-default btn-sm" href="https://www.muchen.ca/CircuitDraw">Project page</a>
+            </div>
+        </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-warning">
+                <img src="img/icons/tools.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>DIY 3D Printer</h2>
+                <p class="timeline-date">June 2016</p>
             </div>
         </div>
         <div class="timeline-block">
@@ -183,8 +193,8 @@ crossorigin="anonymous"></script>
             </div>
         </div>
         <div class="timeline-block">
-            <div class="timeline-icon timeline-icon-success">
-                <img src="img/icons/cube.svg">
+            <div class="timeline-icon timeline-icon-warning">
+                <img src="img/icons/tools.svg">
             </div>
             <div class="timeline-body">
                 <h2>Autonomous Claw</h2>
@@ -288,6 +298,7 @@ $(function() {
     $("#filterSoftwareButton").on('click', function() { showExclusive('.timeline-icon-info') });
     $("#filterHardwareButton").on('click', function() { showExclusive('.timeline-icon-primary') });
     $("#filterDesignButton").on('click', function() { showExclusive('.timeline-icon-success') });
+    $("#filterMechanicalButton").on('click', function() { showExclusive('.timeline-icon-warning') });
     $("#clearFilterButton").on('click', function() {
         $(".timeline-block").slideDown(200);
         $(".timeline").slideDown(200);

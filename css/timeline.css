@@ -9,7 +9,7 @@ img { max-width: 100% }
 - timeline-body: width94%*/
 
 /* timeline container */
-.timeline-container { width: 100%; max-width: 1100px; margin: 0 auto; }
+.timeline-container { width: 100%; /*max-width: 1100px; */margin: 0 auto; }
 .timeline-container::after { content: ''; display: table; clear: both;}
 
 /* timeline ID specific style */
