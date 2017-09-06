@@ -81,6 +81,12 @@ img.thumbnail-img:hover {
     background-color: #DDD;
     border: 1px solid #AAA
 }
+.navbar-inverse { border: none; background-color: #235; }
+.navbar-inverse .navbar-brand { color: #DDD; }
+.navbar-inverse .navbar-nav>li>a { color: #DDD; background: transparent; }
+.navbar-inverse .navbar-nav>li>a:hover { background: #346; }
+.navbar-inverse .navbar-nav>li>a:active { background: #346; }
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover { background-color: #124; }
 .no-margin{margin: 0;}
 .hidden {display:none;}
 .innershadow {box-shadow: inset 0px 0px 20px #000000;}
