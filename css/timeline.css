@@ -35,8 +35,9 @@ img { max-width: 100% }
     position: relative;
     margin-bottom: 0;
     text-align: left;
+    border-bottom: 4px dashed #DDD;
     /*border-bottom: 4px dotted #DDD;*/
-    border-bottom: 1px dotted #DDD;
+    /*border-bottom: 1px dotted #DDD;*/
     padding-top: 50px;
 }
 @media only screen and (min-width: 1100px) {
