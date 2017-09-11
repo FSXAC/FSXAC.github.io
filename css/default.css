@@ -13,7 +13,7 @@ footer {margin: 20px 0;}
 a {text-decoration: none; transition: all 0.3s ease-in-out; }
 p {margin:5px 0;}
 th {text-align: right; font-weight: 600;}
-td {padding-left: 10px;}
+td {padding-right: 1rem;}
 hr {border: 1px solid #EEE; margin:10px 0;}
 ul {margin-left: 25px;}
 dt {font-weight: 700}
