@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Muchen :: Resume</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="Muchen's page"/>
+<meta name="author" content="Muchen He"/>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- css -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="css/default.css"/>
+<link type="text/css" rel="stylesheet" href="css/resume.css"/>
+<!-- js -->
+<script
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+@media print { body { -webkit-print-color-adjust: exact !important; } }
+body { line-height: 1.2em; font-family: 'Open Sans', sans-serif; }
+section.resume-panel { padding: 0; }
+section.resume-panel > h2 {
+    color: white !important;
+    background-color: #235 !important;
+    font-size: 2.0rem;
+    padding: 4px;
+    margin: 4px 1px;
+}
+div.resume-block { padding: 0.5rem 1rem; }
+div.progress-container {
+    width: 100%;
+    height: 8px;
+    border: 1px solid #CCC;
+}
+div.progress-container > div.attr-progress {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 0;
+    background-color: #235 !important;
+    height: 100%;
+    transition: all 1s ease-in-out;
+}
+.work > h3 { font-size: 2rem; margin: 0.5rem 0;}
+div.resume-attr { margin-bottom: 1rem; }
+p.activity-list { margin: 0; line-height: 2.5rem }
+p.activity-list > span { border: 1px solid #EEE; }
+#studyProgress { width: 50%; }
+#workProgress { width: 20%; }
+.proj-showcase { padding: 0 5px; }
+.proj-showcase:first-child { padding-left: 10px; }
+.proj-showcase:last-child { padding-right: 10px; }
+.proj-showcase > h4 { margin: 0; }
+.proj-showcase > small { color: #555; }
+</style>
+
+</head>
+<div class="container">
+    <div class="row">
+        <header class="col-xs-12">
+            <h1>Muchen He</h1>
+            <p class="text-muted">UBC Electrical Engineering Undergraduate (Co-op Program)</p>
+        </header>
+        <div class="col-sm-4 col-xs-12">
+            <section class="resume-panel col-sm-12 col-xs-6">
+                <h2>Contact</h2>
+                <div class="resume-block">
+                    <p>i@muchen.ca</p>
+                    <p>(778) 952-9222</p>
+                    <p>MD0544 2202 Lower Mall</p>
+                    <p>Vancouver, BC, Canada, V6T 1Z4</p>
+                </div>
+                <div class="resume-block">
+                    <p>Co-op contacts</p>
+                </div>
+            </section>
+            <section class="resume-panel col-sm-12 col-xs-6">
+                <h2>Attributes</h2>
+                <div class="resume-block">
+                    <div class="resume-attr">
+                        <p><span class="fa fa-graduation-cap"></span> May 2020 anticipated date of graduation</p>
+                    </div>
+                    <div class="resume-attr">
+                        <div class="progress-container">
+                            <div id="studyProgress" class="attr-progress"></div>
+                        </div>
+                        <p>4 out of 8 academic terms completed</p>
+                    </div>
+                    <div class="resume-attr">
+                        <div class="progress-container">
+                            <div id="workProgress" class="attr-progress"></div>
+                        </div>
+                        <p>1 out of 5 work terms completed</p>
+                    </div>
+                    <div class="resume-attr">
+                        <p>Available for 4, 8, 12, or 16 months</p>
+                        <p>Starting May 2018</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-sm-8 col-xs-12">
+            <section class="resume-panel">
+                <h2>Technical Skills</h2>
+                <div class="resume-block">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Programming</strong>
+                                    <p>C, C++, JavaScript, HTML/CSS (Bootstrap), GLSL, Python, Processing, System Verilog, 8051 Assembly</p>
+                                </td>
+                                <td>
+                                    <strong>Hands-on</strong>
+                                    <p>3D Printing, CNC Machining, Soldering, SMT Reflow, Oscilloscope</p>
+                                </td>
+                                <td>
+                                    <strong>Software</strong>
+                                    <p>Altera Quartus and ModelSim, Autodesk Suite, Solidworks, Adobe Suite</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="resume-panel">
+                <h2>Technical Work Experience</h2>
+                <div class="resume-block">
+                    <div class="work">
+                        <h3>Vital Mechanics Research Inc.</h3>
+                        <p>Software Developer (Co-op) (May-September 2017)</p>
+                        <ul>
+                            <li>Developed applications using QT (GUI Framework), C++, and JavaScript while enforcing proper software structure</li>
+                            <li>Programmed realistic and interactive 3D viewers using OpenGL and WebGL</li>
+                        </ul>
+                    </div>
+                    <div class="work">
+                        <h3>University of Alberta</h3>
+                        <p>Software Intern (June-August 2014)</p>
+                        <ul>
+                            <li>Developed Android tablet game in Java and Android SDK</li>
+                            <li>Implemented haptic, visual, and audio feedback into the game</li>
+                            <li>Technical oral presentation on specifications, goals, and experiences on the project</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="resume-panel">
+                <h2>Technical Projects</h2>
+                <div class="resume-block">
+                    <div class="row">
+                        <div class="proj-showcase col-xs-3">
+                            <h4>Sleep Tracker Webapp</h4>
+                            <small>September 2017</small>
+                            <p>Uses realtime database and authentication to keep track of sleep statistics</p>
+                        </div>
+                        <div class="proj-showcase col-xs-3">
+                            <h4>CircuitDraw Webapp</h4>
+                            <small>July-August 2017</small>
+                            <p>Features common electrical parts and can be saved and reloaded via JSON</p>
+                        </div>
+                        <div class="proj-showcase col-xs-3">
+                            <h4>Magnetic Field Track Robot</h4>
+                            <small>April 2017</small>
+                            <p>Microcontroller robot car that follows a wire that carries alternating current; data can be transmitted using the same wire</p>
+                        </div>
+                        <div class="proj-showcase col-xs-3">
+                            <h4>3D Game with custom Controller</h4>
+                            <small>April 2017</small>
+                            <p>DIY game controller, built using microcontroller, communicates via serial to the game (programed in Processing)</p>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-default btn-xs" style="width: 100%">For more projects and details, go to www.muchen.ca/projects</a>
+                </div>
+            </section>
+            <section class="resume-panel">
+                <h2>Professional Affiliations</h2>
+                <div class="resume-block">
+                    <p></p>
+                    <p></p>
+                    <table>
+                        <tbody>
+                            <tr><td>APEGBC - IMAGS</td></tr>
+                            <tr><td>IEEE - Student Member</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="resume-panel">
+                <h2>Awards</h2>
+                <div class="resume-block">
+                    <table>
+                        <tbody>
+                            <tr><td>Dean's Honors List</td><td><small>2016</small></td></tr>
+                            <tr><td>CTS Design Studies Best Student Award</td><td><small>2015</small></td></tr>
+                            <tr><td>Provincial Skills Canada Mechanical CADD Competition 2nd Place</td><td><small>2015</small></td></tr>
+                            <tr><td>Honors Student Award</td><td><small>2012-2015</small></td></tr>
+                            <tr><td>Alexander Rutherford Scholarship</td><td><small>2015</small></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="resume-panel">
+                <h2>Hobbies + Activities</h2>
+                <div class="resume-block">
+                    <p class="activity-list">
+                        <span class="btn-default btn-xs">DIY Electronics</span>
+                        <span class="btn-default btn-xs">RC</span>
+                        <span class="btn-default btn-xs">Web Development</span>
+                        <span class="btn-default btn-xs">Programming</span>
+                        <span class="btn-default btn-xs">Microcontroller</span>
+                        <span class="btn-default btn-xs">CAD Practices</span>
+                        <span class="btn-default btn-xs">Photography</span>
+                        <span class="btn-default btn-xs">Graphic Design</span>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+</body>
+</html>

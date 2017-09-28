@@ -1,17 +1,13 @@
 a {color: inherit; transition: all 0.3s ease;}
 body {
     cursor:default;
-    font-family: "Segoe UI", sans-serif;
-    /*font-size: 1.1rem;*/
-    /*background-color: #BBB;*/
-
 }
 header {color: #011123; border: 0;}
 i {color: inherit;}
 h1 {font-size: 5rem; font-weight: 300; margin: 5px 0; vertical-align: middle; transition: all 0.3s ease}
 h2.title-header-title {font-family: "Fira Mono", monospace; font-size: 1.75rem; font-weight: 400; color: #13458B;}
 li {list-style-type: square;}
-strong {border-bottom: 1px dotted #13458B; font-size: 1.4rem; font-weight: 600; margin-bottom:0px; width: 100%;}
+/*strong {border-bottom: 1px dotted #13458B; font-size: 1.4rem; font-weight: 600; margin-bottom:0px; width: 100%;}*/
 table th, table tr {border:0 !important;}
 th {font-weight: 600;}
 /*classes*/
@@ -26,7 +22,7 @@ th {font-weight: 600;}
 .bordered:hover {border-color: rgba(3, 37, 84, 1);}
 .display-inline-block {display:inline-block;}
 .contact {margin: 5px;}
-.content-box {border: 1px dotted #13458B;}
+.content-box {border: 1px dotted #13458B; }
 .resumeContainer {background:white; padding-bottom:20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
 .btn-round {border-radius: 20px; font-size: 1.2rem;}
 .separator {margin: 2px; border-color:rgba(3, 37, 84, 0.2)}
