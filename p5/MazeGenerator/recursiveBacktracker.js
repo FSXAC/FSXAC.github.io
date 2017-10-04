@@ -77,7 +77,7 @@ function Cell(col, row) {
 
         if (this.visited) {
             // fill("#8F8");
-            fill(this.hue, this.brt, 255);
+            // fill(this.hue, this.brt, 255);
             noStroke();
             rect(x, y, sideLength, sideLength);
 
