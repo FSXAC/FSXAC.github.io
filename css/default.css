@@ -7,6 +7,7 @@ body {
 h1 {font-weight: 100; font-size: 5rem; margin: 5px 0; vertical-align: middle;}
 h2 {font-weight: 500; }
 h3 {font-weight: 500; font-size: 1.7rem; }
+h3.fancy {font-weight: 600; font-size: 2.0rem; border-bottom: 1px solid black}
 /*a {text-decoration: none; color: inherit; transition: all 0.3s ease;}
 a:hover {text-orientation: none}*/
 footer {margin: 20px 0;}
