@@ -5,7 +5,7 @@ body {
 header {color: #011123; border: 0;}
 i {color: inherit;}
 h1 {font-size: 5rem; font-weight: 300; margin: 5px 0; vertical-align: middle; transition: all 0.3s ease}
-h2.title-header-title {font-family: "Fira Mono", monospace; font-size: 1.75rem; font-weight: 400; color: #13458B;}
+/* h2.title-header-title {font-family: "Fira Mono", monospace; font-size: 1.75rem; font-weight: 400; color: #13458B;} */
 li {list-style-type: square;}
 /*strong {border-bottom: 1px dotted #13458B; font-size: 1.4rem; font-weight: 600; margin-bottom:0px; width: 100%;}*/
 table th, table tr {border:0 !important;}
