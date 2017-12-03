@@ -1,0 +1,151 @@
+{
+    "projects": [
+        // Sample:
+        // {
+        //     "name": "Project Name",
+        //     "dates": {
+        //         "start": "Starting date",
+        //         "end": "Completion date"
+        //     },
+        //     "ongoing": true
+        //     "type": "Type of project (enumerated)",
+        //     "description": "Short project description",
+        //     "details": "More information about the project",
+        //     "tech": ["Technology / tools used"],
+        //     "contributors": [
+        //         "jane", "doe"
+        //     ]
+
+        //     "website": "url to project page",
+        //     "report": "URL to report",
+
+        //     "thumbnail": "link to the project thumbnail"
+        // }
+        {
+            "name": "Sleep Logger Webapp",
+            "dates": {
+                "start": "September 2017",
+                "end": "September 2017"
+            },
+            "ongoing": false,
+            "type": "code",
+            "description": "Uses realtime database and authentication to keep track of sleep statistics",
+            "details": "Created at Lumohacks 2017",
+            "tech": ["Firebase", "p5.js", "chart.js"],
+
+            "website": "http://glacial-stream-85429.herokuapp.com/",
+            "report": null,
+
+            "thumbnail": "img/lumuhacks17.jpg"
+        },
+        {
+            "name": "CircuitDraw Webapp",
+            "dates": {
+                "start": "July 2017",
+                "end": "August 2017"
+            },
+            "ongoing": false,
+            "type": "code",
+            "description": "Circuit drawing app with ability to save and reload circuits via JSON",
+            "details": "Include basic components such as resistors, capacitors, diodes, OP-AMPs, and IC chips",
+            "tech": ["p5.js"],
+
+            "website": "https://www.muchen.ca/CircuitDraw/",
+            "report": null,
+
+            "thumbnail": "img/circuitdraw.jpg"
+        },
+        {
+            "name": "DIY 3D Printer",
+            "dates": {
+                "start": "May 2017",
+                "end": "June 2017"
+            },
+            "ongoing": false,
+            "type": "mech",
+            "description": "",
+            "details": "",
+            "tech": ["Soldering iron", "multimeter"],
+
+            "website": null,
+            "report": null,
+
+            "thumbnail": null
+        },
+        {
+            "name": "Magnetic Field Tracking Robot",
+            "dates": {
+                "start": "April 2017",
+                "end": "April 2017"
+            },
+            "ongoing": false,
+            "type": "elec",
+            "description": "Microcontroller robot car that follows a wire that carries PWM signal;",
+            "details": "A stash of electronics, a pile of mechanical parts, a pair of microcontrollers, a repository of code, a team of six, and over two weeks of sleepness nights",
+            "tech": ["AVR", "8051 Assembly", "C", "Make", "Circuit prototyping", "Soldering iron", "multimeter", "Signal generator", "Oscilloscope"],
+            "website": null,
+            "report": "https://www.muchen.ca/documents/ELEC291-Project2",
+            "thumbnail": null
+        },
+        {
+            "name": "Game with Custom Serial Controller",
+            "dates": {
+                "start": "April 2016",
+                "end": "April 2016"
+            },
+            "ongoing": false,
+            "type": "elec",
+            "description": "DIY game controller with microcontroller that communicates via serial to a 3D game programed in Processing",
+            "details": "Physical devices are mounted to give feedback from the game: a fan is attached that spins faster as the player moves faster in game; a speaker buzzes when the player takes damage in the game",
+            "tech": ["Oscilloscope", "H-Bridge", "Soldering iron", "Processing", "SPI"],
+            "website": null,
+            "report": null,
+            "thumbnail": null
+        },
+        {
+            "name": "Reflow Oven Controller",
+            "dates": {
+                "start": "March 2016",
+                "end": "March 2016"
+            },
+            "ongoing": false,
+            "type": "elec",
+            "description": "Microcontroller powered SMT reflow oven controller that follows a temperature profile",
+            "details": "",
+            "tech": ["8051 Assembly", "AT89 Microcontroller", "Thermocouple", "OP-AMP", "Soldering iron", "Oscilloscope", "Signal generator"],
+            "website": null,
+            "report": null,
+            "thumbnail": null
+        },
+        {
+            "name": "Temperature Monitor",
+            "dates": {
+                "start": "March 2016",
+                "end": "March 2016"
+            },
+            "ongoing": false,
+            "type": "elec",
+            "description": "Microcontroller controlled temperature monitor using temperature sensor and ADC, serialized output is visualized in Processing",
+            "details": "Also features a LED strip that shows temperature reading and an alarm that goes off when the temperature is too high",
+            "tech": ["8051 Assembly", "AT89 Microcontroller"],
+            "website": null,
+            "report": null,
+            "thumbnail": null
+        },
+        {
+            "name": "Ticker LCD with Music",
+            "dates": {
+                "start": "January 2017",
+                "end": "January 2017"
+            },
+            "ongoing": false,
+            "type": "elec",
+            "description": "First project using AT89 microcontrollers, used memory access, timers, and interrputs to make looping animation and music",
+            "details": "",
+            "tech": ["8051 Assembly", "AT89 Microcontroller"],
+            "website": null,
+            "report": null,
+            "thumbnail": null
+        }
+    ]
+}
