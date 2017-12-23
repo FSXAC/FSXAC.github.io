@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Muchen :: Projects</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Muchen's page" />
+    <meta name="author" content="Muchen He" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="../css/default.css" />
+    <link type="text/css" rel="stylesheet" href="../css/timeline.css" />
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        .proj-block {height: 200px; background-color:#050; color:white; line-height: 1.15em;}
+        .proj-title {font-weight: 600}
+        .proj-cover {
+            position:absolute; 
+            /* width:100%;  */
+            object-fit: cover;
+            height:100%; 
+            top:0; 
+            left:0;
+            transition: all ease-in-out 0.2s
+        }
+        .proj-cover:hover {
+            opacity: 0.1;
+        }
+        .proj-cover::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: #F0F;
+        }
+    </style>
+</head>
+
+<body id="root" style="padding-top: 70px;">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapsable" aria-expanded="false">
+                    <span class="sr-only">Toggle Nav</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Muchen He</a>
+            </div>
+            <div class="collapse navbar-collapse" id="nav-collapsable">
+                <ul class="nav navbar-nav">
+                    <li role="presentation">
+                        <a href="/">Index</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="/documents">Documents</a>
+                    </li>
+                    <li role="presentation" class="active">
+                        <a>Projects
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="/resume">Resume</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li role="presentation">
+                        <a href="/archive">Old Stuff</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- main content -->
+        <header class="container page-header">
+            <h1>Projects</h1>
+        </header>
+    <div class="container-fluid">
+        <div id="projectContainer" class="row">
+            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 proj-block">
+                <img class="proj-cover" src="img/kitchen_md.webp">
+                <h3 class="proj-title">Project Name</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia saepe velit quasi quis consectetur laudantium enim alias. Vel ut, ducimus eius voluptas corporis sint aut iste ipsum adipisci, illo obcaecati!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="projects.js"></script>
+</body>
+</html>

@@ -1,27 +1,5 @@
 {
-    "projects": [
-        // Sample:
-        // {
-        //     "name": "Project Name",
-        //     "dates": {
-        //         "start": "Starting date",
-        //         "end": "Completion date"
-        //     },
-        //     "ongoing": true
-        //     "type": "Type of project (enumerated)",
-        //     "description": "Short project description",
-        //     "details": "More information about the project",
-        //     "tech": ["Technology / tools used"],
-        //     "contributors": [
-        //         "jane", "doe"
-        //     ]
-
-        //     "website": "url to project page",
-        //     "report": "URL to report",
-
-        //     "thumbnail": "link to the project thumbnail"
-        // }
-        {
+    "projects": [{
             "name": "Sleep Logger Webapp",
             "dates": {
                 "start": "September 2017",
@@ -36,7 +14,7 @@
             "website": "http://glacial-stream-85429.herokuapp.com/",
             "report": null,
 
-            "thumbnail": "img/lumuhacks17.jpg"
+            "thumbnail": "img/lumohacks17.jpg"
         },
         {
             "name": "CircuitDraw Webapp",
@@ -143,6 +121,113 @@
             "description": "First project using AT89 microcontrollers, used memory access, timers, and interrputs to make looping animation and music",
             "details": "",
             "tech": ["8051 Assembly", "AT89 Microcontroller"],
+            "website": null,
+            "report": null,
+            "thumbnail": null
+        },
+        {
+            "name": "InsectNN",
+            "dates": {
+                "start": "December 2016",
+                "end": "December 2016"
+            },
+            "ongoing": false,
+            "type": "code",
+            "description": "Simulation of navigation using a neural network",
+            "details": "",
+            "tech": [
+                "Processing"
+            ],
+            "website": null,
+            "report": null,
+            "thumbnail": null
+        },
+        {
+            "name": "Simple RISC Machine",
+            "dates": {
+                "start": "October 2017",
+                "end": "November 2017"
+            },
+            "ongoing": false,
+            "type": "elec",
+            "description": "Reduced-Instruction-Set-Computer CPU created using System Verilog HDL. Runs basic OS programmed in ARM assembly",
+            "details": "",
+            "tech": [
+                "ARM Assembly",
+                "Altera Quartus",
+                "System Verilog"
+            ],
+            "website": null,
+            "report": null,
+            "thumbnail": null
+        },
+        {
+            "name": "SmartRocket Evolution Simulator",
+            "dates": {
+                "start": "September 2016",
+                "end": "September 2016"
+            },
+            "ongoing": false,
+            "type": "code",
+            "description": "",
+            "details": "",
+            "tech": [
+                "p5.js"
+            ],
+            "website": null,
+            "report": null,
+            "thumbnail": null
+        },
+        {
+            "name": "Minesweeper in C",
+            "dates": {
+                "start": "July 2016",
+                "end": "July 2016"
+            },
+            "ongoing": false,
+            "type": "code",
+            "description": "",
+            "details": "",
+            "tech": [
+                "C"
+            ],
+            "website": null,
+            "report": null,
+            "thumbnail": null
+        },
+        {
+            "name": "Rainwater Harvesting System",
+            "dates": {
+                "start": "April 2016",
+                "end": "April 2016"
+            },
+            "ongoing": false,
+            "type": "design",
+            "description": "",
+            "details": "",
+            "tech": [
+                "Microsoft Excel",
+                "C"
+            ],
+            "website": null,
+            "report": null,
+            "thumbnail": null
+        },
+        {
+            "name": "Autonomous Claw",
+            "dates": {
+                "start": "January 2016",
+                "end": "Januaray 2016"
+            },
+            "ongoing": false,
+            "type": "mech",
+            "description": "",
+            "details": "",
+            "tech": [
+                "Arduino",
+                "SoldiWorks",
+                "Autodesk Inventor"
+            ],
             "website": null,
             "report": null,
             "thumbnail": null
