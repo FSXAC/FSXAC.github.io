@@ -2,13 +2,14 @@
 
 var $pc = $('#projectContainer');
 
-var projTemplate = `
-<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 proj-block">
-<img class="proj-cover" src="{img}">
-<h3 class="proj-title">{title}</h3>
-<p>{desc}</p>
-</div>
-`;
+var PT = {
+    opening: '<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 proj-block">',
+    closing: '</div>',
+    thumbnail: '<img class="proj-cover" src="{img}">',
+    title: '<h3 class="proj-title">{title}</h3>',
+    desc: '<p>{desc}</p>',
+    link: '<a href="{url}" class="btn btn-default btn-xs proj-btn">{txt}</a>'
+}
 
 function readProjects() {
     loadJSON(function(response) {
@@ -34,12 +35,32 @@ function displayProjects(projs) {
 
     var htmlOut = '';
     for (var i = 0, l = projects.length; i < l; i++) {
-        htmlProj = projTemplate
-        .replace('{img}', projects[i].thumbnail)
-        .replace('{title}', projects[i].name)
-        .replace('{desc}', projects[i].description);
+        // compose the html for each project block here
+        currProj = projects[i];
+        htmlProj = PT.opening;
+        
+        if (currProj.thumbnail != null) {
+            htmlProj += PT.thumbnail.replace('{img}', currProj.thumbnail);
+        }
+
+        htmlProj += PT.title.replace('{title}', currProj.name);
+        htmlProj += PT.desc.replace('{desc}', currProj.description);
+
+        if (currProj.website != null) {
+            htmlProj += PT.link
+            .replace('{url}', currProj.website)
+            .replace('{txt}', 'Webpage');
+        }
+
+        if (currProj.report != null) {
+            htmlProj += PT.link
+                .replace('{url}', currProj.report)
+                .replace('{txt}', 'Report');
+        }
+
+        htmlProj += PT.closing;
+
         htmlOut += htmlProj;
-        console.log(htmlProj);
     }
     $pc.html(htmlOut);
 }

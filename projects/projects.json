@@ -9,6 +9,8 @@
             "type": "code",
             "description": "Uses realtime database and authentication to keep track of sleep statistics",
             "details": "Created at Lumohacks 2017",
+            "scope": "independent",
+            "contributors": [],
             "tech": ["Firebase", "p5.js", "chart.js"],
 
             "website": "http://glacial-stream-85429.herokuapp.com/",
@@ -26,6 +28,8 @@
             "type": "code",
             "description": "Circuit drawing app with ability to save and reload circuits via JSON",
             "details": "Include basic components such as resistors, capacitors, diodes, OP-AMPs, and IC chips",
+            "scope": "independent",
+            "contributors": [],
             "tech": ["p5.js"],
 
             "website": "https://www.muchen.ca/CircuitDraw/",
@@ -43,6 +47,8 @@
             "type": "mech",
             "description": "",
             "details": "",
+            "scope": "independent",
+            "contributors": [],
             "tech": ["Soldering iron", "multimeter"],
 
             "website": null,
@@ -60,6 +66,8 @@
             "type": "elec",
             "description": "Microcontroller robot car that follows a wire that carries PWM signal;",
             "details": "A stash of electronics, a pile of mechanical parts, a pair of microcontrollers, a repository of code, a team of six, and over two weeks of sleepness nights",
+            "scope": "independent",
+            "contributors": [],
             "tech": ["AVR", "8051 Assembly", "C", "Make", "Circuit prototyping", "Soldering iron", "multimeter", "Signal generator", "Oscilloscope"],
             "website": null,
             "report": "https://www.muchen.ca/documents/ELEC291-Project2",
@@ -75,6 +83,8 @@
             "type": "elec",
             "description": "DIY game controller with microcontroller that communicates via serial to a 3D game programed in Processing",
             "details": "Physical devices are mounted to give feedback from the game: a fan is attached that spins faster as the player moves faster in game; a speaker buzzes when the player takes damage in the game",
+            "scope": "independent",
+            "contributors": [],
             "tech": ["Oscilloscope", "H-Bridge", "Soldering iron", "Processing", "SPI"],
             "website": null,
             "report": null,
@@ -90,6 +100,8 @@
             "type": "elec",
             "description": "Microcontroller powered SMT reflow oven controller that follows a temperature profile",
             "details": "",
+            "scope": "independent",
+            "contributors": [],
             "tech": ["8051 Assembly", "AT89 Microcontroller", "Thermocouple", "OP-AMP", "Soldering iron", "Oscilloscope", "Signal generator"],
             "website": null,
             "report": null,
@@ -105,6 +117,8 @@
             "type": "elec",
             "description": "Microcontroller controlled temperature monitor using temperature sensor and ADC, serialized output is visualized in Processing",
             "details": "Also features a LED strip that shows temperature reading and an alarm that goes off when the temperature is too high",
+            "scope": "independent",
+            "contributors": [],
             "tech": ["8051 Assembly", "AT89 Microcontroller"],
             "website": null,
             "report": null,
@@ -120,6 +134,8 @@
             "type": "elec",
             "description": "First project using AT89 microcontrollers, used memory access, timers, and interrputs to make looping animation and music",
             "details": "",
+            "scope": "independent",
+            "contributors": [],
             "tech": ["8051 Assembly", "AT89 Microcontroller"],
             "website": null,
             "report": null,
@@ -135,6 +151,8 @@
             "type": "code",
             "description": "Simulation of navigation using a neural network",
             "details": "",
+            "scope": "independent",
+            "contributors": [],
             "tech": [
                 "Processing"
             ],
@@ -152,6 +170,8 @@
             "type": "elec",
             "description": "Reduced-Instruction-Set-Computer CPU created using System Verilog HDL. Runs basic OS programmed in ARM assembly",
             "details": "",
+            "scope": "independent",
+            "contributors": [],
             "tech": [
                 "ARM Assembly",
                 "Altera Quartus",
@@ -171,6 +191,8 @@
             "type": "code",
             "description": "",
             "details": "",
+            "scope": "independent",
+            "contributors": [],
             "tech": [
                 "p5.js"
             ],
@@ -188,6 +210,8 @@
             "type": "code",
             "description": "",
             "details": "",
+            "scope": "independent",
+            "contributors": [],
             "tech": [
                 "C"
             ],
@@ -205,6 +229,8 @@
             "type": "design",
             "description": "",
             "details": "",
+            "scope": "independent",
+            "contributors": [],
             "tech": [
                 "Microsoft Excel",
                 "C"
@@ -223,6 +249,8 @@
             "type": "mech",
             "description": "",
             "details": "",
+            "scope": "independent",
+            "contributors": [],
             "tech": [
                 "Arduino",
                 "SoldiWorks",

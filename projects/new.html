@@ -21,26 +21,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <style>
-        .proj-block {height: 200px; background-color:#050; color:white; line-height: 1.15em;}
+        .proj-block {height: 200px; background-color:#050; color:white; line-height: 1.15em; overflow:hidden; margin-bottom: .2em;}
         .proj-title {font-weight: 600}
-        .proj-cover {
-            position:absolute; 
-            /* width:100%;  */
-            object-fit: cover;
-            height:100%; 
-            top:0; 
-            left:0;
-            transition: all ease-in-out 0.2s
-        }
-        .proj-cover:hover {
-            opacity: 0.1;
-        }
-        .proj-cover::before {
-            content: '';
-            width: 10px;
-            height: 10px;
-            background-color: #F0F;
-        }
+        .proj-cover {position:absolute; height:100%; object-fit:cover; top:0;left:0;transition: all ease-in-out 0.2s;}
+        .proj-block:hover > .proj-cover, .proj-block:active > .proj-cover, .proj-block:focus > .proj-cover {top: 200px;}
+        .proj-btn {color: white;border-color: white;background-color: transparent;transition: all 0.1s ease-out;}
+        .proj-btn:hover {background-color: rgba(0, 0, 0, 0.3); color: white;}
     </style>
 </head>
 
@@ -85,12 +71,14 @@
         <header class="container page-header">
             <h1>Projects</h1>
         </header>
-    <div class="container-fluid">
+    <div class="container">
         <div id="projectContainer" class="row">
             <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 proj-block">
                 <img class="proj-cover" src="img/kitchen_md.webp">
                 <h3 class="proj-title">Project Name</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia saepe velit quasi quis consectetur laudantium enim alias. Vel ut, ducimus eius voluptas corporis sint aut iste ipsum adipisci, illo obcaecati!</p>
+                <a src="#" class="btn btn-default btn-xs proj-btn">Webpage</a>
+                <a src="#" class="btn btn-default btn-xs proj-btn">Report</a>
             </div>
         </div>
     </div>
