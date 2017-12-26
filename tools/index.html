@@ -21,6 +21,13 @@
     <!-- p5.js -->
     <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
     <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
+    <style>
+        .media {
+            border: 1px solid #EEE;
+            border-radius: .5em;
+            padding: 1em;
+        }
+    </style>
 </head>
 
 <body style="padding-top: 70px;">
@@ -71,7 +78,21 @@
             <h1>Tools</h1>
         </header>
         <section>
-            
+            <div class="media">
+                <div class="media-left media-top">
+                    <a href="/RHCalc"><img class="media-object" src="../img/placeholder.jpg" alt="..."></a>
+                </div>
+                <div class="media-body">
+                    <a href="/RHCalc"><h4 class="media-heading">Routh Hurwitz Stability Criterion Calculator</h4></a>
+                    <p>
+                        Calculates whether if a LTI system is stable given its characteristic equation. <br/>
+                        <em>
+                            Todo: allow for independent gain variable K such that the lower bound and ultimage gain could be calculated.<br/>
+                            Todo: Gives suggesting starting PID values for the system.
+                        </em>
+                    </p>
+                </div>
+            </div>
         </section>
     </div>
 </body>
