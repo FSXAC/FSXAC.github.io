@@ -27,6 +27,7 @@ crossorigin="anonymous"></script>
     body { padding-top: 0px !important; -webkit-print-color-adjust: exact !important; }
     .navbar { display: none; }
     footer { display: none; }
+    .filter { display: none; }
 }
 body { padding-top: 70px; line-height: 1.2em; font-family: 'Open Sans', sans-serif; }
 section.resume-panel { padding: 0; }
@@ -51,6 +52,15 @@ div.progress-container > div.attr-progress {
     background-color: #235 !important;
     height: 100%;
     transition: all 1s ease-in-out;
+}
+/* Filter */
+.filter {
+    background-color: #EEE;
+    border: 1px solid #DDD;
+    border-radius: 2px;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    text-align: center;
 }
 .work > h3 { font-size: 2rem; margin: 0.5rem 0;}
 div.resume-attr { margin-bottom: 1rem; }
@@ -80,20 +90,12 @@ p.activity-list > span { border: 1px solid #EEE; }
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="nav-collapsable">
                 <ul class="nav navbar-nav">
-                    <li role="presentation">
-                        <a href="/">Index</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="/documents">Documents</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="/projects">Projects</a>
-                    </li>
-                    <li role="presentation" class="active">
-                        <a>Resume
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
+                    <li role="presentation"><a href="/">Index</a></li>
+                    <li role="presentation"><a href="/blog">Blog</a></li>
+                    <li role="presentation"><a href="/documents">Documents</a></li>
+                    <li role="presentation"><a href="/projects">Projects</a></li>
+                    <li role="presentation" class="active"><a>Resume<span class="sr-only">(current)</span></a></li>
+                    <li role="presentation"><a href="/tools">Tools</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li role="presentation">
@@ -105,6 +107,17 @@ p.activity-list > span { border: 1px solid #EEE; }
     </nav>
 <div class="container">
     <div class="row">
+        <header class="col-xs-12 filter">
+            <p style="font-size: 1.5em">Filter</p>
+            <div class="btn-group" role="group" aria-label="...">
+                <button id="filterBtnAll" type="button" class="btn btn-primary">All</button>
+                <button id="filterBtnCode" type="button" class="btn btn-default">Programming</button>
+                <button id="filterBtnDesign" type="button" class="btn btn-default">Design</button>
+                <button id="filterBtnElec" type="button" class="btn btn-default">Electrical</button>
+                <button id="filterBtnMech" type="button" class="btn btn-default">Mechanical</button>
+                <button id="filterBtnCustom" type="button" class="btn btn-success">Custom</button>
+            </div>
+        </header>
         <header class="col-xs-12">
             <img src="ubc.png" height="56px">
             <h1>Muchen He</h1>
@@ -177,7 +190,7 @@ p.activity-list > span { border: 1px solid #EEE; }
                     </table>
                 </div>
             </section>
-            <section class="resume-panel">
+            <!-- <section class="resume-panel">
                 <h2>Technical Work Experience</h2>
                 <div class="resume-block">
                     <div class="work">
@@ -198,7 +211,7 @@ p.activity-list > span { border: 1px solid #EEE; }
                         </ul>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <section class="resume-panel">
                 <h2>Technical Projects</h2>
                 <div class="resume-block">
@@ -288,12 +301,14 @@ p.activity-list > span { border: 1px solid #EEE; }
         desc: '<p>{desc}</p>',
         close: '</div>'
     }
+    var projs;
 
     // Populate HTML with project JSON
     // open project JSON
     function readProjects() {
         loadJSON(function (response) {
-            displayProjects(response);
+            projs = response;
+            displayProjects(response, 'all');
         });
     }
 
@@ -309,13 +324,15 @@ p.activity-list > span { border: 1px solid #EEE; }
         xobj.send(null);
     }
 
-    function displayProjects(projs) {
+    function displayProjects(projs, filter) {
         projects = JSON.parse(projs).projects;
 
         var htmlOut = '';
         var count = 0;
-        for (var i = 0, l = projects.length; i < l, count < 4; i++) {
+        for (var i = 0, l = projects.length; i < l && count < 4; i++) {
             curr = projects[i]
+
+            if (curr.type != filter && filter != 'all') continue;
             if (curr.worthy) {
                 // Render HTML
                 htmlOut += template.open;
@@ -329,7 +346,23 @@ p.activity-list > span { border: 1px solid #EEE; }
         $pc.html(htmlOut);
     }
 
-    readProjects();
+    // Running at the start (before the content need to be loaded)
+    $(document).ready(function() {
+        readProjects();
+
+        // Connect signals of the buttons to some handlers
+        $('#filterBtnAll').on('click', function() {filterHandler('all')});
+        $('#filterBtnCode').on('click', function() {filterHandler('code')});
+        $('#filterBtnDesign').on('click', function() {filterHandler('design')});
+        $('#filterBtnElec').on('click', function() {filterHandler('elec')});
+        $('#filterBtnMech').on('click', function() {filterHandler('mech')});
+        $('#filterBtnCustom').on('click', function() {filterHandler('custom')});
+        
+    });
+
+    function filterHandler(filter) {
+        displayProjects(projs, filter);
+    }
 </script>
 </body>
 </html>
