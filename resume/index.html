@@ -325,6 +325,11 @@ p.activity-list > span { border: 1px solid #EEE; }
     }
 
     function displayProjects(projs, filter) {
+        if (filter == 'custom') {
+            alert('WIP');
+            return;
+        }
+
         projects = JSON.parse(projs).projects;
 
         var htmlOut = '';
