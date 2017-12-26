@@ -202,7 +202,7 @@ p.activity-list > span { border: 1px solid #EEE; }
             <section class="resume-panel">
                 <h2>Technical Projects</h2>
                 <div class="resume-block">
-                    <div class="row">
+                    <div id="projectContainer" class="row">
                         <div class="proj-showcase col-xs-3">
                             <h4>Sleep Tracker Webapp</h4>
                             <small>September 2017</small>
@@ -279,5 +279,57 @@ p.activity-list > span { border: 1px solid #EEE; }
         </small>
     </footer>
 </div>
+<script>
+    var $pc = $('#projectContainer');
+    var template = {
+        open: '<div class="proj-showcase col-xs-3">',
+        title: '<h4>{title}</h4>',
+        date: '<small>{date}</small>',
+        desc: '<p>{desc}</p>',
+        close: '</div>'
+    }
+
+    // Populate HTML with project JSON
+    // open project JSON
+    function readProjects() {
+        loadJSON(function (response) {
+            displayProjects(response);
+        });
+    }
+
+    function loadJSON(callback) {
+        var xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+        xobj.open('GET', '../projects/projects.json', true);
+        xobj.onreadystatechange = function () {
+            if (xobj.readyState == 4 && xobj.status == '200') {
+                callback(xobj.responseText);
+            }
+        };
+        xobj.send(null);
+    }
+
+    function displayProjects(projs) {
+        projects = JSON.parse(projs).projects;
+
+        var htmlOut = '';
+        var count = 0;
+        for (var i = 0, l = projects.length; i < l, count < 4; i++) {
+            curr = projects[i]
+            if (curr.worthy) {
+                // Render HTML
+                htmlOut += template.open;
+                htmlOut += template.title.replace('{title}', curr.name);
+                htmlOut += template.date.replace('{date}', curr.dates.end);
+                htmlOut += template.desc.replace('{desc}', curr.description);
+                htmlOut += template.close;
+                count++;
+            }
+        }
+        $pc.html(htmlOut);
+    }
+
+    readProjects();
+</script>
 </body>
 </html>

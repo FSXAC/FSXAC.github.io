@@ -15,6 +15,7 @@
 
             "website": "http://glacial-stream-85429.herokuapp.com/",
             "report": null,
+            "worthy": true,
 
             "thumbnail": "img/lumohacks17.jpg"
         },
@@ -34,6 +35,7 @@
 
             "website": "https://www.muchen.ca/CircuitDraw/",
             "report": null,
+            "worthy": true,
 
             "thumbnail": "img/circuitdraw.jpg"
         },
@@ -53,6 +55,7 @@
 
             "website": null,
             "report": null,
+            "worthy": false,
 
             "thumbnail": null
         },
@@ -71,6 +74,7 @@
             "tech": ["AVR", "8051 Assembly", "C", "Make", "Circuit prototyping", "Soldering iron", "multimeter", "Signal generator", "Oscilloscope"],
             "website": null,
             "report": "https://www.muchen.ca/documents/ELEC291-Project2",
+            "worthy": true,
             "thumbnail": null
         },
         {
@@ -88,6 +92,7 @@
             "tech": ["Oscilloscope", "H-Bridge", "Soldering iron", "Processing", "SPI"],
             "website": null,
             "report": null,
+            "worthy": true,
             "thumbnail": null
         },
         {
@@ -105,6 +110,7 @@
             "tech": ["8051 Assembly", "AT89 Microcontroller", "Thermocouple", "OP-AMP", "Soldering iron", "Oscilloscope", "Signal generator"],
             "website": null,
             "report": null,
+            "worthy": true,
             "thumbnail": null
         },
         {
@@ -122,6 +128,7 @@
             "tech": ["8051 Assembly", "AT89 Microcontroller"],
             "website": null,
             "report": null,
+            "worthy": true,
             "thumbnail": null
         },
         {
@@ -139,6 +146,7 @@
             "tech": ["8051 Assembly", "AT89 Microcontroller"],
             "website": null,
             "report": null,
+            "worthy": true,
             "thumbnail": null
         },
         {
@@ -158,6 +166,7 @@
             ],
             "website": null,
             "report": null,
+            "worthy": true,
             "thumbnail": null
         },
         {
@@ -179,6 +188,7 @@
             ],
             "website": null,
             "report": null,
+            "worthy": true,
             "thumbnail": null
         },
         {
@@ -198,6 +208,7 @@
             ],
             "website": null,
             "report": null,
+            "worthy": true,
             "thumbnail": null
         },
         {
@@ -217,6 +228,7 @@
             ],
             "website": null,
             "report": null,
+            "worthy": true,
             "thumbnail": null
         },
         {
@@ -237,6 +249,7 @@
             ],
             "website": null,
             "report": null,
+            "worthy": true,
             "thumbnail": null
         },
         {
@@ -258,6 +271,7 @@
             ],
             "website": null,
             "report": null,
+            "worthy": true,
             "thumbnail": null
         }
     ]
