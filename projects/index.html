@@ -9,12 +9,10 @@
 <meta name="author" content="Muchen He"/>
 <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
-<!-- css -->
 <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link type="text/css" rel="stylesheet" href="../css/default.css"/>
 <link type="text/css" rel="stylesheet" href="../css/timeline.css"/>
-<!-- js -->
 <script
 src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -22,34 +20,7 @@ crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body id="root" style="padding-top: 70px;">
-<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" >
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapsable" aria-expanded="false">
-            <span class="sr-only">Toggle Nav</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Muchen He</a>
-        </div>
-        <div class="collapse navbar-collapse" id="nav-collapsable">
-            <ul class="nav navbar-nav">
-                <li role="presentation"><a href="/">Index</a></li>
-                <li role="presentation"><a href="/blog">Blog</a></li>
-                <li role="presentation"><a href="/documents">Documents</a></li>
-                <li role="presentation" class="active"><a>Projects <span class="sr-only">(current)</span></a></li>
-                <li role="presentation"><a href="/resume">Resume</a></li>
-                <li role="presentation"><a href="/tools">Tools</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li role="presentation"><a href="/archive">Old Stuff</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<!-- main content -->
-<div class="container">
+<div id='main' class="container">
     <header class="page-header">
         <h1>Projects</h1>
     </header>
@@ -324,14 +295,9 @@ crossorigin="anonymous"></script>
             </div>
         </div>
     </section>
-    <footer>
-        <small>
-        <p>Copyright © 2014-2017 Muchen He</p>
-        This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-        </small>
-    </footer>
 </div>
 <script src="../js/timeline.js"></script>
+<script src="../js/default.js"></script>
 <script>
 $(function() {
     $("#filterSoftwareButton").on('click', function() { showExclusive('.timeline-icon-info') });
@@ -343,6 +309,9 @@ $(function() {
         $(".timeline").slideDown(200);
         $(".timeline").prev().slideDown(200);
     });
+
+    addNavbar('Projects');
+    addFooter();
 });
 
 function showExclusive(className) {
@@ -362,7 +331,6 @@ function showExclusive(className) {
             $(this).prev().slideUp(200);
         }
     })
-    // blocksUpdateTrigger();  // call this when animation completes
 }
 </script>
 </body>

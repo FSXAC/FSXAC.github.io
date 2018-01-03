@@ -22,37 +22,10 @@ crossorigin="anonymous"></script>
 <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
 <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
 <script language="javascript" type="text/javascript" src="sketch.js"></script>
+<script language="javascript" type="text/javascript" src="../js/default.js"></script>
 </head>
 <body style="padding-top: 70px;">
-<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" >
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapsable" aria-expanded="false">
-            <span class="sr-only">Toggle Nav</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Muchen He</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="nav-collapsable">
-            <ul class="nav navbar-nav">
-                <li role="presentation"><a href="/">Index</a></li>
-                <li role="presentation"><a href="/blog">Blog</a></li>
-                <li role="presentation" class="active"><a>Documents <span class="sr-only">(current)</span></a></li>
-                <li role="presentation"><a href="/projects">Projects</a></li>
-                <li role="presentation"><a href="/resume">Resume</a></li>
-                <li role="presentation"><a href="/tools">Tools</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li role="presentation"><a href="archive">Old Stuff</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<!-- main content -->
-<div class="container">
+<div id='main' class="container">
     <header class="page-header">
         <h1>Notes</h1>
     </header>
@@ -205,7 +178,7 @@ crossorigin="anonymous"></script>
 
 
     <header class="page-header">
-        <h1>Documets</h1>
+        <h1>Documents</h1>
     </header>
     <section>
         <div class="row">
@@ -218,13 +191,10 @@ crossorigin="anonymous"></script>
             </div>
         </div>
     </section>
-
-    <footer>
-        <small>
-        <p>Copyright © 2014-2017 Muchen He</p>
-        This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-        </small>
-    </footer>
 </div>
+<script>
+    addNavbar('Documents');
+    addFooter();
+</script>
 </body>
 </html>
