@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muchen He :: Gallery</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Muchen's page" />
+    <meta name="author" content="Muchen He" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="../css/default.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../js/default.js"></script>
+    <script src="../js/instafeed.min.js"></script>
+    <!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script> -->
+    <style>
+        .photowrapper { padding-left: 0.5em; padding-right: 0.5em; margin-bottom: 1em;}
+        .photobox {
+            padding: 0.5em;
+            border: 1px solid #EEE;
+            border-radius: 0.25em;
+        }
+        a.thumbnail {
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+            padding: 0px;
+            border: 0px;
+            border-radius: 0px;
+            margin-bottom: 0.7em;
+        }
+        a.thumbnail > img {
+            transition: 0.5s ease;
+        }
+        a.thumbnail:hover {
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+        }
+        a.thumbnail:hover > img {
+            transform: scale(0.95);
+        }
+        .aligned-row {
+            display: flex;
+            flex-flow: row wrap;
+
+            &::before {
+                display: block;
+            }
+        }
+        .ig-likes {
+            font-weight: 400;
+        }
+        .ig-desc {
+            font-size: 0.7em;
+            line-height: 1.1em;
+        }
+    </style>
+</head>
+
+<body style="padding-top: 70px;">
+<div id='main' class="container">
+    <header class="page-header">
+        <h1>Gallery</h1>
+    </header>
+    <section>
+        <div id='galleryfeed' class="row aligned-row"></div>
+        <div style='text-align: center'><button class='btn btn-default' id='load-more'>Load more</button></div>
+    </section>
+</div>
+<script>
+    $(document).ready(function() {
+        addNavbar('Gallery');
+        addFooter();
+        setupInstafeed();
+    });
+
+    function setupInstafeed() {
+        var loadButton = document.getElementById('load-more');
+        var feed = new Instafeed({
+            clientId: '9b9aa142e79345a5a754a84d67d48594',
+            get: 'user',
+            target: 'galleryfeed',
+            accessToken: '2109225379.9b9aa14.8b052311b4ba4cc1b62cc29609cb41d2',
+            userId: '2109225379',
+            sortBy: 'most-recent',
+            links: true,
+            limit: 9,
+            resolution: 'standard_resolution',
+            template: '\
+            <div class="col-md-3 col-sm-4 col-xs-12 photowrapper">\
+                <div class="photobox">\
+                    <a href="{{link}}" class="thumbnail">\
+                        <img src="{{image}}" alt="{{caption}}">\
+                    </a>\
+                    <div class="ig-likes">&#9825; {{likes}}</div>\
+                    <div class="ig-desc">{{caption}}</div>\
+                </div>\
+            </div>',
+
+            after: function() {
+                if (!this.hasNext()) {
+                    loadButton.setAttribute('disabled', 'disabled');
+                }
+            }
+        });
+
+        // Load button event listener
+        loadButton.addEventListener('click', function() {
+            feed.next();
+        });
+
+        feed.run();
+    }
+</script>
+</body>
+</html>
