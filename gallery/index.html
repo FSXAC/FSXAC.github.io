@@ -16,14 +16,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="../js/default.js"></script>
     <script src="../js/instafeed.min.js"></script>
-    <!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script> -->
     <style>
         .photowrapper { padding-left: 0.5em; padding-right: 0.5em; margin-bottom: 1em;}
-        .photobox {
-            padding: 0.5em;
-            border: 1px solid #EEE;
-            border-radius: 0.25em;
-        }
+        .photobox { padding: 0.5em; border: 1px solid #EEE; border-radius: 0.25em; }
         a.thumbnail {
             box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
             padding: 0px;
@@ -31,30 +26,16 @@
             border-radius: 0px;
             margin-bottom: 0.7em;
         }
-        a.thumbnail > img {
-            transition: 0.5s ease;
-        }
-        a.thumbnail:hover {
-            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
-        }
-        a.thumbnail:hover > img {
-            transform: scale(0.95);
-        }
+        a.thumbnail > img { transition: 0.5s ease;}
+        a.thumbnail:hover { box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2); }
+        a.thumbnail:hover > img { transform: scale(0.95); }
         .aligned-row {
             display: flex;
             flex-flow: row wrap;
-
-            &::before {
-                display: block;
-            }
+            &::before { display: block; }
         }
-        .ig-likes {
-            font-weight: 400;
-        }
-        .ig-desc {
-            font-size: 0.7em;
-            line-height: 1.1em;
-        }
+        .ig-likes { font-weight: 400; }
+        .ig-desc { font-size: 0.7em; line-height: 1.1em; }
     </style>
 </head>
 
@@ -85,7 +66,7 @@
             userId: '2109225379',
             sortBy: 'most-recent',
             links: true,
-            limit: 9,
+            limit: 3,
             resolution: 'standard_resolution',
             template: '\
             <div class="col-md-3 col-sm-4 col-xs-12 photowrapper">\
@@ -109,7 +90,6 @@
         loadButton.addEventListener('click', function() {
             feed.next();
         });
-
         feed.run();
     }
 </script>

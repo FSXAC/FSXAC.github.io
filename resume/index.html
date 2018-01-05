@@ -36,11 +36,13 @@ section.resume-panel > h2 {
     color: white !important;
     background-color: #235 !important;
     font-size: 2.0rem;
-    padding: 4px;
-    margin: 4px 1px;
+    padding: 0.1em 0.5em;
+    margin: 2px 1px;
 }
-div.resume-block { padding: 0.5rem 0.5rem; }
+.resume-block { padding: 0.5rem 0.5rem; }
+.resume-block > table { margin-bottom: 0.4em; }
 div.progress-container {
+    margin-top: 0.52em;
     width: 100%;
     height: 8px;
     border: 1px solid #CCC;
@@ -63,17 +65,19 @@ div.progress-container > div.attr-progress {
     padding: 0.5em;
     text-align: center;
 }
-.work > h3 { font-size: 2rem; margin: 0.5rem 0;}
-div.resume-attr { margin-bottom: 1rem; }
+.work > h3 { font-size: 2rem; margin: 0;}
+.work > .position { margin-top: 0; }
+/* div.resume-attr { margin-bottom: 1rem; } */
 p.activity-list { margin: 0; line-height: 2.5rem }
 p.activity-list > span { border: 1px solid #EEE; }
 #studyProgress { width: 63%; }
 #workProgress { width: 20%; }
-.proj-showcase { padding: 0 5px; }
-.proj-showcase:first-child { padding-left: 10px; }
-.proj-showcase:last-child { padding-right: 10px; }
+.proj-showcase { padding: 0 0.2em; }
+.proj-showcase:first-child { padding-left: 15px; }
+.proj-showcase:last-child { padding-right: 15px; }
 .proj-showcase > h4 { margin: 0; }
 .proj-showcase > small { color: #555; }
+.progress-p { margin-top: 1px; }
 </style>
 </head>
 <body>
@@ -119,17 +123,25 @@ p.activity-list > span { border: 1px solid #EEE; }
                     <div class="resume-attr">
                         <p><span class="fa fa-graduation-cap"></span> May 2020 anticipated date of graduation</p>
                     </div>
-                    <div class="resume-attr">
-                        <div class="progress-container">
-                            <div id="studyProgress" class="attr-progress"></div>
+                    <div class="resume-attr row">
+                        <div class="proj-showcase col-xs-4">
+                            <div class="progress-container">
+                                <div id="studyProgress" class="attr-progress"></div>
+                            </div>
                         </div>
-                        <p>5 out of 8 academic terms completed</p>
+                        <div class="proj-showcase col-xs-8">
+                            <p class='progress-p'>5/8 academic terms completed</p>
+                        </div>
                     </div>
-                    <div class="resume-attr">
-                        <div class="progress-container">
-                            <div id="workProgress" class="attr-progress"></div>
+                    <div class="resume-attr row">
+                        <div class="proj-showcase col-xs-4">
+                            <div class="progress-container">
+                                <div id="workProgress" class="attr-progress"></div>
+                            </div>
                         </div>
-                        <p>1 out of 5 work terms completed</p>
+                        <div class="proj-showcase col-xs-8">
+                            <p class='progress-p'>1/5 work terms completed</p>
+                        </div>
                     </div>
                     <div class="resume-attr">
                         <p>Available for 4, 8, 12, or 16 months</p>
@@ -167,15 +179,15 @@ p.activity-list > span { border: 1px solid #EEE; }
                 <div class="resume-block">
                     <div class="work">
                         <h3>Vital Mechanics Research Inc.</h3>
-                        <p>Software Developer (Co-op) (May-September 2017)</p>
+                        <p class='position'>Software Developer (Co-op) (May-September 2017)</p>
                         <ul>
-                            <li>Developed applications using QT (GUI Framework), C++, and JavaScript; developed Model-View-Controller software structure</li>
-                            <li>Programmed realistic and interactive 3D viewers using OpenGL and WebGL</li>
+                            <li>Developed applications with Qt (GUI Framework), C++, and JavaScript; developed Model-View-Controller software structure</li>
+                            <li>Programmed interactive 3D viewers with JavaScript and Three.js; wrote realistic shaders with WebGL</li>
                         </ul>
                     </div>
                     <div class="work">
                         <h3>University of Alberta</h3>
-                        <p>Software Intern (June-August 2014)</p>
+                        <p class='position'>Software Intern (June-August 2014)</p>
                         <ul>
                             <li>Developed Android tablet game in Java and Android SDK</li>
                             <li>Implemented features including haptic, visual, and audio feedback</li>
@@ -215,8 +227,6 @@ p.activity-list > span { border: 1px solid #EEE; }
             <section class="resume-panel">
                 <h2>Professional Affiliations</h2>
                 <div class="resume-block">
-                    <p></p>
-                    <p></p>
                     <table>
                         <tbody>
                             <tr><td>APEGBC - IMAPS</td></tr>
@@ -244,8 +254,8 @@ p.activity-list > span { border: 1px solid #EEE; }
                 <div class="resume-block">
                     <p class="activity-list">
                         <span class="btn-default btn-xs">Hackathon</span>
+                        <span class="btn-default btn-xs">Programming Challenges</span>
                         <span class="btn-default btn-xs">DIY Electronics</span>
-                        <span class="btn-default btn-xs">Flight Simulators</span>
                         <span class="btn-default btn-xs">Computer Gaming</span>
                         <span class="btn-default btn-xs">Photography</span>
                         <span class="btn-default btn-xs">Graphic Design</span>
