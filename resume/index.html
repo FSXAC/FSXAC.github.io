@@ -181,16 +181,17 @@ p.activity-list > span { border: 1px solid #EEE; }
                         <h3>Vital Mechanics Research Inc.</h3>
                         <p class='position'>Software Developer (Co-op) (May-September 2017)</p>
                         <ul>
-                            <li>Developed applications with Qt (GUI Framework), C++, and JavaScript; developed Model-View-Controller software structure</li>
-                            <li>Programmed interactive 3D viewers with JavaScript and Three.js; wrote realistic shaders with WebGL</li>
+                            <li>Developed applications in Qt GUI Framework using C++ and JavaScript</li>
+                            <li>Maintained clean code that follows Model-View-Controller software structure</li>
+                            <li>Programmed interactive 3D viewers with JavaScript and Three.js; wrote realistic shaders in WebGL</li>
                         </ul>
                     </div>
                     <div class="work">
                         <h3>University of Alberta</h3>
-                        <p class='position'>Software Intern (June-August 2014)</p>
+                        <p class='position'>High School Software Intern (June-August 2014)</p>
                         <ul>
-                            <li>Developed Android tablet game in Java and Android SDK</li>
-                            <li>Implemented features including haptic, visual, and audio feedback</li>
+                            <li>Developed Android tablet game based on Box2D engine in Java and Android SDK</li>
+                            <li>Implemented haptic and audio feedback and physics-enabled obsticles</li>
                             <li>Presented talk on project specifications, goals, and experiences</li>
                         </ul>
                     </div>
@@ -270,6 +271,7 @@ p.activity-list > span { border: 1px solid #EEE; }
     var template = {
         open: '<div class="proj-showcase col-xs-3">',
         title: '<h4>{title}</h4>',
+        roled: '<small><i><span> ({roled})</span></i></small>',
         date: '<small>{date}</small>',
         desc: '<p>{desc}</p>',
         close: '</div>'
@@ -315,7 +317,16 @@ p.activity-list > span { border: 1px solid #EEE; }
                 // Render HTML
                 htmlOut += template.open;
                 htmlOut += template.title.replace('{title}', curr.name);
+
+                var roled = 'Independent';
+                if (curr.scope == 'course') {
+                    roled = 'Project Course';
+                } else if (curr.scope == 'hack') {
+                    roled = 'Hackathon'
+                }
+
                 htmlOut += template.date.replace('{date}', curr.dates.end);
+                htmlOut += template.roled.replace('{roled}', roled);
                 htmlOut += template.desc.replace('{desc}', curr.description);
                 htmlOut += template.close;
                 count++;
