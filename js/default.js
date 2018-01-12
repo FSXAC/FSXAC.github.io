@@ -10,7 +10,7 @@ function addFooter() {
 
 function addNavbar(current) {
     navs = ['Index', 'Blog', 'Documents', 'Gallery', 'Projects', 'Resume', 'Tools'];
-    links = ['/', '/blog', '/documents', '/gallery', '/projects', '/resume', '/tools'];
+    links = ['/', 'https://www.muchen.ca/blog', '/documents', '/gallery', '/projects', '/resume', '/tools'];
 
     var navbarBegin = `
     <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" >
