@@ -1,5 +1,5 @@
 function addFooter() {
-    var date = new Date()
+    var date = new Date();
     var footer = '<footer><small><p>Copyright © 2014-' + date.getFullYear() + ' Muchen He</p> \
         This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. \
         </small> \
@@ -46,7 +46,7 @@ function addNavbar(current) {
         if (current != navs[i]) outHtml += 'href="' + links[i] + '"';
         outHtml += '>' + navs[i];
         if (current == navs[i]) outHtml += '<span class="sr-only">(current)</span>';
-        outHtml += '</a></li>'
+        outHtml += '</a></li>';
     }
     outHtml += navbarEnd;
 
