@@ -1,13 +1,16 @@
 a { color: #337ab7; transition: color .3s ease; }
-body { cursor: default; font-family: "Open Sans", "Segoe UI", sans-serif; font-size: 14px;}
+body { line-height: 1.2em; cursor: default; font-family: "Open Sans", "Segoe UI", sans-serif; font-size: 14px;}
 footer { margin: 20px 0; }
 p { margin: 5px 0; }
 
 .avatar { border-radius: 50%; transition: 0.2s all ease-in-out; }
 .avatar:hover { border-radius: 5%; }
 .bg-ubc { background-color: #002859; }
+.btn { font-size: inherit; }
+.btn-xs { padding: 0 .25em; font-size: 90% }
 .dl-horizontal > dt { text-align: right; }
 .dl-horizontal > dd { margin-bottom: 0; }
 .nav-link { font-weight: 300; margin-left: 10px; margin-right: 10px;}
 .text-center { text-align: center; }
 .pcanvas { z-index: -1; }
+.row-quiet { margin-left: 0; margin-right: 0; }

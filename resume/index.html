@@ -1,46 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Muchen :: Resume</title>
+<title>Muchen He :: Resume</title>
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta name="description" content="Muchen's page"/>
-<meta name="author" content="Muchen He"/>
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Muchen's page" />
+<meta name="author" content="Muchen He" />
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
 <!-- css -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<link type="text/css" rel="stylesheet" href="../css/default.css"/>
-<link type="text/css" rel="stylesheet" href="../css/resume.css"/>
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="../css/default.css" />
 <!-- js -->
-<script
-src="https://code.jquery.com/jquery-3.2.1.min.js"
-integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="../js/default.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script language="javascript" type="text/javascript" src="../js/default.js"></script>
 <style>
 @media print {
-    body { padding-top: 0px !important; -webkit-print-color-adjust: exact !important; }
+    body { -webkit-print-color-adjust: exact !important; }
     .navbar { display: none; }
     footer { display: none; }
     .filter { display: none; }
-    /* .work > .position { float: right; } */
 }
-body { padding-top: 70px; line-height: 1.2em; font-family: 'Open Sans', sans-serif; }
 section.resume-panel { padding: 0; }
 section.resume-panel > h2 {
     color: white !important;
     background-color: #235 !important;
-    font-size: 2.0rem;
+    font-size: 1.3em;
     padding: 0.1em 0.5em;
     margin: 2px 1px;
 }
-.resume-block { padding: 0.5rem 0.5rem; }
+.resume-block { padding: 5px; }
 .resume-block > table { margin-bottom: 0.4em; }
 div.progress-container {
     margin-top: 0.52em;
@@ -57,7 +50,6 @@ div.progress-container > div.attr-progress {
     height: 100%;
     transition: all 1s ease-in-out;
 }
-/* Filter */
 .filter {
     background-color: #EEE;
     border: 1px solid #DDD;
@@ -66,9 +58,8 @@ div.progress-container > div.attr-progress {
     padding: 0.5em;
     text-align: center;
 }
-.work > h3 { font-size: 2rem; margin: 0;}
+.work > h3 { font-size: 1.3em; margin: 0;}
 .work > .position { margin-top: 0; }
-/* div.resume-attr { margin-bottom: 1rem; } */
 p.activity-list { margin: 0; line-height: 2.5rem }
 p.activity-list > span { border: 1px solid #EEE; }
 #studyProgress { width: 63%; }
@@ -82,9 +73,10 @@ p.activity-list > span { border: 1px solid #EEE; }
 </style>
 </head>
 <body>
-<div id='main' class="container">
+<script>addNavbar('Resume');</script>
+<div id='main' class="container mt-3">
     <div class="row">
-        <header class="col-xs-12 filter">
+        <header class="col-12 filter">
             <p style="font-size: 1.5em">Filter</p>
             <div class="btn-group" role="group" aria-label="...">
                 <button id="filterBtnAll" type="button" class="btn btn-primary">All</button>
@@ -95,63 +87,67 @@ p.activity-list > span { border: 1px solid #EEE; }
                 <button id="filterBtnCustom" type="button" class="btn btn-success">Custom</button>
             </div>
         </header>
-        <header class="col-xs-12">
+        <div class="col-12">
             <img src="ubc.png" height="56px">
             <h1>Muchen He</h1>
             <p class="text-muted">UBC Electrical Engineering Undergraduate (Co-op Program)</p>
-        </header>
-        <div class="col-sm-4 col-xs-12">
-            <section class="resume-panel col-sm-12 col-xs-6">
-                <h2>Contact</h2>
-                <div class="resume-block col-sm-12 col-xs-6">
-                    <strong>Personal</strong>
-                    <p>i@muchen.ca</p>
-                    <p>(778) 952-9222</p>
-                    <p>MD0544 2202 Lower Mall</p>
-                    <p>Vancouver, BC, Canada, V6T 1Z4</p>
-                </div>
-                <div class="resume-block col-sm-12 col-xs-6">
-                    <strong>Co-op Office</strong>
-                    <p>eng.coop@ubc.ca</p>
-                    <p>(604) 822-3022</p>
-                    <p>2385 East Mall</p>
-                    <p>Vancouver, BC, Canada, V6T 1Z4</p>
-                </div>
-            </section>
-            <section class="resume-panel col-sm-12 col-xs-6">
-                <h2>Attributes</h2>
-                <div class="resume-block">
-                    <div class="resume-attr">
-                        <p><span class="fa fa-graduation-cap"></span> May 2020 anticipated date of graduation</p>
-                    </div>
-                    <div class="resume-attr row">
-                        <div class="proj-showcase col-xs-4">
-                            <div class="progress-container">
-                                <div id="studyProgress" class="attr-progress"></div>
-                            </div>
-                        </div>
-                        <div class="proj-showcase col-xs-8">
-                            <p class='progress-p'>5/8 academic terms completed</p>
-                        </div>
-                    </div>
-                    <div class="resume-attr row">
-                        <div class="proj-showcase col-xs-4">
-                            <div class="progress-container">
-                                <div id="workProgress" class="attr-progress"></div>
-                            </div>
-                        </div>
-                        <div class="proj-showcase col-xs-8">
-                            <p class='progress-p'>1/5 work terms completed</p>
-                        </div>
-                    </div>
-                    <div class="resume-attr">
-                        <p>Available for 4, 8, 12, or 16 months</p>
-                        <p>Starting May 2018</p>
-                    </div>
-                </div>
-            </section>
         </div>
-        <div class="col-sm-8 col-xs-12">
+        <div class="col-lg-4 col-12">
+            <div class="row row-quiet">
+                <section class="resume-panel col-lg-12 col-6">
+                    <h2>Contact</h2>
+                    <div class="row row-quiet">
+                        <div class="resume-block col-lg-12 col-6">
+                            <strong>Personal</strong>
+                            <p>i@muchen.ca</p>
+                            <p>(778) 952-9222</p>
+                            <p>MD0544 2202 Lower Mall</p>
+                            <p>Vancouver, BC, Canada, V6T 1Z4</p>
+                        </div>
+                        <div class="resume-block col-lg-12 col-6">
+                            <strong>Co-op Office</strong>
+                            <p>eng.coop@ubc.ca</p>
+                            <p>(604) 822-3022</p>
+                            <p>2385 East Mall</p>
+                            <p>Vancouver, BC, Canada, V6T 1Z4</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="resume-panel col-lg-12 col-6">
+                    <h2>Attributes</h2>
+                    <div class="resume-block">
+                        <div class="resume-attr">
+                            <p><span class="fa fa-graduation-cap"></span> May 2020 anticipated date of graduation</p>
+                        </div>
+                        <div class="resume-attr row">
+                            <div class="proj-showcase col-4">
+                                <div class="progress-container">
+                                    <div id="studyProgress" class="attr-progress"></div>
+                                </div>
+                            </div>
+                            <div class="proj-showcase col-8">
+                                <p class='progress-p'>5/8 academic terms completed</p>
+                            </div>
+                        </div>
+                        <div class="resume-attr row">
+                            <div class="proj-showcase col-4">
+                                <div class="progress-container">
+                                    <div id="workProgress" class="attr-progress"></div>
+                                </div>
+                            </div>
+                            <div class="proj-showcase col-8">
+                                <p class='progress-p'>1/5 work terms completed</p>
+                            </div>
+                        </div>
+                        <div class="resume-attr">
+                            <p>Available for 4, 8, 12, or 16 months</p>
+                            <p>Starting May 2018</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="col-lg-8 col-12">
             <section class="resume-panel">
                 <h2>Technical Skills</h2>
                 <div class="resume-block">
@@ -210,28 +206,28 @@ p.activity-list > span { border: 1px solid #EEE; }
                 <h2>Technical Projects</h2>
                 <div class="resume-block">
                     <div id="projectContainer" class="row">
-                        <div class="proj-showcase col-xs-3">
+                        <div class="proj-showcase col-3">
                             <h4>Sleep Tracker Webapp</h4>
                             <small>September 2017</small>
                             <p>Uses realtime database and authentication to keep track of sleep statistics</p>
                         </div>
-                        <div class="proj-showcase col-xs-3">
+                        <div class="proj-showcase col-3">
                             <h4>CircuitDraw Webapp</h4>
                             <small>July-August 2017</small>
                             <p>Features common electrical parts and circuits can be saved and reloaded via JSON</p>
                         </div>
-                        <div class="proj-showcase col-xs-3">
+                        <div class="proj-showcase col-3">
                             <h4>Magnetic Field Track Robot</h4>
                             <small>April 2017</small>
                             <p>Microcontroller robot car that follows a wire that carries alternating current; commands are transmitted using the same wire</p>
                         </div>
-                        <div class="proj-showcase col-xs-3">
+                        <div class="proj-showcase col-3">
                             <h4>3D Game with custom Controller</h4>
                             <small>April 2017</small>
                             <p>Built DIY game controller with microcontroller that communicates via serial to a 3D game (programed in Processing)</p>
                         </div>
                     </div>
-                    <a href="/projects" class="btn btn-default btn-xs" style="width: 100%">Go to <u>muchen.ca/projects</u> for more details and projects</a>
+                    <a href="/projects" class="btn btn-xs btn-outline-secondary" style="width: 100%">Go to <u>muchen.ca/projects</u> for more details and projects</a>
                 </div>
             </section>
             <section class="resume-panel">
@@ -263,12 +259,12 @@ p.activity-list > span { border: 1px solid #EEE; }
                 <h2>Hobbies + Activities</h2>
                 <div class="resume-block">
                     <p class="activity-list">
-                        <span class="btn-default btn-xs">Hackathon</span>
-                        <span class="btn-default btn-xs">Programming Challenges</span>
-                        <span class="btn-default btn-xs">DIY Electronics</span>
-                        <span class="btn-default btn-xs">Computer Gaming</span>
-                        <span class="btn-default btn-xs">Photography</span>
-                        <span class="btn-default btn-xs">Graphic Design</span>
+                        <span class="btn btn-xs btn-outline-secondary">Hackathon</span>
+                        <span class="btn btn-xs btn-outline-secondary">Programming Challenges</span>
+                        <span class="btn btn-xs btn-outline-secondary">DIY Electronics</span>
+                        <span class="btn btn-xs btn-outline-secondary">Computer Gaming</span>
+                        <span class="btn btn-xs btn-outline-secondary">Photography</span>
+                        <span class="btn btn-xs btn-outline-secondary">Graphic Design</span>
                     </p>
                 </div>
             </section>
@@ -276,9 +272,10 @@ p.activity-list > span { border: 1px solid #EEE; }
     </div>
 </div>
 <script>
+    addFooter();
     var $pc = $('#projectContainer');
     var template = {
-        open: '<div class="proj-showcase col-xs-3">',
+        open: '<div class="proj-showcase col-3">',
         title: '<h4>{title}</h4>',
         roled: '<small><i><span> ({roled})</span></i></small>',
         date: '<small>{date}</small>',
@@ -346,10 +343,6 @@ p.activity-list > span { border: 1px solid #EEE; }
 
     // Running at the start (before the content need to be loaded)
     $(document).ready(function() {
-        // Add front end
-        addNavbar('Resume');
-        addFooter();
-
         readProjects();
 
         // Connect signals of the buttons to some handlers
