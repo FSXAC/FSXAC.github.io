@@ -54,8 +54,8 @@ img { max-width: 100% }
 .timeline-block:last-child { margin-bottom: 0; }
 @media only screen and (min-width: 1100px) {
     /*.timeline-block { margin: -4em 0; }*/
-    .timeline-block { margin: -2em 0; }
-    /*.timeline-block { margin: 0; }*/
+    /* .timeline-block { margin: -2em 0; } */
+    .timeline-block { margin: 0; }
     .timeline-block:first-child { margin-top: 0; }
     .timeline-block:last-child { margin-bottom: 0; }
 }

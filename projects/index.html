@@ -4,34 +4,38 @@
 <title>Muchen :: Projects</title>
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta name="description" content="Muchen's page"/>
-<meta name="author" content="Muchen He"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Muchen's page" />
+<meta name="author" content="Muchen He" />
 <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- css -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<link type="text/css" rel="stylesheet" href="../css/default.css"/>
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="../css/default.css" />
 <link type="text/css" rel="stylesheet" href="../css/timeline.css"/>
-<script
-src="https://code.jquery.com/jquery-3.2.1.min.js"
-integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script language="javascript" type="text/javascript" src="../js/default.js"></script>
+<script language="javascript" type="text/javascript" src="../js/timeline.js"></script>
 </head>
-<body id="root" style="padding-top: 70px;">
-<div id='main' class="container">
-    <header class="page-header">
+<body id="root">
+<script>addNavbar('Projects');</script>
+<div id='main' class="container mt-3">
+    <header>
         <h1>Projects</h1>
     </header>
+
+    <!-- Filters -->
     <section>
         <div class="btn-group" role="group">
-            <a class="btn btn-default" href="#proj2018">2018</a>
-            <a class="btn btn-default" href="#proj2017">2017</a>
-            <a class="btn btn-default" href="#proj2016">2016</a>
-            <a class="btn btn-default" href="#proj2015">2015</a>
-            <a class="btn btn-default" href="#proj2014">2014</a>
+            <a class="btn btn-outline-secondary" href="#proj2018">2018</a>
+            <a class="btn btn-outline-secondary" href="#proj2017">2017</a>
+            <a class="btn btn-outline-secondary" href="#proj2016">2016</a>
+            <a class="btn btn-outline-secondary" href="#proj2015">2015</a>
+            <a class="btn btn-outline-secondary" href="#proj2014">2014</a>
         </div>
         <div class='btn-group' role="group">
             <button id="filterSoftwareButton" class="btn btn-info">Software</button>
@@ -57,7 +61,7 @@ crossorigin="anonymous"></script>
                 <p class="text-muted">
                     Desktop app used to help grading lab submissions more efficiently. Programmed in Python using Qt, runs on Windows, Mac, and Liunx, and features dockable UI.
                 </p>
-                <a class="btn btn-default btn-sm" href="https://www.github.com/FSXAC/Automark">Project page</a>
+                <a class="btn btn-sm btn-outline-secondary" href="https://www.github.com/FSXAC/Automark">Project page</a>
             </div>
         </div>
     </section>
@@ -78,8 +82,8 @@ crossorigin="anonymous"></script>
                 <p class="text-muted">
                     A Selective Laser Sintering 3D printer designed and accurately modelled in MATLAB and SimuLink. Controlled via tuned PID controller and maximized print speed and minimized error.
                 </p>
-                <a class="btn btn-default btn-sm" href="https://www.muchen.ca/documents/ELEC341-Project1.pdf">Report part 1</a>
-                <a class="btn btn-default btn-sm" href="https://www.muchen.ca/documents/ELEC341-Project2.pdf">Report part 2</a>
+                <a class="btn btn-sm btn-outline-secondary" href="https://www.muchen.ca/documents/ELEC341-Project1.pdf">Report part 1</a>
+                <a class="btn btn-sm btn-outline-secondary" href="https://www.muchen.ca/documents/ELEC341-Project2.pdf">Report part 2</a>
             </div>
         </div>
         <div class="timeline-block">
@@ -106,7 +110,7 @@ crossorigin="anonymous"></script>
                 <p class="text-muted">
                     Created at <i>Lumohacks 2017</i> Hackathon. It features realtime database and authentication.
                 </p>
-                <a class="btn btn-default btn-sm" href="http://glacial-stream-85429.herokuapp.com">Project page</a>
+                <a class="btn btn-sm btn-outline-secondary" href="http://glacial-stream-85429.herokuapp.com">Project page</a>
             </div>
         </div>
         <div class="timeline-block">
@@ -122,7 +126,7 @@ crossorigin="anonymous"></script>
                     resistors, capacitors, diodes, OP-AMPs, integrated circuit chips, and more. This also supports saving and loading circuits
                     using JSON.
                 </p>
-                <a class="btn btn-default btn-sm" href="https://www.muchen.ca/CircuitDraw">Project page</a>
+                <a class="btn btn-sm btn-outline-secondary" href="https://www.muchen.ca/CircuitDraw">Project page</a>
             </div>
         </div>
         <div class="timeline-block">
@@ -150,8 +154,8 @@ crossorigin="anonymous"></script>
                 a team of six,
                 and over two weeks of sleepness nights. 
                 </p>
-                <a class="btn btn-default btn-sm" href="#">Project page</a>
-                <a class="btn btn-default btn-sm" href="/documents/ELEC291-Project2">Read report</a>
+                <a class="btn btn-sm btn-outline-secondary" href="#">Project page</a>
+                <a class="btn btn-sm btn-outline-secondary" href="/documents/ELEC291-Project2">Read report</a>
             </div>
         </div>
         <div class="timeline-block">
@@ -329,7 +333,7 @@ crossorigin="anonymous"></script>
                     Experimented with tinkering and building using Arduino microcontrollers. I made various small projects using photo-sensors, servo motors, speakes, and LCD.
                     I also wrote journals to keep track of my learning progress.
                 </p>
-                <a class="btn btn-default btn-sm" href="https://www.muchen.ca/archive/blog2014">Open journal</a>
+                <a class="btn btn-sm btn-outline-secondary" href="https://www.muchen.ca/archive/blog2014">Open journal</a>
             </div>
         </div>
         <div class="timeline-block">
@@ -347,8 +351,7 @@ crossorigin="anonymous"></script>
         </div>
     </section>
 </div>
-<script src="../js/timeline.js"></script>
-<script src="../js/default.js"></script>
+<script>addFooter();</script>
 <script>
 $(function() {
     $("#filterSoftwareButton").on('click', function() { showExclusive('.timeline-icon-info') });
@@ -360,9 +363,6 @@ $(function() {
         $(".timeline").slideDown(200);
         $(".timeline").prev().slideDown(200);
     });
-
-    addNavbar('Projects');
-    addFooter();
 });
 
 function showExclusive(className) {
