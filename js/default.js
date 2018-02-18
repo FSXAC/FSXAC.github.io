@@ -55,7 +55,6 @@ function addNavbar_BS3(current) {
 
 function addNavbar(current) {
     var navs = ['About', 'Blog', 'Documents', 'Gallery', 'Projects', 'Resume', 'Toolbox'];
-    var domain = "https://www.muchen.ca";
     var links = ['/', '/blog', '/documents', '/gallery', '/projects', '/resume', '/tools'];
 
     var navbarBegin = `
