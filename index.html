@@ -23,62 +23,77 @@
 <script language="javascript" type="text/javascript" src="index_sketch.js"></script>
 <script language="javascript" type="text/javascript" src="js/default.js"></script>
 </head>
-<!-- <body style="padding-top: 70px;"> -->
+
 <body>
 
 <!-- New navbar -->
-<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
-    <a href="/" class="navbar-brand">Muchen He</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarTogglerDemo03"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active"><a class="nav-link" href="#">Item A</a><span class="sr-only">(current)</span></li>
-            <li class="nav-item"><a class="nav-link" href="#">Item B</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Item C</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Item D</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Item E</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Item F</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Item G</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Item H</a></li>
-        </ul>
+<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-ubc">
+    <div class="container">
+        <a href="/" class="navbar-brand">Muchen He</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarTogglerDemo03"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a class="nav-link" href="#">About</a><span class="sr-only">(current)</span></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.muchen.ca/blog">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.muchen.ca/documents">Documents</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.muchen.ca/gallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.muchen.ca/projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.muchen.ca/resume">Resume</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.muchen.ca/tools">Tools</a></li>
+            </ul>
+        </div>
     </div>
 </nav>
 <!-- End of new navbar -->
 
-<div id='main' class="container">
+<div id='main' class="container mt-3">
     <header>
-        <h1>Muchen He</h1>
-        <img class="avatar" src="img/avatar2-sm.jpg" style="width: 100px">
+        <img class="avatar my-3" src="img/avatar2-sm.jpg" style="width: 160px">
         <p><strong>Hello Internet!</strong></p>
-        <p>I am Muchen, currently studying Electrical Engineering at University of British Columbia.</p>
-        <p>I recently completed my first engineering cooperative work placement (COOP) work term at <a href="http://vitalmechanics.com">Vital Mechanics Research Inc.</a></p>
+        <p>I am Muchen, currently studying third year Electrical Engineering at The University of British Columbia.</p>
+        <p>Upcoming co-op position at <a href="http://www.bioware.com/en/">EA - Bioware</a> starting May 2018. Previous co-op at <a href="http://vitalmechanics.com">Vital Mechanics Research Inc.</a></p>
+        <p>I am an excellent electrical engineering student with proficient lab and hands-on skills with experience in software development and FPGA development. Check out my resume projects page for more details.</p>
+
     </header>
     <section>
         <h2>Index</h2>
-        <p>This page provides context and descriptions for each section on my website</p>
-        <dl class="dl-horizontal">
-            <dt><a class="active" href="/">Index</a></dt><dd class="active">You are here.</dd>
-            <dt><a href="https://www.muchen.ca/blog">Blog</a></dt><dd>A new thing I'm starting this year :)</dd>
-            <dt><a href="documents">Documents</a></dt><dd>Notes and school documents.</dd>
-            <dt><a href="projects">Projects</a></dt><dd>Where my spare time goes to.</dd>
-            <dt><a href="resume">Resume</a></dt><dd>Skills and experiences.</dd>
-            <dt><a href="tools">Tools</a></dt><dd>Quick and handy</dd>
+        <dl class="row dl-horizontal">
+            <dt class="col-md-2"><a href="/">About</a></dt>
+            <dd class="col-md-10">You are here.</dd>
+            <dt class="col-md-2"><a href="https://www.muchen.ca/blog">Blog</a></dt>
+            <dd class="col-md-10">Some random blogs that I write once in a while.</dd>
+            <dt class="col-md-2"><a href="https://www.muchen.ca/documents">Documents</a></dt>
+            <dd class="col-md-10">School notes and documents.</dd>
+            <dt class="col-md-2"><a href="https://www.muchen.ca/gallery">Gallery</a></dt>
+            <dd class="col-md-10">Photography showcase from my Instagram.</dd>
+            <dt class="col-md-2"><a href="https://www.muchen.ca/projects">Projects</a></dt>
+            <dd class="col-md-10">Project showcase, including personal projects.</dd>
+            <dt class="col-md-2"><a href="https://www.muchen.ca/resume">Resume</a></dt>
+            <dd class="col-md-10">Skills and experiences.</dd>
+            <dt class="col-md-2"><a href="https://www.muchen.ca/tools">Toolbox</a></dt>
+            <dd class="col-md-10">A collection of useful in-browser apps</dd>
         </dl> 
     </section>
     <section>
         <h2>Contacts</h2>
-        <dl class="dl-horizontal">
-            <dt>Personal E-mail</dt><dd><a href="mailto:i@muchen.ca">i@muchen.ca</a> or <a href="mailto:mansurhe@outlook.com">mansurhe@outlook.com</a> (they both go to the same account)</dd>
-            <dt>School E-mail</dt><dd><a href="m.he@alumni.ubc.ca">m.he@alumni.ubc.ca</a></dd>
-            <dt>Github</dt><dd><a href="https://www.github.com/FSXAC">FSXAC</a></dd>
-            <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/muchen-he-6a3716b3/">Link</a></dd>
+        <dl class="row dl-horizontal">
+            <dt class="col-md-2">Personal E-mail</dt>
+            <dd class="col-md-10"><a href="mailto:i@muchen.ca">i@muchen.ca</a> or <a href="mailto:mansurhe@outlook.com">mansurhe@outlook.com</a></dd>
+            <dt class="col-md-2">School E-mail</dt>
+            <dd class="col-md-10"><a href="mailto:m.he@alumni.ubc.ca">m.he@alumni.ubc.ca</a></dd>
+            <dt class="col-md-2">GitHub</dt>
+            <dd class="col-md-10"><a href="https://www.github.com/FSXAC">FSXAC</a></dd>
+            <dt class="col-md-2">LinkedIn</dt>
+            <dd class="col-md-10"><a href="https://www.linkedin.com/in/muchen-he-6a3716b3/">Link</a></dd>
         </dl>
-        <dl class="dl-horizontal">
-            <dt>Mailing address</dt><dd>MD0544 2205 Lower Mall, Vancouver, BC, V6T1Z4</dd>
-            <dt>Phone</dt><dd><a href="m.he@alumni.ubc.ca">778-952-9222</a></dd>
+        <dl class="row dl-horizontal">
+            <dt class="col-md-2">Mailing address</dt>
+            <dd class="col-md-10">MD0544 2205 Lower Mall, Vancouver, BC, V6T1Z4</dd>
+            <dt class="col-md-2">Phone</dt>
+            <dd class="col-md-10">778-952-9222</dd>
         </dl>
     </section>
 </div>

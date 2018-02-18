@@ -1,27 +1,14 @@
-body {
-    cursor: default;
-    font-family: "Open Sans", "Segoe UI", sans-serif;
-    /* font-weight: 500; */
-}
-footer {
-    margin: 20px 0;
-}
+a { color: #337ab7; transition: color .3s ease; }
+body { cursor: default; font-family: "Open Sans", "Segoe UI", sans-serif; }
+footer { margin: 20px 0; }
+html { font-size: 15px; }
+p { margin-bottom: .75em; }
 
+.avatar { border-radius: 50%; transition: 0.2s all ease-in-out; }
+.avatar:hover { border-radius: 5%; }
+.bg-ubc { background-color: #002859; }
+.dl-horizontal > dt { text-align: right; }
+.dl-horizontal > dd { margin-bottom: 0; }
 .nav-link { font-weight: 300; margin-left: 10px; margin-right: 10px;}
-
-img.avatar {
-    border-radius: 50%;
-    transition: 0.2s all ease-in-out;
-}
-
-img.avatar:hover {
-    border-radius: 5%;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.pcanvas {
-    z-index: -1;
-}
+.text-center { text-align: center; }
+.pcanvas { z-index: -1; }
