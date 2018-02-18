@@ -3,21 +3,21 @@ body {
     font-family: "Open Sans", "Segoe UI", sans-serif;
     color: #111;
 }
-/* h1 {font-weight: 100; font-size: 5rem; margin: 5px 0; vertical-align: middle;}
+h1 {font-weight: 100; font-size: 5rem; margin: 5px 0; vertical-align: middle;}
 h2 {font-weight: 500; }
 h3 {font-weight: 500; font-size: 1.7rem; }
 h2.fancy {margin-bottom: 0; margin-top: 1.25em}
-h3.fancy {font-weight: 600; font-size: 2.0rem; border-bottom: 1px solid black} */
-/*a {text-decoration: none; color: inherit; transition: all 0.3s ease;}
-a:hover {text-orientation: none}*/
+h3.fancy {font-weight: 600; font-size: 2.0rem; border-bottom: 1px solid black}
+/* /*a {text-decoration: none; color: inherit; transition: all 0.3s ease;} */
+a:hover {text-orientation: none}
 footer {margin: 20px 0;}
 /* a {text-decoration: none; transition: all 0.3s ease-in-out; } */
-/* p {margin:5px 0;} */
-/* th {text-align: right; font-weight: 600;}
+p {margin:5px 0;}
+th {text-align: right; font-weight: 600;}
 td {padding-right: 1rem;}
 hr {border: 1px solid #EEE; margin:10px 0;}
 ul {margin-left: 25px;}
-dt {font-weight: 700} */
+dt {font-weight: 700}
 
 /*classes*/
 .bordered {

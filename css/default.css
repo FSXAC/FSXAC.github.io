@@ -1,8 +1,7 @@
 a { color: #337ab7; transition: color .3s ease; }
-body { cursor: default; font-family: "Open Sans", "Segoe UI", sans-serif; }
+body { cursor: default; font-family: "Open Sans", "Segoe UI", sans-serif; font-size: 14px;}
 footer { margin: 20px 0; }
-html { font-size: 15px; }
-p { margin-bottom: .75em; }
+p { margin: 5px 0; }
 
 .avatar { border-radius: 50%; transition: 0.2s all ease-in-out; }
 .avatar:hover { border-radius: 5%; }
