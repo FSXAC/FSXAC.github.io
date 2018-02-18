@@ -26,6 +26,9 @@ function addNavbar(current) {
 
     var navbarEnd = `
             </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/archive">Old stuff</a></li>
+            </ul>
         </div>
     </div>
 </nav>
