@@ -8,7 +8,7 @@ function addFooter() {
     $('#main').append(footer);
 }
 
-function addNavbar(current) {
+function addNavbar_BS3(current) {
     navs = ['Index', 'Blog', 'Documents', 'Gallery', 'Projects', 'Resume', 'Tools'];
     links = ['/', 'https://www.muchen.ca/blog', '/documents', '/gallery', '/projects', '/resume', '/tools'];
 
@@ -50,5 +50,44 @@ function addNavbar(current) {
     }
     outHtml += navbarEnd;
 
+    $('body').prepend(outHtml);
+}
+
+function addNavbar(current) {
+    var navs = ['About', 'Blog', 'Documents', 'Gallery', 'Projects', 'Resume', 'Toolbox'];
+    var domain = "https://www.muchen.ca";
+    var links = ['/', '/blog', '/documents', '/gallery', '/projects', '/resume', '/tools'];
+
+    var navbarBegin = `
+<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-ubc">
+    <div class="container">
+        <a href="/" class="navbar-brand">Muchen He</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarTogglerDemo03"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+    `;
+
+    var navbarEnd = `
+            </ul>
+        </div>
+    </div>
+</nav>
+    `;
+
+    var outHtml = navbarBegin;
+    for (var i = 0, l = navs.length; i < l; i++) {
+        outHtml += '<li class="nav-item';
+        if (current == navs[i]) outHtml += ' active';
+        outHtml += '"><a class="nav-link" href="';
+        outHtml += links[i];
+        outHtml += '">';
+        outHtml += navs[i];
+        if (current == navs[i]) outHtml += '<span class="sr-only">(current)</span>';
+        outHtml += '</a></li>';
+    }
+    outHtml += navbarEnd;
     $('body').prepend(outHtml);
 }
