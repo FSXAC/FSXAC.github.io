@@ -14,3 +14,4 @@ p { margin: 5px 0; }
 .text-center { text-align: center; }
 .pcanvas { z-index: -1; }
 .row-quiet { margin-left: 0; margin-right: 0; }
+.fancy { border-bottom: 1px solid #CCC }
