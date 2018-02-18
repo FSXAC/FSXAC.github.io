@@ -11,22 +11,43 @@
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <!-- css -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
 <link type="text/css" rel="stylesheet" href="css/default.css"/>
 <!-- js -->
-<script
-src="https://code.jquery.com/jquery-3.2.1.min.js"
-integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <!-- p5.js -->
 <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
 <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
 <script language="javascript" type="text/javascript" src="index_sketch.js"></script>
 <script language="javascript" type="text/javascript" src="js/default.js"></script>
 </head>
-<body style="padding-top: 70px;">
+<!-- <body style="padding-top: 70px;"> -->
+<body>
+
+<!-- New navbar -->
+<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+    <a href="/" class="navbar-brand">Muchen He</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarTogglerDemo03"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"><a class="nav-link" href="#">Item A</a><span class="sr-only">(current)</span></li>
+            <li class="nav-item"><a class="nav-link" href="#">Item B</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Item C</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Item D</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Item E</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Item F</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Item G</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Item H</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- End of new navbar -->
+
 <div id='main' class="container">
     <header>
         <h1>Muchen He</h1>
@@ -63,7 +84,7 @@ crossorigin="anonymous"></script>
 </div>
 <script>
     $(document).ready(function() {
-        addNavbar('Index');
+        // addNavbar('Index');
         addFooter();
     })
 </script>
