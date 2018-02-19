@@ -9,7 +9,7 @@ var PT = {
     title: '<h3 class="proj-title">{title}</h3>',
     desc: '<p>{desc}</p>',
     link: '<a href="{url}" class="btn btn-default btn-xs proj-btn">{txt}</a>'
-}
+};
 
 function readProjects() {
     loadJSON(function(response) {

@@ -18,6 +18,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script language="javascript" type="text/javascript" src="../js/default.js"></script>
+<script language="javascript" type="text/javascript" src="document.js"></script>
 <!-- p5 -->
 <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
 <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
@@ -33,7 +34,7 @@
     </header>
     <section>
         <h2 class="fancy">Electrical</h2>
-        <div class="card-columns" style="max-height: 800px;">
+        <div class="card-columns">
             <div class="card bg-light">
                 <div class="card-header p-2">
                     <h3 class="hype">ELEC 201</h3>
@@ -130,11 +131,11 @@
                 </div>
                 <div class="card-body p-2">
                     <ul class="list-group list-group-flush">
-                    <li class="list-group-item p-0 bg-light"><a href="ELEC341-Week1">Week 1</a></li>
-                    <li class="list-group-item p-0 bg-light d-flex justify-content-between align-items-center"><a href="#">Week 2</a><span class="badge badge-secondary badge-pill">draft</span></li>
-                    <li class="list-group-item p-0 bg-light"><a href="MATLAB-S1">MATLAB Tutorial</a></li>
-                    <li class="list-group-item p-0 bg-light"><a href="ELEC341-Project1.pdf">Design Project Part 1 Report</a></li>
-                    <li class="list-group-item p-0 bg-light"><a href="ELEC341-Project2.pdf">Design Project Part 2 Report</a></li>
+                    <li class="list-group-item"><a href="ELEC341-Week1">Week 1</a></li>
+                    <li class="list-group-item"><a href="#">Week 2</a><span class="badge badge-secondary badge-pill">draft</span></li>
+                    <li class="list-group-item"><a href="MATLAB-S1">MATLAB Tutorial</a></li>
+                    <li class="list-group-item"><a href="ELEC341-Project1.pdf">Design Project Part 1 Report</a></li>
+                    <li class="list-group-item"><a href="ELEC341-Project2.pdf">Design Project Part 2 Report</a></li>
                 </ul>
                 </div>
             </div>
@@ -278,5 +279,12 @@
     </section>
 </div>
 <script>addFooter();</script>
+<script>
+$(document).ready(function() {
+    loadJSON(function(response) {
+        console.log(parseDocumentsToHtml(response));
+    });
+});
+</script>
 </body>
 </html>

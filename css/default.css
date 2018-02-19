@@ -1,4 +1,5 @@
-a { color: #337ab7; transition: color .3s ease; }
+/* a { color: #337ab7; transition: color .3s ease; } */
+a { transition: color .3s ease; }
 body { line-height: 1.2em; cursor: default; font-family: "Open Sans", "Segoe UI", sans-serif; font-size: 14px;}
 footer { margin: 20px 0; }
 p { margin: 5px 0; }

@@ -7,7 +7,7 @@
                     "course": "ELEC 201",
                     "description": "Circuit Analysis I",
                     "date": "",
-                    "entries": [] 
+                    "entries": []
                 },
                 {
                     "course": "ELEC 202",
@@ -268,8 +268,34 @@
                 {
                     "course": "ELEC 341",
                     "description": "Systems and Control",
-                    "date": "",
-                    "entries": []
+                    "date": "2017-11-06",
+                    "entries": [
+                        {
+                            "title": "Week 1",
+                            "link": "ELEC341/ELEC341-Week1",
+                            "flag": ""
+                        },
+                        {
+                            "title": "Week 2",
+                            "link": "ELEC341/ELEC341-Week2",
+                            "flag": "draft"
+                        },
+                        {
+                            "title": "MATLAB Tutorial",
+                            "link": "ELEC341/MATLAB-S1",
+                            "flag": ""
+                        },
+                        {
+                            "title": "Design Project Part 1 Report",
+                            "link": "ELEC341/ELEC341-Project1.pdf",
+                            "flag": ""
+                        },
+                        {
+                            "title": "Design Project Part 2 Report",
+                            "link": "ELEC341/ELEC341-Project2.pdf",
+                            "flag": ""
+                        }
+                    ]
                 },
                 {
                     "course": "ELEC 342",
@@ -280,6 +306,202 @@
                 {
                     "course": "ELEC 391",
                     "description": "Project Studio II",
+                    "date": "2018-02-01",
+                    "entries": [
+                        {
+                            "title": "Getting Started",
+                            "link": "https://lcall3.github.io/lecture2/",
+                            "flag": ""
+                        },
+                        {
+                            "title": "3D Printing",
+                            "link": "https://lcall3.github.io/lecture/3D-printing/",
+                            "flag": ""
+                        },
+                        {
+                            "title": "Mechanical Design",
+                            "link": "https://lcall3.github.io/lecture/Mechanical-Design/",
+                            "flag": ""
+                        },
+                        {
+                            "title": "Demo 1 Feedback",
+                            "link": "https://lcall3.github.io/Demo1Feedback/",
+                            "flag": ""
+                        },
+                        {
+                            "title": "Gears and Speed Reduction",
+                            "link": "https://lcall3.github.io/Gears/",
+                            "flag": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "Computer",
+            "courses": [
+                {
+                    "course": "CPEN 311",
+                    "description": "Digital Systems Design",
+                    "date": "2018-02-14",
+                    "entries": [
+                        {
+                            "title": "SS1 (Combinational Logic)",
+                            "link": "CPEN311/CPEN311-1a.pdf",
+                            "flag": ""
+                        },
+                        {
+                            "title": "SS1 (Multiplexers)",
+                            "link": "CPEN311/CPEN311-2a.pdf",
+                            "flag": ""
+                        },
+                        {
+                            "title": "SS2 (Sequential Logic)",
+                            "link": "CPEN311/CPEN311-2b.pdf",
+                            "flag": ""
+                        },
+                        {
+                            "title": "SS2 (State Machine)",
+                            "link": "CPEN311/CPEN311-2c.pdf",
+                            "flag": ""
+                        },
+                        {
+                            "title": "SS2 (Hiearchy)",
+                            "link": "CPEN311/CPEN311-2d.pdf",
+                            "flag": ""
+                        },
+                        {
+                            "title": "SS3 (Synthesizable Verilog)",
+                            "link": "CPEN311/CPEN311-3",
+                            "flag": ""
+                        },
+                        {
+                            "title": "SS4 (Intro to Datapath)",
+                            "link": "CPEN311/CPEN311-4",
+                            "flag": ""
+                        },
+                        {
+                            "title": "SS5 (More Datapath)",
+                            "link": "CPEN311/CPEN311-5",
+                            "flag": ""
+                        },
+                        {
+                            "title": "SS6 (More Complex Datapath)",
+                            "link": "CPEN311/CPEN311-6",
+                            "flag": ""
+                        },
+                        {
+                            "title": "SS7 (Loops, Generate, and Tristates)",
+                            "link": "CPEN311/CPEN311-7",
+                            "flag": ""
+                        },
+                        {
+                            "title": "SS8 (On-Chip Debug)",
+                            "link": "CPEN311/CPEN311-8",
+                            "flag": ""
+                        },
+                        {
+                            "title": "SS9 (Fractional Numbers)",
+                            "link": "CPEN311/CPEN311-9",
+                            "flag": ""
+                        },
+                        {
+                            "title": "SS10 (FPGA Architecture)",
+                            "link": "CPEN311/CPEN311-10",
+                            "flag": ""
+                        },
+                        {
+                            "title": "SS11 (Debugging Techniques)",
+                            "link": "CPEN311/CPEN311-11",
+                            "flag": ""
+                        }
+                    ]
+                },
+                {
+                    "course": "CPEN 211",
+                    "description": "Microcomputers",
+                    "date": "",
+                    "entries": []
+                },
+                {
+                    "course": "CPSC 259",
+                    "description": "Data Structures & Algorithms",
+                    "date": "",
+                    "entries": []
+                },
+                {
+                    "course": "APSC 160",
+                    "description": "Computation in Engineering Design",
+                    "date": "",
+                    "entries": []
+                }
+            ]
+        },
+        {
+            "category": "Mathematics",
+            "courses": [
+                {
+                    "course": "MATH 220",
+                    "description": "Mathematical Proofs",
+                    "date": "2017-12-17",
+                    "entries": [
+                        {
+                            "title": "Final Review",
+                            "link": "MATH220/MATH220-FinalReview",
+                            "flag": ""
+                        }
+                    ]
+                },
+                {
+                    "course": "MATH 256",
+                    "description": "Differential Equations",
+                    "date": "",
+                    "entries": []
+                },
+                {
+                    "course": "MATH 253",
+                    "description": "Multivariate Calculus",
+                    "date": "",
+                    "entries": []
+                },
+                {
+                    "course": "MATH 264",
+                    "description": "Vector Calculus",
+                    "date": "",
+                    "entries": []
+                },
+                {
+                    "course": "MATH 101",
+                    "description": "Calculus II",
+                    "date": "",
+                    "entries": []
+                },
+                {
+                    "course": "MATH 100",
+                    "description": "Calculus I",
+                    "date": "",
+                    "entries": []
+                }
+            ]
+        },
+        {
+            "category": "Others",
+            "courses": [
+                {
+                    "course": "APSC 101",
+                    "description": "Intro to Engineering II",
+                    "date": "2016-07-17",
+                    "entries": [
+                        {
+                            "title": "Final Review",
+                            "link": "APSC101/apsc",
+                            "flag": ""
+                        }
+                    ]
+                },
+                {
+                    "course": "APSC 100",
+                    "description": "Intro to Engineering I",
                     "date": "",
                     "entries": []
                 }
