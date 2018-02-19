@@ -12,8 +12,8 @@ h3.hype { font-weight: 700; font-size: 1.3em; }
 .btn-xs { padding: 0 .25em; font-size: 90% }
 .dl-horizontal > dt { text-align: right; }
 .dl-horizontal > dd { margin-bottom: 0; }
+.fancy { border-bottom: 1px solid #CCC; margin: 0.5em 0; padding: 0.2em 0; }
 .nav-link { font-weight: 300; margin-left: 10px; margin-right: 10px;}
 .text-center { text-align: center; }
 .pcanvas { z-index: -1; }
 .row-quiet { margin-left: 0; margin-right: 0; }
-.fancy { border-bottom: 1px solid #CCC }
