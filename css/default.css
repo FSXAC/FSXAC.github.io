@@ -3,6 +3,8 @@ body { line-height: 1.2em; cursor: default; font-family: "Open Sans", "Segoe UI"
 footer { margin: 20px 0; }
 p { margin: 5px 0; }
 
+h3.hype { font-weight: 700; font-size: 1.3em; }
+
 .avatar { border-radius: 50%; transition: 0.2s all ease-in-out; }
 .avatar:hover { border-radius: 5%; }
 .bg-ubc { background-color: #002859; }
