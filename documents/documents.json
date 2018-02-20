@@ -4,22 +4,48 @@
             "category": "Electrical",
             "courses": [
                 {
-                    "course": "ELEC 201",
-                    "description": "Circuit Analysis I",
+                    "course": "ELEC 311",
+                    "description": "Electromagnetic Fields and Waves",
                     "date": "",
                     "entries": []
                 },
                 {
-                    "course": "ELEC 202",
-                    "description": "Circuit Analysis II",
+                    "course": "ELEC 315",
+                    "description": "Materials and Devices",
                     "date": "",
                     "entries": []
                 },
                 {
-                    "course": "ELEC 211",
-                    "description": "Engineering Electromagnetics",
-                    "date": "",
-                    "entries": []
+                    "course": "ELEC 391",
+                    "description": "Electrical Project Studio II",
+                    "date": "2018-02-01",
+                    "entries": [
+                        {
+                            "title": "Getting Started",
+                            "link": "https://lcall3.github.io/lecture2/",
+                            "flag": ""
+                        },
+                        {
+                            "title": "3D Printing",
+                            "link": "https://lcall3.github.io/lecture/3D-printing/",
+                            "flag": ""
+                        },
+                        {
+                            "title": "Mechanical Design",
+                            "link": "https://lcall3.github.io/lecture/Mechanical-Design/",
+                            "flag": ""
+                        },
+                        {
+                            "title": "Demo 1 Feedback",
+                            "link": "https://lcall3.github.io/Demo1Feedback/",
+                            "flag": ""
+                        },
+                        {
+                            "title": "Gears and Speed Reduction",
+                            "link": "https://lcall3.github.io/Gears/",
+                            "flag": ""
+                        }
+                    ]
                 },
                 {
                     "course": "ELEC 301",
@@ -299,38 +325,36 @@
                 },
                 {
                     "course": "ELEC 342",
-                    "description": "Electro-Mechanical",
+                    "description": "Electro-Mechanical Energy Conversion",
                     "date": "",
                     "entries": []
                 },
                 {
-                    "course": "ELEC 391",
-                    "description": "Project Studio II",
-                    "date": "2018-02-01",
+                    "course": "ELEC 201",
+                    "description": "Circuit Analysis I",
+                    "date": "",
+                    "entries": []
+                },
+                {
+                    "course": "ELEC 202",
+                    "description": "Circuit Analysis II",
+                    "date": "",
+                    "entries": []
+                },
+                {
+                    "course": "ELEC 211",
+                    "description": "Engineering Electromagnetics",
+                    "date": "",
+                    "entries": []
+                },
+                {
+                    "course": "ELEC 291",
+                    "description": "Electrical Design Studio I",
+                    "date": "2017-08-15",
                     "entries": [
                         {
-                            "title": "Getting Started",
-                            "link": "https://lcall3.github.io/lecture2/",
-                            "flag": ""
-                        },
-                        {
-                            "title": "3D Printing",
-                            "link": "https://lcall3.github.io/lecture/3D-printing/",
-                            "flag": ""
-                        },
-                        {
-                            "title": "Mechanical Design",
-                            "link": "https://lcall3.github.io/lecture/Mechanical-Design/",
-                            "flag": ""
-                        },
-                        {
-                            "title": "Demo 1 Feedback",
-                            "link": "https://lcall3.github.io/Demo1Feedback/",
-                            "flag": ""
-                        },
-                        {
-                            "title": "Gears and Speed Reduction",
-                            "link": "https://lcall3.github.io/Gears/",
+                            "title": "Project 2 : Magnetic Field Tracking Robot",
+                            "link": "ELEC291/ELEC291-Project2",
                             "flag": ""
                         }
                     ]
@@ -453,6 +477,12 @@
                     ]
                 },
                 {
+                    "course": "MATH 264",
+                    "description": "Vector Calculus",
+                    "date": "",
+                    "entries": []
+                },
+                {
                     "course": "MATH 256",
                     "description": "Differential Equations",
                     "date": "",
@@ -461,12 +491,6 @@
                 {
                     "course": "MATH 253",
                     "description": "Multivariate Calculus",
-                    "date": "",
-                    "entries": []
-                },
-                {
-                    "course": "MATH 264",
-                    "description": "Vector Calculus",
                     "date": "",
                     "entries": []
                 },
