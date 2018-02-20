@@ -19,11 +19,13 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script language="javascript" type="text/javascript" src="../js/default.js"></script>
 <style>
+.jumbotron { background: #222; }
 @media print {
     body { -webkit-print-color-adjust: exact !important; }
     .navbar { display: none; }
     footer { display: none; }
     .filter { display: none; }
+    .jumbotron { display: none; }
 }
 section.resume-panel { padding: 0; }
 section.resume-panel > h2 {
@@ -74,19 +76,23 @@ p.activity-list > span { border: 1px solid #EEE; }
 </head>
 <body>
 <script>addNavbar('Resume');</script>
-<div id='main' class="container mt-3">
+<header class="jumbotron jumbotron-fluid px-3 py-5">
+    <div class="container">
+        <h1 class="display-4 text-light">Resume</h1>
+        <p class="text-light">Use the filter below to taylor the content on the Resume.</p>
+        <p class="text-light">Type <kbd>Ctrl+P</kbd> to print to file or export as PDF.</p>
+        <div class="btn-group mt-3" role="group" aria-label="...">
+            <button id="filterBtnAll" type="button" class="btn btn-primary">All</button>
+            <button id="filterBtnCode" type="button" class="btn btn-default">Programming</button>
+            <button id="filterBtnDesign" type="button" class="btn btn-default">Design</button>
+            <button id="filterBtnElec" type="button" class="btn btn-default">Electrical</button>
+            <button id="filterBtnMech" type="button" class="btn btn-default">Mechanical</button>
+            <button id="filterBtnCustom" type="button" class="btn btn-success">Custom</button>
+        </div>
+    </div>
+</header>
+<div id='main' class="container">
     <div class="row">
-        <header class="col-12 filter">
-            <p style="font-size: 1.5em">Filter</p>
-            <div class="btn-group" role="group" aria-label="...">
-                <button id="filterBtnAll" type="button" class="btn btn-primary">All</button>
-                <button id="filterBtnCode" type="button" class="btn btn-default">Programming</button>
-                <button id="filterBtnDesign" type="button" class="btn btn-default">Design</button>
-                <button id="filterBtnElec" type="button" class="btn btn-default">Electrical</button>
-                <button id="filterBtnMech" type="button" class="btn btn-default">Mechanical</button>
-                <button id="filterBtnCustom" type="button" class="btn btn-success">Custom</button>
-            </div>
-        </header>
         <div class="col-12">
             <img src="ubc.png" height="56px">
             <h1>Muchen He</h1>

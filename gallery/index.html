@@ -23,15 +23,19 @@
 <style>
     .ig-likes { font-weight: 400; }
     .ig-desc { font-size: 0.7em; line-height: 1.1em; }
+    .jumbotron { background-color: #222; }
 </style>
 </head>
 
 <body>
 <script>addNavbar('Gallery');</script>
-<div id='main' class="container mt-3">
-    <header>
-        <h1>Gallery</h1>
-    </header>
+<header class="jumbotron jumbotron-fluid px-3 py-5">
+    <div class="container">
+        <h1 class="display-4 text-light">Gallery</h1>
+        <p class="text-light">This page showcases my photography via a live instagram feed.</p>
+    </div>
+</header>
+<div id='main' class="container">
     <section>
         <div id='galleryfeed' class="row aligned-row"></div>
         <div style='text-align: center'>

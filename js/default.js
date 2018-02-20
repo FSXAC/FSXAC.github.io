@@ -13,10 +13,10 @@ function addNavbar(current) {
     var links = ['/', '/blog', '/documents', '/gallery', '/projects', '/resume', '/tools'];
 
     var navbarBegin = `
-<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-ubc">
+<nav class="navbar sticky-top navbar-expand-md navbar-light bg-light">
     <div class="container">
         <a href="/" class="navbar-brand">Muchen He</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarTogglerDemo03"
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
