@@ -528,6 +528,18 @@
                     "description": "Intro to Engineering I",
                     "date": "",
                     "entries": []
+                },
+                {
+                    "course": "Coursera ML",
+                    "description": "Intro to Machine Learning",
+                    "date": "2016-06-25",
+                    "entries": [
+                        {
+                            "title": "Course Notes",
+                            "link": "misc/stanford_ml",
+                            "flag": "draft"
+                        }
+                    ]
                 }
             ]
         }

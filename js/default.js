@@ -9,12 +9,12 @@ function addFooter() {
 }
 
 function addNavbar(current) {
-    var navs = ['About', 'Blog', 'Documents', 'Gallery', 'Projects', 'Resume', 'Toolbox'];
-    var links = ['/', '/blog', '/documents', '/gallery', '/projects', '/resume', '/tools'];
+    var navs = ['About', 'Blog', 'Documents', 'Gallery', 'Hobbies', 'Projects', 'Resume', 'Toolbox'];
+    var links = ['/', '/blog', '/documents', '/gallery', '/hobbies', '/projects', '/resume', '/tools'];
 
     var navbarBegin = `
 <nav class="navbar sticky-top navbar-expand-md navbar-light bg-light">
-    <div class="container">
+    <div class="container-fluid">
         <a href="/" class="navbar-brand">Muchen He</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
