@@ -16,3 +16,7 @@ h3.hype { font-weight: 700; font-size: 1.3em; }
 .text-center { text-align: center; }
 .pcanvas { z-index: -1; }
 .row-quiet { margin-left: 0; margin-right: 0; }
+
+@media (max-width: 768px) {
+    .dl-horizontal > dt { text-align: left; margin-top: .4em; }
+}

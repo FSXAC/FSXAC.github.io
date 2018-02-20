@@ -17,13 +17,21 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="js/default.js"></script>
+<style>
+.jumbotron { background: darkred }
+</style>
 </head>
 <body>
-<div id='main' class="container mt-3">
-    <header class="text-center">
-        <h1 class="m-5">404 Not Found</h1>
-        <a href="/">Go back to civilization</a>
-    </header>
+<script>addNavbar();</script>
+<header class="jumbotron jumbotron-fluid px-3 py-5">
+    <div class="container">
+        <h1 class="display-4 text-light">404 Not Found</h1>
+        <a class="btn btn-outline-light" href="/">Go back to civilization?</a>
+    </div>
+</header>
+<div id="main" class="container">
 </div>
+<script>addFooter();</script>
 </body>
 </html>
