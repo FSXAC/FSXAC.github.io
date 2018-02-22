@@ -438,6 +438,11 @@
                             "title": "SS11 (Debugging Techniques)",
                             "link": "CPEN311/CPEN311-11",
                             "flag": "new"
+                        },
+                        {
+                            "title": "Problem Set 1",
+                            "link": "CPEN311/ps1",
+                            "flag": "new"
                         }
                     ]
                 },
