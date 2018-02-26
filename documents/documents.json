@@ -353,7 +353,12 @@
                     "date": "2017-08-15",
                     "entries": [
                         {
-                            "title": "Project 2 : Magnetic Field Tracking Robot",
+                            "title": "Project 1: Reflow Oven Controller",
+                            "link": "ELEC291/ELEC291-Project1",
+                            "flag": ""
+                        },
+                        {
+                            "title": "Project 2: Magnetic Field Tracking Robot",
                             "link": "ELEC291/ELEC291-Project2",
                             "flag": ""
                         }
