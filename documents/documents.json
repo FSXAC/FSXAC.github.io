@@ -247,7 +247,7 @@
                         {
                             "title": "Part 2.6 (Markov Processes)",
                             "link": "ELEC321/ELEC321-Part2-6",
-                            "flag": ""
+                            "flag": "draft"
                         },
                         {
                             "title": "Part 2.7 (Least Square Estimate)",
@@ -367,7 +367,7 @@
                 {
                     "course": "CPEN 311",
                     "description": "Digital Systems Design",
-                    "date": "2018-02-14",
+                    "date": "2018-02-26",
                     "entries": [
                         {
                             "title": "SS1 (Combinational Logic)",
@@ -437,6 +437,11 @@
                         {
                             "title": "SS11 (Debugging Techniques)",
                             "link": "CPEN311/CPEN311-11",
+                            "flag": ""
+                        },
+                        {
+                            "title": "SS12 (On-Board Memory)",
+                            "link": "CPEN311/CPEN311-12",
                             "flag": "new"
                         },
                         {
