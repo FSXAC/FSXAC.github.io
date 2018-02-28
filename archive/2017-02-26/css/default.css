@@ -1,0 +1,199 @@
+a {color: inherit; transition: all 0.3s ease;}
+body {
+    cursor:default;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 1.2rem;
+    color: #03254B;
+}
+footer {
+    background-color: #05182E;
+    color: white;
+    border: 0 solid #03254B;
+    border-top-width: 8px;
+    padding: 10px;
+    margin-top: 8px;
+}
+header {
+    color: #011123;
+    border: 0 solid #03254B;
+    border-bottom-width: 8px;
+}
+i {color: inherit;}
+h1 {font-weight: 300;}
+h1 {font-size: 5rem; margin: 5px 0; vertical-align: middle; transition: all 0.3s ease}
+h1:hover {content: "MANSUR HE";}
+h2 {font-weight: 400; color: #13458B;}
+table td, table th {border: 0px solid #03254B !important;}
+table th {border-right: 5px !important; text-align: right; overflow: hidden}
+th {font-weight: 600;}
+ul {margin-left: 25px;}
+/*classes*/
+.bordered {
+    border: 1px solid;
+    border-color: rgba(3, 37, 84, 0.2);
+    border-radius: 10px;
+    padding: 0 10px;
+    margin-top: 10px;
+    transition: all 0.2s ease-in-out;
+}
+.bordered:hover {border-color: rgba(3, 37, 84, 1);}
+.bold {font-weight: 500;}
+.btn {transform: scale(1);}
+.btn-expand:hover {transform: scale(1.1); transition: all 0.3s ease;}
+.btn-shrink:hover {transform: scale(0.9); transition: all 0.3s ease;}
+.contact {margin: 5px;}
+.darkbox {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    color: white;
+    text-shadow: 0 0 1rem rgba(0,0,0, 0.5);
+}
+.display-inline-block {display:inline-block;}
+.full-width {width: 100%;}
+.half-width {width: 50%;}
+.headshot {
+    display:inline-block;
+    margin: 10px;
+    transition: all 0.3s ease;
+    width: 100px;
+}
+.headshot:hover {border-radius: 5%; width: 120px;}
+.hidden {display:none;}
+.innershadow {box-shadow: inset 0px 0px 20px #000000;}
+.jumbotron {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.modal-header {margin-bottom: 1rem;}
+.nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
+    color: white;
+    background-color: #03254B;
+}
+.pcanvas {z-index: -1;}
+.thumbnail, .thumbnail:hover, .thumbnail:active {
+    text-decoration: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.white-text {color: #fff;}
+/*specific classes*/
+/*typewritter effect*/
+.typewriter {
+    animation:
+    typing 0.7s steps(40, end),
+    blink-caret .75s step-end infinite;
+    border-right: .08em solid #03254B; /* The typwriter cursor */
+    line-height: 1.5;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+}
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 35% }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #03254B; }
+}
+/*tree*/
+/*Now the CSS*/
+* {margin: 0; padding: 0;}
+
+.tree ul {
+    padding-top: 20px; position: relative;
+
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+.tree li {
+    float: left; text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0 5px;
+
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.tree li::before, .tree li::after{
+    content: '';
+    position: absolute; top: 0; right: 50%;
+    border-top: 1px solid white;
+    width: 50%; height: 20px;
+}
+.tree li::after{
+    right: auto; left: 50%;
+    border-left: 1px solid white;
+}
+
+/*We need to remove left-right connectors from elements without
+any siblings*/
+.tree li:only-child::after, .tree li:only-child::before {
+    display: none;
+}
+
+/*Remove space from the top of single children*/
+.tree li:only-child{ padding-top: 0;}
+
+/*Remove left connector from first child and
+right connector from last child*/
+.tree li:first-child::before, .tree li:last-child::after{
+    border: 0 none;
+}
+/*Adding back the vertical connector to the last nodes*/
+.tree li:last-child::before{
+    border-right: 1px solid white;
+    border-radius: 0 5px 0 0;
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after{
+    border-radius: 5px 0 0 0;
+    -webkit-border-radius: 5px 0 0 0;
+    -moz-border-radius: 5px 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.tree ul ul::before{
+    content: '';
+    position: absolute; top: 0; left: 50%;
+    border-left: 1px solid white;
+    width: 0; height: 20px;
+}
+
+.tree li a, .tree li a:active, .tree li a:focus{
+    border: 1px solid white;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: inline-block;
+
+    border-radius: 5px;
+    width: 150px;
+}
+
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+.tree li a:hover, .tree li a:hover+ul li a {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+/*Connector styles on hover*/
+.tree li a:hover+ul li::after,
+.tree li a:hover+ul li::before,
+.tree li a:hover+ul::before,
+.tree li a:hover+ul ul::before{
+    border-color: yellow;
+    border-width: 3px;
+    transition: all 0.3s ease;
+}
+
+/*Thats all. I hope you enjoyed it.
+Thanks :)*/

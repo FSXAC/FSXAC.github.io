@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<!-- TODO: ADD LAZY LOAD FOR IMAGES BELOW CURRENT VIEW PORT -->
+
+<html>
+<head>
+    <title>Projects | Muchen He</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" href="css/normalize.css"/>
+    <!-- <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.lightbox.min.css"> -->
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="default.css"/>
+
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header class = "container-fluid">
+        <div class = "container">
+            <a href="/"><img class="img-circle" style="width: 120px;" src="img/avatar.jpg" alt="face"></a>
+            <h1 class="display-inline-block">MUCHEN HE</h1>
+            <p class="text-muted">Second Year Engineering Undergraduate Student, University of British Columbia</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div>
+            <h2 class="display-inline-block typewriter">> My Projects</h2>
+        </div>
+        <ul class="nav nav-tabs nav-justified">
+            <li class="active"><a href="#jumbo-tech">Technical Projects</a></li>
+            <li><a href="#jumbo-graphics">Graphics Design Portfolio</a></li>
+            <li><a href="#">Photography Portfolio</a></li>
+        </ul>
+    </div>
+
+    <!-- TECHNICAL PROJECTS -->
+    <div class="jumbotron innershadow" id="jumbo-tech" style="background-image:url('http://i.imgur.com/JAh8aM6.png');">
+        <div class="container darkbox">
+            <h1>Technical Projects</h1>
+            <p>Most recent and notable technical projects from both inside and outside the school</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="#modal-apsc1" data-toggle="modal" class="thumbnail">
+                    <img src="http://i.imgur.com/PXbaXPv.jpg">
+                </a>
+                <div class="caption">
+                    <h3>Autonomous Motorized Claw</h3>
+                    <p>
+                        Created using scrap aluminium and Arduino microcontroller, the autonomous claw detects
+                        distance to objects using Sonar.
+                    </p>
+                    <p>
+                        This is a project is part of the engineering course APSC. Created in collaboration with
+                        classmates. Contributors: <em class="text-muted">{Muchen He, Liam Hilder, Haily Gaga, Christopher Tong,
+                            Marcela Cedeno, Jayg Dimayacyac}</em>.
+                        </p>
+                    </div>
+                    <div class="modal fade" id="modal-apsc1" role="dialog">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h1>Autonomous Motorized Claw</h1>
+                                </div>
+                                <div class="model-body container-fluid">
+                                    <img class="full-width" src="http://i.imgur.com/JDHMQ5X.jpg">
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img class="full-width thumbnail" src="http://i.imgur.com/a9zTeL7.jpg">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>
+                                                <strong>Objective:</strong>
+                                                Using provided materials (aluminium, rubber bands, Arduino) to build an
+                                                automatically triggering claw that can pick up various objects from cloth to soup
+                                                cans.
+                                            </p>
+                                            <p>
+                                                <strong>Process:</strong>
+                                                We ultilized "Collaborative Sketching" to generate 6 different ideas, two of
+                                                which was decided to be promising for us. Further developments was done on CAD
+                                                software Autodesk Inventor and drawings were produced.
+                                            </p>
+                                            <p>
+                                                We used aluminium sheets and hand tools to manufacture claw parts using flat
+                                                patterns from the CAD drawings. Experiments and risk analysis were made to make
+                                                sure the claw performs to expectations.
+                                            </p>
+                                            <p>
+                                                The first iteration prototype was built directly from handtools, it was crude and
+                                                controlled manually by hand and strings. Though rough and non-functioning,
+                                                it gave us an idea of how the claw should work, and what we need to work on
+                                                next.
+                                            </p>
+                                            <p>
+                                                Two more prototype made from cardboard were produced. They were used to experiment
+                                                with picking up objects. The performance was scored based on if it was able to
+                                                pick up certain objects, how well it picked them up, and the risk involved.
+                                                We noticed one of our design is particularly good with picking up small
+                                                objects such as dice and small rocks. But it lacks performance picking up
+                                                large volume objects as the claw had trouble opening wide enough.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <img class="full-width" src="http://i.imgur.com/oYhW2cR.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="#modal-apsc2" data-toggle="modal" class="thumbnail">
+                        <img class="full-width" src="http://imgur.com/WHr6f8K.jpg">
+                    </a>
+                    <div class="caption">
+                        <h3>Adaptive Device Project</h3>
+                        <p>
+                            This APSC project involves technical skills such as CAD modelling and apply it to
+                            develop a device for a disabled individual.
+                        </p>
+                        <p>
+                            The designs and models are done individually, the technical report, elevator pitches,
+                            and presentation are collaborated in the APSC group. Contributors:
+                            <em class="text-muted">{Muchen He, Wenoa Teves, Chris Chiu, April Huang, Rex Chen, Conrad Inch}</em>.
+                        </p>
+                    </div>
+                    <div class="modal fade" id="modal-apsc2" role="dialog">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h1>APSC Adaptive Devices</h1>
+                                </div>
+                                <div class="model-body container-fluid">
+                                    <img class="full-width" src="http://imgur.com/JDbjOD8.jpg">
+                                    <p>
+                                        <strong>Objective:</strong>
+                                        Design and model a handheld device for a paralysed individual that helps him to do
+                                        daily task such as opening a door, eating, or playing guitar.
+                                    </p>
+                                    <img class="half-width thumbnail" src="http://imgur.com/PrQgQ4h.jpg">
+                                    <p>
+                                        Throughout this project, we learned how to reduce risk and cost during the design
+                                        process by building physical prototypes and mock-ups. This is because the project
+                                        is physically oriented, where the target user's comfort and convenience is our
+                                        top priority.
+                                    </p>
+                                    <p>
+                                        Virtual models were then made on Autodesk Inventor and Solidworks and a technical
+                                        report was written highlighting the challenges and experiences throughout the
+                                        project.
+                                    </p>
+                                    <img class="full-width" src="http://imgur.com/NK9IF1q.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="#modal-apsc3" data-toggle="modal" class="thumbnail">
+                        <img src="../img/ph.jpg">
+                    </a>
+                    <div class="caption">
+                        <h3>Cardboard Chair Project</h3>
+                        <p>
+                            APSC project - Cardboard chair
+                        </p>
+                        <p>
+                            Contributors:
+                            <em class="text-muted">{Muchen He, Wenoa Teves, Chris Chiu, April Huang, Rex Chen, Conrad Inch}</em>.
+                        </p>
+                    </div>
+                    <div class="modal fade" id="modal-apsc3" role="dialog">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h1>Cardboard Chair Project</h1>
+                                </div>
+                                <div class="model-body container-fluid">
+                                    <p>Lel</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="/p5" class="thumbnail">
+                        <img src="../img/ph.jpg">
+                    </a>
+                    <div class="caption">
+                        <h3>p5.js Projects</h3>
+                        <p>
+                            A series of cool projects mostly involving graphics, genetic coding, physics simulation,
+                            and machine learning. These projects run in most browsers.
+                        </p>
+                        <p>
+                            Some notable projects include Gravitational Simulation, Genetic Evolution, Collision Simulation...
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <a href = "#" class="thumbnail">
+                        <img src="../img/ph.jpg">
+                    </a>
+                    <div class="caption">
+                        <h3>CAD Models and Drawings</h3>
+                        <p>
+                            Showcase of some of my 3D works throughout the years since high-school. Most of the models and
+                            drawings are produced in Autodesk Inventor, Autodesk Revit, and Solidworks.
+                        </p>
+                        <p>
+                            Some notable projects include piston engine, airliner fuselage, turbofan engine, autonoumous claw,
+                            full assembly of a microscope, and various project files from Skills Canada competitions.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <a href = "#" class="thumbnail">
+                        <img src="../img/ph.jpg">
+                    </a>
+                    <div class="caption">
+                        <h3>CNC Machining and Rapid Prototyping</h3>
+                        <p>
+                            Related to CAD projects as the drawings for the CNC machines and 3D printers need to
+                            drawn on CAD software first.
+                        </p>
+                        <p>
+                            Some notable projects include 3D printed replaceable parts, CNC machined quadcopter frame,
+                            CNC machined wooden signs and plaques
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <a href = "#" class="thumbnail">
+                        <img src="../img/ph.jpg">
+                    </a>
+                    <div class="caption">
+                        <h3>Unmanned Aerial Vehicles</h3>
+                        <p>
+                            Related to CAD projects as the drawings for the CNC machines and 3D printers need to
+                            drawn on CAD software first.
+                        </p>
+                        <p>
+                            Some notable projects include 3D printed replaceable parts, CNC machined quadcopter frame,
+                            CNC machined wooden signs and plaques
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <a href = "ewb/index.html" class="thumbnail">
+                        <img src="http://i.imgur.com/JSiuPfT.jpg">
+                    </a>
+                    <div class="caption">
+                        <h3>Engineers Without Borders Website Design and Development</h3>
+                        <p>
+                            A demo that shows off the new design of the EWB website. Made in Bootsrap so it is also
+                            mobile friendly.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <a href = "#" class="thumbnail">
+                        <img src="../img/ph.jpg">
+                    </a>
+                    <div class="caption">
+                        <h3>Architeture Modelling and CAD</h3>
+                        <p>
+                            Design studies in architecture projects, modelled and drawn in Autodesk Revit which
+                            which is fimilar to AutoCAD except it's more focused on architeture design.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GRAPHIC DESIGN PORTFOLIO -->
+        <div class="jumbotron innershadow" id = "jumbo-graphics" style="background-image:url('http://i.imgur.com/B8iI599.png');">
+            <div class="container darkbox">
+                <h1>Graphic Designs</h1>
+                <p>Most recent graphics projects</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <a href = "http://i.imgur.com/ypOmskf.png" class="thumbnail">
+                        <img src="http://i.imgur.com/ypOmskf.png" alt="...">
+                    </a>
+                    <div class="caption">
+                        <h3>Postive Feedback Sandwich Poster</h3>
+                        <p>
+                            A "Positive Feedback" is a term I learned in engineering class that
+                            descibes when feedback-giver sugar coats the feedback with positive comments,
+                            regardless of the actual feedback. Poster is designed in Adobe Photoshop,
+                            sandwhich model made in Sketchup
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a href = "http://i.imgur.com/XNFHdER.png" class="thumbnail">
+                        <img src="../img/ph.jpg" alt="...">
+                    </a>
+                    <div class="caption">
+                        <h3>Engineering Capstone Presentation</h3>
+                        <p>
+                            The PowerPoint is filled with easy-to-understand and minimalistic
+                            graphics. 3D models are produced in Sketchup
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a href = "http://i.imgur.com/hKIjtpe.png" class="thumbnail">
+                        <img src="../img/ph.jpg" alt="...">
+                    </a>
+                    <div class="caption">
+                        <h3>Engineering Report Presentation</h3>
+                        <p>
+                            The presentation utilizes professional graphics design to help
+                            audience understand the math and statistics reported in the
+                            PowerPoint
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class = "row">
+                <div class="col-sm-6 col-md-4">
+                    <a href = "http://i.imgur.com/9XeZWzI.jpg" class="thumbnail">
+                        <img src="../img/ph.jpg" alt="...">
+                    </a>
+                    <div class="caption">
+                        <h3>Autonomous Claw Poster Presentation</h3>
+                        <p>
+                            The poster layout is designed in Microsoft Powerpoint. 3D assembly
+                            of the claw produced in Autodesk Inventor, CGI rendered in Autodesk
+                            Showcase
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a href = "http://i.imgur.com/3gHCimj.png" class="thumbnail">
+                        <img src="../img/ph.jpg" alt="...">
+                    </a>
+                    <div class="caption">
+                        <h3>Cardboard Chair Project Presentation</h3>
+                        <p>
+                            The 3D rendered images of this project are designed in Autodesk Inventor,
+                            rendered in Autodesk Inventor
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a href = "img/design/csclub.pdf" class="thumbnail">
+                        <img src="../img/ph.jpg" alt="...">
+                    </a>
+                    <div class="caption">
+                        <h3>Computer Science Club Poster</h3>
+                        <p>
+                            The poster has a distinctive tech-theme, attracting young students who
+                            are interested in programming. Activities and trips provided by the club
+                            is visibly shown
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class = "row">
+                <div class="col-sm-6 col-md-4">
+                    <a href = "img/design/hip.pdf" class="thumbnail">
+                        <img src="../img/ph.jpg" alt="...">
+                    </a>
+                    <div class="caption">
+                        <h3>University of Alberta Android Game Showcase</h3>
+                        <p>
+                            Whack-A-Mole Android game was developed by us at University of Alberta during summer.
+                            An oral	presentation along with a poster was also prepared. The poster design and
+                            layout was mostly designed by me using Microsoft Powerpoint, the arts and graphics in
+                            the game are designed and produced by me using Paint.NET and GIMP
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a href = "http://i.imgur.com/pHvyIsf.png" class="thumbnail">
+                        <img src="../img/ph.jpg" alt="...">
+                    </a>
+                    <div class="caption">
+                        <h3>University of Alberta In-Fair Competition</h3>
+                        <p>
+                            This poster outlines future vision of schools for the In-Fair competition
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a href = "http://i.imgur.com/zzTO8Gv.png" class="thumbnail">
+                        <img src="../img/ph.jpg" alt="...">
+                    </a>
+                    <div class="caption">
+                        <h3>Previous Version of my Website</h3>
+                        <p>
+                            This version focuses much more on visuals. Nearly the entire webpage is filled with
+                            images
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <a href = "http://i.imgur.com/OPlfI9t.png" class="thumbnail">
+                        <img src="../img/ph.jpg" alt="...">
+                    </a>
+                    <div class="caption">
+                        <h3>First Version of my Website</h3>
+                        <p>
+                            This first version was derived from a template. This design is dark and simplistic,
+                            drawing viewer's eyes to the main title
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHOTOGRAPHY -->
+        <div class="jumbotron innershadow" id="jumbo-tech" style="background-image:url('http://i.imgur.com/JAh8aM6.png');">
+            <div class="container darkbox">
+                <h1>Photography</h1>
+                <p>pics</p>
+            </div>
+        </div>
+
+        <!-- JS -->
+        <script>
+        </script>
+    </body>
+    </html>
