@@ -43,6 +43,11 @@
                         {
                             "title": "Gears and Speed Reduction",
                             "link": "https://lcall3.github.io/Gears/",
+                            "flag": ""
+                        },
+                        {
+                            "title": "Engineering Reports v Slide Deck",
+                            "link": "https://lcall3.github.io/report-vs-slides/",
                             "flag": "new"
                         }
                     ]
