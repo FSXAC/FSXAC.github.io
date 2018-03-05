@@ -452,22 +452,27 @@
                         {
                             "title": "SS12 (On-Board Memory)",
                             "link": "CPEN311/CPEN311-12",
+                            "flag": ""
+                        },
+                        {
+                            "title": "SS13 (System-on-Chip)",
+                            "link": "CPEN311/CPEN311-13",
                             "flag": "draft"
                         },
                         {
                             "title": "Problem Set 1",
                             "link": "CPEN311/ps1",
-                            "flag": "new"
+                            "flag": ""
                         },
                         {
                             "title": "Problem Set 2",
                             "link": "CPEN311/ps2",
-                            "flag": "new"
+                            "flag": ""
                         },
                         {
                             "title": "Problem Set 3",
                             "link": "CPEN311/ps3",
-                            "flag": "new"
+                            "flag": ""
                         }
                     ]
                 },
