@@ -377,7 +377,7 @@
                 {
                     "course": "CPEN 311",
                     "description": "Digital Systems Design",
-                    "date": "2018-02-28",
+                    "date": "2018-03-07",
                     "entries": [
                         {
                             "title": "SS1 (Combinational Logic)",
@@ -457,6 +457,11 @@
                         {
                             "title": "SS13 (System-on-Chip)",
                             "link": "CPEN311/CPEN311-13",
+                            "flag": "new"
+                        },
+                        {
+                            "title": "SS13 (Circuit Timing)",
+                            "link": "CPEN311/CPEN311-14",
                             "flag": "draft"
                         },
                         {
