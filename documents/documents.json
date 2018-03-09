@@ -457,12 +457,12 @@
                         {
                             "title": "SS13 (System-on-Chip)",
                             "link": "CPEN311/CPEN311-13",
-                            "flag": "new"
+                            "flag": ""
                         },
                         {
-                            "title": "SS13 (Circuit Timing)",
+                            "title": "SS14 (Circuit Timing)",
                             "link": "CPEN311/CPEN311-14",
-                            "flag": "draft"
+                            "flag": "new"
                         },
                         {
                             "title": "Problem Set 1",
