@@ -48,6 +48,16 @@
                         {
                             "title": "Engineering Reports v Slide Deck",
                             "link": "https://lcall3.github.io/report-vs-slides/",
+                            "flag": ""
+                        },
+                        {
+                            "title": "Demo 2 Report",
+                            "link": "https://github.com/lcall3/Controller/blob/master/doc/report/demo2.pdf",
+                            "flag": "new"
+                        },
+                        {
+                            "title": "Demo 2 Mechanical Drawings",
+                            "link": "https://github.com/lcall3/Controller/blob/master/doc/report/Demo2%20Drawings.pdf",
                             "flag": "new"
                         }
                     ]
@@ -377,7 +387,7 @@
                 {
                     "course": "CPEN 311",
                     "description": "Digital Systems Design",
-                    "date": "2018-03-07",
+                    "date": "2018-03-09",
                     "entries": [
                         {
                             "title": "SS1 (Combinational Logic)",
