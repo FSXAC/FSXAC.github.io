@@ -475,6 +475,11 @@
                             "flag": "new"
                         },
                         {
+                            "title": "SS15 (Circuit Timing II)",
+                            "link": "CPEN311/CPEN311-15",
+                            "flag": "draft"
+                        },
+                        {
                             "title": "Problem Set 1",
                             "link": "CPEN311/ps1",
                             "flag": ""
