@@ -18,7 +18,7 @@
                 {
                     "course": "ELEC 391",
                     "description": "Electrical Project Studio II",
-                    "date": "2018-02-26",
+                    "date": "2018-03-11",
                     "entries": [
                         {
                             "title": "Getting Started",
@@ -506,8 +506,14 @@
                 {
                     "course": "APSC 160",
                     "description": "Computation in Engineering Design",
-                    "date": "",
-                    "entries": []
+                    "date": "2018-03-11",
+                    "entries": [
+                        {
+                            "title": "Final Review",
+                            "link": "APSC160/APSC-160-Final-Review",
+                            "flag": ""
+                        }
+                    ]
                 }
             ]
         },
@@ -576,8 +582,14 @@
                 {
                     "course": "APSC 100",
                     "description": "Intro to Engineering I",
-                    "date": "",
-                    "entries": []
+                    "date": "2015-12-02",
+                    "entries": [
+                        {
+                            "title": "Letter to Future Students",
+                            "link": "APSC100/Letter.pdf",
+                            "flag": ""
+                        }
+                    ]
                 },
                 {
                     "course": "Coursera ML",
