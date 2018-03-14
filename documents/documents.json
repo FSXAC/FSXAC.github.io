@@ -202,7 +202,7 @@
                 {
                     "course": "ELEC 321",
                     "description": "Stochastic Signals and Systems",
-                    "date": "2017-12-17",
+                    "date": "2018-03-14",
                     "entries": [
                         {
                             "title": "Module 1 (Probability)",
@@ -262,7 +262,7 @@
                         {
                             "title": "Part 2.6 (Markov Processes)",
                             "link": "ELEC321/ELEC321-Part2-6",
-                            "flag": "draft"
+                            "flag": "new"
                         },
                         {
                             "title": "Part 2.7 (Least Square Estimate)",
