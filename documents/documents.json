@@ -36,7 +36,7 @@
                             "flag": ""
                         },
                         {
-                            "title": "Demo 1 Feedback",
+                            "title": "Milestone 1 Feedback",
                             "link": "https://lcall3.github.io/Demo1Feedback/",
                             "flag": ""
                         },
@@ -51,14 +51,19 @@
                             "flag": ""
                         },
                         {
-                            "title": "Demo 2 Report",
-                            "link": "https://github.com/lcall3/Controller/blob/master/doc/report/demo2.pdf",
+                            "title": "Milestone 2 Feedback",
+                            "link": "https://lcall3.github.io/Demo2Feedback/",
                             "flag": "new"
                         },
                         {
-                            "title": "Demo 2 Mechanical Drawings",
+                            "title": "Milestone 2 Report",
+                            "link": "https://github.com/lcall3/Controller/blob/master/doc/report/demo2.pdf",
+                            "flag": ""
+                        },
+                        {
+                            "title": "Milestone 2 Mechanical Drawings",
                             "link": "https://github.com/lcall3/Controller/blob/master/doc/report/Demo2%20Drawings.pdf",
-                            "flag": "new"
+                            "flag": ""
                         }
                     ]
                 },
