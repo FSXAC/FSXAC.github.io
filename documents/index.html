@@ -17,10 +17,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script language="javascript" type="text/javascript" src="../js/default.js"></script>
 <script language="javascript" type="text/javascript" src="document.js"></script>
 <style>
 .jumbotron { background-image: url("../img/study.jpg"); background-size: cover; }
+.card { width: 100%; margin-bottom: 12px; }
+.card-gutter-sizer { width: 0; }
+@media screen and (min-width: 768px) {
+    .card { width: 32%; margin-bottom: 12px; }
+    .card-gutter-sizer { width: 1.333%; }
+}
 </style>
 </head>
 <body>
@@ -39,11 +46,17 @@
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
+</div>
 <script>
 $(document).ready(function() {
     loadJSON(function(response) {
         $('#main').append(parseDocumentsToHtml(response));
         addFooter();
+        $('.card-grid').masonry({
+            itemSelector: '.card',
+            gutter: '.card-gutter-sizer',
+            percentPosition: true
+        });
     });
 });
 </script>

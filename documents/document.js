@@ -1,6 +1,6 @@
 // HTML templates
 var DT = {
-    category: '<section><h2 class="fancy">{{category}}</h2><div class="card-columns">{{courses}}</div></section>',
+    category: '<section><h2 class="fancy">{{category}}</h2><div class="card-grid"><div class= "card-gutter-sizer" ></div>{{courses}}</div></section>',
     course: '<div class="card bg-light">{{content}}</div>',
     courseHeader: '<div class="card-header p-2"><small class="float-right">{{name}}</small><h3 class="hype">{{id}}</h3><em class="text-muted">{{date}}</em></div>',
     courseBody: '<div class="card-body p-2"><ul class="list-group list-group-flush">{{entries}}</ul></div>',
