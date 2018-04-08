@@ -18,7 +18,7 @@
                 {
                     "course": "ELEC 391",
                     "description": "Electrical Project Studio II",
-                    "date": "2018-03-11",
+                    "date": "2018-04-07",
                     "entries": [
                         {
                             "title": "Getting Started",
@@ -64,6 +64,11 @@
                             "title": "Milestone 2 Mechanical Drawings",
                             "link": "ELEC391/demo2drawing.pdf",
                             "flag": ""
+                        },
+                        {
+                            "title": "Milestone 3 Report",
+                            "link": "ELEC391/demo3.pdf",
+                            "flag": "new"
                         }
                     ]
                 },
