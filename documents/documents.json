@@ -397,102 +397,121 @@
                 {
                     "course": "CPEN 311",
                     "description": "Digital Systems Design",
-                    "date": "2018-03-09",
                     "entries": [
                         {
-                            "title": "SS1 (Combinational Logic)",
+                            "title": "Combinational Logic",
                             "link": "CPEN311/CPEN311-1a.pdf",
                             "flag": ""
                         },
                         {
-                            "title": "SS1 (Multiplexers)",
+                            "title": "Multiplexers",
                             "link": "CPEN311/CPEN311-2a.pdf",
                             "flag": ""
                         },
                         {
-                            "title": "SS2 (Sequential Logic)",
+                            "title": "Sequential Logic",
                             "link": "CPEN311/CPEN311-2b.pdf",
                             "flag": ""
                         },
                         {
-                            "title": "SS2 (State Machine)",
+                            "title": "State Machine",
                             "link": "CPEN311/CPEN311-2c.pdf",
                             "flag": ""
                         },
                         {
-                            "title": "SS2 (Hiearchy)",
+                            "title": "Hiearchy",
                             "link": "CPEN311/CPEN311-2d.pdf",
                             "flag": ""
                         },
                         {
-                            "title": "SS3 (Synthesizable Verilog)",
+                            "title": "Synthesizable Verilog",
                             "link": "CPEN311/CPEN311-3",
                             "flag": ""
                         },
                         {
-                            "title": "SS4 (Intro to Datapath)",
+                            "title": "Datapath I",
                             "link": "CPEN311/CPEN311-4",
                             "flag": ""
                         },
                         {
-                            "title": "SS5 (More Datapath)",
+                            "title": "Datapath II",
                             "link": "CPEN311/CPEN311-5",
                             "flag": ""
                         },
                         {
-                            "title": "SS6 (More Complex Datapath)",
+                            "title": "Datapath III",
                             "link": "CPEN311/CPEN311-6",
                             "flag": ""
                         },
                         {
-                            "title": "SS7 (Loops, Generate, and Tristates)",
+                            "title": "Loops, Generate, and Tristates",
                             "link": "CPEN311/CPEN311-7",
                             "flag": ""
                         },
                         {
-                            "title": "SS8 (On-Chip Debug)",
+                            "title": "On-Chip Debug",
                             "link": "CPEN311/CPEN311-8",
                             "flag": ""
                         },
                         {
-                            "title": "SS9 (Fractional Numbers)",
+                            "title": "Fractional Numbers",
                             "link": "CPEN311/CPEN311-9",
                             "flag": ""
                         },
                         {
-                            "title": "SS10 (FPGA Architecture)",
+                            "title": "FPGA Architecture",
                             "link": "CPEN311/CPEN311-10",
                             "flag": ""
                         },
                         {
-                            "title": "SS11 (Debugging Techniques)",
+                            "title": "Debugging Techniques",
                             "link": "CPEN311/CPEN311-11",
                             "flag": ""
                         },
                         {
-                            "title": "SS12 (On-Board Memory)",
+                            "title": "On-Board Memory",
                             "link": "CPEN311/CPEN311-12",
                             "flag": ""
                         },
                         {
-                            "title": "SS13 (System-on-Chip)",
+                            "title": "System-on-Chip",
                             "link": "CPEN311/CPEN311-13",
                             "flag": ""
                         },
                         {
-                            "title": "SS14 (Circuit Timing)",
+                            "title": "Circuit Timing",
                             "link": "CPEN311/CPEN311-14",
                             "flag": ""
                         },
                         {
-                            "title": "SS15 (Circuit Timing II)",
+                            "title": "Circuit Timing II",
                             "link": "CPEN311/CPEN311-15",
                             "flag": ""
                         },
                         {
-                            "title": "SS16 (Power)",
+                            "title": "Metastability",
+                            "link": "CPEN311/CPEN311-15b",
+                            "flag": ""
+                        },
+                        {
+                            "title": "Power",
                             "link": "CPEN311/CPEN311-16",
                             "flag": ""
+                        },
+                        {
+                            "title": "High Level Synthesis",
+                            "link": "CPEN311/CPEN311-17",
+                            "flag": "draft"
+                        },
+                        {
+                            "title": "Asynchronous Logic",
+                            "link": "CPEN311/CPEN311-18",
+                            "flag": "draft"
+                        },
+                        {
+                            "title": "Asynchronous Datapath",
+                            "link": "CPEN311/CPEN311-19",
+                            "flag": "draft"
                         },
                         {
                             "title": "Problem Set 1",
@@ -509,7 +528,8 @@
                             "link": "CPEN311/ps3",
                             "flag": ""
                         }
-                    ]
+                    ],
+                    "date": "2018-04-09"
                 },
                 {
                     "course": "CPEN 211",
