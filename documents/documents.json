@@ -531,10 +531,15 @@
                         {
                             "title": "Problem Set 4",
                             "link": "CPEN311/ps4.pdf",
-                            "flag": ""
+                            "flag": "new"
+                        },
+                        {
+                            "title": "Problem Set 5",
+                            "link": "CPEN311/ps5.pdf",
+                            "flag": "new"
                         }
                     ],
-                    "date": "2018-04-09"
+                    "date": "2018-04-10"
                 },
                 {
                     "course": "CPEN 211",
