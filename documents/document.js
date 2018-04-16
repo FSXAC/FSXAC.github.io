@@ -1,7 +1,7 @@
 // HTML templates
 var DT = {
     category: '<section><h2 class="fancy">{{category}}</h2><div class="card-grid"><div class= "card-gutter-sizer" ></div>{{courses}}</div></section>',
-    course: '<div class="card bg-light">{{content}}</div>',
+    course: '<div id="{{cid}}" class="card bg-light">{{content}}</div>',
     courseHeader: '<div class="card-header p-2"><small class="float-right">{{name}}</small><h3 class="hype">{{id}}</h3><em class="text-muted">{{date}}</em></div>',
     courseBody: '<div class="card-body p-2"><ul class="list-group list-group-flush">{{entries}}</ul></div>',
     entry: '<li class="list-group-item p-0 bg-light{{extra}}"><a href="{{link}}">{{title}}</a>{{badge}}</li>',
@@ -60,7 +60,9 @@ function parseDocumentsToHtml(documents) {
 
             // If the course has no entries, finish and move on
             if (course.entries.length === 0) {
-                courseHtml = courseHtml.replace('{{content}}', courseHeaderHtml);
+                courseHtml = courseHtml
+                    .replace('{{content}}', courseHeaderHtml)
+                    .replace('{{cid}}', course.course.replace(' ', '-'));
                 coursesHtml += courseHtml;
                 continue;
             }
@@ -100,7 +102,9 @@ function parseDocumentsToHtml(documents) {
             
             // Pack course together
             courseBodyHtml = courseBodyHtml.replace('{{entries}}', entriesHtml);
-            courseHtml = courseHtml.replace('{{content}}', courseHeaderHtml + courseBodyHtml);
+            courseHtml = courseHtml
+                .replace('{{content}}', courseHeaderHtml + courseBodyHtml)
+                .replace('{{cid}}', course.course.replace(' ', '-'));
 
             // Add courses to courses HTML
             coursesHtml += courseHtml;
