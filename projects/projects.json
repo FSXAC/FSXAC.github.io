@@ -13,10 +13,11 @@
             "contributors": [],
             "tech": ["Firebase", "p5.js", "chart.js"],
 
-            "website": "http://glacial-stream-85429.herokuapp.com/",
-            "report": null,
-            "worthy": true,
+            "links": {
+                "website": "http://glacial-stream-85429.herokuapp.com/"
+            },
 
+            "worthy": true,
             "thumbnail": "img/lumohacks17.jpg"
         },
         {
@@ -32,9 +33,10 @@
             "scope": "independent",
             "contributors": [],
             "tech": ["p5.js"],
-
-            "website": "https://www.muchen.ca/CircuitDraw/",
-            "report": null,
+            
+            "links": {
+                "website": "https://www.muchen.ca/CircuitDraw/"
+            },
             "worthy": true,
 
             "thumbnail": "img/circuitdraw.jpg"
@@ -52,9 +54,7 @@
             "scope": "independent",
             "contributors": [],
             "tech": ["Soldering iron", "multimeter"],
-
-            "website": null,
-            "report": null,
+            "links": {},
             "worthy": false,
 
             "thumbnail": null
@@ -72,8 +72,9 @@
             "scope": "course",
             "contributors": [],
             "tech": ["AVR", "8051 Assembly", "C", "Make", "Circuit prototyping", "Soldering iron", "multimeter", "Signal generator", "Oscilloscope"],
-            "website": null,
-            "report": "https://www.muchen.ca/documents/ELEC291-Project2",
+            "links": {
+                "report": "https://www.muchen.ca/documents/ELEC291-Project2"
+            },
             "worthy": true,
             "thumbnail": null
         },
@@ -90,8 +91,7 @@
             "scope": "independent",
             "contributors": [],
             "tech": ["Oscilloscope", "H-Bridge", "Soldering iron", "Processing", "SPI"],
-            "website": null,
-            "report": null,
+            "links": {},
             "worthy": true,
             "thumbnail": null
         },
@@ -108,8 +108,7 @@
             "scope": "course",
             "contributors": [],
             "tech": ["8051 Assembly", "AT89 Microcontroller", "Thermocouple", "OP-AMP", "Soldering iron", "Oscilloscope", "Signal generator"],
-            "website": null,
-            "report": null,
+            "links": {},
             "worthy": true,
             "thumbnail": null
         },
@@ -126,8 +125,7 @@
             "scope": "independent",
             "contributors": [],
             "tech": ["8051 Assembly", "AT89 Microcontroller"],
-            "website": null,
-            "report": null,
+            "links": {},
             "worthy": true,
             "thumbnail": null
         },
@@ -144,8 +142,7 @@
             "scope": "independent",
             "contributors": [],
             "tech": ["8051 Assembly", "AT89 Microcontroller"],
-            "website": null,
-            "report": null,
+            "links": {},
             "worthy": true,
             "thumbnail": null
         },
@@ -164,8 +161,7 @@
             "tech": [
                 "Processing"
             ],
-            "website": null,
-            "report": null,
+            "links": {},
             "worthy": true,
             "thumbnail": null
         },
@@ -186,8 +182,7 @@
                 "Altera Quartus",
                 "System Verilog"
             ],
-            "website": null,
-            "report": null,
+            "links": {},
             "worthy": true,
             "thumbnail": null
         },
@@ -206,8 +201,7 @@
             "tech": [
                 "p5.js"
             ],
-            "website": null,
-            "report": null,
+            "links": {},
             "worthy": true,
             "thumbnail": null
         },
@@ -226,8 +220,7 @@
             "tech": [
                 "C"
             ],
-            "website": null,
-            "report": null,
+            "links": {},
             "worthy": true,
             "thumbnail": null
         },
@@ -247,8 +240,7 @@
                 "Microsoft Excel",
                 "C"
             ],
-            "website": null,
-            "report": null,
+            "links": {},
             "worthy": true,
             "thumbnail": null
         },
@@ -269,8 +261,7 @@
                 "SoldiWorks",
                 "Autodesk Inventor"
             ],
-            "website": null,
-            "report": null,
+            "links": {},
             "worthy": true,
             "thumbnail": null
         }
