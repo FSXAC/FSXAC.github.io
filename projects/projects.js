@@ -1,20 +1,53 @@
-/*jshint esversion: 6*/
+// Container reference
+var $container = undefined;
 
-var $pc = $('#projectContainer');
+// Project template
+var template = {
 
-var PT = {
-    opening: '<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 proj-block">',
-    closing: '</div>',
-    thumbnail: '<img class="proj-cover" src="{img}">',
-    title: '<h3 class="proj-title">{title}</h3>',
-    desc: '<p>{desc}</p>',
-    link: '<a href="{url}" class="btn btn-default btn-xs proj-btn">{txt}</a>'
+    // @year: year of the project date
+    yearHeader: '<div id="p{{year}} class="timeline-year"><a href="#main"><h2>{{year}}</h2></a></div>',
+
+    // @blocks: html of all project timeline blocks
+    yearCont: '<section class="timeline timeline-container">{{blocks}}</div>',
+
+    // @block: inner html of each project
+    blockCont: '<div class="timeline-block">{{block}}</div>',
+
+    // @color: icon background color
+    // @icon: icon
+    projHead: '<div class="timeline-icon timeline-icon-{{color}}"><img src="img/icons/{{icon}}"></div>',
+
+    // @title: project title
+    // @date: project date
+    // @img: optional picture of the project
+    // @desc: project description
+    // @extra: extra html for more things (buttons, etc)
+    projBody: '<div class="timeline-body"><h2>{{title}}</h2><p class="timeline-date">{{date}}</p>{{img}}<p class="text-muted">{{desc}}</p>{{extra}}</div>',
+
+    // @href: link that the button leads to
+    // @text: link text
+    button: '<a class="btn btn-sm btn-outline-secondary" href="{{href}}">{{text}}</a>'
 };
 
-function readProjects() {
-    loadJSON(function(response) {
-        displayProjects(response);
-    });
+var templateColor = {
+    green: 'success',
+    yellow: 'warning',
+    blue: 'primary',
+    sky: 'info',
+    red: 'danger'
+};
+
+var templateIcon = {
+    chip: 'chip.svg',
+    code: 'code.svg',
+    cube: 'cube.svg',
+    tools: 'tools.svg'
+}
+
+function setContainer(container) {
+    if (container != undefined) {
+        $container = container;
+    }
 }
 
 function loadJSON(callback) {
@@ -22,47 +55,23 @@ function loadJSON(callback) {
     xobj.overrideMimeType("application/json");
     xobj.open('GET', 'projects.json', true);
     xobj.onreadystatechange = function() {
-        if (xobj.readyState == 4 && xobj.status == '200') {
-            callback(xobj.responseText);
-        }
-    };
+        callback(xobj.responseText);
+    }
     xobj.send(null);
 }
 
-function displayProjects(projs) {
-    projects = JSON.parse(projs).projects;
-    console.log(projects);
-
-    var htmlOut = '';
-    for (var i = 0, l = projects.length; i < l; i++) {
-        // compose the html for each project block here
-        currProj = projects[i];
-        htmlProj = PT.opening;
-        
-        if (currProj.thumbnail != null) {
-            htmlProj += PT.thumbnail.replace('{img}', currProj.thumbnail);
-        }
-
-        htmlProj += PT.title.replace('{title}', currProj.name);
-        htmlProj += PT.desc.replace('{desc}', currProj.description);
-
-        if (currProj.website != null) {
-            htmlProj += PT.link
-            .replace('{url}', currProj.website)
-            .replace('{txt}', 'Webpage');
-        }
-
-        if (currProj.report != null) {
-            htmlProj += PT.link
-                .replace('{url}', currProj.report)
-                .replace('{txt}', 'Report');
-        }
-
-        htmlProj += PT.closing;
-
-        htmlOut += htmlProj;
-    }
-    $pc.html(htmlOut);
+function readProjects() {
+    loadJSON(function(response) {
+        parseProjects(JSON.parse(response).projects);
+    });
 }
 
-readProjects();
+function parseProjects(pjs) {
+
+    // String html for each year
+    var yearHtmls = {};
+
+    for (var i = 0, n = pjs.length; i < n; i++) {
+
+    }
+}

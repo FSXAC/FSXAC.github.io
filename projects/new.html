@@ -1,88 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Muchen :: Projects</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Muchen's page" />
-    <meta name="author" content="Muchen He" />
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
-    <!-- css -->
-    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link type="text/css" rel="stylesheet" href="../css/default.css" />
-    <link type="text/css" rel="stylesheet" href="../css/timeline.css" />
-    <!-- js -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <style>
-        .proj-block {height: 200px; background-color:#050; color:white; line-height: 1.15em; overflow:hidden; margin-bottom: .2em;}
-        .proj-title {font-weight: 600}
-        .proj-cover {position:absolute; height:100%; object-fit:cover; top:0;left:0;transition: all ease-in-out 0.2s;}
-        .proj-block:hover > .proj-cover, .proj-block:active > .proj-cover, .proj-block:focus > .proj-cover {top: 200px;}
-        .proj-btn {color: white;border-color: white;background-color: transparent;transition: all 0.1s ease-out;}
-        .proj-btn:hover {background-color: rgba(0, 0, 0, 0.3); color: white;}
-    </style>
+<title>Muchen :: Projects</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Muchen's page" />
+<meta name="author" content="Muchen He" />
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- css -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="../css/default.css" />
+<link type="text/css" rel="stylesheet" href="../css/timeline.css"/>
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script language="javascript" type="text/javascript" src="../js/default.js"></script>
+<script language="javascript" type="text/javascript" src="../js/timeline.js"></script>
+<script language="javascript" type="text/javascript" src="projects.js"></script>
+<style>
+.jumbotron { background: #222; }
+</style>
 </head>
-
-<body id="root" style="padding-top: 70px;">
-    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapsable" aria-expanded="false">
-                    <span class="sr-only">Toggle Nav</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">Muchen He</a>
-            </div>
-            <div class="collapse navbar-collapse" id="nav-collapsable">
-                <ul class="nav navbar-nav">
-                    <li role="presentation">
-                        <a href="/">Index</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="/documents">Documents</a>
-                    </li>
-                    <li role="presentation" class="active">
-                        <a>Projects
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li role="presentation">
-                        <a href="/resume">Resume</a>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li role="presentation">
-                        <a href="/archive">Old Stuff</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- main content -->
-        <header class="container page-header">
-            <h1>Projects</h1>
-        </header>
+<body id="root">
+<script>addNavbar('Projects');</script>
+<header class="jumbotron jumbotron-fluid px-3 py-5">
     <div class="container">
-        <div id="projectContainer" class="row">
-            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 proj-block">
-                <img class="proj-cover" src="img/kitchen_md.webp">
-                <h3 class="proj-title">Project Name</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia saepe velit quasi quis consectetur laudantium enim alias. Vel ut, ducimus eius voluptas corporis sint aut iste ipsum adipisci, illo obcaecati!</p>
-                <a src="#" class="btn btn-default btn-xs proj-btn">Webpage</a>
-                <a src="#" class="btn btn-default btn-xs proj-btn">Report</a>
+        <h1 class="display-4 text-light">Projects</h1>
+        <p class="text-light">This page contains projects that I've created or contributed to. They are ordered reverse-chronicalogically.</p>
+        <p class="text-light">The filter below to filter through different types of projects.</p>
+
+        <section class="mt-3">
+            <div class="btn-group" role="group">
+                <a class="btn btn-secondary" href="#proj2018">2018</a>
+                <a class="btn btn-secondary" href="#proj2017">2017</a>
+                <a class="btn btn-secondary" href="#proj2016">2016</a>
+                <a class="btn btn-secondary" href="#proj2015">2015</a>
+                <a class="btn btn-secondary" href="#proj2014">2014</a>
+            </div>
+            <div class='btn-group' role="group">
+                <button id="filterSoftwareButton" class="btn btn-info">Software</button>
+                <button id="filterHardwareButton" class="btn btn-primary">Hardware</button>
+                <button id="filterDesignButton" class="btn btn-success">Design</button>
+                <button id="filterMechanicalButton" class="btn btn-warning">Mechanical</button>
+                <button id="clearFilterButton" class="btn btn-default">All</button>
+            </div>
+        </section>
+    </div>
+</header>
+<div id='main' class="container">
+    <div id="proj2018" class="timeline-year">
+        <a href="#root"><h2>2018</h2></a>
+    </div>
+    <section class="timeline timeline-container">
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-info">
+                <img src="img/icons/code.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>FBVis</h2>
+                <p class="timeline-date">Mar 2018</p>
+                <img src="img/fbvis.jpg">
+                <p class="text-muted">
+                    A pretty looking visualizer that visualizes one's entire Facebook messages archive in a chronological order.
+                    People are nodes and exchange of messages are represented as blobs of different colors
+                </p>
+                <a class="btn btn-sm btn-outline-secondary" href="https://www.muchen.ca/FBVis">Project page</a>
+                <a class="btn btn-sm btn-outline-secondary" href="https://www.muchen.ca/FBVis">Video demo</a>
             </div>
         </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-info">
+                <img src="img/icons/code.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>VGACoreSim</h2>
+                <p class="timeline-date">Feb 2018</p>
+                <img src="img/vgacoresim.jpg">
+                <p class="text-muted">
+                    Interactive browser app for simulating the FPGA VGA-core where user can input custom drawing scripts
+                </p>
+                <a class="btn btn-sm btn-outline-secondary" href="https://www.muchen.ca/VGACoreSim">Project page</a>
+            </div>
+        </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-primary">
+                <img src="img/icons/chip.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>Mandelbrot Set on FPGA</h2>
+                <p class="timeline-date">Feb 2018</p>
+                <img src="img/mandelbrot.jpg">
+                <p class="text-muted">
+                    An interactive Mandelbrot set created on the DE1-SoC FPGA development board
+                </p>
+                <a class="btn btn-sm btn-outline-secondary" href="https://www.muchen.ca/FPGAMandelbrot">Project page</a>
+            </div>
+        </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-info">
+                <img src="img/icons/code.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>Automark</h2>
+                <p class="timeline-date">Jan 2018</p>
+                <img src="img/automark.jpg">
+                <p class="text-muted">
+                    Desktop app used to help grading lab submissions more efficiently. Programmed in Python using Qt, runs on Windows, Mac, and Liunx, and features dockable UI.
+                </p>
+                <a class="btn btn-sm btn-outline-secondary" href="https://www.github.com/FSXAC/Automark">Project page</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="proj2017" class="timeline-year">
+        <a href="#root">
+            <h2>2017</h2>
+        </a>
+    </div>
+    <section class="timeline timeline-container">
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-success">
+                <img src="img/icons/cube.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>SLS 3D Printer Model</h2>
+                <p class="timeline-date">Oct-Dec 2017</p>
+                <p class="text-muted">
+                    A Selective Laser Sintering 3D printer designed and accurately modelled in MATLAB and SimuLink. Controlled via tuned PID controller and maximized print speed and minimized error.
+                </p>
+                <a class="btn btn-sm btn-outline-secondary" href="https://www.muchen.ca/documents/ELEC341-Project1.pdf">Report part 1</a>
+                <a class="btn btn-sm btn-outline-secondary" href="https://www.muchen.ca/documents/ELEC341-Project2.pdf">Report part 2</a>
+            </div>
+        </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-info">
+                <img src="img/icons/code.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>FWView</h2>
+                <p class="timeline-date">Oct-Nov 2017</p>
+                <img src="img/fwview.jpg">
+                <p class="text-muted">
+                    3D simulation visualizer for Thunderbot's physics based firmware simulator.
+                </p>
+            </div>
+        </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-info">
+                <img src="img/icons/code.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>Sleep Logger Webapp</h2>
+                <p class="timeline-date">Sept 2017</p>
+                <img src="img/lumohacks17.jpg">
+                <p class="text-muted">
+                    Created at <i>Lumohacks 2017</i> Hackathon. It features realtime database and authentication.
+                </p>
+                <a class="btn btn-sm btn-outline-secondary" href="http://glacial-stream-85429.herokuapp.com">Project page</a>
+            </div>
+        </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-info">
+                <img src="img/icons/code.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>CircuitDraw</h2>
+                <p class="timeline-date">July 2017</p>
+                <img src="img/circuitdraw.jpg">
+                <p class="text-muted">
+                    A circuit drawing program that runs in the browser. It supports drawing basic passive and passive components including
+                    resistors, capacitors, diodes, OP-AMPs, integrated circuit chips, and more. This also supports saving and loading circuits
+                    using JSON.
+                </p>
+                <a class="btn btn-sm btn-outline-secondary" href="https://www.muchen.ca/CircuitDraw">Project page</a>
+            </div>
+        </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-warning">
+                <img src="img/icons/tools.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>DIY 3D Printer</h2>
+                <p class="timeline-date">June 2017</p>
+            </div>
+        </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-primary">
+                <img src="img/icons/chip.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>Magnetic Field Tracking Robot</h2>
+                <p class="timeline-date">April 2017</p>
+                <img src="img/magtrackrobot.jpg">
+                <p class="text-muted">
+                A stash of electronics, 
+                a pile of mechanical parts, 
+                a pair of microcontrollers, 
+                a repository of code,
+                a team of six,
+                and over two weeks of sleepless nights. 
+                </p>
+                <a class="btn btn-sm btn-outline-secondary" href="/documents/ELEC291/ELEC291-Project2">Read report</a>
+            </div>
+        </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-primary">
+                <img src="img/icons/chip.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>3D Dodging Game with Serial Controls</h2>
+                <p class="text-muted">Game programmed in Processing (Java) and built controller using F38x microcontroller programmed in C.
+                <p class="timeline-date">April 2017</p>
+            </div>
+        </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-primary">
+                <img src="img/icons/chip.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>Reflow Oven Controller</h2>
+                <p class="text-muted">Microcontroller powered <abbr title="Surface Mount Technology">SMT</abbr> reflow over controller to follow a specific temperature profile. Programmed in 8051 Assembly.</p>
+                <p class="timeline-date">Mar 2017</p>
+                <a class="btn btn-sm btn-outline-secondary" href="/documents/ELEC291/ELEC291-Project1">Read report</a>
+            </div>
+        </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-primary">
+                <img src="img/icons/chip.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>Temperature Monitor</h2>
+                <p class="text-muted">Using 8051 microcontrollers to read from analog sensor and output to serial. Temperature is visualized on the computer using Processing (Java) and on a DIY LED strip. I also added a alarm for when temperature goes too high.
+                <p class="timeline-date">Mar 2017</p>
+            </div>
+        </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-primary">
+                <img src="img/icons/chip.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>Ticker LCD with Music</h2>
+                <p class="text-muted">First project using 8051 microcontrollers. Used memory access, timers, and interrupts to make this looping animation with music.
+                <p class="timeline-date">Jan 2017</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="proj2016" class="timeline-year">
+        <a href="#root"><h2>2016</h2></a>
+    </div>
+    <section class="timeline timeline-container">
+        
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-info">
+                <img src="img/icons/code.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>InsectNN</h2>
+                <p class="text-muted">Simulation of a small crawling insect that navigates using a neural network</p>
+                <p class="timeline-date">December 2016</p>
+            </div>
+        </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-primary">
+                <img src="img/icons/chip.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>RISC Machine in Verilog HDL</h2>
+                <p class="text-muted"><abbr title="Reduced Instruction Set Computer">RISC</abbr> CPU designed using System Verilog. It runs a rudimentary OS programmed in ARM Assembly.
+                <p class="timeline-date">November 2016</p>
+            </div>
+        </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-info">
+                <img src="img/icons/code.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>SmartRockets (Evolution Simulator)</h2>
+                <p class="text-muted">Small rockets that evolve over generations to increase fitness</p>
+                <p class="timeline-date">September 2016</p>
+            </div>
+        </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-info">
+                <img src="img/icons/code.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>Minesweeper in C</h2>
+                <p class="timeline-date">July 2016</p>
+            </div>
+        </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-success">
+                <img src="img/icons/cube.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>Rainwater Harvesting Simulation</h2>
+                <p class="text-muted">Obtaining the best configuration for a rainwater harvetsting system design to maximize user satisfaction.</p>
+                <p class="timeline-date">June 2016</p>
+            </div>
+        </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-warning">
+                <img src="img/icons/tools.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>Autonomous Claw</h2>
+                <p class="text-muted">Arduino powered, custom made alumium chasis, autonomous operation to pick up objects</p>
+                <p class="timeline-date">Janurary 2016</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="proj2015" class="timeline-year">
+        <a href="#root"><h2>2015</h2></a>
     </div>
 
-    <script src="projects.js"></script>
+    <section class="timeline timeline-container">
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-success">
+                <img src="img/icons/cube.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>Adaptive Device CAD</h2>
+                <p class="text-muted">Designing accessories for the disabled.</p>
+                <p class="timeline-date">November 2015</p>
+            </div>
+        </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-success">
+                <img src="img/icons/cube.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>Cardboard Chair</h2>
+                <p class="text-muted">Foldable chair that supports up to 200 pounds</p>
+                <p class="timeline-date">October 2015</p>
+            </div>
+        </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-success">
+                <img src="img/icons/cube.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>Architecture Project</h2>
+                <p class="timeline-date">June 2015</p>
+            </div>
+        </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-primary">
+                <img src="img/icons/chip.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>FPV Racing Drone</h2>
+                <p class="text-muted"><abbr title="First Persion View">FPV</abbr> drone built by myself and has live video feedback via 5.8GHz radio transmission.
+                <p class="timeline-date">May 2015</p>
+            </div>
+        </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-success">
+                <img src="img/icons/cube.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>Provincial Skills Canada 2015</h2>
+                <p class="timeline-date">May 2015</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="proj2014" class="timeline-year">
+        <a href="#root"><h2>2014</h2></a>
+    </div>
+    <section class="timeline timeline-container">
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-primary">
+                <img src="img/icons/chip.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>Arduino Explorations</h2>
+                <p class="timeline-date">November 2014</p>
+                <img src="img/arduino_lg.webp">
+                <p class="text-muted">
+                    Experimented with tinkering and building using Arduino microcontrollers. I made various small projects using photo-sensors, servo motors, speakes, and LCD.
+                    I also wrote journals to keep track of my learning progress.
+                </p>
+                <a class="btn btn-sm btn-outline-secondary" href="https://www.muchen.ca/archive/blog2014">Open journal</a>
+            </div>
+        </div>
+        <div class="timeline-block">
+            <div class="timeline-icon timeline-icon-success">
+                <img src="img/icons/cube.svg">
+            </div>
+            <div class="timeline-body">
+                <h2>Microscope CAD</h2>
+                <p class="timeline-date">June 2014</p>
+                <img src="img/microscope_md.webp">
+                <p class="text-muted">
+                    Reverse engineered a microscope assembly by precisely measuring the parts and replicating them in Autodesk Inventor in 3D. I also produced standard part drawings and parts list.
+                </p>
+            </div>
+        </div>
+    </section>
+</div>
+<script>addFooter();</script>
+<script>
+
+function setupFilterButtons() {
+    $("#filterSoftwareButton").on('click', function() { showExclusive('.timeline-icon-info') });
+    $("#filterHardwareButton").on('click', function() { showExclusive('.timeline-icon-primary') });
+    $("#filterDesignButton").on('click', function() { showExclusive('.timeline-icon-success') });
+    $("#filterMechanicalButton").on('click', function() { showExclusive('.timeline-icon-warning') });
+    $("#clearFilterButton").on('click', function() {
+        $(".timeline-block").slideDown(200);
+        $(".timeline").slideDown(200);
+        $(".timeline").prev().slideDown(200);
+    });
+}
+
+function showExclusive(className) {
+    $(".timeline-block").each(function() {
+        if ($(this).find(className).length != 0) {
+            $(this).slideDown(200, function() { blocksUpdateTrigger(); });
+        } else {
+            $(this).slideUp(200, function() { blocksUpdateTrigger(); });
+        }
+    });
+    $(".timeline").each(function() {
+        if ($(this).find(className).length != 0) {
+            $(this).slideDown(200);
+            $(this).prev().slideDown(200);
+        } else {
+            $(this).slideUp(200);
+            $(this).prev().slideUp(200);
+        }
+    })
+}
+</script>
 </body>
 </html>
