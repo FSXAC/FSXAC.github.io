@@ -1,5 +1,5 @@
 // Container reference
-var $container = undefined;
+var $container;
 
 // Project template
 var replaceables = {
@@ -11,6 +11,7 @@ var replaceables = {
     title: '{{title}}',
     date: '{{date}}',
     img: '{{img}}',
+    src: '{{src}}',
     desc: '{{desc}}',
     extra: '{{extra}}',
     href: '{{href}}',
@@ -20,17 +21,17 @@ var replaceables = {
 var template = {
 
     // @year: year of the project date
-    yearHeader: '<div id="p' + replaceables.year + ' class="timeline-year"><a href="#main"><h2>{{year}}</h2></a></div>',
+    yearHeader: '<div id="proj' + replaceables.year + '" class="timeline-year"><a href="#main"><h2>{{year}}</h2></a></div>',
 
     // @blocks: html of all project timeline blocks
-    yearCont: '<section class="timeline timeline-container">' + replaceables.blocks + '</div>',
+    yearCont: '<section class="timeline timeline-container">' + replaceables.blocks + '</section>',
 
     // @block: inner html of each project
     blockCont: '<div class="timeline-block">' + replaceables.block + '</div>',
 
     // @color: icon background color
     // @icon: icon
-    projHead: '<div class="timeline-icon timeline-icon-' + replaceable.color + '"><img src="img/icons/' + replaceables.icon + '"></div>',
+    projHead: '<div class="timeline-icon timeline-icon-' + replaceables.color + '"><img src="img/icons/' + replaceables.icon + '"></div>',
 
     // @title: project title
     // @date: project date
@@ -38,6 +39,9 @@ var template = {
     // @desc: project description
     // @extra: extra html for more things (buttons, etc)
     projBody: '<div class="timeline-body"><h2>' + replaceables.title + '</h2><p class="timeline-date">' + replaceables.date + '</p>' + replaceables.img + '<p class="text-muted">' + replaceables.desc + '</p>' + replaceables.extra + '</div>',
+
+    // @src: image source
+    projImg: '<img src="' + replaceables.src + '">',
 
     // @href: link that the button leads to
     // @text: link text
@@ -70,14 +74,18 @@ function loadJSON(callback) {
     xobj.overrideMimeType("application/json");
     xobj.open('GET', 'projects.json', true);
     xobj.onreadystatechange = function() {
-        callback(xobj.responseText);
-    }
+        if (xobj.readyState == 4 && xobj.status == '200') {
+            callback(xobj.responseText);
+        }
+    };
     xobj.send(null);
 }
 
 function readProjects() {
     loadJSON(function(response) {
-        parseProjects(JSON.parse(response).projects);
+        if ($container !== undefined && $container !== null) {
+            $container.html(parseProjects(JSON.parse(response).projects));
+        }
     });
 }
 
@@ -88,20 +96,29 @@ function parseProjects(pjs) {
     var yearHtmls = {};
     var outHtml = '';
 
+    // Sort projects into year bins
     for (var i = 0, n = pjs.length; i < n; i++) {
-        parseSingleProject(project, yearHtmls)
+        yearHtmls = parseSingleProject(pjs[i], yearHtmls);
     }
-}
 
+    // Render HTML for different years
+    Object.keys(yearHtmls).forEach(function(key, index) {
+        outHtml += template.yearHeader.replace(new RegExp(replaceables.year, 'g'), key) + template.yearCont.replace(replaceables.blocks, yearHtmls[key]);
+    });
+
+    return outHtml;
+}
 
 // Parse a single project and add it to the year html bins
 function parseSingleProject(project, yearHtmls) {
     var year = getEndYear(project);
     if (!(year in yearHtmls)) {
-        yearHtmls.year = '';
+        yearHtmls[year] = '';
     } else {
-        yearHtmls.year += renderProjectToHtml(project);
+        yearHtmls[year] += renderProjectToHtml(project);
     }
+
+    return yearHtmls;
 }
 
 // Render the html for a single project
@@ -136,6 +153,7 @@ function renderProjectToHtml(project) {
         default:
             h_color = templateColor.red;
             h_icon = '';
+            console.error('Project type error: ', project);
             break;
     }
     h_header = h_header.replace(replaceables.color, h_color);
@@ -153,7 +171,10 @@ function renderProjectToHtml(project) {
 
     // Image
     if (project.thumbnail !== null && project.thumbnail !== '') {
-        h_body = h_body.replace(replaceables.img, project.thumbnail);
+        h_body = h_body.replace(replaceables.img,
+            template.projImg.replace(replaceables.src, project.thumbnail));
+    } else {
+        h_body = h_body.replace(replaceables.img, '');
     }
 
     // Description
@@ -180,14 +201,15 @@ function renderProjectToHtml(project) {
 // Returns 0 if project doens't have valid date
 function getEndYear(project) {
     if (project.dates.end !== undefined) {
-        var d = new Date(project.date.end);
+        var d = new Date(project.dates.end);
         return String(d.getFullYear());
     } else {
+        console.error('No date: ', project);
         return '0';
     }
 }
 
 // Capitalizes the first character in a string
 function capitalizeString(str) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+    return str.charAt(0).toUpperCase() + str.slice(1);
 }
