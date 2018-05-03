@@ -60,18 +60,9 @@ $(document).ready(function() {
     addFooter();
     setupFilterButtons();
 
-    var timelineBlocks = $(".timeline-block");
+    var timelineBlocks = $('.timeline-block');
     hideBlocks(timelineBlocks, offset);
     $(window).on('scroll', function () {
-        // if (!window.requestAnimationFrame) {
-        //     setTimeout(function() {
-        //         showBlocks(timelineBlocks, offset);
-        //     }, 100);
-        // } else {
-        //     window.requestAnimationFrame(function() {
-        //         showBlocks(timelineBlocks, offset);
-        //     });
-        // }
         blocksUpdateTrigger();
     });
 });

@@ -21,10 +21,10 @@ var replaceables = {
 var template = {
 
     // @year: year of the project date
-    yearHeader: '<div id="proj' + replaceables.year + '" class="timeline-year"><a href="#main"><h2>{{year}}</h2></a></div>',
+    yearHeader: '<div id="proj' + replaceables.year + '" class="timeline-year"><a href="#main"><h2>' + replaceables.year + '</h2></a></div>',
 
     // @blocks: html of all project timeline blocks
-    yearCont: '<section class="timeline timeline-container">' + replaceables.blocks + '</section>',
+    yearCont: '<section id="blocks' + replaceables.year + '" class="timeline timeline-container"></section>',
 
     // @block: inner html of each project
     blockCont: '<div class="timeline-block">' + replaceables.block + '</div>',
@@ -84,28 +84,52 @@ function loadJSON(callback) {
 function readProjects() {
     loadJSON(function(response) {
         if ($container !== undefined && $container !== null) {
-            $container.html(parseProjects(JSON.parse(response).projects));
+            parseProjects(JSON.parse(response).projects);
         }
     });
 }
 
 // Given a JSON that contains all the projects,
-// returns formatted HTML for all projects
+// Edits html directly in here, returns nothin
 function parseProjects(pjs) {
     // String html for each year
     var yearHtmls = {};
     var outHtml = '';
 
-    // Sort projects into year bins
+    // DELETION
+    // // Sort projects into year bins
+    // for (var i = 0, n = pjs.length; i < n; i++) {
+    //     yearHtmls = parseSingleProject(pjs[i], yearHtmls);
+    // }
+    // // Render HTML for different years
+    // Object.keys(yearHtmls).forEach(function(key, index) {
+    //     outHtml += template.yearHeader.replace(new RegExp(replaceables.year, 'g'), key) + template.yearCont.replace(replaceables.blocks, yearHtmls[key]);
+    // });
+
+    var years = getYears(pjs);
+    $container.html(makeYearContainers(years));
+}
+
+function getYears(pjs) {
+    years = [];
     for (var i = 0, n = pjs.length; i < n; i++) {
-        yearHtmls = parseSingleProject(pjs[i], yearHtmls);
+        var year = getEndYear(pjs[n]);
+        if (year in years) {
+            continue;
+        } else {
+            years.push(year);
+        }
     }
+    return years;
+}
 
-    // Render HTML for different years
-    Object.keys(yearHtmls).forEach(function(key, index) {
-        outHtml += template.yearHeader.replace(new RegExp(replaceables.year, 'g'), key) + template.yearCont.replace(replaceables.blocks, yearHtmls[key]);
-    });
-
+// Returns html for year containers and its headers
+function makeYearContainers(years) {
+    var outHtml = '';
+    for (var i = 0, n = years.length; i < n; i++) {
+        outHtml += template.yearHeader.replace(new RegEx(replaceables.year, 'g'), years[i]);
+        outHtml += template.yearCont.replace(replaceables.year, years[i]);
+    }
     return outHtml;
 }
 
