@@ -108,8 +108,19 @@ function parseProjects(pjs) {
 
     var years = getYears(pjs);
     $container.html(makeYearContainers(years));
+
+    // For each year, render individual project html
+    for (var i = 0, n = pjs.length; i < n; i++) {
+        var projectYear = getEndYear(pjs[i]);
+        var projectHtml = renderProjectToHtml(pjs[i]);
+
+        var yearIden = '#blocks' + projectYear;
+        $(yearIden).prepend(projectHtml);
+    }
 }
 
+
+// Returns a set of years that all projects belong to
 function getYears(pjs) {
     years = [];
     for (var i = 0, n = pjs.length; i < n; i++) {
@@ -134,16 +145,16 @@ function makeYearContainers(years) {
 }
 
 // Parse a single project and add it to the year html bins
-function parseSingleProject(project, yearHtmls) {
-    var year = getEndYear(project);
-    if (!(year in yearHtmls)) {
-        yearHtmls[year] = '';
-    } else {
-        yearHtmls[year] += renderProjectToHtml(project);
-    }
+// function parseSingleProject(project, yearHtmls) {
+//     var year = getEndYear(project);
+//     if (!(year in yearHtmls)) {
+//         yearHtmls[year] = '';
+//     } else {
+//         yearHtmls[year] += renderProjectToHtml(project);
+//     }
 
-    return yearHtmls;
-}
+//     return yearHtmls;
+// }
 
 // Render the html for a single project
 function renderProjectToHtml(project) {
