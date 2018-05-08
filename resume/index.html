@@ -87,7 +87,6 @@ p.activity-list > span { border: 1px solid #EEE; }
             <button id="filterBtnDesign" type="button" class="btn btn-default">Design</button>
             <button id="filterBtnElec" type="button" class="btn btn-default">Electrical</button>
             <button id="filterBtnMech" type="button" class="btn btn-default">Mechanical</button>
-            <button id="filterBtnCustom" type="button" class="btn btn-success">Custom</button>
         </div>
     </div>
 </header>
@@ -312,11 +311,6 @@ p.activity-list > span { border: 1px solid #EEE; }
     }
 
     function displayProjects(projs, filter) {
-        if (filter == 'custom') {
-            alert('WIP');
-            return;
-        }
-
         projects = JSON.parse(projs).projects;
 
         var htmlOut = '';
@@ -357,7 +351,6 @@ p.activity-list > span { border: 1px solid #EEE; }
         $('#filterBtnDesign').on('click', function() {filterHandler('design')});
         $('#filterBtnElec').on('click', function() {filterHandler('elec')});
         $('#filterBtnMech').on('click', function() {filterHandler('mech')});
-        $('#filterBtnCustom').on('click', function() {filterHandler('custom')});
         
     });
 

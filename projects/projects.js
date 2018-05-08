@@ -91,6 +91,9 @@ function parseProjects(pjs) {
         renderYearContainer(year, {
             id: yearId
         });
+
+        // Also for each year, add the buttons at top to go to the year
+        renderYearButton(year, yearId);
     }
 
     // For each project, add to their year containers
@@ -128,6 +131,15 @@ function renderYearContainer(year, options) {
     }
 }
 
+/* Creates the HTML for the button that goes to the year container
+ * @param year The year being added
+ * @param yearId The targe ID of the year container
+ */
+function renderYearButton(year, yearId) {
+    var outHtml = '<a class="btn btn-secondary" href="#' + yearId + '">' + year + '</a>';
+    $('#year-listings').append(outHtml);
+}
+
 /* Gets a set of all years of projects for each project in the project list
  * @param pjs The list of projects given
  * @return An array with all years as string
@@ -142,7 +154,6 @@ function listProjectYears(pjs) {
             years.push(year);
         }
     }
-    console.log(years);
     return years;
 }
 
