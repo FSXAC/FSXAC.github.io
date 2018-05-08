@@ -80,12 +80,45 @@ function parseProjects(pjs) {
     // For each year, add their containers
     for (var i = 0, n = yearsMapData.length; i < n; i++) {
         var year = yearsMapData[i];
-        yearsMapData[i] = [year, genId(year)];
-        // makeYearContainers();
+        var yearId = genId('year', year);
+
+        yearsMapData[i] = [year, yearId];
+
+        // Create HTML
+        makeYearContainer(year, {
+            id: yearId
+        });
     }
 
 
     // TODO: For each project, add to their year containers
+}
+
+/* Creates DOM objects for a year that will contain the projects for that year
+ * @param year The year container that needs to be created
+ * @param options Contains the options for creating the container DOM element
+ */
+function makeYearContainer(year, options) {
+    // Default options
+    var options      = options              || {};
+    var id           = options.id           || 'unidentified';
+    var reverseOrder = options.reverseOrder || true;
+    var headLink     = options.headerLink   || '#root';
+
+    // Render container HTML
+    var outHtml = '<div id="' + id + '" class=timeline-year><a ';
+    if (headLink !== undefined || headLink !== '' || headLink !== null) {
+        outHtml += 'href=' + headLink;
+    }
+    outHtml += '><h2>' + year + '</h2></a></div><section id="';
+    outHtml += id + '-c" class="timeline timeline-container"></section>';
+
+    // Add to page
+    if (reverseOrder) {
+        $container.prepend(outHtml);
+    } else {
+        $container.append(outHtml);
+    }
 }
 
 /* Gets a set of all years of projects for each project in the project list
@@ -133,5 +166,5 @@ function capitalizeString(str) {
  * @return The ID as string
  */
 function genID(prefix) {
-    return '#' + prefix + name;
+    return prefix + name;
 }
