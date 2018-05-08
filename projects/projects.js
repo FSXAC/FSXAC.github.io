@@ -60,10 +60,11 @@ function loadJSON(path, callback) {
 
 /* Reads projects.json and populates HTML
  */
-function readProjects() {
+function readProjects(callback) {
     loadJSON('projects.json', function(response) {
         if ($container !== undefined && $container !== null) {
             parseProjects(JSON.parse(response).projects);
+            callback();
         }
     });
 
