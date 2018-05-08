@@ -1,11 +1,12 @@
-function addFooter() {
+function addFooter(parent) {
+    parent = parent || '#main';
     var date = new Date();
     var footer = '<footer><small><p class="mb-0">Copyright © 2014-' + date.getFullYear() + ' Muchen He</p> \
         This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. \
         </small> \
     </footer>';
 
-    $('#main').append(footer);
+    $(parent).append(footer);
 }
 
 function addNavbar(current) {

@@ -66,6 +66,8 @@ function readProjects() {
             parseProjects(JSON.parse(response).projects);
         }
     });
+
+    return true;
 }
 
 /* Render a given list of projects to HTML and add to DOM
@@ -85,24 +87,28 @@ function parseProjects(pjs) {
         yearsMapData[i] = [year, yearId];
 
         // Create HTML
-        makeYearContainer(year, {
+        renderYearContainer(year, {
             id: yearId
         });
     }
 
-
-    // TODO: For each project, add to their year containers
+    // For each project, add to their year containers
+    for (var p = 0, l = pjs.length; p < l; p++) {
+        renderProject(pjs[p], {
+            // Options here
+        });
+    }
 }
 
 /* Creates DOM objects for a year that will contain the projects for that year
  * @param year The year container that needs to be created
  * @param options Contains the options for creating the container DOM element
  */
-function makeYearContainer(year, options) {
+function renderYearContainer(year, options) {
     // Default options
-    var options      = options              || {};
+    options          = options              || {};
     var id           = options.id           || 'unidentified';
-    var reverseOrder = options.reverseOrder || true;
+    var reverseOrder = options.reverseOrder || false;
     var headLink     = options.headerLink   || '#root';
 
     // Render container HTML
@@ -129,13 +135,80 @@ function listProjectYears(pjs) {
     years = [];
     for (var i = 0, n = pjs.length; i < n; i++) {
         var year = getEndYear(pjs[i]);
-        if (year in years) {
+        if (years.includes(year)) {
             continue;
         } else {
             years.push(year);
         }
     }
+    console.log(years);
     return years;
+}
+
+/* Renders the HTML for a single project
+ * @param project The project object that is to be rendered
+ * @param options The options for rendering the HTML of the project
+ */
+function renderProject(project, options) {
+    // Default options values
+    options = options || {};
+
+    // Read information from project entry
+    var icon, iconColor;
+    switch (project.type) {
+        case 'code':
+            icon = templateIcon.code;
+            iconColor = templateColor.sky;
+            break;
+        case 'mech':
+            icon = templateIcon.tools;
+            iconColor = templateColor.yellow;
+            break;
+        case 'elec':
+            icon = templateIcon.chip;
+            iconColor = templateColor.blue;
+            break;
+        case 'design':
+            icon = templateIcon.cube;
+            iconColor = templateColor.green;
+            break;
+        default:
+            icon = '';
+            iconColor = templateColor.red;
+            console.error('Project type error', project);
+            break;
+    }
+
+    var projectDate = project.dates.end;
+    var projectYear = getEndYear(project);
+    var projectImg = project.thumbnail;
+
+    // Write HTML
+    var outHtml = '<div class="timeline-block">';
+    outHtml += '<div class="timeline-icon timeline-icon-' + iconColor + '">';
+    outHtml += '<img src="img/icons/' + icon + '"></div>';
+    outHtml += '<div class="timeline-body">';
+    outHtml += '<h2>' + project.name + '</h2>';
+    outHtml += '<p class="timeline-date">' + projectDate + '</p>';
+
+    if (projectImg !== null && projectImg !== undefined && projectImg !== '') {
+        outHtml += '<img src="' + projectImg + '">';
+    }
+
+    outHtml += '<p class="text-muted">';
+    outHtml += project.description;
+    outHtml += '</p>';
+
+    Object.keys(project.links).forEach(function(key, index) {
+        outHtml += '<a class="btn btn-sm btn-outline-secondary" href="' + project.links[key] + '">';
+        outHtml += capitalizeString(key) + '</a>';
+    });
+
+    outHtml += '</div></div>';
+
+    // Add HTML to existing DOM
+    var target = '#' + genId('year', projectYear) + '-c';
+    $(target).append(outHtml);
 }
 
 /* Given a project, returns the year of the project in string form
@@ -165,6 +238,6 @@ function capitalizeString(str) {
  * @param name Name of the ID
  * @return The ID as string
  */
-function genID(prefix) {
+function genId(prefix, name) {
     return prefix + name;
 }
