@@ -147,7 +147,7 @@ function renderYearButton(year, yearId) {
 function listProjectYears(pjs) {
     years = [];
     for (var i = 0, n = pjs.length; i < n; i++) {
-        var year = getEndYear(pjs[i]);
+        var year = getProjectYear(pjs[i]);
         if (years.includes(year)) {
             continue;
         } else {
@@ -192,7 +192,7 @@ function renderProject(project, options) {
     }
 
     var projectDate = project.dates.end;
-    var projectYear = getEndYear(project);
+    var projectYear = getProjectYear(project);
     var projectImg = project.thumbnail;
 
     // Write HTML
@@ -225,15 +225,24 @@ function renderProject(project, options) {
 
 /* Given a project, returns the year of the project in string form
  * @param project The project object
+ * @param selectEnd If true, will return the year the project is finished
  * @return The year the project ended as a string
  */
-function getEndYear(project) {
-    if (project.dates.end !== undefined) {
-        var d = new Date(project.dates.end);
-        return String(d.getFullYear());
+function getProjectYear(project, selectEnd) {
+    selectEnd = selectEnd || true;
+    var date = selectEnd ? project.dates.end : project.dates.start;
+
+    if (date !== undefined && date !== '' && date !== null) {
+        var year = date.match(/([0-9])\d+/);
+        if (year !== null) {
+            return year[0];
+        } else {
+            console.error('Error while getting year: ', project);
+            return null;
+        }
     } else {
         console.error('No date: ', project);
-        return undefined;
+        return null;
     }
 }
 

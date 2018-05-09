@@ -1,6 +1,38 @@
 {
     "projects": [
         {
+            "name": "2-Axis Motorized Laser Controller",
+            "dates": {
+                "start": "Janurary 2018",
+                "end": "April 2018"
+            },
+            "ongoing": false,
+            "type": "elec",
+            "description": "Built and programmed PID controllers for 2-DOF spherical wrist controlled laser pointers that draws shapes, using DC commutating motors built from scratch.",
+            "details": "",
+            "scope": "course",
+            "contributors": ["Muchen He", "Ou (Leo) Liu", "LuFei Liu", "Wenoa Teves"],
+            "tech": [
+                "Arduino",
+                "C++",
+                "SolidWorks",
+                "Autodesk Inventor",
+                "MATLAB",
+                "SimuLink",
+                "Altium Designer",
+                "3D Printer",
+                "Laser Cutter",
+                "Waterjet",
+                "Node.js",
+                "p5.js",
+                "Electronic Tools"
+            ],
+            "links": {
+            },
+            "worthy": true,
+            "thumbnail": ""
+        },
+        {
             "name": "FBVis",
             "dates": {
                 "start": "Janurary 2018",
