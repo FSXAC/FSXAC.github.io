@@ -153,39 +153,17 @@
                             "flag": ""
                         },
                         {
-                            "title": "Problem set 1",
-                            "link": "ELEC301/ELEC301-PS1.pdf",
-                            "flag": ""
-                        },
-                        {
-                            "title": "Problem set 2",
-                            "link": "ELEC301/ELEC301-PS2.pdf",
-                            "flag": ""
-                        },
-                        {
-                            "title": "Problem set 3",
-                            "link": "ELEC301/ELEC301-PS3.pdf",
-                            "flag": ""
-                        },
-                        {
-                            "title": "Problem set 4",
-                            "link": "ELEC301/ELEC301-PS4.pdf",
-                            "flag": ""
-                        },
-                        {
-                            "title": "Problem set 5",
-                            "link": "ELEC301/ELEC301-PS5.pdf",
-                            "flag": ""
-                        },
-                        {
-                            "title": "Problem set 6",
-                            "link": "ELEC301/ELEC301-PS6.pdf",
-                            "flag": ""
-                        },
-                        {
-                            "title": "Problem set 7",
-                            "link": "ELEC301/ELEC301-PS7.pdf",
-                            "flag": ""
+                            "title": "Problem Set",
+                            "enum": [ 1, 2, 3, 4, 5, 6, 7],
+                            "links": [
+                                "ELEC301/ELEC301-PS1.pdf",
+                                "ELEC301/ELEC301-PS2.pdf",
+                                "ELEC301/ELEC301-PS3.pdf",
+                                "ELEC301/ELEC301-PS4.pdf",
+                                "ELEC301/ELEC301-PS5.pdf",
+                                "ELEC301/ELEC301-PS6.pdf",
+                                "ELEC301/ELEC301-PS7.pdf"
+                            ]
                         },
                         {
                             "title": "MP1 Report",
@@ -514,32 +492,18 @@
                             "flag": "draft"
                         },
                         {
-                            "title": "Problem Set 1",
-                            "link": "CPEN311/ps1",
-                            "flag": ""
-                        },
-                        {
-                            "title": "Problem Set 2",
-                            "link": "CPEN311/ps2",
-                            "flag": ""
-                        },
-                        {
-                            "title": "Problem Set 3",
-                            "link": "CPEN311/ps3",
-                            "flag": ""
-                        },
-                        {
-                            "title": "Problem Set 4",
-                            "link": "CPEN311/ps4.pdf",
-                            "flag": ""
-                        },
-                        {
-                            "title": "Problem Set 5",
-                            "link": "CPEN311/ps5.pdf",
-                            "flag": ""
+                            "title": "Problem Set",
+                            "enum": [ 1, 2, 3, 4, 5 ],
+                            "links": [
+                                "CPEN311/ps1",
+                                "CPEN311/ps2",
+                                "CPEN311/ps3",
+                                "CPEN311/ps4.pdf",
+                                "CPEN311/ps5.pdf"
+                            ]
                         }
                     ],
-                    "date": "2018-04-10"
+                    "date": "2018-05-15"
                 },
                 {
                     "course": "CPEN 211",
@@ -627,13 +591,6 @@
                             "link": "MECH431/c1",
                             "flag": "new"
                         }
-                    ]
-                },
-                {
-                    "course": "MECH 410T",
-                    "description": "Engineering Sustainability",
-                    "date": "2018-05-14",
-                    "entries": [
                     ]
                 },
                 {

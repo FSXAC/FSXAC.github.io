@@ -77,27 +77,48 @@ function parseDocumentsToHtml(documents) {
 
                 // Create HTML for this entry
                 // Things to replace are: {{extra}}, {{link}}, {{title}}, {{badge}}
-                var entryHtml = DT.entry
-                    .replace('{{link}}', entry.link)
-                    .replace('{{title}}', entry.title);
 
-                // Add badges depending on the flags
-                if (entry.flag === 'draft') {
-                    entryHtml = entryHtml
-                        .replace('{{extra}}', DT.extraClass)
-                        .replace('{{badge}}', DT.badgeDraft);
-                } else if (entry.flag === 'new') {
-                    entryHtml = entryHtml
-                        .replace('{{extra}}', DT.extraClass)
-                        .replace('{{badge}}', DT.badgeNew);
-                } else {
-                    entryHtml = entryHtml
-                        .replace('{{extra}}', '')
-                        .replace('{{badge}}', '');
+                if (entry.enum === undefined) {
+                    var entryHtml = DT.entry
+                        .replace('{{link}}', entry.link)
+                        .replace('{{title}}', entry.title);
+
+                    // Add badges depending on the flags
+                    if (entry.flag === 'draft') {
+                        entryHtml = entryHtml
+                            .replace('{{extra}}', DT.extraClass)
+                            .replace('{{badge}}', DT.badgeDraft);
+                    } else if (entry.flag === 'new') {
+                        entryHtml = entryHtml
+                            .replace('{{extra}}', DT.extraClass)
+                            .replace('{{badge}}', DT.badgeNew);
+                    } else {
+                        entryHtml = entryHtml
+                            .replace('{{extra}}', '')
+                            .replace('{{badge}}', '');
+                    }
+
+                    // Add entry html
+                    entriesHtml += entryHtml;
+                } else if (entry.enum !== undefined && entry.links !== undefined) {
+                    var entryHtml = '<li class="list-group-item p-0 bg-light">' + entry.title + ' ';
+                    var subEntryHtml = '<a href="{{link}}">{{title}}</a>';
+
+                    var n_enums = entry.enum.length;
+                    var n_links = entry.links.length;
+                    
+                    if (n_enums === n_links) {
+                        for (var i = 0; i < n_enums; i++) {
+                            entryHtml += subEntryHtml.replace('{{link}}', entry.links[i]).replace('{{title}}', entry.enum[i].toString() + ((i == n_enums - 1) ? '' : ', '));
+                        }
+                    } else {
+                        // Ill-defined project entry
+                        console.error('Ill-defined project entry');
+                    }
+
+                    entryHtml += '</li>';
+                    entriesHtml += entryHtml;
                 }
-
-                // Add entry html
-                entriesHtml += entryHtml;
             }
             
             // Pack course together
