@@ -108,8 +108,9 @@ function parseDocumentsToHtml(documents) {
                     var n_links = entry.links.length;
                     
                     if (n_enums === n_links) {
-                        for (var i = 0; i < n_enums; i++) {
-                            entryHtml += subEntryHtml.replace('{{link}}', entry.links[i]).replace('{{title}}', entry.enum[i].toString() + ((i == n_enums - 1) ? '' : ', '));
+                        for (var x = 0; x < n_enums; x++) {
+                            entryHtml += subEntryHtml.replace('{{link}}', entry.links[x]).replace('{{title}}', entry.enum[x].toString());
+                            entryHtml += + (x == n_enums - 1) ? '' : ', ';
                         }
                     } else {
                         // Ill-defined project entry

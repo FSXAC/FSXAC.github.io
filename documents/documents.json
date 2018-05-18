@@ -590,6 +590,11 @@
                             "title": "Conference 1",
                             "link": "MECH431/c1",
                             "flag": "new"
+                        },
+                        {
+                            "title": "General Economic Concepts",
+                            "link": "MECH431/l2",
+                            "flag": "new"
                         }
                     ]
                 },
