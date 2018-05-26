@@ -24,6 +24,9 @@
     .ig-likes { font-weight: 400; }
     .ig-desc { font-size: 0.7em; line-height: 1.1em; }
     .jumbotron { background-color: #222; }
+    .photobox { margin-bottom: 2em; }
+    img.img-thumbnail { border: none; opacity: 1.0; transition: 0.2s all ease-out; }
+    img.img-thumbnail:hover { opacity: 0.75; }
 </style>
 </head>
 
@@ -60,7 +63,7 @@
             userId: '2109225379',
             sortBy: 'most-recent',
             links: true,
-            limit: 8,
+            limit: 100,
             resolution: 'standard_resolution',
             template: '\
             <div class="col-md-3 col-sm-4 col-xs-12 photowrapper">\
@@ -68,8 +71,6 @@
                     <a href="{{link}}">\
                         <img src="{{image}}" alt="{{caption}}" class="img-thumbnail">\
                     </a>\
-                    <div class="ig-likes">&#9825; {{likes}}</div>\
-                    <div class="ig-desc">{{caption}}</div>\
                 </div>\
             </div>',
 
