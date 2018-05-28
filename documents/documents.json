@@ -263,29 +263,15 @@
                             "flag": "draft"
                         },
                         {
-                            "title": "Tutorial 1",
-                            "link": "ELEC321/ELEC321-Tutorial1",
-                            "flag": ""
-                        },
-                        {
-                            "title": "Tutorial 2",
-                            "link": "ELEC321/ELEC321-Tutorial2",
-                            "flag": ""
-                        },
-                        {
-                            "title": "Tutorial 3",
-                            "link": "ELEC321/ELEC321-Tutorial3",
-                            "flag": ""
-                        },
-                        {
-                            "title": "Tutorial 4",
-                            "link": "ELEC321/ELEC321-Tutorial4",
-                            "flag": ""
-                        },
-                        {
-                            "title": "Tutorial 12",
-                            "link": "ELEC321/ELEC321-Tutorial12",
-                            "flag": ""
+                            "title": "Tutorial",
+                            "enum": [ 1, 2, 3, 4, 12 ],
+                            "links": [
+                                "ELEC321/ELEC321-Tutorial1",
+                                "ELEC321/ELEC321-Tutorial2",
+                                "ELEC321/ELEC321-Tutorial3",
+                                "ELEC321/ELEC321-Tutorial4",
+                                "ELEC321/ELEC321-Tutorial12"
+                            ]
                         },
                         {
                             "title": "Review Session",
@@ -587,13 +573,21 @@
                     "date": "2018-05-14",
                     "entries": [
                         {
-                            "title": "Conference 1",
-                            "link": "MECH431/c1",
-                            "flag": "new"
-                        },
-                        {
                             "title": "General Economic Concepts",
                             "link": "MECH431/l2",
+                            "flag": ""
+                        },
+                        {
+                            "title": "Cost Models & Estimation",
+                            "link": "MECH431/l3",
+                            "flag": "draft"
+                        },
+                        {
+                            "title": "Conference",
+                            "enum": [ 1 ],
+                            "links": [
+                                "MECH431/c1"
+                            ],
                             "flag": "new"
                         }
                     ]

@@ -102,7 +102,7 @@ function parseDocumentsToHtml(documents) {
                     entriesHtml += entryHtml;
                 } else if (entry.enum !== undefined && entry.links !== undefined) {
                     var entryHtml = '<li class="list-group-item p-0 bg-light">' + entry.title + ' ';
-                    var subEntryHtml = '<a href="{{link}}">{{title}}</a>';
+                    var subEntryHtml = '<a class="btn btn-xs btn-outline-primary" href="{{link}}" style="margin: 2px; ">{{title}}</a>';
 
                     var n_enums = entry.enum.length;
                     var n_links = entry.links.length;
@@ -110,7 +110,7 @@ function parseDocumentsToHtml(documents) {
                     if (n_enums === n_links) {
                         for (var x = 0; x < n_enums; x++) {
                             entryHtml += subEntryHtml.replace('{{link}}', entry.links[x]).replace('{{title}}', entry.enum[x].toString());
-                            entryHtml += + (x == n_enums - 1) ? '' : ', ';
+                            // entryHtml += + (x == n_enums - 1) ? '' : ', ';
                         }
                     } else {
                         // Ill-defined project entry
