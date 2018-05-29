@@ -101,8 +101,8 @@ function parseDocumentsToHtml(documents) {
                     // Add entry html
                     entriesHtml += entryHtml;
                 } else if (entry.enum !== undefined && entry.links !== undefined) {
-                    var entryHtml = '<li class="list-group-item p-0 bg-light">' + entry.title + ' ';
-                    var subEntryHtml = '<a class="btn btn-xs btn-outline-primary" href="{{link}}" style="margin: 2px; ">{{title}}</a>';
+                    var entryHtml = '<li class="list-group-item pl-0 pt-1 pb-1 bg-light">' + entry.title + ' ';
+                    var subEntryHtml = '<a class="btn btn-xs btn-outline-primary" href="{{link}}" style="margin-left:2px; margin-right: 2px">{{title}}</a>';
 
                     var n_enums = entry.enum.length;
                     var n_links = entry.links.length;
