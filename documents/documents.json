@@ -570,7 +570,7 @@
                 {
                     "course": "MECH 431",
                     "description": "Engineering Economics",
-                    "date": "2018-05-14",
+                    "date": "2018-05-27",
                     "entries": [
                         {
                             "title": "General Economic Concepts",
@@ -580,15 +580,29 @@
                         {
                             "title": "Cost Models & Estimation",
                             "link": "MECH431/l3",
-                            "flag": "draft"
+                            "flag": ""
+                        },
+                        {
+                            "title": "Payback Period and Benefit Benefit Analysis",
+                            "link": "MECH431/l4",
+                            "flag": ""
                         },
                         {
                             "title": "Conference",
-                            "enum": [ 1 ],
+                            "enum": [ 1, 2 ],
                             "links": [
-                                "MECH431/c1"
-                            ],
-                            "flag": "new"
+                                "MECH431/c1",
+                                "MECH431/c2"
+                            ]
+                        },
+                        {
+                            "title": "Practice",
+                            "enum": [ 2, 3, 4 ],
+                            "links": [
+                                "MECH431/p2",
+                                "MECH431/p3",
+                                "MECH431/p4"
+                            ]
                         }
                     ]
                 },
