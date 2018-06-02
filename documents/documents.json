@@ -603,6 +603,13 @@
                                 "MECH431/p3",
                                 "MECH431/p4"
                             ]
+                        },
+                        {
+                            "title": "Assignment",
+                            "enum": [ 1 ],
+                            "links": [
+                                "MECH431/asn1"
+                            ]
                         }
                     ]
                 },
