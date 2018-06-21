@@ -588,20 +588,33 @@
                             "flag": ""
                         },
                         {
+                            "title": "Time Value of Money & Interests",
+                            "link": "MECH431/l5",
+                            "flag": "new"
+                        },
+                        {
+                            "title": "Cashflow Series",
+                            "link": "MECH431/l7",
+                            "flag": "new"
+                        },
+                        {
                             "title": "Conference",
-                            "enum": [ 1, 2 ],
+                            "enum": [ 1, 2, 3, 4 ],
                             "links": [
                                 "MECH431/c1",
-                                "MECH431/c2"
+                                "MECH431/c2",
+                                "MECH431/c3",
+                                "MECH431/c4d"
                             ]
                         },
                         {
                             "title": "Practice",
-                            "enum": [ 2, 3, 4 ],
+                            "enum": [ 2, 3, 4, 7 ],
                             "links": [
                                 "MECH431/p2",
                                 "MECH431/p3",
-                                "MECH431/p4"
+                                "MECH431/p4",
+                                "MECH431/p7"
                             ]
                         },
                         {
