@@ -1,6 +1,7 @@
 import json
 from pprint import pprint
 
+# path = './documents/documentsTEST.json'
 path = './documents/documents.json'
 outpath = './documents/documentsTEST.json'
 docdata = None
@@ -16,6 +17,8 @@ def displayHelp(subject):
 		print('DocMan is a small script to help organize the documents in muchen.ca/documents')
 		print('\tadd\tAdd new category, course, or document entry')
 		print('\tedit\tEdit a particular document entry')
+		print('\thelp\tHelp page (you are here)')
+		print('\tlist\tList all items')
 		print('\tremove\tRemove a particular document entry')
 		print('\tverify\tVerify that the links are working')
 		print('\tquit\tQuit the program')
@@ -35,8 +38,17 @@ def getCategoryNames():
 	 cat['category'].lower() for cat in docdata['docs']
 	]
 
-def getCategoryIndex(categoryName):
-	"""TODO: returns the index by category name"""
+def getCategoryIndex(categoryName, ignoreCase = False):
+	index = 0
+	for category in docdata['docs']:
+		if ignoreCase:
+			if category['category'].lower() == categoryName.lower():
+				return index
+		else:
+			if category['category'] == categoryName:
+				return index
+		index += 1
+	return -1
 
 def getCourseNames(inputCategory):
 	for category in docdata['docs']:
@@ -46,6 +58,67 @@ def getCourseNames(inputCategory):
 			]
 
 	return None
+
+def getCourseById(courseName):
+	for category in docdata['docs']:
+		for course in category['courses']:
+			if course['course'].lower() == courseName.lower():
+				return course
+	return None
+
+
+def listDocs(keyword=''):
+	if keyword == '':
+		for category in docdata['docs']:
+			catName = category['category']
+			print('[' + catName + ']' + '=' * (32 - len(catName)))
+
+			count = 0
+			for course in category['courses']:
+				print('\t' + course['course'], end='')
+				count += 1
+				if count % 4 == 0:
+					print('')
+			print('')
+	else:
+		catIndex = getCategoryIndex(keyword, ignoreCase=True)
+		course = getCourseById(keyword)
+
+		if catIndex != -1:
+			category = docdata['docs'][catIndex]
+			catName = category['category']
+			print('[' + catName + ']' + '=' * (32 - len(catName)))
+
+			count = 0
+			for course in category['courses']:
+				print('\t' + course['course'], end='')
+				count += 1
+				if count % 4 == 0:
+					print('')
+			print('')
+
+		if course is not None:
+			courseName = course['course']
+			print('[' + courseName + ']' + '*' * (32 - len(courseName)))
+			for entry in course['entries']:
+				print('\t' + entry['title'])
+
+				if 'enum' in entry:
+					print('\t\t', end='')
+					for e in entry['enum']:
+						print('[' + str(e) + ']', end='')
+					print('')
+
+
+def listAllCourses():
+	count = 0
+	for category in docdata['docs']:
+		for course in category['courses']:
+			print('\t' + course['course'], end='')
+			count += 1
+			if count % 4 == 0:
+				print('')
+	print('')
 
 def addEntryCategory():
 	categoryNames = getCategoryNames()
@@ -68,9 +141,13 @@ def addEntryCategory():
 
 def addEntryCourse():
 	categoryNames = getCategoryNames()
+	if len(categoryNames) < 1:
+		print('Please add a category first')
+		return None
+
 	print('Select a category:')
 	for categoryName in categoryNames:
-		print(' >\t' + categoryName)
+		print('\t' + categoryName)
 
 	chooseCategory = ''
 	while chooseCategory == '':
@@ -97,9 +174,33 @@ def addEntryCourse():
 		else:
 			print('Coruse \"' + courseName + '\" already exists')
 
+	# Ask for more details
+	courseDesc = input('Course description: ')
+
 	# Add
-	categoryIndex = 
-	docdata['docs']
+	categoryIndex = getCategoryIndex(chooseCategory)
+	docdata['docs'][categoryIndex]['courses'].append({
+		'course': newCourseName.upper(),
+		'description': courseDesc,
+		'entries': []
+	})
+
+	# Save
+	saveData()
+	print('Added new course: ', courseName, '(' + courseDesc + ')')
+
+
+def addEntryDocument():
+	# Select course to add
+	print('Choose a course to add to: ')
+	listAllCourses()
+
+	# course select
+	courseSel = input('Choose a course (enter nothing to cancel):')
+	course = getCourseById(courseSel)
+	if course is None:
+		print('Non existent course; aborting!')
+		return None
 
 def addEntry(kind):
 	if kind == 'category':
@@ -107,7 +208,7 @@ def addEntry(kind):
 	elif kind == 'course':
 		addEntryCourse()
 	elif kind == 'document':
-		print('addEntryDocument()')
+		addEntryDocument()
 
 def continueProgram():
 	commandInput = input('[DocMan] > ').split(' ')
@@ -129,6 +230,11 @@ def continueProgram():
 			addEntry(commandArgs[0])
 		else:
 			displayHelp('add')
+	elif command == 'list':
+		if hasNoArgs:
+			listDocs()
+		else:
+			listDocs(' '.join(commandArgs[0:]))
 	else:
 		displayHelp(None)
 
