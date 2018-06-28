@@ -1,9 +1,9 @@
 import json
 from pprint import pprint
+from datetime import datetime
 
-# path = './documents/documentsTEST.json'
 path = './documents/documents.json'
-outpath = './documents/documentsTEST.json'
+outpath = './documents/documents.json'
 docdata = None
 with open(path, 'r') as f:
 	docdata = json.load(f)
@@ -11,6 +11,25 @@ with open(path, 'r') as f:
 if docdata == None:
 	print('Cannot load document JSON')
 	exit()
+
+def keepAskingInList(prompt, acceptanceList, inversed = False, rejectPrompt = '', emptyToCancel = True):
+	userInput = input(prompt)
+	if not inversed:
+		while userInput not in acceptanceList:
+			if userInput == '' and emptyToCancel:
+				return ''
+			if rejectPrompt != '':
+				print(rejectPrompt)
+			userInput = input(prompt)
+		return userInput
+	else:
+		while userInput in acceptanceList:
+			if userInput == '' and emptyToCancel:
+				return ''
+			if rejectPrompt != '':
+				print(rejectPrompt)
+			userInput = input(prompt)
+		return userInput
 
 def displayHelp(subject):
 	if subject is None:
@@ -33,6 +52,8 @@ def saveData():
 	with open(outpath, 'w') as f:
 		json.dump(docdata, f)
 
+	return True
+
 def getCategoryNames():
 	return [
 	 cat['category'].lower() for cat in docdata['docs']
@@ -50,6 +71,13 @@ def getCategoryIndex(categoryName, ignoreCase = False):
 		index += 1
 	return -1
 
+def getCategoryByName(categoryName):
+	for category in docdata['docs']:
+		if category['category'].lower() == categoryName.lower():
+			return category
+
+	return None
+
 def getCourseNames(inputCategory):
 	for category in docdata['docs']:
 		if category['category'].lower() == inputCategory.lower():
@@ -66,6 +94,22 @@ def getCourseById(courseName):
 				return course
 	return None
 
+def getCourseGroupedListNames(course):
+	entryList = []
+	for entry in course['entries']:
+		if 'enum' in entry:
+			entryList.append(entry)
+	return entryList
+
+def getCourseGroupedListByTitle(course, title):
+	for entry in course['entries']:
+		if 'enum' in entry and title.lower() == entry['title'].lower():
+			return entry
+	return None
+
+def getTodayDate():
+	now = datetime.now()
+	return ('%04d-%02d-%02d' % (now.year, now.month, now.day))
 
 def listDocs(keyword=''):
 	if keyword == '':
@@ -109,7 +153,6 @@ def listDocs(keyword=''):
 						print('[' + str(e) + ']', end='')
 					print('')
 
-
 def listAllCourses():
 	count = 0
 	for category in docdata['docs']:
@@ -119,6 +162,13 @@ def listAllCourses():
 			if count % 4 == 0:
 				print('')
 	print('')
+
+def listGroupedEntries(course):
+	groupedEntryList = getCourseGroupedListNames(course)
+
+	print(course['course'] + ' grouped entries:')
+	for groupedEntry in groupedEntryList:
+		print('\t', groupedEntry['title'])
 
 def addEntryCategory():
 	categoryNames = getCategoryNames()
@@ -135,8 +185,8 @@ def addEntryCategory():
 			print('Category with name \"' + categoryName + '\" already exists')
 
 	docdata['docs'].append({ 'category': newCategoryName, 'courses': []})
-	saveData()
-	print('New category created: ' + newCategoryName)
+	if saveData():
+		print('New category created: ' + newCategoryName)
 
 
 def addEntryCourse():
@@ -160,7 +210,7 @@ def addEntryCourse():
 
 	# Find all existing course names
 	courseNames = getCourseNames(chooseCategory)
-	print(courseNames)
+	# print(courseNames)
 
 	# Enter course name and append
 	newCourseName = ''
@@ -178,17 +228,21 @@ def addEntryCourse():
 	courseDesc = input('Course description: ')
 
 	# Add
-	categoryIndex = getCategoryIndex(chooseCategory)
-	docdata['docs'][categoryIndex]['courses'].append({
+	categoryToAdd = getCategoryByName(chooseCategory)
+	if categoryToAdd is None:
+		print('Error occured; aborting...')
+		return None
+
+	categoryToAdd['courses'].append({
 		'course': newCourseName.upper(),
 		'description': courseDesc,
+		'date': getTodayDate(),
 		'entries': []
 	})
 
 	# Save
-	saveData()
-	print('Added new course: ', courseName, '(' + courseDesc + ')')
-
+	if saveData():
+		print('Added new course: ', courseName, '(' + courseDesc + ')')
 
 def addEntryDocument():
 	# Select course to add
@@ -196,13 +250,73 @@ def addEntryDocument():
 	listAllCourses()
 
 	# course select
-	courseSel = input('Choose a course (enter nothing to cancel):')
-	course = getCourseById(courseSel)
-	if course is None:
-		print('Non existent course; aborting!')
+	courseSel = input('Choose a course (enter nothing to cancel): ')
+	if courseSel == '':
 		return None
+	course = getCourseById(courseSel)
+	while course is None:
+		courseSel = input('Choose a course (enter nothing to cancel): ')
+		if courseSel == '':
+			return None
+		course = getCourseById(courseSel)
 
-def addEntry(kind):
+	# Ask for grouped entry
+	inputGrouped = input('Add to a grouped entry? (y/n): ')
+	addToGrouped = inputGrouped.lower() in ['y', 'yes']
+
+	if addToGrouped:
+		# Display a list of grouped in the course
+		listGroupedEntries(course)
+
+		# Ask which one to add to add to
+		groupEntryTitles = [groupEntry['title'].lower() for groupEntry in getCourseGroupedListNames(course)]
+		groupChooseInput = input('Choose a grouped entry to add to (enter nothing to cancel, enter a new name to create a new group): ')
+
+		# Ask for number and link
+		number = input('Enter entry number: ')
+		link = input('Enter link to the document: http://www.muchen.ca/documents/')
+		if link == '':
+			link = '../404'
+
+		if groupChooseInput.lower() not in groupEntryTitles:
+			# create a new grouped entry
+			newGrouped = {
+			 'title': groupChooseInput.capitalize(),
+			 'enum': [ number ],
+			 'links': [ link ]
+			}
+			course['entries'].append(newGrouped)
+		else:
+			groupEntry = getCourseGroupedListByTitle(course, groupChooseInput)
+			if groupEntry is None:
+				print('Error: something occured! aborting...')
+				return None
+
+			while number in groupEntry['enum']:
+				print('Entry number already taken.')
+				number = input('Enter entry number: ')
+
+			groupEntry['enum'].append(number)
+			groupEntry['links'].append(link)
+
+	else:
+		name = input('Document name: ')
+		link = input('Enter link to the document: http://www.muchen.ca/documents/')
+		flag = input('Special flag? (new | draft): ')
+
+		course['entries'].append({
+		 'title': name.capitalize(),
+		 'link': link,
+		 'flag': flag
+		})
+
+	# Update date
+	course['date'] = getTodayDate()
+
+	if saveData():
+		print('Added new entry to ' + course['course'])
+
+def addThing(kind):
 	if kind == 'category':
 		addEntryCategory()
 	elif kind == 'course':
@@ -227,7 +341,7 @@ def continueProgram():
 		if hasNoArgs:
 			displayHelp('add')
 		elif commandArgs[0] in ['category', 'course', 'document']:
-			addEntry(commandArgs[0])
+			addThing(commandArgs[0])
 		else:
 			displayHelp('add')
 	elif command == 'list':
