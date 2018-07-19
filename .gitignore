@@ -156,3 +156,4 @@ ENV/
 # End of https://www.gitignore.io/api/node,python
 .vscode/settings.json
 /test.bat
+.DS_Store

@@ -570,7 +570,7 @@
                 {
                     "course": "MECH 431",
                     "description": "Engineering Economics",
-                    "date": "2018-05-27",
+                    "date": "2018-07-19",
                     "entries": [
                         {
                             "title": "General Economic Concepts",
@@ -590,21 +590,58 @@
                         {
                             "title": "Time Value of Money & Interests",
                             "link": "MECH431/l5",
-                            "flag": "new"
+                            "flag": ""
                         },
                         {
                             "title": "Cashflow Series",
                             "link": "MECH431/l7",
+                            "flag": ""
+                        },
+                        {
+                            "title": "Sources of Capital",
+                            "link": "MECH431/l7a",
                             "flag": "new"
                         },
                         {
+                            "title": "Present Worth Analysis",
+                            "link": "MECH431/l8",
+                            "flag": "new"
+                        },
+                        {
+                            "title": "Equivalent Annual Cashflow Analysis",
+                            "link": "MECH431/l9",
+                            "flag": "new"
+                        },
+                        {
+                            "title": "Rate of Return Analysis",
+                            "link": "MECH431/l10",
+                            "flag": "new"
+                        },
+                        {
+                            "title": "Incremental Analysis",
+                            "link": "MECH431/l11",
+                            "flag": "new"
+                        },
+                        {
+                            "title": "Future Value Analysis & Benefit Cost Ratio",
+                            "link": "MECH431/l12",
+                            "flag": "new"
+                        },
+                        {
+                            "title": "Sensitivity Analysis",
+                            "link": "MECH431/l13",
+                            "flag": "wip"
+                        },
+                        {
                             "title": "Conference",
-                            "enum": [ 1, 2, 3, 4 ],
+                            "enum": [ 1, 3, 4, 5, 6, 7 ],
                             "links": [
                                 "MECH431/c1",
-                                "MECH431/c2",
                                 "MECH431/c3",
-                                "MECH431/c4d"
+                                "MECH431/c4",
+                                "MECH431/c5",
+                                "MECH431/c6",
+                                "MECH431/c7"
                             ]
                         },
                         {
