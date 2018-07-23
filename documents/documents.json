@@ -600,36 +600,46 @@
                         {
                             "title": "Sources of Capital",
                             "link": "MECH431/l7a",
-                            "flag": "new"
+                            "flag": ""
                         },
                         {
                             "title": "Present Worth Analysis",
                             "link": "MECH431/l8",
-                            "flag": "new"
+                            "flag": ""
                         },
                         {
                             "title": "Equivalent Annual Cashflow Analysis",
                             "link": "MECH431/l9",
-                            "flag": "new"
+                            "flag": ""
                         },
                         {
                             "title": "Rate of Return Analysis",
                             "link": "MECH431/l10",
-                            "flag": "new"
+                            "flag": ""
                         },
                         {
                             "title": "Incremental Analysis",
                             "link": "MECH431/l11",
-                            "flag": "new"
+                            "flag": ""
                         },
                         {
                             "title": "Future Value Analysis & Benefit Cost Ratio",
                             "link": "MECH431/l12",
-                            "flag": "new"
+                            "flag": ""
                         },
                         {
                             "title": "Sensitivity Analysis",
                             "link": "MECH431/l13",
+                            "flag": "new"
+                        },
+                        {
+                            "title": "Risk Analysis I (Probability)",
+                            "link": "MECH431/l14",
+                            "flag": "draft"
+                        },
+                        {
+                            "title": "Risk Analysis II (Simulation)",
+                            "link": "MECH431/l15",
                             "flag": "draft"
                         },
                         {
@@ -656,9 +666,11 @@
                         },
                         {
                             "title": "Assignment",
-                            "enum": [ 1 ],
+                            "enum": [ 1, 2, 3 ],
                             "links": [
-                                "MECH431/asn1"
+                                "MECH431/asn1",
+                                "MECH431/asn2",
+                                "MECH431/asn3"
                             ]
                         }
                     ]
