@@ -19,6 +19,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script language="javascript" type="text/javascript" src="../js/default.js"></script>
 <style>
+:root {
+    --theme-color: #235;
+}
 .jumbotron { background: #222; }
 @media print {
     body { -webkit-print-color-adjust: exact !important; }
@@ -30,7 +33,7 @@
 section.resume-panel { padding: 0; }
 section.resume-panel > h2 {
     color: white !important;
-    background-color: #235 !important;
+    background-color: var(--theme-color) !important;
     font-size: 1.3em;
     padding: 0.1em 0.5em;
     margin: 2px 1px;
@@ -48,7 +51,7 @@ div.progress-container > div.attr-progress {
     left: 0;
     top: 0;
     width: 0;
-    background-color: #235 !important;
+    background-color: var(--theme-color) !important;
     height: 100%;
     transition: all 1s ease-in-out;
 }
@@ -106,8 +109,8 @@ p.activity-list > span { border: 1px solid #EEE; }
                             <strong>Personal</strong>
                             <p>i@muchen.ca</p>
                             <p>(778) 952-9222</p>
-                            <p>MD0544 2202 Lower Mall</p>
-                            <p>Vancouver, BC, Canada, V6T 1Z4</p>
+                            <p>3135 Trelle Loop NW</p>
+                            <p>Edmonton, AB, Canada, T6R 0A1</p>
                         </div>
                         <div class="resume-block col-lg-12 col-6">
                             <strong>Co-op Office</strong>
@@ -181,7 +184,7 @@ p.activity-list > span { border: 1px solid #EEE; }
                 <div class="resume-block">
                     <div class="work">
                         <h3>Electronic Arts - BioWare Edmonton</h3>
-                        <p class='position'>Associate Developer Co-op (May 2018 - Present)</p>
+                        <p class="position">Associate Developer Co-op (May 2018 - Present)</p>
                         <ul>
                             <li>Wrote C++ code for the Frostbite engine and Anthem's game code that builds the UI</li>
                             <li>Wrote upgrade scripts in Python that modifies and validates asset files and XML in bulk</li>
@@ -190,7 +193,7 @@ p.activity-list > span { border: 1px solid #EEE; }
                     </div>
                     <div class="work">
                         <h3>UBC Department of Computer Science</h3>
-                        <p class='position'>Teaching Assistant (January 2018 - Present)</p>
+                        <p class="position">Teaching Assistant (January 2018 - Present)</p>
                         <ul>
                             <li>Assisted students to learn C programming by answer in-class questions clearly</li>
                             <li>Supervised students in programming labs and marked lab submissions using an automated script I wrote</li>
@@ -198,7 +201,7 @@ p.activity-list > span { border: 1px solid #EEE; }
                     </div>
                     <div class="work">
                         <h3>Vital Mechanics Research Inc.</h3>
-                        <p class='position'>Software Developer (Co-op) (May-September 2017)</p>
+                        <p class="position">Software Developer (Co-op) (May-September 2017)</p>
                         <ul>
                             <li>Developed applications in Qt GUI Framework using C++ and JavaScript</li>
                             <li>Maintained clean code that follows Model-View-Controller software structure</li>
@@ -207,7 +210,7 @@ p.activity-list > span { border: 1px solid #EEE; }
                     </div>
                     <div class="work">
                         <h3>University of Alberta</h3>
-                        <p class='position'>High School Software Intern (June-August 2014)</p>
+                        <p class="position">High School Software Intern (June-August 2014)</p>
                         <ul>
                             <li>Developed Android tablet game based on Box2D engine in Java and Android SDK</li>
                             <li>Implemented haptic and audio feedback and physics-enabled obstacles</li>
