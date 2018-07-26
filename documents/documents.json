@@ -570,7 +570,7 @@
                 {
                     "course": "MECH 431",
                     "description": "Engineering Economics",
-                    "date": "2018-07-19",
+                    "date": "2018-07-22",
                     "entries": [
                         {
                             "title": "General Economic Concepts",
@@ -635,7 +635,7 @@
                         {
                             "title": "Risk Analysis I (Probability)",
                             "link": "MECH431/l14",
-                            "flag": "draft"
+                            "flag": ""
                         },
                         {
                             "title": "Risk Analysis II (Simulation)",
