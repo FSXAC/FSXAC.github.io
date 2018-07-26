@@ -19,6 +19,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script language="javascript" type="text/javascript" src="../js/default.js"></script>
 <style>
+:root {
+    --theme-color: #235;
+}
 .jumbotron { background: #222; }
 @media print {
     body { -webkit-print-color-adjust: exact !important; }
@@ -30,7 +33,7 @@
 section.resume-panel { padding: 0; }
 section.resume-panel > h2 {
     color: white !important;
-    background-color: #235 !important;
+    background-color: var(--theme-color) !important;
     font-size: 1.3em;
     padding: 0.1em 0.5em;
     margin: 2px 1px;
@@ -48,7 +51,7 @@ div.progress-container > div.attr-progress {
     left: 0;
     top: 0;
     width: 0;
-    background-color: #235 !important;
+    background-color: var(--theme-color) !important;
     height: 100%;
     transition: all 1s ease-in-out;
 }
@@ -65,7 +68,7 @@ div.progress-container > div.attr-progress {
 p.activity-list { margin: 0; line-height: 2.5rem }
 p.activity-list > span { border: 1px solid #EEE; }
 #studyProgress { width: 75%; }
-#workProgress { width: 40%; }
+#workProgress { width: 55%; }
 .proj-showcase { padding: 0 0.2em; }
 .proj-showcase:first-child { padding-left: 15px; }
 .proj-showcase:last-child { padding-right: 15px; }
@@ -106,8 +109,8 @@ p.activity-list > span { border: 1px solid #EEE; }
                             <strong>Personal</strong>
                             <p>i@muchen.ca</p>
                             <p>(778) 952-9222</p>
-                            <p>MD0544 2202 Lower Mall</p>
-                            <p>Vancouver, BC, Canada, V6T 1Z4</p>
+                            <p>3135 Trelle Loop NW</p>
+                            <p>Edmonton, AB, Canada, T6R 0A1</p>
                         </div>
                         <div class="resume-block col-lg-12 col-6">
                             <strong>Co-op Office</strong>
@@ -141,12 +144,12 @@ p.activity-list > span { border: 1px solid #EEE; }
                                 </div>
                             </div>
                             <div class="proj-showcase col-8">
-                                <p class='progress-p'>2/5 work terms completed</p>
+                                <p class='progress-p'>3/5 work terms completed</p>
                             </div>
                         </div>
                         <div class="resume-attr">
-                            <p>Available for 4, 8, 12, or 16 months</p>
-                            <p>Starting May 2018</p>
+                            <p>Available for 4 or 8 months</p>
+                            <p>Starting January 2019</p>
                         </div>
                     </div>
                 </section>
@@ -181,15 +184,16 @@ p.activity-list > span { border: 1px solid #EEE; }
                 <div class="resume-block">
                     <div class="work">
                         <h3>Electronic Arts - BioWare Edmonton</h3>
-                        <p class='position'>Associate Developer (May 2018 - Present)</p>
+                        <p class="position">Associate Developer Co-op (May 2018 - Present)</p>
                         <ul>
                             <li>Wrote C++ code for the Frostbite engine and Anthem's game code that builds the UI</li>
                             <li>Wrote upgrade scripts in Python that modifies and validates asset files and XML in bulk</li>
                             <li>Used Perforce and CodeCollaborator for version control and code review</li>
                         </ul>
-                        
+                    </div>
+                    <div class="work">
                         <h3>UBC Department of Computer Science</h3>
-                        <p class='position'>Teaching Assistant (January 2018 - Present)</p>
+                        <p class="position">Teaching Assistant (January 2018 - Present)</p>
                         <ul>
                             <li>Assisted students to learn C programming by answer in-class questions clearly</li>
                             <li>Supervised students in programming labs and marked lab submissions using an automated script I wrote</li>
@@ -197,7 +201,7 @@ p.activity-list > span { border: 1px solid #EEE; }
                     </div>
                     <div class="work">
                         <h3>Vital Mechanics Research Inc.</h3>
-                        <p class='position'>Software Developer (Co-op) (May-September 2017)</p>
+                        <p class="position">Software Developer (Co-op) (May-September 2017)</p>
                         <ul>
                             <li>Developed applications in Qt GUI Framework using C++ and JavaScript</li>
                             <li>Maintained clean code that follows Model-View-Controller software structure</li>
@@ -206,7 +210,7 @@ p.activity-list > span { border: 1px solid #EEE; }
                     </div>
                     <div class="work">
                         <h3>University of Alberta</h3>
-                        <p class='position'>High School Software Intern (June-August 2014)</p>
+                        <p class="position">High School Software Intern (June-August 2014)</p>
                         <ul>
                             <li>Developed Android tablet game based on Box2D engine in Java and Android SDK</li>
                             <li>Implemented haptic and audio feedback and physics-enabled obstacles</li>
@@ -219,25 +223,8 @@ p.activity-list > span { border: 1px solid #EEE; }
                 <h2>Technical Projects</h2>
                 <div class="resume-block">
                     <div id="projectContainer" class="row">
-                        <div class="proj-showcase col-3">
-                            <h4>Sleep Tracker Webapp</h4>
-                            <small>September 2017</small>
-                            <p>Uses realtime database and authentication to keep track of sleep statistics</p>
-                        </div>
-                        <div class="proj-showcase col-3">
-                            <h4>CircuitDraw Webapp</h4>
-                            <small>July-August 2017</small>
-                            <p>Features common electrical parts and circuits can be saved and reloaded via JSON</p>
-                        </div>
-                        <div class="proj-showcase col-3">
-                            <h4>Magnetic Field Track Robot</h4>
-                            <small>April 2017</small>
-                            <p>Microcontroller robot car that follows a wire that carries alternating current; commands are transmitted using the same wire</p>
-                        </div>
-                        <div class="proj-showcase col-3">
-                            <h4>3D Game with custom Controller</h4>
-                            <small>April 2017</small>
-                            <p>Built DIY game controller with microcontroller that communicates via serial to a 3D game (programed in Processing)</p>
+                        <div class="proj-showcase col-12">
+                            <i>Something went wrong while loading projects; reload page or...</i>
                         </div>
                     </div>
                     <a href="/projects" class="btn btn-xs btn-outline-secondary" style="width: 100%">Go to <u>muchen.ca/projects</u> for more details and projects</a>
@@ -272,12 +259,13 @@ p.activity-list > span { border: 1px solid #EEE; }
                 <h2>Hobbies + Activities</h2>
                 <div class="resume-block">
                     <p class="activity-list">
-                        <span class="btn btn-xs btn-outline-secondary">Hackathon</span>
+                        <span class="btn btn-xs btn-outline-secondary">Hackathons</span>
                         <span class="btn btn-xs btn-outline-secondary">Programming Challenges</span>
                         <span class="btn btn-xs btn-outline-secondary">DIY Electronics</span>
-                        <span class="btn btn-xs btn-outline-secondary">Computer Gaming</span>
                         <span class="btn btn-xs btn-outline-secondary">Photography</span>
-                        <span class="btn btn-xs btn-outline-secondary">Graphic Design</span>
+                        <span class="btn btn-xs btn-outline-secondary">Video Gaming</span>
+                        <span class="btn btn-xs btn-outline-secondary">General Fitness</span>
+                        <span class="btn btn-xs btn-outline-secondary">Swimming</span>
                     </p>
                 </div>
             </section>
