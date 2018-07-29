@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Accept Your Award</title>
+    <style>
+        button {
+            display: inline-block;
+            margin: 4px;
+        }
+        body {
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div style="height: 400px;"></div>
+    <div id="ad" style="display: inline-block; overflow: hidden; width: 0; transition: all 0.1s ease;">
+        oof!
+    </div>
+    <button>Accept with Reduced Amount</button>
+    <button>Accept with Title Only</button>
+    <button>Decline</button>
+    <button id="accept-button">Accept</button>
+</body>
+<script>
+    document.getElementById('accept-button').addEventListener("mouseenter", function() {
+        document.getElementById('ad').style.width = "80px";
+        // alert("alert!");
+    });
+</script>
+</html>
