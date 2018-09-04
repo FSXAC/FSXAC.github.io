@@ -83,7 +83,7 @@ p.activity-list > span { border: 1px solid #EEE; }
     <div class="container">
         <h1 class="display-4 text-light">Resume</h1>
         <p class="text-light">Use the filter below to taylor the content on the Resume.</p>
-        <p class="text-light">Type <kbd>Ctrl+P</kbd> to print to file or export as PDF.</p>
+        <p class="text-light">Use <kbd>Ctrl+P</kbd> or <a id="printDocBtn" href="#">this link</a> to print to file or export as PDF.</p>
         <div class="btn-group mt-3" role="group" aria-label="...">
             <button id="filterBtnAll" type="button" class="btn btn-primary">All</button>
             <button id="filterBtnCode" type="button" class="btn btn-default">Programming</button>
@@ -228,7 +228,7 @@ p.activity-list > span { border: 1px solid #EEE; }
                             <i>Something went wrong while loading projects; reload page or...</i>
                         </div>
                     </div>
-                    <a href="/projects" class="btn btn-xs btn-outline-secondary" style="width: 100%">Go to <u>muchen.ca/projects</u> for more details and projects</a>
+                    <a href="/projects" class="btn btn-xs btn-outline-secondary" style="width: 100%">Go to <u>muchen.ca/projects</u> for more detail and projects</a>
                 </div>
             </section>
             <section class="resume-panel">
@@ -349,6 +349,10 @@ p.activity-list > span { border: 1px solid #EEE; }
         $('#filterBtnElec').on('click', function() {filterHandler('elec')});
         $('#filterBtnMech').on('click', function() {filterHandler('mech')});
         
+        // Print button
+        $('#printDocBtn').on('click', () => {
+            print();
+        });
     });
 
     function filterHandler(filter) {
