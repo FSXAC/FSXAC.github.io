@@ -11,7 +11,7 @@
             "description": "Built and programmed PID controllers for 2-DOF spherical wrist controlled laser pointers that draws shapes, using DC commutating motors built from scratch.",
             "details": "",
             "scope": "course",
-            "contributors": ["Muchen He", "Ou (Leo) Liu", "LuFei Liu", "Wenoa Teves"],
+            "contributors": ["Muchen He", "Leo Liu", "LuFei Liu", "Wenoa Teves"],
             "tech": [
                 "Arduino",
                 "C++",
@@ -28,6 +28,8 @@
                 "Electronic Tools"
             ],
             "links": {
+                "Blog 1": "https://www.muchen.ca/blog/elec/motor_control_part1/",
+                "Blog 2": "https://www.muchen.ca/blog/elec/motor_control_part2/"
             },
             "worthy": true,
             "thumbnail": ""
@@ -260,7 +262,7 @@
             "details": "Physical devices are mounted to give feedback from the game: a fan is attached that spins faster as the player moves faster in game; a speaker buzzes when the player takes damage in the game.",
             "scope": "independent",
             "contributors": ["Muchen He"],
-            "tech": ["Oscilloscope", "H-Bridge", "Soldering iron", "Processing", "SPI"],
+            "tech": ["Oscilloscope", "H-Bridge", "Soldering iron", "Processing", "SPI Protocol"],
             "links": {},
             "worthy": true,
             "thumbnail": null

@@ -2,7 +2,7 @@
 var $container;
 
 // Project template replaceable keys
-var rp = {
+const rp = {
     year: '{{year}}',
     blocks: '{{blocks}}',
     block: '{{block}}',
@@ -18,7 +18,7 @@ var rp = {
     text: '{{text}}'
 };
 
-var templateColor = {
+const templateColor = {
     green: 'success',
     yellow: 'warning',
     blue: 'primary',
@@ -26,12 +26,26 @@ var templateColor = {
     red: 'danger'
 };
 
-var templateIcon = {
+const templateIcon = {
     chip: 'chip.svg',
     code: 'code.svg',
     cube: 'cube.svg',
     tools: 'tools.svg'
 };
+
+const scopeMappings = {
+    'independent': 'Independent Project',
+    'course': 'Course Project',
+    'open': 'Open Source Project',
+    'hack': 'Hackathon Project',
+    'competition': 'Competition'
+}
+
+const contributorEnabledScopes = [
+    'course',
+    'hack',
+    'competition'
+]
 
 /* Set global variable $container to reference the DOM element
  * @param container JQuery object of the DOM
@@ -202,14 +216,60 @@ function renderProject(project, options) {
     outHtml += '<div class="timeline-body">';
     outHtml += '<h2>' + project.name + '</h2>';
     outHtml += '<p class="timeline-date">' + projectDate + '</p>';
+    
+    // Add scope
+    let infoHtml = '';
+    const projectScope = project.scope;
+    if (projectScope)
+    {
+        infoHtml += '[';
+        infoHtml += scopeMappings[project.scope];
+        infoHtml += ']';
+    }
+
+    // Add contributors
+    const projectContributors = project.contributors;
+    if (contributorEnabledScopes.indexOf(projectScope) >= 0) {
+        if (projectContributors.length > 1) {
+            infoHtml += '<em> Contributors: ';
+            for (let i = 0; i < projectContributors.length; i++) {
+                infoHtml += projectContributors[i];
+                if (i != projectContributors.length - 1) {
+                    infoHtml += ', ';
+                }
+            }
+            infoHtml += '</em>'
+        }
+    }
+
+    if (infoHtml.length != 0) {
+        outHtml += '<p class="text-muted">'
+        outHtml += infoHtml;
+        outHtml += '</p>';
+    }
 
     if (projectImg !== null && projectImg !== undefined && projectImg !== '') {
         outHtml += '<img src="' + projectImg + '">';
     }
 
-    outHtml += '<p class="text-muted">';
+    outHtml += '<p class="">';
     outHtml += project.description;
     outHtml += '</p>';
+
+    // Tech used
+    const projectTech = project.tech;
+    if (projectTech.length != 0) {
+        outHtml += '<p class="small">Tech used: '
+        for (let i = 0; i < projectTech.length; i++) {
+
+            // Make upper case and add to html
+            outHtml += projectTech[i].replace(/^\w/, c => c.toUpperCase())
+            if (i != projectTech.length - 1) {
+                outHtml += ', ';
+            }
+        }
+        outHtml += '</p>';
+    }
 
     Object.keys(project.links).forEach(function(key, index) {
         outHtml += '<a class="btn btn-sm btn-outline-secondary" href="' + project.links[key] + '">';
