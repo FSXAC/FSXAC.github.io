@@ -12,6 +12,7 @@
 <!-- css -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="../css/default.css" />
 <!-- js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -70,8 +71,8 @@ p.activity-list > span { border: 1px solid #EEE; }
 #studyProgress { width: 75%; }
 #workProgress { width: 55%; }
 .proj-showcase { padding: 0 0.2em; }
-.proj-showcase:first-child { padding-left: 15px; }
-.proj-showcase:last-child { padding-right: 15px; }
+.proj-showcase:nth-child(4n+1) { padding-left: 15px; }
+.proj-showcase:nth-child(4n+4) { padding-right: 15px; }
 .proj-showcase > h4 { margin: 0; }
 .proj-showcase > small { color: #555; }
 .progress-p { margin-top: 1px; }
@@ -82,17 +83,62 @@ p.activity-list > span { border: 1px solid #EEE; }
 <header class="jumbotron jumbotron-fluid px-3 py-5">
     <div class="container">
         <h1 class="display-4 text-light">Resume</h1>
-        <p class="text-light">Use the filter below to taylor the content on the Resume.</p>
-        <p class="text-light">Use <kbd>Ctrl+P</kbd> or <a id="printDocBtn" href="#">this link</a> to print to file or export as PDF.</p>
+        <p class="text-light">Use the setting below to taylor the content on the Resume.</p>
         <div class="btn-group mt-3" role="group" aria-label="...">
-            <button id="filterBtnAll" type="button" class="btn btn-primary">All</button>
-            <button id="filterBtnCode" type="button" class="btn btn-default">Programming</button>
-            <button id="filterBtnDesign" type="button" class="btn btn-default">Design</button>
-            <button id="filterBtnElec" type="button" class="btn btn-default">Electrical</button>
-            <button id="filterBtnMech" type="button" class="btn btn-default">Mechanical</button>
+            <button id="settingsBtn" type="button" class="btn btn-secondary" data-toggle="modal" data-target="#settingsModal">Settings</button>
+            <button id="buildBtn" type="button" class="btn btn-primary">Build and Print</button>
         </div>
     </div>
 </header>
+
+<div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLongTitle">Resume Settings</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <section>
+                <h5>Section Visiblity</h5>
+                <form class="row">
+                    <label class="col-4"><input type="checkbox" id="checkSkills" checked="checked"> Skills</label>
+                    <label class="col-4"><input type="checkbox" id="checkWorkXP" checked="checked"> Work Experience</label>
+                    <label class="col-4"><input type="checkbox" id="checkProjects" checked="checked"> Projects</label>
+                    <label class="col-4"><input type="checkbox" id="checkAffil" checked="checked"> Affiliations</label>
+                    <label class="col-4"><input type="checkbox" id="checkAwards" checked="checked"> Awards</label>
+                    <label class="col-4"><input type="checkbox" id="checkHobby" checked="checked"> Hobbies</label>
+                </form>
+                </section>
+                <hr>
+                <h5>Projects</h5>
+                <form>
+                    Max. number of projects to display: 
+                    <select name="numProjects">
+                        <option value="3">3</option>
+                        <option value="6">6</option>
+                        <option value="9">9</option>
+                        <option value="12">12</option>
+                    </select>
+                </form>
+                <!-- TODO: make it a form -->
+                <div class="btn-group mt-3" role="group" aria-label="...">
+                    <button id="filterBtnAll" type="button" class="btn btn-default">All</button>
+                    <button id="filterBtnCode" type="button" class="btn btn-default">Programming</button>
+                    <button id="filterBtnDesign" type="button" class="btn btn-default">Design</button>
+                    <button id="filterBtnElec" type="button" class="btn btn-default">Electrical</button>
+                    <button id="filterBtnMech" type="button" class="btn btn-default">Mechanical</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="settingsSaveBtn" type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id='main' class="container">
     <div class="row">
         <div class="col-12">
@@ -156,7 +202,7 @@ p.activity-list > span { border: 1px solid #EEE; }
             </div>
         </div>
         <div class="col-lg-8 col-12">
-            <section class="resume-panel">
+            <section id="skills" class="resume-panel">
                 <h2>Technical Skills</h2>
                 <div class="resume-block">
                     <table>
@@ -179,24 +225,23 @@ p.activity-list > span { border: 1px solid #EEE; }
                     </table>
                 </div>
             </section>
-            <section class="resume-panel">
+            <section id="work-xp" class="resume-panel">
                 <h2>Technical Work Experience</h2>
                 <div class="resume-block">
                     <div class="work">
                         <h3>Electronic Arts - BioWare Edmonton</h3>
                         <p class="position">Associate Developer Co-op (May 2018 - Present)</p>
                         <ul>
-                            <li>Added UI features and improved existing entities in EA's Frostbite engine and upcoming game Anthem's game in C++ and C#</li>
-                            <li>Wrote upgrade scripts in Python that modifies and validates asset files and XML in bulk</li>
-                            <li>Fixed UI/UX, keyboard and mouse inputs related bugs that would directly reflect in gameplay</li>
-                            <li>Used Perforce for version control and Code-Collaborator code review</li>
+                            <li>Added and improved UI and engine features in EA's Frostbite engine and upcoming game Anthem using C++ and C#</li>
+                            <li>Wrote upgrade scripts in Python that modify and validate XML files and game assets in bulk</li>
+                            <li>Fixed UI/UX, keyboard and mouse inputs related bugs that would directly reflect in gameplay; they are visible in game trailers with 3.4 million views</li>
                         </ul>
                     </div>
                     <div class="work">
                         <h3>UBC Department of Computer Science</h3>
                         <p class="position">Teaching Assistant (January 2018 - Present)</p>
                         <ul>
-                            <li>Assisted students to learn C programming by answer in-class questions clearly</li>
+                            <li>Assisted students to learn C programming by responding to students' in-class questions in a clear and simple manner</li>
                             <li>Supervised students in programming labs and marked lab submissions using an automated script I wrote in Python</li>
                         </ul>
                     </div>
@@ -220,7 +265,7 @@ p.activity-list > span { border: 1px solid #EEE; }
                     </div>
                 </div>
             </section>
-            <section class="resume-panel">
+            <section id="projects" class="resume-panel">
                 <h2>Technical Projects</h2>
                 <div class="resume-block">
                     <div id="projectContainer" class="row">
@@ -231,7 +276,7 @@ p.activity-list > span { border: 1px solid #EEE; }
                     <a href="/projects" class="btn btn-xs btn-outline-secondary" style="width: 100%">Go to <u>muchen.ca/projects</u> for more detail and projects</a>
                 </div>
             </section>
-            <section class="resume-panel">
+            <section id="prof-aff" class="resume-panel">
                 <h2>Professional Affiliations</h2>
                 <div class="resume-block">
                     <table>
@@ -242,7 +287,7 @@ p.activity-list > span { border: 1px solid #EEE; }
                     </table>
                 </div>
             </section>
-            <section class="resume-panel">
+            <section id="awards" class="resume-panel">
                 <h2>Awards</h2>
                 <div class="resume-block">
                     <table>
@@ -256,7 +301,7 @@ p.activity-list > span { border: 1px solid #EEE; }
                     </table>
                 </div>
             </section>
-            <section class="resume-panel">
+            <section id="hobbies" class="resume-panel">
                 <h2>Hobbies + Activities</h2>
                 <div class="resume-block">
                     <p class="activity-list">
@@ -286,6 +331,15 @@ p.activity-list > span { border: 1px solid #EEE; }
     }
     var projs;
 
+    const sectionVisbilityInputIdMapping = {
+        'checkSkills': 'skills',
+        'checkWorkXP': 'work-xp',
+        'checkProjects': 'projects',
+        'checkAffil': 'prof-aff',
+        'checkAwards': 'awards',
+        'checkHobby': 'hobbies'
+    }
+
     // Populate HTML with project JSON
     // open project JSON
     function readProjects() {
@@ -312,7 +366,8 @@ p.activity-list > span { border: 1px solid #EEE; }
 
         var htmlOut = '';
         var count = 0;
-        for (var i = 0, l = projects.length; i < l && count < 4; i++) {
+
+        for (var i = 0, l = projects.length; i < l && count < 12; i++) {
             curr = projects[i]
 
             if (curr.type != filter && filter != 'all') continue;
@@ -350,13 +405,35 @@ p.activity-list > span { border: 1px solid #EEE; }
         $('#filterBtnMech').on('click', function() {filterHandler('mech')});
         
         // Print button
-        $('#printDocBtn').on('click', () => {
+        $('#buildBtn').on('click', () => {
             print();
         });
+
+        $('#settingsSaveBtn').on('click', () => {
+            setSectionVisbility();
+        })
+
+        // set section visibility
+        setSectionVisbility();
     });
 
     function filterHandler(filter) {
         displayProjects(projs, filter);
+    }
+
+    function setSectionVisbility() {
+        const inputIds = Object.keys(sectionVisbilityInputIdMapping);
+        for (let i = 0; i < inputIds.length; i++) {
+            const inputId = inputIds[i];
+            const source = $('#' + inputId);
+            const target = $('#' + sectionVisbilityInputIdMapping[inputId]);
+
+            if (source.prop('checked')) {
+                target.show();
+            } else {
+                target.hide();
+            }
+        }
     }
 </script>
 </body>
