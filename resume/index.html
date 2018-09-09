@@ -26,6 +26,8 @@
 .jumbotron { background: #235; }
 @media print {
     body { -webkit-print-color-adjust: exact !important; }
+    .medium-font { font-size: medium; }
+    .large-font { font-size: large; }
     .navbar { display: none; }
     footer { display: none; }
     .filter { display: none; }
@@ -73,7 +75,7 @@ p.activity-list > span { border: 1px solid #EEE; }
 .proj-showcase { padding: 0 0.2em; }
 .proj-showcase:nth-child(4n+1) { padding-left: 15px; }
 .proj-showcase:nth-child(4n+4) { padding-right: 15px; }
-.proj-showcase > h4 { margin: 0; }
+.proj-showcase > h4 { margin: 0; font-size: 1.3em;}
 .proj-showcase > small { color: #555; }
 .progress-p { margin-top: 1px; }
 </style>
@@ -102,36 +104,49 @@ p.activity-list > span { border: 1px solid #EEE; }
             </div>
             <div class="modal-body">
                 <section>
-                <h5>Section Visiblity</h5>
-                <form class="row">
-                    <!-- TODO: make full width for mobile -->
-                    <label class="col-4"><input type="checkbox" id="checkSkills" checked="checked"> Skills</label>
-                    <label class="col-4"><input type="checkbox" id="checkWorkXP" checked="checked"> Work Experience</label>
-                    <label class="col-4"><input type="checkbox" id="checkProjects" checked="checked"> Projects</label>
-                    <label class="col-4"><input type="checkbox" id="checkAffil" checked="checked"> Affiliations</label>
-                    <label class="col-4"><input type="checkbox" id="checkAwards" checked="checked"> Awards</label>
-                    <label class="col-4"><input type="checkbox" id="checkHobby" checked="checked"> Hobbies</label>
-                </form>
+                    <h5>Section Visiblity</h5>
+                    <form class="row">
+                        <!-- TODO: make full width for mobile -->
+                        <label class="col-4"><input type="checkbox" id="checkSkills" checked="checked"> Skills</label>
+                        <label class="col-4"><input type="checkbox" id="checkWorkXP" checked="checked"> Work Experience</label>
+                        <label class="col-4"><input type="checkbox" id="checkProjects" checked="checked"> Projects</label>
+                        <label class="col-4"><input type="checkbox" id="checkAffil" checked="checked"> Affiliations</label>
+                        <label class="col-4"><input type="checkbox" id="checkAwards" checked="checked"> Awards</label>
+                        <label class="col-4"><input type="checkbox" id="checkHobby" checked="checked"> Hobbies</label>
+                    </form>
                 </section>
                 <hr>
-                <h5>Projects</h5>
-                <form>
-                    Max. number of projects to display: 
-                    <select name="numProjects">
-                        <option value="3">3</option>
-                        <option value="6">6</option>
-                        <option value="9">9</option>
-                        <option value="12">12</option>
-                    </select>
-                </form>
-                <!-- TODO: make it a form -->
-                <div class="btn-group mt-3" role="group" aria-label="...">
-                    <button id="filterBtnAll" type="button" class="btn btn-default">All</button>
-                    <button id="filterBtnCode" type="button" class="btn btn-default">Programming</button>
-                    <button id="filterBtnDesign" type="button" class="btn btn-default">Design</button>
-                    <button id="filterBtnElec" type="button" class="btn btn-default">Electrical</button>
-                    <button id="filterBtnMech" type="button" class="btn btn-default">Mechanical</button>
-                </div>
+                <section>
+                    <h5>Projects</h5>
+                    <form>
+                        Max. number of projects to display: 
+                        <select id="numProjectsSelect" name="numProjects">
+                            <option value="4">4</option>
+                            <option value="8">8</option>
+                            <option value="12">12</option>
+                        </select>
+                    </form>
+                    <!-- TODO: make it a form -->
+                    <div class="btn-group mt-3" role="group" aria-label="...">
+                        <button id="filterBtnAll" type="button" class="btn btn-default">All</button>
+                        <button id="filterBtnCode" type="button" class="btn btn-default">Programming</button>
+                        <button id="filterBtnDesign" type="button" class="btn btn-default">Design</button>
+                        <button id="filterBtnElec" type="button" class="btn btn-default">Electrical</button>
+                        <button id="filterBtnMech" type="button" class="btn btn-default">Mechanical</button>
+                    </div>
+                </section>
+                <hr>
+                <section>
+                    <h5>Printing</h5>
+                    <form>
+                        Font size: 
+                        <select id="printFontSizeSelect" name="fontSize">
+                            <option value="default">Default</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                        </select>
+                    </form>
+                </section>
             </div>
             <div class="modal-footer">
                 <button id="settingsSaveBtn" type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
@@ -145,7 +160,7 @@ p.activity-list > span { border: 1px solid #EEE; }
         <div class="col-12">
             <img src="ubc.png" height="56px">
             <h1>Muchen He</h1>
-            <p class="text-muted">UBC Electrical Engineering Undergraduate (Co-op Program)</p>
+            <p class="text-muted">UBC Electrical Engineering Undergraduate (Co-op Program) - 85.4% GPA</p>
         </div>
         <div class="col-lg-4 col-12">
             <div class="row row-quiet">
@@ -175,22 +190,22 @@ p.activity-list > span { border: 1px solid #EEE; }
                             <p><span class="fa fa-graduation-cap"></span> May 2020 anticipated date of graduation</p>
                         </div>
                         <div class="resume-attr row">
-                            <div class="proj-showcase col-4">
+                            <div class="proj-showcase col-3">
                                 <div class="progress-container">
                                     <div id="studyProgress" class="attr-progress"></div>
                                 </div>
                             </div>
-                            <div class="proj-showcase col-8">
+                            <div class="proj-showcase col-9">
                                 <p class='progress-p'>6/8 academic terms completed</p>
                             </div>
                         </div>
                         <div class="resume-attr row">
-                            <div class="proj-showcase col-4">
+                            <div class="proj-showcase col-3">
                                 <div class="progress-container">
                                     <div id="workProgress" class="attr-progress"></div>
                                 </div>
                             </div>
-                            <div class="proj-showcase col-8">
+                            <div class="proj-showcase col-9">
                                 <p class='progress-p'>3/5 work terms completed</p>
                             </div>
                         </div>
@@ -369,7 +384,13 @@ p.activity-list > span { border: 1px solid #EEE; }
         var htmlOut = '';
         var count = 0;
 
+<<<<<<< HEAD
         for (var i = 0, l = projects.length; i < l && count < 8; i++) {
+=======
+        const maxNumProjects = $('#numProjectsSelect option:selected').text();
+
+        for (var i = 0, l = projects.length; i < l && count < parseInt(maxNumProjects); i++) {
+>>>>>>> 0eeeea23f23226279f97403e3c767694632caf4b
             curr = projects[i]
 
             if (curr.type != filter && filter != 'all') continue;
@@ -413,6 +434,8 @@ p.activity-list > span { border: 1px solid #EEE; }
 
         $('#settingsSaveBtn').on('click', () => {
             setSectionVisbility();
+            setPrintSettings();
+            readProjects();
         })
 
         // set section visibility
@@ -435,6 +458,24 @@ p.activity-list > span { border: 1px solid #EEE; }
             } else {
                 target.hide();
             }
+        }
+    }
+
+    function setPrintSettings() {
+        const fontSize = $('#printFontSizeSelect option:selected').text();
+        const largeFontClass = 'large-font';
+        const mediumFontClass = 'medium-font';
+        const bodyRef = $('body');
+
+        if (fontSize === 'Large') {
+            bodyRef.removeClass(mediumFontClass);
+            bodyRef.addClass(largeFontClass);
+        } else if (fontSize === 'Medium') {
+            bodyRef.removeClass(largeFontClass);
+            bodyRef.addClass(mediumFontClass);
+        } else {
+            bodyRef.removeClass(mediumFontClass);
+            bodyRef.removeClass(largeFontClass);
         }
     }
 </script>
