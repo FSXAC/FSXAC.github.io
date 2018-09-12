@@ -79,8 +79,13 @@ p.activity-list > span { border: 1px solid #EEE; }
 #studyProgress { width: 75%; }
 #workProgress { width: 55%; }
 .proj-showcase { padding: 0 0.2em; }
-.proj-showcase:nth-child(4n+1) { padding-left: 15px; }
-.proj-showcase:nth-child(4n+4) { padding-right: 15px; }
+@media (min-width: 768px) {
+    .proj-showcase:nth-child(4n+1) { padding-left: 15px; }
+    .proj-showcase:nth-child(4n+4) { padding-right: 15px; }
+}
+@media (max-width: 768px) {
+    .proj-showcase { padding-left: 15px; }
+}
 .proj-showcase > h4 { margin: 0; font-size: 1.3em;}
 .proj-showcase > small { color: #555; }
 .progress-p { margin-top: 1px; }
@@ -115,6 +120,7 @@ p.activity-list > span { border: 1px solid #EEE; }
                         <label><input type="checkbox" id="checkHalfRow" checked="checked"> If possible, use half widths for professional affiliation and awards</label>
                     </form>
                 </section>
+                <hr>
                 <section>
                     <h5>Section Visiblity</h5>
                     <form class="row">
@@ -177,7 +183,7 @@ p.activity-list > span { border: 1px solid #EEE; }
         </div>
         <div class="col-lg-4 col-12">
             <div class="row row-quiet">
-                <section class="resume-panel col-lg-12 col-6">
+                <section class="resume-panel col-lg-12 col-sm-6 col-12">
                     <h2>Contact</h2>
                     <div class="row row-quiet">
                         <div class="resume-block col-lg-12 col-6">
@@ -196,7 +202,7 @@ p.activity-list > span { border: 1px solid #EEE; }
                         </div>
                     </div>
                 </section>
-                <section class="resume-panel col-lg-12 col-6">
+                <section class="resume-panel col-lg-12 col-sm-6 col-12">
                     <h2>Attributes</h2>
                     <div class="resume-block">
                         <div class="resume-attr">
@@ -407,7 +413,7 @@ p.activity-list > span { border: 1px solid #EEE; }
     addFooter();
     var $pc = $('#projectContainer');
     var template = {
-        open: '<div class="proj-showcase col-12 col-md-3 col-lg-3">',
+        open: '<div class="proj-showcase col-12 col-md-3">',
         title: '<h4>{title}</h4>',
         roled: '<small><i><span> ({roled})</span></i></small>',
         date: '<small>{date}</small>',
