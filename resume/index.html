@@ -26,6 +26,7 @@
 .jumbotron { background: #235; }
 @media print {
     body { -webkit-print-color-adjust: exact !important; }
+    .default-plus-font { font-size: 15px; }
     .medium-font { font-size: medium; }
     .large-font { font-size: large; }
     .navbar { display: none; }
@@ -68,8 +69,13 @@ div.progress-container > div.attr-progress {
 }
 .work > h3 { font-size: 1.3em; margin: 0;}
 .work > .position { margin-top: 0; }
+
+
+/* deprecated */
 p.activity-list { margin: 0; line-height: 2.5rem }
 p.activity-list > span { border: 1px solid #EEE; }
+
+
 #studyProgress { width: 75%; }
 #workProgress { width: 55%; }
 .proj-showcase { padding: 0 0.2em; }
@@ -103,6 +109,12 @@ p.activity-list > span { border: 1px solid #EEE; }
                 </button>
             </div>
             <div class="modal-body">
+                <section>
+                    <h5>Layout</h5>
+                    <form>
+                        <label><input type="checkbox" id="checkHalfRow" checked="checked"> If possible, use half widths for professional affiliation and awards</label>
+                    </form>
+                </section>
                 <section>
                     <h5>Section Visiblity</h5>
                     <form class="row">
@@ -142,6 +154,7 @@ p.activity-list > span { border: 1px solid #EEE; }
                         Font size: 
                         <select id="printFontSizeSelect" name="fontSize">
                             <option value="default">Default</option>
+                            <option value="default+">Default+</option>
                             <option value="medium">Medium</option>
                             <option value="large">Large</option>
                         </select>
@@ -249,7 +262,8 @@ p.activity-list > span { border: 1px solid #EEE; }
                         <p class="position">Associate Developer Co-op (May 2018 - Present)</p>
                         <ul>
                             <li>Added and improved UI and engine features in EA's Frostbite engine and upcoming game Anthem using C++ and C#</li>
-                            <li>Wrote upgrade scripts in Python that modify and validate XML files and game assets in bulk</li>
+                            <li>Wrote Python upgrade scripts to modify and validate XML and game asset files in bulk</li>
+                            <li>Developed tools for artists and scripters in UI/UX team; consolidated specifications with excellent communication</li>
                             <li>Fixed UI/UX, keyboard and mouse inputs related bugs that would directly reflect in gameplay; they are visible in game trailers with 3.4 million views</li>
                         </ul>
                     </div>
@@ -293,42 +307,96 @@ p.activity-list > span { border: 1px solid #EEE; }
                     <a href="/projects" class="btn btn-xs btn-outline-secondary" style="width: 100%">Go to <u>muchen.ca/projects</u> for more detail and projects</a>
                 </div>
             </section>
-            <section id="prof-aff" class="resume-panel">
-                <h2>Professional Affiliations</h2>
-                <div class="resume-block">
-                    <table>
-                        <tbody>
-                            <tr><td>APEGBC - IMAPS</td></tr>
-                            <tr><td>IEEE - Student Member</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-            <section id="awards" class="resume-panel">
-                <h2>Awards</h2>
-                <div class="resume-block">
-                    <table>
-                        <tbody>
-                            <tr><td>Dean's Honors List</td><td><small>2016-2018</small></td></tr>
-                            <tr><td>CTS Design Studies Best Student Award</td><td><small>2015</small></td></tr>
-                            <tr><td>Provincial Skills Canada Mechanical CADD Competition 2nd Place</td><td><small>2015</small></td></tr>
-                            <tr><td>Honors Student Award</td><td><small>2012-2015</small></td></tr>
-                            <tr><td>Alexander Rutherford Scholarship</td><td><small>2015</small></td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+
+            <div id="containedProfAffAwards" class="row row-quiet">
+                <section id="contained-prof-aff" class="resume-panel col-lg-12 col-6">
+                    <h2>Professional Affiliations</h2>
+                    <div class="resume-block">
+                        <table>
+                            <tbody>
+                                <tr><td>APEGBC - IMAPS</td></tr>
+                                <tr><td>IEEE - Student Member</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section id="contained-awards" class="resume-panel col-lg-12 col-6">
+                    <h2>Awards</h2>
+                    <div class="resume-block">
+                        <table>
+                            <tbody>
+                                <tr><td>Dean's Honors List</td><td><small>2016-2018</small></td></tr>
+                                <tr><td>CTS Design Studies Best Student Award</td><td><small>2015</small></td></tr>
+                                <tr><td>Provincial Skills Canada Mechanical CADD Competition 2nd Place</td><td><small>2015</small></td></tr>
+                                <tr><td>Honors Student Award</td><td><small>2012-2015</small></td></tr>
+                                <tr><td>Alexander Rutherford Scholarship</td><td><small>2015</small></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+            <div id="uncontainedProfAffAwards" style="display: none;">
+                <section id="prof-aff" class="resume-panel">
+                    <h2>Professional Affiliations</h2>
+                    <div class="resume-block">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>APEGBC - IMAPS</td>
+                                </tr>
+                                <tr>
+                                    <td>IEEE - Student Member</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section id="awards" class="resume-panel">
+                    <h2>Awards</h2>
+                    <div class="resume-block">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Dean's Honors List</td>
+                                    <td>
+                                        <small>2016-2018</small>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>CTS Design Studies Best Student Award</td>
+                                    <td>
+                                        <small>2015</small>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Provincial Skills Canada Mechanical CADD Competition 2nd Place</td>
+                                    <td>
+                                        <small>2015</small>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Honors Student Award</td>
+                                    <td>
+                                        <small>2012-2015</small>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Alexander Rutherford Scholarship</td>
+                                    <td>
+                                        <small>2015</small>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
             <section id="hobbies" class="resume-panel">
                 <h2>Hobbies + Activities</h2>
                 <div class="resume-block">
-                    <p class="activity-list">
-                        <span class="btn btn-xs btn-outline-secondary">Hackathons</span>
-                        <span class="btn btn-xs btn-outline-secondary">Programming Challenges</span>
-                        <span class="btn btn-xs btn-outline-secondary">DIY Electronics</span>
-                        <span class="btn btn-xs btn-outline-secondary">Photography</span>
-                        <span class="btn btn-xs btn-outline-secondary">Video Gaming</span>
-                        <span class="btn btn-xs btn-outline-secondary">General Fitness</span>
-                        <span class="btn btn-xs btn-outline-secondary">Swimming</span>
+                    <p class="text-muted">
+                        Hackathon, Programming Challenges (LeetCode, /r/DailyProgrammer), DIY Electronics (Arduino, Radio Control), Amateur Photography (Landscape, Portrait, Street Photography), Graphics Design (Adobe Photoshop/Lightroom/Illustrator) Gaming (PC, Switch), Fitness
                     </p>
                 </div>
             </section>
@@ -339,7 +407,7 @@ p.activity-list > span { border: 1px solid #EEE; }
     addFooter();
     var $pc = $('#projectContainer');
     var template = {
-        open: '<div class="proj-showcase col-3">',
+        open: '<div class="proj-showcase col-12 col-md-3 col-lg-3">',
         title: '<h4>{title}</h4>',
         roled: '<small><i><span> ({roled})</span></i></small>',
         date: '<small>{date}</small>',
@@ -349,12 +417,14 @@ p.activity-list > span { border: 1px solid #EEE; }
     var projs;
 
     const sectionVisbilityInputIdMapping = {
-        'checkSkills': 'skills',
-        'checkWorkXP': 'work-xp',
-        'checkProjects': 'projects',
-        'checkAffil': 'prof-aff',
-        'checkAwards': 'awards',
-        'checkHobby': 'hobbies'
+        'skills'                : 'checkSkills',
+        'work-xp'               : 'checkWorkXP',
+        'projects'              : 'checkProjects',
+        'prof-aff'              : 'checkAffil',
+        'contained-prof-aff'    : 'checkAffil',
+        'awards'                : 'checkAwards',
+        'contained-awards'      : 'checkAwards',
+        'hobbies'               : 'checkHobby'
     }
 
     // Populate HTML with project JSON
@@ -384,13 +454,9 @@ p.activity-list > span { border: 1px solid #EEE; }
         var htmlOut = '';
         var count = 0;
 
-<<<<<<< HEAD
-        for (var i = 0, l = projects.length; i < l && count < 8; i++) {
-=======
         const maxNumProjects = $('#numProjectsSelect option:selected').text();
 
         for (var i = 0, l = projects.length; i < l && count < parseInt(maxNumProjects); i++) {
->>>>>>> 0eeeea23f23226279f97403e3c767694632caf4b
             curr = projects[i]
 
             if (curr.type != filter && filter != 'all') continue;
@@ -435,6 +501,7 @@ p.activity-list > span { border: 1px solid #EEE; }
         $('#settingsSaveBtn').on('click', () => {
             setSectionVisbility();
             setPrintSettings();
+            setLayout();
             readProjects();
         })
 
@@ -447,13 +514,14 @@ p.activity-list > span { border: 1px solid #EEE; }
     }
 
     function setSectionVisbility() {
-        const inputIds = Object.keys(sectionVisbilityInputIdMapping);
-        for (let i = 0; i < inputIds.length; i++) {
-            const inputId = inputIds[i];
-            const source = $('#' + inputId);
-            const target = $('#' + sectionVisbilityInputIdMapping[inputId]);
+        const targets = Object.keys(sectionVisbilityInputIdMapping);
+        for (let i = 0; i < targets.length; i++) {
+            const targetId = targets[i];
+            const target = $('#' + targetId);
+            const inputId = sectionVisbilityInputIdMapping[targetId];
+            const inputSource = $('#' + inputId);
 
-            if (source.prop('checked')) {
+            if (inputSource.prop('checked')) {
                 target.show();
             } else {
                 target.hide();
@@ -465,17 +533,36 @@ p.activity-list > span { border: 1px solid #EEE; }
         const fontSize = $('#printFontSizeSelect option:selected').text();
         const largeFontClass = 'large-font';
         const mediumFontClass = 'medium-font';
+        const defaultPlusFontClass = 'default-plus-font';
         const bodyRef = $('body');
 
         if (fontSize === 'Large') {
             bodyRef.removeClass(mediumFontClass);
+            bodyRef.removeClass(defaultPlusFontClass);
             bodyRef.addClass(largeFontClass);
         } else if (fontSize === 'Medium') {
             bodyRef.removeClass(largeFontClass);
+            bodyRef.removeClass(defaultPlusFontClass);
             bodyRef.addClass(mediumFontClass);
+        } else if (fontSize === 'Default+') {
+            bodyRef.removeClass(mediumFontClass);
+            bodyRef.removeClass(largeFontClass);
+            bodyRef.addClass(defaultPlusFontClass);
         } else {
             bodyRef.removeClass(mediumFontClass);
             bodyRef.removeClass(largeFontClass);
+            bodyRef.removeClass(defaultPlusFontClass);
+        }
+    }
+
+    function setLayout() {
+        // If we want professional affliation and awards on the same row
+        if ($('#checkHalfRow').prop('checked')) {
+            $('#containedProfAffAwards').show();
+            $('#uncontainedProfAffAwards').hide();
+        } else {
+            $('#containedProfAffAwards').hide();
+            $('#uncontainedProfAffAwards').show();
         }
     }
 </script>

@@ -8,7 +8,7 @@
             },
             "ongoing": false,
             "type": "elec",
-            "description": "Built and programmed PID controllers for 2-DOF spherical wrist controlled laser pointers that draws shapes, using DC commutating motors built from scratch.",
+            "description": "Built and programmed PID controllers in C++ and MATLAB for 2-DOF spherical wrist controlled laser pointers that draws shapes, using DC commutating motors built from scratch.",
             "details": "",
             "scope": "course",
             "contributors": ["Muchen He", "Leo Liu", "LuFei Liu", "Wenoa Teves"],
