@@ -115,13 +115,6 @@ p.activity-list > span { border: 1px solid #EEE; }
             </div>
             <div class="modal-body">
                 <section>
-                    <h5>Layout</h5>
-                    <form>
-                        <label><input type="checkbox" id="checkHalfRow" checked="checked"> If possible, use half widths for professional affiliation and awards</label>
-                    </form>
-                </section>
-                <hr>
-                <section>
                     <h5>Section Visiblity</h5>
                     <form class="row">
                         <label class="col-4"><input type="checkbox" id="checkSkills" checked="checked"> Skills</label>
@@ -130,6 +123,29 @@ p.activity-list > span { border: 1px solid #EEE; }
                         <label class="col-4"><input type="checkbox" id="checkAffil" checked="checked"> Affiliations</label>
                         <label class="col-4"><input type="checkbox" id="checkAwards" checked="checked"> Awards</label>
                         <label class="col-4"><input type="checkbox" id="checkHobby" checked="checked"> Hobbies</label>
+                    </form>
+                </section>
+                <hr>
+                <section>
+                    <h5>Layout</h5>
+                    <form>
+                        <label><input type="checkbox" id="checkHalfRow" checked="checked"> If possible, use half widths for
+                            professional affiliation and awards</label>
+                        <p>
+                            UBC logo alignment:
+                            <select id="ubcLogoAlignSelect" name="ubcLogoAlign">
+                                <option value="Left">Left</option>
+                                <option value="Right">Right</option>
+                            </select>
+                        </p>
+                        <p>
+                            Header name alignment:
+                            <select id="headerNameAlignSelect" name="headerNameAlign">
+                                <option value="Left">Left</option>
+                                <option value="Center">Center</option>
+                                <option value="Right">Right</option>
+                            </select>
+                        </p>
                     </form>
                 </section>
                 <hr>
@@ -175,8 +191,10 @@ p.activity-list > span { border: 1px solid #EEE; }
 
 <div id='main' class="container">
     <div class="row">
-        <div class="col-12">
-            <img src="ubc.png" height="56px">
+        <div id="ubc-logo-container" class="col-12" style="text-align: left">
+            <img src="ubc.png" height="56px" style="">
+        </div>
+        <div id="heading-name-container" class="col-12" style="text-align: left">
             <h1>Muchen He</h1>
             <p class="text-muted">UBC Electrical Engineering Undergraduate (Co-op Program) - 85.4% GPA</p>
         </div>
@@ -302,8 +320,8 @@ p.activity-list > span { border: 1px solid #EEE; }
             </section>
             <section id="projects" class="resume-panel">
                 <h2>Technical Projects
-                    <a href="/projects" class="btn btn-xs btn-outline-secondary" style="float: right; font-size: 0.65rem; margin-top: 0.15rem;">Go to <u>muchen.ca/projects</u> for
-                    more detail and projects</a>
+                    <a href="/projects" class="btn btn-xs btn-outline-light" style="float: right; font-size: 0.65rem; margin-top: 0.15rem;">Go to <u>muchen.ca/projects</u> for
+                    more detail</a>
                 </h2>
                 <div class="resume-block">
                     <div id="projectContainer" class="row">
@@ -570,6 +588,26 @@ p.activity-list > span { border: 1px solid #EEE; }
         } else {
             $('#containedProfAffAwards').hide();
             $('#uncontainedProfAffAwards').show();
+        }
+
+        // Heading alignment
+        const logoAlign = $('#ubcLogoAlignSelect option:selected').text();
+        const logoCont = $('#ubc-logo-container');
+        const headAlign = $('#headerNameAlignSelect option:selected').text();
+        const headCont = $('#heading-name-container');
+
+        if (logoAlign === 'Left') {
+            logoCont.css('text-align', 'left');
+        } else if (logoAlign === 'Right') {
+            logoCont.css('text-align', 'right');
+        }
+
+        if (headAlign === 'Left') {
+            headCont.css('text-align', 'left');
+        } else if (headAlign === 'Right') {
+            headCont.css('text-align', 'right');
+        } else if (headAlign === 'Center') {
+            headCont.css('text-align', 'center');
         }
     }
 </script>
