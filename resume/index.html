@@ -245,10 +245,10 @@ p.activity-list > span { border: 1px solid #EEE; }
                                 <p class='progress-p'>3/5 work terms completed</p>
                             </div>
                         </div>
-                        <div class="resume-attr">
+                        <!-- <div class="resume-attr">
                             <p>Available full-time</p>
                             <p>Starting May 2020</p>
-                        </div>
+                        </div> -->
                     </div>
                 </section>
             </div>
@@ -262,7 +262,7 @@ p.activity-list > span { border: 1px solid #EEE; }
                             <tr>
                                 <td>
                                     <strong>Programming</strong>
-                                    <p>C/C++, JavaScript/TypeScript, Python, SystemVerilog, MATLAB, LaTeX, HTML/CSS, Three.js, Node.js, GLSL, Processing, Git/Perforce, Assembly</p>
+                                    <p>C/C++, SystemVerilog, Python, LaTeX, JavaScript/TypeScript (Three.js, Node.js), HTML/CSS,MATLAB, GLSL, Processing (Java), Assembly</p>
                                 </td>
                                 <td>
                                     <strong>Hands-on</strong>
@@ -270,7 +270,7 @@ p.activity-list > span { border: 1px solid #EEE; }
                                 </td>
                                 <td>
                                     <strong>Software</strong>
-                                    <p>Altera Quartus, ModelSim, Autodesk Inventor/Solidworks, SimuLink, Adobe Photoshop, Lightroom</p>
+                                    <p>Git/Perforce, Altera Quartus, ModelSim, Autodesk Inventor/Solidworks, SimuLink, Adobe Photoshop, Lightroom</p>
                                 </td>
                             </tr>
                         </tbody>
@@ -282,17 +282,17 @@ p.activity-list > span { border: 1px solid #EEE; }
                 <div class="resume-block">
                     <div class="work">
                         <h3>Electronic Arts - BioWare Edmonton</h3>
-                        <p class="position">Associate Developer Co-op (May 2018 - Present)</p>
+                        <p class="position">Associate Developer Co-op (May 2018 - Dec 2018)</p>
                         <ul>
-                            <li>Added and improved UI and engine features in EA's Frostbite engine and upcoming game Anthem using C++ and C#</li>
+                            <li>Added and improved UI and engine code in Frostbite engine and upcoming game Anthem using C++</li>
+                            <li>Developed entities for UI/UX artists and scripters; strong teamwork and communication demonstrated with consolidated specifications</li>
                             <li>Wrote Python upgrade scripts to modify and validate XML and game asset files in bulk</li>
-                            <li>Developed tools for artists and scripters in UI/UX team; consolidated specifications with excellent communication</li>
-                            <li>Fixed UI/UX, keyboard and mouse inputs related bugs that would directly reflect in gameplay; they are visible in game trailers with 3.4 million views</li>
+                            <li>Investigated bugs related to UI, keyboard/mouse inputs and developed robust solutions</li>
                         </ul>
                     </div>
                     <div class="work">
                         <h3>UBC Department of Computer Science</h3>
-                        <p class="position">Teaching Assistant (January 2018 - Present)</p>
+                        <p class="position">Teaching Assistant (January 2018 - May 2018)</p>
                         <ul>
                             <li>Assisted students to learn C programming by responding to students' in-class questions in a clear and simple manner</li>
                             <li>Supervised students in programming labs and marked lab submissions using an automated script I wrote in Python</li>
@@ -441,7 +441,7 @@ p.activity-list > span { border: 1px solid #EEE; }
     }
     var projs;
 
-    const sectionVisbilityInputIdMapping = {
+    const sectionVisibilityInputIdMapping = {
         'skills'                : 'checkSkills',
         'work-xp'               : 'checkWorkXP',
         'projects'              : 'checkProjects',
@@ -539,11 +539,11 @@ p.activity-list > span { border: 1px solid #EEE; }
     }
 
     function setSectionVisbility() {
-        const targets = Object.keys(sectionVisbilityInputIdMapping);
+        const targets = Object.keys(sectionVisibilityInputIdMapping);
         for (let i = 0; i < targets.length; i++) {
             const targetId = targets[i];
             const target = $('#' + targetId);
-            const inputId = sectionVisbilityInputIdMapping[targetId];
+            const inputId = sectionVisibilityInputIdMapping[targetId];
             const inputSource = $('#' + inputId);
 
             if (inputSource.prop('checked')) {
