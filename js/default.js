@@ -4,10 +4,6 @@ function addFooter(parent) {
     const footer = '<footer><small><p class="mb-0">Copyright © 2014-' + date.getFullYear() + ' Muchen He</p> \
         This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. \
         </small> \
-        <p style="text-align: center;"> \
-        <img src="http://www.wonder-tonic.com/geocitiesizer/images/counter.gif"> \
-        <img src="http://www.wonder-tonic.com/geocitiesizer/images/notepad.gif"> \
-        </p> \
     </footer>';
 
     $(parent).append(footer);
@@ -20,11 +16,14 @@ function addNavbar(current) {
     const navbarBegin = `
 <nav class="navbar sticky-top navbar-expand-md navbar-light bg-light">
     <div class="container-fluid">
-    <marquee behavior="scroll" direction="left">Welcome to my web site!!!! u r visitor number {number}, enjoy ur stay :)</marquee>
-    <p>MENU:</p>
+        <a href="/" class="navbar-brand">Muchen He</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-    `.replace('{number}', Math.floor(Math.random() * 100));
+    `;
 
     const navbarOldStuff = `
     </ul>
