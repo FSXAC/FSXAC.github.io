@@ -1,11 +1,42 @@
+/* Page style */
+html { font-size: 16px; }
+body {
+    cursor: default;
+	font-family: "Open Sans", Helvetica, Arial, "Microsoft Yahei", sans-serif;
+	line-height: 1.25;
+}
+
+/* Anchor */
 a { transition: color .3s ease; }
-body { line-height: 1.2em; cursor: default; font-family: "Open Sans", "Segoe UI", sans-serif; font-size: 14px;}
+
+/* Header */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 1rem;
+	margin-bottom: 1rem;
+	line-height: 1.35;
+	font-weight: bold;
+	letter-spacing: -0.45px;
+	word-spacing: 0.5px;
+}
+h1, h2 {
+    font-weight: lighter;
+}
+
+/* Header text custom font sizes */
+h1 { font-size: 3em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1.15em; }
+
+/* Nav bar */
+nav.bg-light { background-color: #fff; }
+li.nav-item.active a { border-bottom: 2px solid black; }
+
 footer { margin: 20px 0; }
 p { margin: 5px 0; }
 
-h3.hype { font-weight: 700; font-size: 1.3em; }
-
-.avatar { border-radius: 5%; transition: 0.2s all ease-in-out; }
+img.avatar { border-radius: 50%;  }
 .bg-ubc { background-color: #002859; }
 .btn { font-size: inherit; }
 .btn-xs { padding: 0 .25em; font-size: 90% }
