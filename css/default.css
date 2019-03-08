@@ -43,4 +43,8 @@ footer { margin: 2em 0; }
 /* Paragraph vertical spacing */
 p { margin: .5em 0; }
 
+/* Increase anchor color contrast */
+a { color: #0050C9; }
+a:hover { color: #A92626; }
+
 .btn-xs { padding: 0 .25em; font-size: 0.9em; }
