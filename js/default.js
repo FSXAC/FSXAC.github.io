@@ -12,8 +12,6 @@ function addNavbar(current) {
     const navs = ['About', 'Blog', 'Documents', 'Gallery', 'Projects', 'Resume', 'Sketches', 'Toolbox'];
     const links = ['/', '/blog', '/documents', '/gallery', '/projects', '/resume', '/sketches', '/tools'];
 
-    // <nav class="navbar sticky-top navbar-expand-md navbar-light bg-light">
-
     const navbarBegin = `
     <div class="container-fluid">
         <a href="/" class="navbar-brand">Muchen He</a>
@@ -32,7 +30,6 @@ function addNavbar(current) {
     </ul>
     `;
 
-    // const navbarEnd = "</div></div></nav>";
     const navbarEnd = "</div></div>";
 
     var navNode = document.createElement("nav");
