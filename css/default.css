@@ -6,17 +6,11 @@ body {
 	line-height: 1.25;
 }
 
-/* Anchor */
-a { transition: color .3s ease; }
-
 /* Header */
 h1, h2, h3, h4, h5, h6 {
     margin-top: 1rem;
 	margin-bottom: 1rem;
 	line-height: 1.35;
-	font-weight: bold;
-	letter-spacing: -0.45px;
-	word-spacing: 0.5px;
 }
 h1, h2 {
     font-weight: lighter;
@@ -32,22 +26,21 @@ h5 { font-size: 1.15em; }
 /* Nav bar */
 nav.bg-light { background-color: #fff; }
 li.nav-item.active a { border-bottom: 2px solid black; }
+li.nav-item { color: black; }
+.nav-link { margin: 0 0.25em; }
+.navbar-light .navbar-nav .nav-link { color: #000000CC; }
 
-footer { margin: 20px 0; }
-p { margin: 5px 0; }
-
-img.avatar { border-radius: 50%;  }
-.bg-ubc { background-color: #002859; }
-.btn { font-size: inherit; }
-.btn-xs { padding: 0 .25em; font-size: 90% }
+/* Make dictionaries align better */
 .dl-horizontal > dt { text-align: right; }
 .dl-horizontal > dd { margin-bottom: 0; }
-.fancy { border-bottom: 1px solid #CCC; margin: 0.5em 0; padding: 0.2em 0; }
-.nav-link { font-weight: 500; margin-left: 10px; margin-right: 10px;}
-.text-center { text-align: center; }
-.pcanvas { z-index: -1; }
-.row-quiet { margin-left: 0; margin-right: 0; }
-
 @media (max-width: 768px) {
     .dl-horizontal > dt { text-align: left; margin-top: .4em; }
 }
+
+/* Make footer more spacious */
+footer { margin: 2em 0; }
+
+/* Paragraph vertical spacing */
+p { margin: .5em 0; }
+
+.btn-xs { padding: 0 .25em; font-size: 0.9em; }

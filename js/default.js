@@ -16,7 +16,7 @@ function addNavbar(current) {
     const navbarBegin = `
 <nav class="navbar sticky-top navbar-expand-md navbar-light bg-light">
     <div class="container-fluid">
-        <a href="/" class="navbar-brand">MUCHEN HE</a>
+        <a href="/" class="navbar-brand">Muchen He</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
