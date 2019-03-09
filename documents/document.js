@@ -2,9 +2,9 @@
 var DT = {
     category: '<section><h2 class="fancy">{{category}}</h2><div class="card-grid"><div class= "card-gutter-sizer" ></div>{{courses}}</div></section>',
     course: '<div id="{{cid}}" class="card bg-light">{{content}}</div>',
-    courseHeader: '<div class="card-header p-2"><small class="float-right">{{name}}</small><h3 class="hype">{{id}}</h3><em class="text-muted">{{date}}</em></div>',
+    courseHeader: '<div class="card-header p-2"><small class="float-right">{{id}}</small><h3 class="hype">{{name}}</h3><em>{{date}}</em></div>',
     courseBody: '<div class="card-body p-2"><ul class="list-group list-group-flush">{{entries}}</ul></div>',
-    entry: '<li class="list-group-item p-0 bg-light{{extra}}"><a href="{{link}}">{{title}}</a>{{badge}}</li>',
+    entry: '<li class="list-group-item p-1 bg-light{{extra}}"><a href="{{link}}">{{title}}</a>{{badge}}</li>',
     badgeDraft: '<span class="badge badge-secondary badge-pill">draft</span>',
     badgeNew: '<span class="badge badge-success badge-pill">new</span>',
 
@@ -56,7 +56,7 @@ function parseDocumentsToHtml(documents) {
             courseHeaderHtml = courseHeaderHtml
                 .replace('{{name}}', course.description)
                 .replace('{{id}}', course.course)
-                .replace('{{date}}', (course.date === '') ? DT.NA : course.date);
+                .replace('{{date}}', (course.date === '') ? DT.NA : 'Last edited ' + course.date);
 
             // If the course has no entries, finish and move on
             if (course.entries.length === 0) {
