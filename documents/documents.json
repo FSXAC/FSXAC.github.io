@@ -339,15 +339,15 @@
                 {
                     "course": "ELEC 291",
                     "description": "Electrical Design Studio I",
-                    "date": "2017-08-15",
+                    "date": "2019-03-08",
                     "entries": [
                         {
-                            "title": "Project 1: Reflow Oven Controller",
+                            "title": "Project 1 Report: Reflow Oven Controller",
                             "link": "ELEC291/ELEC291-Project1",
                             "flag": ""
                         },
                         {
-                            "title": "Project 2: Magnetic Field Tracking Robot",
+                            "title": "Project 2 Report: Magnetic Field Tracking Robot",
                             "link": "ELEC291/ELEC291-Project2",
                             "flag": ""
                         }

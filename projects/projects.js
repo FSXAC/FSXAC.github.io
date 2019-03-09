@@ -212,7 +212,7 @@ function renderProject(project, options) {
     // Write HTML
     var outHtml = '<div class="timeline-block">';
     outHtml += '<div class="timeline-icon timeline-icon-' + iconColor + '">';
-    outHtml += '<img src="img/icons/' + icon + '"></div>';
+    outHtml += '<img src="img/icons/' + icon + '" alt="' + icon + '"></div>';
     outHtml += '<div class="timeline-body">';
     outHtml += '<h2>' + project.name + '</h2>';
     outHtml += '<p class="timeline-date">' + projectDate + '</p>';
@@ -249,7 +249,7 @@ function renderProject(project, options) {
     }
 
     if (projectImg !== null && projectImg !== undefined && projectImg !== '') {
-        outHtml += '<img src="' + projectImg + '">';
+        outHtml += '<img src="' + projectImg + '" alt="' + projectImg + '">';
     }
 
     outHtml += '<p class="">';
