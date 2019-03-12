@@ -50,7 +50,9 @@
 </div>
 <script>
 loadJSON(function(response) {
-    document.getElementById("main").innerHTML = parseDocumentsToHtml(response);
+    let parsedDiv = document.createElement('div');
+    parsedDiv.innerHTML = parseDocumentsToHtml(response);
+    document.getElementById("main").appendChild(parsedDiv);
     addFooter();
 
     $('.card-grid').masonry({
