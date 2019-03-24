@@ -30,7 +30,7 @@ function addNavbar(current) {
     </ul>
     `;
 
-    const navbarEnd = "</div></div>";
+    const navbarEnd = "</ul></div></div>";
 
     var navNode = document.createElement("nav");
     navNode.className += "navbar sticky-top navbar-expand-md navbar-light bg-light"
