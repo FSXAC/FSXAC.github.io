@@ -8,16 +8,14 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class='navbar-nav mr-auto'>
 				{% for link in site.data.navigation %}
-				{% assign current = nil %}
+				{% assign current = false %}
 				{% if page.url == link.url or page.nav_active == link.url %}
 				{% assign current = true %}
 				{% endif %}
-
 				<li class='nav-item {% if current %}active{% endif %}'>
 					<a class="nav-link" href="{{ link.url }}">{{ link.text }}{% if current %}<span
 							class="sr-only">(current)</span>{% endif %}</a>
 				</li>
-
 				{% endfor %}
 			</ul>
 		</div>

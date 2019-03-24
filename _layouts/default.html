@@ -2,17 +2,14 @@
 layout: minimum
 ---
 
-
 <header class="jumbotron jumbotron-fluid px-3 py-5">
 	<div class="container">
-		{% if page.header_image %}
-			<img class="avatar" src="{{ page.header_image }}" alt="{{ page.header_image }}">
-		{% endif %}
+		{% if page.header_image %}<img class="avatar" src="{{ page.header_image }}" alt="{{ page.header_image }}">{% endif %}
 		<h1 class="display-4 text-light">{{ page.title }}</h1>
-		<p class="text-light"> {{ page.subtitle }}</p>
-		{{ test }}
+		{% for htext in page.header_text %}<p class="text-light">{{ htext }}</p>{% endfor %}
 	</div>
 </header>
+
 <div id='main' class="container">
 	{{ content }}
 </div>
