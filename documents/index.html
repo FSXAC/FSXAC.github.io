@@ -40,16 +40,14 @@ header_text:
 </div>
 
 <script>
-(function() {
-    loadJSON(function(response) {
-    let parsedDiv = document.createElement('div');
-    parsedDiv.innerHTML = parseDocumentsToHtml(response);
-    document.getElementById("main").appendChild(parsedDiv);
-    $('.card-grid').masonry({
-        itemSelector: '.card',
-        gutter: '.card-gutter-sizer',
-        percentPosition: true
-    });
+loadJSON(function(response) {
+let parsedDiv = document.createElement('div');
+parsedDiv.innerHTML = parseDocumentsToHtml(response);
+document.getElementById("main").appendChild(parsedDiv);
+$('.card-grid').masonry({
+    itemSelector: '.card',
+    gutter: '.card-gutter-sizer',
+    percentPosition: true
 });
 });
 </script>
