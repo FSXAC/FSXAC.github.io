@@ -1,0 +1,25 @@
+---
+layout: minimum
+---
+
+<div id="root"></div>
+<header class="jumbotron jumbotron-fluid px-3 py-5">
+	<div class="container">
+		<h1 class="display-4 text-light">{{ page.title }}</h1>
+		{% for htext in page.header_text %}<p class="text-light">{{ htext }}</p>{% endfor %}
+		<section class="mt-3">
+			<div id="year-listings" class="btn-group" role="group"></div>
+			<div class='btn-group' role="group">
+				<button id="filterSoftwareButton" class="btn btn-info">Software</button>
+				<button id="filterHardwareButton" class="btn btn-primary">Hardware</button>
+				<button id="filterDesignButton" class="btn btn-success">Design</button>
+				<button id="filterMechanicalButton" class="btn btn-warning">Mechanical</button>
+				<button id="clearFilterButton" class="btn btn-light">All</button>
+			</div>
+		</section>
+	</div>
+</header>
+
+<div id='main' class="container">
+	{{ content }}
+</div>
