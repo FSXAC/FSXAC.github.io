@@ -26,10 +26,13 @@ subtitle: '&#x26A0 Under construction &#x26A0'
 
 <ul>
   {% for post in site.posts %}
+    {% if post.published == false %}
+    {% else %}
     <li>
       <p><a href="{{ post.url }}">{{ post.title }}</a></p>
       <p>{{ post.date | date_to_string }}</p>
       <p>{{ post.excerpt }}</p>
     </li>
+    {% endif %}
   {% endfor %}
 </ul>
