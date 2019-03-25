@@ -1,2 +1,14 @@
-sass:
-    style: compressed
+# sass:
+#     style: compressed
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      # read_time: true
+      # words_per_minute: 30
+      # related: true
