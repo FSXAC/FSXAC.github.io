@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Unknown Grotesk';
+    src: url('HKGrotesk-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Unknown Grotesk';
+    src: url('HKGrotesk-BoldItalic.woff') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+}

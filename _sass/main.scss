@@ -2,7 +2,7 @@
 html { font-size: 14px; }
 body {
     cursor: default;
-	font-family: "Open Sans", Helvetica, Arial, "Microsoft Yahei", sans-serif;
+	font-family: "Open Sans", Helvetica, "Microsoft Yahei", sans-serif;
 	line-height: 1.25;
 }
 
@@ -55,7 +55,7 @@ a:hover { color: #A92626; }
 img.avatar { border-radius: 50%; }
 
 // Make blog text bigger
-#write { font-size: 1.25em; }
-#write p {
+#blog-content { font-size: 1.25em; }
+#blog-content p {
 	margin: 1.5em 0;
 }
