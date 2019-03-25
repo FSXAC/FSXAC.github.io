@@ -46,6 +46,8 @@ li.nav-item { color: black; }
 .nav-link { margin: 0 0.5em; }
 .navbar-light .navbar-nav .nav-link { color: #000000CC; }
 
+.jumbotron { min-height: 300px; }
+
 /* Make dictionaries align better */
 .dl-horizontal > dt { text-align: right; }
 .dl-horizontal > dd { margin-bottom: 0; }
@@ -83,4 +85,7 @@ img.avatar { border-radius: 50%; }
 #blog-content h6 {
 	font-family: "HK Grotesk", "Open Sans", Helvetica, "Microsoft Yahei", sans-serif
 	font-weight: bold;
+}
+#blog-content img {
+	max-width: 100%;
 }
