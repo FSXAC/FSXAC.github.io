@@ -18,20 +18,10 @@ header_text:
 
 <h2>Index</h2>
 <dl class="row dl-horizontal">
-    <dt class="col-md-2"><a href="/">About</a></dt>
-    <dd class="col-md-10">You are here.</dd>
-    <dt class="col-md-2"><a href="/blog">Blog</a></dt>
-    <dd class="col-md-10">Some random blogs that I write once in a while.</dd>
-    <dt class="col-md-2"><a href="/documents">Documents</a></dt>
-    <dd class="col-md-10">School notes and documents.</dd>
-    <dt class="col-md-2"><a href="/gallery">Gallery</a></dt>
-    <dd class="col-md-10">Photography showcase from my Instagram.</dd>
-    <dt class="col-md-2"><a href="/projects">Projects</a></dt>
-    <dd class="col-md-10">Project showcase, including personal projects.</dd>
-    <dt class="col-md-2"><a href="/resume">Resume</a></dt>
-    <dd class="col-md-10">Skills and experiences.</dd>
-    <dt class="col-md-2"><a href="/tools">Toolbox</a></dt>
-    <dd class="col-md-10">A collection of useful in-browser apps</dd>
+    {% for nav in site.data.navigation %}
+    <dt class="col-md-2"><a href="{{ nav.url }}">{{ nav.text }}</a></dt>
+    <dd class="col-md-10">{{ nav.desc }}</dd>
+    {% endfor %}
 </dl>
 
 <h2>Contacts</h2>
