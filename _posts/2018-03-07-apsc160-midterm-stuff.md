@@ -5,7 +5,7 @@ categories: other
 
 author: Muchen He
 layout: post
-nav_active: /blog
+nav_active: /blogs
 # tags:
 #   - other
 # header:

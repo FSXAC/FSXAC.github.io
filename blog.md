@@ -10,7 +10,7 @@ title: Blog
 titlebar: Blog
 
 # Nav selector
-nav_active: /blog
+nav_active: /blogs
 
 # Header
 header_color: '#321'
