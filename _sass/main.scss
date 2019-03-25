@@ -9,7 +9,7 @@ body {
 
 /* Header */
 h1, h2, h3, h4, h5, h6 {
-	font-family: "HK Grotesk", "Open Sans", Helvetica, "Microsoft Yahei", sans-serif;
+	font-family: "Open Sans", Helvetica, "Microsoft Yahei", sans-serif;
 	font-weight: bold;
 	letter-spacing: -0.45px;
 	word-spacing: 0.5px;
@@ -71,4 +71,12 @@ img.avatar { border-radius: 50%; }
 #blog-content { font-size: 1.25em; }
 #blog-content p {
 	margin: 1.5em 0;
+}
+#blog-content h1, 
+#blog-content h2, 
+#blog-content h3, 
+#blog-content h4, 
+#blog-content h5, 
+#blog-content h6 {
+	font-family: "HK Grotesk", "Open Sans", Helvetica, "Microsoft Yahei", sans-serif;
 }
