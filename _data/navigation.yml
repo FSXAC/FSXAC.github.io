@@ -10,7 +10,5 @@
   url: /projects
 - text: Resume
   url: /resume
-- text: Sketches
-  url: /sketches
 - text: Toolbox
-  url: /tools
+  url: /toolbox
