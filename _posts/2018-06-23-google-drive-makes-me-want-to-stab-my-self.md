@@ -5,7 +5,7 @@ categories: random
 
 author: Muchen He
 layout: post
-nav_active: /blogs
+nav_active: /blog
 
 # tags:
 #   - google

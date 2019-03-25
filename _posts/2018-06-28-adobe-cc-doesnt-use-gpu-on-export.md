@@ -5,7 +5,7 @@ categories: noted
 
 author: Muchen He
 layout: post
-nav_active: /blogs
+nav_active: /blog
 # tags:
 #   - adobe
 #   - lightroom

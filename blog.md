@@ -10,7 +10,7 @@ title: Blog
 titlebar: Blog
 
 # Nav selector
-nav_active: /blogs
+nav_active: /blog
 
 # Header
 header_color: '#321'
@@ -29,8 +29,8 @@ subtitle: '&#x26A0 Under construction &#x26A0'
     {% if post.published == false %}
     {% else %}
     <li>
-      <p><a href="{{ post.url }}">{{ post.title }}</a></p>
-      <p>{{ post.date | date_to_string }}</p>
+      <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+      <p>{{ post.date }}</p>
       <p>{{ post.excerpt }}</p>
     </li>
     {% endif %}
