@@ -10,10 +10,13 @@ body {
 /* Header */
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Open Sans", Helvetica, "Microsoft Yahei", sans-serif;
-	font-weight: bold;
 	letter-spacing: -0.45px;
 	word-spacing: 0.5px;
 	color: #202828;
+}
+
+h1, h2 {
+	font-weight: lighter;
 }
 
 /* Header text custom font sizes */
