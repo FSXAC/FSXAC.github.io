@@ -8,12 +8,12 @@ body {
 
 /* Header */
 h1, h2, h3, h4, h5, h6 {
-    margin-top: 1rem;
+	margin-top: 1rem;
 	margin-bottom: 1rem;
 	line-height: 1.35;
 }
 h1, h2 {
-    font-weight: lighter;
+	font-weight: lighter;
 }
 
 /* Header text custom font sizes */
@@ -50,3 +50,9 @@ a:hover { color: #A92626; }
 .text-light > a:hover { color: #f88; }
 
 .btn-xs { padding: 0 .25em; font-size: 0.9em; }
+
+/* Avatar image are round */
+img.avatar { border-radius: 50%; }
+
+// Make blog text bigger
+#write { font-size: 1.25em; }

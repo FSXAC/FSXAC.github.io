@@ -157,3 +157,6 @@ ENV/
 .vscode/settings.json
 /test.bat
 .DS_Store
+
+# Jekyll builds
+_site/
