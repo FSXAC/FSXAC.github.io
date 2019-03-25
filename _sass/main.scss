@@ -1,27 +1,40 @@
 /* Page style */
-html { font-size: 14px; }
+html { font-size: 16px; }
 body {
     cursor: default;
 	font-family: "Open Sans", Helvetica, "Microsoft Yahei", sans-serif;
-	line-height: 1.25;
+	line-height: 1.5;
+	color: rgb(33, 37, 41);
 }
 
 /* Header */
 h1, h2, h3, h4, h5, h6 {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	line-height: 1.35;
-}
-h1, h2 {
-	font-weight: lighter;
+	font-family: "HK Grotesk", "Open Sans", Helvetica, "Microsoft Yahei", sans-serif;
+	font-weight: bold;
+	letter-spacing: -0.45px;
+	word-spacing: 0.5px;
+	color: #202828;
 }
 
 /* Header text custom font sizes */
-h1 { font-size: 3em; }
-h2 { font-size: 2em; }
-h3 { font-size: 1.5em; }
-h4 { font-size: 1.25em; }
-h5 { font-size: 1.15em; }
+h1 {
+	font-size: 3em;
+	line-height: 1.1;
+}
+h2 {
+	font-size: 2em;
+	line-height: 1.2;
+}
+h3 {
+	font-size: 1.5em;
+	line-height: 1.3;
+}
+h4 {
+	font-size: 1.25em;
+}
+h5 {
+	font-size: 1.15em;
+}
 
 /* Nav bar */
 nav.bg-light { background-color: #fff; }
@@ -54,7 +67,7 @@ a:hover { color: #A92626; }
 /* Avatar image are round */
 img.avatar { border-radius: 50%; }
 
-// Make blog text bigger
+/* Make blog text bigger */
 #blog-content { font-size: 1.25em; }
 #blog-content p {
 	margin: 1.5em 0;
