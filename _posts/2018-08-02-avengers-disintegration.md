@@ -8,6 +8,9 @@ author: Muchen He
 layout: post
 nav_active: /blog
 
+extra_js:
+- <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 # tags:
 #   - programming
 #   - code
@@ -20,8 +23,6 @@ nav_active: /blog
 #   overlay_image: /assets/default.jpg
 #   overlay_filter: 0.4
 ---
-
-<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 In this small project, my objective is to take an input image and disintegrate it into particles. I will be using [Processing 3](https://processing.org/) because it's easy to do quick graphical interactives and I'm familiar with it.
 

@@ -1,5 +1,5 @@
 ---
-title: "APSC 160 Midterm Stats From Boredom"
+title: "Interesting APSC 160 Midterm Stats That No One Wants to Know"
 date: 2018-03-07
 categories: other
 
