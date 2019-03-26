@@ -14,7 +14,7 @@ nav_active: /blog
 # toc_label: "Contents"
 # toc_icon: list-ul
 header:
-  teaser: /assets/blog/default.jpg
+#   teaser: /assets/blog/default.jpg
   overlay_image: /assets/blog/default.jpg
   overlay_filter: 0.4
 ---

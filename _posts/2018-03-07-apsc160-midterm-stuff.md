@@ -9,7 +9,7 @@ nav_active: /blog
 # tags:
 #   - other
 header:
-  teaser: /assets/blog/default.jpg
+  # teaser: /assets/blog/default.jpg
   overlay_image: /assets/blog/default.jpg
   overlay_filter: 0.5
 ---
