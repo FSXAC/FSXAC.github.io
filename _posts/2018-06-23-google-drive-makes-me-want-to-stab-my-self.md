@@ -11,10 +11,10 @@ nav_active: /blog
 #   - google
 #   - app
 #   - drive
-# header:
-#   teaser: /assets/default.jpg
-#   overlay_image: /assets/default.jpg
-#   overlay_filter: 0.4
+header:
+  teaser: /assets/blog/default.jpg
+  overlay_image: /assets/blog/default.jpg
+  overlay_filter: 0.4
 ---
 
 It all started when I wanted to download all my photos from Google Photos which was auto-synced from my phone.

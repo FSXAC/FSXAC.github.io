@@ -104,7 +104,7 @@ div.progress-container>div.attr-progress {
 <header class="jumbotron jumbotron-fluid px-3 py-5">
 	<div class="container">
 		<h1 class="display-4 text-light">{{ page.title }}</h1>
-		{% for htext in page.header_text %}<p class="text-light">{{ htext }}</p>{% endfor %}
+		{% for htext in page.header.text %}<p class="text-light">{{ htext }}</p>{% endfor %}
 		<div class="btn-group mt-3" role="group" aria-label="...">
 			<button id="settingsBtn" type="button" class="btn btn-secondary" data-toggle="modal"
 				data-target="#settingsModal">Settings</button>

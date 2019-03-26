@@ -13,7 +13,8 @@ titlebar: Blog
 nav_active: /blog
 
 # Header
-header_color: '#210'
+header:
+  color: '#210'
 subtitle: '&#x26A0 Under construction &#x26A0'
 ---
 
@@ -30,7 +31,7 @@ subtitle: '&#x26A0 Under construction &#x26A0'
     {% else %}
     <li>
       <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
-      <p>{{ post.date }}</p>
+      <p>{{ post.date | date: "%Y-%m-%d" }}</p>
       <p>{{ post.excerpt }}</p>
     </li>
     {% endif %}

@@ -13,11 +13,23 @@ nav_active: /blog
 # toc: true
 # toc_label: "Contents"
 # toc_icon: list-ul
-# header:
-#   teaser: /assets/default.jpg
-#   overlay_image: /assets/default.jpg
-#   overlay_filter: 0.4
+header:
+  teaser: /assets/blog/default.jpg
+  overlay_image: /assets/blog/default.jpg
+  overlay_filter: 0.4
 ---
+
+<!-- This is how to add TOC -->
+<!-- - Random Number Generation
+    - Ranged RNG
+- File IO
+    - Opening Files
+    - Writing to File
+    - Saving File
+    - Example
+- Simulation
+- Conclusion
+{:toc} -->
 
 So, you got your Verilog hardware for a random dice game designed and wired up, it is time to put it to the test.....bench. However, you also want to simulate randomness and do the simulation tons of times and somehow analyize the results later. In this post, I will show you how to do just that. Let's get started.
 

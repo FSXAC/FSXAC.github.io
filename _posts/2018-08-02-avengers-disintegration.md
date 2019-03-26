@@ -17,11 +17,11 @@ extra_js:
 #   - processing
 #   - avengers
 # toc: false
-# excerpt: "I Don't Feel So Good"
-# header:
-#   teaser: /assets/default.jpg
-#   overlay_image: /assets/default.jpg
-#   overlay_filter: 0.4
+excerpt: I Don't Feel So Good.
+header:
+  teaser: /assets/blog/default.jpg
+  overlay_image: /assets/blog/default.jpg
+  overlay_filter: 0.4
 ---
 
 In this small project, my objective is to take an input image and disintegrate it into particles. I will be using [Processing 3](https://processing.org/) because it's easy to do quick graphical interactives and I'm familiar with it.

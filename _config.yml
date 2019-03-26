@@ -1,5 +1,25 @@
-# sass:
-#     style: compressed
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+sass:
+  style: compressed
+
+# Plugins
+# plugins:
+#   - jekyll-mentions
+#   - jemoji
+#   - jekyll-redirect-from
+#   - jekyll-sitemap
+#   - jekyll-feed
 
 # Defaults
 defaults:

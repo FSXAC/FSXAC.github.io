@@ -65,3 +65,9 @@ img.avatar { border-radius: 50%; }
 #blog-content img {
 	max-width: 100%;
 }
+#blog-content #markdown-toc li {
+	list-style: none;
+}
+#blog-content ul#markdown-toc {
+	padding: 0;
+}

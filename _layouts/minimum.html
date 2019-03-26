@@ -28,8 +28,18 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	{% for line in page.extra_js %}{{ line }}{% endfor %}
 	<style>
-		{% assign header_color = '#001624' %}{% if page.header_color %}{% assign header_color = page.header_color %}{% endif %}
-		.jumbotron { background-color: {{ header_color }}; }
+		{% if page.header.color %}
+		.jumbotron { background-color: {{ page.header.color }}
+		{% elsif page.header.overlay_image %}
+		.jumbotron {
+			background: url('{{ page.header.overlay_image }}') no-repeat center center fixed;
+			background-size: cover;
+			min-height: 300px;
+		}
+		{% else %}
+		.jumbotron { background-color: #001624; }
+		{% endif %}
+
 	</style>
 </head>
 

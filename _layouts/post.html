@@ -8,16 +8,23 @@ layout: minimum
 }
 </style>
 
-<header class="jumbotron jumbotron-fluid px-3 py-5">
+<header class="jumbotron jumbotron-fluid px-3 py-5" {% if page.header.overlay_filter %}
+		style="background-color: rgba(0, 0, 0, {{ page.header.overlay_filter }}); background-blend-mode: multiply;"
+		{% endif %}>
 	<div class="container">
-		{% if page.header_image %}<img class="avatar" src="{{ page.header_image }}"
-			alt="{{ page.header_image }}">{% endif %}
 		<h1 class="display-4 text-light">{{ page.title }}</h1>
-		{% for htext in page.header_text %}<p class="text-light">{{ htext }}</p>{% endfor %}
-		{% for extra in page.header_extra %}{{ extra }}{% endfor %}
+		<!-- {% for htext in page.header.text %}<p class="text-light">{{ htext }}</p>{% endfor %} -->
+		<!-- {% for extra in page.header.extra %}{{ extra }}{% endfor %} -->
+		{% for line in page.excerpt %}
+		<p class="text-light">{{ line | strip_html }}</p>
+		{% endfor %}
 	</div>
 </header>
-
 <div id='blog-content' class="container">
 	{{ content }}
+</div>
+
+<div class="container">
+<hr>
+{% include blog_back.html %}
 </div>

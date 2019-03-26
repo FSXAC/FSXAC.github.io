@@ -6,7 +6,7 @@ layout: minimum
 <header class="jumbotron jumbotron-fluid px-3 py-5">
 	<div class="container">
 		<h1 class="display-4 text-light">{{ page.title }}</h1>
-		{% for htext in page.header_text %}<p class="text-light">{{ htext }}</p>{% endfor %}
+		{% for htext in page.header.text %}<p class="text-light">{{ htext }}</p>{% endfor %}
 		<section class="mt-3">
 			<div id="year-listings" class="btn-group" role="group"></div>
 			<div class='btn-group' role="group">

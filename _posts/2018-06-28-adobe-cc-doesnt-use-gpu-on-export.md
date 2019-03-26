@@ -2,6 +2,7 @@
 title: "Noted: Lightroom CC Doesn't Use GPU on Export"
 date: 2018-06-28
 categories: noted
+excerpt: RIP my export time.
 
 author: Muchen He
 layout: post
@@ -9,10 +10,10 @@ nav_active: /blog
 # tags:
 #   - adobe
 #   - lightroom
-# header:
-#   teaser: /assets/default.jpg
-#   overlay_image: /assets/default.jpg
-#   overlay_filter: 0.4
+header:
+  teaser: /assets/blog/default.jpg
+  overlay_image: /assets/blog/default.jpg
+  overlay_filter: 0.4
 ---
 
 Noted:

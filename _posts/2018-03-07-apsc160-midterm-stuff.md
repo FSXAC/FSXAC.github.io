@@ -8,10 +8,10 @@ layout: post
 nav_active: /blog
 # tags:
 #   - other
-# header:
-#   teaser: /assets/default.jpg
-#   overlay_image: /assets/default.jpg
-#   overlay_filter: 0.4
+header:
+  teaser: /assets/blog/default.jpg
+  overlay_image: /assets/blog/default.jpg
+  overlay_filter: 0.5
 ---
 
 Invigilating a midterm exam is boring, one fo the thing I need to do is to count the number of students that are present at the exam.
