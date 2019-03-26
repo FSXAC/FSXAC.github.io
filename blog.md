@@ -13,7 +13,7 @@ titlebar: Blog
 nav_active: /blog
 
 # Header
-header_color: '#321'
+header_color: '#210'
 subtitle: '&#x26A0 Under construction &#x26A0'
 ---
 

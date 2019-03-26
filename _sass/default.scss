@@ -1,22 +1,10 @@
 /* Page style */
 html { font-size: 16px; }
 body {
-    cursor: default;
+	cursor: default;
 	font-family: "Open Sans", Helvetica, "Microsoft Yahei", sans-serif;
 	line-height: 1.5;
-	color: rgb(33, 37, 41);
-}
-
-/* Header */
-h1, h2, h3, h4, h5, h6 {
-	font-family: "Open Sans", Helvetica, "Microsoft Yahei", sans-serif;
-	letter-spacing: -0.45px;
-	word-spacing: 0.5px;
-	color: #202828;
-}
-
-h1, h2 {
-	font-weight: lighter;
+	color: black;
 }
 
 /* Header text custom font sizes */
@@ -40,13 +28,11 @@ h5 {
 }
 
 /* Nav bar */
-nav.bg-light { background-color: #fff; }
 li.nav-item.active a { border-bottom: 2px solid black; }
 li.nav-item { color: black; }
-.nav-link { margin: 0 0.5em; }
-.navbar-light .navbar-nav .nav-link { color: #000000CC; }
-
-.jumbotron { min-height: 300px; }
+.navbar-light .navbar-nav .nav-link { color: black; }
+// .nav-link { margin: 0 0.5em; }
+// .jumbotron { min-height: 300px; }
 
 /* Make dictionaries align better */
 .dl-horizontal > dt { text-align: right; }
@@ -75,15 +61,6 @@ img.avatar { border-radius: 50%; }
 /* Blog texts */
 #blog-content p {
 	margin: 1.5em 0;
-}
-#blog-content h1, 
-#blog-content h2, 
-#blog-content h3, 
-#blog-content h4, 
-#blog-content h5, 
-#blog-content h6 {
-	font-family: "HK Grotesk", "Open Sans", Helvetica, "Microsoft Yahei", sans-serif;
-	font-weight: bold;
 }
 #blog-content img {
 	max-width: 100%;

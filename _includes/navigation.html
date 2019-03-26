@@ -12,8 +12,8 @@
 				{% if page.url == link.url or page.nav_active == link.url %}
 				{% assign current = true %}
 				{% endif %}
-				<li class='nav-item {% if current %}active{% endif %}'>
-					<a class="nav-link" href="{{ link.url }}">{{ link.text }}{% if current %}<span
+				<li class='nav-item mx-2 {% if current %}active{% endif %}'>
+					<a class="nav-link py-1" href="{{ link.url }}">{{ link.text }}{% if current %}<span
 							class="sr-only">(current)</span>{% endif %}</a>
 				</li>
 				{% endfor %}

@@ -10,13 +10,14 @@ title: I am Muchen.
 titlebar: Home
 
 # Header
+# header_color: black
 header_image: 'img/avatar-new-small.jpg'
 header_text:
-- I\'m a fourth year Electrical Engineering at The University of British Columbia. Currently on an 8-month co-op term Intel of Canada as FPGA Emulation Platform intern. I\'ve previously worked at Electronic Arts - BioWare and VitalMechanics.
+- I'm a fourth year Electrical Engineering at The University of British Columbia. Currently on an 8-month co-op term Intel of Canada as FPGA Emulation Platform intern. I've previously worked at Electronic Arts - BioWare and VitalMechanics.
 ---
 
+## Index
 
-<h2>Index</h2>
 <dl class="row dl-horizontal">
     {% for nav in site.data.navigation %}
     <dt class="col-md-2"><a href="{{ nav.url }}">{{ nav.text }}</a></dt>
@@ -24,7 +25,8 @@ header_text:
     {% endfor %}
 </dl>
 
-<h2>Contacts</h2>
+## Contacts
+
 <dl class="row dl-horizontal">
     <dt class="col-md-2">Personal E-mail</dt>
     <dd class="col-md-10"><a href="mailto:i@muchen.ca">i@muchen.ca</a></dd>
