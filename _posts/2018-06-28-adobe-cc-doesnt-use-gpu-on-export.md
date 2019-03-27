@@ -2,23 +2,24 @@
 title: "Noted: Lightroom CC Doesn't Use GPU on Export"
 date: 2018-06-28
 categories: noted
-excerpt: RIP my export time.
 
 author: Muchen He
 layout: post
 nav_active: /blog
-# tags:
-#   - adobe
-#   - lightroom
+tags:
+  - adobe
+  - lightroom
 header:
-  # teaser: /assets/blog/default.jpg
+  teaser: /assets/blog/teaser/lightroom.jpg
   overlay_image: /assets/blog/default.jpg
   overlay_filter: 0.4
 ---
 
 Noted:
 
-Apparently Adobe Lightroom doesn't use GPU, like, at all. 
+Apparently Adobe Lightroom doesn't use GPU, like, at all.
+
+<!-- excerpt -->
 
 While developing photos, it makes no difference having hardware acceleration on or off.
 

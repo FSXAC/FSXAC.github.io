@@ -4,17 +4,14 @@ date: 2018-03-07
 categories: other
 
 author: Muchen He
-layout: post
-nav_active: /blog
-# tags:
-#   - other
-header:
-  # teaser: /assets/blog/default.jpg
-  overlay_image: /assets/blog/default.jpg
-  overlay_filter: 0.5
+tags:
+  - other
 ---
 
 Invigilating a midterm exam is boring, one fo the thing I need to do is to count the number of students that are present at the exam.
+
+<!-- excerpt -->
+
 Of course, that's still boring, so I counted other things as well.
 
 Here are some of the statistics I've found with a sample size of 100 students.

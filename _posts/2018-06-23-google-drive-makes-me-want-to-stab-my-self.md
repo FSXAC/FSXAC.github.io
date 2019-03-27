@@ -4,20 +4,18 @@ date: 2018-06-28
 categories: random
 
 author: Muchen He
-layout: post
-nav_active: /blog
 
-# tags:
-#   - google
-#   - app
-#   - drive
+tags:
+  - google
+  - app
+  - drive
 header:
-  # teaser: /assets/blog/default.jpg
-  overlay_image: /assets/blog/default.jpg
-  overlay_filter: 0.4
+  teaser: /assets/blog/teaser/gdrive1.png
 ---
 
 It all started when I wanted to download all my photos from Google Photos which was auto-synced from my phone.
+
+<!-- excerpt -->
 
 I did a typical search to see how, and it turns out I need to do some convoluted steps involving going into my Google Drive settings and turning on an option that creates a 'Google Photos' folder in my Google Drive.
 

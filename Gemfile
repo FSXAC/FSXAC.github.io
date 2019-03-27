@@ -1,6 +1,0 @@
-# gem 'jekyll-mentions'
-# gem 'jemoji'
-# gem 'jekyll-redirect-from'
-# gem 'jekyll-sitemap'
-# gem 'jekyll-feed'
-gem 'jekyll-paginate'

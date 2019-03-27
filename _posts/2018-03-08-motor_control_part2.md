@@ -4,24 +4,21 @@ date: 2018-03-14
 categories: ELEC
 
 author: Muchen He
-layout: post
-nav_active: /blog
-# tags:
-#   - elec
-#   - motor
-#   - 3d_printing
-#   - cad
-#   - control
-# toc: true
-# toc_label: "Contents"
-# toc_icon: list-ul
+tags:
+  - elec
+  - motor
+  - 3d_printing
+  - cad
+  - control
 header:
-  teaser: https://lh3.googleusercontent.com/neqHSseO8MrvPpZQn9k_2KH6kbW4UVsY8Ync0vAltJkJ5V7w8T5Qh2ni7gP2BgZVhCJtn7IgEHX2c6Iq7RpVZj7peOG3vD2xJBhc3qyK3sVBoBYJowTvBnnW_Fs3MZSriSt9oCS5k_iR7--4AAdoUaryGdhYPH-cJzqRR5nPXi7IPGl6Bbi4hIvCDSbCXtnGkBRHTgudHOjekqxlduUJLcZVTS7kk1ui22ZM_GV5A3E6_4y3pqdqQWzEP1D1wMLqkpLsXTTlBg87JM_HyOrHL4lRmJS_2WnOJ2JxWZ2P2HoAk5DGD4cphHy6_NY6kJO6K8cYuQDH3W2q5OZ6OYKFqrcHjUWJcNT5sNqnLAhtc--M0uPoZTcWWHaLxeH2C9D8BnVXBSQQIFPQFcaR5VUbeX3V-z80SnE_UmWvDC3Zvl09liE7v23SYVVX8xGg2Xqnlo8SaH8fovAriQfPGIU7rnJpgwSM1lJMjcy6_Fre_yKN2WqzPf0nn9OBkPFXxD8GYj-JsuwegamdTsMX9e_yBEImso_-yN0ynnWNh6x_wz83COKcsobMxZhB73bP_Gcl7wj1mLldJA3xOm3r5UZdK1b8XwV9oONoOvlBNe-6cD5d6__sdl6iwl9KKzeS6Rs2UXIDTK0AFwX7d-BGyB9PBMD3zWvM456h9A=w1430-h627-no
+  teaser: /assets/blog/teaser/motor2.jpg
   overlay_image: https://lh3.googleusercontent.com/neqHSseO8MrvPpZQn9k_2KH6kbW4UVsY8Ync0vAltJkJ5V7w8T5Qh2ni7gP2BgZVhCJtn7IgEHX2c6Iq7RpVZj7peOG3vD2xJBhc3qyK3sVBoBYJowTvBnnW_Fs3MZSriSt9oCS5k_iR7--4AAdoUaryGdhYPH-cJzqRR5nPXi7IPGl6Bbi4hIvCDSbCXtnGkBRHTgudHOjekqxlduUJLcZVTS7kk1ui22ZM_GV5A3E6_4y3pqdqQWzEP1D1wMLqkpLsXTTlBg87JM_HyOrHL4lRmJS_2WnOJ2JxWZ2P2HoAk5DGD4cphHy6_NY6kJO6K8cYuQDH3W2q5OZ6OYKFqrcHjUWJcNT5sNqnLAhtc--M0uPoZTcWWHaLxeH2C9D8BnVXBSQQIFPQFcaR5VUbeX3V-z80SnE_UmWvDC3Zvl09liE7v23SYVVX8xGg2Xqnlo8SaH8fovAriQfPGIU7rnJpgwSM1lJMjcy6_Fre_yKN2WqzPf0nn9OBkPFXxD8GYj-JsuwegamdTsMX9e_yBEImso_-yN0ynnWNh6x_wz83COKcsobMxZhB73bP_Gcl7wj1mLldJA3xOm3r5UZdK1b8XwV9oONoOvlBNe-6cD5d6__sdl6iwl9KKzeS6Rs2UXIDTK0AFwX7d-BGyB9PBMD3zWvM456h9A=w1430-h627-no
   overlay_filter: 0.5
 ---
 
 Last time, we're left with a single motor with optical encoder setup and the motor was barely controllable. This post outlines the progress we have made since then.
+
+<!-- excerpt -->
 
 > **TL;DR**: Read the [summary slide deck](https://github.com/lcall3/Controller/blob/master/doc/report/demo2.pdf).
 

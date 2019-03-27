@@ -1,21 +1,18 @@
 ---
-title: "FPGA Mandelbrot Set"
-date: 2018-08-22
-categories: projects
-
 author: Muchen He
-layout: post
-nav_active: /blog
-# tags:
-#   - programming
-#   - code
-#   - fpga
-#   - computer
-#   - engineering
-#   - fractal
-#   - mandelbrot
-# toc: true
-# exerpt: "Fractal Rendering in Verilog"
+categories: projects
+date: 2018-08-22
+title: "FPGA Mandelbrot Set"
+
+tags:
+  - programming
+  - code
+  - fpga
+  - computer
+  - engineering
+  - fractal
+  - mandelbrot
+
 # header:
 #   teaser: /assets/default.jpg
 #   overlay_image: /assets/default.jpg

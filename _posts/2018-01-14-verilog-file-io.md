@@ -6,17 +6,10 @@ categories: CPEN
 author: Muchen He
 layout: post
 nav_active: /blog
-# tags:
-#   - cpen
-#   - verilog
-#   - python
-# toc: true
-# toc_label: "Contents"
-# toc_icon: list-ul
-header:
-#   teaser: /assets/blog/default.jpg
-  overlay_image: /assets/blog/default.jpg
-  overlay_filter: 0.4
+tags:
+  - cpen
+  - verilog
+  - python
 ---
 
 <!-- This is how to add TOC -->
@@ -32,6 +25,8 @@ header:
 {:toc} -->
 
 So, you got your Verilog hardware for a random dice game designed and wired up, it is time to put it to the test.....bench. However, you also want to simulate randomness and do the simulation tons of times and somehow analyize the results later. In this post, I will show you how to do just that. Let's get started.
+
+<!-- excerpt -->
 
 > **Note**: Though written in Verilog, everything here only works in test benches and are not synthesizble into hardware.
 

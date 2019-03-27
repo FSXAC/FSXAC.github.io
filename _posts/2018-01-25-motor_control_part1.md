@@ -2,27 +2,23 @@
 title: "How to Train Your Motors: Week 1-3"
 date: 2018-01-25
 categories: ELEC
-excerpt: 'ELEC391: The Project Course about Motors and Controls'
 
 author: Muchen He
-layout: post
-nav_active: /blog
-# tags:
-#   - elec
-#   - motor
-#   - 3d_printing
-#   - cad
-#   - control
-# toc: true
-# toc_label: "Contents"
-# toc_icon: list-ul
+tags:
+  - elec
+  - motor
+  - 3d_printing
+  - cad
+  - control
 header:
-  teaser: https://lh3.googleusercontent.com/P-9ReVAwoVg9t-_LgWj-NjVJzEXnl0fHvYb1Ks4vlZ9PyYugyrJd-X0xSqG8JdXLez-Agp3wbO-fYJJgcWfCZZ2nup8b2L27Ieo3ebCKdGfrPmM39z_9usPKbzNPSZKAj_7gdt3zEvfIhpqR5m4BSxu3LoSJRVis-51sB4DLgB-eEIgoTAI493jtv-idBoCzhB7W3UaIQl4ZV33lkBIxdEeFancc-QyTER3LYKeKYbaUcmFknt3E4x4N-CozQvYBocO2d-9pLLRXW0ZD79lmE87tsEiaYMtdaql3AIQ-WI-LIdMELZknkKgFThWxjgdF1P7FWuDvcY_nngdk88JkkIWS19qGYmyYEfZlC4ahpPdiOCAIZCTjrEAXdJxUwzZrVUb357h4TyhHhPcMuTfz0xzMdKmt7g2N8AI6nQJOS7CVsDqSwm0phNocZ6hBX8r9ifGN2yzT1Pac-N9EtY11Pm0ef2cvEloiM9nBlnaEHrnNB8HbYYcbO6hhjmUb8sfT0FBIX38q2h1FzcJKzWs05Up1Kx2Cav8x2h_7EV7ZihuUJHFBTU1c9JUKUuQrxovppxPyyQ0EidMMjsOUkjk2mNc2WuERMc1_t2lJhG6Ej9C_D6xkM8h9ncWBMOn_v5RO73T8uhg_pirB1DNoGd72IEbzycAuq_fAXA=w1268-h783-no
+  teaser: /assets/blog/teaser/motor1.jpg
   overlay_image: https://lh3.googleusercontent.com/P-9ReVAwoVg9t-_LgWj-NjVJzEXnl0fHvYb1Ks4vlZ9PyYugyrJd-X0xSqG8JdXLez-Agp3wbO-fYJJgcWfCZZ2nup8b2L27Ieo3ebCKdGfrPmM39z_9usPKbzNPSZKAj_7gdt3zEvfIhpqR5m4BSxu3LoSJRVis-51sB4DLgB-eEIgoTAI493jtv-idBoCzhB7W3UaIQl4ZV33lkBIxdEeFancc-QyTER3LYKeKYbaUcmFknt3E4x4N-CozQvYBocO2d-9pLLRXW0ZD79lmE87tsEiaYMtdaql3AIQ-WI-LIdMELZknkKgFThWxjgdF1P7FWuDvcY_nngdk88JkkIWS19qGYmyYEfZlC4ahpPdiOCAIZCTjrEAXdJxUwzZrVUb357h4TyhHhPcMuTfz0xzMdKmt7g2N8AI6nQJOS7CVsDqSwm0phNocZ6hBX8r9ifGN2yzT1Pac-N9EtY11Pm0ef2cvEloiM9nBlnaEHrnNB8HbYYcbO6hhjmUb8sfT0FBIX38q2h1FzcJKzWs05Up1Kx2Cav8x2h_7EV7ZihuUJHFBTU1c9JUKUuQrxovppxPyyQ0EidMMjsOUkjk2mNc2WuERMc1_t2lJhG6Ej9C_D6xkM8h9ncWBMOn_v5RO73T8uhg_pirB1DNoGd72IEbzycAuq_fAXA=w1268-h783-no
   overlay_filter: 0.5
 ---
 
 First, let me introduce our project course, *ELEC 391*. This year we are building 2-DOF motor controlled laser pointer that is fast enough to draw images. The entire project is split into two teams: *motor* and *control*. The motor team is responsible for constructing good motors from scratch, using nothing but materials found in the lab or off the shelf. The controls team is responsible for running simulations, designing motor mounts, joints, and programming the controllers. I am on the controls team.
+
+<!-- excerpt -->
 
 ![Intro](https://lh3.googleusercontent.com/RlLyTWZ0_-1OpbEFO-E5IPBwCUqhuAlP8WocUWleVwl4K9Y0PANRO2S3bwybirgQKIqzNuuIMAgJXfA76P-ZRX4wjtJB4RNYfZJqENnZL3w9Db-1e7gPmFCudv15IL8Q9AqsMMDSXmitxkjk70ap6qu7nCFAAkiTPOaZo8aX2zIMNWudDeZSuBKuyqLjMvz3NbM3pA0wvDNfVXCH7uzbWH7KdtVV048gyyDV42FEfR8eUPR4XeQdBu0aG4oY7dy9BwWrBUAzhGaViNaYceL4JQPDf3opXl_ksuk37PGiLs5lp8D76Smib1e9w_y2fsDAqNgZEQSkDqdIboleHdNiC4EGgTM7wsN99O1myGmDWgd4ScO0zxmVwPZG9NvU9ly32YQ1uoCl8FGbDjaqkBkLgFfuORE2Q7HP5KTYkoYOD8k_QiaF7b5Zg7hKDYoWgLyhg4t7p3kKalJMYPdUytZGn5P2n8uFBaCkBjHIevp1pM4UdfhS1C1EGXbduhdUuMBicCAe2Y3dZyVvdV968OVSD2ymvsCeGQnsbTS7bm15udwkiwlDtWySMuF4ftsdbo1x4eMaMskLb3Nq2YFU-ouHYzbI7LGh_-xoUGS5xEwB07sS7ABnOxtXAVpiKG6TeDvoLh8UTen1imNvxGHKL_vQ9rLKvCcKUBJ-Fw=w600-h435-no)
 

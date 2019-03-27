@@ -4,20 +4,20 @@ date: 2018-03-16
 categories: projects
 
 author: Muchen He
-layout: post
-nav_active: /blog
-# tags:
-#   - other
-#   - processing
-#   - facebook
-#   - project
-#   - data
-#   - visualization
+tags:
+  - other
+  - processing
+  - facebook
+  - project
+  - data
+  - visualization
 
 published: false
 ---
 
 I've had my Facebook data archive downloaded for quite some time now, so I decideded to do something with them. By the way, [this Facebook article](https://www.facebook.com/help/302796099745838) has details on how to do so. I wanted to visualize the messages exchanged between me and my friends.
+
+<!-- excerpt -->
 
 ## Getting the Data
 

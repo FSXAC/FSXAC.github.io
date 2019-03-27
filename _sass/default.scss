@@ -53,10 +53,13 @@ a:hover { color: #A92626; }
 .text-light > a { color: #6AF; }
 .text-light > a:hover { color: #f88; }
 
+/* Extra small button */
 .btn-xs { padding: 0 .25em; font-size: 0.9em; }
 
-/* Avatar image are round */
-img.avatar { border-radius: 50%; }
+/* Box shadows */
+.one-edge-shadow {
+  box-shadow: 0 5px 6px -6px black;
+}
 
 /* Blog texts */
 #blog-content p {

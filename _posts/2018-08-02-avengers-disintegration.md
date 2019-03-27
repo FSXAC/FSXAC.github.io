@@ -1,30 +1,25 @@
 ---
-title: Disintegration Effects in Processing
+author: Muchen He
 date: 2018-08-02
 categories: projects
+title: Disintegration Effects in Processing
 
-# TODO: default this
-author: Muchen He
-layout: post
-nav_active: /blog
+tags:
+  - programming
+  - code
+  - processing
+  - avengers
 
 extra_js:
 - <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-# tags:
-#   - programming
-#   - code
-#   - processing
-#   - avengers
-# toc: false
-excerpt: I Don't Feel So Good.
 header:
-  teaser: /assets/blog/default.jpg
-  overlay_image: /assets/blog/default.jpg
-  overlay_filter: 0.4
+  teaser: /assets/blog/teaser/disintegrate.jpg
 ---
 
 In this small project, my objective is to take an input image and disintegrate it into particles. I will be using [Processing 3](https://processing.org/) because it's easy to do quick graphical interactives and I'm familiar with it.
+
+<!-- excerpt -->
 
 This is my first implementation and it is a basic and limited one. The image is loaded from file, and a grid of small rectangles are drawn such that it resembles the original image. Here is what it looks like (with black strokes around each rectangle):
 
