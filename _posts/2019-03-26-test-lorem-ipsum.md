@@ -6,6 +6,8 @@ description: this block is YAML front matters
 layout: post
 excerpt_separator: <!-- excerpt -->
 # published: false
+
+use_math: true
 ---
 
 # Lorem ipsum
@@ -24,7 +26,7 @@ A common form of *lorem ipsum* reads:
 
 
 
-Inline styles support **strong**, *Emphasis*, `code`, <u>underline</u>, ~~strikethrough~~, :haha:, $\LaTeX$, X^2^, H~2~O, ==highlight==, [Link](typora.io), and image:
+Inline styles support **strong**, *Emphasis*, `code`, <u>underline</u>, ~~strikethrough~~, :haha:, $\LaTeX$, X^2^, H~2~O, ==highlight==, [Link](#), and image:
 
 ![img](https://i.imgur.com/RGLj3oV.jpg)
 
@@ -69,6 +71,13 @@ document.getElementById("demo").innerHTML = x;
 </body>
 </html>
 ```
+
+Here is some math:
+
+$$
+(f*g)[n]=\sum_{m=0}^{N-1}f[m]g_N[n-m]\\
+(f*g)(t)=\int_{-\infty}^\infty f(\tau)\cdot g(t-\tau)\mathrm d\tau
+$$
 
 [TOC]
 
