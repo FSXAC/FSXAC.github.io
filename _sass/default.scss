@@ -74,3 +74,66 @@ a:hover { color: #A92626; }
 #blog-content ul#markdown-toc {
 	padding: 0;
 }
+
+#blog-content table { word-break: initial; border-bottom: 3px solid black; margin-top: 1em; margin-bottom: 1em; }
+#blog-content table.full-width { width: 100%; }
+#blog-content table.centered { margin-left: auto; margin-right: auto; }
+#blog-content table tr {
+	border-top: 1px solid black;
+	margin: 0;
+	padding: 0;
+}
+#blog-content table tr:first-child { border-top: 0px; }
+#blog-content table tr th {
+	font-weight: bold;
+	border: 0;
+	border-bottom: 3px solid black;
+	text-align: left;
+}
+#blog-content table tr th, #blog-content table tr td {
+    padding: 0.25em;
+}
+
+#blog-content input.task-list-item-checkbox {
+	margin-right: .4em;
+	position: relative;
+	top: .1em;
+}
+
+#blog-content pre.highlight {
+	border: 1px solid black;
+	border-radius: .35em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 0.5em 1em;
+}
+#blog-content pre.highlight span.cp {
+	color: #666;
+}
+#blog-content pre.highlight span.nt {
+	color: #170;
+}
+#blog-content pre.highlight span.na {
+	color: #00f;
+}
+#blog-content pre.highlight span.s {
+	color: #1586d2;
+}
+#blog-content pre.highlight span.s2 {
+	color: #1586d2;
+}
+#blog-content pre.highlight span.kd {
+	color: #fb6620;
+}
+#blog-content pre.highlight span.o {
+	color: #fb6620;
+}
+#blog-content pre.highlight span.mi {
+	color: #8a4cff;
+}
+#blog-content pre.highlight span.nx {
+	color: #13806d;
+}
+#blog-content pre.highlight span.nb {
+	color: #000;
+}

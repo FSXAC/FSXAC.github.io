@@ -13,8 +13,6 @@ layout: minimum
 		{% endif %}>
 	<div class="container">
 		<h1 class="display-4 text-light">{{ page.title }}</h1>
-		<!-- {% for htext in page.header.text %}<p class="text-light">{{ htext }}</p>{% endfor %} -->
-		<!-- {% for extra in page.header.extra %}{{ extra }}{% endfor %} -->
 		{% for line in page.excerpt %}
 		<p class="text-light">{{ line | strip_html }}</p>
 		{% endfor %}
