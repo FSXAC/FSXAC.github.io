@@ -11,6 +11,7 @@ titlebar: Blog
 
 # Nav selector
 nav_active: /blog
+permalink: /blog
 
 # Header
 header:
@@ -38,14 +39,12 @@ img.media-object {
 {% for post in site.posts %}
   <div class="media my-3">
       <div class="media-left media-top mr-3 pt-1">
-          {% if post.header.teaser %}
-          <a href="{{ post.url }}"><img class="media-object" src="{{ post.header.teaser }}" alt="..."></a>
-          {% endif %}
+          <a href="{{ post.url }}"><img class="media-object" src="{{ post.header.teaser | default='/assets/img/placeholder.jpg' }}" alt="..."></a>
       </div>
       <div class="media-body pt-1">
           <h3 class="media-heading"><a href="{{ post.url }}">{{ post.title }}</a></h3>
           <p>{{ post.date | date: "%Y-%m-%d" }}</p>
-          <p>{{ post.excerpt }}</p>
+          <p>{{ post.excerpt | strip_html }}</p>
           <a href="{{ post.url }}">Read more</a>
       </div>
   </div>
