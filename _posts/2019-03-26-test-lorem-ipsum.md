@@ -4,8 +4,7 @@ date: 2019-03-26
 author: No one
 description: this block is YAML front matters
 layout: post
-excerpt_separator: <!-- excerpt -->
-# published: false
+published: false
 
 use_math: true
 ---
