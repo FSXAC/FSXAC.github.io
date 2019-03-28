@@ -12,7 +12,14 @@ layout: minimum
 		style="background-color: rgba(0, 0, 0, {{ page.header.overlay_filter }}); background-blend-mode: multiply;"
 		{% endif %}>
 	<div class="container">
-		<em class="text-light" style="margin-left: .25em">{{ page.categories | capitalize }}</em>
+		{% if page.categories %}
+		<small class="text-light" style="letter-spacing: 2px">
+		{% for category in page.categories %}
+		{{ page.categories | upcase }}{% unless forloop.last %}, {% endunless %}
+		{% endfor}
+		</small>
+		{% endif %}
+
 		<h1 class="display-4 text-light">{{ page.title }}</h1>
 		{% for line in page.excerpt %}
 		<p class="text-light">{{ line | strip_html }}</p>
@@ -29,11 +36,13 @@ layout: minimum
 			read
 		</p>
 
-		<small><p class="text-light m-0 mt-5">
+		{%if page.tags %}
+		<p class="text-light m-0 mt-5"><small>
 		{% for tag in page.tags %}
 		#{{ tag | capitalize }}{% unless forloop.last %}, {% endunless %}
 		{% endfor %}
-		</p></small>
+		</small></p>
+		{% endif %}
 	</div>
 </header>
 <div id='blog-content' class="container">
