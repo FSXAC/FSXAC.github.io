@@ -31,3 +31,5 @@ defaults:
       layout: post
       excerpt_separator: <!-- excerpt -->
       nav_active: /blog
+
+use_image_as_brand: false
