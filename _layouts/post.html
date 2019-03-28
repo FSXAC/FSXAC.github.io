@@ -16,6 +16,26 @@ layout: minimum
 		{% for line in page.excerpt %}
 		<p class="text-light">{{ line | strip_html }}</p>
 		{% endfor %}
+
+		<p class="text-light mt-3">Published {{ page.date | date: "%Y-%m-%d" }}</p>
+		<p>{{ page.categories }} - 
+			{% assign words = content | number_of_words %}
+			{% if words < 360 %}
+			1 min
+			{% else %}
+			{{ words | divided_by:180 }} mins
+			{% endif %}
+			read
+		</p>
+
+		<small><p class="text-light mt-1">
+		{% for tag in page.tags %}
+		{{ tag | capitalize }}
+		{% unless forloop.last %}
+		, 
+		{% endunless %}
+		{% endfor %}
+		</p></small>
 	</div>
 </header>
 <div id='blog-content' class="container">

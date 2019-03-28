@@ -38,7 +38,7 @@ img.teaser {
     <a href="{{ post.url }}"><img class="teaser one-edge-shadow mb-2 mr-2" src="{{ post.header.teaser | default: '/img/glitched.gif' }}" alt="..."></a>
   </div>
   <div class="col-md-9 col-lg-10">
-    <p>{{ post.date | date: "%Y-%m-%d" }}</p>
+    <p>Published {{ post.date | date: "%Y-%m-%d" }}</p>
     <p>{{ post.excerpt | strip_html }}</p>
     <a class="btn btn-outline-dark btn-sm" href="{{ post.url }}">Read more &rarr;</a>
   </div>
