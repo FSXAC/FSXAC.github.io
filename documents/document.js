@@ -1,14 +1,12 @@
 // HTML templates
 var DT = {
-    category: '<section><h2 class="fancy">{{category}}</h2><div class="card-grid"><div class= "card-gutter-sizer" ></div>{{courses}}</div></section>',
-    course: '<div id="{{cid}}" class="card bg-light">{{content}}</div>',
-    courseHeader: '<div class="card-header p-2"><small class="float-right">{{id}}</small><h3 class="hype">{{name}}</h3><em>{{date}}</em></div>',
-    courseBody: '<div class="card-body p-2"><ul class="list-group list-group-flush">{{entries}}</ul></div>',
-    entry: '<li class="list-group-item p-1 bg-light{{extra}}"><a href="{{link}}">{{title}}</a>{{badge}}</li>',
-    badgeDraft: '<span class="badge badge-secondary badge-pill">draft</span>',
-    badgeNew: '<span class="badge badge-success badge-pill">new</span>',
-
-    extraClass: ' d-flex justify-content-between align-items-center',
+    category: '<section><h2>{{category}}</h2><div class="card-grid"><div class= "card-gutter-sizer" ></div>{{courses}}</div></section>',
+    course: '<div id="{{cid}}" class="card p-2">{{content}}</div>',
+    courseHeader: '<div class="card-header p-0"><small>{{id}}</small><h3>{{name}}</h3><small>{{date}}</small></div>',
+    courseBody: '<div class="card-body"><ul class="list-group list-group-flush">{{entries}}</ul></div>',
+    entry: '<li class="list-group-item"><a href="{{link}}">{{title}}</a>{{badge}}</li>',
+    badgeDraft: '<span class="badge badge-secondary">draft</span>',
+    badgeNew: '<span class="badge badge-success">new</span>',
     NA: 'Not available',
 };
 
@@ -76,7 +74,7 @@ function parseDocumentsToHtml(documents) {
                 var entry = course.entries[j];
 
                 // Create HTML for this entry
-                // Things to replace are: {{extra}}, {{link}}, {{title}}, {{badge}}
+                // Things to replace are: {{link}}, {{title}}, {{badge}}
 
                 if (entry.enum === undefined) {
                     var entryHtml = DT.entry
@@ -85,23 +83,17 @@ function parseDocumentsToHtml(documents) {
 
                     // Add badges depending on the flags
                     if (entry.flag === 'draft') {
-                        entryHtml = entryHtml
-                            .replace('{{extra}}', DT.extraClass)
-                            .replace('{{badge}}', DT.badgeDraft);
+                        entryHtml = entryHtml.replace('{{badge}}', DT.badgeDraft);
                     } else if (entry.flag === 'new') {
-                        entryHtml = entryHtml
-                            .replace('{{extra}}', DT.extraClass)
-                            .replace('{{badge}}', DT.badgeNew);
+                        entryHtml = entryHtml.replace('{{badge}}', DT.badgeNew);
                     } else {
-                        entryHtml = entryHtml
-                            .replace('{{extra}}', '')
-                            .replace('{{badge}}', '');
+                        entryHtml = entryHtml.replace('{{badge}}', '');
                     }
 
                     // Add entry html
                     entriesHtml += entryHtml;
                 } else if (entry.enum !== undefined && entry.links !== undefined) {
-                    var entryHtml = '<li class="list-group-item pl-0 pt-1 pb-1 bg-light">' + entry.title + ' ';
+                    var entryHtml = '<li class="list-group-item  bg-light">' + entry.title + ' ';
                     var subEntryHtml = '<a class="btn btn-xs btn-outline-primary" href="{{link}}" style="margin-left:2px; margin-right: 2px">{{title}}</a>';
 
                     var n_enums = entry.enum.length;
