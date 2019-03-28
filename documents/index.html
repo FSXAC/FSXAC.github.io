@@ -24,21 +24,39 @@ header:
 ---
 
 <style>
-.card { width: 100%; margin-bottom: 12px; }
+.card {
+    width: 100%;
+    margin-bottom: 12px;
+    border: none;
+    /* box-shadow: 0 4px 6px 0 #00000033; */
+}
+.card-header {
+    background-color: transparent;
+    border-bottom: none;
+}
+.card-body {
+    border-top: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 0;
+    padding-top: .5em;
+}
+.card-body .list-group .list-group-item {
+    border: none;
+    padding: 0;
+    margin-top: .25em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.card-body .list-group .list-group-item .badge {
+    margin-left: .5em;
+}
+
 .card-gutter-sizer { width: 0; }
 @media screen and (min-width: 768px) {
     .card { width: 32%; margin-bottom: 12px; }
     .card-gutter-sizer { width: 2%; }
 }
-.alert-warning { color: #624B04; }
 </style>
-
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <strong>Disclaimer: </strong>Please use this page as reference material only; I will not be responsible for any occurance academic dishonesty.
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-    </button>
-</div>
 
 <script>
 loadJSON(function(response) {
