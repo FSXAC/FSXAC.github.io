@@ -1,3 +1,5 @@
+const hide_empty_courses = true;
+
 // HTML templates
 var DT = {
     category: '<section><h2>{{category}}</h2><div class="card-grid"><div class= "card-gutter-sizer" ></div>{{courses}}</div></section>',
@@ -58,10 +60,12 @@ function parseDocumentsToHtml(documents) {
 
             // If the course has no entries, finish and move on
             if (course.entries.length === 0) {
-                courseHtml = courseHtml
-                    .replace('{{content}}', courseHeaderHtml)
-                    .replace('{{cid}}', course.course.replace(' ', '-'));
-                coursesHtml += courseHtml;
+                if (!hide_empty_courses) {
+                    courseHtml = courseHtml
+                        .replace('{{content}}', courseHeaderHtml)
+                        .replace('{{cid}}', course.course.replace(' ', '-'));
+                    coursesHtml += courseHtml;
+                }
                 continue;
             }
 
