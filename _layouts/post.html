@@ -36,7 +36,7 @@ layout: minimum
 			read
 		</p>
 
-		{%if page.tags %}
+		{% if page.tags %}
 		<p class="text-light m-0 mt-5"><small>
 		{% for tag in page.tags %}
 		#{{ tag | capitalize }}{% unless forloop.last %}, {% endunless %}
