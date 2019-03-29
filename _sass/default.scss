@@ -179,6 +179,13 @@ a:hover { color: #A92626; }
 	margin-bottom: initial;
 }
 
+// Blog images should be centered
+#blog-content img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 // Default selected style override
 ::selection {
 	background: #4488ff44;
