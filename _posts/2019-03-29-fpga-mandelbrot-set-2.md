@@ -1,3 +1,7 @@
+---
+published: false
+---
+
 ## FPGA Set Up
 
 In this project, I used my DE1-SoC development board. 
