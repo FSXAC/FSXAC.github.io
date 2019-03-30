@@ -33,15 +33,19 @@ Where $$V$$ is the velocity, $$F$$ is the force, and $$Z$$ is some *mechanical i
 **Purely Resistive**: in a purely resistive system, $$V=IR$$ by Ohm's law. 
 
 **Purely Capacitive**: in a purely capacitive system, $$V=I\frac{1}{sC}$$ where $$\frac{1}{sC}$$ is the impedance of the capacitor and $$s$$ is the complex frequency $$j\omega$$. Notice that we can rearrange the equation to:
+
 $$
 V=\frac{1}{C}\frac{I}{s}
 $$
+
 Recall from the Laplace transforms that division by $$s$$ is integration $$\int$$ in time domain. Thus the voltage in a purely capacitive system is a function of integration of current. 
 
 **Purely Inductive**: in a purely inductive system, $$V=IsL$$, similarly, $$sL$$ is the impedance of the inductor. However we can rearrange once again:
+
 $$
 V=L(sI)
 $$
+
 Recall multiplication by $$s$$ is taking the derivative. Thus the voltage in a inductive system is a function of rate of change in current.
 
 
@@ -51,21 +55,27 @@ Recall multiplication by $$s$$ is taking the derivative. Thus the voltage in a i
 **Purely Friction**: in a system only consists of friction (such as a damper), $$F=BV$$ where $$F$$ is the force exerted, $$B$$ is the friction coefficient, and $$V$$ is velocity.
 
 Since we defined earlier that $$V$$ for velocity, then by rearranging we get the relationship
+
 $$
 V=\frac{1}{B}F
 $$
+
 The mechanical impedance for a system with only friction is $$Z=1/B$$.
 
 **Purely Mass**: in a system only consists of mass, $$F=ma$$, where $$m$$ is mass and $$a$$ is acceleration. To relate this to $$V$$, notice that $$a$$ is first derivative of $$V$$. In Laplace domain, this would simply be a multiplication by $$s$$. Rearrange and we get:
+
 $$
 V=\frac{1}{m}\frac{1}{s}F
 $$
+
 Notice that we're integrating force in time domain. The mechanical impedance is $$Z=1/ms$$
 
 **Purely Spring**: in a spring system, the force by the spring is $$F=kx$$ where $$x$$ is the displacement. Note that we can relate $$V$$ to $$x$$ by integration, or division by $$s$$ in Laplace domain. It follows:
+
 $$
 V=\frac{1}k sF
 $$
+
 Notice that we're taking the derivative of force in time domain. The mechanical impedance is $$Z=s/k$$.
 
 
@@ -73,6 +83,7 @@ Notice that we're taking the derivative of force in time domain. The mechanical 
 ## Equivalence
 
 By matching electrical and mechanical impedances, we get:
+
 $$
 \boxed{
     \begin{aligned}
@@ -83,6 +94,7 @@ $$
     \end{aligned}
 }
 $$
+
 Thus, the following electrical LRC system driven by a current source is equivalent to a simple spring mass damper mechanical system driven by some force.
 
 ![1540949858565](../assets/1540949858565.png)
@@ -98,7 +110,7 @@ The two systems will have identical response:
 
 ## Conversion 
 
-We can convert a mechanical system to electrical, or vise versa, and it makes it easy to solve the system  (i.e. using mesh / nodal methods / [MNA](/documents/) that works on circuits in spring-mass-damper systems).
+We can convert a mechanical system to electrical, or vise versa, and it makes it easy to solve the system  (i.e. using mesh / nodal methods / MNA [^mna] that works on circuits in spring-mass-damper systems).
 
 Generally we can map the components in the two systems one-to-one, however there are some rules regarding the layout:
 
@@ -127,3 +139,5 @@ Generally we can map the components in the two systems one-to-one, however there
 >
 > Lastly, we can connect everything else.
 
+
+[^mna]: [https://en.wikipedia.org/wiki/Modified_nodal_analysis](https://en.wikipedia.org/wiki/Modified_nodal_analysis)

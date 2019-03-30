@@ -15,10 +15,13 @@ use_math: true
 ## Definition
 
 The definition of full Laplace transform is given as:
+
 $$
 \mathcal L:\int_{-\infty}^\infty f(t)e^{-st}\mathrm dt
 $$
+
 The function is integrated from time being $$-\infty$$ to $$\infty$$. However, we don't care about what happens the time far far before. We care about the system after time 0. Thus we have the *half* Laplace transform:
+
 $$
 \mathcal L:\int_{0^-}^\infty f(t)e^{-st}\mathrm dt
 $$
@@ -29,18 +32,23 @@ $$
 ## List of Laplace Transforms
 
 **Integration**
+
 $$
 \mathcal L\left\{\int x \mathrm dx\right\}=\frac 1 s x
 $$
 
 **Derivation**
+
 $$
 \mathcal L \left\{\frac {\mathrm d}{\mathrm dt} x\right\}=sx
 $$
+
 **Delta Function**
+
 $$
 \mathcal L \left\{\delta (t)\right\}=\mathcal L \left\{\frac{\mathrm d u(t)}{\mathrm dt}\right\}=s\cdot \frac 1 s=1
 $$
+
 Where $$\delta(t)$$ is a "infinite spike" at $$t=0$$, and $$u(t)$$ is the unit step function.
 
 

@@ -163,7 +163,7 @@ a:hover { color: #A92626; }
 
 // Blockquote
 #blog-content blockquote {
-	margin-left: 0;
+	margin-left: .2em;
 	margin-top: .5em;
 	margin-bottom: .5em;
 	border: 1px solid #ccc;
@@ -176,6 +176,18 @@ a:hover { color: #A92626; }
 }
 #blog-content blockquote p:last-child {
 	margin-bottom: initial;
+}
+
+// Make blog post images align center
+#blog-content img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#blog-content table {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 // Default selected style override
