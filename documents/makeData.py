@@ -3,7 +3,11 @@ import json
 
 doc_manifest = None
 
+<<<<<<< HEAD
 with open('documents.json', 'r', encoding='utf-8') as manifest:
+=======
+with open('documents/documents.json', 'r', encoding='utf-8') as manifest:
+>>>>>>> 5c62414c99bd828a3068abc58f2c3864eec0ce3b
 	try:
 		doc_manifest = json.load(manifest)
 	except:
@@ -51,13 +55,21 @@ for category in doc_manifest['docs']:
 						link = entry_links[i]
 
 						out += f'      - enum: {enum}\n'
+<<<<<<< HEAD
 						out += f'        link: \'/documents/{link}\'\n'
+=======
+						out += f'        link: {link}\n'
+>>>>>>> 5c62414c99bd828a3068abc58f2c3864eec0ce3b
 
 				else:
 					entry_link = entry['link']
 					entry_flag = entry['flag']
 
+<<<<<<< HEAD
 					out += f'      link: \'/documents/{entry_link}\'\n'
+=======
+					out += f'      link: \'{entry_link}\'\n'
+>>>>>>> 5c62414c99bd828a3068abc58f2c3864eec0ce3b
 
 					if entry_flag:
 						out += f'      flag: {entry_flag}\n'
@@ -65,5 +77,9 @@ for category in doc_manifest['docs']:
 
 
 
+<<<<<<< HEAD
 with open('../_data/documents.yml', 'w', encoding='utf-8') as data:
+=======
+with open('_data/documents.yml', 'w', encoding='utf-8') as data:
+>>>>>>> 5c62414c99bd828a3068abc58f2c3864eec0ce3b
 	data.write(out)
