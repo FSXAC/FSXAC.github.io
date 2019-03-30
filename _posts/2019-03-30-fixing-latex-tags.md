@@ -25,6 +25,8 @@ We will use the following *regex* to identify all matches where we are using the
 
 The first group `(^|[^$])` matches the beginning of the line or a non `$` character or `\$` character. The last group matches the end of the line or a non `$` character. This is necessary because we don't want to touch anything between two sets of LaTeX tags. i.e: "combine `$x_1$` and `$x_2$`". Notice that the word "and" is also between the `$` character. We also don't want to match `\$` because we use that denote other meanings like actual dollars.
 
+Using the line begin `^` and line end `$` patterns, we ensure we also don't touch the LaTeX stuff displayed in separate blocks.
+
 The main part is in the middle, group 2: `\$([^\$]+)\$`. This matches anything inside the LaTeX tags.
 
 ## Replace
