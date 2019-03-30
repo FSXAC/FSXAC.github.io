@@ -11,7 +11,7 @@ titlebar: Home
 
 # Header
 header:
-  image: 'img/avatar-new-small.jpg'
+  image: '/assets/img/avatar-new-small.jpg'
   text:
   - I'm a fourth year Electrical Engineering at The University of British Columbia. Currently on an 8-month co-op term Intel of Canada as FPGA Emulation Platform intern. I've previously worked at Electronic Arts - BioWare and VitalMechanics.
 ---

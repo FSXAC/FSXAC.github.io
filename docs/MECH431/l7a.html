@@ -1,0 +1,614 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Sources of Capital</title><link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; padding-bottom: 70px; white-space: pre-wrap; overflow-x: visible; }
+.first-line-indent #write p .md-line { text-indent: 0px; }
+.first-line-indent #write li, .first-line-indent #write p, .first-line-indent #write p .md-line:first-child { text-indent: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write > blockquote:first-child, #write > div:first-child, #write > figure:first-child, #write > ol:first-child, #write > p:first-child, #write > pre:first-child, #write > ul:first-child { margin-top: 30px; }
+#write li > figure:first-child { margin-top: -20px; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+h1, h2, h3, h4, h5, h6 { margin-top: 1rem; margin-bottom: 1rem; }
+p { -webkit-margin-before: 1rem; -webkit-margin-after: 1rem; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
+.mathjax-block { margin-top: 0px; margin-bottom: 0px; -webkit-margin-before: 0px; -webkit-margin-after: 0px; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.701961); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 80px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+pre { white-space: pre-wrap; }
+pre.contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+.md-fences.mock-cm { white-space: pre-wrap; }
+.show-fences-line-number .md-fences { padding-left: 0px; }
+.show-fences-line-number .md-fences.mock-cm { padding-left: 40px; }
+.CodeMirror-line { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+.footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid-page; break-before: avoid-page; }
+  #write { margin-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 1cm; padding-right: 1cm; padding-bottom: 0px; break-after: avoid-page; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > img:only-child { display: block; margin: auto; }
+.md-line > .md-image:only-child, p > .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.mathjax-block { white-space: pre; overflow: hidden; width: 100%; }
+p + .mathjax-block { margin-top: -1.143rem; }
+.mathjax-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, tt { font-family: var(--monospace); }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.mathjax-block .MathJax_SVG_Display { text-align: center; margin: 1em 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: monospace; }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Open Sans Regular'),url('file:///Users/muchenhe/Library/Application%20Support/abnerworks.Typora/themes/github/400.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: normal;
+    src: local('Open Sans Italic'),url('file:///Users/muchenhe/Library/Application%20Support/abnerworks.Typora/themes/github/400i.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Open Sans Bold'),url('file:///Users/muchenhe/Library/Application%20Support/abnerworks.Typora/themes/github/700.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: bold;
+    src: local('Open Sans Bold Italic'),url('file:///Users/muchenhe/Library/Application%20Support/abnerworks.Typora/themes/github/700i.woff') format('woff')
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(16, 16, 16);
+    line-height: 1.24;
+}
+
+#write{
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 20px 30px 40px 30px;
+	padding-top: 20px;
+    padding-bottom: 100px;
+}
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    /*background: url("file:///Users/muchenhe/Library/Application%20Support/images/modules/styleguide/para.png") no-repeat 10px center;*/
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .25em;
+    font-size: 3.25em;
+    line-height: 1.2;
+    /* margin-bottom: 1em; */
+    border-bottom: 1px solid #eee;
+    font-weight: 100;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 1em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 1px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border: 1px solid #AAA;
+    /* border-left: 4px solid #468; */
+    border-left: 4px solid #486;
+    padding: 0.5em 1em;
+    color: #222;
+    background-color: #FEFEFE;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #888;
+    margin: 0;
+    padding: 0;
+}
+table tr:first-child {
+    border-top: 0px;
+}
+table tr th {
+    font-weight: bold;
+    border: 0;
+    border-bottom: 2px solid #888;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+mark {
+    background: cornsilk;
+    border-radius: 4px;
+    padding: 0 4px;
+}
+
+.CodeMirror-gutters {
+    border-right: 1px solid #ddd;
+}
+
+.md-fences,
+code,
+tt {
+    /* border: 1px solid #ddd;
+    background-color: #f8f8f8; */
+    background-color: #333;
+    color: white;
+    border-radius: 3px;
+    padding: 0;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 0.2em 1em;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+.task-list{
+	padding-left: 0;
+}
+
+.task-list-item {
+	padding-left:32px;
+}
+
+.task-list-item input {
+  top: 3px;
+  left: 8px;
+}
+
+@media screen and (min-width: 914px) {
+    /*body {
+        width: 854px;
+        margin: 0 auto;
+    }*/
+}
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+    /* background-color: #f8f8f8; */
+    /* background: white; */
+    /* border-radius: 0; */
+    /* border: 1px solid #eee; */
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.cm-keyword {
+    color: #B7E !important;
+}
+.cm-variable { 
+    color: #FFF !important;
+}
+.cm-variable-2 { 
+    color: #49F !important;
+}
+.cm-meta {
+    color: #DDD !important;
+}
+.cm-comment {
+    color: #482 !important;
+}
+.cm-operator {
+    color: #fb8 !important;
+}
+.cm-property {
+    color: #8F8 !important;
+}
+.cm-def {
+    color: #F49 !important;
+}
+.cm-string {
+    color: #FF3 !important;
+}
+.CodeMirror pre {
+    color: #CCC !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag{
+	color: inherit;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+small.fc {
+    color: #888;
+    font-style: italic;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-top: 0px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write'  class = 'is-mac'><p>💾 <a href='/documents'>Go Back</a></p><p><small> Last updated 2018-06-17 by Muchen</small> </p><div class='md-toc' mdtype='toc'><p class="md-toc-content"><span class="md-toc-item md-toc-h1" data-ref="n7"><a class="md-toc-inner" href="#header-n7">Sources of Capital</a></span><span class="md-toc-item md-toc-h2" data-ref="n34"><a class="md-toc-inner" href="#header-n34">Cost of Funds</a></span><span class="md-toc-item md-toc-h3" data-ref="n35"><a class="md-toc-inner" href="#header-n35">Debt</a></span><span class="md-toc-item md-toc-h3" data-ref="n51"><a class="md-toc-inner" href="#header-n51">Equity</a></span><span class="md-toc-item md-toc-h3" data-ref="n71"><a class="md-toc-inner" href="#header-n71">Risk &amp; Rate of return</a></span><span class="md-toc-item md-toc-h2" data-ref="n80"><a class="md-toc-inner" href="#header-n80">Investment Opportunities</a></span><span class="md-toc-item md-toc-h2" data-ref="n89"><a class="md-toc-inner" href="#header-n89">Minimum Attractive Rate of Return</a></span></p></div><h1><a name='header-n7' class='md-header-anchor '></a>Sources of Capital</h1><p><strong>Internal</strong> sources are generated from firm&#39;s operations (i.e. profits). </p><p><strong>External</strong> sources are from money raised outside of the firm such as loans, credits, bonds, funds, mortgages. They could also be permanent one-time income (selling equity).</p><p><strong>Capital structure</strong> is the mix of externally funds. Depends on the firm&#39;s decisions and needs.</p><blockquote><p><strong>Example</strong>: Manufacturing plastic toys</p><p>Need a mold: initial cost is $12,000. Estimated revenue is $5,000 first year and $1,000 less for each year after for five years.</p><p>To pay for mold, we have two external sources as options:</p><ul><li><em>Option A:</em> Bank loan at 18% interest.</li><li><em>Option B:</em> Finance with some tool and die maker at 6% interest.</li></ul><p>We may find present worth of the total revenue of both options (using uniform and gradient present worth factor formulas to find present value).</p><p>For option A: the present value is $10,404. For option B, the present value is $13,126. Obviously go with option B because we would be losing money in option A.</p></blockquote><p>&nbsp;</p><h2><a name='header-n34' class='md-header-anchor '></a>Cost of Funds</h2><h3><a name='header-n35' class='md-header-anchor '></a>Debt</h3><p><strong>Cost of debt</strong> is the <em>rate of return</em> the debt market (i.e. lender) requires. This depends on the market&#39;s assessment of the level of risk associated with ability to repayment of the debt. </p><blockquote><p>Recall <strong>rate of return</strong> (ROR) is a profit on an investment over a period of time, expressed as a proportion of the original investment. <sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup></p></blockquote><ul><li>Determined by matching market value of the debt to its future cashflows</li><li>Often approximately equal to the rate of interest the firm is paying on the debt</li><li>Cost of borrowed money fluctuates with inflation</li></ul><h3><a name='header-n51' class='md-header-anchor '></a>Equity</h3><p><strong>Equity</strong> is selling ownership in the firm to get more capital.</p><p><strong>Cost of equity</strong> is the rate of return that investors require on the shares. This depends on market&#39;s assessment of level of risk associated with ability to provide returns in form of <em>dividends</em> and/or <em>increase in the price of shares</em>.</p><p><strong>Dividends</strong> are a way of equity funding (common in larger institutions i.e banks). When buying/investing <strong>preferred shares</strong> , typically the institution will pay a dividend - a <strong>slice/distribution</strong> of the institution&#39;s earnings.</p><ul><li>Determined by matching market value off the share to future cashflows (dividend payments plus possible sales of the shares at a future data)</li></ul><blockquote><p><strong>Example</strong>:</p><p>We want to rob a bank but we need a hacker to give us some money to buy some 1337haxor equipment. In return, the hacker demands 15% ROR from the heist (hacker has 15% ownership in the heist).</p><p>If the heist is successful and we stole a small amount of $1,000,000, then we have to pay the hacker $150,000. (<em>Or you could just kill him</em>).</p><p><em>Sorry, I&#39;ve been playing a lot of GTA V lately.</em></p></blockquote><h3><a name='header-n71' class='md-header-anchor '></a>Risk &amp; Rate of return</h3><p><strong>Risk</strong> is measured by the <mark>uncertainty</mark> of the firm&#39;s cashflows. The higher the uncertainty, the higher the risk, and typically the investor would ask for higher ROR.</p><p>There all many sources from different places. A firm&#39;s <strong>overall cost of capital</strong> is the weighted average of the rates of returned by the provider of all funds. Because the different sources may have different weights, the <strong>weighted average cost of capital</strong> (WACC) is:</p><div contenteditable="false" spellcheck="false" class="mathjax-block md-end-block" id="mathjax-n75" cid="n75" mdtype="math_block"><span class="MathJax_Preview"></span><span class="MathJax_SVG_Display" style="text-align: center;"><span class="MathJax_SVG" id="MathJax-Element-1-Frame" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="69.107ex" height="5.379ex" viewBox="0 -1007.2 29754.5 2315.9" role="img" focusable="false" style="vertical-align: -3.04ex;"><defs><path stroke-width="0" id="E1-MJMAIN-57" d="M792 683Q810 680 914 680Q991 680 1003 683H1009V637H996Q931 633 915 598Q912 591 863 438T766 135T716 -17Q711 -22 694 -22Q676 -22 673 -15Q671 -13 593 231L514 477L435 234Q416 174 391 92T358 -6T341 -22H331Q314 -21 310 -15Q309 -14 208 302T104 622Q98 632 87 633Q73 637 35 637H18V683H27Q69 681 154 681Q164 681 181 681T216 681T249 682T276 683H287H298V637H285Q213 637 213 620Q213 616 289 381L364 144L427 339Q490 535 492 546Q487 560 482 578T475 602T468 618T461 628T449 633T433 636T408 637H380V683H388Q397 680 508 680Q629 680 650 683H660V637H647Q576 637 576 619L727 146Q869 580 869 600Q869 605 863 612T839 627T794 637H783V683H792Z"></path><path stroke-width="0" id="E1-MJMAIN-41" d="M255 0Q240 3 140 3Q48 3 39 0H32V46H47Q119 49 139 88Q140 91 192 245T295 553T348 708Q351 716 366 716H376Q396 715 400 709Q402 707 508 390L617 67Q624 54 636 51T687 46H717V0H708Q699 3 581 3Q458 3 437 0H427V46H440Q510 46 510 64Q510 66 486 138L462 209H229L209 150Q189 91 189 85Q189 72 209 59T259 46H264V0H255ZM447 255L345 557L244 256Q244 255 345 255H447Z"></path><path stroke-width="0" id="E1-MJMAIN-43" d="M56 342Q56 428 89 500T174 615T283 681T391 705Q394 705 400 705T408 704Q499 704 569 636L582 624L612 663Q639 700 643 704Q644 704 647 704T653 705H657Q660 705 666 699V419L660 413H626Q620 419 619 430Q610 512 571 572T476 651Q457 658 426 658Q322 658 252 588Q173 509 173 342Q173 221 211 151Q232 111 263 84T328 45T384 29T428 24Q517 24 571 93T626 244Q626 251 632 257H660L666 251V236Q661 133 590 56T403 -21Q262 -21 159 83T56 342Z"></path><path stroke-width="0" id="E1-MJMAIN-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path stroke-width="0" id="E1-MJSZ2-2211" d="M60 948Q63 950 665 950H1267L1325 815Q1384 677 1388 669H1348L1341 683Q1320 724 1285 761Q1235 809 1174 838T1033 881T882 898T699 902H574H543H251L259 891Q722 258 724 252Q725 250 724 246Q721 243 460 -56L196 -356Q196 -357 407 -357Q459 -357 548 -357T676 -358Q812 -358 896 -353T1063 -332T1204 -283T1307 -196Q1328 -170 1348 -124H1388Q1388 -125 1381 -145T1356 -210T1325 -294L1267 -449L666 -450Q64 -450 61 -448Q55 -446 55 -439Q55 -437 57 -433L590 177Q590 178 557 222T452 366T322 544L56 909L55 924Q55 945 60 948Z"></path><path stroke-width="0" id="E1-MJMAIN-66" d="M273 0Q255 3 146 3Q43 3 34 0H26V46H42Q70 46 91 49Q99 52 103 60Q104 62 104 224V385H33V431H104V497L105 564L107 574Q126 639 171 668T266 704Q267 704 275 704T289 705Q330 702 351 679T372 627Q372 604 358 590T321 576T284 590T270 627Q270 647 288 667H284Q280 668 273 668Q245 668 223 647T189 592Q183 572 182 497V431H293V385H185V225Q185 63 186 61T189 57T194 54T199 51T206 49T213 48T222 47T231 47T241 46T251 46H282V0H273Z"></path><path stroke-width="0" id="E1-MJMAIN-6F" d="M28 214Q28 309 93 378T250 448Q340 448 405 380T471 215Q471 120 407 55T250 -10Q153 -10 91 57T28 214ZM250 30Q372 30 372 193V225V250Q372 272 371 288T364 326T348 362T317 390T268 410Q263 411 252 411Q222 411 195 399Q152 377 139 338T126 246V226Q126 130 145 91Q177 30 250 30Z"></path><path stroke-width="0" id="E1-MJMAIN-72" d="M36 46H50Q89 46 97 60V68Q97 77 97 91T98 122T98 161T98 203Q98 234 98 269T98 328L97 351Q94 370 83 376T38 385H20V408Q20 431 22 431L32 432Q42 433 60 434T96 436Q112 437 131 438T160 441T171 442H174V373Q213 441 271 441H277Q322 441 343 419T364 373Q364 352 351 337T313 322Q288 322 276 338T263 372Q263 381 265 388T270 400T273 405Q271 407 250 401Q234 393 226 386Q179 341 179 207V154Q179 141 179 127T179 101T180 81T180 66V61Q181 59 183 57T188 54T193 51T200 49T207 48T216 47T225 47T235 46T245 46H276V0H267Q249 3 140 3Q37 3 28 0H20V46H36Z"></path><path stroke-width="0" id="E1-MJMATHI-73" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path><path stroke-width="0" id="E1-MJMAIN-69" d="M69 609Q69 637 87 653T131 669Q154 667 171 652T188 609Q188 579 171 564T129 549Q104 549 87 564T69 609ZM247 0Q232 3 143 3Q132 3 106 3T56 1L34 0H26V46H42Q70 46 91 49Q100 53 102 60T104 102V205V293Q104 345 102 359T88 378Q74 385 41 385H30V408Q30 431 32 431L42 432Q52 433 70 434T106 436Q123 437 142 438T171 441T182 442H185V62Q190 52 197 50T232 46H255V0H247Z"></path><path stroke-width="0" id="E1-MJMAIN-6E" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q450 438 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z"></path><path stroke-width="0" id="E1-MJMAIN-73" d="M295 316Q295 356 268 385T190 414Q154 414 128 401Q98 382 98 349Q97 344 98 336T114 312T157 287Q175 282 201 278T245 269T277 256Q294 248 310 236T342 195T359 133Q359 71 321 31T198 -10H190Q138 -10 94 26L86 19L77 10Q71 4 65 -1L54 -11H46H42Q39 -11 33 -5V74V132Q33 153 35 157T45 162H54Q66 162 70 158T75 146T82 119T101 77Q136 26 198 26Q295 26 295 104Q295 133 277 151Q257 175 194 187T111 210Q75 227 54 256T33 318Q33 357 50 384T93 424T143 442T187 447H198Q238 447 268 432L283 424L292 431Q302 440 314 448H322H326Q329 448 335 442V310L329 304H301Q295 310 295 316Z"></path><path stroke-width="0" id="E1-MJMAIN-75" d="M383 58Q327 -10 256 -10H249Q124 -10 105 89Q104 96 103 226Q102 335 102 348T96 369Q86 385 36 385H25V408Q25 431 27 431L38 432Q48 433 67 434T105 436Q122 437 142 438T172 441T184 442H187V261Q188 77 190 64Q193 49 204 40Q224 26 264 26Q290 26 311 35T343 58T363 90T375 120T379 144Q379 145 379 161T380 201T380 248V315Q380 361 370 372T320 385H302V431Q304 431 378 436T457 442H464V264Q464 84 465 81Q468 61 479 55T524 46H542V0Q540 0 467 -5T390 -11H383V58Z"></path><path stroke-width="0" id="E1-MJMAIN-63" d="M370 305T349 305T313 320T297 358Q297 381 312 396Q317 401 317 402T307 404Q281 408 258 408Q209 408 178 376Q131 329 131 219Q131 137 162 90Q203 29 272 29Q313 29 338 55T374 117Q376 125 379 127T395 129H409Q415 123 415 120Q415 116 411 104T395 71T366 33T318 2T249 -11Q163 -11 99 53T34 214Q34 318 99 383T250 448T370 421T404 357Q404 334 387 320Z"></path><path stroke-width="0" id="E1-MJMAIN-65" d="M28 218Q28 273 48 318T98 391T163 433T229 448Q282 448 320 430T378 380T406 316T415 245Q415 238 408 231H126V216Q126 68 226 36Q246 30 270 30Q312 30 342 62Q359 79 369 104L379 128Q382 131 395 131H398Q415 131 415 121Q415 117 412 108Q393 53 349 21T250 -11Q155 -11 92 58T28 218ZM333 275Q322 403 238 411H236Q228 411 220 410T195 402T166 381T143 340T127 274V267H333V275Z"></path><path stroke-width="0" id="E1-MJMAIN-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path stroke-width="0" id="E1-MJMAIN-61" d="M137 305T115 305T78 320T63 359Q63 394 97 421T218 448Q291 448 336 416T396 340Q401 326 401 309T402 194V124Q402 76 407 58T428 40Q443 40 448 56T453 109V145H493V106Q492 66 490 59Q481 29 455 12T400 -6T353 12T329 54V58L327 55Q325 52 322 49T314 40T302 29T287 17T269 6T247 -2T221 -8T190 -11Q130 -11 82 20T34 107Q34 128 41 147T68 188T116 225T194 253T304 268H318V290Q318 324 312 340Q290 411 215 411Q197 411 181 410T156 406T148 403Q170 388 170 359Q170 334 154 320ZM126 106Q126 75 150 51T209 26Q247 26 276 49T315 109Q317 116 318 175Q318 233 317 233Q309 233 296 232T251 223T193 203T147 166T126 106Z"></path><path stroke-width="0" id="E1-MJMAIN-74" d="M27 422Q80 426 109 478T141 600V615H181V431H316V385H181V241Q182 116 182 100T189 68Q203 29 238 29Q282 29 292 100Q293 108 293 146V181H333V146V134Q333 57 291 17Q264 -10 221 -10Q187 -10 162 2T124 33T105 68T98 100Q97 107 97 248V385H18V422H27Z"></path><path stroke-width="0" id="E1-MJMAIN-6C" d="M42 46H56Q95 46 103 60V68Q103 77 103 91T103 124T104 167T104 217T104 272T104 329Q104 366 104 407T104 482T104 542T103 586T103 603Q100 622 89 628T44 637H26V660Q26 683 28 683L38 684Q48 685 67 686T104 688Q121 689 141 690T171 693T182 694H185V379Q185 62 186 60Q190 52 198 49Q219 46 247 46H263V0H255L232 1Q209 2 183 2T145 3T107 3T57 1L34 0H26V46H42Z"></path><path stroke-width="0" id="E1-MJMAIN-70" d="M36 -148H50Q89 -148 97 -134V-126Q97 -119 97 -107T97 -77T98 -38T98 6T98 55T98 106Q98 140 98 177T98 243T98 296T97 335T97 351Q94 370 83 376T38 385H20V408Q20 431 22 431L32 432Q42 433 61 434T98 436Q115 437 135 438T165 441T176 442H179V416L180 390L188 397Q247 441 326 441Q407 441 464 377T522 216Q522 115 457 52T310 -11Q242 -11 190 33L182 40V-45V-101Q182 -128 184 -134T195 -145Q216 -148 244 -148H260V-194H252L228 -193Q205 -192 178 -192T140 -191Q37 -191 28 -194H20V-148H36ZM424 218Q424 292 390 347T305 402Q234 402 182 337V98Q222 26 294 26Q345 26 384 80T424 218Z"></path><path stroke-width="0" id="E1-MJMAIN-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path><path stroke-width="0" id="E1-MJMAIN-22C5" d="M78 250Q78 274 95 292T138 310Q162 310 180 294T199 251Q199 226 182 208T139 190T96 207T78 250Z"></path><path stroke-width="0" id="E1-MJMAIN-52" d="M130 622Q123 629 119 631T103 634T60 637H27V683H202H236H300Q376 683 417 677T500 648Q595 600 609 517Q610 512 610 501Q610 468 594 439T556 392T511 361T472 343L456 338Q459 335 467 332Q497 316 516 298T545 254T559 211T568 155T578 94Q588 46 602 31T640 16H645Q660 16 674 32T692 87Q692 98 696 101T712 105T728 103T732 90Q732 59 716 27T672 -16Q656 -22 630 -22Q481 -16 458 90Q456 101 456 163T449 246Q430 304 373 320L363 322L297 323H231V192L232 61Q238 51 249 49T301 46H334V0H323Q302 3 181 3Q59 3 38 0H27V46H60Q102 47 111 49T130 61V622ZM491 499V509Q491 527 490 539T481 570T462 601T424 623T362 636Q360 636 340 636T304 637H283Q238 637 234 628Q231 624 231 492V360H289Q390 360 434 378T489 456Q491 467 491 499Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E1-MJMAIN-57"></use><use xlink:href="#E1-MJMAIN-41" x="1028" y="0"></use><use xlink:href="#E1-MJMAIN-43" x="1778" y="0"></use><use xlink:href="#E1-MJMAIN-43" x="2500" y="0"></use><use xlink:href="#E1-MJMAIN-3D" x="3499" y="0"></use><g transform="translate(4555,0)"><use xlink:href="#E1-MJSZ2-2211" x="1641" y="0"></use><g transform="translate(0,-1116)"><use transform="scale(0.707)" xlink:href="#E1-MJMAIN-66"></use><use transform="scale(0.707)" xlink:href="#E1-MJMAIN-6F" x="306" y="0"></use><use transform="scale(0.707)" xlink:href="#E1-MJMAIN-72" x="806" y="0"></use><use transform="scale(0.707)" xlink:href="#E1-MJMATHI-73" x="1551" y="0"></use><g transform="translate(1428,0)"><use transform="scale(0.707)" xlink:href="#E1-MJMAIN-69" x="353" y="0"></use><use transform="scale(0.707)" xlink:href="#E1-MJMAIN-6E" x="631" y="0"></use><use transform="scale(0.707)" xlink:href="#E1-MJMAIN-73" x="1541" y="0"></use><use transform="scale(0.707)" xlink:href="#E1-MJMAIN-6F" x="1935" y="0"></use><use transform="scale(0.707)" xlink:href="#E1-MJMAIN-75" x="2435" y="0"></use><use transform="scale(0.707)" xlink:href="#E1-MJMAIN-72" x="2991" y="0"></use><use transform="scale(0.707)" xlink:href="#E1-MJMAIN-63" x="3383" y="0"></use><use transform="scale(0.707)" xlink:href="#E1-MJMAIN-65" x="3827" y="0"></use><use transform="scale(0.707)" xlink:href="#E1-MJMAIN-73" x="4271" y="0"></use></g></g></g><use xlink:href="#E1-MJMAIN-28" x="9283" y="0"></use><g transform="translate(9672,0)"><use xlink:href="#E1-MJMAIN-66"></use><use xlink:href="#E1-MJMAIN-72" x="306" y="0"></use><use xlink:href="#E1-MJMAIN-61" x="698" y="0"></use><use xlink:href="#E1-MJMAIN-63" x="1198" y="0"></use><use xlink:href="#E1-MJMAIN-74" x="1642" y="0"></use><use xlink:href="#E1-MJMAIN-69" x="2031" y="0"></use><use xlink:href="#E1-MJMAIN-6F" x="2309" y="0"></use><use xlink:href="#E1-MJMAIN-6E" x="2809" y="0"></use><use xlink:href="#E1-MJMAIN-6F" x="3615" y="0"></use><use xlink:href="#E1-MJMAIN-66" x="4115" y="0"></use><use xlink:href="#E1-MJMAIN-74" x="4671" y="0"></use><use xlink:href="#E1-MJMAIN-6F" x="5060" y="0"></use><use xlink:href="#E1-MJMAIN-74" x="5560" y="0"></use><use xlink:href="#E1-MJMAIN-61" x="5949" y="0"></use><use xlink:href="#E1-MJMAIN-6C" x="6449" y="0"></use><use xlink:href="#E1-MJMAIN-63" x="6977" y="0"></use><use xlink:href="#E1-MJMAIN-61" x="7421" y="0"></use><use xlink:href="#E1-MJMAIN-70" x="7921" y="0"></use><use xlink:href="#E1-MJMAIN-69" x="8477" y="0"></use><use xlink:href="#E1-MJMAIN-74" x="8755" y="0"></use><use xlink:href="#E1-MJMAIN-61" x="9144" y="0"></use><use xlink:href="#E1-MJMAIN-6C" x="9644" y="0"></use></g><use xlink:href="#E1-MJMAIN-29" x="19594" y="0"></use><use xlink:href="#E1-MJMAIN-22C5" x="20205" y="0"></use><use xlink:href="#E1-MJMAIN-28" x="20705" y="0"></use><g transform="translate(21094,0)"><use xlink:href="#E1-MJMAIN-52"></use><use xlink:href="#E1-MJMAIN-61" x="736" y="0"></use><use xlink:href="#E1-MJMAIN-74" x="1236" y="0"></use><use xlink:href="#E1-MJMAIN-65" x="1625" y="0"></use><use xlink:href="#E1-MJMAIN-6F" x="2319" y="0"></use><use xlink:href="#E1-MJMAIN-66" x="2819" y="0"></use><use xlink:href="#E1-MJMAIN-72" x="3375" y="0"></use><use xlink:href="#E1-MJMAIN-65" x="3767" y="0"></use><use xlink:href="#E1-MJMAIN-74" x="4211" y="0"></use><use xlink:href="#E1-MJMAIN-75" x="4600" y="0"></use><use xlink:href="#E1-MJMAIN-72" x="5156" y="0"></use><use xlink:href="#E1-MJMAIN-6E" x="5548" y="0"></use><use xlink:href="#E1-MJMAIN-66" x="6354" y="0"></use><use xlink:href="#E1-MJMAIN-6F" x="6660" y="0"></use><use xlink:href="#E1-MJMAIN-72" x="7160" y="0"></use></g><use xlink:href="#E1-MJMATHI-73" x="28896" y="0"></use><use xlink:href="#E1-MJMAIN-29" x="29365" y="0"></use></g></svg></span></span><script type="math/tex; mode=display" id="MathJax-Element-1">\text{WACC}=\sum_{\text{for }s\text{ in sources}}(\text{fraction of total capital})\cdot(\text{Rate of return for }s)</script></div><p>The after-tax WACC is:</p><div contenteditable="false" spellcheck="false" class="mathjax-block md-end-block" id="mathjax-n78" cid="n78" mdtype="math_block"><span class="MathJax_Preview"></span><span class="MathJax_SVG_Display" style="text-align: center;"><span class="MathJax_SVG" id="MathJax-Element-2-Frame" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="32.4ex" height="2.577ex" viewBox="0 -806.1 13950 1109.7" role="img" focusable="false" style="vertical-align: -0.705ex;"><defs><path stroke-width="0" id="E2-MJMAIN-74" d="M27 422Q80 426 109 478T141 600V615H181V431H316V385H181V241Q182 116 182 100T189 68Q203 29 238 29Q282 29 292 100Q293 108 293 146V181H333V146V134Q333 57 291 17Q264 -10 221 -10Q187 -10 162 2T124 33T105 68T98 100Q97 107 97 248V385H18V422H27Z"></path><path stroke-width="0" id="E2-MJMAIN-61" d="M137 305T115 305T78 320T63 359Q63 394 97 421T218 448Q291 448 336 416T396 340Q401 326 401 309T402 194V124Q402 76 407 58T428 40Q443 40 448 56T453 109V145H493V106Q492 66 490 59Q481 29 455 12T400 -6T353 12T329 54V58L327 55Q325 52 322 49T314 40T302 29T287 17T269 6T247 -2T221 -8T190 -11Q130 -11 82 20T34 107Q34 128 41 147T68 188T116 225T194 253T304 268H318V290Q318 324 312 340Q290 411 215 411Q197 411 181 410T156 406T148 403Q170 388 170 359Q170 334 154 320ZM126 106Q126 75 150 51T209 26Q247 26 276 49T315 109Q317 116 318 175Q318 233 317 233Q309 233 296 232T251 223T193 203T147 166T126 106Z"></path><path stroke-width="0" id="E2-MJMAIN-78" d="M201 0Q189 3 102 3Q26 3 17 0H11V46H25Q48 47 67 52T96 61T121 78T139 96T160 122T180 150L226 210L168 288Q159 301 149 315T133 336T122 351T113 363T107 370T100 376T94 379T88 381T80 383Q74 383 44 385H16V431H23Q59 429 126 429Q219 429 229 431H237V385Q201 381 201 369Q201 367 211 353T239 315T268 274L272 270L297 304Q329 345 329 358Q329 364 327 369T322 376T317 380T310 384L307 385H302V431H309Q324 428 408 428Q487 428 493 431H499V385H492Q443 385 411 368Q394 360 377 341T312 257L296 236L358 151Q424 61 429 57T446 50Q464 46 499 46H516V0H510H502Q494 1 482 1T457 2T432 2T414 3Q403 3 377 3T327 1L304 0H295V46H298Q309 46 320 51T331 63Q331 65 291 120L250 175Q249 174 219 133T185 88Q181 83 181 74Q181 63 188 55T206 46Q208 46 208 23V0H201Z"></path><path stroke-width="0" id="E2-MJMAIN-65" d="M28 218Q28 273 48 318T98 391T163 433T229 448Q282 448 320 430T378 380T406 316T415 245Q415 238 408 231H126V216Q126 68 226 36Q246 30 270 30Q312 30 342 62Q359 79 369 104L379 128Q382 131 395 131H398Q415 131 415 121Q415 117 412 108Q393 53 349 21T250 -11Q155 -11 92 58T28 218ZM333 275Q322 403 238 411H236Q228 411 220 410T195 402T166 381T143 340T127 274V267H333V275Z"></path><path stroke-width="0" id="E2-MJMAIN-64" d="M376 495Q376 511 376 535T377 568Q377 613 367 624T316 637H298V660Q298 683 300 683L310 684Q320 685 339 686T376 688Q393 689 413 690T443 693T454 694H457V390Q457 84 458 81Q461 61 472 55T517 46H535V0Q533 0 459 -5T380 -11H373V44L365 37Q307 -11 235 -11Q158 -11 96 50T34 215Q34 315 97 378T244 442Q319 442 376 393V495ZM373 342Q328 405 260 405Q211 405 173 369Q146 341 139 305T131 211Q131 155 138 120T173 59Q203 26 251 26Q322 26 373 103V342Z"></path><path stroke-width="0" id="E2-MJMAIN-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path stroke-width="0" id="E2-MJMAIN-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path stroke-width="0" id="E2-MJMAIN-75" d="M383 58Q327 -10 256 -10H249Q124 -10 105 89Q104 96 103 226Q102 335 102 348T96 369Q86 385 36 385H25V408Q25 431 27 431L38 432Q48 433 67 434T105 436Q122 437 142 438T172 441T184 442H187V261Q188 77 190 64Q193 49 204 40Q224 26 264 26Q290 26 311 35T343 58T363 90T375 120T379 144Q379 145 379 161T380 201T380 248V315Q380 361 370 372T320 385H302V431Q304 431 378 436T457 442H464V264Q464 84 465 81Q468 61 479 55T524 46H542V0Q540 0 467 -5T390 -11H383V58Z"></path><path stroke-width="0" id="E2-MJMAIN-6E" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q450 438 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z"></path><path stroke-width="0" id="E2-MJMAIN-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path><path stroke-width="0" id="E2-MJMAIN-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path stroke-width="0" id="E2-MJMAIN-2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path><path stroke-width="0" id="E2-MJMAIN-72" d="M36 46H50Q89 46 97 60V68Q97 77 97 91T98 122T98 161T98 203Q98 234 98 269T98 328L97 351Q94 370 83 376T38 385H20V408Q20 431 22 431L32 432Q42 433 60 434T96 436Q112 437 131 438T160 441T171 442H174V373Q213 441 271 441H277Q322 441 343 419T364 373Q364 352 351 337T313 322Q288 322 276 338T263 372Q263 381 265 388T270 400T273 405Q271 407 250 401Q234 393 226 386Q179 341 179 207V154Q179 141 179 127T179 101T180 81T180 66V61Q181 59 183 57T188 54T193 51T200 49T207 48T216 47T225 47T235 46T245 46H276V0H267Q249 3 140 3Q37 3 28 0H20V46H36Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E2-MJMAIN-74"></use><use xlink:href="#E2-MJMAIN-61" x="389" y="0"></use><use xlink:href="#E2-MJMAIN-78" x="889" y="0"></use><use xlink:href="#E2-MJMAIN-65" x="1417" y="0"></use><use xlink:href="#E2-MJMAIN-64" x="1861" y="0"></use><use xlink:href="#E2-MJMAIN-3D" x="2694" y="0"></use><use xlink:href="#E2-MJMAIN-28" x="3750" y="0"></use><g transform="translate(4139,0)"><use xlink:href="#E2-MJMAIN-75"></use><use xlink:href="#E2-MJMAIN-6E" x="556" y="0"></use><use xlink:href="#E2-MJMAIN-74" x="1112" y="0"></use><use xlink:href="#E2-MJMAIN-61" x="1501" y="0"></use><use xlink:href="#E2-MJMAIN-78" x="2001" y="0"></use><use xlink:href="#E2-MJMAIN-65" x="2529" y="0"></use><use xlink:href="#E2-MJMAIN-64" x="2973" y="0"></use></g><use xlink:href="#E2-MJMAIN-29" x="7668" y="0"></use><use xlink:href="#E2-MJMAIN-28" x="8057" y="0"></use><use xlink:href="#E2-MJMAIN-31" x="8446" y="0"></use><use xlink:href="#E2-MJMAIN-2212" x="9168" y="0"></use><g transform="translate(10169,0)"><use xlink:href="#E2-MJMAIN-74"></use><use xlink:href="#E2-MJMAIN-61" x="389" y="0"></use><use xlink:href="#E2-MJMAIN-78" x="889" y="0"></use><use xlink:href="#E2-MJMAIN-72" x="1667" y="0"></use><use xlink:href="#E2-MJMAIN-61" x="2059" y="0"></use><use xlink:href="#E2-MJMAIN-74" x="2559" y="0"></use><use xlink:href="#E2-MJMAIN-65" x="2948" y="0"></use></g><use xlink:href="#E2-MJMAIN-29" x="13561" y="0"></use></g></svg></span></span><script type="math/tex; mode=display" id="MathJax-Element-2">\text{taxed}=(\text{untaxed})(1-\text{tax rate})</script></div><h2><a name='header-n80' class='md-header-anchor '></a>Investment Opportunities</h2><p>Investments are selected systematically to ensure we are doing the best thing with the money. All investments made are better than the best investment opportunity rejected (<em>the opportunity cost</em>), which is the ROR of the rejected opportunity. </p><p>A simple way of ranking and selecting opportunities are shown in the table below. We rank the projects based on ROR and invest in as many high ROR projects as possible. The opportunity cost is the best opportunity rejected.</p><p><img src='assets/1529269184647.png' alt='1529269184647' referrerPolicy='no-referrer' /></p><p>&nbsp;</p><h2><a name='header-n89' class='md-header-anchor '></a>Minimum Attractive Rate of Return</h2><p>Self explanatory: it is the rate of return at which investors is willing to accept. <strong>MARR</strong> is the interest rate we will use for calculating present value, future value, rate of return analysis, etc. </p><ul><li>The lower bound of MARR is the costs of money invested.</li><li>MARR should not be less than the capital. </li><li>MARR should not be less than the ROR of the best rejected/forgone opportunity.</li></ul><p>&nbsp;</p><p>&nbsp;</p><div class='footnotes-area'  ><hr/>
+<div class='footnote-line'><span class='md-fn-count'>1</span> source: <a href='en.wikipedia.org/wiki/Rate_of_return'>en.wikipedia.org/wiki/Rate_of_return</a><a name='dfref-footnote-1' href='#ref-footnote-1' title='back to document' class='reversefootnote' >↩</a></div></div></div>
+</body>
+</html>

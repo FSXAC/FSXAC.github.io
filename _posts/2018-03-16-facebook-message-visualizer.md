@@ -26,9 +26,9 @@ Writing my own scraper would honestly take too long so I used a simple python li
 
 After installing the library using `pip`, I used the following command inside the HTML folder of the Facebook archive to export all messages to a single .csv file:
 
-{% highlight shell %}
+```shell
 fbcap ./messages.htm -f csv > messages.csv
-{% endhighlight %}
+```
 
 The output .csv file contains the thread (which include participants of the thread), date the message is sent, sender, and message content.
 

@@ -36,7 +36,7 @@ To generate a random number in verilog, we use the `$random()` method in Verilog
 
 Here is an example of how to use it:
 
-{% highlight Verilog %}
+```verilog
 module tb();
     reg [7:0] value;
     initial begin
@@ -44,7 +44,7 @@ module tb();
         value = $urandom() % 100;
     end
 endmodule
-{% endhighlight %}
+```
 
 In this example, `value` will receive a random value between 0 and 100. Notice that we used the method `$srandom()` to seed the RNG. 
 
@@ -52,13 +52,13 @@ In this example, `value` will receive a random value between 0 and 100. Notice t
 
 On paper, there exists the method `$urandom_range()` for generating unsigned integer between a certain range. But I didn't find it to work quite well (contact me if there's a better way). The following example demonstrates a ranged randomized delay in the Verilog testbench.
 
-{% highlight Verilog %}
+```verilog
 module tb();
     initial begin
         #(10 + $urandom() % 40);
     end
 endmodule
-{% endhighlight %}
+```
 
 Here I am invoking a delay with a period of a random value between 10 and 40.
 
@@ -70,37 +70,37 @@ We are all familiar with staring at the waveforms produced in the simulation for
 
 File IO in Verilog is straight forward and is similar to File IO in C. First, we need to instantiate an `integer` component which we will use to reference the file. 
 
-{% highlight Verilog %}
+```verilog
 integer file;
-{% endhighlight %}
+```
 
 Then we use `$fopen()` method to create a new file to write to. The first parameter is a string and specifies the file name; the second parameter specifies whether we want to read (use `"r"`) or write (use `"w"`). We are creating an output, so we will use write. By default, it will create the file at the project directory.
 
-{% highlight Verilog %}
+```verilog
 file = $fopen("output.txt", "w")
-{% endhighlight %}
+```
 
 ### Writing to File
 
 To write to file, use `$fwrite()` method, which works similarly to the `printf` functions in C. More details can be found [here](https://www.csee.umbc.edu/portal/help/VHDL/verilog/system.html). To put simply, the first paramter is a "pointer" to the file. The second parameter is a string and contains format specifiers. Lastly, the rest of the paramters fills in the format specifies.
 
-{% highlight Verilog %}
+```verilog
 $fwrite(file, "%0d + %0d is %0d, minus %0d that's %0d\n", 2, 2, 4, 1, 3);
-{% endhighlight %}
+```
 
 ### Saving File
 
 Once we are done with file writing, we use `$fclose()` method to close (and save) the file.
 
-{% highlight Verilog %}
+```verilog
 $fclose(file);
-{% endhighlight %}
+```
 
 ### Example
 
 By combining the code above, we have the following Verilog code example:
 
-{% highlight Verilog %}
+```verilog
 module tb_fileIO();
     integer file;
     initial begin
@@ -109,7 +109,7 @@ module tb_fileIO();
         $fclose(file);
     end
 endmodule
-{% endhighlight %}
+```
 
 This creates a file called `output.txt` in our project directory which contains the line `2 + 2 is 4, minus 1 that's 3`.
 
@@ -123,7 +123,7 @@ Now that we know how to generate random numbers and saving to file, we can do so
 
 First, a `for` loop is used to iterate the game many times. Say we want to play the game 10,000 times, then the code should be:
 
-{% highlight Verilog %}
+```verilog
 integer file
 
 initial begin
@@ -140,7 +140,7 @@ initial begin
 
     // ...
 end
-{% endhighlight %}
+```
 
 Inside each `for` loop, we also have a nexted `while` loop that keep on toggling the game clock. And some inputs are given at random times (using the RNG as described earlier). 
 

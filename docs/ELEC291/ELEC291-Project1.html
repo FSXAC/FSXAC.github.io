@@ -1,0 +1,340 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Reflow Oven Controller</title><link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:first-child { margin-top: -20px; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow-y: hidden; overflow-x: auto; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root { --bg-color: #ffffff; --text-color: #404a4e; --md-char-color: #C7C5C5; --meta-content-color: #5b808d; --primary-color: #428bca; --primary-btn-border-color: #285e8e; --primary-btn-text-color: #fff; --window-border: 1px solid #eee; --active-file-border-color: #888; --active-file-text-color: white; --active-file-bg-color: #404a4e; --side-bar-bg-color: #fafafa; --item-hover-bg-color: #808a8e; --item-hover-text-color: inherit; --monospace-font: "Fira Code", Consolas, "Liberation Mono", Courier, monospace; --font: "Open Sans", Helvetica, Arial, "Microsoft Yahei", sans-serif; --header-font: "HK Grotesk", Helvetica, Arial, "Microsoft Yahei", sans-serif; --header-color: #202828; --link-color: #4183C4; --control-text-color: #777; --meta-text-color: #aaa; --border-color: #ddd; --blockquote-width: 6px; --table-head-width: 3px; }
+@media print {
+  html { font-size: 10px; }
+  table, pre { break-inside: avoid; }
+  pre { word-wrap: break-word; }
+  h1 { break-before: page; }
+  h1:first-of-type { break-before: avoid; }
+  body { line-height: 1.2; }
+  code, tt { border-radius: 2px; padding: 1px 1px 0px; font-size: 0.8em; }
+}
+html { font-size: 16px; }
+body { font-family: "Open Sans", Helvetica, Arial, "Microsoft Yahei", sans-serif; line-height: 1.35; }
+#write { max-width: 960px; padding: 20px 1em 100px; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+body > :first-child { margin-top: 0px !important; }
+body > :last-child { margin-bottom: 0px !important; }
+#write pre.md-meta-block { padding: 1rem; line-height: 1.1; background-color: transparent; border: 2px dotted var(--border-color); color: var(--meta-text-color); margin-bottom: 2em; margin-top: 0px !important; }
+a { color: var(--link-color); text-decoration: none; }
+h1, h2, h3, h4, h5, h6 { margin-top: 1rem; margin-bottom: 1rem; line-height: 1.2; font-family: "HK Grotesk", Helvetica, Arial, "Microsoft Yahei", sans-serif; font-weight: bold; color: var(--header-color); letter-spacing: -0.45px; word-spacing: 0.5px; }
+h1 { font-size: 3em; border-bottom: 1px solid var(--text-color); }
+h2 { font-size: 2em; border-bottom: 1px dotted var(--text-color); }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1.15em; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code { font-size: inherit; }
+body > h2:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child + h2 { margin-top: 0px; padding-top: 0px; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child { margin-top: 0px; padding-top: 0px; }
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 { margin-top: 0px; padding-top: 0px; }
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p { margin-top: 0px; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-top: 1px solid var(--border-color); border-right: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); border-image: 1px solid var(--border-color); border-left: var(--blockquote-width) solid var(--control-text-color); border-radius: var(--blockquote-width); padding: 8px 8px 8px 1em; }
+blockquote blockquote { padding-right: 2px; }
+blockquote.primary { border-left-color: rgb(65, 131, 196); }
+blockquote.info { border-left-color: darkcyan; }
+blockquote.success { border-left-color: darkgreen; }
+blockquote.warning { border-left-color: rgb(253, 151, 31); }
+blockquote.danger { border-left-color: crimson; }
+div[style^="callout:"] { border-top: 1px solid var(--border-color); border-right: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); border-image: 1px solid var(--border-color); border-radius: var(--blockquote-width); border-left: var(--blockquote-width) solid var(--control-text-color); padding: 8px 8px 8px 1em; }
+div[style="callout:default"] { border-left-color: var(--control-text-color); }
+div[style="callout:primary"] { border-left-color: rgb(65, 131, 196); }
+div[style="callout:primary"] strong, div[style="callout:primary"] b { color: rgb(65, 131, 196); }
+div[style="callout:info"] { border-left-color: darkcyan; }
+div[style="callout:info"] strong, div[style="callout:info"] b { color: darkcyan; }
+div[style="callout:success"] { border-left-color: darkgreen; }
+div[style="callout:success"] strong, div[style="callout:success"] b { color: darkgreen; }
+div[style="callout:warning"] { border-left-color: rgb(253, 151, 31); }
+div[style="callout:warning"] strong, div[style="callout:warning"] b { color: rgb(253, 151, 31); }
+div[style="callout:danger"] { border-left-color: crimson; }
+div[style="callout:danger"] strong, div[style="callout:danger"] b { color: crimson; }
+table { padding: 0px; word-break: initial; border-bottom: var(--table-head-width) solid var(--text-color); }
+table tr { border-top: 1px solid var(--text-color); margin: 0px; padding: 0px; }
+table tr:first-child { border-top: 0px; }
+table tr th { font-weight: bold; border-top: 0px; border-right: 0px; border-left: 0px; border-image: initial; border-bottom: var(--table-head-width) solid var(--text-color); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr td { text-align: left; margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+mark { background: rgb(255, 255, 187); border-radius: 3px; padding: 0px 4px; }
+.md-fences, code, tt { border: 1px solid var(--border-color); border-radius: 3px; color: var(--text-color); font-family: "Fira Code", Consolas, "Liberation Mono", Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; }
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding: 8px 1em 6px; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.03) 0px 4px 4px 0px; }
+.cm-s-inner { background: rgb(253, 253, 253); color: rgb(17, 17, 17); }
+.cm-s-inner div.CodeMirror-cursor { border-left: 2px solid rgb(17, 17, 17); }
+.cm-s-inner .CodeMirror-selected { background: rgb(183, 220, 232); }
+.cm-s-inner .cm-comment { color: rgb(34, 162, 31); background: rgba(219, 243, 205, 0.376); }
+.cm-s-inner .cm-keyword { color: rgb(251, 102, 32); }
+.cm-s-inner .cm-string { color: rgb(21, 134, 210); }
+.cm-s-inner .cm-variable-2 { color: rgb(249, 38, 114); }
+.cm-s-inner .cm-property { color: rgb(19, 128, 109); }
+.cm-s-inner .cm-atom { color: rgb(138, 76, 255); }
+.cm-s-inner .cm-number { color: rgb(138, 76, 255); }
+.cm-s-inner .cm-operator { color: rgb(251, 102, 32); }
+.cm-s-inner .CodeMirror-linenumber { color: rgb(34, 162, 31); }
+.task-list { padding-left: 0px; }
+.task-list-item { padding-left: 32px; }
+.md-image > .md-meta { border: 1px solid var(--border-color); border-radius: 3px; font-family: var(--monospace-font); padding: 2px 4px 0px; font-size: 0.9em; color: inherit; }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
+#md-notification::before { top: 10px; }
+p[style^="caption:"] { text-align: center; font-style: italic; }
+#write span.md-emoji-span { position: relative; top: -0.14em; }
+
+
+
+
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h1><a name='header-n0' class='md-header-anchor '></a>Reflow Oven Controller</h1><p><em>March 2, 2017</em></p><p><strong>ELEC 291 - Team B6</strong></p><p>Nicholas (Scott) Beaulieu
+Geoff Goodwin-Wilson
+Muchen He
+Larry Liu
+Lufei Liu
+Wenoa Pauline Teves</p><div class='md-toc' mdtype='toc'><p class="md-toc-content"><span class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n0">Reflow Oven Controller</a></span><span class="md-toc-item md-toc-h2" data-ref="n6"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n6">1. Introduction</a></span><span class="md-toc-item md-toc-h3" data-ref="n7"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n7">Objective</a></span><span class="md-toc-item md-toc-h3" data-ref="n9"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n9">Specifications</a></span><span class="md-toc-item md-toc-h2" data-ref="n135"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n135">2. Investigation</a></span><span class="md-toc-item md-toc-h3" data-ref="n136"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n136">Idea Generation</a></span><span class="md-toc-item md-toc-h3" data-ref="n138"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n138">Design Investigation</a></span><span class="md-toc-item md-toc-h3" data-ref="n144"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n144">Data Collection</a></span><span class="md-toc-item md-toc-h3" data-ref="n154"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n154">Data-Synthesis</a></span><span class="md-toc-item md-toc-h3" data-ref="n157"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n157">Analysis of Results</a></span><span class="md-toc-item md-toc-h2" data-ref="n160"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n160">3. Design</a></span><span class="md-toc-item md-toc-h3" data-ref="n161"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n161">Implementation of Design process</a></span><span class="md-toc-item md-toc-h3" data-ref="n175"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n175">Needs and Constrain Identification</a></span><span class="md-toc-item md-toc-h3" data-ref="n178"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n178">Problem Specification</a></span><span class="md-toc-item md-toc-h3" data-ref="n182"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n182">Solution Generation</a></span><span class="md-toc-item md-toc-h3" data-ref="n186"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n186">Solution Evaluation</a></span><span class="md-toc-item md-toc-h3" data-ref="n196"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n196">Detailed Designs</a></span><span class="md-toc-item md-toc-h4" data-ref="n197"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n197">OP AMP Calculations</a></span><span class="md-toc-item md-toc-h4" data-ref="n199"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n199">Interface</a></span><span class="md-toc-item md-toc-h4" data-ref="n204"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n204">Data Visualization Software</a></span><span class="md-toc-item md-toc-h4" data-ref="n210"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n210">SSR Power Control</a></span><span class="md-toc-item md-toc-h4" data-ref="n212"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n212">SendVoltage Program</a></span><span class="md-toc-item md-toc-h3" data-ref="n217"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n217">Solution Assessment</a></span><span class="md-toc-item md-toc-h4" data-ref="n218"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n218">Temperature Measurement</a></span><span class="md-toc-item md-toc-h4" data-ref="n220"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n220">OP-AMP</a></span><span class="md-toc-item md-toc-h4" data-ref="n222"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n222">Controller Performance</a></span><span class="md-toc-item md-toc-h2" data-ref="n225"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n225">4. Lifelong Learning</a></span><span class="md-toc-item md-toc-h2" data-ref="n229"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n229">5. Conclusion</a></span><span class="md-toc-item md-toc-h2" data-ref="n232"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n232">Appendix I</a></span><span class="md-toc-item md-toc-h2" data-ref="n234"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n234">Appendix II</a></span><span class="md-toc-item md-toc-h2" data-ref="n238"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n238">Appendix III</a></span><span class="md-toc-item md-toc-h2" data-ref="n240"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n240">References</a></span><span class="md-toc-item md-toc-h2" data-ref="n250"><a class="md-toc-inner" style="cursor: pointer;" href="#header-n250">Bibliography</a></span></p></div><h2><a name='header-n6' class='md-header-anchor '></a>1. Introduction</h2><h3><a name='header-n7' class='md-header-anchor '></a>Objective</h3><p>To design, build, program and test a Reflow Oven Controller that fastens SMT components to a PCB while implementing extra functionalities. One such functionality being an LCD user interface displaying pertinent information such as the current state of the reflow process, current temperature and total time elapsed since the process began.</p><h3><a name='header-n9' class='md-header-anchor '></a>Specifications</h3><ul><li><p><strong>Hardware Information</strong></p></li><li><ul><li><p>Main Chipsets</p></li><li><ul><li>Atmel AT89LP52 Microcontroller IC 80C51 MCU 8K FLASH 40-DIP</li><li>Microchip Technology Inc. MCP3008 8-Channel 10-Bit ADC with SPI Interface</li></ul></li><li><p>Associated Parts for Chipsets and Hardware</p></li><li><ul><li>22.1184MHz CTS ATS122B-E Quartz Crystal</li><li>3, 0.1 Microfarad Capacitors</li><li>5mm Green LED</li><li>BO230XS serial USB Adaptor</li><li>4 Push Button Switches</li><li>2000 Ohm 5% tolerance Resistors</li><li>330 Ohm 5% tolerance Resistors</li><li>STMicroelectronics 2N3904 NPN Transistor</li></ul></li><li><p>Team-Designed Hardware</p></li><li><ul><li><p>Op Amp circuit</p></li><li><ul><li>Texas Instruments OP07CP Op Amp chip</li><li>National Semiconductor LMC7660IN Switched Capacitor Voltage Converter</li><li>4, 100 Ohm 5% tolerance Resistors</li><li>2, 22000 Ohm 5% tolerance Resistors</li><li>2, 2000 Ohm 5% tolerance Resistors</li><li>2, 10 Microfarad 50 V Capacitors</li></ul></li><li><p>LED Temperature Indicator</p></li><li><ul><li>4 5mm Green LEDs</li><li>2 5mm Yellow LEDs</li><li>2 5mm Red LEDs</li><li>8,  220 Ohm 5% tolerance Resistors</li></ul></li></ul></li><li><p>Temperature Monitoring Hardware</p></li><li><ul><li>General Purpose Thermocouple</li><li>STMicroelectronics LM335 for use as cold junction</li></ul></li></ul></li><li><p><strong>Software Information</strong></p></li><li><ul><li><p>AT89LP52 Assembly Functions:</p></li><li><ul><li>Fail Safe Shutoff</li><li>Switchable Settings Through UI</li><li>Reset and Signal Safe Oven Temperature</li><li>Celsius/Fahrenheit Conversion</li></ul></li><li><p>Processing Functions</p></li><li><ul><li>Serial IO</li><li>Clock Face State Transition Diagram</li><li>Temperature Strip Chart</li><li>Final Temperature Profile Chart</li></ul></li></ul></li><li><p><strong>Display and Sound</strong></p></li><li><ul><li><p>Built in Speaker</p></li><li><ul><li>CEM-1203(42)  Magnetic Buzzer</li></ul></li><li><p>Built in LCD Display</p></li><li><ul><li>SD1602H LCD Display</li></ul></li><li><p>Built in LED Display</p></li><li><ul><li>SF-COM-09483 7-Segment LED Display</li></ul></li></ul></li></ul><p><img src="assets/Hardware.png" style="text-align: center; width: 80%"></p><p><em>Figure 1.1: Block diagram overview of project&#39;s hardware and software design</em></p><h2><a name='header-n135' class='md-header-anchor '></a>2. Investigation</h2><h3><a name='header-n136' class='md-header-anchor '></a>Idea Generation</h3><p>Our team generated ideas by identifying the needs and stakeholders of our project. In the case of our soldering oven, we were required to generate a certain output, or voltage, given set parameters (reflow time, reflow temperature, soak time, and soak temperature). With these requirements in mind members of our team generated different solutions that would meet the required outputs. Models of various designs were also created to better communicate ideas between members. Therefore through reiteration and revision, comparison, elimination of different designs and testing for efficiency our team was able to implement what we believed would be the most efficient design for our Reflow Oven Controller project.</p><h3><a name='header-n138' class='md-header-anchor '></a>Design Investigation</h3><p>We made an inventory of all components that were provided to us; they were checked and compiled into an excel sheet for easier look-up. The required datasheets and spec-sheets were also downloaded from the internet. These documents assisted us in designing and assembling the hardware.</p><p>Our circuit boards included breadboard prototypes, an Op Amp (soldered on perfboard), an LED bar display (soldered on perfboard) and a seven-segment LED display (soldered on perfboard) which were thoroughly tested*. We tested by measuring that all voltages and currents were within the range we expected.</p><p>Additional Excel sheets were made to log the Device-Under-Testing (DUT). Information including initial reflow setting and temperature profiles were recorded. After several trials, we were able to see predictable readings.</p><blockquote><p>Schematics for the states components are in <a href='#header-n232'>Appendix I</a></p></blockquote><h3><a name='header-n144' class='md-header-anchor '></a>Data Collection</h3><p>Our team collected data during the testing and debugging stages of our design through the use of lab resources and tools. Listed below are some of the tools we used:</p><ul><li>A power supply to simulate signals</li><li>A waveform generator to simulate PWM signals</li><li>An oscilloscope and multimeters to debug circuits</li></ul><p>Additionally, our team compared the accuracy of our data through testing and recording results, and comparing the consistency of the test results. This will be explained in greater detail below under <a href='#header-n154'>Data Synthesis</a>. </p><h3><a name='header-n154' class='md-header-anchor '></a>Data-Synthesis</h3><p>Our team synthesized data and information to reach appropriate conclusions through consistent testing of our soldering oven controller, obtaining results through our methods detailed in <a href='#header-n144'>Data Collection</a>, and comparing the consistency of those results to expected values from design documents and circuit diagrams.</p><p>Additionally, we tested our controller and user interface by simply uploading our software (listed in <a href='#header-n234'>Appendix II: Software</a>) to the controller and checking for states and values that appeared on the LCD screen.</p><h3><a name='header-n157' class='md-header-anchor '></a>Analysis of Results</h3><p>Our team appraised the validity of conclusions through rigorous testing and troubleshooting using a multimeter and comparing to expected results. Data was synthesized via testing throughout our design process. This was to ensure predictable behavior and concise results. During the final stages of our design process iterative test cases were created to ensure accurate results (see <a href='#header-n238'>Appendix III: Test Cases Table</a>). </p><p>We also tested corner cases such as improper placement of temperature sensor,  or cancellation request from the user during reflow process. These tests were to ensure that our safety features were functioning as intended.</p><h2><a name='header-n160' class='md-header-anchor '></a>3. Design</h2><h3><a name='header-n161' class='md-header-anchor '></a>Implementation of Design process</h3><p>We identified the requirements of our design with the help of our lab manual <sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup> and in-class lectures <sup class='md-footnote'><a href='#dfref-footnote-2' name='ref-footnote-2'>2</a></sup><sup class='md-footnote'><a href='#dfref-footnote-3' name='ref-footnote-3'>3</a></sup>. These requirements included:</p><ul><li>Temperature sensors </li><li>Thermal profiles </li><li>Failsafe features</li><li>A user interface</li><li>Data acquisition</li></ul><p>After this, members of our team began generating ideas and presenting them to the team with the use of visual block diagrams as well as state-machine diagrams. We recorded multiple ideas on Trello-an online board-where we also kept track of our progress and to-do lists. Our team considered ideas based on practicality and efficiency to reach the objectives of our final project. During our design process we would reiterate and revise our software through GitHub where we would undergo additional tests and debugging, particularly when merging different blocks of code together.</p><h3><a name='header-n175' class='md-header-anchor '></a>Needs and Constrain Identification</h3><p>The targeted stakeholders for this project are those who use soldering ovens, such as professors, students, and electronic hobbyists. Due to our wide range of stakeholders, we decided customization to suit a user’s preferences is vital. We also decided it was necessary to ensure safe operation. In order to have the best user experience, we identified the need for a fluid interface. Our overall goal was to create a working F38x microcontroller board for future projects. </p><p>The constraints for this controller arise from using a thermocouple to monitor interior oven temperature (restrictions in materials), controlling the oven through SSR, and programming the firmware in 8051 Assembly on CrossIDE in order to flash to our ATMEL microcontroller (AT89LP52) <sup class='md-footnote'><a href='#dfref-footnote-4' name='ref-footnote-4'>4</a></sup>.</p><h3><a name='header-n178' class='md-header-anchor '></a>Problem Specification</h3><p>Customization of the controller can be accomplished through push buttons to set the adjustable parameters such as soak temperature, soak time, reflow temperature and reflow time as suitable for the microprocessor system in this project. </p><p>To ensure the user’s safety a failsafe can be implemented to ensure the oven does not continuously heat up in the event that the thermocouple is incorrectly placed. In case this is not sufficient, a manual stop push button can stop the soldering process at any point of operation. </p><p>The user interface is created from a combination of an LCD display of temperature and time, data output to a PC where the process can be presented in a more visually appealing manner and sound effects to indicate state transitions and capture the user’s attention when needed. </p><h3><a name='header-n182' class='md-header-anchor '></a>Solution Generation</h3><p>Our solution to meet these stakeholder needs was to create an FSM for the oven and a separate FSM where the user can use push buttons to switch between parameters and adjust them through the same manner. Push buttons will also be used to start and stop the oven. The FSM allows LCD update in each state, but the data output to the PC must be faster. This could be done either in the beginning of FSM or through a timer interrupt. </p><p>For measuring the temperature in the oven, either an ice bath or an LM335<sup class='md-footnote'><a href='#dfref-footnote-5' name='ref-footnote-5'>5</a></sup> can be used as the cold junction for the thermocouple.</p><p>A smooth user interface can be implemented on the PC. We considered different tools to display transitions such as Python, MATLAB, and Processing (a language based on Java for graphic and data visualization applications). In addition, we considered using a 7-segment display and an LED bar display to enhance the user experience.  </p><h3><a name='header-n186' class='md-header-anchor '></a>Solution Evaluation</h3><ul><li>Push buttons can function in many orientations; we chose to use the minimal amount of push buttons to declutter our breadboard. </li><li>A conflict between timer 0 and timer 2 interrupts forced us to send data to the PC during the FSM.</li><li>While both the ice bath and LM335 are capable of acting as the cold junction, the ice bath has a time delay in order to cool down before the program can start. The LM335 can be easily debugged by sending values in PuTTy and does not require to be monitored as it does not fluctuate like an ice bath. </li><li>Strip charts can be produced in any of the tools we considered on the PC. We chose Processing for its visual appeal and ease of use. </li></ul><h3><a name='header-n196' class='md-header-anchor '></a>Detailed Designs</h3><h4><a name='header-n197' class='md-header-anchor '></a>OP AMP Calculations</h4><p>To calculate what values our required components would be in our Op Amp; we started by calculating the amplification factor. To do that we decided upon a temperature range of 10 to 400 degrees Celsius in conjunction with our amplified voltage range of 0.1 to 4 volts. Then using a measured voltage of 0.41 millivolts for a temperature of 10 degrees Celsius we could calculate the amplification factor by dividing 0.1 volts by 0.41 millivolts for an amplification factor of 243.9 V/V.  We could then finally relate the values through amplification factor equaling the first resistor value divided by the second resistor value. Solving while assuming a resistance of 100 Ohms for the second resistor gave us a final value of 24300 Ohms for the first resistor. </p><h4><a name='header-n199' class='md-header-anchor '></a>Interface</h4><p>Our interface featured an interactive display of selectable parameters including soak time, temperature, reflow time and temperature. This was implemented through a finite state machine separate from the soldering process. Initially on the main screen a single push button connected to <code>P2.5</code> signals the transition into each parameter cycling through all parameters and back to the main screen. In each screen two more buttons connected to <code>P2.6</code> and <code>P2.7</code> were respectively set to increment and decrement the values of the parameter. These changes automatically update the stored variables. </p><p>We decided on using a FSM in order to reduce the buttons and maintain a simple yet effective user interface. For each state in the FSM we considered which buttons to poll for and the associated tasks to be completed. For example, in the code for the reflow time state we polled for each of the three buttons mentioned above.</p><p><img src="assets/states.png" style="text-align:center; width:50%"></p><p><em>Figure 3.1: Finite state machine diagram for interface</em></p><h4><a name='header-n204' class='md-header-anchor '></a>Data Visualization Software</h4><p>The software that runs on the computer communicates with the microcontroller via SPI. The microcontroller sends packets of critical information consisting of <code>{current state, current temperature, oven power}</code> on every timer-1 interrupt (which is set to 115200 baud). The information is then handled by the serial ports on the computer and parsed by the software we wrote.</p><p>We had the option between Python with MatPlotLib, MATLAB, Processing, and p5.js (Processing on JavaScript). Due to lack of customizability Python and MATLAB were immediately eliminated as part of our solution. We considered using p5.js as it can be deployed to a web server and 100% of devices with a web-browser can run the web-app. However, additional complications arose as the microcontroller needs to communicate with computer hardware through a localhost server then to the browser via websockets before it can deliver its information. Due to previous we decided it was not worth our time pursue the use p5.js.</p><p>We chose Processing as our primary language because it offers less-verbose syntax and easy visualization integration. Since this language is based off of Java we can use many Java-compatible libraries. This also means that this code can run on virtually any device with the proper dependencies installed. </p><p>The program features various pages of information to display. The main screen of the program, while giving an overview of the reflow process, intends to be more aesthetically pleasing given its colors and animations. There are hexagonal grids around a center dial that indicates current stage in the reflow operation. The dial turns and its radius is a function of the temperature from the sensor. Other information such as temperature and oven power are also displayed here. </p><p>Other screens contains strip charts that show temperature reading over time and the overall thermal profile. The output data was a quintessential aid to our test and analysis.</p><h4><a name='header-n210' class='md-header-anchor '></a>SSR Power Control</h4><p>The SSR was controlled through a pulse width modulation (PWM) function which executed roughly every half second in the timer 2 interrupt service routine.  In order to achieve stable current input into the SSR a BJT circuit using an STMicroelectronics 2N3904 NPN Transistor<sup class='md-footnote'><a href='#dfref-footnote-6' name='ref-footnote-6'>6</a></sup> was added to the hardware setup to amplify the current.  Once a logic 1 or 0 value is guaranteed every time the SSR control output pin switches values it can be used as a reliable platform to build the pulse width modulation function.  The premise of PWM was based on a loop incrementing from 0 to 10, and a power value, selected by the programmer, between 0 and 10.  After 0 is defined as minimum power and 10 is defined as maximum power, any number in the range 1 to 9 is a power percentage of 10 to 90 percent respectively.  This is achieved because if a number is selected from the valid range and the PWM function is constantly looping from 0 to 10, once the current iteration variable matches the chosen power number, the SSR controller can be turned on/off.</p><h4><a name='header-n212' class='md-header-anchor '></a>SendVoltage Program</h4><p>Our <em>SendVoltage</em> program obtains voltage values and converts them to temperature values from both the Thermocouple and the LM335 and sends them as one variable through a single SPI channel for our FSM. To do this we connected the output of the Thermocouple and the LM335 with Channel 0 and Channel 1 of the ADC<sup class='md-footnote'><a href='#dfref-footnote-7' name='ref-footnote-7'>7</a></sup>. </p><p>For them we programmed two separate pieces of code (<code>LM</code> and <code>Th</code> in the code below) to capture voltage values for the Thermocouple and the LM335 and then a flag bit to switch between the two. We named the macro we used to switch from Channel 0 and Channel 1 <code>Read_ADC_Macro</code>. We then converted the voltages and added the Thermocouple and LM335 temperatures to get an accurate temperature reading of the oven and finally save the final temperature as a variable for the FSM to use. To make sure our values were correct when debugging we sent the read voltages through the serial port and displayed it on the screen using <em>PuTTy</em>. We then integrated the working <em>SendVoltage</em> program to the main program where we encountered a problem. The problem we encountered was trying to use the <code>lcall</code> instruction to invoke <code>SendVoltage</code> in Timer 2. </p><p>The problem was caused because timers 0 and 2 conflicted resulting in a program halt. Our solution to this problem was instead calling the <em>SendVoltage</em> function in the setup region of the FSM.</p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="assembly" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="assembly"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">SendVoltage:</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">jnb</span> <span class="cm-keyword">LM_TH</span>, Th<span class="cm-tab" role="presentation" cm-text="	">   </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-comment">; jump to Th initially</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">LM:</span> mov b,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">lcall</span> <span class="cm-keyword">ADC_get</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">lcall</span> <span class="cm-keyword">LM_converter</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">clr</span> <span class="cm-keyword">LM_TH</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">LCD_cursor</span>(2, 7)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">lcall</span> <span class="cm-keyword">add_two_temp</span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-comment">; two temp</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  Send_bcd(bcd+1)<span class="cm-tab" role="presentation" cm-text="	"> </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-comment">; display the total temperature</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  Send_bcd(bcd+0)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">lcall</span> <span class="cm-keyword">print_comma</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">lcall</span> <span class="cm-keyword">print_power</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">lcall</span> <span class="cm-keyword">Switchline</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">ret</span><span class="cm-tab" role="presentation" cm-text="	"> </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-comment">; return to interrupt</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" class="cm-tab-wrap-hack" style="padding-right: 0.1px;"><span class="cm-tag">Th:</span> mov b, <span class="cm-comment">#1 <span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span>; connect thermocouple to chanel1</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">lcall</span> <span class="cm-keyword">ADC_get</span> <span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-comment">; Read from the SPI</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">lcall</span> <span class="cm-keyword">Th_converter</span> <span class="cm-tab" role="presentation" cm-text="	"> </span><span class="cm-comment">; convert ADC TO actual value</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">setb</span> <span class="cm-keyword">LM_TH</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">Send_BCD</span>(state)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">lcall</span> <span class="cm-keyword">print_comma</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">ljmp</span> <span class="cm-keyword">SendVoltage</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 463px;"></div><div class="CodeMirror-gutters" style="display: none; height: 463px;"></div></div></div></pre><h3><a name='header-n217' class='md-header-anchor '></a>Solution Assessment</h3><h4><a name='header-n218' class='md-header-anchor '></a>Temperature Measurement</h4><p>We decided to use the temperature reading from an LM335 temperature sensor as our cold junction (reference) of the thermocouple. We examined our temperature reading by comparing it with the temperature reading from a given python program. The LM335 provided us with a better result as the tolerance of using an ice bath for cold junction of the thermocouple could potentially exceed the max acceptable error <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.968ex" height="2.074ex" viewBox="0 -772.3 1278 892.8" role="img" focusable="false" style="vertical-align: -0.28ex;"><defs><path stroke-width="0" id="E1-MJMAIN-B1" d="M56 320T56 333T70 353H369V502Q369 651 371 655Q376 666 388 666Q402 666 405 654T409 596V500V353H707Q722 345 722 333Q722 320 707 313H409V40H707Q722 32 722 20T707 0H70Q56 7 56 20T70 40H369V313H70Q56 320 56 333Z"></path><path stroke-width="0" id="E1-MJMAIN-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E1-MJMAIN-B1" x="0" y="0"></use><use xlink:href="#E1-MJMAIN-33" x="778" y="0"></use></g></svg></span><script type="math/tex">\pm 3</script> degrees. </p><h4><a name='header-n220' class='md-header-anchor '></a>OP-AMP</h4><p>For this project the oven temperature ranges from 25 to 235 degrees Celsius, and the output of our OP07CP Op Amp<sup class='md-footnote'><a href='#dfref-footnote-8' name='ref-footnote-8'>8</a></sup> ranges from 0.1V to 4V using an LMC7660IN<sup class='md-footnote'><a href='#dfref-footnote-9' name='ref-footnote-9'>9</a></sup>. To achieve all possible temperatures in the desired range, we multiplied the Op Amp voltage by 100 to obtain temperature readings from 10 to 400 degrees Celsius which satisfied the requirements. This range can also indicate when there is a risk of burning the PCB when the temperature goes above 235 degrees.</p><h4><a name='header-n222' class='md-header-anchor '></a>Controller Performance</h4><p>We conducted sufficient amount of testing of the whole system before soldering the F38x boards. In the tests, we simulated our controller based on a real soldering configuration. We first tested if state changes occurred correctly based on temperature and time. Then we tested the soak temperature to make sure it stayed at a  relatively constant temperature of 150 degrees, the threshold temperature for the state. However, for six test cases, our soak temperature ended up staying around 160 degrees with 20 percent of power output, above the expected temperature. We came up with two alternative solutions:  to keep the threshold temperature as 150 degrees and turn the oven off for the soak period, or to change the threshold temperature to 140 and set the power output to 10 percent.</p><p>After conducting tests for both cases, our results showed that the second solution maintained a more steady temperature closer to 150 degrees during the soak period. We used this method for the reflow state as well. The results from our tests are shown in <a href='#header-n234'>Appendix II: Test Cases Table</a>.</p><h2><a name='header-n225' class='md-header-anchor '></a>4. Lifelong Learning</h2><p>With this reflow oven controller project, our team employed various technical concepts from prerequisites such as programming and hardware design skills. We found the courses ELEC 201 and CPEN 211 to be particularly useful in solving the circuit for designing the op amp and designing the finite state machine respectively. </p><p>Our extra designs and inclusion of the 7-segment LED display displayed a knowledge gap. We took this opportunity to learn more about shift registers, the difference between common cathode and common anode configurations for LEDs, and circuit design to affix all of the LEDs to our prototypes. In order to understand how to program the 7-segment displays, Geoff Goodwin interviewed a technician at RP Electronics and conducted research online. </p><p>From this we gained experience with embedded systems, circuit analysis, hardware design and construction which will provide valuable insight throughout our time as electrical engineering students as well as our future careers. </p><h2><a name='header-n229' class='md-header-anchor '></a>5. Conclusion</h2><p>Our soldering oven is designed to solder SMT components with user-set parameters while implementing extra functionalities, such as a bar of LED’s that light up according to ranges of temperatures, a 7-segment display showing the total elapsed time of the reflow process. Our design ensures that the process be done safely with the implementation of our safety features, such as cases where the temperature sensor is not present inside the soldering oven, or when the user must stop the reflow midway through the process.</p><p>Despite delays with software, such as errors when combining different sections of source code, and delays with hardware, such as the learning process for 7-seg displays, the soldering oven controller was a success. The work spent on our soldering oven project totals to 65 hours.</p><h2><a name='header-n232' class='md-header-anchor '></a>Appendix I</h2><p><strong>Hardware Schematics</strong></p><h2><a name='header-n234' class='md-header-anchor '></a>Appendix II</h2><p><strong>Software</strong></p><blockquote><p><em>Software source code can be found on <a href='https://github.com/FSXAC/ELEC291P1'>GitHub</a></em></p></blockquote><h2><a name='header-n238' class='md-header-anchor '></a>Appendix III</h2><p><strong>Test Case Table</strong></p><h2><a name='header-n240' class='md-header-anchor '></a>References</h2><h2><a name='header-n250' class='md-header-anchor '></a>Bibliography</h2><p>CTS Corporation,&quot;ATS22B-E Quartz Crystal,&quot; ATS/ATS-SM Series Quartz Crystal Datasheet, Unknown Publishing Date [Revision L]</p><p>CUI Incorporated,&quot;CEM-1203(42) Magnetic Buzzer,&quot; CEM-1203(42) Datasheet, Nov. 2006</p><div class='footnotes-area'  ><hr/>
+<div class='footnote-line'><span class='md-fn-count'>1</span> J. Calvino-Fraga, Project 1 - Reflow Soldering Oven Controller, University of British Columbia, 2016.<a name='dfref-footnote-1' href='#ref-footnote-1' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>2</span> J. Calvino-Fraga. ELEC 281. Class Lecture, Topic: “Reflow Oven Controller.” Department of Electrical and Computer Engineering, University of British Columbia, Vancouver, BC, Jan. 27, 2016.<a name='dfref-footnote-2' href='#ref-footnote-2' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>3</span> J. Calvino-Fraga. ELEC 281. Class Lecture, Topic: “F38x board, FSM, Flash.” Department of Electrical and Computer Engineering, University of British Columbia, Vancouver, BC, Feb. 3, 2016.<a name='dfref-footnote-3' href='#ref-footnote-3' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>4</span> Atmel Corporation,&quot;AT89LP52 Microcontroller IC 80C51 MCU 8K FLASH 40-DIP,&quot; Atmel AT89LP51/2 Datasheet, Sept. 2010[Revised Dec. 2011]<a name='dfref-footnote-4' href='#ref-footnote-4' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>5</span> STMicroelectronics,&quot;LM335 Precision Temperature Sensor,&quot; LM135-LM235-LM335 Datasheet, May. 2003[Revised Feb. 2007]<a name='dfref-footnote-5' href='#ref-footnote-5' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>6</span> STMicroelectronics,”2N3904 Small Signal NPN Transistor,” 2N3904 Datasheet, 2003<a name='dfref-footnote-6' href='#ref-footnote-6' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>7</span> Microchip Technology Incorporated,&quot;MCP3008 8-Channel 10-Bit ADC with SPI Interface,&quot; MCP3004/3008 Datasheet, Feb. 2000[Revised Dec. 2008]<a name='dfref-footnote-7' href='#ref-footnote-7' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>8</span> Texas Instruments,&quot;OP07CP Operational Amplifier,&quot; OP07x Precision Operational Amplifiers Datasheet, Oct. 1983[Revised Nov. 2014]<a name='dfref-footnote-8' href='#ref-footnote-8' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>9</span> National Semiconductor,&quot;LMC7660IN Switched Capacitor Voltage Converter,&quot; LMC7660 Switched Capacitor Voltage Converter Datasheet, Feb. 2005<a name='dfref-footnote-9' href='#ref-footnote-9' title='back to document' class='reversefootnote' >↩</a></div></div></div>
+</body>
+</html>

@@ -50,8 +50,6 @@ p { margin: .5em 0; }
 /* Increase anchor color contrast */
 a { color: #0050C9; }
 a:hover { color: #A92626; }
-.text-light > a { color: #6AF; }
-.text-light > a:hover { color: #f88; }
 
 /* Extra small button */
 .btn-xs { padding: 0 .25em; font-size: 0.9em; }
@@ -111,6 +109,7 @@ a:hover { color: #A92626; }
 	margin-top: 1em;
 	margin-bottom: 1em;
 	padding: 0.5em 1em;
+	line-height: 1.2em;
 }
 #blog-content pre.highlight span.cp {
 	color: #666;
@@ -164,7 +163,7 @@ a:hover { color: #A92626; }
 
 // Blockquote
 #blog-content blockquote {
-	margin-left: 0;
+	margin-left: .2em;
 	margin-top: .5em;
 	margin-bottom: .5em;
 	border: 1px solid #ccc;
@@ -179,9 +178,14 @@ a:hover { color: #A92626; }
 	margin-bottom: initial;
 }
 
-// Blog images should be centered
-#blog-content img {
+// Make blog post images align center
+#blog-content img{
 	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#blog-content table {
 	margin-left: auto;
 	margin-right: auto;
 }

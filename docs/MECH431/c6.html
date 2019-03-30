@@ -1,0 +1,613 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Conference 6</title><link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; padding-bottom: 70px; white-space: pre-wrap; overflow-x: visible; }
+.first-line-indent #write p .md-line { text-indent: 0px; }
+.first-line-indent #write li, .first-line-indent #write p, .first-line-indent #write p .md-line:first-child { text-indent: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write > blockquote:first-child, #write > div:first-child, #write > figure:first-child, #write > ol:first-child, #write > p:first-child, #write > pre:first-child, #write > ul:first-child { margin-top: 30px; }
+#write li > figure:first-child { margin-top: -20px; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+h1, h2, h3, h4, h5, h6 { margin-top: 1rem; margin-bottom: 1rem; }
+p { -webkit-margin-before: 1rem; -webkit-margin-after: 1rem; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
+.mathjax-block { margin-top: 0px; margin-bottom: 0px; -webkit-margin-before: 0px; -webkit-margin-after: 0px; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.701961); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 80px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+pre { white-space: pre-wrap; }
+pre.contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+.md-fences.mock-cm { white-space: pre-wrap; }
+.show-fences-line-number .md-fences { padding-left: 0px; }
+.show-fences-line-number .md-fences.mock-cm { padding-left: 40px; }
+.CodeMirror-line { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+.footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid-page; break-before: avoid-page; }
+  #write { margin-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 1cm; padding-right: 1cm; padding-bottom: 0px; break-after: avoid-page; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > img:only-child { display: block; margin: auto; }
+.md-line > .md-image:only-child, p > .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.mathjax-block { white-space: pre; overflow: hidden; width: 100%; }
+p + .mathjax-block { margin-top: -1.143rem; }
+.mathjax-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, tt { font-family: var(--monospace); }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.mathjax-block .MathJax_SVG_Display { text-align: center; margin: 1em 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: monospace; }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Open Sans Regular'),url('file:///Users/muchenhe/Library/Application%20Support/abnerworks.Typora/themes/github/400.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: normal;
+    src: local('Open Sans Italic'),url('file:///Users/muchenhe/Library/Application%20Support/abnerworks.Typora/themes/github/400i.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Open Sans Bold'),url('file:///Users/muchenhe/Library/Application%20Support/abnerworks.Typora/themes/github/700.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: bold;
+    src: local('Open Sans Bold Italic'),url('file:///Users/muchenhe/Library/Application%20Support/abnerworks.Typora/themes/github/700i.woff') format('woff')
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(16, 16, 16);
+    line-height: 1.24;
+}
+
+#write{
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 20px 30px 40px 30px;
+	padding-top: 20px;
+    padding-bottom: 100px;
+}
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    /*background: url("file:///Users/muchenhe/Library/Application%20Support/images/modules/styleguide/para.png") no-repeat 10px center;*/
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .25em;
+    font-size: 3.25em;
+    line-height: 1.2;
+    /* margin-bottom: 1em; */
+    border-bottom: 1px solid #eee;
+    font-weight: 100;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 1em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 1px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border: 1px solid #AAA;
+    /* border-left: 4px solid #468; */
+    border-left: 4px solid #486;
+    padding: 0.5em 1em;
+    color: #222;
+    background-color: #FEFEFE;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #888;
+    margin: 0;
+    padding: 0;
+}
+table tr:first-child {
+    border-top: 0px;
+}
+table tr th {
+    font-weight: bold;
+    border: 0;
+    border-bottom: 2px solid #888;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+mark {
+    background: cornsilk;
+    border-radius: 4px;
+    padding: 0 4px;
+}
+
+.CodeMirror-gutters {
+    border-right: 1px solid #ddd;
+}
+
+.md-fences,
+code,
+tt {
+    /* border: 1px solid #ddd;
+    background-color: #f8f8f8; */
+    background-color: #333;
+    color: white;
+    border-radius: 3px;
+    padding: 0;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 0.2em 1em;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+.task-list{
+	padding-left: 0;
+}
+
+.task-list-item {
+	padding-left:32px;
+}
+
+.task-list-item input {
+  top: 3px;
+  left: 8px;
+}
+
+@media screen and (min-width: 914px) {
+    /*body {
+        width: 854px;
+        margin: 0 auto;
+    }*/
+}
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+    /* background-color: #f8f8f8; */
+    /* background: white; */
+    /* border-radius: 0; */
+    /* border: 1px solid #eee; */
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.cm-keyword {
+    color: #B7E !important;
+}
+.cm-variable { 
+    color: #FFF !important;
+}
+.cm-variable-2 { 
+    color: #49F !important;
+}
+.cm-meta {
+    color: #DDD !important;
+}
+.cm-comment {
+    color: #482 !important;
+}
+.cm-operator {
+    color: #fb8 !important;
+}
+.cm-property {
+    color: #8F8 !important;
+}
+.cm-def {
+    color: #F49 !important;
+}
+.cm-string {
+    color: #FF3 !important;
+}
+.CodeMirror pre {
+    color: #CCC !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag{
+	color: inherit;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+small.fc {
+    color: #888;
+    font-style: italic;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-top: 0px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write'  class = 'is-mac'><p>💾 <a href='/documents'>Go Back</a></p><p><small> Last updated 2018-07-09 by Muchen</small> </p><div class='md-toc' mdtype='toc'><p class="md-toc-content"><span class="md-toc-item md-toc-h1" data-ref="n7"><a class="md-toc-inner" href="#header-n7">Conference 6</a></span><span class="md-toc-item md-toc-h2" data-ref="n10"><a class="md-toc-inner" href="#header-n10">Agenda</a></span><span class="md-toc-item md-toc-h3" data-ref="n11"><a class="md-toc-inner" href="#header-n11">Midterm 1</a></span><span class="md-toc-item md-toc-h3" data-ref="n21"><a class="md-toc-inner" href="#header-n21">Project</a></span><span class="md-toc-item md-toc-h3" data-ref="n40"><a class="md-toc-inner" href="#header-n40">Kinder Morgan Piazza Discussion Follow-up</a></span><span class="md-toc-item md-toc-h2" data-ref="n94"><a class="md-toc-inner" href="#header-n94">Question</a></span></p></div><h1><a name='header-n7' class='md-header-anchor '></a>Conference 6</h1><p>&nbsp;</p><h2><a name='header-n10' class='md-header-anchor '></a>Agenda</h2><h3><a name='header-n11' class='md-header-anchor '></a>Midterm 1</h3><ul><li>Grades for take-home format is higher than expected (good thing).</li><li>Midterm 2 will be less forgiving (but the final project grading would be).</li></ul><p>&nbsp;</p><h3><a name='header-n21' class='md-header-anchor '></a>Project</h3><ul><li>Include risk analysis in the outline, and as course progress, hopefully they can be integrated (usually risk analysis is weaker).</li><li>For the risk analysis, for the minimum, do a sensitivity analysis. What inputs are the model most sensitive to? Identify two to three that could cause potential issues.</li><li>Then do a break-even analysis on that.</li><li>Ensure the flow of the report works logically (i.e. it makes more sense to put <em>market analysis</em> before <em>estimated revenue</em>).</li><li>Consider <strong>sources of funding</strong> and how it affects cost of capital, MARR.</li></ul><p>&nbsp;</p><h3><a name='header-n40' class='md-header-anchor '></a>Kinder Morgan Piazza Discussion Follow-up</h3><ul><li>Federal government will buy KMP. They sold the existing pipeline along with work that&#39;s been done on the expanded pipeline for $4.5B.</li></ul><figure><table><thead><tr><th>&nbsp;</th><th>Existing</th><th>Expansion</th></tr></thead><tbody><tr><td>Purchase price</td><td>$   4,500,000,000.00</td><td>$   4,500,000,000.00</td></tr><tr><td>Annual benefit</td><td>$       200,000,000.00</td><td>$   1,200,000,000.00</td></tr><tr><td>Construction</td><td>$                                 -</td><td>$   8,000,000,000.00</td></tr></tbody></table></figure><ul><li><p>If we consider the pipeline to be a long term investment (25 years), and we can get the interest rate the government is assuming (5%):</p><ul><li>Present value is $2.892B, we can say that we over paid.</li><li>If the interest rate were to be 0.8%, then we would approximately break even.</li></ul></li><li><p>If we consider the expanded pipeline, at 0.8%, then the PV is $27.092B, while the cost is only $12.5B.</p></li><li><p>If the oil demand lowers, it becomes a risk to the project (need consideration). We might want to sell existing pipeline (ignore inflation and deprecation).</p><ul><li>Key factor for the resale price: lifetime and interest rate.</li><li>Buyer would probably have to finance or sell equity to make the purchase.</li><li>Suppose 20 years left, at 6%, the NPV is $2.294B. </li><li>Accounting for the resale value, from the government&#39;s perspective (with revenue of $200M for the first 5 years), we lose $1.3B.</li></ul><p>&nbsp;</p></li></ul><h2><a name='header-n94' class='md-header-anchor '></a>Question</h2><p><strong>Q: will midterm 1 be scaled down?</strong></p><blockquote><p>no, but midterm 2 will be quite different. </p></blockquote><p><strong>Q. How different should first draft or final report be?</strong></p><blockquote><p>Ideally, the same.</p><p>First draft feedback isn&#39;t going to be fully detailed and would only outline logic or information flaws.</p></blockquote><p><strong>Q. Seen a perfect report?</strong></p><blockquote><p>B is easy. High A is tough.</p></blockquote><p><strong>Q. How not to give up easily on one topic before choosing another one?</strong></p><blockquote><p>Gathering information for a topic is hard. Find suitable survey data etc.</p><p>For &quot;how do I do this&quot;, contact Dr. Hollett.</p></blockquote><p><strong>Q. Confidential information in report?</strong></p><blockquote><p>If information is from UBC, professor reading it is fine.</p><p>If information is from companies, then anonymize the information such that it can be viewed publicly, or provide NDA to professor. </p></blockquote><p><strong>Q. What should the presentation outline look like?</strong></p><blockquote><p>Make is specific to your topic, don&#39;t be too generic (i.e. cost and revenue model with a detailed description outlining input, outputs, and analysis).</p></blockquote></div>
+</body>
+</html>

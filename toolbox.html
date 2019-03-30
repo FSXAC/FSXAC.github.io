@@ -1,0 +1,59 @@
+---
+# Standard front matter stuff
+author: Muchen He
+date: 2019-03-23
+layout: default
+title: Toolbox
+
+# Custom stuff
+# Title
+titlebar: Toolbox
+nav_active: /toolbox
+permalink: /toolbox
+
+# Header
+header:
+  color: '#222'
+  text:
+  - This page contains a collection of useful (or not) tools available to use.
+---
+
+<style>
+    .media {
+        border: 1px solid #EEE;
+        border-radius: .5em;
+        padding: 1em;
+    }
+</style>
+
+<div class="alert alert-info alert-dismissible fade show" role="alert">
+    This page is in Beta.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<section>
+    {% for tool in site.data.toolbox %}
+    {% assign img = '/assets/img/placeholder.jpg' %}
+    {% if tool.img %}
+    {% assign img = tool.img %}
+    {% endif %}
+    <div class="media">
+        <div class="media-left media-top mr-3">
+            <a href="{{ tool.link }}"><img class="media-object" src="{{ img }}" alt="..."></a>
+        </div>
+        <div class="media-body">
+            <a href="{{ tool.link }}"><h4 class="media-heading">{{ tool.name }}</h4></a>
+
+            {% for desc_line in tool.desc %}
+            <p>{{ desc_line }}</p>
+            {% endfor %}
+
+            {% for note_line in tool.note %}
+            <em>note_line</em>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</section>
