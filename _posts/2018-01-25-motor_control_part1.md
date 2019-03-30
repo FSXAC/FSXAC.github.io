@@ -78,9 +78,9 @@ To test, the sensor is hooked up to a debounce circuit, which is essentially a l
 
 In the firmware, `attachInterrupt()` function is used to connect the interrupt to the right interrupt service routine:
 
-{% highlight C++%}
+```c++
 attachInterrupt(digitalPinToInterrupt(encoder_A_int_pin), encoder_ISR, CHANGE);
-{% endhighlight %}
+```
 
 As it turns out, the mechanical encoder SUCKS! It did okay at low speed, but at high speeds, it's practically unusable. The encoder also produced unwanted signals under vibration, which is not that uncommon.
 

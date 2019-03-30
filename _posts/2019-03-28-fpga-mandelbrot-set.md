@@ -85,24 +85,24 @@ max_iterations = 8
 threshold_squared = 64
 
 function mandelbrot(x_0, y_0) do
-	x = x_0
-	y = y_0
-	
-	iter = 0
-	
-	while iter is less than max_iterations:
-		x_next = x^2 - y^2 + x_0
-		y_next = 2 * x * y + y_0
-		
-		x = x_next
-		y = y_next
-		
-		if x^2 + y^2 > threshold_squared then
-			break
-		
-		iter++
-	
-	return iter
+    x = x_0
+    y = y_0
+    
+    iter = 0
+    
+    while iter is less than max_iterations:
+        x_next = x^2 - y^2 + x_0
+        y_next = 2 * x * y + y_0
+        
+        x = x_next
+        y = y_next
+        
+        if x^2 + y^2 > threshold_squared then
+            break
+        
+        iter++
+    
+    return iter
 ```
 
 Note that for the threshold for divergence, we used a *squared* value to ease the computation required, since square-root functions are expensive (and it's hard to do on a hardware level).
@@ -134,25 +134,25 @@ Putting everything together, we use nested loops to iterate through all screen x
 
 ```
 for screen_x from 0 to screen_max_width do
-	for screen_y from 0 to screen_max_height do
-		x_0 = map screen_x from (0, screen_max_width) to (-2, 1)
-		y_0 = map screen_y from (0, screen_max_height) to (-1, 1)
-		
-		iterations = mandelbrot(x_0, y_0)
-		
-		color_pixel(screen_x, screen_y, iterations)
+    for screen_y from 0 to screen_max_height do
+        x_0 = map screen_x from (0, screen_max_width) to (-2, 1)
+        y_0 = map screen_y from (0, screen_max_height) to (-1, 1)
+        
+        iterations = mandelbrot(x_0, y_0)
+        
+        color_pixel(screen_x, screen_y, iterations)
 ```
 
 We use the number of iterations as a value to determine the color of the pixel.
 
 ```
 function color_pixel(screen_x, screen_y, iterations) do
-	if iterations is max_iterations then
-		color (screen_x, screen_y) to black
-	else
-		if iterations = 1 then color blue 
-		else if iterations = 2 then color cyan 
-		...
+    if iterations is max_iterations then
+        color (screen_x, screen_y) to black
+    else
+        if iterations = 1 then color blue 
+        else if iterations = 2 then color cyan 
+        ...
 ```
 
 ## What's Next
