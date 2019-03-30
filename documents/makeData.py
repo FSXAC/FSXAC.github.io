@@ -3,7 +3,7 @@ import json
 
 doc_manifest = None
 
-with open('documents/documents.json', 'r', encoding='utf-8') as manifest:
+with open('documents.json', 'r', encoding='utf-8') as manifest:
 	try:
 		doc_manifest = json.load(manifest)
 	except:
@@ -51,13 +51,13 @@ for category in doc_manifest['docs']:
 						link = entry_links[i]
 
 						out += f'      - enum: {enum}\n'
-						out += f'        link: {link}\n'
+						out += f'        link: \'/documents/{link}\'\n'
 
 				else:
 					entry_link = entry['link']
 					entry_flag = entry['flag']
 
-					out += f'      link: \'{entry_link}\'\n'
+					out += f'      link: \'/documents/{entry_link}\'\n'
 
 					if entry_flag:
 						out += f'      flag: {entry_flag}\n'
@@ -65,5 +65,5 @@ for category in doc_manifest['docs']:
 
 
 
-with open('_data/documents.yml', 'w', encoding='utf-8') as data:
+with open('../_data/documents.yml', 'w', encoding='utf-8') as data:
 	data.write(out)
