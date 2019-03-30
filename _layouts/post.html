@@ -22,9 +22,6 @@ layout: minimum
 		{% endif %}
 
 		<h1 class="display-4 text-light">{{ page.title }}</h1>
-		{% for line in page.excerpt %}
-		<p class="text-light">{{ line | strip_html }}</p>
-		{% endfor %}
 
 		<p class="text-light lead m-0 mt-5">Published {{ page.date | date: "%Y-%m-%d" }}</p>
 		<p class="text-light m-0">
@@ -32,7 +29,7 @@ layout: minimum
 			{% if words < 360 %}
 			1 min
 			{% else %}
-			{{ words | divided_by:180 }} mins
+			{{ words | divided_by:180 }} min
 			{% endif %}
 			read
 		</p>
