@@ -31,6 +31,10 @@ defaults:
       layout: post
       excerpt_separator: <!-- excerpt -->
       nav_active: /blog
+  - scope:
+      path: ""
+    values:
+      author: Muchen He
 
 use_image_as_brand: false
 
