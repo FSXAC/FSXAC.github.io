@@ -190,6 +190,14 @@ a:hover { color: #A92626; }
 	margin-right: auto;
 }
 
+#blog-content .figure{
+	text-align: center;
+	display: block;
+	margin-top: 0;
+	font-size: 0.9em;
+	font-style: italic;
+}
+
 // Default selected style override
 ::selection {
 	background: #4488ff44;
