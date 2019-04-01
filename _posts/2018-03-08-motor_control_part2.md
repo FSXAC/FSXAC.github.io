@@ -22,6 +22,9 @@ Last time, we're left with a single motor with optical encoder setup and the mot
 
 > **TL;DR**: Read the [summary slide deck](https://github.com/lcall3/Controller/blob/master/doc/report/demo2.pdf).
 
+- TOC
+{:toc}
+
 ## System Modelling
 
 In order to better understand the behavior of our system and how it responds to potential controller inputs, we need to have an accurate representation in the simulator. The simulator model is composed of motors, controller, and any electrical and mechanical dynamics involved.

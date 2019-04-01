@@ -31,7 +31,7 @@ The main part is in the middle, group 2: `\$([^\$]+)\$`. This matches anything i
 
 ## Replace
 
-To replacement/subtitution, I used VS Code find & replace function, but you can use any that supports regex. In regex, we can use the notation `$1`, $2`, etc in our replacement field to denote where we want the matched groups to be place. In this case it's the first group, second group, etc, respectively.
+To replacement/subtitution, I used VS Code find & replace function, but you can use any that supports regex. In regex, we can use the notation `$1`, `$2`, etc in our replacement field to denote where we want the matched groups to be place. In this case it's the first group, second group, etc, respectively.
 
 Also note that in VS Code, when doing replacement with the character `$`, to make it literal, we need to double it (or VS Code will get confused).
 

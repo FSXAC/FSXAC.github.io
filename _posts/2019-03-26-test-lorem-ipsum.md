@@ -9,6 +9,9 @@ published: false
 use_math: true
 ---
 
+- TOC
+{:toc}
+
 # Lorem ipsum
 
 In [publishing](https://www.wikiwand.com/en/Publishing) and [graphic design](https://www.wikiwand.com/en/Graphic_design), **lorem ipsum** (derived from Latin *dolorem ipsum*, translated as "pain itself") is a [filler text](https://www.wikiwand.com/en/Filler_text) commonly used to demonstrate the graphic elements of a document or visual presentation. [^1]
