@@ -16,12 +16,9 @@ sass:
   style: compressed
 
 # Plugins
-# plugins:
-#   - jekyll-mentions
-#   - jemoji
-#   - jekyll-redirect-from
-#   - jekyll-sitemap
-#   - jekyll-feed
+plugins:
+  - jemoji
+  - jekyll-sitemap
 
 # Defaults
 defaults:
@@ -33,11 +30,10 @@ defaults:
       layout: post
       excerpt_separator: <!-- excerpt -->
       nav_active: /blog
+      permalink: /:categories/:year/:title/
   - scope:
       path: ""
     values:
       author: Muchen He
 
 use_image_as_brand: false
-
-permalink: /:categories/:year/:title/

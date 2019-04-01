@@ -150,7 +150,7 @@ function renderYearContainer(year, options) {
  * @param yearId The targe ID of the year container
  */
 function renderYearButton(year, yearId) {
-    var outHtml = '<a class="btn btn-secondary" href="#' + yearId + '">' + year + '</a>';
+    var outHtml = '<a class="btn btn-outline-light" href="#' + yearId + '">' + year + '</a>';
     $('#year-listings').append(outHtml);
 }
 
