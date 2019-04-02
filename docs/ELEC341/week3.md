@@ -4,8 +4,6 @@ date: 2017-10-10
 categories: ELEC 341
 title: Week 3 - Laplace Transform
 
-layout: post
-
 use_math: true
 ---
 

@@ -4,8 +4,6 @@ date: 2017-09-20
 categories: ELEC 341
 title: Week 2
 
-layout: post
-
 use_math: true
 ---
 
@@ -15,7 +13,7 @@ Block diagrams can be represented as signal flow graphs. Signals *flows* from le
 
 Here is an example of a SFG:
 
-![](../assets/ELEC341W2/sfg1.jpg)
+![](assets/ELEC341W2/sfg1.jpg)
 
 The arrow pointing to the right represents **Forward Path**, and the *gain* is the multiplication of the functions such as $$G_1$$ in order to get somewhere. (The *forward path gain* from $$u\rightarrow y=G_1G_2G_3$$, the *forward path gain* from $$x_1\rightarrow y=\{G_2G_3,H_3\}$$)
 
@@ -41,7 +39,7 @@ The following steps are option, tedious, but is needed later on to find the tran
 
 > **Example**: expressing a circuit as a SFG
 >
-> ![](../assets/ELEC341W2/circuit1.jpg)
+> ![](assets/ELEC341W2/circuit1.jpg)
 >
 > First, we need to specify the relationship between all the signals (voltage and current):
 > $$
@@ -52,7 +50,7 @@ The following steps are option, tedious, but is needed later on to find the tran
 >
 > We draw the SFG using the algorithm described above.
 >
-> ![](../assets/ELEC341W2/circuit1sfg.jpg)
+> ![](assets/ELEC341W2/circuit1sfg.jpg)
 >
 > *Note that the equations we wrote down is not unique, thus the SFG is also not unique. But the resulting transfer function is unique*.
 >
@@ -96,7 +94,7 @@ $$
 
 > **Example**: determinant practice
 >
-> ![](../assets/ELEC341W2/sfg2.jpg)
+> ![](assets/ELEC341W2/sfg2.jpg)
 >
 > Paths:
 >

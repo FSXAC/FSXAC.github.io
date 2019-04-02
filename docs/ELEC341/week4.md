@@ -4,8 +4,6 @@ date: 2017-10-10
 categories: ELEC 341
 title: Week 4 - Electro-Mechanical Equivalences
 
-layout: post
-
 use_math: true
 ---
 
@@ -97,7 +95,7 @@ $$
 
 Thus, the following electrical LRC system driven by a current source is equivalent to a simple spring mass damper mechanical system driven by some force.
 
-![1540949858565](../assets/1540949858565.png)
+![1540949858565](assets/1540949858565.png)
 
 The two systems will have identical response:
 
@@ -119,15 +117,15 @@ Generally we can map the components in the two systems one-to-one, however there
 
 > **Example:** convert the following mechanical system to its electrical equivalence
 >
-> ![1540998425809](../assets/1540998425809.png)
+> ![1540998425809](assets/1540998425809.png)
 >
 > **Naïve solution:** We literally switch all the dampers with resisters, mass with capacitors, and springs with dampers. Then set the leftmost node connecting $$B_1$$, $$k_1$$ and $$k_2$$ as ground.
 >
-> ![1540998519553](../assets/1540998519553.png)
+> ![1540998519553](assets/1540998519553.png)
 >
 > This will **not** yield the same response as it's not the same system. The two capacitors have none of its nodes connected ground.
 >
-> ![1540998616283](../assets/1540998616283.png)
+> ![1540998616283](assets/1540998616283.png)
 >
 > **Solution:** Because we know that mass are relative to ground at all times, we start with capacitors, with one of its end nodes connected to reference.
 >
