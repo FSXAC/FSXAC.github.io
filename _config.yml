@@ -32,6 +32,11 @@ defaults:
       nav_active: /blog
       permalink: /:categories/:year/:title/
   - scope:
+      path: "docs"
+    values:
+      layout: doc
+      nav_active: /documents
+  - scope:
       path: ""
     values:
       author: Muchen He

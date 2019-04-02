@@ -175,7 +175,8 @@
     date: 2018-05-15
     entries:
     - title: 'Combinational Logic'
-      link: '/docs/CPEN311/CPEN311-1a.pdf'
+      # link: '/docs/CPEN311/CPEN311-1a.pdf'
+      link: '/docs/CPEN311/1a'
     - title: 'Multiplexers'
       link: '/docs/CPEN311/CPEN311-2a.pdf'
     - title: 'Sequential Logic'

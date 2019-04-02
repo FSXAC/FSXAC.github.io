@@ -73,6 +73,9 @@ a:hover { color: #A92626; }
 #blog-content #markdown-toc li {
 	list-style: none;
 }
+#blog-content #markdown-toc > li > a {
+	font-weight: bold;
+}
 #blog-content ul#markdown-toc {
 	padding: 0;
 }
@@ -220,4 +223,21 @@ nav.navbar.sticky-top {
 }
 .jumbotron .btn {
 	text-shadow: none;
+}
+
+@media print {
+	#blog-content #markdown-toc {
+		display: none;
+	}
+
+	.jumbotron { 
+		background-color: transparent !important;
+	}
+	.jumbotron .text-light {
+		color: black !important;
+	}
+
+	footer { 
+		display: none;
+	}
 }
