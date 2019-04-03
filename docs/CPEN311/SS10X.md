@@ -1,15 +1,15 @@
 ---
+date: 2018-02-07
+categories: CPEN 311
 title: Debugging Techniques
 author: Muchen He
 ---
 
-:floppy_disk: [Go Back](/documents)
 
-<small> Last updated 2018-02-07 by Muchen</small> 
 
-[TOC]
+- toc
+{:toc}
 
-# Debugging Techniques
 
 What is **effective debugging**?
 

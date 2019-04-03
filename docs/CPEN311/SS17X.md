@@ -1,13 +1,14 @@
 ---
-title: High Level Synthesis
+date: 2018-03-23
+categories: CPEN 311
+title:  High Level Synthesis
 author: Muchen He
 ---
 
-:floppy_disk: [Go Back](/documents)
 
-<small> Last updated 2018-03-23 by Muchen</small> 
 
-[TOC]
+- toc
+{:toc}
 
 ## High Level Synthesis
 

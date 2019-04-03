@@ -1,15 +1,15 @@
 ---
+date: 2018-01-18
+categories: CPEN 311
 title: Datapath Continued
 author: Muchen he
 ---
 
-:floppy_disk: [Go Back](/documents)
 
-<small> Last updated 2018-01-18 by Muchen</small> 
 
-[TOC]
+- toc
+{:toc}
 
-# More Datapath
 
 ## Blocking and Non-blocking Assignments
 

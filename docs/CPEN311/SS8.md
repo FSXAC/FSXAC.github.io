@@ -1,15 +1,15 @@
 ---
-title: SS8
+date: 2018-01-29
+categories: CPEN 311
+title: On-Chip In-System Debug
 author: Muchen he
 ---
 
-:floppy_disk: [Go Back](/documents)
 
-<small> Last updated 2018-01-29 by Muchen</small> 
 
-[TOC]
+- toc
+{:toc}
 
-# On-Chip In-System Debug
 
 So far we've been using *ModelSim* to debug because we have access to view every signal in the system. However, there are some problems. 
 

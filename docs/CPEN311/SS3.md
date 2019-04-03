@@ -1,17 +1,13 @@
 ---
+date: 2018-04-10
+categories: CPEN 311
 title: Synthesizable Verilog
 author: Muchen He
 ---
 
+- toc
+{:toc}
 
-
-:floppy_disk: [Go Back](/documents)
-
-<small> Last updated 2018-04-10 by Muchen</small> 
-
-[TOC]
-
-# Synthesizable Verilog
 
 **Recall: What is Verilog?**
 

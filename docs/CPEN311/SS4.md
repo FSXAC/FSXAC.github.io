@@ -1,19 +1,15 @@
 ---
-title: Datapath I
+date: 2018-04-10
+categories: CPEN 311
+title: 'Datapath I: Introduction'
 author: Muchen He
 ---
-
-
 
 **TODO: Finish Notes**
 
 
-
-:floppy_disk: [Go Back](/documents)
-
-<small> Last updated 2018-04-10 by Muchen</small> 
-
-[TOC]
+- toc
+{:toc}
 
 > **Lecture side notes:**
 >
@@ -28,7 +24,6 @@ author: Muchen He
 >
 > This will not compile because the `output` needs to be a `reg` or `logic`.
 
-# Datapath I: Introduction
 
 ## General Design
 

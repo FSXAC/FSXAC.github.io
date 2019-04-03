@@ -4,12 +4,7 @@ date: 2018-01-05
 categories: CPEN 311
 ---
 
-- toc
-{:toc}
-
-Digital logic blocks consists of *combinational logic* and *sequential logic*. 
-
-# Combinational Blocks
+Digital logic blocks consists of *combinational logic* and *sequential logic*.
 
 Combinational logic blocks are based on combinational logic -- where the output is a function of only current inputs. They have no memory or history of past operations or states. Thus combinational logic blocks are constructed using only boolean logic gates but not flip-flops (since FFs are used for storing memory).
 

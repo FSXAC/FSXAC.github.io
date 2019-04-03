@@ -1,15 +1,15 @@
 ---
-title: SS7
+date: 2018-01-29
+categories: CPEN 311
+title: Verilog Operations
 author: Muchen he
 ---
 
-:floppy_disk: [Go Back](/documents)
 
-<small> Last updated 2018-01-29 by Muchen</small> 
 
-[TOC]
+- toc
+{:toc}
 
-# Verilog Operations
 
 ## Loop Statements
 

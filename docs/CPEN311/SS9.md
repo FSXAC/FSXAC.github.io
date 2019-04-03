@@ -1,15 +1,15 @@
 ---
+date: 2018-02-01
+categories: CPEN 311
 title: Fractional Numbers
 author: Muchen He
 ---
 
-:floppy_disk: [Go Back](/documents)
 
-<small> Last updated 2018-02-01 by Muchen</small> 
 
-[TOC]
+- toc
+{:toc}
 
-# Fractional Numbers
 
 There are two ways to represent fractional numbers, **fixed-point** and **floating-point** representations. 
 

@@ -1,15 +1,15 @@
 ---
-title: Complex Datapath
+date: 2018-01-18
+categories: CPEN 311
+title: More Complex Datapath
 author: Muchen he
 ---
 
-:floppy_disk: [Go Back](/documents)
 
-<small> Last updated 2018-01-18 by Muchen</small> 
 
-[TOC]
+- toc
+{:toc}
 
-# More Complex Datapath
 
 **Learning Objectives**
 
