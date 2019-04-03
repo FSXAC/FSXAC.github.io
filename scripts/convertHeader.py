@@ -33,7 +33,7 @@ for file in os.listdir(args.path):
             stripped = line.strip('\n')
             
             if stripped == '---' and first_opening:
-                mdfile.write('date: {}'.format(date))
+                mdfile.write('date: {}\n'.format(date))
                 first_opening = False
                 mdfile.write(line)
 
@@ -45,4 +45,7 @@ for file in os.listdir(args.path):
             
             elif stripped == '[TOC]':
                 mdfile.write('-toc\n')
-                mdfile.write('{:toc}')
+                mdfile.write('{:toc}\n')
+
+            else:
+                mdfile.write(line)
