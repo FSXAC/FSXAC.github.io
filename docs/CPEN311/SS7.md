@@ -9,6 +9,8 @@ author: Muchen he
 
 [TOC]
 
+# Verilog Operations
+
 ## Loop Statements
 
 Traditionally when we want to iterate, we use a counter. A **behavior for-loop** has the structure as follows
