@@ -42,7 +42,6 @@ header:
 .card-body .list-group .list-group-item {
     border: none;
     padding: 0;
-    margin-top: .25em;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -54,6 +53,8 @@ header:
 .card-body .list-group .list-group-item .btn-entry {
 	border: 1px solid #0050c9;
 	color: #0050c9;
+	margin-top: .1em;
+	margin-bottom: .1em;
 }
 .card-body .list-group .list-group-item .btn-entry:hover {
 	border-color: #A92626;
@@ -62,8 +63,12 @@ header:
 }
 
 .card-gutter-sizer { width: 0; }
-@media screen and (min-width: 768px) {
-    .card { width: 32%; margin-bottom: 12px; }
+@media screen and (min-width: 992px) {
+    .card { width: 32%; }
+    .card-gutter-sizer { width: 2%; }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	.card { width: 49%; }
     .card-gutter-sizer { width: 2%; }
 }
 </style>
