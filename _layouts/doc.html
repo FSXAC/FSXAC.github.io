@@ -1,11 +1,48 @@
----
-layout: minimum
-nav_active: /documents
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{{ page.categories }} :: {{ page.title }}</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Muchen's page" />
+	<meta name="author" content="{{ page.author }}" />
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="/assets/css/default.css">
 
-<header class="jumbotron jumbotron-fluid py-5" {% if page.header.overlay_filter %}
-		style="background-color: rgba(0, 0, 0, {{ page.header.overlay_filter }}); background-blend-mode: multiply;"
-		{% endif %}>
+	{% if page.use_math %}
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+	{% endif %}
+
+	{% for line in page.extra_js %}{{ line }}{% endfor %}
+	<style>
+		{% if page.header.color %}
+		.jumbotron { background-color: {{ page.header.color }}
+		{% elsif page.header.overlay_image %}
+		.jumbotron {
+			background: url('{{ page.header.overlay_image }}') no-repeat center center;
+			background-size: cover;
+			min-height: 300px;
+		}
+		{% else %}
+		.jumbotron { background-color: #001624; }
+		{% endif %}
+
+		{% if page.header.overlay_filter %}
+		.jumbotron{
+			background-color: rgba(0, 0, 0, {{ page.header.overlay_filter }});
+			background-blend-mode: multiply;
+		}
+		{% endif %}
+	</style>
+</head>
+
+<body>
+<header class="jumbotron jumbotron-fluid py-5">
 	<div class="container">
 		{% if page.categories != empty %}
 		<small class="text-light" style="letter-spacing: 2px">
@@ -22,3 +59,5 @@ nav_active: /documents
 <div id='c-content' class="container">
 	{{ content }}
 </div>
+</body>
+</html>
