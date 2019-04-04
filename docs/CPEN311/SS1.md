@@ -1,8 +1,11 @@
 ---
 title: Combinational Logic
-date: 2018-01-05
+date: 2019-04-03
 categories: CPEN 311
 ---
+
+- toc
+{:toc}
 
 Digital logic blocks consists of *combinational logic* and *sequential logic*.
 
@@ -13,7 +16,7 @@ Combination blocks are used for, but not limited to:
 - Multiplexers
 - Game logic
 
-## Example of Basic Combinational Logic in Verilog
+## Basic Combinational Logic in Verilog
 
 ```verilog
 module MY_SYSTEM(A, B, C);
@@ -79,3 +82,44 @@ module MY_AND(A, B, C);
 		C = A & B;
 endmodule
 ``` 
+
+## Multiplexers
+
+Multiplexers (MUX) are used to select one of the input bits to be carried over -- or "decision making". They are made of combinational logic.
+
+Here is an example implemenation of a MUX in SystemVerilog:
+
+**Example**
+
+```verilog
+module mux(input [3:0] X, input [1:0] SW, output Y);
+    always_comb
+        case (SW)
+            2'b00: Y = X[0];
+            2'b01: Y = X[1];
+            2'b10: Y = X[2];
+            2'b11: Y = X[3];
+        endcase
+endmodule
+```
+
+Here, we set the output based on the control input `SW`. 
+
+Alternatively, we could also use *if/else* statements or other logic operators or conditional statements such as `?`.
+
+Note that in this example provided, we covered all permutations/cases of the combinational logic in the `always_comb` block. If we don't want to write out all the cases either because it's too much or too redundant, we could use `default`:
+
+```verilog
+module mux(input [3:0] X, input [1:0] SW, output Y);
+    always_comb
+        case (SW)
+            2'b01: Y = X[1];
+            2'b10: Y = X[2];
+            2'b11: Y = X[3];
+            default: Y = X[0];
+        endcase
+endmodule
+```
+This means for any case not covered in the case statement, we will default `Y = X[0]`.
+
+**Warning**: failure to cover all cases could lead to the synthesizer interpreting the verilog code as logic with memory, and make **inferred latches**. This is not the desired hardware, which is not good.
