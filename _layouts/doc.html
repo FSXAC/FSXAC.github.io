@@ -13,47 +13,42 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="/assets/css/default.css">
+	<link rel="stylesheet" href="/assets/fonts/HKGroteskNew/stylesheet.css">
 
 	{% if page.use_math %}
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 	{% endif %}
 
 	{% for line in page.extra_js %}{{ line }}{% endfor %}
-	<style>
-		{% if page.header.color %}
-		.jumbotron { background-color: {{ page.header.color }}
-		{% elsif page.header.overlay_image %}
-		.jumbotron {
-			background: url('{{ page.header.overlay_image }}') no-repeat center center;
-			background-size: cover;
-			min-height: 300px;
+	<style>	
+		h1, h2, h3, h4, h5, h6 {
+			font-family: 'HK Grotesk';
+			font-weight: bold;
+			letter-spacing: -0.45px;
+			word-spacing: 2px;
 		}
-		{% else %}
-		.jumbotron { background-color: #001624; }
-		{% endif %}
-
-		{% if page.header.overlay_filter %}
-		.jumbotron{
-			background-color: rgba(0, 0, 0, {{ page.header.overlay_filter }});
-			background-blend-mode: multiply;
+		h2 {
+			border-bottom: 1px dotted black;
 		}
-		{% endif %}
+		div.footnotes {
+			border-top: 1px solid;
+		}
 	</style>
 </head>
 
 <body>
-<header class="jumbotron jumbotron-fluid py-5">
+<header class="pt-5 pb-3">
 	<div class="container">
 		{% if page.categories != empty %}
-		<small class="text-light" style="letter-spacing: 2px">
+		<small style="letter-spacing: 2px">
 		{% for category in page.categories %}
 		{{ category | upcase }}{% unless forloop.last %}, {% endunless %}
 		{% else %}
 		{% endfor %}
 		</small>
 		{% endif %}
-		<h1 class="display-4 text-light">{{ page.title }}</h1>
-		<p class="text-light lead m-0">Updated {{ page.date | date: "%Y-%m-%d" }}</p>
+		<h1>{{ page.title }}</h1>
+		<p class="m-0 pb-2" style="border-bottom: 1px solid black">Updated {{ page.date | date: "%Y-%m-%d" }}</p>
 	</div>
 </header>
 <div id='c-content' class="container" style="padding-bottom: 100px;">

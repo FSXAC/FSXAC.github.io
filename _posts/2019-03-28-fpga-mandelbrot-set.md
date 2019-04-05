@@ -18,7 +18,7 @@ tags:
 header:
   teaser: /assets/blog/teaser/fract.jpg
   overlay_image: /assets/blog/fract.jpg
-  overlay_filter: 0.9
+  overlay_filter: 0.8
 
 use_math: true
 ---
@@ -159,8 +159,6 @@ function color_pixel(screen_x, screen_y, iterations) do
 
 We have just established the groundworks for the second part of this project, which is to actually program it onto the FPGA. In the next part, we will look into turning the above mentioned algorithm into hardware using basics of digital design: combinational and sequentail logics. Stay tuned.
 
-
-**References**
 
 [^1]: https://en.wikipedia.org/wiki/Mandelbrot_set
 
