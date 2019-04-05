@@ -1,5 +1,5 @@
 /* Page style */
-html { font-size: 16px; }
+html { font-size: 14px; }
 body {
 	cursor: default;
 	font-family: "Open Sans", Helvetica, "Microsoft Yahei", sans-serif;
@@ -61,18 +61,25 @@ a:hover { color: #A92626; }
 
 /* Blog texts */
 #c-content p {
-	margin: 1.5em 0;
+	// margin: 1.5em 0;
+	margin-bottom: 1.35em;
 }
 #c-content li > p {
 	margin: initial;
 }
 
+#c-content h3 {
+	margin: .5em 0;
+}
+
 // TOC
 #c-content #markdown-toc li {
 	list-style: none;
+	line-height: 1.1;
 }
 #c-content #markdown-toc > li > a {
 	font-weight: bold;
+	line-height: 1.35;
 }
 #c-content ul#markdown-toc {
 	padding: 0;
