@@ -1,6 +1,24 @@
 ---
+title: "Mandelbrot Set on FPGA Part 2"
 published: false
 date: 2019-04-06
+categories:
+  - projects
+  - cpen
+
+tags:
+  - programming
+  - code
+  - fpga
+  - computer
+  - engineering
+  - fractal
+  - mandelbrot
+
+header:
+  teaser: /assets/blog/teaser/fract.jpg
+  overlay_image: /assets/blog/fract.jpg
+  overlay_filter: 0.8
 ---
 
 

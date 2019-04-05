@@ -4,7 +4,7 @@ categories:
   - projects
   - cpen
 date: 2019-03-28
-title: "FPGA Mandelbrot Set"
+title: "Mandelbrot Set on FPGA Part 1"
 
 tags:
   - programming
