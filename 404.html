@@ -1,37 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Muchen He :: 404</title>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta name="description" content="Muchen's page"/>
-<meta name="author" content="Muchen He"/>
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<!-- css -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
-<link type="text/css" rel="stylesheet" href="https://www.muchen.ca/css/default.css"/>
-<!-- js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="https://www.muchen.ca/js/default.js"></script>
+---
+layout: default
+title: 404 Not Found
+
+# Custom stuff
+# Title
+titlebar: 404
+
+# Header
+header:
+  color: 'darkred'
+  text:
+  - The page that you're looking for does not exist.
+  - <a class="btn btn-outline-light" href="/">Go back to civilization?</a>
+---
+
 <style>
-.jumbotron { background: darkred }
+a.btn-outline-light {
+	color: white;
+}
+a.btn-outline-light:hover {
+	color: darkred;
+}
 </style>
-</head>
-<body>
-<script>addNavbar();</script>
-<header class="jumbotron jumbotron-fluid px-3 py-5">
-    <div class="container">
-        <h1 class="display-4 text-light">404 Not Found</h1>
-        <a class="btn btn-outline-light" href="/">Go back to civilization?</a>
-    </div>
-</header>
-<div id="main" class="container">
-</div>
-<script>addFooter();</script>
-</body>
-</html>

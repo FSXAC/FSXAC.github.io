@@ -1,0 +1,129 @@
+---
+# Standard front matter stuff
+author: Muchen He
+date: 2019-03-23
+layout: default
+title: Documents
+
+# Additional includes
+extra_js:
+- <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" crossorigin="anonymous"></script>
+
+# Custom stuff
+# Title
+titlebar: Document
+nav_active: /documents
+permalink: /documents
+
+# Header
+header:
+  color: '#324'
+  text:
+  - This page contains academic related notes and documents. I try to fill-in as much content as I can from the courses I've taken.
+  - Please feel free to contact me if there any mistakes (I'm only human, so don't put your blame on me).
+---
+
+<style>
+.card {
+    width: 100%;
+    margin-bottom: 12px;
+    border: none;
+    /* box-shadow: 0 4px 6px 0 #00000033; */
+}
+.card-header {
+    background-color: transparent;
+    border-bottom: none;
+}
+.card-body {
+    border-top: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 0;
+    padding-top: .5em;
+}
+.card-body .list-group .list-group-item {
+    border: none;
+    padding: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.card-body .list-group .list-group-item .badge {
+    margin-left: .5em;
+}
+
+.card-body .list-group .list-group-item .btn-entry {
+	border: 1px solid #0050c9;
+	color: #0050c9;
+	margin-top: .1em;
+	margin-bottom: .1em;
+}
+.card-body .list-group .list-group-item .btn-entry:hover {
+	border-color: #A92626;
+	color: white;
+	background-color: #A92626;
+}
+
+.card-gutter-sizer { width: 0; }
+@media screen and (min-width: 992px) {
+    .card { width: 32%; }
+    .card-gutter-sizer { width: 2%; }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	.card { width: 49%; }
+    .card-gutter-sizer { width: 2%; }
+}
+</style>
+
+{% for category in site.data.documents %}
+<section>
+<h2 class='mt-4'>{{ category.category }}</h2>
+<div class="card-grid">
+<div class="card-gutter-sizer"></div>
+{% assign courses = category.courses %}
+{% for course in courses %}
+	{% if course.entries %}
+	<div id="{{ course.course_num | replace: ' ', '-'}}" class="card p-0">
+	<div class="card-header p-0">
+		<small>{{ course.course_num | upcase }}</small>
+		<h3>{{ course.course_name }}</h3>
+		<small>Last updated {{ course.date | default: 'never' }}</small>
+	</div>
+	<div class="card-body">
+		<ul class='list-group list-group-flush'>
+
+		{% for entry in course.entries %}
+		<li class='list-group-item'>
+		{% if entry.group %}
+			{{ entry.title }}
+			{% for enum_entry in entry.group %}
+			<a class="btn btn-xs btn-entry" href="{{ enum_entry.link }}">{{ enum_entry.enum }}</a>
+			{% endfor %}
+		{% else %}
+		<a href="{{ entry.link }}">{{ entry.title }}</a>
+		{% endif %}
+
+		{% if entry.flag == 'draft' %}
+		<span class="badge badge-secondary">draft</span>
+		{% elsif entry.flag == 'new' %}
+		<span class="badge badge-success">new</span>
+		{% endif %}
+
+		</li>
+		{% endfor %}
+
+		</ul>
+	</div>
+	</div>
+	{% endif %}
+{% endfor %}
+</div>
+</section>
+{% endfor %}
+
+
+<script>
+$('.card-grid').masonry({
+    itemSelector: '.card',
+    gutter: '.card-gutter-sizer',
+    percentPosition: true
+});
+</script>

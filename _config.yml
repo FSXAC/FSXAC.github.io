@@ -1,1 +1,44 @@
-theme: jekyll-theme-architect
+url: https://www.muchen.ca
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+sass:
+  style: compressed
+
+# Plugins
+plugins:
+  - jemoji
+  - jekyll-sitemap
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      excerpt_separator: <!-- excerpt -->
+      nav_active: /blog
+      permalink: /:categories/:year/:title/
+  - scope:
+      path: "docs"
+    values:
+      layout: doc
+      nav_active: /documents
+  - scope:
+      path: ""
+    values:
+      author: Muchen He
+
+use_image_as_brand: false

@@ -1,0 +1,10 @@
+- name: VGA Core Sim
+  link: https://www.muchen.ca/VGACoreSim
+  desc: Visualizes what VGA monitor would actually display in a web browser. Useful for CPEN 311 labs.
+  note: "Todo: better code editor"
+- name: Routh Hurwitz Stability Criterion Calculator
+  link: https://www.muchen.ca/RHCalc
+  desc: alculates whether if a LTI system is stable given its characteristic equation.
+  note:
+    - "Todo: allow for independent gain variable K such that the lower bound and ultimage gain could be calculated."
+    - "Todo: Gives suggesting starting PID values for the system."

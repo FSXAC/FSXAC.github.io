@@ -1,56 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Muchen :: Projects</title>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Muchen's page" />
-<meta name="author" content="Muchen He" />
-<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<!-- css -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-<link type="text/css" rel="stylesheet" href="../css/default.css" />
-<link type="text/css" rel="stylesheet" href="../css/timeline.css"/>
-<!-- js -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script language="javascript" type="text/javascript" src="../js/default.js"></script>
-<script language="javascript" type="text/javascript" src="projects.js"></script>
-<style>
-.jumbotron { background: #9F2D4F; }
-</style>
-</head>
-<body id="root">
-<script>addNavbar('Projects');</script>
-<header class="jumbotron jumbotron-fluid px-3 py-5">
-    <div class="container">
-        <h1 class="display-4 text-light">Projects</h1>
-        <p class="text-light">This page contains projects that I've created or contributed to. They are ordered reverse-chronicalogically.</p>
-        <p class="text-light">The filter below to filter through different types of projects.</p>
+---
+# Standard front matter stuff
+author: Muchen He
+date: 2019-03-23
+layout: projects
+title: Projects
 
-        <section class="mt-3">
-            <div id="year-listings" class="btn-group" role="group"></div>
-            <div class='btn-group' role="group">
-                <button id="filterSoftwareButton" class="btn btn-info">Software</button>
-                <button id="filterHardwareButton" class="btn btn-primary">Hardware</button>
-                <button id="filterDesignButton" class="btn btn-success">Design</button>
-                <button id="filterMechanicalButton" class="btn btn-warning">Mechanical</button>
-                <button id="clearFilterButton" class="btn btn-default">All</button>
-            </div>
-        </section>
-    </div>
-</header>
-<div id='main' class="container"></div>
-<div id='footer' class="container"></div>
+# Custom stuff
+full_jquery: true
+extra_css:
+- <link rel="stylesheet" href="/assets/css/timeline.css">
+extra_js:
+- <script language="javascript" type="text/javascript" src="projects.js"></script>
+
+# Title
+titlebar: Projects
+nav_active: /projects
+
+# Header
+header:
+  color: '#835'
+  text:
+  - This page contains projects that I've created or contributed to. They are ordered reverse-chronicalogically.
+  - The filter below to filter through different types of projects.
+
+---
+
 <script>
-
 $(document).ready(function() {
     setContainer($('#main'));
-    addFooter('footer');
     readProjects(onReadProjects);
 });
 
@@ -123,7 +100,4 @@ function showBlocks(blocks, offset) {
             $(this).find('.timeline-icon, .timeline-body').removeClass('is-hidden').addClass('bounce-in');
     });
 }
-
 </script>
-</body>
-</html>

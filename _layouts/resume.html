@@ -1,0 +1,208 @@
+---
+layout: minimum
+---
+
+<style>
+:root {
+	--theme-color: #235;
+}
+
+@media print {
+	body { -webkit-print-color-adjust: exact !important; }
+	.default-plus-font { font-size: 15px; }
+	.medium-font { font-size: medium; }
+	.large-font { font-size: large; }
+	.navbar { display: none; }
+	footer { display: none; }
+	.filter { display: none; }
+	.jumbotron { display: none; }
+}
+
+section.resume-panel { padding: 0; }
+section.resume-panel>h2 {
+	color: white !important;
+	background-color: var(--theme-color) !important;
+	font-size: 1.3em;
+	padding: 0.1em 0.5em;
+	margin: 2px 1px;
+}
+
+.resume-block { padding: 5px; }
+.resume-block>table { margin-bottom: 0.4em; }
+
+div.progress-container {
+	margin-top: 0.52em;
+	width: 100%;
+	height: 8px;
+	border: 1px solid #CCC;
+}
+
+div.progress-container>div.attr-progress {
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 0;
+	background-color: var(--theme-color) !important;
+	height: 100%;
+	transition: all 1s ease-in-out;
+}
+
+.filter {
+	background-color: #EEE;
+	border: 1px solid #DDD;
+	border-radius: 2px;
+	margin-bottom: 1em;
+	padding: 0.5em;
+	text-align: center;
+}
+
+.work>h3 {
+	font-size: 1.3em;
+	margin: 0;
+}
+
+.work>.position { margin-top: 0; }
+#studyProgress { width: 75%; }
+#workProgress { width: 55%; }
+.proj-showcase { padding: 0 0.2em; }
+
+@media (min-width: 768px) {
+	.proj-showcase:nth-child(4n+1) {
+		padding-left: 15px;
+	}
+
+	.proj-showcase:nth-child(4n+4) {
+		padding-right: 15px;
+	}
+}
+
+@media (max-width: 768px) {
+	.proj-showcase {
+		padding-left: 15px;
+	}
+}
+
+.proj-showcase>h4 {
+	margin: 0;
+	font-size: 1.3em;
+}
+
+.proj-showcase>small {
+	color: #555;
+}
+
+.progress-p {
+	margin-top: 1px;
+}
+
+.row-quiet {
+	margin-left: 0;
+	margin-right: 0;
+}
+</style>
+
+<header class="jumbotron jumbotron-fluid py-5">
+	<div class="container">
+		<h1 class="display-4 text-light">{{ page.title }}</h1>
+		{% for htext in page.header.text %}<p class="text-light">{{ htext }}</p>{% endfor %}
+		<div class="btn-group mt-3" role="group" aria-label="...">
+			<button id="settingsBtn" type="button" class="btn btn-outline-light" data-toggle="modal"
+				data-target="#settingsModal">Settings</button>
+			<button id="buildBtn" type="button" class="btn btn-outline-primary">Build and Print</button>
+		</div>
+	</div>
+</header>
+
+<div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModal"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="exampleModalLongTitle">Resume Settings</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<section>
+					<h5>Section Visiblity</h5>
+					<form class="row">
+						<label class="col-4"><input type="checkbox" id="checkSkills" checked="checked"> Skills</label>
+						<label class="col-4"><input type="checkbox" id="checkWorkXP" checked="checked"> Work
+							Experience</label>
+						<label class="col-4"><input type="checkbox" id="checkProjects" checked="checked">
+							Projects</label>
+						<label class="col-4"><input type="checkbox" id="checkAffil" checked="checked">
+							Affiliations</label>
+						<label class="col-4"><input type="checkbox" id="checkAwards" checked="checked"> Awards</label>
+						<label class="col-4"><input type="checkbox" id="checkHobby" checked="checked"> Hobbies</label>
+					</form>
+				</section>
+				<hr>
+				<section>
+					<h5>Layout</h5>
+					<form>
+						<label><input type="checkbox" id="checkHalfRow" checked="checked"> If possible, use half widths
+							for
+							professional affiliation and awards</label>
+						<p>
+							UBC logo alignment:
+							<select id="ubcLogoAlignSelect" name="ubcLogoAlign">
+								<option value="Left">Left</option>
+								<option value="Right">Right</option>
+							</select>
+						</p>
+						<p>
+							Header name alignment:
+							<select id="headerNameAlignSelect" name="headerNameAlign">
+								<option value="Left">Left</option>
+								<option value="Center">Center</option>
+								<option value="Right">Right</option>
+							</select>
+						</p>
+					</form>
+				</section>
+				<hr>
+				<section>
+					<h5>Projects</h5>
+					<form>
+						Max. number of projects to display:
+						<select id="numProjectsSelect" name="numProjects">
+							<option value="4">4</option>
+							<option value="8">8</option>
+							<option value="12">12</option>
+						</select>
+					</form>
+					<!-- TODO: make it a form -->
+					<div class="btn-group mt-3" role="group" aria-label="...">
+						<button id="filterBtnAll" type="button" class="btn btn-default">All</button>
+						<button id="filterBtnCode" type="button" class="btn btn-default">Programming</button>
+						<button id="filterBtnDesign" type="button" class="btn btn-default">Design</button>
+						<button id="filterBtnElec" type="button" class="btn btn-default">Electrical</button>
+						<button id="filterBtnMech" type="button" class="btn btn-default">Mechanical</button>
+					</div>
+				</section>
+				<hr>
+				<section>
+					<h5>Printing</h5>
+					<form>
+						Font size:
+						<select id="printFontSizeSelect" name="fontSize">
+							<option value="default">Default</option>
+							<option value="default+">Default+</option>
+							<option value="medium">Medium</option>
+							<option value="large">Large</option>
+						</select>
+					</form>
+				</section>
+			</div>
+			<div class="modal-footer">
+				<button id="settingsSaveBtn" type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id='main' class="container">
+	{{ content }}
+</div>

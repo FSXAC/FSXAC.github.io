@@ -1,0 +1,29 @@
+<nav class="navbar sticky-top navbar-expand-md navbar-light bg-light">
+	<div class="container-fluid">
+		<a href="/" class="navbar-brand">
+			{% if site.use_image_as_brand %}
+			<img src="/assets/img/Logo2019small0_5x.png" style="height:1em" alt="Muchen He">
+			{% else %}
+			Muchen He
+			{% endif %}
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class='navbar-nav mr-auto'>
+				{% for link in site.data.navigation %}
+				{% assign current = false %}
+				{% if page.url == link.url or page.nav_active == link.url %}
+				{% assign current = true %}
+				{% endif %}
+				<li class='nav-item mx-2 {% if current %}active{% endif %}'>
+					<a class="nav-link py-1" href="{{ link.url }}">{{ link.text }}{% if current %}<span
+							class="sr-only">(current)</span>{% endif %}</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</nav>

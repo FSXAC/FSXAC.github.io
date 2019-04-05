@@ -1,0 +1,357 @@
+- category: Electrical
+  courses:
+  - course_num: 'ELEC 311'
+    course_name: 'Electromagnetic Fields and Waves'
+  - course_num: 'ELEC 315'
+    course_name: 'Materials and Devices'
+  - course_num: 'ELEC 391'
+    course_name: 'Electrical Project Studio II'
+    date: 2018-04-07
+    entries:
+    - title: 'Getting Started'
+      link: 'https://lcall3.github.io/lecture2/'
+    - title: '3D Printing'
+      link: 'https://lcall3.github.io/lecture/3D-printing/'
+    - title: 'Mechanical Design'
+      link: 'https://lcall3.github.io/lecture/Mechanical-Design/'
+    - title: 'Milestone 1 Feedback'
+      link: 'https://lcall3.github.io/Demo1Feedback/'
+    - title: 'Gears and Speed Reduction'
+      link: 'https://lcall3.github.io/Gears/'
+    - title: 'Engineering Reports v Slide Deck'
+      link: 'https://lcall3.github.io/report-vs-slides/'
+    - title: 'Milestone 2 Feedback'
+      link: 'https://lcall3.github.io/Demo2Feedback/'
+    - title: 'Milestone 2 Report'
+      link: '/docs/ELEC391/demo2.pdf'
+    - title: 'Milestone 2 Mechanical Drawings'
+      link: '/docs/ELEC391/demo2drawing.pdf'
+    - title: 'Milestone 3 Report'
+      link: '/docs/ELEC391/demo3.pdf'
+  - course_num: 'ELEC 301'
+    course_name: 'Electronic Circuits'
+    date: 2017-12-17
+    entries:
+    - title: 'Chapter 1-7'
+      link: '/docs/ELEC301/ELEC301-1-7.pdf'
+    - title: 'Chapter 8 (BJT Amplifiers)'
+      link: '/docs/ELEC301/ELEC301-8.pdf'
+    - title: 'Chapter 9 (Amplifier Biasing)'
+      link: '/docs/ELEC301/ELEC301-9.pdf'
+    - title: 'Chapter 10 (Common-Emitter Amplifier)'
+      link: '/docs/ELEC301/ELEC301-10.pdf'
+    - title: 'Chapter 11 (Common-Base Amplifier)'
+      link: '/docs/ELEC301/ELEC301-11.pdf'
+    - title: 'Chapter X (Cascode Amplifier)'
+      link: '/docs/ELEC301/ELEC301-X.pdf'
+    - title: 'Chapter 12 (Common-Collector Amplifier)'
+      link: '/docs/ELEC301/ELEC301-12.pdf'
+    - title: 'Chapter 13 (Differential Amplifier)'
+      link: '/docs/ELEC301/ELEC301-13.pdf'
+    - title: 'Chapter 14 (Diff. Amp. Frequency Response)'
+      link: '/docs/ELEC301/ELEC301-14.pdf'
+    - title: 'Chapter 15 (OPAMP)'
+      link: '/docs/ELEC301/ELEC301-15.pdf'
+    - title: 'Chapter 16 (OPAMP Non-Idealities)'
+      link: '/docs/ELEC301/ELEC301-16.pdf'
+    - title: 'Chapter 17 (Feedback)'
+      link: '/docs/ELEC301/ELEC301-17.pdf'
+    - title: 'Chapter 18 (I/O Impedance Control)'
+      link: '/docs/ELEC301/ELEC301-18.pdf'
+    - title: 'Chapter 19 (Two-Port Networks)'
+      link: '/docs/ELEC301/ELEC301-19.pdf'
+    - title: 'Chapter 20 (Stability)'
+      link: '/docs/ELEC301/ELEC301-20.pdf'
+    - title: 'Problem Set'
+      group:
+      - enum: 1
+        link: '/docs/ELEC301/ELEC301-PS1.pdf'
+      - enum: 2
+        link: '/docs/ELEC301/ELEC301-PS2.pdf'
+      - enum: 3
+        link: '/docs/ELEC301/ELEC301-PS3.pdf'
+      - enum: 4
+        link: '/docs/ELEC301/ELEC301-PS4.pdf'
+      - enum: 5
+        link: '/docs/ELEC301/ELEC301-PS5.pdf'
+      - enum: 6
+        link: '/docs/ELEC301/ELEC301-PS6.pdf'
+      - enum: 7
+        link: '/docs/ELEC301/ELEC301-PS7.pdf'
+    - title: 'MP1 Report'
+      link: '/docs/ELEC301/MP1.pdf'
+    - title: 'MP2 Report'
+      link: '/docs/ELEC301/MP2.pdf'
+    - title: 'MP3 Report'
+      link: '/docs/ELEC301/MP3.pdf'
+    - title: 'MP4 Report'
+      link: '/docs/ELEC301/MP4.pdf'
+  - course_num: 'ELEC 321'
+    course_name: 'Stochastic Signals and Systems'
+    date: 2018-03-14
+    entries:
+    - title: 'Module 1 (Probability)'
+      link: '/docs/ELEC321/ELEC321-Module1'
+    - title: 'Module 2 (Conditional Probability)'
+      link: '/docs/ELEC321/ELEC321-Module2'
+    - title: 'Module 3 (Random Variable)'
+      link: '/docs/ELEC321/ELEC321-Module3'
+    - title: 'Module 4 (Normal Distribution)'
+      link: '/docs/ELEC321/ELEC321-Module4'
+    - title: 'Module 5a (Discrete Random Vector)'
+      link: '/docs/ELEC321/ELEC321-Module5a'
+    - title: 'Module 5b (Continuous Random Vector)'
+      link: '/docs/ELEC321/ELEC321-Module5b'
+    - title: 'Module 6 (Multivariate Normal)'
+      link: '/docs/ELEC321/ELEC321-Module6'
+    - title: 'Part 2.2 (Three Important Distributions)'
+      link: '/docs/ELEC321/ELEC321-Part2-2'
+    - title: 'Part 2.3 (Generating Random Variables)'
+      link: '/docs/ELEC321/ELEC321-Part2-3'
+    - title: 'Part 2.4 (Random Processes)'
+      link: '/docs/ELEC321/ELEC321-Part2-4'
+    - title: 'Part 2.5 (Information Theory)'
+      link: '/docs/ELEC321/ELEC321-Part2-5'
+    - title: 'Part 2.6 (Markov Processes)'
+      link: '/docs/ELEC321/ELEC321-Part2-6'
+    - title: 'Part 2.7 (Least Square Estimate)'
+      link: '/docs/ELEC321/ELEC321-Part2-7'
+      flag: draft
+    - title: 'Part 2.8 (MMSE)'
+      link: '/docs/ELEC321/ELEC321-Part2-8'
+      flag: draft
+    - title: 'Tutorial'
+      group:
+      - enum: 1
+        link: '/docs/ELEC321/ELEC321-Tutorial1'
+      - enum: 2
+        link: '/docs/ELEC321/ELEC321-Tutorial2'
+      - enum: 3
+        link: '/docs/ELEC321/ELEC321-Tutorial3'
+      - enum: 4
+        link: '/docs/ELEC321/ELEC321-Tutorial4'
+      - enum: 12
+        link: '/docs/ELEC321/ELEC321-Tutorial12'
+    - title: 'Review Session'
+      link: '/docs/ELEC321/ELEC321-Review1'
+  - course_num: 'ELEC 341'
+    course_name: 'Systems and Control'
+    date: 2019-03-30
+    entries:
+    - title: 'Week 1'
+      link: '/docs/ELEC341/week1'
+    - title: 'Week 2'
+      link: '/docs/ELEC341/week2'
+    - title: 'Week 3 - Laplace Transforms'
+      link: '/docs/ELEC341/week3'
+    - title: 'Week 4 - Electro-Mechanical Equivalences'
+      link: '/docs/ELEC341/week4'
+    - title: 'MATLAB Tutorial'
+      link: '/docs/ELEC341/MATLAB-S1'
+    - title: 'Design Project Part 1 Report'
+      link: '/docs/ELEC341/ELEC341-Project1.pdf'
+    - title: 'Design Project Part 2 Report'
+      link: '/docs/ELEC341/ELEC341-Project2.pdf'
+  - course_num: 'ELEC 342'
+    course_name: 'Electro-Mechanical Energy Conversion'
+  - course_num: 'ELEC 201'
+    course_name: 'Circuit Analysis I'
+  - course_num: 'ELEC 202'
+    course_name: 'Circuit Analysis II'
+  - course_num: 'ELEC 211'
+    course_name: 'Engineering Electromagnetics'
+  - course_num: 'ELEC 291'
+    course_name: 'Electrical Design Studio I'
+    date: 2019-03-08
+    entries:
+    - title: 'Project 1 Report: Reflow Oven Controller'
+      link: '/docs/ELEC291/ELEC291-Project1'
+    - title: 'Project 2 Report: Magnetic Field Tracking Robot'
+      link: '/docs/ELEC291/ELEC291-Project2'
+- category: Computer
+  courses:
+  - course_num: 'CPEN 311'
+    course_name: 'Digital Systems Design'
+    date: 2019-04-02
+    entries:
+    - title: 'Combinational Logic'
+      link: '/docs/CPEN311/SS1A'
+    - title: 'Sequential Logic'
+      link: '/docs/CPEN311/SS1B'
+    - title: 'Finite State Machine'
+      link: '/docs/CPEN311/SS2A'
+    - title: 'Hierarchy'
+      link: '/docs/CPEN311/SS2B'
+    - title: 'Synthesizable Verilog'
+      link: '/docs/CPEN311/SS3'
+    - title: 'Datapath I'
+      link: '/docs/CPEN311/SS4'
+    - title: 'Datapath II'
+      link: '/docs/CPEN311/SS5'
+    - title: 'Datapath III'
+      link: '/docs/CPEN311/SS6'
+    - title: 'Loops, Generate, and Tristates'
+      link: '/docs/CPEN311/SS7'
+    - title: 'On-Chip Debug'
+      link: '/docs/CPEN311/SS8'
+    - title: 'Fractional Numbers'
+      link: '/docs/CPEN311/SS9'
+    - title: 'FPGA Architecture'
+      link: '/docs/CPEN311/SS10'
+    - title: 'Debugging Techniques'
+      link: '/docs/CPEN311/SS10X'
+    - title: 'On-Board Memory'
+      link: '/docs/CPEN311/SS11'
+    - title: 'System-on-Chip'
+      link: '/docs/CPEN311/SS12'
+    - title: 'Circuit Timing'
+      link: '/docs/CPEN311/SS13'
+    - title: 'Circuit Timing II'
+      link: '/docs/CPEN311/SS14'
+    - title: 'Metastability'
+      link: '/docs/CPEN311/SS15'
+    - title: 'Power'
+      link: '/docs/CPEN311/SS16'
+    - title: 'High Level Synthesis'
+      link: '/docs/CPEN311/SS17X'
+    - title: 'Asynchronous Logic'
+      link: '/docs/CPEN311/SS17'
+    - title: 'Asynchronous Datapath'
+      link: '/docs/CPEN311/SS18'
+    - title: 'Problem Set'
+      group:
+      - enum: 1
+        link: '/docs/CPEN311/ps1'
+      - enum: 2
+        link: '/docs/CPEN311/ps2'
+      - enum: 3
+        link: '/docs/CPEN311/ps3'
+      - enum: 4
+        link: '/docs/CPEN311/ps4.pdf'
+      - enum: 5
+        link: '/docs/CPEN311/ps5.pdf'
+  - course_num: 'CPEN 211'
+    course_name: 'Microcomputers'
+  - course_num: 'CPSC 259'
+    course_name: 'Data Structures & Algorithms'
+  - course_num: 'APSC 160'
+    course_name: 'Computation in Engineering Design'
+    date: 2018-03-11
+    entries:
+    - title: 'Final Review'
+      link: '/docs/APSC160/APSC-160-Final-Review'
+- category: Mathematics
+  courses:
+  - course_num: 'MATH 220'
+    course_name: 'Mathematical Proofs'
+    date: 2017-12-17
+    entries:
+    - title: 'Final Review'
+      link: '/docs/MATH220/FinalReview'
+  - course_num: 'MATH 264'
+    course_name: 'Vector Calculus'
+  - course_num: 'MATH 256'
+    course_name: 'Differential Equations'
+  - course_num: 'MATH 253'
+    course_name: 'Multivariate Calculus'
+  - course_num: 'MATH 101'
+    course_name: 'Calculus II'
+  - course_num: 'MATH 100'
+    course_name: 'Calculus I'
+- category: Others
+  courses:
+  - course_num: 'MECH 431'
+    course_name: 'Engineering Economics'
+    date: 2018-07-22
+    entries:
+    - title: 'General Economic Concepts'
+      link: '/docs/MECH431/l2'
+    - title: 'Cost Models & Estimation'
+      link: '/docs/MECH431/l3'
+    - title: 'Payback Period and Benefit Benefit Analysis'
+      link: '/docs/MECH431/l4'
+    - title: 'Time Value of Money & Interests'
+      link: '/docs/MECH431/l5'
+    - title: 'Cashflow Series'
+      link: '/docs/MECH431/l7'
+    - title: 'Sources of Capital'
+      link: '/docs/MECH431/l7a'
+    - title: 'Present Worth Analysis'
+      link: '/docs/MECH431/l8'
+    - title: 'Equivalent Annual Cashflow Analysis'
+      link: '/docs/MECH431/l9'
+    - title: 'Rate of Return Analysis'
+      link: '/docs/MECH431/l10'
+    - title: 'Incremental Analysis'
+      link: '/docs/MECH431/l11'
+    - title: 'Future Value Analysis & Benefit Cost Ratio'
+      link: '/docs/MECH431/l12'
+    - title: 'Sensitivity Analysis'
+      link: '/docs/MECH431/l13'
+      flag: new
+    - title: 'Risk Analysis I (Probability)'
+      link: '/docs/MECH431/l14'
+    - title: 'Risk Analysis II (Simulation)'
+      link: '/docs/MECH431/l15'
+      flag: draft
+    - title: 'Depreciation'
+      link: '/docs/MECH431/l16'
+      flag: new
+    - title: 'Taxes'
+      link: '/docs/MECH431/l17'
+      flag: draft
+    - title: 'Conference'
+      group:
+      - enum: 1
+        link: '/docs/MECH431/c1'
+      - enum: 3
+        link: '/docs/MECH431/c3'
+      - enum: 4
+        link: '/docs/MECH431/c4'
+      - enum: 5
+        link: '/docs/MECH431/c5'
+      - enum: 6
+        link: '/docs/MECH431/c6'
+      - enum: 7
+        link: '/docs/MECH431/c7'
+      - enum: 8
+        link: '/docs/MECH431/c8'
+    - title: 'Practice'
+      group:
+      - enum: 2
+        link: '/docs/MECH431/p2'
+      - enum: 3
+        link: '/docs/MECH431/p3'
+      - enum: 4
+        link: '/docs/MECH431/p4'
+      - enum: 7
+        link: '/docs/MECH431/p7'
+    - title: 'Assignment'
+      group:
+      - enum: 1
+        link: '/docs/MECH431/asn1'
+      - enum: 2
+        link: '/docs/MECH431/asn2'
+      - enum: 3
+        link: '/docs/MECH431/asn3'
+  - course_num: 'APSC 101'
+    course_name: 'Intro to Engineering II'
+    date: 2016-07-17
+    entries:
+    - title: 'Final Review'
+      link: '/docs/APSC101/apsc'
+    - title: 'Rain Water Harvesting System Report'
+      link: '/docs/APSC101/rainwater.pdf'
+  - course_num: 'APSC 100'
+    course_name: 'Intro to Engineering I'
+    date: 2015-12-02
+    entries:
+    - title: 'Letter to Future Students'
+      link: '/docs/APSC100/Letter.pdf'
+  - course_num: 'Coursera ML'
+    course_name: 'Intro to Machine Learning'
+    date: 2016-06-25
+    entries:
+    - title: 'Course Notes'
+      link: '/docs/misc/stanford_ml'
+      flag: draft

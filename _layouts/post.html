@@ -1,0 +1,47 @@
+---
+layout: minimum
+---
+
+<header class="jumbotron jumbotron-fluid py-5" {% if page.header.overlay_filter %}
+		style="background-color: rgba(0, 0, 0, {{ page.header.overlay_filter }}); background-blend-mode: multiply;"
+		{% endif %}>
+	<div class="container">
+		{% if page.categories != empty %}
+		<small class="text-light" style="letter-spacing: 2px">
+		{% for category in page.categories %}
+		{{ category | upcase }}{% unless forloop.last %}, {% endunless %}
+		{% else %}
+		{% endfor %}
+		</small>
+		{% endif %}
+
+		<h1 class="display-4 text-light">{{ page.title }}</h1>
+
+		<p class="text-light lead m-0 mt-5">Published {{ page.date | date: "%Y-%m-%d" }}</p>
+		<p class="text-light m-0">
+			{% assign words = content | number_of_words %}
+			{% if words < 360 %}
+			1 min
+			{% else %}
+			{{ words | divided_by:180 }} min
+			{% endif %}
+			read
+		</p>
+
+		{% if page.tags != empty %}
+		<p class="text-light m-0 mt-5"><small>
+		{% for tag in page.tags %}
+		<a href="#" class="text-light">#{{ tag | capitalize }}</a>{% unless forloop.last %} {% endunless %}
+		{% endfor %}
+		</small></p>
+		{% endif %}
+	</div>
+</header>
+<div id='c-content' class="container">
+	{{ content }}
+</div>
+
+<div class="container">
+<hr>
+{% include blog_back.html %}
+</div>

@@ -1,5 +1,7 @@
 ---
 author: Muchen He
+title: README
+layout: default
 date: 2019-01-30
 ---
 

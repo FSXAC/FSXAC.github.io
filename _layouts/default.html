@@ -1,0 +1,16 @@
+---
+layout: minimum
+---
+
+<header class="jumbotron jumbotron-fluid py-5" style="{{ jb_style }}">
+	<div class="container">
+		{% if page.header.image %}<img class="rounded-circle" src="{{ page.header.image }}" alt="{{ page.header.image }}">{% endif %}
+		<h1 class="display-4 text-light">{{ page.title }}</h1>
+		{% for htext in page.header.text %}<p class="text-light">{{ htext }}</p>{% endfor %}
+		{% for extra in page.header.extra %}{{ extra }}{% endfor %}
+	</div>
+</header>
+
+<div id='main' class="container">
+	{{ content }}
+</div>

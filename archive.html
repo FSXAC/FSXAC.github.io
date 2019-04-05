@@ -1,0 +1,29 @@
+---
+layout: default
+title: Blog Archive
+titlebar: Archive
+nav_active: /blog
+permalink: /archive
+header:
+color: '#420'
+---
+
+{% assign date-filter = "%Y" %}
+
+{% for post in site.posts %}
+{% assign post_date = post.date | date: date-filter %}
+
+{% if post_date != date %}
+
+<!-- If new month/date, close off previous ul, make a new heading and new ul -->
+{% unless forloop.first %}</ul>{% endunless %}
+{% assign date = post_date %}
+<h2>{{ post_date }}</h2>
+<ul>
+{% endif %}
+
+<li>{{ post.date | date: "%Y-%m-%d" }} - <a href="{{ post.url }}">{{ post.title }}</a></li>
+
+<!-- close off ul if it's the last elemnent -->
+{% if forloop.last %}</ul>{% endif %}
+{% endfor %}
