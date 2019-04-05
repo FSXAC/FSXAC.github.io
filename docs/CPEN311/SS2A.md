@@ -52,4 +52,4 @@ endmodule
 
 (Note: this isn't proper Verilog and it won't synthesize)
 
-[^fsm]: [https://en.wikipedia.org/wiki/Mealy_machine](https://en.wikipedia.org/wiki/Mealy_machine)
+[^fsm]: [Mealy Machine](https://en.wikipedia.org/wiki/Mealy_machine)
