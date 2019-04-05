@@ -211,6 +211,12 @@ a:hover { color: #A92626; }
 	font-weight: bold;
 }
 
+// Fix math in lists
+#c-content li .MJXc-display {
+	display: inline;
+	margin: inherit;
+}
+
 // Default selected style override
 ::selection {
 	background: #4488ff44;

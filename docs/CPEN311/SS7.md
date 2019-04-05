@@ -28,7 +28,7 @@ The synthesizer will **unroll** every statements inside the for loop.
 
 For example, some for loop code might be
 
-```Verilog
+```verilog
 for (...) begin
   P = P ^ SW[i]
 end
