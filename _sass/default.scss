@@ -2,7 +2,7 @@
 html { font-size: 16px; }
 body {
 	cursor: default;
-	font-family: "Open Sans", Helvetica, "Microsoft Yahei", sans-serif;
+	font-family: "Suisse Intl", "Open Sans", Helvetica, "Microsoft Yahei", sans-serif;
 	line-height: 1.5;
 	color: black;
 }
@@ -36,6 +36,10 @@ div.narrow {
 li.nav-item.active a { border-bottom: 2px solid black; }
 li.nav-item { color: black; }
 .navbar-light .navbar-nav .nav-link { color: black; }
+.navbar-brand {
+	font-weight: bold;
+	padding: 0;
+}
 // .nav-link { margin: 0 0.5em; }
 // .jumbotron { min-height: 300px; }
 
@@ -59,11 +63,6 @@ a:hover { color: #A92626; }
 /* Extra small button */
 .btn-xs { padding: 0 .25em; font-size: 0.9em; }
 
-/* Box shadows */
-.one-edge-shadow {
-  box-shadow: 0 5px 6px -6px black;
-}
-
 /* Blog texts */
 #c-content p {
 	// margin: 1.5em 0;
@@ -73,6 +72,19 @@ a:hover { color: #A92626; }
 	margin: initial;
 }
 
+#c-content h1,
+#c-content h2,
+#c-content h3,
+#c-content h4,
+#c-content h5,
+#c-content h6 {
+	font-weight: bold;
+}
+#c-content h1,
+#c-content h2 {
+	letter-spacing: -0.45px;
+	word-spacing: 2px;
+}
 #c-content h3 {
 	margin: .5em 0;
 }

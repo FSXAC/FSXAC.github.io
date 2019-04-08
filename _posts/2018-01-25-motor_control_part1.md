@@ -32,8 +32,6 @@ Here are some of the progress we have made so far.
 
 The initial proof-of-concept was made of scrap wires and a single piece of magnet taken from a hard drive. It is more to confirm our understanding of theories such the right hand rule, Ampere's law, etc.
 
-![First Prototype](http://via.placeholder.com/300)
-
 Of course, since it only has one core, it doesn't have a commutator and relies on the momentum to keep it spinning.
 
 ### Version 2

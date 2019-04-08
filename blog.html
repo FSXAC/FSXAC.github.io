@@ -33,7 +33,7 @@ img.teaser {
 <h2>{{ post.title }}</h2>
 <div class="row">
   <div class="col-md-3 col-lg-2">
-    <a href="{{ post.url }}"><img class="teaser one-edge-shadow mb-2 mr-2" src="{{ post.header.teaser | default: '/assets/img/logo2019-128.jpg' }}" alt="..."></a>
+    <a href="{{ post.url }}"><img class="teaser shadow mb-2 mr-2" src="{{ post.header.teaser | default: '/assets/img/logo2019-128.jpg' }}" alt="..."></a>
   </div>
   <div class="col-md-9 col-lg-10">
     <p>Published {{ post.date | date: "%Y-%m-%d" }}</p>

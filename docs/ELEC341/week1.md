@@ -74,9 +74,9 @@ Block diagrams are graphical representation of a system (Graphic Math). For exam
 
 **Linear**: linear systems support **superposition** of signals and **homogeneous** property.
 
-​	**Superposition**: if $$Y_1=GU_1, Y_2=GU_2$$, then $$Y_1+Y_2=G(U_1+U_2)$$
+**Superposition**: if $$Y_1=GU_1, Y_2=GU_2$$, then $$Y_1+Y_2=G(U_1+U_2)$$
 
-​	**Homogeneous**: $$A\cdot Y = A\cdot GU$$
+**Homogeneous**: $$A\cdot Y = A\cdot GU$$
 
 **Time-Invariant**: What matters in the system isn't changing with respect to time
 

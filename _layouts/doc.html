@@ -10,23 +10,16 @@
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
 	
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/fonts/Suisse/styleA.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="/assets/css/default.css">
-	<link rel="stylesheet" href="/assets/fonts/HKGroteskNew/stylesheet.css">
 
 	{% if page.use_math %}
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 	{% endif %}
 
 	{% for line in page.extra_js %}{{ line }}{% endfor %}
-	<style>	
-		h1, h2, h3, h4, h5, h6 {
-			font-family: 'HK Grotesk';
-			font-weight: bold;
-			letter-spacing: -0.45px;
-			word-spacing: 2px;
-		}
+	<style>
 		h2 {
 			border-bottom: 1px dotted black;
 		}
