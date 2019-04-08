@@ -3,7 +3,7 @@
 author: Muchen He
 date: 2019-03-23
 layout: default
-title: I am Muchen.
+title: I am Muchen He.
 
 # Custom stuff
 # Title
@@ -28,10 +28,8 @@ header:
 ## Contacts
 
 <dl class="row dl-horizontal">
-    <dt class="col-md-2">Personal E-mail</dt>
+    <dt class="col-md-2">E-mail</dt>
     <dd class="col-md-10"><a href="mailto:i@muchen.ca">i@muchen.ca</a></dd>
-    <dt class="col-md-2">School E-mail</dt>
-    <dd class="col-md-10"><a href="mailto:m.he@alumni.ubc.ca">m.he@alumni.ubc.ca</a></dd>
     <dt class="col-md-2">GitHub</dt>
     <dd class="col-md-10"><a href="https://www.github.com/FSXAC">FSXAC</a></dd>
     <dt class="col-md-2">LinkedIn</dt>
