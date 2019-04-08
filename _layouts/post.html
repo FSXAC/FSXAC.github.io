@@ -43,5 +43,24 @@ layout: minimum
 
 <div class="container">
 <hr>
-{% include blog_back.html %}
+
+<div class="post-navigation" style="overflow: auto;">
+	<div class="btn-group" role="group" aria-label="Post navigation" style="width:100%">
+	
+		{% if page.previous.url %}
+		<a href="{{page.previous.url}}" class="btn btn-outline-dark" style="width:50%;">
+			<small style="letter-spacing: 2px">&laquo; PREVIOUS</small>
+			<br>
+			{{page.previous.title}}
+		</a>
+		{% endif %}
+		{% if page.next.url %}
+		<a href="{{page.next.url}}" class="btn btn-outline-dark" style="width:50%;">
+			<small style="letter-spacing: 2px">NEXT &raquo;</small>
+			<br>
+			{{page.next.title}}
+		</a>
+		{% endif %}
+	</div>
+</div>
 </div>
