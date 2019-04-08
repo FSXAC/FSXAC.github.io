@@ -1,15 +1,15 @@
 @font-face {
     font-family: 'Suisse Intl';
-    src: url('SuisseIntl-SemiBold-WebS.woff2') format('woff2'),
-         url('SuisseIntl-SemiBold-WebS.woff') format('woff');
+    src: url('SuisseIntl-Bold-WebS.woff2') format('woff2'),
+         url('SuisseIntl-Bold-WebS.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Suisse Intl';
-    src: url('SuisseIntl-SemiBoldItalic-WebS.woff2') format('woff2'),
-         url('SuisseIntl-SemiBoldItalic-WebS.woff') format('woff');
+    src: url('SuisseIntl-BoldItalic-WebS.woff2') format('woff2'),
+         url('SuisseIntl-BoldItalic-WebS.woff') format('woff');
     font-weight: bold;
     font-style: italic;
 }
