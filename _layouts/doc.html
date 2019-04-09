@@ -18,6 +18,10 @@
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 	{% endif %}
 
+	{% if page.use_mermaid %}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js" async></script>
+	{% endif %}
+
 	{% for line in page.extra_js %}{{ line }}{% endfor %}
 	<style>
 		h2 {
