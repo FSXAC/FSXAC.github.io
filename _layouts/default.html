@@ -4,9 +4,22 @@ layout: minimum
 
 <header class="jumbotron jumbotron-fluid py-5" style="{{ jb_style }}">
 	<div class="container">
-		{% if page.header.image %}<img class="rounded-circle" src="{{ page.header.image }}" alt="{{ page.header.image }}">{% endif %}
-		<h1 class="display-4 text-light">{{ page.title }}</h1>
-		{% for htext in page.header.text %}<p class="text-light">{{ htext }}</p>{% endfor %}
+		{% if page.header.image %}<img class="rounded-circle shadow my-4" src="{{ page.header.image }}" alt="{{ page.header.image }}">{% endif %}
+		{% if page.header.text_color %}
+		<h1 class="display-4" style="color: {{ page.header.text_color }}">
+		{% else %}
+		<h1 class="display-4 text-light">
+		{% endif %}
+		{{ page.title }}</h1>
+
+		{% for htext in page.header.text %}
+		{% if page.header.text_color %}
+		<p style="color: {{ page.header.text_color }}">
+		{% else %}
+		<p class="text-light">
+		{% endif %}
+		{{ htext }}</p>{% endfor %}
+
 		{% for extra in page.header.extra %}{{ extra }}{% endfor %}
 	</div>
 </header>

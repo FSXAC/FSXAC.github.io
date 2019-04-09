@@ -260,14 +260,6 @@ nav.navbar.sticky-top {
 	box-shadow: 0px 4px 6px 0 #00000033;
 }
 
-// Make text more legible in jumbotrons
-.jumbotron .shadow{
-	text-shadow: black 0px 0px 10px;
-}
-.jumbotron .btn {
-	text-shadow: none;
-}
-
 @media print {
 	#c-content #markdown-toc {
 		display: none;

@@ -3,7 +3,7 @@
 author: Muchen He
 date: 2019-03-23
 layout: default
-title: I am Muchen He.
+title: I am Muchen He
 
 # Custom stuff
 # Title
@@ -12,8 +12,11 @@ titlebar: Home
 # Header
 header:
   image: '/assets/img/avatar-new-small.jpg'
+  color: transparent
+  text_color: black
   text:
-  - I'm a fourth year Electrical Engineering at The University of British Columbia. Currently on an 8-month co-op term Intel of Canada as FPGA Emulation Platform intern. I've previously worked at Electronic Arts - BioWare and VitalMechanics.
+  - A fourth year EE student at UBC.
+  - Currently on an 8-month co-op term Intel of Canada as FPGA Emulation Platform intern. I've previously worked at Electronic Arts - BioWare and VitalMechanics.
 ---
 
 ## Index
@@ -25,7 +28,7 @@ header:
     {% endfor %}
 </dl>
 
-## Contacts
+## Contact
 
 <dl class="row dl-horizontal">
     <dt class="col-md-2">E-mail</dt>
