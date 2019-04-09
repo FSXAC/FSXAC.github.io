@@ -1,5 +1,5 @@
 ---
-date: 2017-12-127
+date: 2017-12-17
 categories: MATH 220
 title: Final Review
 use_math: true

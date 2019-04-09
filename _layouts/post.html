@@ -44,23 +44,21 @@ layout: minimum
 <div class="container">
 <hr>
 
-<div class="post-navigation" style="overflow: auto;">
-	<div class="btn-group" role="group" aria-label="Post navigation" style="width:100%">
-	
-		{% if page.previous.url %}
-		<a href="{{page.previous.url}}" class="btn btn-outline-dark" style="width:50%;">
-			<small style="letter-spacing: 2px">&laquo; PREVIOUS</small>
-			<br>
-			{{page.previous.title}}
-		</a>
-		{% endif %}
-		{% if page.next.url %}
-		<a href="{{page.next.url}}" class="btn btn-outline-dark" style="width:50%;">
-			<small style="letter-spacing: 2px">NEXT &raquo;</small>
-			<br>
-			{{page.next.title}}
-		</a>
-		{% endif %}
+<div class="post-navigation justify-content-between" style="overflow: auto;" aria-label="Post navigation">
+	{% if page.previous.url %}
+	<div class="float-left">
+		<small><b>&laquo; Previous</b></small>
+		<br>
+		<a href="{{page.previous.url}}">{{page.previous.title}}</a>
 	</div>
+	{% endif %}
+	{% if page.next.url %}
+	<div style="text-align: right">
+		<small><b>Next &raquo;</b></small>
+		<br>
+		<a href="{{page.next.url}}">{{page.next.title}}</a>
+	</div>
+	{% endif %}
 </div>
+
 </div>
