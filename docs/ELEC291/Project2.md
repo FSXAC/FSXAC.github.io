@@ -3,11 +3,8 @@ title: Magnetic Field Track Robot
 date: 2017-04-06
 categories: ELEC 291
 use_math: true
+use_mermaid: true
 ---
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
-
 
 A collaborative project by **ELEC 291 - Team B6**: Nicholas (Scott) Beaulieu, Geoff Goodwin-Wilson, Muchen He, Larry Liu, Lufei Liu, and Wenoa Pauline Teves.
 
