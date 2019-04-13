@@ -19,16 +19,18 @@ For the sake of consistency, let us define the following equivalence:
 > Note that we can define it the other way, but it means all of the equivalences for resistance, capacitance, inductors, etc will be flipped.
 
 Ohm's law is $$V=IZ$$, and using our definitions, we can have an Ohm's law for mechanical systems:
+
 $$
 V=FZ
 $$
+
 Where $$V$$ is the velocity, $$F$$ is the force, and $$Z$$ is some *mechanical impedance*.
 
 
 
 ## Electrical
 
-**Purely Resistive**: in a purely resistive system, $$V=IR$$ by Ohm's law. 
+**Purely Resistive**: in a purely resistive system, $$V=IR$$ by Ohm's law.
 
 **Purely Capacitive**: in a purely capacitive system, $$V=I\frac{1}{sC}$$ where $$\frac{1}{sC}$$ is the impedance of the capacitor and $$s$$ is the complex frequency $$j\omega$$. Notice that we can rearrange the equation to:
 
@@ -36,7 +38,7 @@ $$
 V=\frac{1}{C}\frac{I}{s}
 $$
 
-Recall from the Laplace transforms that division by $$s$$ is integration $$\int$$ in time domain. Thus the voltage in a purely capacitive system is a function of integration of current. 
+Recall from the Laplace transforms that division by $$s$$ is integration $$\int$$ in time domain. Thus the voltage in a purely capacitive system is a function of integration of current.
 
 **Purely Inductive**: in a purely inductive system, $$V=IsL$$, similarly, $$sL$$ is the impedance of the inductor. However we can rearrange once again:
 
@@ -88,7 +90,7 @@ $$
     R &\equiv \frac{1}{B}\\
     C &\equiv m \\
     L&\equiv\frac{1}{k}
-    
+
     \end{aligned}
 }
 $$
@@ -106,7 +108,7 @@ The two systems will have identical response:
 
 
 
-## Conversion 
+## Conversion
 
 We can convert a mechanical system to electrical, or vise versa, and it makes it easy to solve the system  (i.e. using mesh / nodal methods / MNA [^mna] that works on circuits in spring-mass-damper systems).
 

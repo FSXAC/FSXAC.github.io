@@ -41,7 +41,7 @@ always_ff @(posedge clk) begin
 end
 ```
 
-In terms of the hardware semantics, the registers are all in parallel. Essentially, `a`, `b` and `c` will all be evaluated first, then the `x`, `y`, and `z` are scheduled and evaluated simultaneously at the  "end" of the clock cycle. 
+In terms of the hardware semantics, the registers are all in parallel. Essentially, `a`, `b` and `c` will all be evaluated first, then the `x`, `y`, and `z` are scheduled and evaluated simultaneously at the  "end" of the clock cycle.
 
 > **Note** that in both cases, `x`, `y`, and `z` are declared as `reg` in Verilog. However, in the first *blocking* code, the assignments won't be synthesized to to a register. In the second one, the assignments will be synthesized to flip-flops because we need the clock to update the values at the end. Also flip-flops are needed to hold memory.
 
@@ -116,15 +116,15 @@ end
 
 We're trying to control all pixels in a single clock cycle. So only the last assignment to `x`. `y`, etc. are applies. So how to get around this? For *lab 2*, **method 1** is recommended.
 
-A better method utilizes counters using registers. 
+A better method utilizes counters using registers.
 
 ### Taking the Modulo
 
-If we want to take a modulo of 8, notice that 8 is $2^3$. So all we need to do is take the lower 3 bits in the binary. 
+If we want to take a modulo of 8, notice that 8 is $$2^3$$. So all we need to do is take the lower 3 bits in the binary.
 
 ### Divide by Base 2
 
-Use right shift by $n$ to divide by $2^n$.
+Use right shift by $$n$$ to divide by $$2^n$$.
 
 ### Drawing a Line
 
@@ -156,7 +156,7 @@ Notice that this only works for perfectly diagonal line.
 `Insert pseudo for circle`
 
 1. Start with clearing the screen datapath
-2. Figure what needs to be added for datapath 
+2. Figure what needs to be added for datapath
 3. Figure out any extra states
 
 **Do we need more storage?**

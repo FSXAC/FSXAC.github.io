@@ -83,10 +83,10 @@ m1 = [1 2 3; 3 4 2];
 m2 = zeros(3,4);     % 3 by 4 zero matrix
 m3 = ones(2,3);      % 2 by 3 matrix with all elements equal to 1;
 m4 = eye(2,2);       % 2 by 2 identity matrix
-m5 = magic(2);		
+m5 = magic(2);
 ```
 
-####Accessing Elements
+#### Accessing Elements
 
 ```matlab
 v2(3) = dummy1;     % or v2(3,1) = dummy1;
@@ -99,7 +99,7 @@ m2(2,1) = dummy2;
 r1 = m1 + m3;       % summation
 r2 = m1 - m3;       % subtraction
 r3 = m4 * m1;       % multiplication
-r4 = m4 ^ 2;        % power, r4 = m4 * m4 
+r4 = m4 ^ 2;        % power, r4 = m4 * m4
 r5 = inv(4);        % inverse
 m5 = m1';           % Transpose
 ```
@@ -220,8 +220,8 @@ ax.YGrid = 'on';
 #### Labels
 
 ```matlab
-xlabel('x');            % or ax.XLabel.String = 'x'  
-ylabel('y_1');          % or ax.YLabel.String = 'y_1' 
+xlabel('x');            % or ax.XLabel.String = 'x'
+ylabel('y_1');          % or ax.YLabel.String = 'y_1'
 ```
 
 #### Title
@@ -256,10 +256,12 @@ legend([h1,h2],{'sin','cos'}, 'FontName','Times','FontSize',16)
 
 ## Transfer Functions
 
-Suppose we have a transfer function $G(s)$ we want to use in MATLAB. The transfer function is given as follows.
+Suppose we have a transfer function $$G(s)$$ we want to use in MATLAB. The transfer function is given as follows.
+
 $$
 G(s)=\frac{s}{s^2+3s+2}
 $$
+
 To create the transfer function, we use these commands:
 
 ```matlab

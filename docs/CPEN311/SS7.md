@@ -44,7 +44,7 @@ P = P ^ SW[2];
 
 Note that this example could be replaced by `P=^SW`
 
-**Let's consider the 'power of' circuit again**. 
+**Let's consider the 'power of' circuit again**.
 
 Writing out using for loops, we get
 
@@ -66,7 +66,7 @@ always @(X)
 endmodule
 ```
 
-We **cannot** create hardware for an arbitrary number of exponents. Since we need a real, constant number in the for loop during compile time. 
+We **cannot** create hardware for an arbitrary number of exponents. Since we need a real, constant number in the for loop during compile time.
 
 > Loop isn't a iterative events happening over time. It is just a shortcut to make writing hardware easier.
 
@@ -78,7 +78,7 @@ Consider a problem where we have a bunch of multiplexers:
 
 `screenshot`
 
-It becomes really tedious when we have much more components to add and connect. 
+It becomes really tedious when we have much more components to add and connect.
 
 ```verilog
 genvar i;
@@ -94,7 +94,7 @@ endgenerate
 
 Similar to for loops, the generate statements will unroll it. But for loop is **sequential**, and generate statement is concurrent, meaning that all modules are placed at the same time in parallel.
 
-An example of a useful scenario to use generate statements is an **adder**. 
+An example of a useful scenario to use generate statements is an **adder**.
 
 `adder block`
 
@@ -102,7 +102,7 @@ An example of a useful scenario to use generate statements is an **adder**.
 
 ## Tristate Logic
 
-Normally when we have some kind of wire, it could be driven by some gate or input signal. Sometimes it is useful to have a *bus* where multiple module is connected to the same wire. Typically, there a module is driving the bus, and some other module that is connected to the bus is listening. 
+Normally when we have some kind of wire, it could be driven by some gate or input signal. Sometimes it is useful to have a *bus* where multiple module is connected to the same wire. Typically, there a module is driving the bus, and some other module that is connected to the bus is listening.
 
 So the three states corresponding to:
 
@@ -110,7 +110,7 @@ So the three states corresponding to:
 - Bus is driven to 1
 - Bus is left floating
 
-What happens when the same wire is being driven by two sources? We don't know. 
+What happens when the same wire is being driven by two sources? We don't know.
 
 `page 28`
 
@@ -143,7 +143,7 @@ Verilog example:
 module tristate_driver9(I, ENABLE, F);
   input I, ENABLE;
   output reg F;
-  
+
   always @(*)
     if (ENABLE == 1)
       F <= I;
@@ -158,4 +158,4 @@ endmodule
 
 People typically do not use tristate logic in their designs (because of speed issues). Modern FPGAs actually have no facility for implementing tristate drivers. (Synthesizer like Quartus will try to convert the tristate logic into multiplexer networks).
 
-However, tristate is still used in off-chip I/O. 
+However, tristate is still used in off-chip I/O.

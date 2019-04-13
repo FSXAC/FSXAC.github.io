@@ -24,7 +24,7 @@ header:
 
 ## FPGA Requirements
 
-In this project, I used my DE1-SoC development board. 
+In this project, I used my DE1-SoC development board.
 
 As much as I like floating-point modules for their flexibility, for this project, I'm keeping it simple by using fixed point representation for decimal numbers. This means that we cannot "zoom" into the fractal very far, as the fixed-point numbers will underflow. But the benefit is that fixed point number operations are many times more simple. And the operations we need will only take 1 clock cycle!
 

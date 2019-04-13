@@ -33,7 +33,7 @@ In the real world, a simplest system have two parts: a controller (finite state 
 
 ## Power Function Example
 
-Consider **power function** that takes an integer $x$ to an arbitrary power of $n$ such that the module outputs $x^n$. We could design the hardware such that the output is fed-back to the input of a multiplier block until we're done.
+Consider **power function** that takes an integer $$x$$ to an arbitrary power of $$n$$ such that the module outputs $$x^n$$. We could design the hardware such that the output is fed-back to the input of a multiplier block until we're done.
 
 One possible algorithm is:
 
@@ -48,13 +48,13 @@ end while
 
 > **Note**: An implementation of this algorithm in Verilog won't synthesize. We have to use a smaller process design
 
-Here is a datapath for this design consists of a multiplier block attached to a register block in series, which is hooked up back to the multiplier block. 
+Here is a datapath for this design consists of a multiplier block attached to a register block in series, which is hooked up back to the multiplier block.
 
 One thing wrong is that there is no **initial conditions**. So we add a `1` input for when it starts. In which case we also need to consider when to assert this `1`.
 
 We also need a way to find out when to end. For this, we may want to use a counter.
 
-The output of the power function module also contains a `done` bit to indicate that the output is valid. 
+The output of the power function module also contains a `done` bit to indicate that the output is valid.
 
 A **state machine** would be appropriate to control everything here since there are many cases.
 
@@ -68,28 +68,28 @@ module power(A, X, S, CLK, P, DONE);
   input S, CLK;
   output [7:0] P;
   output DONE;
-  
+
   reg [7:0] P;
   reg Z, SEL, SELA;
   reg [7:0] CNT;
   reg DONE;
-  
+
   enum {INIT, COMPUTE, FINISHED} CURRENT_STATE;
-  
+
   always_ff @(posedge CLK)
     case (CURRENT_STATE)
       INIT: if (S == 1) CURRENT_STATE = COMPUTE;
       COMPUTE: if (Z == 1) CURRENT_STATE = FINISHED;
       defualt: if (S == 0) CURRENT_STATE = INIT;
     endcase
-  
+
   always_comb
     case (CURRENT_STATE)
       INIT: {SEL, SELA, DONE} = 3'b110;
       COMPUTE: {SEL, SELA, DONE} = 3'b000;
       default: {SEL, SELA, DONE} = 3'001;
     endcase
-  
+
 endmodule
 ```
 

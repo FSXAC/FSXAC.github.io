@@ -84,7 +84,7 @@ The close loop response tests consists of three tests: P control, PD control, an
 
 ### Microcontroller
 
-We are using the Arduino systems which houses the ATMega328P microcontroller running at 16 MHz. 
+We are using the Arduino systems which houses the ATMega328P microcontroller running at 16 MHz.
 
 For our purposes, we need to [use timers interrupts](https://www.robotshop.com/letsmakerobots/arduino-101-timers-and-interrupts) to ensure that the control frequency is fixed at all times. We allocate *timer 1* for our needs but this also means that PWM is no longer available by default on digital pins 9 and 10.
 
@@ -108,9 +108,9 @@ I will probably post a follow-up blog on the quadrature encoder logic with more 
 
 ### Homing
 
-To ensure that the motor will always operate in the same range consistently, we implemented homing procedures for the motors. 
+To ensure that the motor will always operate in the same range consistently, we implemented homing procedures for the motors.
 
-For the yaw motor, we installed a limit switch at the end of the motor's range of operation angles. The switch will become active when the motor moves to a certain angle. 
+For the yaw motor, we installed a limit switch at the end of the motor's range of operation angles. The switch will become active when the motor moves to a certain angle.
 
 ![yaw homing]({{"/assets/blog/elec391m2homing.jpg"}})
 
@@ -118,7 +118,7 @@ We haven't implemented anything physical for the pitch motor, but we're thinking
 
 ## Mechanical
 
-The mechanical parts have been updated to support the final product's operation. There is a timing belt system that has a 3.5:1 ratio that drives the yaw motion. 
+The mechanical parts have been updated to support the final product's operation. There is a timing belt system that has a 3.5:1 ratio that drives the yaw motion.
 
 This enables us to have 3.5 times more torque, something that we definitely could use to drive heavier loads. Furthermore, since it reduced the output angular speed down by 3.5 times, that means we get 3.5 times more resolution from the encoder wheel as well.
 

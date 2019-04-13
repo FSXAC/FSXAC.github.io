@@ -26,7 +26,7 @@ Verilog serves two roles:
 
 > Note that the term **compiles** actually just mean turning Verilog hardware description code into gates (synthesize).
 
-##Synthesizable Language Constructs
+## Synthesizable Language Constructs
 
 The constructs are syntax used in Verilog that are generally synthesizable. Which means they have an *equivalent gate-level implementation* of the construct.
 
@@ -44,7 +44,7 @@ The **always** / process blocks are an exception.
 
 ### Always / Processes Blocks
 
-The synthesis tool tries its best to find hardware implementation that matches the behavior described in the process using **Pattern Matching**. 
+The synthesis tool tries its best to find hardware implementation that matches the behavior described in the process using **Pattern Matching**.
 
 There are three patterns that ALL synthesis tool can understand:
 
@@ -62,7 +62,7 @@ Thus, any process must be one of these three patterns.
 
 A **Pure combinational** block's output only depends on the current input. There are several rules for purely combinational blocks:
 
-1. Every input to the process must be in the **sensitivity list**. 
+1. Every input to the process must be in the **sensitivity list**.
 
    > The sensitivity list can be denoted like:
    >
@@ -107,7 +107,7 @@ Each output chances ONLY on the rising or falling edge of a single clock. There 
 
    ```verilog
    always @(posedge CLK)
-     // Some sequential logic ehre	
+     // Some sequential logic ehre
    ```
 
 > **Note**: sequential circuit with synchronous **reset** falls under this category.
@@ -121,7 +121,7 @@ always_ff @(posedge CLK);
 
 ##### Reset
 
-We need **reset** because when a system is powered up, it could start at some random state, and we need to go back to a known starting point. Systems are not perfect, and we also need a way to reset. 
+We need **reset** because when a system is powered up, it could start at some random state, and we need to go back to a known starting point. Systems are not perfect, and we also need a way to reset.
 
 For debugging, it's convenient to have an option to reset to try again.
 
@@ -160,7 +160,7 @@ Recall that asynchronous reset is sensitive to the clock and the reset signal. T
 
 1. Processes are concurrent statements
 
-   The order of concurrent statements don't matter. Thus changing the order of always blocks won't change the synthesis result. 
+   The order of concurrent statements don't matter. Thus changing the order of always blocks won't change the synthesis result.
 
 2. Do not drive a signal from multiple processes
 

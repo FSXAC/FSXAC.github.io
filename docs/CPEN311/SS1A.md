@@ -24,7 +24,7 @@ module MY_SYSTEM(A, B, C);
 	output C;
 
 	assign C = A ^ B;
-endmodule 
+endmodule
 ```
 
 Use `wire` if we want to connect intermediate signals:
@@ -103,7 +103,7 @@ module mux(input [3:0] X, input [1:0] SW, output Y);
 endmodule
 ```
 
-Here, we set the output based on the control input `SW`. 
+Here, we set the output based on the control input `SW`.
 
 Alternatively, we could also use *if/else* statements or other logic operators or conditional statements such as `?`.
 

@@ -35,7 +35,7 @@ $$
 >
 > Then $$X(\omega)=4$$ and $$Y(\omega)=3$$
 
-The event "random variable $$X$$ takes the value of $$x$$" is mathematically represented as $$X=x$$. Which means $$\{\omega:X(\omega)=x\}$$. 
+The event "random variable $$X$$ takes the value of $$x$$" is mathematically represented as $$X=x$$. Which means $$\{\omega:X(\omega)=x\}$$.
 
 ## Range of Random Variable
 
@@ -74,21 +74,21 @@ $$
 \mathbb E[g(X)]=\sum_xg(x)f(x)
 $$
 
-Where $$f(x)$$ is the *PDF* given by $$f(x)=\mathbb P(X=x)$$. So since $$X$$ is random, $$g(X)$$ is a defined function (such as $$X^2$$) and is also random. 
+Where $$f(x)$$ is the *PDF* given by $$f(x)=\mathbb P(X=x)$$. So since $$X$$ is random, $$g(X)$$ is a defined function (such as $$X^2$$) and is also random.
 
- The output of the *expected value* $$\mathbb E(g(X))$$ is given by $$\sum_x g(x)f(x)$$. (If $$g(x)=x$$, then the expected value is given as $$\sum_x xf(x)$$. 
+ The output of the *expected value* $$\mathbb E(g(X))$$ is given by $$\sum_x g(x)f(x)$$. (If $$g(x)=x$$, then the expected value is given as $$\sum_x xf(x)$$.
 
-The expected value is a number that is the (duh) expected value of the random variable. 
+The expected value is a number that is the (duh) expected value of the random variable.
 
 A good physical interpretation of the expected value would be the center of mass given a rod with different density throughout. The density would be the probability (hence the name *probability **density** function*). And the center of mass takes consideration of not only the density, but also **position**.
 
 *Geometric Interpretation*: minimizing sum of square of distances.
 
- 
+
 
 > **Example**:
 >
-> There is 0.2 chance of getting 0, and 0.8 chance of getting 1. 
+> There is 0.2 chance of getting 0, and 0.8 chance of getting 1.
 >
 > $$g(x)=X$$, and so $$\mathbb E(g(x)) = 0.8$$ which is misleading because the only two possible outcomes are 0 or 1.
 
@@ -108,7 +108,7 @@ If $$X$$ is the number of red balls drawn from a bucket of colored balls. Then u
 
 ## Probability Mass Function
 
-**PMF**: Probability Mass Function (*A.K.K* Probability Mean Function, Probability Density Function) - denoted as $$f(x)=\mathbb P(X=x)​$$ because it act as weights. 
+**PMF**: Probability Mass Function (*A.K.K* Probability Mean Function, Probability Density Function) - denoted as $$f(x)=\mathbb P(X=x)​$$ because it act as weights.
 
 The domain describes the possible values, and the range describes the probability of the possible values.
 
@@ -136,7 +136,7 @@ Properties of *CDF*:
 >
 > <img src="https://i.imgur.com/OBh4Jd9.png" height="300px">
 >
-> The random variable $$x$$ is quantified to probability as shown in $$f(x)$$. Also notice that the properties for *CDF* applies at the sum of the probability of *PMF* $$=1$$ 
+> The random variable $$x$$ is quantified to probability as shown in $$f(x)$$. Also notice that the properties for *CDF* applies at the sum of the probability of *PMF* $$=1$$
 
 > **Example**: sometimes the probability of random variables are not known completely
 >
@@ -208,7 +208,7 @@ $$
 
 ### Mean
 
-The mean is the first moment ($$\mu_1$$) of the random variable. 
+The mean is the first moment ($$\mu_1$$) of the random variable.
 
 $$
 \mu=\mathbb E(X)=\sum xf(x)
@@ -234,7 +234,7 @@ $$
 
 When $$\sigma$$ is large, there is a large dispersion.
 
-In practice, we do not know $$\sigma$$ because we are missing $$f(x)$$ so we will resort to measurements. 
+In practice, we do not know $$\sigma$$ because we are missing $$f(x)$$ so we will resort to measurements.
 
 $$
 \mathcal S^2=\frac1n\sum_{i=1}^n(x_i-\bar x)^2\rightarrow\sigma^2=\sum_x(x-\mu)^2f(x)
@@ -242,7 +242,7 @@ $$
 
 Of course, $$\mathcal S^2$$ converges to $$\sigma^2$$ as more more data is collected through experiments.
 
-> **Example**: there are $$n$$ chips: 
+> **Example**: there are $$n$$ chips:
 >
 > We are sampling without replacement, and $$k$$ is the number of chips drawn. We want to get the maximum out of the chips drawn.
 >
@@ -264,7 +264,7 @@ Of course, $$\mathcal S^2$$ converges to $$\sigma^2$$ as more more data is colle
 > f(y)=F(y)-F(y-1)
 > $$
 >
-> Suppose $$n=20$$, $$k=5$$, we also probability want to calculate mean, variance, and standard deviation for $$Y$$. 
+> Suppose $$n=20$$, $$k=5$$, we also probability want to calculate mean, variance, and standard deviation for $$Y$$.
 
 ### Properties
 
@@ -332,7 +332,7 @@ $$
 >
 > ---
 >
-> Let $$X=\text{number of defective items in a sample}$$, $$X$$ is a binomial random variable with parameters ($$3$$, $$0.1$$). 
+> Let $$X=\text{number of defective items in a sample}$$, $$X$$ is a binomial random variable with parameters ($$3$$, $$0.1$$).
 >
 > $$
 > f(0)+f(1)=\mathbb P(X=0)+\mathbb P(X=1)\\
@@ -431,7 +431,7 @@ The variance is maximized when $$p=0.5$$
 >
 > - CDF $$F_Y(y)$$:
 >
->   $$F_Y(y)=\mathbb P(Y\leq y)$$ so $$k$$ (number of chips drawn) takes a value less than or equal to $$y$$ (a particular maximum number on the chip). Thus there are $$\binom{y}{k}$$ possibilities. 
+>   $$F_Y(y)=\mathbb P(Y\leq y)$$ so $$k$$ (number of chips drawn) takes a value less than or equal to $$y$$ (a particular maximum number on the chip). Thus there are $$\binom{y}{k}$$ possibilities.
 >
 >   There are $$n$$ total chips, so the total possibilities is expressed as $$\binom{n}{k}$$.
 >
@@ -459,7 +459,7 @@ The variance is maximized when $$p=0.5$$
 >
 >   >Assume that each diggings are independent. Let $$X$$ be the binomial random variable for the number of successful wells. The binomial random variable has the parameters $$n, p=0.10$$
 >   >
->   >First, we know the lower bound $$\mathbb P(X\gt 0) = 0.95$$ . We also need to find $$n$$. 
+>   >First, we know the lower bound $$\mathbb P(X\gt 0) = 0.95$$ . We also need to find $$n$$.
 >   >
 >   >Using $$\mathbb P(X\gt 0)=1-\mathbb P(X=0)$$ where the probability of $$X=0$$ can be found using the binomial distribution formula.
 >   >
@@ -626,7 +626,7 @@ Unlike discrete, continuous random variables can take any value in the real doma
 
 ### Probability Density Function
 
-The *PDF* is similar to *PMF* but works on continuous scale. 
+The *PDF* is similar to *PMF* but works on continuous scale.
 
 **Properties**:
 
@@ -653,22 +653,31 @@ $$
 $$
 
 > **Note 1**: Because $$X$$ is continuous, it is *impossible* for $$X$$ to be exactly $$a$$ given some number $$a$$:
+>
 > $$
 > \forall a\in \mathbb R,\quad \mathbb P(X=a)=\int_a^af(x)dx=0
 > $$
+>
 > **Note 2**: Sometimes $$f(a)>1$$, therefore
+>
 > $$
 > f(a)\neq \mathbb P(X=a)
 > $$
+>
 > **Note 3**: For some small time interval $$\delta\gt0$$,
+>
 > $$
 > \begin{align}\mathbb P(x\lt X\lt (x+\delta))&=\int_x^{x+\delta}f(t)\mathrm d\\&\approx f(x)\delta\end{align}
 > $$
+>
 > **Note 4**: Thanks to *FTC*, the derivative of the distribution function is the density function:
+>
 > $$
 > F'(t)=\frac{\mathrm d}{\mathrm dx}\int_{-\infty}^x f(t)\mathrm dt=f(x)
 > $$
-> **Note 5**: Since $$\mathbb P(X=a)=\mathbb P(X=b)=0$$, 
+>
+> **Note 5**: Since $$\mathbb P(X=a)=\mathbb P(X=b)=0$$,
+>
 > $$
 > \begin{align}
 > \mathbb P(a\lt X\lt b)&=\mathbb (a\lt X\leq b)\\
@@ -681,7 +690,7 @@ $$
 
 ### Mean, Variance, and Standard Deviation
 
-Similar to the discrete counter parts, but replace the summation with integration. 
+Similar to the discrete counter parts, but replace the summation with integration.
 
 #### Mean
 
@@ -705,7 +714,7 @@ $$
 
 ## Uniformly Distributed Random Variables
 
-*UDRV* are continuous and are denoted using notation $$X$$~$\text{Unif}(\alpha, \beta)$$. Which means $$X$ is a uniform distributed random variable with $$\alpha$$ as lower bound and $$\beta$$ upper bound. 
+*UDRV* are continuous and are denoted using notation $$X$$~$\text{Unif}(\alpha, \beta)$$. Which means $$X$ is a uniform distributed random variable with $$\alpha$$ as lower bound and $$\beta$$ upper bound.
 
 ### Uniform Density Function
 
@@ -765,7 +774,7 @@ $$
 
 > **Example**:
 >
-> Suppose $$X$$ ~ $$\text{Unif}(0,10)$$. Calculate $$\mathbb P(X\gt 3)$$ and $$\mathbb P(X\gt 5|X\gt 2)$$
+> Suppose $$X$$ ~ $$\text{Unif}(0,10)$$. Calculate $$\mathbb P(X\gt 3)$$ and $$\mathbb P(X\gt 5\vert X\gt 2)$$
 >
 > $$
 > \mathbb P(X\gt 3)=1-F(3)=1-\frac3{10}=0.70
@@ -861,7 +870,7 @@ $$
 
 ### Memoryless Property
 
-Suppose that $$X$$ ~ $$\text{Exp}(\lambda)$$ and represents "time to system fail". For $$x_0>0$$ and $$h>0$$, compute the probability of $$X>h$$ and probability of $$X>(x_0+h)$$ given that $$X>x_0$$. 
+Suppose that $$X$$ ~ $$\text{Exp}(\lambda)$$ and represents "time to system fail". For $$x_0>0$$ and $$h>0$$, compute the probability of $$X>h$$ and probability of $$X>(x_0+h)$$ given that $$X>x_0$$.
 
 It is straight forward for $$X>h$$ (what is probability of system lasting longer than $$h$$):
 

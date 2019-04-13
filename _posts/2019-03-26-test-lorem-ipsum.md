@@ -28,7 +28,7 @@ A common form of *lorem ipsum* reads:
 
 
 
-Inline styles support **strong**, *Emphasis*, `code`, <u>underline</u>, ~~strikethrough~~, :haha:, $\LaTeX$, X^2^, H~2~O, ==highlight==, [Link](#), and image:
+Inline styles support **strong**, *Emphasis*, `code`, <u>underline</u>, ~~strikethrough~~, :haha:, $$\LaTeX$$, X^2^, H~2~O, ==highlight==, [Link](#), and image:
 
 ![img](https://i.imgur.com/RGLj3oV.jpg)
 
@@ -61,7 +61,7 @@ Block level contains:
 <body>
 
 <h1>The *= Operator</h1>
-  
+
 <p id="demo"></p>
 
 <script>
@@ -76,7 +76,7 @@ document.getElementById("demo").innerHTML = x;
 
 ```python
 # test python (sample from offlineimap)
- 
+
 class ExitNotifyThread(Thread):
     """This class is designed to alert a "monitor" to the fact that a thread has
     exited and to provide for the ability for it to find out why."""
@@ -109,10 +109,10 @@ class ExitNotifyThread(Thread):
             self.setExitCause('NORMAL')
         if not hasattr(self, 'exitmessage'):
             self.setExitMessage(None)
- 
+
         if exitthreads:
             exitthreads.put(self, True)
- 
+
     def setExitCause(self, cause):
         self.exitcause = cause
     def getExitCause(self):
@@ -147,11 +147,13 @@ class ExitNotifyThread(Thread):
 
 
 Here is some math:
+
 $$
 (f*g)[n]=\sum_{m=0}^{N-1}f[m]g_N[n-m]\\
 (f*g)(t)=\int_{-\infty}^\infty f(\tau)\cdot g(t-\tau)\mathrm d\tau
 $$
 
-[TOC]
+- toc
+{:toc}
 
 [^1]: *Forked* from https://en.wikipedia.org/wiki/Lorem_ipsum
