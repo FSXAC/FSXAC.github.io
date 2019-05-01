@@ -38,18 +38,18 @@
 
 	{% for line in page.extra_js %}{{ line }}{% endfor %}
 	<style>
-		{% if page.header.color %}
-		.jumbotron { background-color: {{ page.header.color }}
-		{% elsif page.header.overlay_image %}
 		.jumbotron {
+			{% if page.header.color %} background-color: {{ page.header.color }};
+			{% elsif page.header.overlay_image %}
 			background: url('{{ page.header.overlay_image }}') no-repeat center center;
 			background-size: cover;
 			min-height: 300px;
-		}
-		{% else %}
-		.jumbotron { background-color: #001624; }
-		{% endif %}
+			{% else %}
+			.jumbotron { background-color: #001624; }
+			{% endif %}
 
+			{% if page.header.gradient %} background: {{ page.header.gradient }};{% endif %}
+		}
 		{% if page.titlebar == '404' %}
 		a.btn-outline-light { color: white; }
 		a.btn-outline-light:hover { color: darkred; }
