@@ -4,8 +4,11 @@ title: Blog Archive
 titlebar: Archive
 nav_active: /blog
 permalink: /archive
+
 header:
-color: '#420'
+  color: '#FC2'
+  text_color: black
+  text: Occasional memory dump.
 ---
 
 {% assign date-filter = "%Y" %}
@@ -22,7 +25,7 @@ color: '#420'
 <ul>
 {% endif %}
 
-<li>{{ post.date | date: "%Y-%m-%d" }} - <a href="{{ post.url }}">{{ post.title }}</a></li>
+<li class="numeric"><span style="display:inline-block; min-width: 100px">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url }}">{{ post.title }}</a></li>
 
 <!-- close off ul if it's the last elemnent -->
 {% if forloop.last %}</ul>{% endif %}
