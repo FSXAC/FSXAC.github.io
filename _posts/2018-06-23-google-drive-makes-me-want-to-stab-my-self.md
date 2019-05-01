@@ -1,7 +1,7 @@
 ---
 title: "Giving Up Google Drive"
 date: 2018-06-28
-categories: random
+categories: Random
 
 author: Muchen He
 

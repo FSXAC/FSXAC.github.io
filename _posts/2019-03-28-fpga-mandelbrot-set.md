@@ -1,8 +1,6 @@
 ---
 author: Muchen He
-categories:
-  - projects
-  - cpen
+categories: [CPEN, Projects]
 date: 2019-03-28
 title: "Mandelbrot Set on FPGA Part 1"
 
