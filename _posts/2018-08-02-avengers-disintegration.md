@@ -1,7 +1,7 @@
 ---
 author: Muchen He
 date: 2018-08-02
-categories: projects
+categories: Projects
 title: Disintegration Effects in Processing
 
 tags:

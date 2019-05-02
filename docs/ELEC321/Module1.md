@@ -109,9 +109,9 @@ The probability space is a tuple of the sample space, all possible events, and a
 >
 > $$\implies P(A)\leq P(B)$$
 >
-> Again, starting off with $$A\cup A^c=\Omega$$, we also know that $$B\cap\Omega=B$$ (In fact, any event intersecting with the sample space is just the event itself). 
+> Again, starting off with $$A\cup A^c=\Omega$$, we also know that $$B\cap\Omega=B$$ (In fact, any event intersecting with the sample space is just the event itself).
 >
-> Substituting $$\Omega$$ with expression in line 1, we get line 2. We can then distribute the intersection (on the outside) and we get the line 3. We may also re-express it as $$A\cup(B\cap A^c)$$ which also equals to $$B$$ when expanded. 
+> Substituting $$\Omega$$ with expression in line 1, we get line 2. We can then distribute the intersection (on the outside) and we get the line 3. We may also re-express it as $$A\cup(B\cap A^c)$$ which also equals to $$B$$ when expanded.
 >
 > Now we operate the probability function on both sides (as shown in line 4). Rearranging the terms and we get $$P(A)=P(B)-P(B\cap A^c)$$ and since the probability of any event (as described above) must be greater than or equal to 0, we can conclude that $$P(A)\leq P(B)$$.
 
@@ -241,7 +241,7 @@ $$
 
 **Problem**: Calculate the probability of zero fix points in a random permutation.
 
-**Solution**: 
+**Solution**:
 
 - Let $$A_i$$ be a single fix point
 - Let $$B^0_n$$ be the resulting set that has 0 fix points
@@ -288,4 +288,4 @@ $$
 \mathrm P(B^k_n)=\sum_{j=0}^{n-k}(-1)^{j-1}\frac 1 {j!}
 $$
 
-**Notice** that if $$n-k=1$$, then the probability of $$k$$ fix points is 0. 
+**Notice** that if $$n-k=1$$, then the probability of $$k$$ fix points is 0.

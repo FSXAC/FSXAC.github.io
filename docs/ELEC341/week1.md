@@ -152,7 +152,7 @@ $$
 
 Transfer function is determined by taking the output and divided by input ($$\frac Y U$$). If the transfer function of a system is known, the output of the system can be determined easily by multiplying the transfer function by the input.
 
-In the last example from the table in [Pick off point](#pick-off-point), the transfer function is $$\frac Y U = G_1 + G_2$$. 
+In the last example from the table in [Pick off point](#pick-off-point), the transfer function is $$\frac Y U = G_1 + G_2$$.
 
 
 
@@ -167,6 +167,7 @@ In the last example from the table in [Pick off point](#pick-off-point), the tra
 > Here, the error is $$e=U-x$$, the measured value is $$x=H\cdot Y$$, and the actual output is $$Y=G\cdot e$$
 >
 > We substitute the expressions into each other, and we get $$Y=G(U-H\cdot Y)$$. We can then rearrange to find the transfer function. The transfer function of this generic feedback system is:
+>
 > $$
 > \frac Y U = \frac G {1+GH}
 > $$

@@ -41,7 +41,7 @@ All programs written in APSC 160 follows this structure. Note to follow good cod
 
 int main(void) {
     // your code
-    
+
     system("pause");	// 'press any key to continue' prompt
     return 0;
 }
@@ -109,13 +109,13 @@ Put `(double)` in front of an expression or variable to evaluate that expression
 
 ### Input / Output
 
-For input from user and output to the screen we use `printf` and `scanf` functions. For file IO, refer to [File IO](#File-IO). 
+For input from user and output to the screen we use `printf` and `scanf` functions. For file IO, refer to [File IO](#File-IO).
 
 Because of some reasons in Visual Studio, it is required to prepend `#define _CRT_SECURE_NO_WARNINGS` at the beginning of all the program in order to use `scanf`. But this is not necessary on an exam.
 
 #### Output
 
-Use `printf()` to output lines onto the screen. The `printf` function takes **a string** as the first parameter. This string needs to include what to display, and [format specifiers](#types). The rest of the parameters "fills-in" for the format specifier. 
+Use `printf()` to output lines onto the screen. The `printf` function takes **a string** as the first parameter. This string needs to include what to display, and [format specifiers](#types). The rest of the parameters "fills-in" for the format specifier.
 
 > **Example**:
 >
@@ -129,9 +129,9 @@ Use `printf()` to output lines onto the screen. The `printf` function takes **a 
 > Hello Muchen, the temperature is 13C with 30.5 percent chance of rain
 > ```
 
-##### More Specific Format Specifier 
+##### More Specific Format Specifier
 
-Usually, the function call `printf("%f", 3.5)` will output `3.500000` all with the character `3` starting from the left. 
+Usually, the function call `printf("%f", 3.5)` will output `3.500000` all with the character `3` starting from the left.
 
 | Specifier | Description                                                  |
 | --------- | ------------------------------------------------------------ |
@@ -183,7 +183,7 @@ Note that `if`/`else if`/`else` statements only execute the line of code followi
 >
 > The first `if` tests if the condition specified is true. If so, it will execute `printf("yes");` and the rest of the code is ignored.
 >
-> If it is not true, the `else if` statement checks if the condition specified for that is true. If true, `printf("no")` is executed and the rest is ignored. 
+> If it is not true, the `else if` statement checks if the condition specified for that is true. If true, `printf("no")` is executed and the rest is ignored.
 >
 > If all conditions is false, whatever that follows `else` is executed.
 
@@ -191,7 +191,7 @@ Note that `if`/`else if`/`else` statements only execute the line of code followi
 
 #### While Loop
 
-A while loop should be used when we want to loop based on a **condition**. 
+A while loop should be used when we want to loop based on a **condition**.
 
 > **Example**
 >
@@ -208,7 +208,7 @@ A while loop should be used when we want to loop based on a **condition**.
 
 #### Do While Loop
 
-This is very similar to the [while loop](#While-Loop) except that it will execute the code that's inside the loop first before deciding whether or not to loop. The syntax is as follows. 
+This is very similar to the [while loop](#While-Loop) except that it will execute the code that's inside the loop first before deciding whether or not to loop. The syntax is as follows.
 
 > **Example**:
 >
@@ -219,7 +219,7 @@ This is very similar to the [while loop](#While-Loop) except that it will execut
 > } (while x > 5)
 > ```
 
-Note that the output for this example would be different from previous example. 
+Note that the output for this example would be different from previous example.
 
 The do-while loop can sometimes come in handy.
 
@@ -251,9 +251,9 @@ A standard program with File IO might look like this:
 
 int main(void) {
     FILE* file;
-    
+
     file = fopen(FILE_NAME, "r");
-    
+
     if (file == NULL) {
         // error
     } else {

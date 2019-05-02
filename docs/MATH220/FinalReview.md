@@ -44,7 +44,7 @@ If $$x\in A$$ then $$x\notin \bar A$$
 
 **Direct product** of two sets is $$A\times B$$ that outputs an *ordered set* $$(a, b)$$ such that $$a\in A, b\in B$$.
 
-### Indexed Sets Operations 
+### Indexed Sets Operations
 
 #### Union
 
@@ -64,7 +64,7 @@ $$
 
 ### Statement
 
-A statement is a claim. A statement can be **true** or **false**. 
+A statement is a claim. A statement can be **true** or **false**.
 
 ### Logical Operations
 
@@ -94,7 +94,7 @@ $$
 \neg (A\cap B)=\neg A\cup \neg B
 $$
 
-#### Distributive 
+#### Distributive
 
 $$
 A\cap(B\cup C)=(A\cap B)\cup(A\cap C)
@@ -108,11 +108,12 @@ $$
 
 **Contrapositive**: $$\neg Q \implies \neg P$$
 
-**Negation**: $$\neg (P\implies Q)\equiv \neg P \wedge Q$$  
+**Negation**: $$\neg (P\implies Q)\equiv \neg P \wedge Q$$
 
 ### Biconditional Implications
 
 Also referred to as "if and only if"
+
 $$
 P\iff Q\equiv (P\implies Q)\wedge(Q\implies P)
 $$
@@ -146,7 +147,7 @@ $$
 
 ### Proof By Cases
 
-Usually use when there there is a disjunction in the proof. 
+Usually use when there there is a disjunction in the proof.
 
 ### Proof By Contrapositive
 
@@ -228,7 +229,7 @@ $$
 
 ### Relation
 
-Definition: a **relation** $$R$$, on a set $$A$$ is a subset $$R\subset A\times A$$. 
+Definition: a **relation** $$R$$, on a set $$A$$ is a subset $$R\subset A\times A$$.
 
 #### Relation Properties
 
@@ -238,21 +239,21 @@ Definition: a **relation** $$R$$, on a set $$A$$ is a subset $$R\subset A\times 
 
 ### Equivalence Relation
 
-A relation $$R$$ is an **equivalence relation** iff $$R$$ is reflexive, symmetric, and transitive. 
+A relation $$R$$ is an **equivalence relation** iff $$R$$ is reflexive, symmetric, and transitive.
 
 ### Equivalence Class
 
-Equivalence relations on $$A$$ divides $$A$$ into subsets called **equivalence class**. The **equivalence class containing** $$a$$ is the subset $$\{x\in A:xRa\}$$ of $$A$$ consists of all elements of $$A$$ that relates to $$a$$. 
+Equivalence relations on $$A$$ divides $$A$$ into subsets called **equivalence class**. The **equivalence class containing** $$a$$ is the subset $$\{x\in A:xRa\}$$ of $$A$$ consists of all elements of $$A$$ that relates to $$a$$.
 
 - Denoted as $$[a]$$
 - Where $$[a]=\{x\in A: xRa\}$$
-- If there exists $$[a]=[b]$$, there is still only one equivalence class. 
+- If there exists $$[a]=[b]$$, there is still only one equivalence class.
 
-> **Theorem 11.1**: Suppose $$R$$ is an equivalence relation on set $$A$$ and $$a,b\in A$$. Then $$[a]=[b]$$ iff $$aRb$$ 
+> **Theorem 11.1**: Suppose $$R$$ is an equivalence relation on set $$A$$ and $$a,b\in A$$. Then $$[a]=[b]$$ iff $$aRb$$
 
 #### Partition
 
-A **partition** of set $$A$$ is a set of non-empty subsets of $$A$$ such that the union of all subsets equals $$A$$ and intersection of any two subsets equals $$\emptyset$$. 
+A **partition** of set $$A$$ is a set of non-empty subsets of $$A$$ such that the union of all subsets equals $$A$$ and intersection of any two subsets equals $$\emptyset$$.
 
 > **Theorem 11.2**: Suppose $$R$$ is an equivalence relation on set $$A$$. Then the set $$\{[a]:a\in A\}$$ forms a *partition* of $$A$$.
 
@@ -261,7 +262,7 @@ A **partition** of set $$A$$ is a set of non-empty subsets of $$A$$ such that th
 The equivalence classes of the equivalence relation $$\equiv (\text{mod } n)$$ are $$[0], [1], \dots, [n-1]$$, for some $$n\in \mathbb N$$. Then the **integer modulo n** is the set $$\mathbb Z_n=\{[0], [1], \dots, [n-1]\}$$.
 
 - Property 1: $$[a]+[b]=[a+b]$$
-- Property 2: $$[a]\cdot[b]=[a\cdot b]$$ 
+- Property 2: $$[a]\cdot[b]=[a\cdot b]$$
 
 ## Chapter 12
 
@@ -269,7 +270,7 @@ The equivalence classes of the equivalence relation $$\equiv (\text{mod } n)$$ a
 
 - A **function** is denoted as $$f:A\rightarrow B$$, where $$A$$ is the domain and $$B$$ is the codomain
 - The **range** of function $$f$$ is the set $$\{f(a):a\in A\}=b:(a,b)\in f$$
-- Two functions $$f$$ and $$g$$ are the same iff $$\forall x\in A, f(x)=g(x)$$ 
+- Two functions $$f$$ and $$g$$ are the same iff $$\forall x\in A, f(x)=g(x)$$
 
 ### Injective
 
@@ -287,7 +288,7 @@ $$
 
 ### Surjective
 
-A function is **surjective** iff $$\forall b\in B, \exists a\in A$$ such that $$f(a)=b$$ 
+A function is **surjective** iff $$\forall b\in B, \exists a\in A$$ such that $$f(a)=b$$
 
 To prove a function is surjective, the proof structure is (direct):
 
@@ -313,12 +314,12 @@ Suppose $$A$$ and $$B$$ are finite sets and $$f:A\rightarrow B$$ is any function
 Suppose $$A$$ and $$B$$ are finite sets and $$A\neq \emptyset, B\neq \emptyset$$, then:
 
 - If $$\lvert A \rvert \geq \lvert B \rvert $$ then $$\exists$$ a surjective $$f:A\rightarrow B$$
-- If $$\lvert A \rvert \leq\lvert B \rvert $$ then $$\exists$$ an injective $$g:A\rightarrow B$$ 
+- If $$\lvert A \rvert \leq\lvert B \rvert $$ then $$\exists$$ an injective $$g:A\rightarrow B$$
 - If $$\lvert A \rvert =\lvert B \rvert $$ then $$\exists$$ a bijective $$h: A\rightarrow B$$
 
 ### Composition
 
-Suppose $$f:A\rightarrow B, g:B\rightarrow C$$, then the **composition** is $$g\circ f:A\rightarrow C$$ 
+Suppose $$f:A\rightarrow B, g:B\rightarrow C$$, then the **composition** is $$g\circ f:A\rightarrow C$$
 
 > **Theorem 12.1**: If $$f:A\rightarrow B$$, $$g:B\rightarrow C$$, $$h:C\rightarrow D$$, then $$(h\circ g)\circ f=h\circ (g\circ f)$$
 >
@@ -326,7 +327,7 @@ Suppose $$f:A\rightarrow B, g:B\rightarrow C$$, then the **composition** is $$g\
 
 ### Inverse Function
 
-For a bijective $$f:A\rightarrow B$$, its **inverse** is the function $$f^{-1}:B\rightarrow A$$. 
+For a bijective $$f:A\rightarrow B$$, its **inverse** is the function $$f^{-1}:B\rightarrow A$$.
 
 Composition with inverse yields *identity function*:
 
@@ -335,16 +336,16 @@ Composition with inverse yields *identity function*:
 
 #### Identity Function
 
-$$\forall x\in A, i_A(x)=x$$ 
+$$\forall x\in A, i_A(x)=x$$
 
-> **Theorem 12.3**: Function $$f$$ is bijective iff the reverse relation $$f^{-1}$$ is a function $$B\rightarrow A$$ 
+> **Theorem 12.3**: Function $$f$$ is bijective iff the reverse relation $$f^{-1}$$ is a function $$B\rightarrow A$$
 
 ### Image & Preimage
 
 Suppose $$f:A\rightarrow B$$:
 
 - If $$X\subset A$$, the **image** of $$X$$ is the set $$f(X)=\{f(x):x\in X\}\subset B$$
-- If $$Y\subset B$$, the **preimage** of $$Y$$ is the set $$f^{-1}(Y)=\{f^{-1}(y):y\in Y\}\subset A$$ 
+- If $$Y\subset B$$, the **preimage** of $$Y$$ is the set $$f^{-1}(Y)=\{f^{-1}(y):y\in Y\}\subset A$$
 
 ## Chapter 13
 
@@ -367,7 +368,7 @@ Suppose $$f:A\rightarrow B$$:
 
 ### Division Algorithm
 
-- Given integers $$a$$ and $$b > 0$$, there exists integer $$q$$ and $$r$$ for which $$a=gb+r$$ and $$0\leq r \lt b$$ 
+- Given integers $$a$$ and $$b > 0$$, there exists integer $$q$$ and $$r$$ for which $$a=gb+r$$ and $$0\leq r \lt b$$
 
 ### Fundamental Theorem of Arithmetic
 
@@ -382,11 +383,11 @@ Given $$k,n\in (\mathbb Z-\{0\})$$,
 
 #### Proposition 7.1
 
-If $$a,b\in \mathbb N$$, then there exists integers $$k$$ and $$l$$ for which $$\gcd(a,b)=ak+bl$$ 
+If $$a,b\in \mathbb N$$, then there exists integers $$k$$ and $$l$$ for which $$\gcd(a,b)=ak+bl$$
 
 #### Proposition 10.1
 
-Suppose there are $$n\geq2$$ integers $$a_1, a_2, \dots, a_n$$. If a prime number $$p$$ divides $$a_1\cdot a_2\cdots a_n$$, then $$p$$ divides at least one of the integers $$a_i$$. 
+Suppose there are $$n\geq2$$ integers $$a_1, a_2, \dots, a_n$$. If a prime number $$p$$ divides $$a_1\cdot a_2\cdots a_n$$, then $$p$$ divides at least one of the integers $$a_i$$.
 
 ### Congruence
 
@@ -396,12 +397,12 @@ Assuming $$a\equiv b\mod n$$ and $$c\equiv d\mod n$$ for $$a,b,c,d\in \mathbb Z$
 
 - $$a-c\equiv b-d\mod n$$
 - $$a^2\equiv b^2\mod n$$
-- $$ac\equiv bd \mod n$$ 
-- If $$a\equiv b \mod n$$ and $$b \equiv c \mod n$$ then 
+- $$ac\equiv bd \mod n$$
+- If $$a\equiv b \mod n$$ and $$b \equiv c \mod n$$ then
 
 ### Pigeonhole Principle
 
-*see [above](#pigeonhole-principle)* 
+*see [above](#pigeonhole-principle)*
 
 ### Image & Preimage
 

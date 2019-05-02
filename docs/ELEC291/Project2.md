@@ -115,7 +115,7 @@ Our team appraised the validity of conclusions through the actual execution of o
 
 ### Use of Design Process
 
-Using the design process, we generated multiple ideas for potential designs. This gave our team the opportunity to discuss which design we thought would be best for our robot. 
+Using the design process, we generated multiple ideas for potential designs. This gave our team the opportunity to discuss which design we thought would be best for our robot.
 
 ### Needs and Constraints Identification
 
@@ -124,7 +124,7 @@ The needs for the magnetic track robot were outlined according to our lab manual
 - [x] Ease of use: The ability to communicate to the robot through the guide wire should be quick and simple
 - [x] Runs smoothly and reliably
 
-Constraints of our robot were also outlined in our lab manual (i.e. the guideline controller operating at a single frequency). 
+Constraints of our robot were also outlined in our lab manual (i.e. the guideline controller operating at a single frequency).
 
 ### Problem Specification
 
@@ -134,7 +134,7 @@ To increase ease of use, our team implemented an LED matrix [^4] that displays t
 
 Using **Buttons** on guideline wire controller is used to send commands:
 
-To communicate with the robot (i.e send a command to turn left, right, stop, 180 degrees), a potential solution was to install buttons [^5] on the guide wire generator; each button sending a specific command when pressed. 
+To communicate with the robot (i.e send a command to turn left, right, stop, 180 degrees), a potential solution was to install buttons [^5] on the guide wire generator; each button sending a specific command when pressed.
 
 Using **Joystick** [^6] to send commands:
 
@@ -191,7 +191,7 @@ We then decided upon the ATMega328P[^8] for the Guide Wire Generator. The reason
 
 #### Overview
 
-The purpose of this controller is to provide a square wave signal at resonance frequency in the guide wire the robot is tracking. 
+The purpose of this controller is to provide a square wave signal at resonance frequency in the guide wire the robot is tracking.
 
 ATMega328P is flashed in the identical fashion as the AT89LP52 from project 1. It is connected to a computer via BO230XS such as in figure B-1. One exception is that ATMega328P only needs the ‘reset’ button as the microcontroller does not need to be put into bootloader mode manually (mentioned above). This enables much more efficient development flow.
 
@@ -207,7 +207,7 @@ Timer 0 interrupts has the highest priority out of all other timers. This ensure
 
 We are prohibited to communicate with the guide wire tracking robot via wired communication such as direct control, SPI, etc. We are also prohibited from using RF (wireless) communication such as bluetooth, WiFi, infrared, etc. Thus, commands are sent to the robot through the guide wire. When proper input is given by the user, commands are sent through the guide wire every 1 second.
 
-To start sending commands, which are comprised of bits, the 16.0 kHz is first turned off for 64.0 ms. This counts as a ‘0’ bit and tells the track robot to start receiving bits. Then the 16.0 kHz is turned back on for 64.0 ms to synchronize timing on the track robot, allowing the following bits to be read consistently. 
+To start sending commands, which are comprised of bits, the 16.0 kHz is first turned off for 64.0 ms. This counts as a ‘0’ bit and tells the track robot to start receiving bits. Then the 16.0 kHz is turned back on for 64.0 ms to synchronize timing on the track robot, allowing the following bits to be read consistently.
 
 The next three bits are the “real” data bits that contains the command code. Since we are sending 6 commands, 3 bits (maximum 8 different commands) are deemed appropriate. The 16.0 kHz signal will be turned on or off depending on if the bit that is currently being sent is 0 or 1. Their transfer rates are all also 64.0 ms per bit.
 
@@ -215,7 +215,7 @@ The next three bits are the “real” data bits that contains the command code.
 
 User determines the commands being sent to the robot using buttons and a joystick. The joystick is basically an assembly of two potentiometers and they are connected to Analog 0 (A0) and Analog 1 (A1) pins on the ATMega328P. The x-axis and y-axis analog signal is read by the onboard ADC. Two buttons are connected to two digital input pins for two more commands.
 
-An LCD is attached to the guide wire generator to display the current command being sent. If no command is given, the LCD will display “Awaiting commands”. The attached LED also strobes the individual bits when the microcontroller is transmitting a command. 
+An LCD is attached to the guide wire generator to display the current command being sent. If no command is given, the LCD will display “Awaiting commands”. The attached LED also strobes the individual bits when the microcontroller is transmitting a command.
 
 ### Magnetic Field Tracking Robot
 
@@ -237,7 +237,7 @@ In order to receive commands quickly and consistently, we chose to use a digital
 
 The first comparator has two functions. First, it transforms a sine wave to a steady square wave. Second, and more importantly, it separates the current from other circuits (e.g. peak detector).  We found through testing that the rectifier drains current from the circuit and had a large negative effect on peak detector readings when tested without this comparator.
 
-The rectifier transforms the AC square wave to a DC signal. The AC square wave at 16.0 kHz must be smoothed out by a capacitor to a steady DC signal. At the same time, the capacitor must also discharge fast enough to differentiate the “on” and “off” DC signals from turning on and off the AC square wave at 15.625 Hz. After testing various options, we concluded that using 4.7 µF capacitor was the best fit. Command transmissions from the guide wire controller were also slowed down from 100 Hz to 15.625 Hz. 
+The rectifier transforms the AC square wave to a DC signal. The AC square wave at 16.0 kHz must be smoothed out by a capacitor to a steady DC signal. At the same time, the capacitor must also discharge fast enough to differentiate the “on” and “off” DC signals from turning on and off the AC square wave at 15.625 Hz. After testing various options, we concluded that using 4.7 µF capacitor was the best fit. Command transmissions from the guide wire controller were also slowed down from 100 Hz to 15.625 Hz.
 
 Another comparator was used to boost the maximum voltage of the rectifier output from 2.2 V to 5 V in order to properly indicate logic 1 while maintaining the same frequency.This allowed us to meet the software requirements without compromising any other parts of the circuit.
 
@@ -249,9 +249,9 @@ Each incoming command from the guide wire begins with a logic 0 detected by an i
 
 There is a logic 0 bit followed by a logic 1 bit which acts as a accurately timed trigger before each command. To offset the delay of polling for logic 0, the robot will wait for a logic 1 once the function has been triggered. This essentially synchronizes the robot with the guide wire controller.
 
-Next, the function will wait for 96.0 ms (1.5 times 64.0 ms) to be at the center of the next bit, and 64.0 ms to be at the center of each following bit. The function reads 4 consecutive bits, stores them into a single 8-bit variable, and compares it against the database of commands. Finally, a new command is returned only if it matched with a known command. 
+Next, the function will wait for 96.0 ms (1.5 times 64.0 ms) to be at the center of the next bit, and 64.0 ms to be at the center of each following bit. The function reads 4 consecutive bits, stores them into a single 8-bit variable, and compares it against the database of commands. Finally, a new command is returned only if it matched with a known command.
 
-This method allowed us to easily adjust the code to match the baud rate of transmitted data unlike UART. 
+This method allowed us to easily adjust the code to match the baud rate of transmitted data unlike UART.
 
 #### Robot Controller
 
@@ -286,12 +286,14 @@ While the command is 0 the robot is also searching for intersections. The combin
 #### Motor Adjustments
 
 To run and adjust the power output to our motors, we built two H-Bridge circuits. To control the speed of the motors, we used Pulse-width modulation (PWM). As a result of changing the duty cycle of the square wave outputted to the H-Bridge circuits, the speed of the motors change. The ratio used for PWM is as follows:
+
 $$
 \lambda_L=75\times\frac{V_L^2}{V_L^2+V_R^2}
 $$
+
 Left and right turn commands are  activated by an intersection. The robot first moves straight forwards for 300 ms  until it is directly on top of the intersection. Then, one motor is set to 50 PWM forwards while the other is set to 0, allowing the robot to pivot in place. The robot turns for 200 ms in order to move the rear inductors off the current track, and continues to turn until the rear detectors sense the new track. From here, the robot continues on with its current state.
 
-Turns while moving backwards are similar; the difference is that the robot will move backwards to be directly on top of the intersection and the PWM is set in the opposite direction. The command is still dependent on the rear inductors to sense the new track. The rear inductors were chosen to sense the end of a turn because they are farther from the wheels, thus farther from the intersection and reading more accurate voltage values. 
+Turns while moving backwards are similar; the difference is that the robot will move backwards to be directly on top of the intersection and the PWM is set in the opposite direction. The command is still dependent on the rear inductors to sense the new track. The rear inductors were chosen to sense the end of a turn because they are farther from the wheels, thus farther from the intersection and reading more accurate voltage values.
 
 When crossing intersections with no current command, the robot should continue forwards. As the intersection interferes with line tracking, it is difficult to predict at which angle the robot will enter the intersection. For example, the robot might sense the intersection while at a 45 degree angle to the line it’s currently tracking and steer off track. In order to prevent this, we assess which rear inductor is higher and turn the robot slightly as it moves through the intersection to adjust. If the right rear inductor has a higher voltage than the left rear inductor, we know the robot is entering the intersection pointing slightly to the right. We then can easily adjust for this by setting the left PWM to 25 and the right PWM to 50 so the robot can resume line tracking properly once it has exited the intersection.
 

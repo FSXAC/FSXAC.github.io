@@ -28,7 +28,7 @@ Factors that affect this decision depends on the data to be sorted
 
 ### Combinational Approach
 
-`insert block impl from page 6` 
+`insert block impl from page 6`
 
 Using **subtraction** can tell us whether if a number is larger than the other.
 
@@ -63,7 +63,7 @@ We need states for storing values into `A` and `B`. We also need counters.
 
 `A` and `B` won't change every cycle, so we need an `enable` signal. A `select` signal is needed to selected the corresponding counter. After comparing the numbers, the output need to be fed back to input. As a result, all the input registers (array) needs `enable` signals too. The enable signal is determined by the counters.
 
-Don't forget that the counters also need to be initialized. Compare the inner counter to see if the inner loop is done. Also use a comparator on the outer loop to know if the sort is done or not. 
+Don't forget that the counters also need to be initialized. Compare the inner counter to see if the inner loop is done. Also use a comparator on the outer loop to know if the sort is done or not.
 
 Finally, we need a way to initialize the input registers, as well as a way to read out all the values from the registers.
 

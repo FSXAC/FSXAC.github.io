@@ -38,10 +38,10 @@ Thus, I wrote a python program that takes the `messages.csv` and filter through 
 
 ## Choosing Development Platform
 
-this project was inspired by the version control visualizer, [gource](http://gource.io/), which is written in C++. Naturally, I initially had the intention to program this in C++ as it would be faster and I could learn to write some pretty looking shaders. 
+this project was inspired by the version control visualizer, [gource](http://gource.io/), which is written in C++. Naturally, I initially had the intention to program this in C++ as it would be faster and I could learn to write some pretty looking shaders.
 
 However, I got busy with school so then I went with [*Processing*](https://processing.org/), something I'm much more comfortable with. The performance is good enough for what we're doing here.
 
 ## Development
 
-The first thing I need to do is to read the .csv file and load it as a table in Processing. 
+The first thing I need to do is to read the .csv file and load it as a table in Processing.

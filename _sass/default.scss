@@ -27,6 +27,11 @@ h5 {
 	font-size: 1.15em;
 }
 
+h1.display {
+	font-weight: 300;
+	line-height: 1.2;
+}
+
 // Narrow
 div.narrow {
 	max-width: 900px;
@@ -278,4 +283,9 @@ nav.navbar.sticky-top {
 	footer { 
 		display: none;
 	}
+}
+
+// Tabular numerials
+.numeric {
+	font-variant-numeric: tabular-nums;
 }

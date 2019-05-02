@@ -117,7 +117,7 @@ Our team collected data during the testing and debugging stages of our design th
 - A waveform generator to simulate PWM signals
 - An oscilloscope and multimeters to debug circuits
 
-Additionally, our team compared the accuracy of our data through testing and recording results, and comparing the consistency of the test results. This will be explained in greater detail below under [Data Synthesis](#data-synthesis). 
+Additionally, our team compared the accuracy of our data through testing and recording results, and comparing the consistency of the test results. This will be explained in greater detail below under [Data Synthesis](#data-synthesis).
 
 ### Data-Synthesis
 
@@ -127,7 +127,7 @@ Additionally, we tested our controller and user interface by simply uploading ou
 
 ### Analysis of Results
 
-Our team appraised the validity of conclusions through rigorous testing and troubleshooting using a multimeter and comparing to expected results. Data was synthesized via testing throughout our design process. This was to ensure predictable behavior and concise results. During the final stages of our design process iterative test cases were created to ensure accurate results (see [Appendix III: Test Cases Table](#appendix-III)). 
+Our team appraised the validity of conclusions through rigorous testing and troubleshooting using a multimeter and comparing to expected results. Data was synthesized via testing throughout our design process. This was to ensure predictable behavior and concise results. During the final stages of our design process iterative test cases were created to ensure accurate results (see [Appendix III: Test Cases Table](#appendix-III)).
 
 We also tested corner cases such as improper placement of temperature sensor,  or cancellation request from the user during reflow process. These tests were to ensure that our safety features were functioning as intended.
 
@@ -137,8 +137,8 @@ We also tested corner cases such as improper placement of temperature sensor,  o
 
 We identified the requirements of our design with the help of our lab manual [^1] and in-class lectures [^2][^3]. These requirements included:
 
-- Temperature sensors 
-- Thermal profiles 
+- Temperature sensors
+- Thermal profiles
 - Failsafe features
 - A user interface
 - Data acquisition
@@ -147,42 +147,42 @@ After this, members of our team began generating ideas and presenting them to th
 
 ### Needs and Constrain Identification
 
-The targeted stakeholders for this project are those who use soldering ovens, such as professors, students, and electronic hobbyists. Due to our wide range of stakeholders, we decided customization to suit a user’s preferences is vital. We also decided it was necessary to ensure safe operation. In order to have the best user experience, we identified the need for a fluid interface. Our overall goal was to create a working F38x microcontroller board for future projects. 
+The targeted stakeholders for this project are those who use soldering ovens, such as professors, students, and electronic hobbyists. Due to our wide range of stakeholders, we decided customization to suit a user’s preferences is vital. We also decided it was necessary to ensure safe operation. In order to have the best user experience, we identified the need for a fluid interface. Our overall goal was to create a working F38x microcontroller board for future projects.
 
 The constraints for this controller arise from using a thermocouple to monitor interior oven temperature (restrictions in materials), controlling the oven through SSR, and programming the firmware in 8051 Assembly on CrossIDE in order to flash to our ATMEL microcontroller (AT89LP52) [^4].
 
 ### Problem Specification
 
-Customization of the controller can be accomplished through push buttons to set the adjustable parameters such as soak temperature, soak time, reflow temperature and reflow time as suitable for the microprocessor system in this project. 
+Customization of the controller can be accomplished through push buttons to set the adjustable parameters such as soak temperature, soak time, reflow temperature and reflow time as suitable for the microprocessor system in this project.
 
-To ensure the user’s safety a failsafe can be implemented to ensure the oven does not continuously heat up in the event that the thermocouple is incorrectly placed. In case this is not sufficient, a manual stop push button can stop the soldering process at any point of operation. 
+To ensure the user’s safety a failsafe can be implemented to ensure the oven does not continuously heat up in the event that the thermocouple is incorrectly placed. In case this is not sufficient, a manual stop push button can stop the soldering process at any point of operation.
 
-The user interface is created from a combination of an LCD display of temperature and time, data output to a PC where the process can be presented in a more visually appealing manner and sound effects to indicate state transitions and capture the user’s attention when needed. 
+The user interface is created from a combination of an LCD display of temperature and time, data output to a PC where the process can be presented in a more visually appealing manner and sound effects to indicate state transitions and capture the user’s attention when needed.
 
 ### Solution Generation
 
-Our solution to meet these stakeholder needs was to create an FSM for the oven and a separate FSM where the user can use push buttons to switch between parameters and adjust them through the same manner. Push buttons will also be used to start and stop the oven. The FSM allows LCD update in each state, but the data output to the PC must be faster. This could be done either in the beginning of FSM or through a timer interrupt. 
+Our solution to meet these stakeholder needs was to create an FSM for the oven and a separate FSM where the user can use push buttons to switch between parameters and adjust them through the same manner. Push buttons will also be used to start and stop the oven. The FSM allows LCD update in each state, but the data output to the PC must be faster. This could be done either in the beginning of FSM or through a timer interrupt.
 
 For measuring the temperature in the oven, either an ice bath or an LM335[^5] can be used as the cold junction for the thermocouple.
 
-A smooth user interface can be implemented on the PC. We considered different tools to display transitions such as Python, MATLAB, and Processing (a language based on Java for graphic and data visualization applications). In addition, we considered using a 7-segment display and an LED bar display to enhance the user experience.  
+A smooth user interface can be implemented on the PC. We considered different tools to display transitions such as Python, MATLAB, and Processing (a language based on Java for graphic and data visualization applications). In addition, we considered using a 7-segment display and an LED bar display to enhance the user experience.
 
 ### Solution Evaluation
 
-- Push buttons can function in many orientations; we chose to use the minimal amount of push buttons to declutter our breadboard. 
+- Push buttons can function in many orientations; we chose to use the minimal amount of push buttons to declutter our breadboard.
 - A conflict between timer 0 and timer 2 interrupts forced us to send data to the PC during the FSM.
-- While both the ice bath and LM335 are capable of acting as the cold junction, the ice bath has a time delay in order to cool down before the program can start. The LM335 can be easily debugged by sending values in PuTTy and does not require to be monitored as it does not fluctuate like an ice bath. 
-- Strip charts can be produced in any of the tools we considered on the PC. We chose Processing for its visual appeal and ease of use. 
+- While both the ice bath and LM335 are capable of acting as the cold junction, the ice bath has a time delay in order to cool down before the program can start. The LM335 can be easily debugged by sending values in PuTTy and does not require to be monitored as it does not fluctuate like an ice bath.
+- Strip charts can be produced in any of the tools we considered on the PC. We chose Processing for its visual appeal and ease of use.
 
 ### Detailed Designs
 
 #### OP AMP Calculations
 
-To calculate what values our required components would be in our Op Amp; we started by calculating the amplification factor. To do that we decided upon a temperature range of 10 to 400 degrees Celsius in conjunction with our amplified voltage range of 0.1 to 4 volts. Then using a measured voltage of 0.41 millivolts for a temperature of 10 degrees Celsius we could calculate the amplification factor by dividing 0.1 volts by 0.41 millivolts for an amplification factor of 243.9 V/V.  We could then finally relate the values through amplification factor equaling the first resistor value divided by the second resistor value. Solving while assuming a resistance of 100 Ohms for the second resistor gave us a final value of 24300 Ohms for the first resistor. 
+To calculate what values our required components would be in our Op Amp; we started by calculating the amplification factor. To do that we decided upon a temperature range of 10 to 400 degrees Celsius in conjunction with our amplified voltage range of 0.1 to 4 volts. Then using a measured voltage of 0.41 millivolts for a temperature of 10 degrees Celsius we could calculate the amplification factor by dividing 0.1 volts by 0.41 millivolts for an amplification factor of 243.9 V/V.  We could then finally relate the values through amplification factor equaling the first resistor value divided by the second resistor value. Solving while assuming a resistance of 100 Ohms for the second resistor gave us a final value of 24300 Ohms for the first resistor.
 
 #### Interface
 
-Our interface featured an interactive display of selectable parameters including soak time, temperature, reflow time and temperature. This was implemented through a finite state machine separate from the soldering process. Initially on the main screen a single push button connected to `P2.5` signals the transition into each parameter cycling through all parameters and back to the main screen. In each screen two more buttons connected to `P2.6` and `P2.7` were respectively set to increment and decrement the values of the parameter. These changes automatically update the stored variables. 
+Our interface featured an interactive display of selectable parameters including soak time, temperature, reflow time and temperature. This was implemented through a finite state machine separate from the soldering process. Initially on the main screen a single push button connected to `P2.5` signals the transition into each parameter cycling through all parameters and back to the main screen. In each screen two more buttons connected to `P2.6` and `P2.7` were respectively set to increment and decrement the values of the parameter. These changes automatically update the stored variables.
 
 We decided on using a FSM in order to reduce the buttons and maintain a simple yet effective user interface. For each state in the FSM we considered which buttons to poll for and the associated tasks to be completed. For example, in the code for the reflow time state we polled for each of the three buttons mentioned above.
 
@@ -197,9 +197,9 @@ The software that runs on the computer communicates with the microcontroller via
 
 We had the option between Python with MatPlotLib, MATLAB, Processing, and p5.js (Processing on JavaScript). Due to lack of customizability Python and MATLAB were immediately eliminated as part of our solution. We considered using p5.js as it can be deployed to a web server and 100% of devices with a web-browser can run the web-app. However, additional complications arose as the microcontroller needs to communicate with computer hardware through a localhost server then to the browser via websockets before it can deliver its information. Due to previous we decided it was not worth our time pursue the use p5.js.
 
-We chose Processing as our primary language because it offers less-verbose syntax and easy visualization integration. Since this language is based off of Java we can use many Java-compatible libraries. This also means that this code can run on virtually any device with the proper dependencies installed. 
+We chose Processing as our primary language because it offers less-verbose syntax and easy visualization integration. Since this language is based off of Java we can use many Java-compatible libraries. This also means that this code can run on virtually any device with the proper dependencies installed.
 
-The program features various pages of information to display. The main screen of the program, while giving an overview of the reflow process, intends to be more aesthetically pleasing given its colors and animations. There are hexagonal grids around a center dial that indicates current stage in the reflow operation. The dial turns and its radius is a function of the temperature from the sensor. Other information such as temperature and oven power are also displayed here. 
+The program features various pages of information to display. The main screen of the program, while giving an overview of the reflow process, intends to be more aesthetically pleasing given its colors and animations. There are hexagonal grids around a center dial that indicates current stage in the reflow operation. The dial turns and its radius is a function of the temperature from the sensor. Other information such as temperature and oven power are also displayed here.
 
 Other screens contains strip charts that show temperature reading over time and the overall thermal profile. The output data was a quintessential aid to our test and analysis.
 
@@ -209,9 +209,9 @@ The SSR was controlled through a pulse width modulation (PWM) function which exe
 
 #### SendVoltage Program
 
-Our *SendVoltage* program obtains voltage values and converts them to temperature values from both the Thermocouple and the LM335 and sends them as one variable through a single SPI channel for our FSM. To do this we connected the output of the Thermocouple and the LM335 with Channel 0 and Channel 1 of the ADC[^7]. 
+Our *SendVoltage* program obtains voltage values and converts them to temperature values from both the Thermocouple and the LM335 and sends them as one variable through a single SPI channel for our FSM. To do this we connected the output of the Thermocouple and the LM335 with Channel 0 and Channel 1 of the ADC[^7].
 
-For them we programmed two separate pieces of code (`LM` and `Th` in the code below) to capture voltage values for the Thermocouple and the LM335 and then a flag bit to switch between the two. We named the macro we used to switch from Channel 0 and Channel 1 `Read_ADC_Macro`. We then converted the voltages and added the Thermocouple and LM335 temperatures to get an accurate temperature reading of the oven and finally save the final temperature as a variable for the FSM to use. To make sure our values were correct when debugging we sent the read voltages through the serial port and displayed it on the screen using *PuTTy*. We then integrated the working *SendVoltage* program to the main program where we encountered a problem. The problem we encountered was trying to use the `lcall` instruction to invoke `SendVoltage` in Timer 2. 
+For them we programmed two separate pieces of code (`LM` and `Th` in the code below) to capture voltage values for the Thermocouple and the LM335 and then a flag bit to switch between the two. We named the macro we used to switch from Channel 0 and Channel 1 `Read_ADC_Macro`. We then converted the voltages and added the Thermocouple and LM335 temperatures to get an accurate temperature reading of the oven and finally save the final temperature as a variable for the FSM to use. To make sure our values were correct when debugging we sent the read voltages through the serial port and displayed it on the screen using *PuTTy*. We then integrated the working *SendVoltage* program to the main program where we encountered a problem. The problem we encountered was trying to use the `lcall` instruction to invoke `SendVoltage` in Timer 2.
 
 The problem was caused because timers 0 and 2 conflicted resulting in a program halt. Our solution to this problem was instead calling the *SendVoltage* function in the setup region of the FSM.
 
@@ -246,7 +246,7 @@ Th: mov b, #1 			; connect thermocouple to chanel1
 
 #### Temperature Measurement
 
-We decided to use the temperature reading from an LM335 temperature sensor as our cold junction (reference) of the thermocouple. We examined our temperature reading by comparing it with the temperature reading from a given python program. The LM335 provided us with a better result as the tolerance of using an ice bath for cold junction of the thermocouple could potentially exceed the max acceptable error $\pm 3$ degrees. 
+We decided to use the temperature reading from an LM335 temperature sensor as our cold junction (reference) of the thermocouple. We examined our temperature reading by comparing it with the temperature reading from a given python program. The LM335 provided us with a better result as the tolerance of using an ice bath for cold junction of the thermocouple could potentially exceed the max acceptable error $$\pm 3$$ degrees.
 
 #### OP-AMP
 
@@ -260,11 +260,11 @@ After conducting tests for both cases, our results showed that the second soluti
 
 ## 4. Lifelong Learning
 
-With this reflow oven controller project, our team employed various technical concepts from prerequisites such as programming and hardware design skills. We found the courses ELEC 201 and CPEN 211 to be particularly useful in solving the circuit for designing the op amp and designing the finite state machine respectively. 
+With this reflow oven controller project, our team employed various technical concepts from prerequisites such as programming and hardware design skills. We found the courses ELEC 201 and CPEN 211 to be particularly useful in solving the circuit for designing the op amp and designing the finite state machine respectively.
 
-Our extra designs and inclusion of the 7-segment LED display displayed a knowledge gap. We took this opportunity to learn more about shift registers, the difference between common cathode and common anode configurations for LEDs, and circuit design to affix all of the LEDs to our prototypes. In order to understand how to program the 7-segment displays, Geoff Goodwin interviewed a technician at RP Electronics and conducted research online. 
+Our extra designs and inclusion of the 7-segment LED display displayed a knowledge gap. We took this opportunity to learn more about shift registers, the difference between common cathode and common anode configurations for LEDs, and circuit design to affix all of the LEDs to our prototypes. In order to understand how to program the 7-segment displays, Geoff Goodwin interviewed a technician at RP Electronics and conducted research online.
 
-From this we gained experience with embedded systems, circuit analysis, hardware design and construction which will provide valuable insight throughout our time as electrical engineering students as well as our future careers. 
+From this we gained experience with embedded systems, circuit analysis, hardware design and construction which will provide valuable insight throughout our time as electrical engineering students as well as our future careers.
 
 ## 5. Conclusion
 

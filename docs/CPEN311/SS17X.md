@@ -22,7 +22,7 @@ This is useful though for larger components such as division and multiplier comp
 
 ### Scheduling
 
-This is an optimization problem. 
+This is an optimization problem.
 
 `WIP`
 
@@ -32,7 +32,7 @@ This is an optimization problem.
 
 
 
-OpenCL has a specific syntax to describe parallel operations. 
+OpenCL has a specific syntax to describe parallel operations.
 
 **Pragma**: an annotation inserted in the C code that tells what the hardware should look like. Some pragma exmaples:
 

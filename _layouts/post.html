@@ -15,7 +15,7 @@ layout: minimum
 		</small>
 		{% endif %}
 
-		<h1 class="display-4 text-light">{{ page.title }}</h1>
+		<h1 class="display text-light">{{ page.title }}</h1>
 
 		<p class="text-light lead m-0 mt-5">Published {{ page.date | date: "%Y-%m-%d" }}</p>
 		<p class="text-light m-0">
@@ -44,21 +44,21 @@ layout: minimum
 <div class="container">
 <hr>
 
-<div class="post-navigation justify-content-between" style="overflow: auto;" aria-label="Post navigation">
-	{% if page.previous.url %}
-	<div class="float-left">
+<div class="post-navigation justify-content-between row"aria-label="Post navigation">
+	<div class="col-6 float-left">
+		{% if page.previous.url %}
 		<small><b>&laquo; Previous</b></small>
 		<br>
 		<a href="{{page.previous.url}}">{{page.previous.title}}</a>
+		{% endif %}
 	</div>
-	{% endif %}
-	{% if page.next.url %}
-	<div style="text-align: right">
+	<div class='col-6' style="text-align:right">
+		{% if page.next.url %}
 		<small><b>Next &raquo;</b></small>
 		<br>
 		<a href="{{page.next.url}}">{{page.next.title}}</a>
+		{% endif %}
 	</div>
-	{% endif %}
 </div>
 
 </div>

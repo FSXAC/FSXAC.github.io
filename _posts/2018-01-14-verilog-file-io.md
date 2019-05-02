@@ -46,7 +46,7 @@ module tb();
 endmodule
 ```
 
-In this example, `value` will receive a random value between 0 and 100. Notice that we used the method `$srandom()` to seed the RNG. 
+In this example, `value` will receive a random value between 0 and 100. Notice that we used the method `$srandom()` to seed the RNG.
 
 ### Ranged RNG
 
@@ -68,7 +68,7 @@ We are all familiar with staring at the waveforms produced in the simulation for
 
 ### Opening Files
 
-File IO in Verilog is straight forward and is similar to File IO in C. First, we need to instantiate an `integer` component which we will use to reference the file. 
+File IO in Verilog is straight forward and is similar to File IO in C. First, we need to instantiate an `integer` component which we will use to reference the file.
 
 ```verilog
 integer file;
@@ -128,9 +128,9 @@ integer file
 
 initial begin
     // ... some code ...
-    
+
     // open the file using $fopen
-    
+
     for (int i = 0; i < 100000; i = i + 1) begin
         while ( /* game didn't end condition */ ) begin
             // ... Play game ...
@@ -142,7 +142,7 @@ initial begin
 end
 ```
 
-Inside each `for` loop, we also have a nexted `while` loop that keep on toggling the game clock. And some inputs are given at random times (using the RNG as described earlier). 
+Inside each `for` loop, we also have a nexted `while` loop that keep on toggling the game clock. And some inputs are given at random times (using the RNG as described earlier).
 
 When the game ends, all the cards on the player and the dealer's hands are written to file as well as who won the game.
 

@@ -76,6 +76,7 @@ $$\mathbb P(A\vert B)$$ is a function of $$A$$ and for fixed $$B$$ (otherwise th
 
 
 > **Example**: dice roll from above (and assuming each side of the dice is equally likely)
+>
 > $$
 > \mathbb P(\text{rolls at least 4 }\vert \text{ rolls a 6})=\frac{\mathbb P(\{6\})}{\mathbb P(\{4,5,6\})}=\frac {1/6}{3/6}=0.333\dots
 > $$
@@ -94,7 +95,7 @@ $$\mathbb P(A\vert B)$$ is a function of $$A$$ and for fixed $$B$$ (otherwise th
 
 Consider a screening test for defective iPhones, the screening test can either result in:
 
-- Positive (iPhone has defect) 
+- Positive (iPhone has defect)
 - Negative (iPhone has no defect)
 
 But screening test itself sometimes have two types of errors:
@@ -136,6 +137,7 @@ Given the conditions, we can compute:
 
 - Probability that a randomly chosen iPhone tests positive
 
+  >
   > $$
   > \mathbb P(B)=\mathbb P(B\cap D)+\mathbb P(B\cap D^c)\\
   > =\mathbb P(D)\mathbb P(B\vert D)+\mathbb P(D^c)\mathbb P(B\vert D^c)\\
@@ -146,6 +148,7 @@ Given the conditions, we can compute:
 
 - Probability of defective given that the test resulted positive
 
+  >
   >$$
   >\mathbb P(D\vert B)=\frac{\mathbb P(D\cap B)}{\mathbb P(B)}\\
   >= \frac{\mathbb P(D)\mathbb P(B\vert D)}{\mathbb P(B)}\\
@@ -157,6 +160,7 @@ Given the conditions, we can compute:
 
 - Probability of defective given that the test resulted negative
 
+  >
   > $$
   > \mathbb P(D\vert B^c)=\frac{\mathbb P(D\cap B^c)}{\mathbb P(B^c)}\\
   > =\frac{\mathbb P(D)\mathbb P(B^c\vert D)}{1-\mathbb P(B)}\\
@@ -168,6 +172,7 @@ Given the conditions, we can compute:
 - Probability of screening error
 
   > ​
+  >
   > $$
   > \mathbb P(\text{Error})=\mathbb P(D\cap B^c)+\mathbb P(D^c\cap B)\\
   > =\mathbb P(D)\mathbb P(B^c\vert D)+\mathbb P(D^c)\mathbb P(B\vert D^c)\\
@@ -179,7 +184,7 @@ Given the conditions, we can compute:
 
 ## Bayes' Theorem
 
-Bayes' theorem is a formula that describes how to update the probability of hypothesis given some evidence. 
+Bayes' theorem is a formula that describes how to update the probability of hypothesis given some evidence.
 
 $$
 \mathbb P(H\vert E)=\frac{\mathbb P(E\vert H)}{\mathbb P(E)}\mathbb P(H)
@@ -214,7 +219,7 @@ $$
 
 > **Example**: three prisoners
 >
-> **Scenario**: 
+> **Scenario**:
 >
 > - Prisoner A, B, and C are to be executed
 > - One of the prisoners are randomly chosen by the governor to be pardoned
@@ -228,20 +233,25 @@ $$
 > **Solution**:
 >
 > Let
+>
 > $$
 > A=\{\text{A is pardoned}\}\\
 > B=\{\text{B is pardoned}\}\\
 > C=\{\text{C is pardoned}\}\\
 > $$
+>
 > and let
+>
 > $$
 > b=\{\text{The warden says "B is not pardoned"}\}
 > $$
 >
-> so we can say that the probability of each prisoner pardoned is $$^1/_3$$. These are the **Prior Probability**. This also implies that $$A, B, C$$ are all disjoint, which satisfies the conditions for the general Bayes' formula. 
+> so we can say that the probability of each prisoner pardoned is $$^1/_3$$. These are the **Prior Probability**. This also implies that $$A, B, C$$ are all disjoint, which satisfies the conditions for the general Bayes' formula.
+>
 > $$
 > \mathbb P(A)=\mathbb P(B)=\mathbb P(C)=\frac 1 3
 > $$
+>
 > Since we safely assume that the warden never lies, we can list the conditional probability of $$b$$ given each of events $$A, B,C$$. The probability of $$b$$ given $$B$$ (probability of warden saying prisoner B is not pardoned while prisoner B is pardoned) is 0. Next, the probability of $$b$$ given prisoner A being pardoned is $$^1/_2$$ because of the random coin toss. Last, the probability of $$b$$ given prisoner C being pardoned is 1.
 >
 > $$
