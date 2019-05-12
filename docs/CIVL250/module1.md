@@ -1,5 +1,5 @@
 ---
-title: "Module 1: Introduction to Sustainable Development"
+title: "Introduction to Sustainable Development"
 date: 2019-05-11
 categories: CIVL 250
 use_math: true
@@ -50,6 +50,8 @@ The UN created 17 **sustainable development goals (SDGs)** where each goal has w
 - the amount of resources available in the ecosystem
 - the amount of resources consumed by each individual within the population
 
+The current global bio-capacity is ==1.7 hectares per person==.
+
 **Biocapacity** is the productivity of land areas such as forests, croplands, fisheries, and land for absorbing human waste.
 
 **Ecological footprint (EF)** measures the current human demand on earth's ecosystems and natural resources. EF provides an estimate of the area of biologically productive land and sea to *sustainably* support human activities. The unit is [*area/year*]. The method of calculating EF is outlined [here](https://www.footprintnetwork.org/resources/data/)[^ef-method].
@@ -70,11 +72,13 @@ UN Intergovernmental Panel on Climate Change (IPCC) works together to develop a 
 
 ### The Paris Agreement
 
-The Paris Agreement was adopted by 195 countries in December 2015 at International Agreement on Climate Change (COP 21).  The agreement has aims to keep change in global temperature of this century below 2 degrees Celsius.
+The Paris Agreement was adopted by 195 countries in December 2015 at International Agreement on Climate Change (COP 21).  The key agreements are:
 
-- Countries are committed to make **nationally determined contributions (NDC)** to pursue goals.
-- Countries are to report regularly.
+- Limit the average surface global temperature increase to below 2^o^C
+- Countries committed to make **nationally determined contributions (NDC)** to pursue goals.
+- Commit to regularly report national emission, progress, and undergo international review.
 - Mobilize $100B to help poorer countries by 2020-2025.
+- Call for a new mechanism to reduce emissions in one country to be counted towards another country's NDCs.
 
 ### Green House Gases
 
@@ -92,7 +96,7 @@ To quantify the effects of GHGs, we use **Global Warming Potential (GWP)** index
 | Sulfur hexafluoride $\ce{SF6}$        | 22,800       |
 | Nitrogen trifluoride $\ce{NF3}$       | 17,200       |
 
-Sometimes we express how impactful a GHG is by quantifying them in terms of $\ce{CO2}$ equivalent by multiplying the mass of GHG by their GWP.
+Sometimes we express how impactful a GHG is by quantifying them in terms of $$\ce{CO2}$$ equivalent by multiplying the mass of GHG by their GWP.
 
 **Carbon footprint** describes the contribution of global warming of human activity. It is the land and sea required to sequester the equivalent CO<sub>2</sub> by human activity in *Global hectares*. The carbon footprint is a slice of the total ecological footprint.
 
