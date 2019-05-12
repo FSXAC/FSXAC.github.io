@@ -361,6 +361,10 @@
     - title: 'Module 7: Leading Sustainability'
       link: '/docs/CIVL250/module7'
       flag: draft
+    - title: 'Weekly Quizzes'
+      group:
+      - enum: 1
+        link: /docs/CIVL250/quiz1
   - course_num: 'APSC 101'
     course_name: 'Intro to Engineering II'
     date: 2016-07-17
