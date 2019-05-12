@@ -3,6 +3,7 @@ title: Sensitivity Analysis
 date: 2018-07-22
 author: Muchen He
 categories: [MECH 431]
+use_math: true
 ---
 
 

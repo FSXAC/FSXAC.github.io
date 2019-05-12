@@ -3,6 +3,7 @@ title: Payback Period and Benefit Benefit Analysis
 date: 2018-05-28
 author: Muchen He
 categories: [MECH 431]
+use_math: true
 ---
 
 

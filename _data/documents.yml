@@ -265,57 +265,59 @@
     date: 2018-07-22
     entries:
     - title: 'General Economic Concepts'
-      link: '/docs/MECH431/l2'
+      link: '/docs/MECH431/Lesson 2'
     - title: 'Cost Models & Estimation'
-      link: '/docs/MECH431/l3'
+      link: '/docs/MECH431/Lesson 3'
     - title: 'Payback Period and Benefit Benefit Analysis'
-      link: '/docs/MECH431/l4'
+      link: '/docs/MECH431/Lesson 4'
     - title: 'Time Value of Money & Interests'
-      link: '/docs/MECH431/l5'
+      link: '/docs/MECH431/Lesson 5'
     - title: 'Cashflow Series'
-      link: '/docs/MECH431/l7'
+      link: '/docs/MECH431/Lesson 7'
     - title: 'Sources of Capital'
-      link: '/docs/MECH431/l7a'
+      link: '/docs/MECH431/Lesson 7A'
     - title: 'Present Worth Analysis'
-      link: '/docs/MECH431/l8'
+      link: '/docs/MECH431/Lesson 8'
     - title: 'Equivalent Annual Cashflow Analysis'
-      link: '/docs/MECH431/l9'
+      link: '/docs/MECH431/Lesson 9'
     - title: 'Rate of Return Analysis'
-      link: '/docs/MECH431/l10'
+      link: '/docs/MECH431/Lesson 10'
     - title: 'Incremental Analysis'
-      link: '/docs/MECH431/l11'
+      link: '/docs/MECH431/Lesson 11'
     - title: 'Future Value Analysis & Benefit Cost Ratio'
-      link: '/docs/MECH431/l12'
+      link: '/docs/MECH431/Lesson 12'
     - title: 'Sensitivity Analysis'
-      link: '/docs/MECH431/l13'
-      flag: new
+      link: '/docs/MECH431/Lesson 13'
     - title: 'Risk Analysis I (Probability)'
-      link: '/docs/MECH431/l14'
+      link: '/docs/MECH431/Lesson 14'
     - title: 'Risk Analysis II (Simulation)'
-      link: '/docs/MECH431/l15'
-      flag: draft
+      link: '/docs/MECH431/Lesson 15'
     - title: 'Depreciation'
-      link: '/docs/MECH431/l16'
-      flag: new
+      link: '/docs/MECH431/Lesson 16'
     - title: 'Taxes'
-      link: '/docs/MECH431/l17'
-      flag: draft
+      link: '/docs/MECH431/Lesson 17'
+    - title: 'Inflation'
+      link: '/docs/MECH431/Lesson 18'
+    - title: 'Replacement Analysis'
+      link: '/docs/MECH431/Lesson 20'
     - title: 'Conference'
       group:
       - enum: 1
-        link: '/docs/MECH431/c1'
+        link: '/docs/MECH431/ Conference 1'
       - enum: 3
-        link: '/docs/MECH431/c3'
+        link: '/docs/MECH431/ Conference 3'
       - enum: 4
-        link: '/docs/MECH431/c4'
+        link: '/docs/MECH431/ Conference 4'
       - enum: 5
-        link: '/docs/MECH431/c5'
+        link: '/docs/MECH431/ Conference 5'
       - enum: 6
-        link: '/docs/MECH431/c6'
+        link: '/docs/MECH431/ Conference 6'
       - enum: 7
-        link: '/docs/MECH431/c7'
+        link: '/docs/MECH431/ Conference 7'
       - enum: 8
-        link: '/docs/MECH431/c8'
+        link: '/docs/MECH431/ Conference 8'
+      - enum: 9
+        link: '/docs/MECH431/ Conference 9'
     - title: 'Practice'
       group:
       - enum: 2

@@ -3,6 +3,7 @@ title: Risk Analysis II
 date: 2018-07-26
 author: Muchen He
 categories: [MECH 431]
+use_math: true
 ---
 
 

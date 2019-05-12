@@ -1,9 +1,9 @@
 ---
-![caanada](C:\Users\mhe\Desktop\caanada.PNG)title: Time Value of Money
+title: Time Value of Money
 date: 2018-06-07
 author: Muchen He
-title: Lesson 5: Time Value of Money
 categories: [MECH 431]
+use_math: true
 ---
 
 
@@ -94,7 +94,7 @@ Interest is calculated periodically on the unpaid amount, thus accumulates based
 | 1        | $$P$$                      | $$P\cdot i$$                    | $$P+P\cdot i$$                     |
 | 2        | $$P+P\cdot i$$             | $$(P+P\cdot i)\cdot i$$         | $$P+P\cdot i+(P+P\cdot i)\cdot i$$ |
 | $$\vdots$$ | $$\vdots$$                 | $$\vdots$$                      | $$\vdots$$                         |
-| $$n$$      | $$\boxed{P(1+i)<sup>{n-1}}$$   | $$\boxed{i\cdot P(1+i)</sup>{n-1}}$$ | $$\boxed{P(1+i)^n}$$               |
+| $$n$$      | $$\boxed{P(1+i)^{n-1}}$$   | $$\boxed{i\cdot P(1+i)^{n-1}}$$ | $$\boxed{P(1+i)^n}$$               |
 
 Generalizes to **single payment compound amount**: $$F=P(1+i)<sup>n$$(single payment implies no payment is made during the periods and only paid at the very end). And interest at a particular period: $$I_n=i\cdot P(1+i)</sup>{n-1}$$.
 
