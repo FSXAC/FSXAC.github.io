@@ -3,6 +3,7 @@ title: Rate of Return Analysis
 date: 2018-06-21
 author: Muchen He
 categories: [MECH 431]
+use_math: true
 ---
 
 

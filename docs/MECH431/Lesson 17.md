@@ -3,6 +3,7 @@ title: Taxes
 date: 2018-07-28
 author: Muchen He
 categories: [MECH 431]
+use_math: true
 ---
 
 

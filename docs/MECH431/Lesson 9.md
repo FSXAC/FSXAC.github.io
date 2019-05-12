@@ -3,6 +3,7 @@ title: Equivalent Annual Cashflow Analysis
 date: 2018-06-18
 author: Muchen He
 categories: [MECH 431]
+use_math: true
 ---
 
 

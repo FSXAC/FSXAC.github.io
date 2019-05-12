@@ -1,6 +1,7 @@
 ---
 title: Conference 8
 categories: [MECH 431]
+use_math: true
 ---
 # Conference 8
 

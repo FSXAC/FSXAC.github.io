@@ -3,6 +3,7 @@ title: Cashflow Series
 date: 2018-06-09
 author: Muchen He
 categories: [MECH 431]
+use_math: true
 ---
 
 

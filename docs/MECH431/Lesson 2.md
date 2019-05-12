@@ -3,6 +3,7 @@ title: General Economic Concepts
 date: 2018-05-15
 author: Muchen He
 categories: [MECH 431]
+use_math: true
 ---
 
 

@@ -3,6 +3,7 @@ title: Inflation
 date: 2018-08-08
 author: Muchen He
 categories: [MECH 431]
+use_math: true
 ---
 
 

@@ -3,6 +3,7 @@ title: Conference 7
 author: Muchen He
 date: 2018-07-16
 categories: [MECH 431]
+use_math: true
 ---
 
 

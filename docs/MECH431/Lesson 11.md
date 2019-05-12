@@ -3,6 +3,7 @@ title: Incremental Analysis
 date: 2018-07-15
 author: Muchen He
 categories: [MECH 431]
+use_math: true
 ---
 
 

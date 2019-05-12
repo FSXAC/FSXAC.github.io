@@ -3,6 +3,7 @@ title: Cost and Revenues
 date: 2018-05-27
 author: Muchen He
 categories: [MECH 431]
+use_math: true
 ---
 
 
