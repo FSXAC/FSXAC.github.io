@@ -1,6 +1,6 @@
 ---
 title: "Module 1: Introduction to Sustainable Development"
-date: 2019-05-08
+date: 2019-05-11
 categories: CIVL 250
 use_math: true
 ---
@@ -56,15 +56,93 @@ The UN created 17 **sustainable development goals (SDGs)** where each goal has w
 
 **Ecological deficit** is when the total ecological footprint is greater than the total biocapacity of the area available to that population.
 
+- For Canada, we need to reduce our EF by 4 hectares in order to be long-term sustainable.
+
 **Natural capital** is the natural resources on Earth's biosphere that provide ecosystem goods and services imperative for survival and well-being[^nc]. Like financial capital, the idea is that we use the what we have in a way to ensure abundance of capital is maintained or increased over time.
 
-## Response to Climate Change
+## Climate Change
 
-`todo`
+### Background
 
-## Bio-diversity Loss
+To reduce the worst-case impacts of the climate change, we need to reduce our GHG emissions significantly to limit.  There is a need to limit the average global temperature increase to 1.5 degrees Celsius before 2030.
 
-`todo`
+UN Intergovernmental Panel on Climate Change (IPCC) works together to develop a strategy. They publish a report with models and predictions every few years.
+
+### The Paris Agreement
+
+The Paris Agreement was adopted by 195 countries in December 2015 at International Agreement on Climate Change (COP 21).  The agreement has aims to keep change in global temperature of this century below 2 degrees Celsius.
+
+- Countries are committed to make **nationally determined contributions (NDC)** to pursue goals.
+- Countries are to report regularly.
+- Mobilize $100B to help poorer countries by 2020-2025.
+
+### Green House Gases
+
+**Green house gases (GHG)** should be considered in any engineering project. GHGs are any gas in the atmosphere which traps heat in earth's atmosphere.
+
+To quantify the effects of GHGs, we use **Global Warming Potential (GWP)** index referenced to with $\ce{CO2}$.
+
+| GHG                                   | GWP          |
+| ------------------------------------- | ------------ |
+| Carbon dioxide $\ce{CO2}$ (reference) | 1            |
+| Methane $\ce{CH4}$                    | 21           |
+| Nitrous Oxide $\ce{N2O}$              | 310          |
+| Hydrofluorocarbons $\ce{HFC}$         | 124-14,800   |
+| Perfluorocarbons $\ce{PFC}$           | 7,390-12,200 |
+| Sulfur hexafluoride $\ce{SF6}$        | 22,800       |
+| Nitrogen trifluoride $\ce{NF3}$       | 17,200       |
+
+Sometimes we express how impactful a GHG is by quantifying them in terms of $\ce{CO2}$ equivalent by multiplying the mass of GHG by their GWP.
+
+**Carbon footprint** describes the contribution of global warming of human activity. It is the land and sea required to sequester the equivalent CO<sub>2</sub> by human activity in *Global hectares*. The carbon footprint is a slice of the total ecological footprint.
+
+![img](https://www.footprintnetwork.org/content/uploads/2016/10/climate-carbonfootprint.png)[^cf]
+
+
+
+## Biodiversity Loss
+
+Biodiversity loss is considered as significant as climate change. They are important because humans cannot survive without healthy and resilient ecosystems.
+
+**Biological diversity** (**biodiversity**) refers to the variety of specifies and ecosystems[^bd]. They have three components:
+
+1. Ecosystem diversity
+2. Species diversity
+3. Genetic diversity
+
+**Biodiversity loss** occurs even with absence of humans but happen at a low rate and do not result in gene pool or ecosystem loss.  However, recently we are seeing mass extinction that are actively caused by humans.
+
+### Causes
+
+Climate change is considered the main cause of biodiversity. Other significant human activities also cause significant biodiversity loss:
+
+- Increase in human population which leads to increase in land use (for agriculture, housing, and industries).
+- Unsustainable hunting, fishing, and deforestations.
+- Air pollution and water borne pollution; and increase in air and sea acidity.
+
+### Impacts
+
+Biodiversity losses could lead to, but not limited to, some of the following[^bdloss]:
+
+- Reduced crop yields, wood production on plantations, and fisheries.
+- Weaker resistance ecosystems to invasive species.
+- Weaker resistance of native plants to infections or infectious species.
+- Reduced soil quality.
+
+Ultimately, biodiversity loss leads to lower quality of ecosystems humans need to function.
+
+### Ecosystems Services
+
+A healthy ecosystem supports humans physically, mentally, and socioeconomically. The support is called **ecosystems services**. They are services of:
+
+- Air & water purification
+- Waste decomposition
+- Soil & nutrient cycling
+- Climate & radiation regulating
+- Habitat preservation
+- Noise control
+- Aesthetics & culture
+- Raw materials & products
 
 
 
@@ -72,4 +150,7 @@ The UN created 17 **sustainable development goals (SDGs)** where each goal has w
 [^2]: United Nation - Sustainable Development Goals: [https://sustainabledevelopment.un.org/sdgs](https://sustainabledevelopment.un.org/sdgs)
 [^ef-method]: Global Footprint Network - Data and Methodology: [https://www.footprintnetwork.org/resources/data/](https://www.footprintnetwork.org/resources/data/)
 [^nc]: International Institute for Sustainable Development - Natural Capitalism: [http://www.iisd.org/library/natural-capital-approach-concept-paper](http://www.iisd.org/library/natural-capital-approach-concept-paper)
+[^cf]: Global Footprint Network - Climate Change: [https://www.footprintnetwork.org/our-work/climate-change/](https://www.footprintnetwork.org/our-work/climate-change/)
+[^bd]: BioDivCanada: [https://biodivcanada.chm-cbd.net/?lang=en&n=DABC84B3-1](https://biodivcanada.chm-cbd.net/?lang=en&n=DABC84B3-1))
+[^bdloss]: Nature.com - Biodiversity Loss and Its Impact on Humanity: [https://www.nature.com/articles/nature11148](https://www.nature.com/articles/nature11148).
 
