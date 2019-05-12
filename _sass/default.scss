@@ -235,6 +235,15 @@ h2.bold {
 	font-style: italic;
 }
 
+// Embedded iframes
+iframe {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1em;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
 // Footnotes
 #c-content div.footnotes {
 	margin-top: 2em;

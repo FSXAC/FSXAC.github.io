@@ -334,6 +334,31 @@
         link: '/docs/MECH431/asn2'
       - enum: 3
         link: '/docs/MECH431/asn3'
+  - course_num: 'CIVL 200, CIVL 250'
+    course_name: 'Engineering and Sustainable Development'
+    date: 2019-05-08
+    entries:
+    - title: 'Module 1: Sustainable Development'
+      link: '/docs/CIVL250/module1'
+      flag: draft
+    - title: 'Module 2: Critical Skills'
+      link: '/docs/CIVL250/module2'
+      flag: draft
+    - title: 'Module 3: Systems & Sustainability'
+      link: '/docs/CIVL250/module3'
+      flag: draft
+    - title: 'Module 4: Sustainable Cities'
+      link: '/docs/CIVL250/module4'
+      flag: draft
+    - title: 'Module 5: Sustainable Supply Chains'
+      link: '/docs/CIVL250/module5'
+      flag: draft
+    - title: 'Module 6: Least Developed Countries'
+      link: '/docs/CIVL250/module6'
+      flag: draft
+    - title: 'Module 7: Leading Sustainability'
+      link: '/docs/CIVL250/module7'
+      flag: draft
   - course_num: 'APSC 101'
     course_name: 'Intro to Engineering II'
     date: 2016-07-17
