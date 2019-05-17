@@ -60,9 +60,8 @@
 			background-size: cover;
 			min-height: 300px;
 			{% else %}
-			.jumbotron { background-color: #001624; }
+			background: linear-gradient(170deg, #406177 0%, #001624 100%);
 			{% endif %}
-
 			{% if page.header.gradient %} background: {{ page.header.gradient }};{% endif %}
 		}
 		{% if page.titlebar == '404' %}
