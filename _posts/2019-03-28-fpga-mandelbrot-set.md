@@ -25,6 +25,9 @@ After learning about using the VGA modules for the DE1-SoC FPGA development boar
 
 <!-- excerpt -->
 
+- toc
+{:toc}
+
 ## The Maths
 
 The Mandelbrot set is characterized by a complex recursive equation:

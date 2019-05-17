@@ -15,8 +15,8 @@ categories: CIVL 250
 - [x] Resiliency theory
 - [x] Adaptive cycle
 - [ ] Concept maps
-- [ ] Casual loop diagrams
-- [ ] Built environment vs. natural environment
+- [x] Causal loop diagrams
+- [x] Built environment vs. natural environment
 - [ ] Urban ecology
 
 ## Systems Theory
@@ -74,11 +74,39 @@ The constantly changing of complex system can be modelled by four phases[^3]:
 
 ## Systems Thinking in Action
 
-## Concept Maps
+An example of systems thinking applied is about **active transportation**. Active transportation are ideas of walkability such as side walks and connected streets that overall influences the population to be healthier. 
 
-## Casual Loops
+The individual components to an active transportation does not influence a person's health significantly, but when used in a vast network throughout the city, the more walkable the environment is, the more healthy the population is from the physical activities.
 
-## Built & Natural Systems
+We can model active transportation as a diagram: Notice that certain actions such as choosing to walk as a transportation decision and physical health create a feedback loop (loop A from the diagram). 
+
+<img alt="Module 3 Lesson 3-3" src="assets/Module 3 Lesson 3-3.png" width="720px">
+
+## Causal Loop Diagrams
+
+To represent the diagram better in a cleaner way, we can illustrate it in a causal loop diagram.
+
+<img alt="Module 3 Lesson 3-4a" src="assets/Module 3 Lesson 3-4a.png" width="400px">
+
+The arrows represent causal relationships. A plus **+** denotes a relationship where an increase of the cause &rArr; increase of the effect. A minus **&minus;** denotes a relationship where an increase of the cause &rArr; decrease of the effect (and vise versa).
+
+A feedback loop occurs when a cause and effect is self-referencing. 
+
+A positive feedback loop is two positive (+) references which is inherently unstable or **reinforcing (R)** but it cannot last forever. A negative feedback loop is made of relationships with opposite parity. The loop is stable and is considered **balancing (B)**.
+
+
+
+## Concept Map
+
+
+
+## Bio vs. Techno
+
+
+
+## Urban Ecology
+
+
 
 
 

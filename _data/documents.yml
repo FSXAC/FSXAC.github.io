@@ -365,6 +365,16 @@
       group:
       - enum: 1
         link: /docs/CIVL250/quiz1
+      - enum: 2
+        link: /docs/CIVL250/quiz2
+      - enum: 3
+        link: /docs/CIVL250/quiz3
+      - enum: 4
+        link: /docs/CIVL250/quiz4
+      - enum: 5
+        link: /docs/CIVL250/quiz5
+      - enum: 6
+        link: /docs/CIVL250/quiz6
   - course_num: 'APSC 101'
     course_name: 'Intro to Engineering II'
     date: 2016-07-17
