@@ -1,6 +1,7 @@
 ---
 title: Sustainable Cities
 date: 2019-05-24
+categories: CIVL 250
 ---
 
 - toc
@@ -58,6 +59,20 @@ The boundaries are:
 - Climate change
 
 ## Resiliency in Urban System Design
+
+Ecosystem approach considers both direct and indirect effects.
+
+> Ecosystem approach:
+> - is a new perspective that challenges linear way of thinking.
+> - helps us makes sense of the multitude of interactions that exist within a city.
+> - helps us support through engineering design, the successful management of the individual elements of the larger city so as to benefits the elements as well as the city as a whole.
+> - calls on us to develop awareness to both direct and indirect relationships and interactions that can exist between different elements in a city.
+> - calls to understand that elements exist at different physical scales.
+> - compells us to constantly be aware of interactions between subsystems within larger systems.
+> - leads to analysis of infrastructure elements within its broader context
+>   - flow of material, energy, and information in built & natural systems
+>   - influence at different scales
+>   - life-cycle of infrastructure (elements)
 
 ### Ecosystem Approach
 
