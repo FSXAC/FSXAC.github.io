@@ -74,6 +74,35 @@ Ecosystem approach considers both direct and indirect effects.
 >   - influence at different scales
 >   - life-cycle of infrastructure (elements)
 
+`todo` (prof's response):
+
+> Hi Muchen,
+> 
+> Thanks for asking for more clarification. I'm sure many students are thinking the same thing. 
+> 
+> So, this approach asks that we think of urban infrastructure through the lens of, or from the perspective of, complex systems theory.
+> 
+> More specifically, when thinking about urban infrastructure and urban systems generally (i.e. when thinking about the urban ecology), be aware of:
+> 
+> the existence of systems
+> multiple scales (physical scales, time scales, organization scales, etc)
+> direct and indirect relationships (also called "interdependencies") between components within systems, and between sub-systems (e.g. health & transportation. another classic is water & energy) 
+> system boundaries
+> the flow of materials, energy, and information across system boundaries
+> system change and the role of life-cycles - i.e. complex systems are continually learning
+> resiliency
+> A systems thinker observes the behaviour of systems and how the behaviour changes over time. S/he looks for "leverage points" in systems where interventions can be made that will likely result in the system moving to desirable behaviour. (Good parenting is often cited as an example of systems thinking!) 
+> 
+> The ecosystem approach requires that we take time to observe, reflect, and consider consequences of actions, always with an awareness of possible unintended consequences. In essence, I see it as a management stance enabling at least the temporary achievement of specific goals related to environmental stewardship and sustainability. 
+> 
+> James Kay and others have shown us that the ecosystem approach to urban systems has a solid scientific foundation enabling us to bridge the gaps between the built environment, social systems, and the bio-physical world, so that we can effectively strive for sustainability. While examples of the ecosystem approach to urban systems exist, we are all still learning about the details of what this approach really means. 
+> 
+> Hope this helps and please ask for more clarity as you see fit. 
+> 
+> Best regards,
+> 
+> Dr. S.
+
 ### Ecosystem Approach
 
 ## Green Buildings
