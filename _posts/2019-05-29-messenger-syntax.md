@@ -25,7 +25,7 @@ Enclose the text in a pair of underscores ( `_` ) to make the text _italic_. Thi
 
 ### Scratch That
 
-Enclose the text in a pair of tilde symbols ( `~` ) to make the text ~strikethrough~. This works anywhere in your message.
+Enclose the text in a pair of tilde symbols ( `~` ) to make the text ~~strikethrough~~. This works anywhere in your message.
 
 ![strikethrough](/assets/blog/messenger/strike.jpg)
 
