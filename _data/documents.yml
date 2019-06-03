@@ -361,6 +361,16 @@
     - title: 'Module 7: Leading Sustainability'
       link: '/docs/CIVL250/module7'
       flag: draft
+    - title: 'SRL'
+      group:
+        - enum: 1
+          link: /docs/CIVL250/asn1
+        - enum: 2
+          link: /docs/CIVL250/asn2
+        - enum: 3
+          link: /docs/CIVL250/asn3
+        - enum: 4
+          link: /docs/CIVL250/asn4
     - title: 'Weekly Quizzes'
       group:
       - enum: 1
