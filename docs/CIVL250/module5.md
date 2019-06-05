@@ -6,9 +6,9 @@ categories: CIVL 250
 
 - toc
 {:toc}
+
 ## Material Resources & Productivity
 
-<<<<<<< HEAD
 What is a supply chain?
 
 **Supply chain** is a sequence of activities to the delivery of a product or service to the *end user*. Supply chain consists of resource gathering, manufacturing, etc.
@@ -16,7 +16,6 @@ What is a supply chain?
 ### Material Consumption
 
 From [module 1](module1), the individual consumption is increasing.
-=======
 ### Cotton Clothing Supply Chain
 
 The supply chain for cotton clothing consists of:
@@ -50,7 +49,10 @@ Material consumption is mostly construction materials (36%), fossil fuel (28%), 
      - Right to repair
 2. New business models based on process efficiencies.
 3. Consumer awareness
+<<<<<<< HEAD
 >>>>>>> 163f64e... Added module 5 lesson 1-2
+=======
+>>>>>>> 4e84b23... module 6 file
 
 ## Biomimicry in Engineering Design
 
