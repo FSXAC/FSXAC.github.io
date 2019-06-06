@@ -6,23 +6,23 @@ categories: CIVL 250
 
 
 
-[^1]:Canada's Nationally Determined Contributions: <https://www.climatescorecard.org/2018/06/canadas-nationally-determined-contribution/>
-[^2]: <https://www.theguardian.com/environment/climate-consensus-97-per-cent/2018/oct/26/canada-passed-a-carbon-tax-that-will-give-most-canadians-more-money>
-[^3]: <https://www.canada.ca/en/environment-climate-change/services/environmental-indicators/greenhouse-gas-emissions.html>
-[^3b]: <https://www2.gov.bc.ca/gov/content/environment/climate-change/planning-and-action/carbon-tax>
-[^4]: https://www.thelawyersdaily.ca/articles/6965/the-pan-canadian-framework-on-climate-change-ontario-v-ottawa
-[^5]: <https://www2.gov.bc.ca/gov/content/data/statistics/economy/bc-economic-accounts-gdp>
-[^6]: <https://www.government.se/government-policy/taxes-and-tariffs/swedens-carbon-tax/>
-[^6a]: https://www.euractiv.com/section/climate-environment/news/swedens-new-carbon-tax/
-[^7]: <https://www.chatelaine.com/living/politics/federal-carbon-tax-canada/>
+[^1]: ClimageScorecard - Canada's Nationally Determined Contributions: <https://www.climatescorecard.org/2018/06/canadas-nationally-determined-contribution/>
+[^2]: The Guardian - Canada passed a carbon tax that will give most Canadians more money: <https://www.theguardian.com/environment/climate-consensus-97-per-cent/2018/oct/26/canada-passed-a-carbon-tax-that-will-give-most-canadians-more-money>
+[^3]: canada.ca - Greenhouse Gas Emissions: <https://www.canada.ca/en/environment-climate-change/services/environmental-indicators/greenhouse-gas-emissions.html>
+[^3b]: gov.bc.ca - Carbon tax: <https://www2.gov.bc.ca/gov/content/environment/climate-change/planning-and-action/carbon-tax>
+[^4]: The Lawyers Daily - The Pan-Canadian Framework on Climate Change: <https://www.thelawyersdaily.ca/articles/6965/the-pan-canadian-framework-on-climate-change-ontario-v-ottawa>
+[^5]: gov.bc.ca - BC Economic Accounts - GDP: <https://www2.gov.bc.ca/gov/content/data/statistics/economy/bc-economic-accounts-gdp>
+[^6]: government.se - Sweden's Carbon Tax: <https://www.government.se/government-policy/taxes-and-tariffs/swedens-carbon-tax/>
+[^6a]: Euractive - Sweden's new carbon tax: https://www.euractiv.com/section/climate-environment/news/swedens-new-carbon-tax/
+[^7]: Chatelaine - Federal Carbon Tax: <https://www.chatelaine.com/living/politics/federal-carbon-tax-canada/>
 [^8]: <https://atlas.media.mit.edu/en/profile/country/swe/>
 [^9]: <https://atlas.media.mit.edu/en/profile/country/can>
-[^10]: <http://prairieclimatecentre.ca/2018/03/where-do-canadas-greenhouse-gas-emissions-come-from/>
+[^10]: Prairie Climate Center - Where do Canada's Greenhouse Gas Emissions Come From: <http://prairieclimatecentre.ca/2018/03/where-do-canadas-greenhouse-gas-emissions-come-from/>
 [^11]: <http://worldpopulationreview.com/countries/sweden-population/>
-[^11b]: worldpopulationreview.com/countries/canada-population/
-[^12]: <https://globalnews.ca/news/5124513/saskatchewan-farmers-carbon-tax/>
-[^12b]: <https://www.cbc.ca/radio/thecurrent/the-current-for-april-1-2019-1.5079280/carbon-tax-will-turn-sustainability-efforts-into-a-fight-for-bottom-line-warns-farmer-1.5079283>
-[^13]: <https://www.theglobeandmail.com/canada/article-canada-found-to-produce-most-greenhouse-gas-emissions-per-person-among/>
+[^11b]: <http://worldpopulationreview.com/countries/canada-population/>
+[^12]: Global News - Saskatchewan Carbon Tax: <https://globalnews.ca/news/5124513/saskatchewan-farmers-carbon-tax/>
+[^12b]: CBC - Carbon tax will turn sustainability into a fight for bottom line warns farmer: <https://www.cbc.ca/radio/thecurrent/the-current-for-april-1-2019-1.5079280/carbon-tax-will-turn-sustainability-efforts-into-a-fight-for-bottom-line-warns-farmer-1.5079283>
+[^13]: The Globe and Mail - Canada found to produce most greenhouse gas emissions per person among G20 average: <https://www.theglobeandmail.com/canada/article-canada-found-to-produce-most-greenhouse-gas-emissions-per-person-among/>
 
 ## Position
 
