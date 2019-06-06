@@ -254,6 +254,12 @@ iframe {
 	content: "References";
 	font-weight: bold;
 }
+#c-content a.footnote {
+	background-color: #f0f0f0;
+	padding: 1px 3px;
+	border-radius: 3px;
+	margin: 0 1px;
+}
 
 // Fix math in lists
 #c-content li .MJXc-display {
