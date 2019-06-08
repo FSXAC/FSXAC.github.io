@@ -13,7 +13,7 @@ categories: CIVL 250
 [^4]: The Lawyers Daily - The Pan-Canadian Framework on Climate Change: <https://www.thelawyersdaily.ca/articles/6965/the-pan-canadian-framework-on-climate-change-ontario-v-ottawa>
 [^5]: gov.bc.ca - BC Economic Accounts - GDP: <https://www2.gov.bc.ca/gov/content/data/statistics/economy/bc-economic-accounts-gdp>
 [^6]: government.se - Sweden's Carbon Tax: <https://www.government.se/government-policy/taxes-and-tariffs/swedens-carbon-tax/>
-[^6a]: Euractive - Sweden's new carbon tax: https://www.euractiv.com/section/climate-environment/news/swedens-new-carbon-tax/
+[^6a]: Euractive - Sweden's new carbon tax: <https://www.euractiv.com/section/climate-environment/news/swedens-new-carbon-tax/>
 [^7]: Chatelaine - Federal Carbon Tax: <https://www.chatelaine.com/living/politics/federal-carbon-tax-canada/>
 [^8]: <https://atlas.media.mit.edu/en/profile/country/swe/>
 [^9]: <https://atlas.media.mit.edu/en/profile/country/can>
