@@ -284,6 +284,10 @@ nav.navbar.sticky-top {
 }
 
 @media print {
+	#c-content {
+		font-size: 20px !important;
+	}
+
 	#c-content #markdown-toc {
 		display: none;
 	}

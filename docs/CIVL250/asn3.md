@@ -46,3 +46,10 @@ categories: CIVL 250
 - Visualization technology
 - Optic technology
 - Motion tracking technology
+
+- AR/VR can reduce costs of prototyping by building virtual environments
+  - Open house
+  - Material visualization
+  - Microsoft Hololens promotion video: faster and more efficient development
+- AR/VR can reduce the need to travel long distances
+- AR/VR training
