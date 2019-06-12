@@ -73,8 +73,10 @@
 
 <body>
 	{% include navigation.html %}
+	{% if page.watermark %}
+	{% include watermark text=page.watermark %}
+	{% endif %}
 	{{ content }}
-
 	<div class="container">
 		{% include footer.html %}
 	</div>

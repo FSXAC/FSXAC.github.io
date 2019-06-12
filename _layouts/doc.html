@@ -47,6 +47,9 @@
 </head>
 
 <body>
+{% if page.watermark %}
+{% include watermark.html text=page.watermark %}
+{% endif %}
 <header class="pt-5 pb-3">
 	<div class="container narrow">
 		{% if page.categories != empty %}

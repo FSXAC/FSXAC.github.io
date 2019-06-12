@@ -2,6 +2,7 @@
 title: SRL Project Assignment 4
 date: 2019-06-15
 categories: CIVL 250
+watermark: DRAFT
 ---
 
 # LOL Engineers LTD | 5 Page Briefing Note
@@ -26,6 +27,8 @@ To be removed: reference placeholders[^1][^2][^3][^4][^5][^6]
 ## Sustainable Issue(s) Relevant to the Spotlight SDGs
 
 <!--Provide a concise statement describing the 2 SDGs addressed in the BN, and your rationale for focusing on these SDGs.--> 
+
+The sustainability development goals (SDGs) are a set of objectives to pursuit a sustainable world. I will address SDG #4 and SDG #11, quality education and actions to climate change respectively.
 
 ## Background on Spotlight SDGs
 
