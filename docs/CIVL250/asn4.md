@@ -2,7 +2,7 @@
 title: SRL Project Assignment 4
 date: 2019-06-15
 categories: CIVL 250
-watermark: DRAFT
+watermark: DRAFT: brain dump 1
 ---
 
 # LOL Engineers LTD | 5 Page Briefing Note
@@ -22,7 +22,7 @@ watermark: DRAFT
 **Date**: 2019-06-15<br/>
 **Spotlight SDGs**: SDG #4 Quality Education and SDG #13 Actions in Climate Change.
 
-To be removed: reference placeholders[^1][^2][^3][^4][^5][^6]
+To be removed: reference placeholders[^b1][^b2][^b3][^b4][^b5][^b6]
 
 ## Sustainable Issue(s) Relevant to the Spotlight SDGs
 
@@ -30,9 +30,24 @@ To be removed: reference placeholders[^1][^2][^3][^4][^5][^6]
 
 The sustainability development goals (SDGs) are a set of objectives to pursuit a sustainable world. I will address SDG #4 and SDG #11, quality education and actions to climate change respectively.
 
+Quality education is about brining quality and engaging education to all. Increase access to education for everyone including women and minorities. The quality education goal also seek to increase accessibility which means growth in supply of teachers and school staff. Quality education increases inclusion in schools. Quality also implies effectiveness of education, and the outcome is that people who are educated are more knowledgeable.
+
+For actions against climate change, it is to make sure that our planet don't turn into a fucking fireball. Actions to deal with climate change could be direct actions such as planting trees, not be wasteful as much, and generally lower one's carbon emission.
+
 ## Background on Spotlight SDGs
 
 <!--Present details of your above rationale. What do your firm’s leadership team need in order to understand the relevance of the spotlight SDGs to the firm? For example, your firm’s clients are typically Canadian municipalities, provincial governments or sometimes the federal government. The firm also has clients from industry (e.g. the forest products sector, and hi-tech sector) and agricultural sector. So why are the spotlight SDGs relevant to potential clients? Is the Canadian context important?  Is engineering particularly critical to your spotlight SDGs? What other information will help the leadership team understand your recommendation and help them make the best decision?--> 
+
+**Temp checklist:**
+
+- [ ] Explain the spotlight SDGs to firm leadership
+  - [ ] Client: Canadian municipalities, governments
+  - [ ] Client: industry 
+- [ ] Relevant because it can save them costs from taxes
+- [ ] Canadian context is important
+- [ ] Engineering is critical to SDGs
+
+
 
 ## Current Global and National Status of Spotlight SDGs
 
@@ -43,6 +58,8 @@ The sustainability development goals (SDGs) are a set of objectives to pursuit a
 <!--Here, you should provide a summary of important considerations that lay the foundation for your recommended “engineered option” aimed at achieving the Spotlight SDGs. Remember, your aim is to present ideas and concepts that will help the firm’s leader make an informed decision on where the firm should develop their engineering expertise in order to support the SDGs. Keep these needs uppermost in your mind when selecting and presenting relevant information. Even if they don’t go for your recommended option below, your explanation here may spark ideas of their own leading to even better options than the one you are recommending.-->
 
 <!--Remember to substantiate any statements with evidence and to double check your facts. Additional details may be attached as appendices.-->
+
+(mention process efficiency, training and cost saving)
 
 ## Engineered Option
 
@@ -62,9 +79,9 @@ The sustainability development goals (SDGs) are a set of objectives to pursuit a
 
 
 
-[^1]: Kamarainen, A. M., Metcalf, S., Grotzer, T., Browne, A., Mazzuca, D., Tutwiler, M. S., & Dede, C. (2013). EcoMOBILE: Integrating augmented reality and probeware with environmental education field trips. Computers & Education, 68, 545-556. doi:10.1016/j.compedu.2013.02.018, from <https://www.sciencedirect.com/science/article/pii/S0360131513000572>
-[^2]: Merchant,  Z., Goetz, E. T., Cifuentes, L., Keeney-Kennicutt, W., & Davis, T.  J. (2014). Effectiveness of virtual reality-based instruction on  students learning outcomes in K-12 and higher education: A  meta-analysis. *Computers & Education,* *70*, 29-40. doi:10.1016/j.compedu.2013.07.033, from <https://www.sciencedirect.com/science/article/pii/S0360131513002108>
-[^3]: Nichols, G. (2019, January 19). Use Case: Augmented Reality finds early adoption with field service technicians. Retrieved May 25, 2019, from <https://www.zdnet.com/article/use-case-augmented-reality-finds-early-adoption-with-field-service-techs/>
-[^4]: Sommerauer,  P., & Müller, O. (2014). Augmented reality in informal learning  environments: A field experiment in a mathematics exhibition. *Computers & Education,* *79*, 59-68. doi:10.1016/j.compedu.2014.07.013, from <https://www.sciencedirect.com/science/article/pii/S036013151400164X>
-[^5]: Stauskis, G. (2014). Development of methods and practices of virtual reality as a tool for participatory urban planning: A case study of Vilnius City as an example for improving environmental, social and energy sustainability. Energy, Sustainability and Society, 4(1), 7. doi:10.1186/2192-0567-4-7, from <https://energsustainsoc.biomedcentral.com/articles/10.1186/2192-0567-4-7>
-[^6]: Steward, T. (2018, July 05). How Augmented Reality Will Change the Field Service Industry. Retrieved May 25, 2019, from <https://www.dispatch.me/augmented-reality-will-change-field-service-industry/>
+[^b1]: Kamarainen, A. M., Metcalf, S., Grotzer, T., Browne, A., Mazzuca, D., Tutwiler, M. S., & Dede, C. (2013). EcoMOBILE: Integrating augmented reality and probeware with environmental education field trips. Computers & Education, 68, 545-556. doi:10.1016/j.compedu.2013.02.018, from <https://www.sciencedirect.com/science/article/pii/S0360131513000572>
+[^b2]: Merchant,  Z., Goetz, E. T., Cifuentes, L., Keeney-Kennicutt, W., & Davis, T.  J. (2014). Effectiveness of virtual reality-based instruction on  students learning outcomes in K-12 and higher education: A  meta-analysis. *Computers & Education,* *70*, 29-40. doi:10.1016/j.compedu.2013.07.033, from <https://www.sciencedirect.com/science/article/pii/S0360131513002108>
+[^b3]: Nichols, G. (2019, January 19). Use Case: Augmented Reality finds early adoption with field service technicians. Retrieved May 25, 2019, from <https://www.zdnet.com/article/use-case-augmented-reality-finds-early-adoption-with-field-service-techs/>
+[^b4]: Sommerauer,  P., & Müller, O. (2014). Augmented reality in informal learning  environments: A field experiment in a mathematics exhibition. *Computers & Education,* *79*, 59-68. doi:10.1016/j.compedu.2014.07.013, from <https://www.sciencedirect.com/science/article/pii/S036013151400164X>
+[^b5]: Stauskis, G. (2014). Development of methods and practices of virtual reality as a tool for participatory urban planning: A case study of Vilnius City as an example for improving environmental, social and energy sustainability. Energy, Sustainability and Society, 4(1), 7. doi:10.1186/2192-0567-4-7, from <https://energsustainsoc.biomedcentral.com/articles/10.1186/2192-0567-4-7>
+[^b6]: Steward, T. (2018, July 05). How Augmented Reality Will Change the Field Service Industry. Retrieved May 25, 2019, from <https://www.dispatch.me/augmented-reality-will-change-field-service-industry/>
