@@ -2,6 +2,10 @@
 title: Sustainable Supply Chains
 date: 2019-05-28
 categories: CIVL 250
+<<<<<<< HEAD
+=======
+watermark: DRAFT
+>>>>>>> 8d451bbdfa60381254285e363a875119a0fb586f
 ---
 
 - toc
@@ -49,6 +53,13 @@ Material consumption is mostly construction materials (36%), fossil fuel (28%), 
      - Right to repair
 2. New business models based on process efficiencies.
 3. Consumer awareness
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 163f64e... Added module 5 lesson 1-2
+=======
+>>>>>>> 4e84b23... module 6 file
+>>>>>>> 8d451bbdfa60381254285e363a875119a0fb586f
 
 ## Biomimicry in Engineering Design
 

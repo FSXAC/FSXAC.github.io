@@ -2,6 +2,10 @@
 title: SRL Project Assignment 3
 date: 2019-06-01
 categories: CIVL 250
+<<<<<<< HEAD
+=======
+watermark: DRAFT
+>>>>>>> 8d451bbdfa60381254285e363a875119a0fb586f
 ---
 
 ## Brainstorming
@@ -45,4 +49,15 @@ categories: CIVL 250
 - Virtual reality (VR)
 - Visualization technology
 - Optic technology
+<<<<<<< HEAD
 - Motion tracking technology
+=======
+- Motion tracking technology
+
+- AR/VR can reduce costs of prototyping by building virtual environments
+  - Open house
+  - Material visualization
+  - Microsoft Hololens promotion video: faster and more efficient development
+- AR/VR can reduce the need to travel long distances
+- AR/VR training
+>>>>>>> 8d451bbdfa60381254285e363a875119a0fb586f

@@ -50,6 +50,11 @@ LDCs get exclusive access to support, such as:
 
 ## Humanitarian Engineering
 
+<<<<<<< HEAD
+=======
+One organization of humanitarian engineering is *Engineering Without Boarders*. 
+
+>>>>>>> 8d451bbdfa60381254285e363a875119a0fb586f
 ### Wicked Problems
 
 Sustainability/humanitarian problems are often unique, a symptom of another problem, and never-ending. These can be called "wicked" problems. To deal with this, try:
@@ -60,8 +65,89 @@ Sustainability/humanitarian problems are often unique, a symptom of another prob
 
 ### Ethical Frameworks
 
+<<<<<<< HEAD
 ### Failure
 
 
 
 ## Engineering Projects in LDCs
+=======
+Ethical considerations are significant in humanitarian work because it's easy for wealthy people to take advantage of those in need. We focus on four ethics frameworks.
+
+#### :blue_heart: Ethics of Care
+
+- There are vulnerable and less-vulnerable people, those who are less vulnerable should help those who are more vulnerable.
+- Interdependence not dependence. 
+- Lack of universal truth; consider contextual details.
+
+#### :medal_military: Non-Maleficence and Beneficence
+
+- Intention to avoid negligence and needless harm; minimize negative impact.
+- Actions should promote well-being of others.
+- Discourages selfish behavior.
+
+#### :arrows_counterclockwise: Ethical Pluralism
+
+- There are many theories of moral norms (what is right/wrong) which may be incompatible or incommensurable with one's personal moral norms.
+
+#### :ribbon: Feminism
+
+- More equal rights and legal protection for women.
+- Promote power sharing, leadership, and collaborative work to establish respect and acceptance for diversity.
+
+### Facing Failure
+
+It is hard to accept failures. We should embrace and accept failures, and learn from them. Make sure we don't make sure we don't make the same failures that other people makes.
+
+Publish failures: EWB publishes a public failure report. This affects funding from donors.
+
+## Engineering Projects in LDCs
+
+### Assessing for Sustainability
+
+There are **the seven questions** to sustainability that can help us start assessing the projects. The questions are:
+
+#### 1. Engagement​ :speech_balloon:
+
+> Are engagement processes in place and working effectively?
+
+#### 2. People :family:
+
+> Will people's well-being be maintained or improved?
+
+#### 3. Environment :ocean:
+
+> Is the integrity of the environment assured over the long term?
+
+#### 4. Economy :money_with_wings:
+
+> Is the economic viability of the project or operation assured, and will the economy of the community and beyond be better off as a result?
+
+#### 5. Traditional and Non-market Activities :house_with_garden:
+
+> Are traditional and non-market activities in the community and surrounding area accounted for in a way that is acceptable to the local people?
+
+#### 6. Institutional Arrangements and Governance :briefcase:
+
+> Are rules, incentives, programs, and capacities in place to address or operational consequences?
+
+#### 7. Synthesis and Continuous Learning :repeat:
+
+> Does a full synthesis show that the net result will be positive or negative in the long term, and will there be periodic reassessments?
+
+---
+
+### The Framework
+
+Each of the questions involve a hierarchy:
+
+```flow
+a=>operation: Question
+b=>operation: Ideal Answer
+c=>operation: Objectives
+d=>operation: Indicators
+e=>operation: Metrics
+a(right)->b(right)->c(right)->d(right)->e
+```
+
+>>>>>>> 8d451bbdfa60381254285e363a875119a0fb586f
