@@ -17,6 +17,8 @@ watermark: "DRAFT: brain dump 1"
 
 <!--Remember to submit your BN as a pdf.-->
 
+<!--Title, date, name sections are complete. Appropriate references , spelling is flawless, and grammar is also flawless. clear. Writing style is concise and clear. BN instructions are followed. Overall presentation of your BN is of a professional quality.-->
+
 **Title**: *Supporting spotlight SDGs with an engineered option*<br/>
 **Author**: Muchen He<br/>
 **Date**: 2019-06-15<br/>
@@ -51,6 +53,8 @@ Targets include:
 - Integrate climate change measures into national policies
 - Improve education, awareness-raising, and human and institutional capacity on climate change on mitigation, adaptation, impact reduction and early warning (relevant)
 
+<!--Clear understanding of sustainability is evident (see Module 1 for definitions and background information), Global and Canadian SDG targets and current achievement levels of SDG indicators are presented.-->
+
 ## Background on Spotlight SDGs
 
 <!--Present details of your above rationale. What do your firm’s leadership team need in order to understand the relevance of the spotlight SDGs to the firm? For example, your firm’s clients are typically Canadian municipalities, provincial governments or sometimes the federal government. The firm also has clients from industry (e.g. the forest products sector, and hi-tech sector) and agricultural sector. So why are the spotlight SDGs relevant to potential clients? Is the Canadian context important?  Is engineering particularly critical to your spotlight SDGs? What other information will help the leadership team understand your recommendation and help them make the best decision?--> 
@@ -64,7 +68,11 @@ Targets include:
 - [ ] Canadian context is important
 - [ ] Engineering is critical to SDGs
 
+We chose quality education because education is relevant towards everyone at a wide range of ages. Since in Canada education is mostly public, and since our clients consist of Canadian municipalities, provincial governments, and sometimes the federal government. It would be a good idea to get funding while improving the goals in SDG #4 throughout the nation and ultimately around the world.
 
+In the long term, a better access to quality education will produce top talents and people with a lot of skills that can work in engineering, furthering the pursuit of sustainability. Which means money for us.
+
+We have clients in the industry that could use better efficiencies to combat climate change. It will help in addition to potential government policies that limit emissions (for example). Since Canada has just introduced carbon emissions, working towards SDG #13 is crucial to our clients since process efficiency is key.
 
 ## Current Global and National Status of Spotlight SDGs
 
@@ -87,7 +95,19 @@ Targets include:
 
 <!--Remember to substantiate any statements with evidence and to double check your facts. Additional details may be attached as appendices.-->
 
-(mention process efficiency, training and cost saving)
+Consider that government is looking for alternative methods to improve our education rates. increase engagement means that more people are taking in the knowledge. We need to increase inclusion and the number of minorities that attend secondary and post-secondary education. So that we can have more skilled population, and overall increased productivity to work towards sustainability.
+
+Having a more diverse pool of idea-makers will generally result in the best solution.
+
+In industries, efficiency is key. Increasing training effectiveness and reduce hours wasted and provide increased productivity. Also maintenance and repair is often expensive and not very efficient, so it would be nice to improve in that respect. 
+
+Government policies will be dropping in the next few years to pursue goal #13. Companies, especially entrepreneurs and smaller businesses need consulting in efficient processes.
+
+Actions on being resilient in hazardous weather or climates is also important, and education on this is important too.
+
+Urban design and other collaboration towards sustainability could be improved with AR/VR.
+
+<!--Sustainability context for the engineered option is presented. For example, here are some questions that may (or may not) be key considerations. -What are other engineering firms doing in this area? -What is the client understanding of, and/or demand for, the engineered option? -What are possible problems? What are possible unintended consequences? -What are possible Long-term and/or Indirect implications? This is where you demonstrate systems thinking!-->
 
 ## Engineered Option
 
@@ -95,13 +115,31 @@ Targets include:
 
 <!--Make sure to provide the justification for this recommendation and, where appropriate, make reference to the considerations you mention above.-->
 
+VR and AR technology is the engineered option to pursue SDG goals #4 and #13. VR and AR technology are similar in that VR is entirely virtual, while AR integrates the tracking and visualization of VR on top of the real optics.
+
+VR and AR can drastically improve education engagement, and lead to better education output. People that go through the education system will be more knowledgeable and possess the skill to combat climate change, and other engineering problems. It can also provide a realistic and bigger picture of the problems that we are attacking such as climate change.
+
+VR and AR is also accessible. In recent development by Google and Apple, and other internet companies. AR and VR can run on smartphones natively. The smartphone is single handedly the most accessible device on the planet, even more than toilets. Using smartphones, more people can have access to quality education content than ever. It progresses in goals for quality education such as increasing inclusion by providing education to women and those who are vulnerable for free via the internet. 
+
+Governments can invest in our technology to use in education.
+
+(mention process efficiency, training and cost saving)
+
+<!--Concise description of option you are recommending, and justification for your recommendation that relates the option to the interests of the engineering firm, and also who the engineered option relates to sustainability.-->
+
 ## A Systems View
 
 <!--Using either a concept map OR a causal loop diagram, graphically present the connections between, and implications of, your recommended engineered option about which the firm may want to develop expertise, and the spotlighted SDGs. This will graphically reinforce the value of your recommendation. Use your best judgement in terms of the size of the graphic image you wish to present. You are welcome to draw your map or CLD but you need to make sure that it is legible and professionally presented.-->
 
+<!--The Cmap or CLD is a graphic representation of your systems thinking. Be sure to present an improved version of your your SRL 3.-->
+
 ## Recommendation and Conclusion
 
 <!--Summarize what you want your firm’s leadership team to infer from this BN. Be sure this section concisely covers the points you most want the team to be clear about. Do not introduce anything new in this section. Make sure the recommendation is clear, direct and substantiated by the facts you have put forward. You are gracefully summing up everything you have previously mentioned.-->
+
+I recommend investing and developing in the area of AR/VR technology as it will significantly improve quality of education, local, and abroard because of its accessbility, effectiveness, and affordability.
+
+<!--Summarize your BN and concisely state your recommendation to your engineering firm.-->
 
 
 

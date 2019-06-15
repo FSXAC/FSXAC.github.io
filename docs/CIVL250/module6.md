@@ -62,6 +62,11 @@ Sustainability/humanitarian problems are often unique, a symptom of another prob
 
 ### Ethical Frameworks
 
+### Failure
+
+
+
+## Engineering Projects in LDCs
 Ethical considerations are significant in humanitarian work because it's easy for wealthy people to take advantage of those in need. We focus on four ethics frameworks.
 
 #### :blue_heart: Ethics of Care

@@ -50,10 +50,6 @@ Material consumption is mostly construction materials (36%), fossil fuel (28%), 
      - Right to repair
 2. New business models based on process efficiencies.
 3. Consumer awareness
-<<<<<<< HEAD
->>>>>>> 163f64e... Added module 5 lesson 1-2
-=======
->>>>>>> 4e84b23... module 6 file
 
 ## Biomimicry in Engineering Design
 
