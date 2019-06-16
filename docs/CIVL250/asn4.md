@@ -2,11 +2,13 @@
 title: SRL Project Assignment 4
 date: 2019-06-15
 categories: CIVL 250
-watermark: "DRAFT: brain dump 1"
+watermark: "Crunch time"
 ---
 
 # LOL Engineers LTD | 5 Page Briefing Note
 
+- toc
+{:toc}
 <!--Briefing Note Template-->
 
 <!--This briefing note should be no more than 5 pages in length. Your submission should have the same font, spacing, and margins as this document -- i.e. to create your BN, fill in this document, without modifying the font, spacing, and margins.--> 
@@ -19,7 +21,7 @@ watermark: "DRAFT: brain dump 1"
 
 <!--Title, date, name sections are complete. Appropriate references , spelling is flawless, and grammar is also flawless. clear. Writing style is concise and clear. BN instructions are followed. Overall presentation of your BN is of a professional quality.-->
 
-**Title**: *Supporting spotlight SDGs with an engineered option*<br/>
+**Title**: Virtual and Augmented Reality for Education and Climate Change<br/>
 **Author**: Muchen He<br/>
 **Date**: 2019-06-15<br/>
 **Spotlight SDGs**: SDG #4 Quality Education and SDG #13 Actions in Climate Change.
@@ -32,9 +34,17 @@ To be removed: reference placeholders[^b1][^b2][^b3][^b4][^b5][^b6][^sdg4][^sdg1
 
 The sustainability development goals (SDGs) are a set of objectives to pursuit a sustainable world. I will address SDG #4 and SDG #11, quality education and actions to climate change respectively.
 
-Quality education is about brining quality and engaging education to all. Increase access to education for everyone including women and minorities. The quality education goal also seek to increase accessibility which means growth in supply of teachers and school staff. Quality education increases inclusion in schools. Quality also implies effectiveness of education, and the outcome is that people who are educated are more knowledgeable.
+### SDG #4: Quality Education
 
-Targets include: 
+#### What is it?
+
+SDG #4 involves providing quality and engaging education to everyone, including women and minorities. 
+
+The quality education goal also seek to increase accessibility which means growth in supply of teachers and school staff. Quality education increases inclusion in schools. Quality also implies effectiveness of education, and the outcome is that people who are educated are more knowledgeable.
+
+#### Targets
+
+Targets for SDG #4 include: 
 
 - ensure all girls and boys have access to free, equitable, and quality education leading to relevant and effective learning outcomes. 
 - ensure quality early childhood development for preparation for primary education
@@ -45,49 +55,93 @@ Targets include:
 - all learners acquire the knowledge and skills needed to promote sustainable development
 - increase supply of qualified teachers
 
-For actions against climate change, it is to make sure that our planet don't turn into a fucking fireball. Actions to deal with climate change could be direct actions such as planting trees, not be wasteful as much, and generally lower one's carbon emission.
+#### Rationale
 
-Targets include:
+It is important that we focus on SDG #4 because it lays the foundation to help solve our sustainable problems by equipping the future generation with the skills and mindset they need. Focusing on education will also yield higher productivity and more educated and skilled employees in the long-term future.
+
+### SDG #13: Climate Action
+
+#### What is it?
+
+For SDG #13, the goal is to take urgent actions against climate change, to mitigate climate-related hazards, and minimize further damage to the planet as well as the potential damages to what's already done. Actions also include increasing the resilience and adaptive capacity, implementing regulations, and improve education, and direct actions to reduce emissions.
+
+#### Targets
+
+The relevant targets consist of:
 
 - Strengthen resilience and adaptive capacity to climate related hazards and natural disasters in all countries
 - Integrate climate change measures into national policies
 - Improve education, awareness-raising, and human and institutional capacity on climate change on mitigation, adaptation, impact reduction and early warning (relevant)
 
+#### Rationale
+
+One of the target for climate action goes hand-in-hand with improving education and awareness of human impacts on the planet capacity. It is important to consider the policies and strategies that government can put into place to integrate climate change measures, and it could affect businesses greatly. Development of more efficient processes in businesses and industries could cut down costs and reduce emission, ultimately a direct action to combat climate change.
+
 <!--Clear understanding of sustainability is evident (see Module 1 for definitions and background information), Global and Canadian SDG targets and current achievement levels of SDG indicators are presented.-->
 
 ## Background on Spotlight SDGs
 
-<!--Present details of your above rationale. What do your firm’s leadership team need in order to understand the relevance of the spotlight SDGs to the firm? For example, your firm’s clients are typically Canadian municipalities, provincial governments or sometimes the federal government. The firm also has clients from industry (e.g. the forest products sector, and hi-tech sector) and agricultural sector. So why are the spotlight SDGs relevant to potential clients? Is the Canadian context important?  Is engineering particularly critical to your spotlight SDGs? What other information will help the leadership team understand your recommendation and help them make the best decision?--> 
+<!--
+Present details of your above rationale. 
+What do your firm’s leadership team need in order to understand the relevance of the spotlight SDGs to the firm? 
+For example, your firm’s clients are typically Canadian municipalities, provincial governments or sometimes the federal government. 
+The firm also has clients from industry (e.g. the forest products sector, and hi-tech sector) and agricultural sector. 
+So why are the spotlight SDGs relevant to potential clients? 
+Is the Canadian context important?  Is engineering particularly critical to your spotlight SDGs? 
+What other information will help the leadership team understand your recommendation and help them make the best decision?
+-->
 
-**Temp checklist:**
+### Rationale Details
 
-- [ ] Explain the spotlight SDGs to firm leadership
-  - [ ] Client: Canadian municipalities, governments
-  - [ ] Client: industry 
-- [ ] Relevant because it can save them costs from taxes
-- [ ] Canadian context is important
-- [ ] Engineering is critical to SDGs
+#### Regarding SDG #4
 
-We chose quality education because education is relevant towards everyone at a wide range of ages. Since in Canada education is mostly public, and since our clients consist of Canadian municipalities, provincial governments, and sometimes the federal government. It would be a good idea to get funding while improving the goals in SDG #4 throughout the nation and ultimately around the world.
+The focus on quality education is important because it is applicable to everyone in wide ranges of geography, age, race, and skill-level. Our clients which consist of many Canadian municipal and provincial governments are highly relevant to SDG #4 as many education institutions are public. This also means increased chances of government funding or subsidiaries for investing effort in this goal.
 
-In the long term, a better access to quality education will produce top talents and people with a lot of skills that can work in engineering, furthering the pursuit of sustainability. Which means money for us.
+By increasing the education levels in the population, we also increase the number of jobs as well as pool of skilled and knowledgeable workers to contribute to sustainability. 
 
-We have clients in the industry that could use better efficiencies to combat climate change. It will help in addition to potential government policies that limit emissions (for example). Since Canada has just introduced carbon emissions, working towards SDG #13 is crucial to our clients since process efficiency is key.
+#### Regarding SDG #13
+
+The focus on climate actions is also important as it affects businesses, industries, and governments, all of which are our clients. 
+
+While it is essential that we reduce our emissions and pollutions, and overall effects on the planet, government intervention is inevitable and will impact industries. 
+
+As already demonstrated in Canada with the implementation of federal-level carbon tax, many industries such as agriculture are taking a hit [CITATION]. 
+
+The economy can be buffered if they have more efficient processes and better training to better circumvent the problems. 
+
+It is extremely relevant to our clients because we should contribute to SDG #13 by providing technology that better transitions the population and businesses to contribute SDG 13.
+
+**Old text:**
+
+> We chose quality education because education is relevant towards everyone at a wide range of ages. Since in Canada education is mostly public, and since our clients consist of Canadian municipalities, provincial governments, and sometimes the federal government. It would be a good idea to get funding while improving the goals in SDG #4 throughout the nation and ultimately around the world.
+>
+> In the long term, a better access to quality education will produce top talents and people with a lot of skills that can work in engineering, furthering the pursuit of sustainability. Which means money for us.
+>
+> We have clients in the industry that could use better efficiencies to combat climate change. It will help in addition to potential government policies that limit emissions (for example). Since Canada has just introduced carbon emissions, working towards SDG #13 is crucial to our clients since process efficiency is key.
 
 ## Current Global and National Status of Spotlight SDGs
 
 <!--Describe the current levels of SDG achievement at the global and national levels, including the current achieved level of global and Canadian indicators.--> 
 
-**Temp checklist:**
+### Progress SDG #4
 
-- [ ] Global status on #4
+The targets for quality education mainly consists of: accessibility and participation, gender equality, and effectiveness in primary, secondary, and post-secondary educations. Also part of the targets are all learners have adequate skills for employment, entrepreneurship, as well as to promote sustainable development.
 
-- Participation in early development and primary education is 70% in 2016. Increased from 63% in 2010.
-- 85% of the primary school teachers are trained in 2016, but only 71% in south asia, and 61% in sub-saharan africa
+In least developed countries, problems regarding education are resolved slowly. In the 2016 report, the majority of problems arise from no access to education due to disparities such as being female or poor. The completion rates for primary and secondary education increased steadily since 2000 in developing and developed regions: 72% and 91% respectively in 2013. The total financial assistance amounts to \$1.2B[^prog4_2016].
 
-- [ ] Global status on #13
-- [ ] Nation status on #4
-- [ ] Nation status on #13
+In the 2017 report, the admission rate for primary and secondary schools gained significantly. However equity was still an issue as poor families could not afford to go to school. It is also reported that there are a shortage of trained teachers that hinders quality education. Only about 44%, 74% and 55% of the teachers are trained in pre-primary, primary, and secondary schools respectively. The total financial assistance decreased to \$1.0B[^prog4_2017].
+
+In the 2018 report, early childhood participation was reported to increase by 7% from 63% between 2010 and 2016. The percentage of trained teachers increased to 85% globally[^prog4_2018]. 
+
+In Canada, the education of the population has generally increased. In 2016, 54% of Canadians have post-secondary education, a rise of 6% since 2006, this makes Canada highest proportion of graduates among OECD countries[^prog4_a]. Similarly, participation of women in post-secondary education also increased from 32% to 41%.
+
+Overall, the progression to the SDG #4 globally is very slow. The main problem are mostly lack of proper training and incentive for children to attend school. Due to poor engagement, participation, and lack of funding. However, Canada is leading by being one of the most educated countries, achieving most indicators specified by SDG #4.
+
+### Progress SDG #13
+
+
+
+
 
 ## Key Considerations
 
@@ -131,6 +185,8 @@ Governments can invest in our technology to use in education.
 
 <!--Using either a concept map OR a causal loop diagram, graphically present the connections between, and implications of, your recommended engineered option about which the firm may want to develop expertise, and the spotlighted SDGs. This will graphically reinforce the value of your recommendation. Use your best judgement in terms of the size of the graphic image you wish to present. You are welcome to draw your map or CLD but you need to make sure that it is legible and professionally presented.-->
 
+![Concept map](assets/asn4_concept_map.png)
+
 <!--The Cmap or CLD is a graphic representation of your systems thinking. Be sure to present an improved version of your your SRL 3.-->
 
 ## Recommendation and Conclusion
@@ -153,3 +209,8 @@ I recommend investing and developing in the area of AR/VR technology as it will 
 [^b6]: Steward, T. (2018, July 05). How Augmented Reality Will Change the Field Service Industry. Retrieved May 25, 2019, from <https://www.dispatch.me/augmented-reality-will-change-field-service-industry/>
 [^sdg13]: United Nations. (2015). Goal 13: Sustainable Development Knowledge Platform. (n.d.). Retrieved June 13, 2019, from <https://sustainabledevelopment.un.org/sdg13>
 [^sdg4]: United Nations. (2015). Goal 4: Sustainable Development Knowledge Platform. (n.d.). Retrieved June 13, 2019, from <https://sustainabledevelopment.un.org/sdg4>
+[^prog4_2016]: United Nations. (2016). Reports of the Secretary-General, "Progress towards the Sustainable Development Goals". Retrieved June 14, 2019, from <https://www.un.org/ga/search/view_doc.asp?symbol=E/2016/75&Lang=E
+[^prog4_2017]: United Nations. (2017). Reports of the Secretary-General, "Progress towards the Sustainable Development Goals". Retrieved June 14, 2019, from <https://www.un.org/ga/search/view_doc.asp?symbol=E/2017/66&Lang=E
+[^prog4_2018]: United Nations. (2018). Reports of the Secretary-General, The Sustainable Development Goals Report 2018/ Retrieved June 14, 2019, from <https://unstats.un.org/sdgs/report/2018>
+[^prog4_a]: Statistics Canada. (2017, November 29). Education in Canada: Key results from the 2016 Census. Retrieved June 15, 2019, from <https://www150.statcan.gc.ca/n1/daily-quotidien/171129/dq171129a-eng.htm>
+
