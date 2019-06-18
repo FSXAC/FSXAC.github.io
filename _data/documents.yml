@@ -23,135 +23,135 @@
     # - title: 'Milestone 2 Feedback'
     #   link: 'https://lcall3.github.io/Demo2Feedback/'
     - title: 'Milestone 2 Report'
-      link: '/docs/ELEC391/demo2.pdf'
+      link: '/documents/ELEC391/demo2.pdf'
     - title: 'Milestone 2 Mechanical Drawings'
-      link: '/docs/ELEC391/demo2drawing.pdf'
+      link: '/documents/ELEC391/demo2drawing.pdf'
     - title: 'Milestone 3 Report'
-      link: '/docs/ELEC391/demo3.pdf'
+      link: '/documents/ELEC391/demo3.pdf'
   - course_num: 'ELEC 301'
     course_name: 'Electronic Circuits'
     date: 2017-12-17
     entries:
     - title: 'Chapter 1-7'
-      link: '/docs/ELEC301/ELEC301-1-7.pdf'
+      link: '/documents/ELEC301/ELEC301-1-7.pdf'
     - title: 'Chapter 8 (BJT Amplifiers)'
-      link: '/docs/ELEC301/ELEC301-8.pdf'
+      link: '/documents/ELEC301/ELEC301-8.pdf'
     - title: 'Chapter 9 (Amplifier Biasing)'
-      link: '/docs/ELEC301/ELEC301-9.pdf'
+      link: '/documents/ELEC301/ELEC301-9.pdf'
     - title: 'Chapter 10 (Common-Emitter Amplifier)'
-      link: '/docs/ELEC301/ELEC301-10.pdf'
+      link: '/documents/ELEC301/ELEC301-10.pdf'
     - title: 'Chapter 11 (Common-Base Amplifier)'
-      link: '/docs/ELEC301/ELEC301-11.pdf'
+      link: '/documents/ELEC301/ELEC301-11.pdf'
     - title: 'Chapter X (Cascode Amplifier)'
-      link: '/docs/ELEC301/ELEC301-X.pdf'
+      link: '/documents/ELEC301/ELEC301-X.pdf'
     - title: 'Chapter 12 (Common-Collector Amplifier)'
-      link: '/docs/ELEC301/ELEC301-12.pdf'
+      link: '/documents/ELEC301/ELEC301-12.pdf'
     - title: 'Chapter 13 (Differential Amplifier)'
-      link: '/docs/ELEC301/ELEC301-13.pdf'
+      link: '/documents/ELEC301/ELEC301-13.pdf'
     - title: 'Chapter 14 (Diff. Amp. Frequency Response)'
-      link: '/docs/ELEC301/ELEC301-14.pdf'
+      link: '/documents/ELEC301/ELEC301-14.pdf'
     - title: 'Chapter 15 (OPAMP)'
-      link: '/docs/ELEC301/ELEC301-15.pdf'
+      link: '/documents/ELEC301/ELEC301-15.pdf'
     - title: 'Chapter 16 (OPAMP Non-Idealities)'
-      link: '/docs/ELEC301/ELEC301-16.pdf'
+      link: '/documents/ELEC301/ELEC301-16.pdf'
     - title: 'Chapter 17 (Feedback)'
-      link: '/docs/ELEC301/ELEC301-17.pdf'
+      link: '/documents/ELEC301/ELEC301-17.pdf'
     - title: 'Chapter 18 (I/O Impedance Control)'
-      link: '/docs/ELEC301/ELEC301-18.pdf'
+      link: '/documents/ELEC301/ELEC301-18.pdf'
     - title: 'Chapter 19 (Two-Port Networks)'
-      link: '/docs/ELEC301/ELEC301-19.pdf'
+      link: '/documents/ELEC301/ELEC301-19.pdf'
     - title: 'Chapter 20 (Stability)'
-      link: '/docs/ELEC301/ELEC301-20.pdf'
+      link: '/documents/ELEC301/ELEC301-20.pdf'
     - title: 'Problem Set'
       group:
       - enum: 1
-        link: '/docs/ELEC301/ELEC301-PS1.pdf'
+        link: '/documents/ELEC301/ELEC301-PS1.pdf'
       - enum: 2
-        link: '/docs/ELEC301/ELEC301-PS2.pdf'
+        link: '/documents/ELEC301/ELEC301-PS2.pdf'
       - enum: 3
-        link: '/docs/ELEC301/ELEC301-PS3.pdf'
+        link: '/documents/ELEC301/ELEC301-PS3.pdf'
       - enum: 4
-        link: '/docs/ELEC301/ELEC301-PS4.pdf'
+        link: '/documents/ELEC301/ELEC301-PS4.pdf'
       - enum: 5
-        link: '/docs/ELEC301/ELEC301-PS5.pdf'
+        link: '/documents/ELEC301/ELEC301-PS5.pdf'
       - enum: 6
-        link: '/docs/ELEC301/ELEC301-PS6.pdf'
+        link: '/documents/ELEC301/ELEC301-PS6.pdf'
       - enum: 7
-        link: '/docs/ELEC301/ELEC301-PS7.pdf'
+        link: '/documents/ELEC301/ELEC301-PS7.pdf'
     - title: 'MP1 Report'
-      link: '/docs/ELEC301/MP1.pdf'
+      link: '/documents/ELEC301/MP1.pdf'
     - title: 'MP2 Report'
-      link: '/docs/ELEC301/MP2.pdf'
+      link: '/documents/ELEC301/MP2.pdf'
     - title: 'MP3 Report'
-      link: '/docs/ELEC301/MP3.pdf'
+      link: '/documents/ELEC301/MP3.pdf'
     - title: 'MP4 Report'
-      link: '/docs/ELEC301/MP4.pdf'
+      link: '/documents/ELEC301/MP4.pdf'
   - course_num: 'ELEC 321'
     course_name: 'Stochastic Signals and Systems'
     date: 2018-03-14
     entries:
     - title: 'Probability'
-      link: '/docs/ELEC321/Module1'
+      link: '/documents/ELEC321/Module1'
     - title: 'Conditional Probability'
-      link: '/docs/ELEC321/Module2'
+      link: '/documents/ELEC321/Module2'
     - title: 'Random Variable'
-      link: '/docs/ELEC321/Module3'
+      link: '/documents/ELEC321/Module3'
     - title: 'Normal Distribution'
-      link: '/docs/ELEC321/Module4'
+      link: '/documents/ELEC321/Module4'
     - title: 'Discrete Random Vector'
-      link: '/docs/ELEC321/Module5'
+      link: '/documents/ELEC321/Module5'
     - title: 'Continuous Random Vector'
-      link: '/docs/ELEC321/Module5b'
+      link: '/documents/ELEC321/Module5b'
     - title: 'Multivariate Normal'
-      link: '/docs/ELEC321/Module6'
+      link: '/documents/ELEC321/Module6'
     - title: 'Three Important Distributions'
-      link: '/docs/ELEC321/Part2-2'
+      link: '/documents/ELEC321/Part2-2'
     - title: 'Generating Random Variables'
-      link: '/docs/ELEC321/Part2-3'
+      link: '/documents/ELEC321/Part2-3'
     - title: 'Random Processes'
-      link: '/docs/ELEC321/Part2-4'
+      link: '/documents/ELEC321/Part2-4'
     - title: 'Information Theory'
-      link: '/docs/ELEC321/Part2-5'
+      link: '/documents/ELEC321/Part2-5'
     - title: 'Markov Processes'
-      link: '/docs/ELEC321/Part2-6'
+      link: '/documents/ELEC321/Part2-6'
     # - title: 'Part 2.7 (Least Square Estimate)'
-    #   link: '/docs/ELEC321/Part2-7'
+    #   link: '/documents/ELEC321/Part2-7'
     #   flag: draft
     # - title: 'Part 2.8 (MMSE)'
-    #   link: '/docs/ELEC321/Part2-8'
+    #   link: '/documents/ELEC321/Part2-8'
     #   flag: draft
     - title: 'Tutorial'
       group:
       - enum: 1
-        link: '/docs/ELEC321/T1'
+        link: '/documents/ELEC321/T1'
       - enum: 2
-        link: '/docs/ELEC321/T2'
+        link: '/documents/ELEC321/T2'
       - enum: 3
-        link: '/docs/ELEC321/T3'
+        link: '/documents/ELEC321/T3'
       - enum: 9
-        link: '/docs/ELEC321/T9'
+        link: '/documents/ELEC321/T9'
       - enum: 12
-        link: '/docs/ELEC321/T12'
+        link: '/documents/ELEC321/T12'
     - title: 'Review Session'
-      link: '/docs/ELEC321/review'
+      link: '/documents/ELEC321/review'
   - course_num: 'ELEC 341'
     course_name: 'Systems and Control'
     date: 2019-03-30
     entries:
     - title: 'Week 1'
-      link: '/docs/ELEC341/week1'
+      link: '/documents/ELEC341/week1'
     - title: 'Week 2'
-      link: '/docs/ELEC341/week2'
+      link: '/documents/ELEC341/week2'
     - title: 'Week 3 - Laplace Transforms'
-      link: '/docs/ELEC341/week3'
+      link: '/documents/ELEC341/week3'
     - title: 'Week 4 - Electro-Mechanical Equivalences'
-      link: '/docs/ELEC341/week4'
+      link: '/documents/ELEC341/week4'
     - title: 'MATLAB Tutorial'
-      link: '/docs/ELEC341/matlab'
+      link: '/documents/ELEC341/matlab'
     - title: 'Design Project Part 1 Report'
-      link: '/docs/ELEC341/ELEC341-Project1.pdf'
+      link: '/documents/ELEC341/ELEC341-Project1.pdf'
     - title: 'Design Project Part 2 Report'
-      link: '/docs/ELEC341/ELEC341-Project2.pdf'
+      link: '/documents/ELEC341/ELEC341-Project2.pdf'
   - course_num: 'ELEC 342'
     course_name: 'Electro-Mechanical Energy Conversion'
   - course_num: 'ELEC 201'
@@ -165,9 +165,9 @@
     date: 2019-03-08
     entries:
     - title: 'Project 1 Report: Reflow Oven Controller'
-      link: '/docs/ELEC291/Project1'
+      link: '/documents/ELEC291/Project1'
     - title: 'Project 2 Report: Magnetic Field Tracking Robot'
-      link: '/docs/ELEC291/Project2'
+      link: '/documents/ELEC291/Project2'
 - category: Computer
   courses:
   - course_num: 'CPEN 311'
@@ -175,61 +175,61 @@
     date: 2019-04-02
     entries:
     - title: 'Combinational Logic'
-      link: '/docs/CPEN311/SS1A'
+      link: '/documents/CPEN311/SS1A'
     - title: 'Sequential Logic'
-      link: '/docs/CPEN311/SS1B'
+      link: '/documents/CPEN311/SS1B'
     - title: 'Finite State Machine'
-      link: '/docs/CPEN311/SS2A'
+      link: '/documents/CPEN311/SS2A'
     - title: 'Hierarchy'
-      link: '/docs/CPEN311/SS2B'
+      link: '/documents/CPEN311/SS2B'
     - title: 'Synthesizable Verilog'
-      link: '/docs/CPEN311/SS3'
+      link: '/documents/CPEN311/SS3'
     - title: 'Datapath I'
-      link: '/docs/CPEN311/SS4'
+      link: '/documents/CPEN311/SS4'
     - title: 'Datapath II'
-      link: '/docs/CPEN311/SS5'
+      link: '/documents/CPEN311/SS5'
     - title: 'Datapath III'
-      link: '/docs/CPEN311/SS6'
+      link: '/documents/CPEN311/SS6'
     - title: 'Loops, Generate, and Tristates'
-      link: '/docs/CPEN311/SS7'
+      link: '/documents/CPEN311/SS7'
     - title: 'On-Chip Debug'
-      link: '/docs/CPEN311/SS8'
+      link: '/documents/CPEN311/SS8'
     - title: 'Fractional Numbers'
-      link: '/docs/CPEN311/SS9'
+      link: '/documents/CPEN311/SS9'
     - title: 'FPGA Architecture'
-      link: '/docs/CPEN311/SS10'
+      link: '/documents/CPEN311/SS10'
     - title: 'Debugging Techniques'
-      link: '/docs/CPEN311/SS10X'
+      link: '/documents/CPEN311/SS10X'
     - title: 'On-Board Memory'
-      link: '/docs/CPEN311/SS11'
+      link: '/documents/CPEN311/SS11'
     - title: 'System-on-Chip'
-      link: '/docs/CPEN311/SS12'
+      link: '/documents/CPEN311/SS12'
     - title: 'Circuit Timing'
-      link: '/docs/CPEN311/SS13'
+      link: '/documents/CPEN311/SS13'
     - title: 'Circuit Timing II'
-      link: '/docs/CPEN311/SS14'
+      link: '/documents/CPEN311/SS14'
     - title: 'Metastability'
-      link: '/docs/CPEN311/SS15'
+      link: '/documents/CPEN311/SS15'
     - title: 'Power'
-      link: '/docs/CPEN311/SS16'
+      link: '/documents/CPEN311/SS16'
     - title: 'High Level Synthesis'
-      link: '/docs/CPEN311/SS17X'
+      link: '/documents/CPEN311/SS17X'
     - title: 'Asynchronous Logic'
-      link: '/docs/CPEN311/SS17'
+      link: '/documents/CPEN311/SS17'
     - title: 'Asynchronous Datapath'
-      link: '/docs/CPEN311/SS18'
+      link: '/documents/CPEN311/SS18'
     - title: 'Problem Set'
       group:
       - enum: 1
-        link: '/docs/CPEN311/ps1'
+        link: '/documents/CPEN311/ps1'
       - enum: 2
-        link: '/docs/CPEN311/ps2'
+        link: '/documents/CPEN311/ps2'
       - enum: 3
-        link: '/docs/CPEN311/ps3'
+        link: '/documents/CPEN311/ps3'
       - enum: 4
-        link: '/docs/CPEN311/ps4.pdf'
+        link: '/documents/CPEN311/ps4.pdf'
       - enum: 5
-        link: '/docs/CPEN311/ps5.pdf'
+        link: '/documents/CPEN311/ps5.pdf'
   - course_num: 'CPEN 211'
     course_name: 'Microcomputers'
   - course_num: 'CPSC 259'
@@ -239,7 +239,7 @@
     date: 2018-03-11
     entries:
     - title: 'Final Review'
-      link: '/docs/APSC160/APSC-160-Final-Review'
+      link: '/documents/APSC160/APSC-160-Final-Review'
 - category: Mathematics
   courses:
   - course_num: 'MATH 220'
@@ -247,7 +247,7 @@
     date: 2017-12-17
     entries:
     - title: 'Final Review'
-      link: '/docs/MATH220/FinalReview'
+      link: '/documents/MATH220/FinalReview'
   - course_num: 'MATH 264'
     course_name: 'Vector Calculus'
   - course_num: 'MATH 256'
@@ -265,144 +265,144 @@
     date: 2018-07-22
     entries:
     - title: 'General Economic Concepts'
-      link: '/docs/MECH431/Lesson 2'
+      link: '/documents/MECH431/Lesson 2'
     - title: 'Cost Models & Estimation'
-      link: '/docs/MECH431/Lesson 3'
+      link: '/documents/MECH431/Lesson 3'
     - title: 'Payback Period and Benefit Benefit Analysis'
-      link: '/docs/MECH431/Lesson 4'
+      link: '/documents/MECH431/Lesson 4'
     - title: 'Time Value of Money & Interests'
-      link: '/docs/MECH431/Lesson 5'
+      link: '/documents/MECH431/Lesson 5'
     - title: 'Cashflow Series'
-      link: '/docs/MECH431/Lesson 7'
+      link: '/documents/MECH431/Lesson 7'
     - title: 'Sources of Capital'
-      link: '/docs/MECH431/Lesson 7A'
+      link: '/documents/MECH431/Lesson 7A'
     - title: 'Present Worth Analysis'
-      link: '/docs/MECH431/Lesson 8'
+      link: '/documents/MECH431/Lesson 8'
     - title: 'Equivalent Annual Cashflow Analysis'
-      link: '/docs/MECH431/Lesson 9'
+      link: '/documents/MECH431/Lesson 9'
     - title: 'Rate of Return Analysis'
-      link: '/docs/MECH431/Lesson 10'
+      link: '/documents/MECH431/Lesson 10'
     - title: 'Incremental Analysis'
-      link: '/docs/MECH431/Lesson 11'
+      link: '/documents/MECH431/Lesson 11'
     - title: 'Future Value Analysis & Benefit Cost Ratio'
-      link: '/docs/MECH431/Lesson 12'
+      link: '/documents/MECH431/Lesson 12'
     - title: 'Sensitivity Analysis'
-      link: '/docs/MECH431/Lesson 13'
+      link: '/documents/MECH431/Lesson 13'
     - title: 'Risk Analysis I (Probability)'
-      link: '/docs/MECH431/Lesson 14'
+      link: '/documents/MECH431/Lesson 14'
     - title: 'Risk Analysis II (Simulation)'
-      link: '/docs/MECH431/Lesson 15'
+      link: '/documents/MECH431/Lesson 15'
     - title: 'Depreciation'
-      link: '/docs/MECH431/Lesson 16'
+      link: '/documents/MECH431/Lesson 16'
     - title: 'Taxes'
-      link: '/docs/MECH431/Lesson 17'
+      link: '/documents/MECH431/Lesson 17'
     - title: 'Inflation'
-      link: '/docs/MECH431/Lesson 18'
+      link: '/documents/MECH431/Lesson 18'
     - title: 'Replacement Analysis'
-      link: '/docs/MECH431/Lesson 20'
-    - title: 'Conference'
-      group:
-      - enum: 1
-        link: '/docs/MECH431/ Conference 1'
-      - enum: 3
-        link: '/docs/MECH431/ Conference 3'
-      - enum: 4
-        link: '/docs/MECH431/ Conference 4'
-      - enum: 5
-        link: '/docs/MECH431/ Conference 5'
-      - enum: 6
-        link: '/docs/MECH431/ Conference 6'
-      - enum: 7
-        link: '/docs/MECH431/ Conference 7'
-      - enum: 8
-        link: '/docs/MECH431/ Conference 8'
-      - enum: 9
-        link: '/docs/MECH431/ Conference 9'
+      link: '/documents/MECH431/Lesson 20'
+    # - title: 'Conference'
+    #   group:
+    #   - enum: 1
+    #     link: '/documents/MECH431/ Conference 1'
+    #   - enum: 3
+    #     link: '/documents/MECH431/ Conference 3'
+    #   - enum: 4
+    #     link: '/documents/MECH431/ Conference 4'
+    #   - enum: 5
+    #     link: '/documents/MECH431/ Conference 5'
+    #   - enum: 6
+    #     link: '/documents/MECH431/ Conference 6'
+    #   - enum: 7
+    #     link: '/documents/MECH431/ Conference 7'
+    #   - enum: 8
+    #     link: '/documents/MECH431/ Conference 8'
+    #   - enum: 9
+    #     link: '/documents/MECH431/ Conference 9'
     - title: 'Practice'
       group:
       - enum: 2
-        link: '/docs/MECH431/p2'
+        link: '/documents/MECH431/p2'
       - enum: 3
-        link: '/docs/MECH431/p3'
+        link: '/documents/MECH431/p3'
       - enum: 4
-        link: '/docs/MECH431/p4'
+        link: '/documents/MECH431/p4'
       - enum: 7
-        link: '/docs/MECH431/p7'
+        link: '/documents/MECH431/p7'
     - title: 'Assignment'
       group:
       - enum: 1
-        link: '/docs/MECH431/asn1'
+        link: '/documents/MECH431/asn1'
       - enum: 2
-        link: '/docs/MECH431/asn2'
+        link: '/documents/MECH431/asn2'
       - enum: 3
-        link: '/docs/MECH431/asn3'
+        link: '/documents/MECH431/asn3'
   - course_num: 'CIVL 200, CIVL 250'
     course_name: 'Engineering and Sustainable Development'
     date: 2019-05-08
     entries:
     - title: 'Module 1: Sustainable Development'
-      link: '/docs/CIVL250/module1'
+      link: '/documents/CIVL250/module1'
       flag: draft
     - title: 'Module 2: Critical Skills'
-      link: '/docs/CIVL250/module2'
+      link: '/documents/CIVL250/module2'
       flag: draft
     - title: 'Module 3: Systems & Sustainability'
-      link: '/docs/CIVL250/module3'
+      link: '/documents/CIVL250/module3'
       flag: draft
     - title: 'Module 4: Sustainable Cities'
-      link: '/docs/CIVL250/module4'
+      link: '/documents/CIVL250/module4'
       flag: draft
     - title: 'Module 5: Sustainable Supply Chains'
-      link: '/docs/CIVL250/module5'
+      link: '/documents/CIVL250/module5'
       flag: draft
     - title: 'Module 6: Least Developed Countries'
-      link: '/docs/CIVL250/module6'
+      link: '/documents/CIVL250/module6'
       flag: draft
     - title: 'Module 7: Leading Sustainability'
-      link: '/docs/CIVL250/module7'
+      link: '/documents/CIVL250/module7'
       flag: draft
     - title: 'SRL'
       group:
         - enum: 1
-          link: /docs/CIVL250/asn1
+          link: /documents/CIVL250/asn1
         - enum: 2
-          link: /docs/CIVL250/asn2
+          link: /documents/CIVL250/asn2
         - enum: 3
-          link: /docs/CIVL250/asn3
+          link: /documents/CIVL250/asn3
         - enum: 4
-          link: /docs/CIVL250/asn4
+          link: /documents/CIVL250/asn4
     - title: 'Weekly Quizzes'
       group:
       - enum: 1
-        link: /docs/CIVL250/quiz1
+        link: /documents/CIVL250/quiz1
       - enum: 2
-        link: /docs/CIVL250/quiz2
+        link: /documents/CIVL250/quiz2
       - enum: 3
-        link: /docs/CIVL250/quiz3
+        link: /documents/CIVL250/quiz3
       - enum: 4
-        link: /docs/CIVL250/quiz4
+        link: /documents/CIVL250/quiz4
       - enum: 5
-        link: /docs/CIVL250/quiz5
+        link: /documents/CIVL250/quiz5
       - enum: 6
-        link: /docs/CIVL250/quiz6
+        link: /documents/CIVL250/quiz6
   - course_num: 'APSC 101'
     course_name: 'Intro to Engineering II'
     date: 2016-07-17
     entries:
     - title: 'Final Review'
-      link: '/docs/APSC101/apsc'
+      link: '/documents/APSC101/apsc'
     - title: 'Rain Water Harvesting System Report'
-      link: '/docs/APSC101/rainwater.pdf'
+      link: '/documents/APSC101/rainwater.pdf'
   - course_num: 'APSC 100'
     course_name: 'Intro to Engineering I'
     date: 2015-12-02
     entries:
     - title: 'Letter to Future Students'
-      link: '/docs/APSC100/Letter.pdf'
+      link: '/documents/APSC100/Letter.pdf'
   - course_num: 'Coursera ML'
     course_name: 'Intro to Machine Learning'
     date: 2016-06-25
     entries:
     - title: 'Course Notes'
-      link: '/docs/misc/stanford_ml'
+      link: '/documents/misc/stanford_ml'
       flag: draft

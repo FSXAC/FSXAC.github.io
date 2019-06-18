@@ -28,7 +28,7 @@ defaults:
       nav_active: /blog
       permalink: /:categories/:year/:title/
   - scope:
-      path: "docs"
+      path: "documents"
     values:
       layout: doc
       nav_active: /documents
