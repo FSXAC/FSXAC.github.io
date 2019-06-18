@@ -1,8 +1,24 @@
-- name: 2-Axis Motorized Laser Controller
+- name: FBVis
   dates:
-    start: Janurary 2018
-    end: April 2018
-  ongoing: false
+    start: 2018-01-01
+    end: 2019-03-01
+  ongoing: True
+  type: code
+  description: An animated visualizer that visualizes entire Facebook messages archive
+    in chronological order. Where people are drawn as nodes and exchange of messages
+    are drawn as as beams of light.
+  scope: independent
+  tech:
+  - Processing 3
+  - Python 3
+  links:
+    project page: https://www.muchen.ca/FBVis
+  worthy: true
+  thumbnail: img/fbvis.jpg
+- name: 2-DOF Motorized Laser Controller
+  dates:
+    start: 2018-01-01
+    end: 2018-04-01
   type: elec
   description: Built and programmed PID controllers in C++ and MATLAB for 2-DOF spherical
     wrist controlled laser pointers that draws shapes, using DC commutating motors
@@ -10,60 +26,32 @@
   contributors: [Muchen He, Leo Liu, LuFei Liu, Wenoa Teves]
   tech: [Arduino, C++, SolidWorks, Autodesk Inventor, MATLAB, SimuLink, Altium Designer, 3D Printer, Laser Cutter, Waterjet, Node.js, p5.js, Electronic Tools]
   links:
-    Blog 1: https://www.muchen.ca/blog/elec/motor_control_part1/
-    Blog 2: https://www.muchen.ca/blog/elec/motor_control_part2/
+    Blog 1: /elec/2018/motor_control_part1/
+    Blog 2: /elec/2018/motor_control_part2/
+    Report: /docs/ELEC391/demo3.pdf
   worthy: true
-- name: FBVis
-  dates:
-    start: Janurary 2018
-    end: March 2018
-  ongoing: false
-  type: code
-  description: An animated visualizer that visualizes entire Facebook messages archive
-    in chronological order. Where people are drawn as nodes and exchange of messages
-    are drawn as as beams of light.
-  details: ''
-  scope: independent
-  contributors:
-  - Muchen He
-  tech:
-  - Facebook Graph API
-  - Processing 3
-  - Python 3
-  links:
-    project page: https://www.muchen.ca/FBVis
-  worthy: true
-  thumbnail: img/fbvis.jpg
+  thumbnail: img/elec391.jpg
 - name: VGACoreSim
   dates:
-    start: Feburary 2018
-    end: Feburary 2018
-  ongoing: false
+    start: 2018-02-01
+    end: 2018-02-01
   type: code
   description: Interactive browser app for simulating the FPGA VGA-core where user
     can input custom drawing scripts.
-  details: ''
   scope: independent
-  contributors:
-  - Muchen He
   tech:
   - p5.js
   links:
     project page: https://www.muchen.ca/VGACoreSim
-  worthy: false
   thumbnail: img/vgacoresim.jpg
 - name: Mandelbrot Set on FPGA
   dates:
-    start: Feburary 2018
-    end: Feburary 2018
-  ongoing: false
+    start: 2018-02-01
+    end: 2018-02-01
   type: elec
   description: An interactive Mandelbrot Set fractal via VGA on the DE1-SoC FPGA development
     board written in SystemVerilog.
-  details: ''
   scope: independent
-  contributors:
-  - Muchen He
   tech:
   - SystemVerilog
   - DE1-SoC FPGA Dev. Board
@@ -75,17 +63,13 @@
   thumbnail: img/mandelbrot.jpg
 - name: Automark
   dates:
-    start: December 2017
-    end: January 2018
-  ongoing: false
+    start: 2017-12-01
+    end: 2018-01-01
   type: code
   description: Desktop app used to help grading lab submissions more efficiently.
     Programmed in Python using Qt, runs on Windows, Mac, and Liunx, and features dockable
     UI.
-  details: ''
   scope: independent
-  contributors:
-  - Muchen He
   tech:
   - Python 3
   - Qt
@@ -93,49 +77,37 @@
     project page: https://www.github.com/FSXAC/Automark
   worthy: true
   thumbnail: img/automark.jpg
-- name: SLS 3D Printer Model
+- name: SLS 3D Printer System Model
   dates:
-    start: October 2017
-    end: December 2017
-  ongoing: false
+    start: 2017-10-01
+    end: 2017-12-01
   type: design
   description: A Selective Laser Sintering 3D printer designed and accurately modelled
     in MATLAB and SimuLink. Controlled via tuned PID controller and maximized print
     speed and minimized error.
-  details: ''
   scope: course
-  contributors:
-  - Muchen He
   tech:
   - MATLAB
   - SimuLink
   links:
-    Report part 1: https://www.muchen.ca/documents/ELEC341-Project1.pdf
-    Report part 2: https://www.muchen.ca/documents/ELEC341-Project2.pdf
-  worthy: false
-  thumbnail: ''
+    Report part 1: /docs/ELEC341/ELEC341-Project1.pdf
+    Report part 2: /docs/ELEC341/ELEC341-Project2.pdf
+  thumbnail: img/elec341.jpg
 - name: FWView
   dates:
-    start: October 2017
-    end: November 2017
-  ongoing: false
+    start: 2017-10-01
+    end: 2017-11-01
   type: code
   description: 3D simulation visualizer for Thunderbot's physics based firmware simulator.
-  details: ''
   scope: independent
-  contributors:
-  - Muchen He
   tech:
   - Processing 3
   - Python 3
-  links: {}
-  worthy: false
   thumbnail: img/fwview.jpg
 - name: Sleep Logger Webapp
   dates:
-    start: September 2017
-    end: September 2017
-  ongoing: false
+    start: 2017-09-01
+    end: 2017-09-01
   type: code
   description: Webapp that uses realtime database and authentication to keep track
     of sleep statistics and features beautifully animated front-end.
@@ -156,17 +128,14 @@
   thumbnail: img/lumohacks17.jpg
 - name: CircuitDraw Webapp
   dates:
-    start: July 2017
-    end: August 2017
-  ongoing: false
+    start: 2017-07-01
+    end: 2017-08-01
   type: code
   description: Circuit drawing web app with has all basic electrical components and
     features saving and reloading circuits.
   details: Include basic components such as resistors, capacitors, diodes, OP-AMPs,
     and IC chips.
   scope: independent
-  contributors:
-  - Muchen He
   tech:
   - p5.js
   links:
@@ -175,26 +144,19 @@
   thumbnail: img/circuitdraw.jpg
 - name: DIY 3D Printer
   dates:
-    start: May 2017
-    end: June 2017
-  ongoing: false
+    start: 2017-05-01
+    end: 2017-06-01
   type: mech
   description: ''
-  details: ''
   scope: independent
-  contributors:
-  - Muchen He
   tech:
   - Soldering iron
   - multimeter
-  links: {}
-  worthy: false
   thumbnail: 
 - name: Magnetic Field Tracking Robot
   dates:
-    start: April 2017
-    end: April 2017
-  ongoing: false
+    start: 2017-04-01
+    end: 2017-04-01
   type: elec
   description: Microcontroller robot that follows magnetic field generated by a wire;
     can be wirelessly controlled via the magnetic field.
@@ -202,8 +164,8 @@
     a repository of code, a team of six, and over two weeks of sleepness nights.
   scope: course
   contributors:
-  - Muchen He
   - Scott Beauleau
+  - Muchen He
   - Geoff Goodwin-Wilson
   - LuFei Liu
   - Larry Liu
@@ -219,14 +181,13 @@
   - Signal generator
   - Oscilloscope
   links:
-    read report: https://www.muchen.ca/documents/ELEC291-Project2
+    read report: /docs/ELEC291/Project2
   worthy: true
   thumbnail: img/magtrackrobot.jpg
 - name: Game with Custom Serial Controller
   dates:
-    start: April 2017
-    end: April 2017
-  ongoing: false
+    start: 2017-04-01
+    end: 2017-04-01
   type: elec
   description: DIY game controller with microcontroller that communicates via serial
     to a 3D game programmed in Processing.
@@ -234,30 +195,25 @@
     attached that spins faster as the player moves faster in game; a speaker buzzes
     when the player takes damage in the game.'
   scope: independent
-  contributors:
-  - Muchen He
   tech:
   - Oscilloscope
   - H-Bridge
   - Soldering iron
   - Processing
   - SPI Protocol
-  links: {}
   worthy: true
   thumbnail: 
 - name: Reflow Oven Controller
   dates:
-    start: March 2017
-    end: March 2017
-  ongoing: false
+    start: 2017-03-01
+    end: 2017-03-01
   type: elec
   description: Microcontroller powered SMT reflow oven controller that follows a temperature
     profile.
-  details: ''
   scope: course
   contributors:
-  - Muchen He
   - Scott Beauleau
+  - Muchen He
   - Geoff Goodwin-Wilson
   - LuFei Liu
   - Larry Liu
@@ -271,275 +227,193 @@
   - Oscilloscope
   - Signal generator
   links:
-    read report: https://www.muchen.ca/documents/ELEC291-Project1
+    read report: /docs/ELEC291/Project1
   worthy: true
   thumbnail: 
 - name: Temperature Monitor
   dates:
-    start: March 2017
-    end: March 2017
-  ongoing: false
+    start: 2017-03-01
+    end: 2017-03-01
   type: elec
   description: Microcontroller controlled temperature monitor using temperature sensor
     and ADC, serialized output is visualized in Processing.
   details: Also features a LED strip that shows temperature reading and an alarm that
     goes off when the temperature is too high.
   scope: independent
-  contributors:
-  - Muchen He
   tech:
   - 8051 Assembly
   - AT89 Microcontroller
-  links: {}
   worthy: true
   thumbnail: 
 - name: Ticker LCD with Music
   dates:
-    start: January 2017
-    end: January 2017
-  ongoing: false
+    start: 2017-01-01
+    end: 2017-01-01
   type: elec
   description: First project using AT89 microcontrollers, used memory access, timers,
     and interrputs to make looping animation and music.
-  details: ''
   scope: independent
-  contributors:
-  - Muchen He
   tech:
   - 8051 Assembly
   - AT89 Microcontroller
-  links: {}
   worthy: true
   thumbnail: 
 - name: InsectNN
   dates:
-    start: December 2016
-    end: December 2016
-  ongoing: false
+    start: 2016-12-01
+    end: 2016-12-01
   type: code
   description: Simulation of navigation using a neural network.
-  details: ''
   scope: independent
-  contributors:
-  - Muchen He
   tech:
   - Processing
-  links: {}
   worthy: true
   thumbnail: 
 - name: Simple RISC Machine
   dates:
-    start: October 2016
-    end: November 2016
-  ongoing: false
+    start: 2016-10-01
+    end: 2016-11-01
   type: elec
   description: Reduced-Instruction-Set-Computer CPU created using System Verilog HDL.
     Runs basic OS programmed in ARM assembly.
-  details: ''
   scope: independent
-  contributors:
-  - Muchen He
   tech:
   - ARM Assembly
   - Quartus II
   - ModelSim
   - SystemVerilog
-  links: {}
   worthy: true
   thumbnail: 
 - name: SmartRocket Evolution Simulator
   dates:
-    start: September 2016
-    end: September 2016
-  ongoing: false
+    start: 2016-09-01
+    end: 2016-09-01
   type: code
   description: ''
-  details: ''
   scope: independent
-  contributors:
-  - Muchen He
   tech:
   - p5.js
-  links: {}
   worthy: true
   thumbnail: 
 - name: Minesweeper in C
   dates:
-    start: July 2016
-    end: July 2016
-  ongoing: false
+    start: 2016-07-01
+    end: 2016-07-01
   type: code
   description: ''
-  details: ''
   scope: independent
-  contributors:
-  - Muchen He
   tech:
   - C
-  links: {}
   worthy: true
   thumbnail: 
 - name: Rainwater Harvesting System
   dates:
-    start: April 2016
-    end: April 2016
-  ongoing: false
+    start: 2016-04-01
+    end: 2016-04-01
   type: design
   description: Obtaining the best configuration for a rainwater harvetsting system
     design to maximize user satisfaction.
-  details: ''
   scope: course
-  contributors:
-  - Muchen He
   tech:
   - Microsoft Excel
   - C
-  links: {}
-  worthy: false
   thumbnail: 
 - name: Autonomous Claw
   dates:
-    start: January 2016
-    end: Januaray 2016
-  ongoing: false
+    start: 2016-01-01
+    end: 2016-01-01
   type: mech
   description: Arduino powered, custom made alumium chasis, autonomous operation to
     pick up objects.
-  details: ''
   scope: course
-  contributors:
-  - Muchen He
   tech:
   - Arduino
   - SolidWorks
   - Autodesk Inventor
   - Shop tools
-  links: {}
-  worthy: false
   thumbnail: 
 - name: Adaptive Device for Disabled
   dates:
-    start: November 2015
-    end: November 2015
-  ongoing: false
+    start: 2015-11-01
+    end: 2015-11-01
   type: design
   description: Designed guitar picking accessory for the disabled and written technical
     documentation.
-  details: ''
   scope: course
-  contributors:
-  - Muchen He
   tech:
   - SolidWorks
   - Autodesk Inventor
-  links: {}
-  worthy: false
   thumbnail: 
 - name: Cardboard Chair
   dates:
-    start: October 2015
-    end: October 2015
-  ongoing: false
+    start: 2015-10-01
+    end: 2015-10-01
   type: design
   description: Foldable cardboard chair that supports up to 200 pounds.
-  details: ''
   scope: course
-  contributors:
-  - Muchen He
   tech:
   - Autodesk Inventor
-  links: {}
-  worthy: false
   thumbnail: 
 - name: Architecture Project
   dates:
-    start: June 2015
-    end: June 2015
-  ongoing: false
+    start: 2015-06-01
+    end: 2015-06-01
   type: design
   description: ''
-  details: ''
   scope: course
-  contributors:
-  - Muchen He
   tech:
   - Autodesk Revit
-  links: {}
-  worthy: false
   thumbnail: 
 - name: FPV Racing Quadcopter / Drone
   dates:
-    start: Feburary 2015
-    end: May 2015
-  ongoing: false
+    start: 2015-02-01
+    end: 2015-05-01
   type: elec
   description: <abbr title="First Persion View">FPV</abbr> drone built by myself and
     has live video feedback via 5.8GHz radio transmission.
-  details: ''
   scope: independent
-  contributors:
-  - Muchen He
   tech:
   - Arduino
   - BLDC Motors
   - Electronic tools
   - LiPo Batteries
-  links: {}
   worthy: true
   thumbnail: 
 - name: Provincial Skills Canada 2015
   dates:
-    start: May 2015
-    end: May 2015
-  ongoing: false
+    start: 2015-05-01
+    end: 2015-05-01
   type: design
   description: ''
   details: Won 2nd Place
   scope: competition
-  contributors:
-  - Muchen He
   tech:
   - Autodesk Inventor
   - Precision Tools
-  links: {}
-  worthy: false
   thumbnail: 
 - name: Arduino Exploration
   dates:
-    start: November 2014
-    end: December 2014
-  ongoing: false
+    start: 2014-11-01
+    end: 2014-12-01
   type: code
   description: Experimented with tinkering and building using Arduino microcontrollers.
     I made various small projects using photo-sensors, servo motors, speakes, and
     LCD. I also wrote journals to keep track of my learning progress.
-  details: ''
   scope: independent
-  contributors:
-  - Muchen He
   tech:
   - Arduino
   - C
-  links:
-    exploration journal: https://www.muchen.ca/archive/blog2014
-  worthy: false
   thumbnail: img/arduino_lg.webp
 - name: Microscope CAD
   dates:
-    start: June 2014
-    end: June 2014
-  ongoing: false
+    start: 2014-06-01
+    end: 2014-06-01
   type: design
   description: Reverse engineered a microscope assembly by precisely measuring the
     parts and replicating them in Autodesk Inventor in 3D. I also produced standard
     part drawings and parts list.
-  details: ''
   scope: independent
-  contributors:
-  - Muchen He
   tech:
   - Autodesk Inventor
   - Precision Tools
-  links: {}
-  worthy: false
   thumbnail: img/microscope_md.webp

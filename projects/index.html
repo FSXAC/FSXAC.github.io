@@ -2,19 +2,10 @@
 # Standard front matter stuff
 author: Muchen He
 date: 2019-06-18
-layout: projects
+layout: default
 title: Projects
-
-# Custom stuff
-full_jquery: true
-extra_css:
-- <link rel="stylesheet" href="/assets/css/timeline.css">
-
-# Title
 titlebar: Projects
 nav_active: /projects
-
-# Header
 header:
   color: '#835'
   gradient: 'linear-gradient(45deg, rgba(12,80,70,1) 14%, rgba(95,154,194,1) 100%);'
@@ -23,18 +14,26 @@ header:
   - The filter below to filter through different types of projects.
 ---
 
+<style>
+.project-item img { width: 100% }
+.project-item p.tech { line-height: 1.15; }
+</style>
+
+<div class="row">
 {% for project in site.data.projects %}
-	<div>
+	<div class="project-item {% if project.worthy %}worthy{% endif %} col-12 col-lg-4 mb-2">
 	<h2>{{ project.name }}</h2>
-	{% if project.thumbnail %}
-		<img src="{{ project.thumbnail }}" alt="{{ project.name }} thumbnail">
-	{% endif %}
-	<p>{{ project.dates.start }} to {{ project.dates.end }}</p>
-	<em>{{ project.type }}</em>
+	<p>
+	{{ project.dates.start }}
+	{% if project.date.start != project.date.end %} to {{ project.dates.end }}{% endif %}
+	{% if project.onging %}(ongoing){% endif %}
+	</p>
+	{% if project.thumbnail %}<img src="{{ project.thumbnail }}" alt="{{ project.name }} thumbnail">{% endif %}
 	<p>{{ project.description }}</p>
 	{% for link in project.links %}
-		<a class="btn btn-sm btn-outline-secondary" href="{{ link[1] }}">{{ link[0] | capitalize }}</a>
+		<a class="btn btn-sm btn-outline-dark" href="{{ link[1] }}">{{ link[0] | capitalize }}</a>
 	{% endfor %}
+	<p title="Tech used" class="text-muted tech"><small>{{ project.tech | join: ', ' }}</small></p>
 	</div>
-	<p>Tech used: {{ project.tech | join: ', ' }}</p>
 {% endfor %}
+</div>
