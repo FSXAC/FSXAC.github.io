@@ -1,7 +1,7 @@
 ---
 # Standard front matter stuff
 author: Muchen He
-date: 2019-03-23
+date: 2019-06-18
 layout: projects
 title: Projects
 
@@ -9,8 +9,6 @@ title: Projects
 full_jquery: true
 extra_css:
 - <link rel="stylesheet" href="/assets/css/timeline.css">
-extra_js:
-- <script language="javascript" type="text/javascript" src="projects.js"></script>
 
 # Title
 titlebar: Projects
@@ -23,82 +21,20 @@ header:
   text:
   - This page contains projects that I've created or contributed to. They are ordered reverse-chronicalogically.
   - The filter below to filter through different types of projects.
-
 ---
 
-<script>
-$(document).ready(function() {
-    setContainer($('#main'));
-    readProjects(onReadProjects);
-});
-
-function onReadProjects() {
-    setupFilterButtons();
-
-    var timelineBlocks = $('.timeline-block');
-    hideBlocks(timelineBlocks, offset);
-    $(window).on('scroll', function () {
-        blocksUpdateTrigger();
-    });
-}
-
-function setupFilterButtons() {
-    $("#filterSoftwareButton").on('click', function() { showExclusive('.timeline-icon-info') });
-    $("#filterHardwareButton").on('click', function() { showExclusive('.timeline-icon-primary') });
-    $("#filterDesignButton").on('click', function() { showExclusive('.timeline-icon-success') });
-    $("#filterMechanicalButton").on('click', function() { showExclusive('.timeline-icon-warning') });
-    $("#clearFilterButton").on('click', function() {
-        $(".timeline-block").slideDown(200);
-        $(".timeline").slideDown(200);
-        $(".timeline").prev().slideDown(200);
-    });
-}
-
-function showExclusive(className) {
-    $(".timeline-block").each(function() {
-        if ($(this).find(className).length != 0) {
-            $(this).slideDown(200, function() { blocksUpdateTrigger(); });
-        } else {
-            $(this).slideUp(200, function() { blocksUpdateTrigger(); });
-        }
-    });
-    $(".timeline").each(function() {
-        if ($(this).find(className).length != 0) {
-            $(this).slideDown(200);
-            $(this).prev().slideDown(200);
-        } else {
-            $(this).slideUp(200);
-            $(this).prev().slideUp(200);
-        }
-    })
-}
-
-var offset = 0.8;
-function blocksUpdateTrigger() {
-    var timelineBlocks = $(".timeline-block");
-    if (!window.requestAnimationFrame) {
-        setTimeout(function () {
-            showBlocks(timelineBlocks, offset);
-        }, 100);
-    } else {
-        window.requestAnimationFrame(function () {
-            showBlocks(timelineBlocks, offset);
-        });
-    }
-}
-
-function hideBlocks(blocks, offset) {
-    blocks.each(function () {
-        ($(this).offset().top > $(window).scrollTop() + $(window).height() * offset) &&
-            $(this).find('.timeline-icon, .timeline-body').addClass('is-hidden');
-    });
-}
-
-function showBlocks(blocks, offset) {
-    blocks.each(function () {
-        ($(this).offset().top <= $(window).scrollTop() + $(window).height() * offset &&
-            $(this).find('.timeline-icon').hasClass('is-hidden')) &&
-            $(this).find('.timeline-icon, .timeline-body').removeClass('is-hidden').addClass('bounce-in');
-    });
-}
-</script>
+{% for project in site.data.projects %}
+	<div>
+	<h2>{{ project.name }}</h2>
+	{% if project.thumbnail %}
+		<img src="{{ project.thumbnail }}" alt="{{ project.name }} thumbnail">
+	{% endif %}
+	<p>{{ project.dates.start }} to {{ project.dates.end }}</p>
+	<em>{{ project.type }}</em>
+	<p>{{ project.description }}</p>
+	{% for link in project.links %}
+		<a class="btn btn-sm btn-outline-secondary" href="{{ link[1] }}">{{ link[0] | capitalize }}</a>
+	{% endfor %}
+	</div>
+	<p>Tech used: {{ project.tech | join: ', ' }}</p>
+{% endfor %}
