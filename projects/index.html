@@ -24,8 +24,8 @@ header:
 	<div class="project-item {% if project.worthy %}worthy{% endif %} col-12 col-lg-4 mb-2">
 	<h2>{{ project.name }}</h2>
 	<p>
-	{{ project.dates.start }}
-	{% if project.date.start != project.date.end %} to {{ project.dates.end }}{% endif %}
+	{{ project.dates.start | date: "%B %Y" }}
+	{% if project.dates.start != project.dates.end %} to {{ project.dates.end | date: "%B %Y" }}{% endif %}
 	{% if project.onging %}(ongoing){% endif %}
 	</p>
 	{% if project.thumbnail %}<img src="{{ project.thumbnail }}" alt="{{ project.name }} thumbnail">{% endif %}
