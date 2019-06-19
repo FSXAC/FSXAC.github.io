@@ -1,9 +1,13 @@
 ---
 author: Muchen He
 title: Curses, Circle, and Golf
-date: 2019-05-29
+date: 2019-06-18
 categories: projects
 tag: [programming, project, python, curses, code golf]
+header:
+  teaser: /assets/blog/circlegolf.jpg
+  overlay_image: /assets/blog/circlegolf.jpg
+  overlay_filter: 0.8
 ---
 
 A while ago I learned to draw circles using Bresenham's algorithm (thanks CPEN 311). I also stumbled upon Python's curses library which enables interactive GUI in the command line. So I decided to make an animated circle that runs in the command line. And then code golf it.

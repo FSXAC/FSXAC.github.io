@@ -193,6 +193,14 @@ h2.bold {
 #c-content pre.highlight span.bp {
     color: #f92672
 }
+#c-content pre.highlight span.gi {
+	color: #49c1a1;
+	background-color: #4cd6a822;
+}
+#c-content pre.highlight span.gd {
+	color: #a2221f;
+	background-color: #c4444f22;
+}
 
 // Blockquote
 #c-content blockquote {
