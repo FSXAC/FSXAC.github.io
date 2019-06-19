@@ -53,7 +53,7 @@
 
 	{% for line in page.extra_js %}{{ line }}{% endfor %}
 	<style>
-		.jumbotron {
+		.jumbotron-color {
 			{% if page.header.color %} background-color: {{ page.header.color }};
 			{% elsif page.header.overlay_image %}
 			background: url('{{ page.header.overlay_image }}') no-repeat center center;

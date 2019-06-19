@@ -37,4 +37,8 @@ defaults:
     values:
       author: Muchen He
 
+collections:
+  photos:
+    output: true
+
 use_image_as_brand: false
