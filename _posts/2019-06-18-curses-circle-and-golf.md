@@ -307,5 +307,5 @@ def m(s):
 curses.wrapper(m)
 ```
 
-Total size: **381 bytes**. Link to the code can be found [here](https://github.com/FSXAC/Golf).
+Total size: **381 bytes** down from 1182 bytes in the un-golf'd version. Link to the code can be found [here](https://github.com/FSXAC/Golf).
 
