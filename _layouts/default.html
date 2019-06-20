@@ -27,3 +27,8 @@ layout: minimum
 <div id='main' class="container">
 	{{ content }}
 </div>
+
+
+{% if page.use_lightbox %}
+{% include figure_lightbox.html %}
+{% endif %}
