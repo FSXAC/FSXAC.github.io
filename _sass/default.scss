@@ -316,3 +316,8 @@ nav.navbar.sticky-top {
 .numeric {
 	font-variant-numeric: tabular-nums;
 }
+
+.figure-full-width { width: 100%; }
+.figure-full-width img { width: 100% }
+.figure-centered { width: 100%; text-align: center; }
+.figure-centered img { max-width: 100% }

@@ -36,5 +36,19 @@ defaults:
       path: ""
     values:
       author: Muchen He
+  # - scope:
+  #     path: "_photos"
+  #   values:
+  #     nav_active: /photos
+  - scope:
+      path: ""
+      type: "photos"
+    values:
+      nav_active: /photos
+      permalink: /:year/:title
+
+collections:
+  photos:
+    output: true
 
 use_image_as_brand: false
