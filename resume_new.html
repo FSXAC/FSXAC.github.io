@@ -1,0 +1,288 @@
+---
+author: Muchen He
+layout: resume_new
+title: Resume
+titlebar: Resume
+nav_active: /resume
+permalink: /resume_new
+header:
+  color: '#123'
+  gradient: 'linear-gradient(105deg, rgba(17,34,51,1) 0%, rgba(12,57,105,1) 100%);'
+  text:
+  - Use the setting below to customize the content and layout.
+---
+
+{% include resume/header name=page.author %}
+{% include resume/basic_info %}
+
+
+<div>
+    <section id="skills">
+        <h2>I CAN</h2>
+        <div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Code</strong>
+                            <p>C/C++, SystemVerilog, Python, LaTeX, JavaScript/TypeScript (Three.js, Node.js), HTML/CSS,MATLAB, GLSL, Processing (Java), Assembly</p>
+                        </td>
+                        <td>
+                            <strong>Hands-on</strong>
+                            <p>3D Printing, CNC, Soldering/SMT Reflow, Oscilloscope</p>
+                        </td>
+                        <td>
+                            <strong>Software</strong>
+                            <p>Git/Perforce, Altera Quartus, ModelSim, Autodesk Inventor/Solidworks, SimuLink, Adobe Photoshop, Lightroom</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section id="work-xp">
+        <h2>I WORKED AT</h2>
+        <div>
+            <div class="work">
+                <h3>Electronic Arts - BioWare Edmonton</h3>
+                <p class="position">Associate Developer Co-op (May 2018 - Dec 2018)</p>
+                <ul>
+                    <li>Added and improved UI and engine code in Frostbite engine and upcoming game Anthem using C++</li>
+                    <li>Developed entities for UI/UX artists and scripters; strong teamwork and communication demonstrated with consolidated specifications</li>
+                    <li>Wrote Python upgrade scripts to modify and validate XML and game asset files in bulk</li>
+                    <li>Investigated bugs related to UI, keyboard/mouse inputs and developed robust solutions</li>
+                </ul>
+            </div>
+            <div class="work">
+                <h3>UBC Department of Computer Science</h3>
+                <p class="position">Teaching Assistant (January 2018 - May 2018)</p>
+                <ul>
+                    <li>Assisted students to learn C programming by responding to students' in-class questions in a clear and simple manner</li>
+                    <li>Supervised students in programming labs and marked lab submissions using an automated script I wrote in Python</li>
+                </ul>
+            </div>
+            <div class="work">
+                <h3>Vital Mechanics Research Inc.</h3>
+                <p class="position">Software Developer (Co-op) (May-September 2017)</p>
+                <ul>
+                    <li>Developed applications in Qt GUI Framework using C++ and JavaScript</li>
+                    <li>Maintained clean code that follows MVC software structure</li>
+                    <li>Programmed interactive 3D viewers with JavaScript and Three.js; wrote realistic shaders in WebGL</li>
+                </ul>
+            </div>
+            <div class="work">
+                <h3>University of Alberta</h3>
+                <p class="position">High School Software Intern (June-August 2014)</p>
+                <ul>
+                    <li>Developed Android tablet game based on Box2D engine in Java and Android SDK</li>
+                    <li>Implemented haptic and audio feedback and physics-enabled obstacles</li>
+                    <li>Presented talk on project specifications, goals, and experiences</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>I MADE</h2>
+        <div>
+            <div id="projectContainer" class="row">
+                <div class="proj-showcase col-12">
+                    <p style="text-align: center;"><i>Something went wrong while loading projects</i></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hobbies">
+        <h2>I LIKE</h2>
+        <div>
+            <p class="text-muted">
+                Hackathon, Programming Challenges (LeetCode, /r/DailyProgrammer), DIY Electronics (Arduino, Radio Control), Amateur Photography (Landscape, Portrait, Street Photography), Graphics Design (Adobe Photoshop/Lightroom/Illustrator) Gaming (PC, Switch), Fitness
+            </p>
+        </div>
+    </section>
+</div>
+
+<script>
+    var $pc = $('#projectContainer');
+    var template = {
+        open: '<div class="proj-showcase col-12 col-sm-3">',
+        title: '<h4>{title}</h4>',
+        roled: '<small><i><span> ({roled})</span></i></small>',
+        date: '<small>{date}</small>',
+        desc: '<p>{desc}</p>',
+        close: '</div>'
+    }
+    var projs;
+
+    const sectionVisibilityInputIdMapping = {
+        'skills'                : 'checkSkills',
+        'work-xp'               : 'checkWorkXP',
+        'projects'              : 'checkProjects',
+        'prof-aff'              : 'checkAffil',
+        'contained-prof-aff'    : 'checkAffil',
+        'awards'                : 'checkAwards',
+        'contained-awards'      : 'checkAwards',
+        'hobbies'               : 'checkHobby'
+    }
+
+    // Populate HTML with project JSON
+    // open project JSON
+    function readProjects() {
+        loadJSON(function (response) {
+            projs = response;
+            displayProjects(response, 'all');
+        });
+    }
+
+    function loadJSON(callback) {
+        var xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+        xobj.open('GET', '../projects/projects.json', true);
+        xobj.onreadystatechange = function () {
+            if (xobj.readyState == 4 && xobj.status == '200') {
+                callback(xobj.responseText);
+            }
+        };
+        xobj.send(null);
+    }
+
+    function displayProjects(projs, filter) {
+        projects = JSON.parse(projs).projects;
+
+        var htmlOut = '';
+        var count = 0;
+
+        const maxNumProjects = $('#numProjectsSelect option:selected').text();
+
+        for (var i = 0, l = projects.length; i < l && count < parseInt(maxNumProjects); i++) {
+            curr = projects[i]
+
+            if (curr.type != filter && filter != 'all') continue;
+            if (curr.worthy) {
+                // Render HTML
+                htmlOut += template.open;
+                htmlOut += template.title.replace('{title}', curr.name);
+
+                var roled = 'Independent';
+                if (curr.scope == 'course') {
+                    roled = 'Project Course';
+                } else if (curr.scope == 'hack') {
+                    roled = 'Hackathon'
+                }
+
+                htmlOut += template.date.replace('{date}', curr.dates.end);
+                htmlOut += template.roled.replace('{roled}', roled);
+                htmlOut += template.desc.replace('{desc}', curr.description);
+                htmlOut += template.close;
+                count++;
+            }
+        }
+        $pc.html(htmlOut);
+    }
+
+    // Running at the start (before the content need to be loaded)
+    $(document).ready(function() {
+        readProjects();
+
+        // Connect signals of the buttons to some handlers
+        $('#filterBtnAll').on('click', function() {filterHandler('all')});
+        $('#filterBtnCode').on('click', function() {filterHandler('code')});
+        $('#filterBtnDesign').on('click', function() {filterHandler('design')});
+        $('#filterBtnElec').on('click', function() {filterHandler('elec')});
+        $('#filterBtnMech').on('click', function() {filterHandler('mech')});
+        
+        // Print button
+        $('#buildBtn').on('click', () => {
+            print();
+        });
+
+        $('#settingsSaveBtn').on('click', () => {
+            setSectionVisbility();
+            setPrintSettings();
+            setLayout();
+            readProjects();
+        })
+
+        // set section visibility
+        setSectionVisbility();
+    });
+
+    function filterHandler(filter) {
+        displayProjects(projs, filter);
+    }
+
+    function setSectionVisbility() {
+        const targets = Object.keys(sectionVisibilityInputIdMapping);
+        for (let i = 0; i < targets.length; i++) {
+            const targetId = targets[i];
+            const target = $('#' + targetId);
+            const inputId = sectionVisibilityInputIdMapping[targetId];
+            const inputSource = $('#' + inputId);
+
+            if (inputSource.prop('checked')) {
+                target.show();
+            } else {
+                target.hide();
+            }
+        }
+    }
+
+    function setPrintSettings() {
+        const fontSize = $('#printFontSizeSelect option:selected').text();
+        const largeFontClass = 'large-font';
+        const mediumFontClass = 'medium-font';
+        const defaultPlusFontClass = 'default-plus-font';
+        const bodyRef = $('body');
+
+        if (fontSize === 'Large') {
+            bodyRef.removeClass(mediumFontClass);
+            bodyRef.removeClass(defaultPlusFontClass);
+            bodyRef.addClass(largeFontClass);
+        } else if (fontSize === 'Medium') {
+            bodyRef.removeClass(largeFontClass);
+            bodyRef.removeClass(defaultPlusFontClass);
+            bodyRef.addClass(mediumFontClass);
+        } else if (fontSize === 'Default+') {
+            bodyRef.removeClass(mediumFontClass);
+            bodyRef.removeClass(largeFontClass);
+            bodyRef.addClass(defaultPlusFontClass);
+        } else {
+            bodyRef.removeClass(mediumFontClass);
+            bodyRef.removeClass(largeFontClass);
+            bodyRef.removeClass(defaultPlusFontClass);
+        }
+    }
+
+    function setLayout() {
+        // If we want professional affliation and awards on the same row
+        if ($('#checkHalfRow').prop('checked')) {
+            $('#containedProfAffAwards').show();
+            $('#uncontainedProfAffAwards').hide();
+        } else {
+            $('#containedProfAffAwards').hide();
+            $('#uncontainedProfAffAwards').show();
+        }
+
+        // Heading alignment
+        const logoAlign = $('#ubcLogoAlignSelect option:selected').text();
+        const logoCont = $('#ubc-logo-container');
+        const headAlign = $('#headerNameAlignSelect option:selected').text();
+        const headCont = $('#heading-name-container');
+
+        if (logoAlign === 'Left') {
+            logoCont.css('text-align', 'left');
+        } else if (logoAlign === 'Right') {
+            logoCont.css('text-align', 'right');
+        }
+
+        if (headAlign === 'Left') {
+            headCont.css('text-align', 'left');
+        } else if (headAlign === 'Right') {
+            headCont.css('text-align', 'right');
+        } else if (headAlign === 'Center') {
+            headCont.css('text-align', 'center');
+        }
+    }
+</script>
+</body>
+</html>

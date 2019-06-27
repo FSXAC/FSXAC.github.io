@@ -1,0 +1,4 @@
+<div style="text-align: left">
+	<h1 class='my-0'>{{ include.name | upcase }}</h1>
+	<p class="my-0 text-muted">UBC Electrical Engineering Undergraduate (Co-op Program) - 85.4% GPA</p>
+</div>
