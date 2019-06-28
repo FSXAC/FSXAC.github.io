@@ -1,0 +1,14 @@
+<div>
+    <h2>{% if page.use_formal_heading %}PROJECTS{% else %}I MADE{% endif %}</h2>
+    <div class="row thickside">
+        {% for project in site.data.projects %}
+        {% if project.worthy %}
+        <div class="col-12 col-sm-3">
+            <h4>{{ project.name }}</h4>
+            <p><small>{{ project.dates.end | date: "%B %Y" }}</small></p>
+            <p>{{ project.description }}</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>

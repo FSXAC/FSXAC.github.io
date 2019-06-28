@@ -1,0 +1,41 @@
+<div>
+    <h2>{% if page.use_formal_heading %}EXPERIENCE{% else %}I WORKED AT{% endif %}</h2>
+    <div class="thickside">
+        <div class="work">
+            <h3>Electronic Arts - BioWare Edmonton</h3>
+            <p class="position">Associate Developer Co-op (May 2018 - Dec 2018)</p>
+            <ul>
+                <li>Added and improved UI and engine code in Frostbite engine and upcoming game Anthem using C++</li>
+                <li>Developed entities for UI/UX artists and scripters; strong teamwork and communication demonstrated with consolidated specifications</li>
+                <li>Wrote Python upgrade scripts to modify and validate XML and game asset files in bulk</li>
+                <li>Investigated bugs related to UI, keyboard/mouse inputs and developed robust solutions</li>
+            </ul>
+        </div>
+        <div class="work">
+            <h3>UBC Department of Computer Science</h3>
+            <p class="position">Teaching Assistant (January 2018 - May 2018)</p>
+            <ul>
+                <li>Assisted students to learn C programming by responding to students' in-class questions in a clear and simple manner</li>
+                <li>Supervised students in programming labs and marked lab submissions using an automated script I wrote in Python</li>
+            </ul>
+        </div>
+        <div class="work">
+            <h3>Vital Mechanics Research Inc.</h3>
+            <p class="position">Software Developer (Co-op) (May-September 2017)</p>
+            <ul>
+                <li>Developed applications in Qt GUI Framework using C++ and JavaScript</li>
+                <li>Maintained clean code that follows MVC software structure</li>
+                <li>Programmed interactive 3D viewers with JavaScript and Three.js; wrote realistic shaders in WebGL</li>
+            </ul>
+        </div>
+        <div class="work">
+            <h3>University of Alberta</h3>
+            <p class="position">High School Software Intern (June-August 2014)</p>
+            <ul>
+                <li>Developed Android tablet game based on Box2D engine in Java and Android SDK</li>
+                <li>Implemented haptic and audio feedback and physics-enabled obstacles</li>
+                <li>Presented talk on project specifications, goals, and experiences</li>
+            </ul>
+        </div>
+    </div>
+</div>

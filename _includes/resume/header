@@ -1,4 +1,10 @@
-<div style="text-align: left">
-	<h1 class='my-0'>{{ include.name | upcase }}</h1>
-	<p class="my-0 text-muted">UBC Electrical Engineering Undergraduate (Co-op Program) - 85.4% GPA</p>
+<div style='display:flex;'>
+	<div style="text-align:right;border-right:1px dotted black" class='pr-2'>
+		<h1 class='my-0'>{{ include.name | upcase }}</h1>
+		<p class="my-0 text-muted">UBC Electrical Engineering Undergraduate (Co-op Program) - 85.4% GPA</p>
+	</div>
+	<div class='ml-2'>
+		<p style='line-height:1em; margin-top:.6em'>i@muchen.ca &times; (778) 952-9222<br/>Vancouver/Edmonton, Canada</p>
+		<p class='text-muted'>Anticipated date of graduation: May 2020</p>
+	</div>
 </div>
