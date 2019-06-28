@@ -1,10 +1,10 @@
 <div style='display:flex;justify-content: center;'>
 	<div style="text-align:right;border-right:5px solid black" class='pr-2'>
 		<h1 class='my-0'>{{ include.name | upcase }}</h1>
-		<p class="my-0 text-muted">UBC Electrical Engineering Undergraduate (Co-op Program) - 85.4% GPA</p>
+		<p class="my-0 text-muted">University of British Columbia &times; B.ASc Electrical Engineering</p>
 	</div>
 	<div class='ml-2'>
 		<p style='line-height:1em; margin-top:.6em'>i@muchen.ca &times; (778) 952-9222<br/>Vancouver/Edmonton, Canada</p>
-		<p class='text-muted'>Anticipated date of graduation: May 2020</p>
+		<p class='text-muted'>4.00 GPA &times; Graduating May 2020</p>
 	</div>
 </div>
