@@ -15,10 +15,11 @@ use_formal_heading: false
 ---
 
 {% include resume/header name=page.author %}
-<!-- {% include resume/skills %} -->
+{% include resume/skills %}
 {% include resume/experience %}
-<!-- {% include resume/projects %} -->
-<!-- {% include resume/hobbies %} -->
+{% include resume/projects %}
+{% include resume/hobbies %}
+{% unless page.use_formal_heading %}<h2>I WANT A JOB, THANKS!</h2>{% endunless %}
 
 </body>
 </html>

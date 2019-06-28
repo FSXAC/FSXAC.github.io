@@ -1,0 +1,28 @@
+- verb: code
+  skills:
+  - "Python"
+  - "NCurses"
+  - "C/C++"
+  - "SystemVerilog"
+  - "LaTeX"
+  - "JavaScript"
+  - "HTML/CSS"
+  - "MATLAB"
+  - "GLSL"
+  - "Processing"
+  - "Java"
+  - "8051 Assembly"
+- verb: Build
+  skills:
+  - "3D Print"
+  - "CNC Machine"
+  - "Soldering Iron/SMT"
+  - "Probe/Oscilloscope"
+- verb: Use
+  skills:
+  - "git/Perforce"
+  - "Quartus/ModelSim"
+  - "Autodesk Suite"
+  - "Solidworks"
+  - "SimuLink"
+  - "Adobe Suite"

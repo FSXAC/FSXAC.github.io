@@ -5,11 +5,11 @@
         <div class="thinline">
             <h3>{{ exp.position }}</h3>
             <p class="text-muted">
-                @&nbsp;<span style="font-weight: bold; font-size: 1.2em">{{ exp.company }}</span>&nbsp;&vert;&nbsp;
+                <span style="font-weight: bold; font-size: 1.2em">{{ exp.company }}</span>&nbsp;&vert;&nbsp;
                 <span>{{ exp.start }} - {{ exp.end }}</span>&nbsp;&vert;&nbsp;
                 <span>{{ exp.duration }}</span>
             </p>
-            <ul>
+            <ul class="my-1">
                 {% for do in exp.doings %}
                     <li>{{ do }}</li>
                 {% endfor %}

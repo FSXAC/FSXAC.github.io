@@ -1,22 +1,14 @@
 <div>
     <h2>{% if page.use_formal_heading %}SKILLS{% else %}I CAN{% endif %}</h2>
-    <div>
+    <div class="thickside">
         <table>
             <tbody>
-                <tr>
-                    <td>
-                        <strong>Code</strong>
-                        <p>C/C++, SystemVerilog, Python, LaTeX, JavaScript/TypeScript (Three.js, Node.js), HTML/CSS,MATLAB, GLSL, Processing (Java), Assembly</p>
-                    </td>
-                    <td>
-                        <strong>Hands-on</strong>
-                        <p>3D Printing, CNC, Soldering/SMT Reflow, Oscilloscope</p>
-                    </td>
-                    <td>
-                        <strong>Software</strong>
-                        <p>Git/Perforce, Altera Quartus, ModelSim, Autodesk Inventor/Solidworks, SimuLink, Adobe Photoshop, Lightroom</p>
-                    </td>
-                </tr>
+                {% for verb in site.data.resume.skills %}
+                <td class="thinline">
+                    <strong>{{ verb.verb | capitalize }}</strong>
+                    <p>{{ verb.skills | join: ', ' }}</p>
+                </td>
+                {% endfor %}
             </tbody>
         </table>
     </div>

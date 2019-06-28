@@ -1,8 +1,10 @@
 <div>
     <h2>{% if page.use_formal_heading %}HOBBIES & ACTIVITIES{% else %}I LIKE{% endif %}</h2>
-    <div>
+    <div class="thickside">
+        <div class="thinline">
         <p class="text-muted">
             Hackathon, Programming Challenges (LeetCode, /r/DailyProgrammer), DIY Electronics (Arduino, Radio Control), Amateur Photography (Landscape, Portrait, Street Photography), Graphics Design (Adobe Photoshop/Lightroom/Illustrator) Gaming (PC, Switch), Fitness
         </p>
+        </div>
     </div>
 </div>
