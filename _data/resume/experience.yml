@@ -6,6 +6,9 @@
   duration: "8 months"
   doings:
   - "things"
+  tech:
+  - Python
+  - TeamCity CI
 - company: "Electronic Arts - BioWare"
   position: "UI/UX Programmer Co-op on Anthem"
   location: "Edmonton AB"
@@ -17,6 +20,10 @@
   - "Developed entities for UI/UX artists and scripters; strong teamwork and communication demonstrated with consolidated specifications"
   - "Wrote Python upgrade scripts to modify and validate XML and game asset files in bulk"
   - "Investigated bugs related to UI, keyboard/mouse inputs and developed robust solutions"
+  tech:
+  - C++
+  - Python
+  - Frostbite
 - company: "UBC CS"
   position: "Teaching Assistant"
   location: "Vancouver BC"
@@ -26,6 +33,8 @@
   doings:
   - "Assisted students to learn C programming by responding to students' in-class questions in a clear and simple manner"
   - "Supervised students in programming labs and marked lab submissions using an automated script I wrote in Python"
+  tech:
+  - Python
 - company: "Vital Mechanics Research Inc."
   position: "Software Developer Co-op"
   location: "Vancouver BC"
@@ -36,6 +45,12 @@
   - "Developed applications in Qt GUI Framework using C++ and JavaScript"
   - "Maintained clean code that follows MVC software structure"
   - "Programmed interactive 3D viewers with JavaScript and Three.js; wrote realistic shaders in WebGL"
+  tech:
+  - Qt
+  - QML
+  - C++
+  - JavaScript
+  - Adobe Plugin API
 - company: "U of A CS"
   position: "High School Software Intern"
   location: "Edmonton AB"
@@ -46,3 +61,6 @@
   - "Developed Android tablet game based on Box2D engine in Java and Android SDK"
   - "Implemented haptic and audio feedback and physics-enabled obstacles"
   - "Presented talk on project specifications, goals, and experiences"
+  tech:
+  - Android SDK
+  - Java
