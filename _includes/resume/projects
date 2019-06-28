@@ -1,5 +1,11 @@
 <div>
-    <h2>{% if page.use_formal_heading %}PROJECTS{% else %}I MADE{% endif %}</h2>
+    <h2>
+    {% if page.h2.uppercase %}
+    {{ site.data.resume.header_titles[page.h2.theme_index].proj | upcase }}
+    {% else %}
+    {{ site.data.resume.header_titles[page.h2.theme_index].proj }}
+    {% endif %}
+    </h2>
     <div class="row thickside">
         {% assign i = 0 %}
         {% for project in site.data.projects %}
@@ -8,7 +14,7 @@
                 <h3>{% if project.name_short %}{{ project.name_short }}{% else %}{{ project.name }}{% endif %}</h3>
                 <p><small>{{ project.dates.end | date: "%b %Y" }}</small></p>
                 <p>{{ project.description }}</p>
-                <small>Tech used: <em>{{ project.tech | join: ', ' | truncatewords: 12 }}</em></small>
+                {% if page.proj.display_tech %}<small>Tech used: <em>{{ project.tech | join: ', ' | truncatewords: 12 }}</em></small>{% endif %}
             </div>
             {% assign i = i | plus: 1 %}
             {% if i == include.num_projects %}

@@ -1,5 +1,11 @@
 <div>
-    <h2>{% if page.use_formal_heading %}SKILLS{% else %}I CAN{% endif %}</h2>
+    <h2>
+    {% if page.h2.uppercase %}
+    {{ site.data.resume.header_titles[page.h2.theme_index].skills | upcase }}
+    {% else %}
+    {{ site.data.resume.header_titles[page.h2.theme_index].skills }}
+    {% endif %}
+    </h2>
     <div class="thickside">
         <table>
             <tbody>

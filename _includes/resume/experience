@@ -1,6 +1,13 @@
 <div>
-    <h2>{% if page.use_formal_heading %}EXPERIENCE{% else %}I WAS{% endif %}</h2>
+    <h2>
+    {% if page.h2.uppercase %}
+    {{ site.data.resume.header_titles[page.h2.theme_index].exp | upcase }}
+    {% else %}
+    {{ site.data.resume.header_titles[page.h2.theme_index].exp }}
+    {% endif %}
+    </h2>
     <div class="thickside">
+        {% assign i = 0 %}
         {% for exp in site.data.resume.experience %}
         <div class="thinline">
             <h3>{{ exp.position }}</h3>
@@ -15,6 +22,10 @@
                 {% endfor %}
             </ul>
         </div>
+        {% assign i = i | plus: 1 %}
+            {% if i == include.max_display %}
+        {% break %}
+        {% endif %}
         {% endfor %}
     </div>
 </div>

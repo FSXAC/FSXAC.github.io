@@ -11,15 +11,29 @@ header:
   text:
   - Use the setting below to customize the content and layout.
 
-use_formal_heading: false
+h2:
+  theme_index: 1
+  uppercase: true
+
+proj:
+  display_tech: false
+
 ---
 
 {% include resume/header name=page.author %}
 {% include resume/skills %}
-{% include resume/experience %}
+{% include resume/experience max_display=4 %}
 {% include resume/projects num_projects=8 %}
 {% include resume/hobbies %}
-{% unless page.use_formal_heading %}<h2>I WOULD LIKE A JOB PLEASE.</h2>{% endunless %}
+{% if site.data.resume.header_titles[page.h2.theme_index].rand %}
+<h2>
+  {% if page.h2.uppercase %}
+  {{ site.data.resume.header_titles[page.h2.theme_index].rand | upcase }}
+  {% else %}
+  {{ site.data.resume.header_titles[page.h2.theme_index].rand }}
+  {% endif %}
+</h2>
+{% endif %}
 
 </body>
 </html>

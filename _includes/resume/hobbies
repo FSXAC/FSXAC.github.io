@@ -1,5 +1,11 @@
 <div>
-    <h2>{% if page.use_formal_heading %}HOBBIES & ACTIVITIES{% else %}I LIKE{% endif %}</h2>
+    <h2>
+    {% if page.h2.uppercase %}
+    {{ site.data.resume.header_titles[page.h2.theme_index].likes | upcase }}
+    {% else %}
+    {{ site.data.resume.header_titles[page.h2.theme_index].likes }}
+    {% endif %}
+    </h2>
     <div class="thickside">
         <div class="thinline">
         <p class="text-muted">{{ site.data.resume.likes | join: ', ' }}</p>

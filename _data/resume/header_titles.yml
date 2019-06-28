@@ -1,0 +1,56 @@
+# This is a mapping of header titles for each section
+# based on the theme of the document
+
+# Index
+# 0 - formal
+# 1 - experimental (using 'I')
+# 2 - gamer
+# 3 - Python
+# 4 - C++
+
+- theme: 0
+  skills: 'Skills'
+  exp: 'Experience'
+  proj: 'Projects'
+  likes: 'Hobbies & Activities'
+  rand: 
+- theme: 1
+  skills: 'I Can'
+  exp: 'I Was'
+  proj: 'I Made'
+  likes: 'I Like'
+  rand: 'I would like a job please.'
+- theme: 2
+  skills: Abilities
+  exp: EXP
+  proj: Inventory
+  likes: Buffs
+  rand: 
+- theme: 3
+  skills: '<span style="font-family: monospace">def getSkills():</span>'
+  exp: '<span style="font-family: monospace">def getExperience():</span>'
+  proj: '<span style="font-family: monospace">def getProjects():</span>'
+  likes: '<span style="font-family: monospace">def getHobbies():</span>'
+  rand: '<span style="font-family: monospace">sys.exit(0)</span>'
+
+# Not very good
+- theme: 4
+  skills: '<span style="font-family: monospace">char* get_skills() {</span>'
+  exp: '<span style="font-family: monospace">};<br/>char* get_experience() {</span>'
+  proj: '<span style="font-family: monospace">};<br/>char* get_projects() {</span>'
+  likes: '<span style="font-family: monospace">};<br/>char* get_hobbies() {</span>'
+  rand: '<span style="font-family: monospace">};</span>'
+- theme: 5
+  skills: '<span style="font-family: monospace">/* skills */</span>'
+  exp: '<span style="font-family: monospace">/* experience */</span>'
+  proj: '<span style="font-family: monospace">/* projects */</span>'
+  likes: '<span style="font-family: monospace">/* extra */</span>'
+  rand: '<span style="font-family: monospace">return 0;</span>'
+
+# Meh
+- theme: 6
+  skills: '<span style="font-family: monospace">var skills = {</span>'
+  exp: '<span style="font-family: monospace">};<br/>var experiences = {</span>'
+  proj: '<span style="font-family: monospace">};<br/>var projs = {</span>'
+  likes: '<span style="font-family: monospace">};<br/>var hobbies = {</span>'
+  rand: '<span style="font-family: monospace">};'
