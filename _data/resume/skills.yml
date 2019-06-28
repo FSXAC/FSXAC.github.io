@@ -12,6 +12,7 @@
   - "Python"
   - "NCurses"
   - "C/C++"
+  - Jekyll/Liquid
   - "SystemVerilog"
   - "LaTeX"
   - "JavaScript"
@@ -23,20 +24,21 @@
   - "8051 Assembly"
 - verb: Build
   skills:
-  - "3D Print"
+  - "3D Printer"
   - "CNC Machine"
   - "Soldering Iron/SMT"
   - "Probe/Oscilloscope"
-- verb: Use
+- verb: Utilize
   skills:
   - "git/Perforce"
+  - Continous integration
   - "Quartus/ModelSim"
   - "Autodesk Suite"
   - "Solidworks"
   - "SimuLink"
   - "Adobe Suite"
-# - verb: Create
-#   skills:
-#   - "Stupid shit"
-#   - "Useless projects"
-#   - "Minecraft redstone"
+- verb: Create
+  skills:
+  - "Technical documentation"
+  - "Detailed notes and instruction manual"
+  - "Organized Wikis"

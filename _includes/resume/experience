@@ -11,7 +11,7 @@
             </p>
             <ul class="my-1">
                 {% for do in exp.doings %}
-                    <li>{{ do }}</li>
+                    <li>{{ do }}.</li>
                 {% endfor %}
             </ul>
         </div>
