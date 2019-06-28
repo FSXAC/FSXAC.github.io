@@ -74,7 +74,7 @@
 <body>
 	{% include navigation.html %}
 	{% if page.watermark %}
-	{% include watermark text=page.watermark %}
+	{% include watermark.html text=page.watermark %}
 	{% endif %}
 	{{ content }}
 	<div class="container">
