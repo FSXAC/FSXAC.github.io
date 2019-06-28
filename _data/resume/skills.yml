@@ -1,3 +1,12 @@
+# This file contains the content that populates the
+# "skills" or "I can" section of the resume
+
+# The verb is the top heading
+# Below, list the things that I can do
+
+# Each "verb" set of skills will be populated 
+# into a table column
+
 - verb: code
   skills:
   - "Python"
@@ -26,3 +35,8 @@
   - "Solidworks"
   - "SimuLink"
   - "Adobe Suite"
+# - verb: Create
+#   skills:
+#   - "Stupid shit"
+#   - "Useless projects"
+#   - "Minecraft redstone"

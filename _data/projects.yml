@@ -1,4 +1,9 @@
-- name: FBVis
+# This contains the data about the projects I've created
+
+# This data is used both by the projects page
+# as well as the resume page
+
+- name: Messenger Visualizer
   dates:
     start: 2018-01-01
     end: 2019-03-01
@@ -45,6 +50,7 @@
     project page: https://www.muchen.ca/VGACoreSim
   thumbnail: img/vgacoresim.jpg
 - name: Mandelbrot Set on FPGA
+  name_short: FPGA Fractal
   dates:
     start: 2018-02-01
     end: 2018-02-01
@@ -104,13 +110,13 @@
   - Processing 3
   - Python 3
   thumbnail: img/fwview.jpg
-- name: Sleep Logger Webapp
+- name: Sleep Logger
   dates:
     start: 2017-09-01
     end: 2017-09-01
   type: code
-  description: Webapp that uses realtime database and authentication to keep track
-    of sleep statistics and features beautifully animated front-end.
+  description: Web application with realtime database and authentication to keep track
+    of sleep statistics, featuring beautifully animated front-end.
   details: Created at Lumohacks 2017
   scope: hack
   contributors:
@@ -126,7 +132,7 @@
     website: http://glacial-stream-85429.herokuapp.com/
   worthy: true
   thumbnail: img/lumohacks17.jpg
-- name: CircuitDraw Webapp
+- name: CircuitDraw
   dates:
     start: 2017-07-01
     end: 2017-08-01
@@ -154,6 +160,7 @@
   - multimeter
   thumbnail: 
 - name: Magnetic Field Tracking Robot
+  name_short: Mag. Field Robot
   dates:
     start: 2017-04-01
     end: 2017-04-01
