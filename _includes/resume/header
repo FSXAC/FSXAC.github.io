@@ -1,5 +1,5 @@
-<div style='display:flex;'>
-	<div style="text-align:right;border-right:1px dotted black" class='pr-2'>
+<div style='display:flex;justify-content: center;'>
+	<div style="text-align:right;border-right:5px solid black" class='pr-2'>
 		<h1 class='my-0'>{{ include.name | upcase }}</h1>
 		<p class="my-0 text-muted">UBC Electrical Engineering Undergraduate (Co-op Program) - 85.4% GPA</p>
 	</div>
