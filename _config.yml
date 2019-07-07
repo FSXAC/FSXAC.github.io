@@ -41,7 +41,7 @@ defaults:
       type: "photos"
     values:
       nav_active: /photos
-      permalink: /:year/:title
+      permalink: /photos/:year/:title
       use_lightbox: true
       excerpt_separator: <!-- excerpt -->
 
