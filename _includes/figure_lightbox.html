@@ -53,19 +53,24 @@ img.figure-img {
 </style>
 
 <div id="main-lightbox" class="lightbox">
-	<img id='lightbox-image' src="" alt="placeholder" class="lightbox-content">
+	<img id='lightbox-image' src="" alt="..." class="lightbox-content">
 	<span class="lightbox-close">&times;</span>
 </div>
 
 <script>
 let modal = $('#main-lightbox')
 let imgs = $('.figure-img')
-let modal_image = $('#lightbox-image')
+let modal_image = document.getElementById('lightbox-image')
+
 imgs.click(function() {
 	modal.css('display', 'block');
 	let img_src = this.src;
 	let new_src = img_src.replace(/\?(width=\d+\&height=\d+)/i, '\?height=2000');
-	modal_image.attr('src', new_src);
+	modal_image.src = new_src;
+	modal_image.onload = function() {
+		modal_image.style.display = 'initial';
+	}
+	modal_image.style.display = 'none';
 })
 
 $('.lightbox-close').click(function() {
