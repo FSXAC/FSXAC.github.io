@@ -53,6 +53,7 @@ img.figure-img {
 </style>
 
 <div id="main-lightbox" class="lightbox">
+	<p id="lightbox-text" class="lead" style="text-align:center; top:50%; color:#fff; position:relative;">Loading image...</p>
 	<img id='lightbox-image' src="" alt="..." class="lightbox-content">
 	<span class="lightbox-close">&times;</span>
 </div>
@@ -61,6 +62,7 @@ img.figure-img {
 let modal = $('#main-lightbox')
 let imgs = $('.figure-img')
 let modal_image = document.getElementById('lightbox-image')
+let loading_text = document.getElementById('lightbox-text')
 
 imgs.click(function() {
 	modal.css('display', 'block');
@@ -69,8 +71,10 @@ imgs.click(function() {
 	modal_image.src = new_src;
 	modal_image.onload = function() {
 		modal_image.style.display = 'initial';
+		loading_text.style.display = 'none';
 	}
 	modal_image.style.display = 'none';
+	loading_text.style.display = 'block';
 })
 
 $('.lightbox-close').click(function() {
