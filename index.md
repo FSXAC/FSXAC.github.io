@@ -17,6 +17,7 @@ header:
   text:
   - A fourth year EE student at UBC.
   - Currently on an 8-month co-op term Intel of Canada as FPGA Emulation Platform intern. I've previously worked at Electronic Arts - BioWare and VitalMechanics.
+  - <i class="text-muted" id="my-facts"></i>
 ---
 
 ## Index
@@ -38,3 +39,8 @@ header:
     <dt class="col-md-2">LinkedIn</dt>
     <dd class="col-md-10"><a href="https://www.linkedin.com/in/muchen-he-6a3716b3/">Link</a></dd>
 </dl>
+
+<script src="/assets/js/facts.js"></script>
+<script>
+makeRandomMessage('my-fact', 'my-facts')
+</script>
