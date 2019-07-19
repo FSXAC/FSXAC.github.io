@@ -7,12 +7,16 @@ const MY_FACTS = [
 	'Amateur Tetris player.',
 	'Canadian citizen since 2012.',
 	'Don\'t bother to using these to get my personal information.',
-	'WHAT&#8253; You\'ve never played Tuber Simulator.'
+	'WHAT&#8253; You\'ve never played Tuber Simulator.',
+	'Minesweeper personal record: 5 seconds on beginner, 55 seconds on medium',
+	'Average <a href="https://www.humanbenchmark.com/users/5d1edd1dbfa20b00011fc1bc">reaction time</a> of 208ms',
+	'Average typing speed 94 WPM.',
 ]
 
 function makeRandomMessage(id, parent_id) {
 	let message = document.createElement('span');
 	message.id = id;
-	message.innerHTML = MY_FACTS[Math.floor(Math.random() * MY_FACTS.length)];
+	let i = Math.floor(Math.random() * MY_FACTS.length);
+	message.innerHTML = '<sup>#' + i + '</sup> ' + MY_FACTS[i];
 	document.getElementById(parent_id).appendChild(message)
 }
