@@ -1,84 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	{% assign titlebar = page.title %}
-	{% if page.titlebar %}
-	{% assign titlebar = page.titlebar %}
-	{% endif %}
-	<title>{{ page.author }} :: {{ titlebar }}</title>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="description" content="Muchen's page" />
-	<meta name="author" content="{{ page.author }}" />
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="/favicon.ico" type="image/x-icon">
-	
-	<link rel="stylesheet" href="/assets/fonts/Suisse/styleA.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="/assets/css/default.css">
-	{% for line in page.extra_css %}{{ line }}{% endfor %}
-	
-	<!-- Full jquery includes animations -->
-	{% if page.full_jquery %}
-	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
-	{% else %}
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	{% endif %}
-
-	{% if page.use_popper %}
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	{% endif %}
-
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-	{% if page.use_math %}
-	<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script> -->
-	<script type="text/x-mathjax-config">
-		MathJax.Ajax.config.path["mhchem"] = "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
-		MathJax.Hub.Config({
-			extensions: ["tex2jax.js", "[mhchem]/mhchem.js"],
-			jax: ["input/TeX", "output/HTML-CSS"],
-			tex2jax: {
-				inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-				displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-				processEscapes: true
-			},
-			"HTML-CSS": { fonts: ["TeX"] },
-		});
-	</script>
-	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script> -->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" async></script>
-	{% endif %}
-
-	{% for line in page.extra_js %}{{ line }}{% endfor %}
-	<style>
-		.jumbotron-color {
-			{% if page.header.color %} background-color: {{ page.header.color }};
-			{% elsif page.header.overlay_image %}
-			background: url('{{ page.header.overlay_image }}') no-repeat center center;
-			background-size: cover;
-			min-height: 300px;
-			{% else %}
-			background: linear-gradient(170deg, #406177 0%, #001624 100%);
-			{% endif %}
-			{% if page.header.gradient %} background: {{ page.header.gradient }};{% endif %}
-		}
-		{% if page.titlebar == '404' %}
-		a.btn-outline-light { color: white; }
-		a.btn-outline-light:hover { color: darkred; }
-		{% endif %}
-	</style>
+<title>{% if page.use_category_instead_of_name %}{{ page.categories }}{% else %}{{ page.author }}{% endif %} :: {% if page.titlebar %}{{ page.titlebar }}{% else %}{{ page.title }}{% endif %}</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Muchen's page{% endif %}" />
+<meta name="author" content="{{ page.author }}" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon">	
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="/assets/fonts/Suisse/styleA.css">
+<link rel="stylesheet" href="/assets/css/default.css">
+{% for line in page.extra_css %}{{ line }}{% endfor %}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+{% if page.use_math %}{% include mathjax %}{% endif %}
+{% for line in page.extra_js %}{{ line }}{% endfor %}
 </head>
 
 <body>
-	{% include navigation.html %}
-	{% if page.watermark %}
-	{% include watermark.html text=page.watermark %}
-	{% endif %}
+	{% if page.show_navigation %}{% include navigation %}{% endif %}
+	{% if page.watermark %}{% include watermark.html text=page.watermark %}{% endif %}
 	{{ content }}
-	<div class="container">
-		{% include footer.html %}
-	</div>
+	{% if page.show_footer %}{% include footer.html %}{% endif %}
+	{% if page.use_lightbox %}{% include figure_lightbox.html %}{% endif %}
 </body>
 </html>

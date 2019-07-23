@@ -1,5 +1,10 @@
 ---
-layout: minimum
+author: Muchen He
+layout: default
+nav_active: /resume
+header:
+  color: '#123'
+  gradient: 'linear-gradient(105deg, rgba(17,34,51,1) 0%, rgba(12,57,105,1) 100%);'
 ---
 
 <style>
@@ -8,7 +13,6 @@ layout: minimum
 	footer, .navbar, .jumbotron { display: none; }
 	.container { max-width: initial; }
 }
-
 h1, h2, h3 { font-weight: bold; }
 h2, h3 { margin-bottom: 0; line-height: 1; }
 h2 { margin-top: .5em; }
@@ -19,16 +23,117 @@ ul { list-style-type: square; }
 .thinline p { margin-top: 0; margin-bottom: 0; }
 </style>
 
-<header class="jumbotron jumbotron-fluid jumbotron-color py-5">
-	<div class="container">
-		<h1 class="display text-light">{{ page.title }}</h1>
-		{% for htext in page.header.text %}<p class="text-light">{{ htext }}</p>{% endfor %}
-		<!-- <div class="btn-group mt-3" role="group" aria-label="...">
-			<button id="buildBtn" type="button" class="btn btn-outline-primary">Print</button>
-		</div> -->
+<div id='resume-header' style='display:flex;justify-content: center;'>
+	<div style="text-align:right;border-right:5px solid black" class='pr-2'>
+		<h1 class='my-0'>{{ page.author | upcase }}</h1>
+		<p class="my-0 text-muted">University of British Columbia &times; B.ASc Electrical Engineering</p>
 	</div>
-</header>
-
-<div id='main' class="container">
-	{{ content }}
+	<div class='ml-2'>
+		<p style='line-height:1em; margin-top:.6em'>i@muchen.ca &times; (778) 952-9222<br />Vancouver/Edmonton, Canada</p>
+		<p class='text-muted'>4.00 GPA &times; Graduating May 2020</p>
+	</div>
 </div>
+
+<div id='resume-skills'>
+	<h2>
+		{% if page.heading_uppercase %}
+		{{ site.data.resume.header_titles[page.heading_theme_index].skills | upcase }}
+		{% else %}
+		{{ site.data.resume.header_titles[page.heading_theme_index].skills }}
+		{% endif %}
+	</h2>
+	<div class="thickside">
+		<table>
+			<tbody>
+				{% for verb in site.data.resume.skills %}
+				<td class="thinline">
+					<h3>{{ verb.verb | capitalize }}</h3>
+					<p>{{ verb.skills | join: ', ' }}</p>
+				</td>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div id="resume-experience">
+	<h2>
+		{% if page.heading_uppercase %}
+		{{ site.data.resume.header_titles[page.heading_theme_index].exp | upcase }}
+		{% else %}
+		{{ site.data.resume.header_titles[page.heading_theme_index].exp }}
+		{% endif %}
+	</h2>
+	<div class="thickside">
+		{% assign i = 0 %}
+		{% for exp in site.data.resume.experience %}
+			<div class="thinline">
+				<h3>{{ exp.position }}</h3>
+				<p class="text-muted">
+					<span style="font-weight: bold; font-size: 1.2em">{{ exp.company }}</span>&nbsp;&vert;&nbsp;
+					<span>{{ exp.start }} - {{ exp.end }}</span>&nbsp;&vert;&nbsp;
+					<span>{{ exp.duration }}</span>
+				</p>
+				<ul class="my-1">
+					{% for do in exp.doings %}
+						<li>{{ do }}.</li>
+					{% endfor %}
+				</ul>
+			</div>
+			{% assign i = i | plus: 1 %}
+			{% if i == page.experience_max_display %}{% break %}{% endif %}
+		{% endfor %}
+	</div>
+</div>
+
+<div id="resume-projects">
+	<h2>
+		{% if page.heading_uppercase %}
+		{{ site.data.resume.header_titles[page.heading_theme_index].proj | upcase }}
+		{% else %}
+		{{ site.data.resume.header_titles[page.heading_theme_index].proj }}
+		{% endif %}
+	</h2>
+	<div class="row thickside">
+		{% assign i = 0 %}
+		{% for project in site.data.projects %}
+			{% if project.worthy %}
+				<div class="col-3 pl-0 pr-1 thinline project-type-{{ project.type | lowercase }}"">
+					<h3>{% if project.name_short %}{{ project.name_short }}{% else %}{{ project.name }}{% endif %}</h3>
+					<p><small>{{ project.dates.end | date: "%b %Y" }}</small></p>
+					<p>{{ project.description }}</p>
+					{% if page.projs_display_tech_used %}<small>Tech used: <em>{{ project.tech | join: ', ' | truncatewords: 12 }}</em></small>{% endif %}
+				</div>
+				{% assign i = i | plus: 1 %}
+				{% if i == page.proj_max_display %}{% break %}{% endif %}
+			{% endif %}
+		{% endfor %}
+	</div>
+</div>
+
+
+<div id="resume-hobbies">
+	<h2>
+	{% if page.heading_uppercase %}
+	{{ site.data.resume.header_titles[page.heading_theme_index].likes | upcase }}
+	{% else %}
+	{{ site.data.resume.header_titles[page.heading_theme_index].likes }}
+	{% endif %}
+	</h2>
+	<div class="thickside">
+		<div class="thinline">
+		<p class="text-muted">{{ site.data.resume.likes | join: ', ' }}</p>
+		</div>
+	</div>
+</div>
+
+{% if site.data.resume.header_titles[page.heading_theme_index].rand %}
+<h2>
+	{% if page.h2.uppercase %}
+	{{ site.data.resume.header_titles[page.heading_theme_index].rand | upcase }}
+	{% else %}
+	{{ site.data.resume.header_titles[page.heading_theme_index].rand }}
+	{% endif %}
+</h2>
+
+{% endif %}

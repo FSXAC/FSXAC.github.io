@@ -2,24 +2,23 @@
 layout: minimum
 ---
 
-<header class="jumbotron jumbotron-fluid jumbotron-color py-5" style="{{ jb_style }}">
+<header class="jumbotron jumbotron-fluid py-5" style="
+{% if page.header.color %}background-color:{{ page.header.color }};
+{% else %}
+background:linear-gradient(170deg, #406177 0%, #001624 100%);
+{% endif %}
+{% if page.header.gradient %}background:{{ page.header.gradient }};{% endif %}
+">
 	<div class="container">
 		{% if page.header.image %}<img class="rounded-circle shadow my-4" src="{{ page.header.image }}" alt="{{ page.header.image }}">{% endif %}
-		{% if page.header.text_color %}
-		<h1 class="display" style="color: {{ page.header.text_color }}">
-		{% else %}
-		<h1 class="display text-light">
-		{% endif %}
-		{{ page.title }}</h1>
-
+		{% if page.header.text_color %}<h1 class="display" style="color: {{ page.header.text_color }}">{% else %}<h1 class="display text-light">{% endif %}
+			{{ page.title }}
+		</h1>
 		{% for htext in page.header.text %}
-		{% if page.header.text_color %}
-		<p style="color: {{ page.header.text_color }}">
-		{% else %}
-		<p class="text-light">
-		{% endif %}
-		{{ htext }}</p>{% endfor %}
-
+			{% if page.header.text_color %}<p style="color: {{ page.header.text_color }}">{% else %}<p class="text-light">{% endif %}
+				{{ htext }}
+			</p>
+		{% endfor %}
 		{% for extra in page.header.extra %}{{ extra }}{% endfor %}
 	</div>
 </header>
@@ -27,8 +26,3 @@ layout: minimum
 <div id='main' class="container">
 	{{ content }}
 </div>
-
-
-{% if page.use_lightbox %}
-{% include figure_lightbox.html %}
-{% endif %}

@@ -18,8 +18,13 @@ plugins:
 
 # Defaults
 defaults:
-  # _posts
-  - scope:
+  - scope: # default for everything across the site
+      path: ""
+    values:
+      author: Muchen He
+      show_navigation: true
+      show_footer: true
+  - scope: # stuff under _posts folder
       path: ""
       type: "posts"
     values:
@@ -32,10 +37,9 @@ defaults:
     values:
       layout: doc
       nav_active: /documents
-  - scope:
-      path: ""
-    values:
-      author: Muchen He
+      use_category_instead_of_name: true
+      show_footer: false
+      show_navigation: false
   - scope:
       path: ""
       type: "photos"
@@ -45,6 +49,7 @@ defaults:
       use_lightbox: true
       excerpt_separator: <!-- excerpt -->
 
+# Collections config
 collections:
   photos:
     output: true

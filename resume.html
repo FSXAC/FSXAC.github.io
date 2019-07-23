@@ -1,38 +1,13 @@
 ---
-author: Muchen He
-layout: resume
 title: Resume
-titlebar: Resume
-nav_active: /resume
 permalink: /resume
-header:
-  color: '#123'
-  gradient: 'linear-gradient(105deg, rgba(17,34,51,1) 0%, rgba(12,57,105,1) 100%);'
-  text:
-  - '[WIP] Customization options coming soon.'
-
+layout: resume
 watermark: Draft
 
-h2:
-  theme_index: 1
-  uppercase: true
-
-proj:
-  display_tech: false
-
+# Include-specific parameters
+heading_theme_index: 1
+heading_uppercase: true
+projs_display_tech_used: false
+experience_max_display: 4
+proj_max_display: 8
 ---
-
-{% include resume/header name=page.author %}
-{% include resume/skills %}
-{% include resume/experience max_display=4 %}
-{% include resume/projects num_projects=8 %}
-{% include resume/hobbies %}
-{% if site.data.resume.header_titles[page.h2.theme_index].rand %}
-<h2>
-  {% if page.h2.uppercase %}
-  {{ site.data.resume.header_titles[page.h2.theme_index].rand | upcase }}
-  {% else %}
-  {{ site.data.resume.header_titles[page.h2.theme_index].rand }}
-  {% endif %}
-</h2>
-{% endif %}

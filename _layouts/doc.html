@@ -1,64 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>{{ page.categories }} :: {{ page.title }}</title>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="description" content="Muchen's page" />
-	<meta name="author" content="{{ page.author }}" />
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="/favicon.ico" type="image/x-icon">
-	
-	<link rel="stylesheet" href="/assets/fonts/Suisse/styleA.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="/assets/css/default.css">
+---
+layout: minimum
+---
 
-	{% if page.use_math %}
-	<script type="text/x-mathjax-config">
-			MathJax.Ajax.config.path["mhchem"] = "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
-			MathJax.Hub.Config({
-				extensions: ["tex2jax.js", "[mhchem]/mhchem.js"],
-				jax: ["input/TeX", "output/HTML-CSS"],
-				tex2jax: {
-					inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-					displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-					processEscapes: true
-				},
-				"HTML-CSS": { fonts: ["TeX"] },
-			});
-		</script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
-	{% endif %}
+<style>
+h2 { border-bottom: 1px dotted black; }
+div.footnotes { border-top: 1px solid; }
+</style>
 
-	{% if page.use_mermaid %}
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js" async></script>
-	{% endif %}
-
-	{% for line in page.extra_js %}{{ line }}{% endfor %}
-	<style>
-		h2 {
-			border-bottom: 1px dotted black;
-		}
-		div.footnotes {
-			border-top: 1px solid;
-		}
-	</style>
-</head>
-
-<body>
-{% if page.watermark %}
-{% include watermark.html text=page.watermark %}
-{% endif %}
 <header class="pt-5 pb-3">
 	<div class="container narrow">
 		{% if page.categories != empty %}
-		<small style="letter-spacing: 2px">
-		{% for category in page.categories %}
-		{{ category | upcase }}{% unless forloop.last %}, {% endunless %}
-		{% else %}
-		{% endfor %}
-		</small>
+			<small style="letter-spacing: 2px">
+			{% for category in page.categories %}
+				{{ category | upcase }}{% unless forloop.last %}, {% endunless %}
+				{% endfor %}
+			</small>
 		{% endif %}
 		<h1 class="bold">{{ page.title }}</h1>
 		<p class="m-0 pb-2" style="border-bottom: 1px solid black">Updated {{ page.date | date: "%Y-%m-%d" }}</p>
@@ -67,5 +23,3 @@
 <div id='c-content' class="container narrow" style="padding-bottom: 100px;">
 	{{ content }}
 </div>
-</body>
-</html>

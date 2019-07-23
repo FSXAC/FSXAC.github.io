@@ -2,63 +2,64 @@
 layout: minimum
 ---
 
-<header class="jumbotron jumbotron-fluid jumbotron-color py-5" {% if page.header.overlay_filter %}
-		style="background-color: rgba(0, 0, 0, {{ page.header.overlay_filter }}); background-blend-mode: multiply;"
-		{% endif %}>
+<header class="jumbotron jumbotron-fluid py-5" style="
+{% if page.header.overlay_image %}
+background:url('{{ page.header.overlay_image }}') no-repeat center center;
+background-size:cover;
+min-height:300px;
+{% else %}
+background:linear-gradient(170deg, #406177 0%, #001624 100%);
+{% endif %}
+{% if page.header.overlay_filter %}
+background-color:rgba(0,0,0,{{ page.header.overlay_filter }});background-blend-mode:multiply;
+{% endif %}
+">
 	<div class="container">
 		{% if page.categories != empty %}
 		<small class="text-light" style="letter-spacing: 2px">
-		{% for category in page.categories %}
-		{{ category | upcase }}{% unless forloop.last %}, {% endunless %}
-		{% else %}
-		{% endfor %}
+			{% for category in page.categories %}
+			{{ category | upcase }}{% unless forloop.last %}, {% endunless %}
+			{% endfor %}
 		</small>
 		{% endif %}
 
 		<h1 class="display text-light">{{ page.title }}</h1>
-
 		<p class="text-light lead m-0 mt-5">Published {{ page.date | date: "%Y-%m-%d" }}</p>
 		<p class="text-light m-0">
 			{% assign words = content | number_of_words %}
-			{% if words < 360 %}
-			1 min
-			{% else %}
-			{{ words | divided_by:180 }} min
-			{% endif %}
-			read
+			{% if words < 360 %}1 min{% else %}{{ words | divided_by:180 }}&nbsp;min{% endif %}&nbsp;read
 		</p>
 
 		{% if page.tags != empty %}
 		<p class="text-light m-0 mt-5"><small>
-		{% for tag in page.tags %}
-		<a href="#" class="text-light">#{{ tag | capitalize }}</a>{% unless forloop.last %} {% endunless %}
-		{% endfor %}
-		</small></p>
+				{% for tag in page.tags %}
+				<a href="#" class="text-light">#{{ tag | capitalize }}</a>{% unless forloop.last %} {% endunless %}
+				{% endfor %}
+			</small></p>
 		{% endif %}
 	</div>
 </header>
+
 <div id='c-content' class="container">
 	{{ content }}
 </div>
 
 <div class="container">
-<hr>
-
-<div class="post-navigation justify-content-between row"aria-label="Post navigation">
-	<div class="col-6 float-left">
-		{% if page.previous.url %}
-		<small><b>&laquo; Previous</b></small>
-		<br>
-		<a href="{{page.previous.url}}">{{page.previous.title}}</a>
-		{% endif %}
+	<hr>
+	<div class="post-navigation justify-content-between row" aria-label="Post navigation">
+		<div class="col-6 float-left">
+			{% if page.previous.url %}
+			<small><b>&laquo; Previous</b></small>
+			<br>
+			<a href="{{page.previous.url}}">{{page.previous.title}}</a>
+			{% endif %}
+		</div>
+		<div class='col-6' style="text-align:right">
+			{% if page.next.url %}
+			<small><b>Next &raquo;</b></small>
+			<br>
+			<a href="{{page.next.url}}">{{page.next.title}}</a>
+			{% endif %}
+		</div>
 	</div>
-	<div class='col-6' style="text-align:right">
-		{% if page.next.url %}
-		<small><b>Next &raquo;</b></small>
-		<br>
-		<a href="{{page.next.url}}">{{page.next.title}}</a>
-		{% endif %}
-	</div>
-</div>
-
 </div>

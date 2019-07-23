@@ -1,0 +1,8 @@
+{%- comment -%} {% capture header_common %}class="jumbotron jumbotron-fluid py-5"{% endcapture %}
+{% capture default_header %}<header {{ header_common }} style="background:linear-gradient(170deg, #406177 0%, #001624 100%);">{% endcapture %}
+{% unless include.type %}
+	{{ default_header }}
+{% else %}
+{% if include.type=="gradient" %}
+	{% if include.gradient %}
+		<header {{ header_common }} style="background:{{ gradient }};"> {%- endcomment -%}
