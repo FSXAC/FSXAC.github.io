@@ -8,9 +8,14 @@ const MY_FACTS = [
 	'Canadian citizen since 2012.',
 	'Don\'t bother to using these to get my personal information.',
 	'WHAT&#8253; You\'ve never played Tuber Simulator.',
-	'Minesweeper personal record: 5 seconds on beginner, 55 seconds on medium',
+	'Minesweeper personal record: 5 seconds on beginner, 49 seconds on medium',
 	'Average <a href="https://www.humanbenchmark.com/users/5d1edd1dbfa20b00011fc1bc">reaction time</a> of 208ms',
 	'Average typing speed 94 WPM.',
+	'Built UBC Macleod building in Minecraft.',
+	'Favorite Minecraft texture packs: Summerfield, Soartex Fanver, and Faithful.',
+	'Inspired by Minecraft splash texts.',
+	'20 GOTO 10',
+	'$(\'#muchen\').hide();'
 ]
 
 function makeRandomMessage(id, parent_id) {
