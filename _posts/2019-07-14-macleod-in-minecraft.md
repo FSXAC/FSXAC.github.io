@@ -36,7 +36,11 @@ For the floors and staris, I chose stone and sandstone so that it matches the re
 
 `insert hallway`
 
-## 
+## Landscaping
+
+## Gallery
+
+Here are some pictures.
 
 
 <iframe style="width: 100%; height: 400px; overflow: hidden; border:1px solid #000;" src="http://144.217.73.130:11565/?worldname=usagi13&mapname=surface&zoom=5&x=286&y=64&z=247" width="100" height="100" scrolling="no">Iframes not supported</iframe>
