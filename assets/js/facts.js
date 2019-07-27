@@ -15,7 +15,11 @@ const MY_FACTS = [
 	'Favorite Minecraft texture packs: Summerfield, Soartex Fanver, and Faithful.',
 	'Inspired by Minecraft splash texts.',
 	'20 GOTO 10',
-	'$(\'#muchen\').hide();'
+	'$(\'#muchen\').hide();',
+	'And that\'s a fact',
+	'asdfghjkl',
+	'NANI KORE&#8253;',
+	'Gen Z!',
 ]
 
 function makeRandomMessage(id, parent_id) {

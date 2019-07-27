@@ -12,7 +12,7 @@ header:
 
 Over the last few weeks I've been trying to build the Macleod Building in survival Minecraft. After I heard the rumors about the demolishing of the Macleod building in the future, I thought it would be nice to keep a personal copy of it in my Minecraft world. To prolong the longevity of the build, I've limited myself to having no third-party mods except for server-side plugins, vanilla Minecraft data-packs, or client-only mods such as shader mods.
 
-<!--excerpt-->
+<!-- excerpt -->
 
 This is my first time trying to build something real 1:1 in Minecraft. Constraints include: limited block types in survival mode and every block is 1x1x1 in meters. This creates problems because I would need to round real life measurements into nearest meter; e.g. A hallway that is 1.3 meters wide would be too narrow if it was 1 block wide in Minecraft, but too wide if it's two blocks wide. For ceiling heights and wall thicknesses, I followed xRILLIANx's *Minecraft Architectural Standards* [^mas].
 
@@ -40,14 +40,19 @@ For the floors and stairs, I chose stone and sandstone so that it matches the re
 
 Due to the limited build resolution in Minecraft, a lot of places feels cramped and small. It's difficult to feel the scale of things. As mentioned before, some compromises had to be made and certain details cannot be reproduced without scaling up the build. For example, the study rooms on third and forth floors are usually 3 meters wide, but because we cannot place half block vertically or have any wall thickness less than 1 block in Minecraft. The result is that study rooms are 1 block or 2 blocks wide.
 
-## Landscaping
+For the exterior and landscapting, I opted for some large oak trees and they seem to work pretty well. I had to create some custom trees due to their non-standard size and shape. The large tree in the front entrance was custom built because it was tall but skinny. The saplings at the north side of the building were small, but not small enough to use Minecraft saplings; plus Minecraft saplings would grow into large trees.
 
-We have some flexibility in trying to 
+Overall the build took about 12 hours accumulated over the span of 3 weeks, and not including the survival aspects such as resource gathering. All the walls and doors have been laid out corresponding to the floor plans but interior decoration and furnishing is still work-in-progress.
+
+`dynmap progress`
 
 ## Gallery
 
-Here are some pictures.
+`Here are some pictures.`
 
+Playing Minecraft on a flatscreen monitor is easy to lose sense of the scale that 1 block = 1 meter. I tried walking around the build in VR and it's a lot more immersive in terms of scaling.
+
+`Vr video`
 
 <!--<iframe style="width: 100%; height: 400px; overflow: hidden; border:1px solid #000;" src="http://144.217.73.130:11565/?worldname=usagi13&mapname=surface&zoom=5&x=286&y=64&z=247" width="100" height="100" scrolling="no">Iframes not supported</iframe>-->
 
