@@ -1,0 +1,70 @@
+<style>
+label.fc-l {
+	cursor: pointer;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	perspective: 1000px;
+	-webkit-perspective: 1000px;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	width: 400px;
+}
+
+.fc-card {
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+	min-height: 100px;
+	position: relative;
+	transition: all ease-out 0.5s;
+	-webkit-transition: all ease-out 0.5s;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	z-index: 99;
+}
+
+.fc-card div {
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	background: #fff;
+	height: 100%;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+.fc-card .back {
+	background: #fff;
+	transform: rotateY(-180deg);
+	-webkit-transform: rotateY(-180deg);
+}
+
+.fc-card > .back > p, .fc-card > .front > p {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+label.fc-l:hover .fc-card {
+	box-shadow: 1em 0.5rem 1rem rgba(0,0,0,.15);
+	transform: rotateY(-10deg);
+	-webkit-transform: rotateY(-10deg);
+}
+
+.fc-l input {
+	display: none;
+}
+
+:checked + .fc-card {
+	box-shadow: 0 0.5em 1rem rgba(0,0,0,.15);
+	transform: rotateY(-180deg);
+	-webkit-transform: rotateY(-180deg);
+}
+
+label.fc-l:hover :checked + .fc-card {
+	box-shadow: 1em 0.5rem 1rem rgba(0,0,0,.15);
+	transform: rotateY(-170deg);
+	-webkit-transform: rotateY(-760deg);
+}
+</style>
