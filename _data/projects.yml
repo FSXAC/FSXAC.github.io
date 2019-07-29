@@ -33,7 +33,7 @@
   links:
     Blog 1: /elec/2018/motor_control_part1/
     Blog 2: /elec/2018/motor_control_part2/
-    Report: /docs/ELEC391/demo3.pdf
+    Report: /documents/ELEC391/demo3.pdf
   worthy: true
   thumbnail: img/elec391.jpg
 - name: VGACoreSim
@@ -96,8 +96,8 @@
   - MATLAB
   - SimuLink
   links:
-    Report part 1: /docs/ELEC341/ELEC341-Project1.pdf
-    Report part 2: /docs/ELEC341/ELEC341-Project2.pdf
+    Report part 1: /documents/ELEC341/ELEC341-Project1.pdf
+    Report part 2: /documents/ELEC341/ELEC341-Project2.pdf
   thumbnail: img/elec341.jpg
 - name: FWView
   dates:
@@ -188,7 +188,7 @@
   - Signal generator
   - Oscilloscope
   links:
-    read report: /docs/ELEC291/Project2
+    read report: /documents/ELEC291/Project2
   worthy: true
   thumbnail: img/magtrackrobot.jpg
 - name: Game with Custom Serial Controller
@@ -234,7 +234,7 @@
   - Oscilloscope
   - Signal generator
   links:
-    read report: /docs/ELEC291/Project1
+    read report: /documents/ELEC291/Project1
   worthy: true
   thumbnail: 
 - name: Temperature Monitor
