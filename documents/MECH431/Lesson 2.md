@@ -3,10 +3,7 @@ title: General Economic Concepts
 date: 2018-05-15
 author: Muchen He
 categories: [MECH 431]
-use_math: true
 ---
-
-
 
 - toc
 {:toc}
@@ -87,9 +84,9 @@ The current cost models are arithmetic and has information such as costs and rev
 >
 > ---
 >
-> Let's say we run the miner for a year, that means we have gross income of  $$\$$2\times365=\$730$$. Minus \$$400 of initial GPU purchase is $330.
+> Let's say we run the miner for a year, that means we have gross income of \$2&times;365=\$730. Minus \$400 of initial GPU purchase is \$330.
 >
-> The total cost due to power consumption is 24 hours $$\times$$ 0.4kW $$\times$$ \$0.06/kWh $$\times$$ 365 days $$=$$ \$210.
+> The total cost due to power consumption is 24 hours &times; 0.4kW &times; \$0.06/kWh &times; 365 days = \$210.
 >
 > The net income, thus, is \$110.
 >
