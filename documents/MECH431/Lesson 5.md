@@ -96,7 +96,7 @@ Interest is calculated periodically on the unpaid amount, thus accumulates based
 | $$\vdots$$ | $$\vdots$$                 | $$\vdots$$                      | $$\vdots$$                         |
 | $$n$$      | $$\boxed{P(1+i)^{n-1}}$$   | $$\boxed{i\cdot P(1+i)^{n-1}}$$ | $$\boxed{P(1+i)^n}$$               |
 
-Generalizes to **single payment compound amount**: $$F=P(1+i)<sup>n$$(single payment implies no payment is made during the periods and only paid at the very end). And interest at a particular period: $$I_n=i\cdot P(1+i)</sup>{n-1}$$.
+Generalizes to **single payment compound amount**: $$F=P(1+i)^n$$(single payment implies no payment is made during the periods and only paid at the very end). And interest at a particular period: $$I_n=i\cdot P(1+i)^{n-1}$$.
 
 #### Discount
 
@@ -136,7 +136,7 @@ Compounding is using compound interest rate to determine future value $$F​$$ g
 > \end{align}
 > $$
 >
-> We need to put in \$14,205 right now to get \$100,000 in 40 years.
+> We need to put in \\$14,205 right now to get \\$100,000 in 40 years.
 
 
 
@@ -156,7 +156,7 @@ Compounding is using compound interest rate to determine future value $$F​$$ g
 >
 > Suppose we deposit \$100, and we still have 2% interest semiannually like the previous example.
 >
-> Then the value at the end of the first year is $$P(1+i)<sup>2=100(1+0.02)</sup>2=104.04$$. Effectively, the interest value is \$4.04. The effective interest rate, $$i_a$$ is thus $$4.04\div 100=4.04\%$$.
+> Then the value at the end of the first year is $$P(1+i)^2=100(1+0.02)^2=104.04$$. Effectively, the interest value is \$4.04. The effective interest rate, $$i_a$$ is thus $$4.04\div 100=4.04\%$$.
 
 *Notice how the effective interest rate is slightly different from nominal interest rate.*
 
