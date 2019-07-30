@@ -1,0 +1,6 @@
+<div class="reveal">
+	<a href="#{{ include.id }}" role="button" data-toggle="collapse">
+		<div class="rev-pre">{{ include.pre | markdownify }}</div>
+	</a>
+	<div class="rev-body collapse" id="{{ include.id }}">{{ include.body | markdownify }}</div>
+</div>
