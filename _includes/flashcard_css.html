@@ -4,16 +4,18 @@ label.fc-l {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
 	perspective: 1000px;
 	-webkit-perspective: 1000px;
 	transform-style: preserve-3d;
 	-webkit-transform-style: preserve-3d;
-	width: 400px;
+	max-width: 500px;
 }
 
 .fc-card {
 	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
-	min-height: 100px;
+	background: #123;
 	position: relative;
 	transition: all ease-out 0.5s;
 	-webkit-transition: all ease-out 0.5s;
@@ -26,24 +28,16 @@ label.fc-l {
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	background: #fff;
-	height: 100%;
-	position: absolute;
+	position: relative;
 	text-align: center;
 	width: 100%;
+	padding: 1em;
 }
 
 .fc-card .back {
 	background: #fff;
 	transform: rotateY(-180deg);
 	-webkit-transform: rotateY(-180deg);
-}
-
-.fc-card > .back > p, .fc-card > .front > p {
-	margin: 0;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 }
 
 label.fc-l:hover .fc-card {
@@ -65,6 +59,6 @@ label.fc-l:hover .fc-card {
 label.fc-l:hover :checked + .fc-card {
 	box-shadow: 1em 0.5rem 1rem rgba(0,0,0,.15);
 	transform: rotateY(-170deg);
-	-webkit-transform: rotateY(-760deg);
+	-webkit-transform: rotateY(-170deg);
 }
 </style>
