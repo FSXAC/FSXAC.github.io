@@ -1,6 +1,11 @@
+{% if include.id %}
+{% assign id = include.id %}
+{% else %}
+{% assign id = include.pre | truncate:20, "" | slugify %}
+{% endif %}
 <div class="reveal">
-	<a href="#{{ include.id }}" role="button" data-toggle="collapse">
+	<a href="#{{ id }}" role="button" data-toggle="collapse">
 		<div class="rev-pre">{{ include.pre | markdownify }}</div>
 	</a>
-	<div class="rev-body collapse" id="{{ include.id }}">{{ include.body | markdownify }}</div>
+	<div class="rev-body collapse" id="{{ id }}">{{ include.body | markdownify }}</div>
 </div>

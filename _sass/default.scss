@@ -220,7 +220,7 @@ h2.bold {
 }
 
 // Make blog post images align center
-#c-content img:not(.emoji) {
+#c-content img:not(.emoji), iframe {
 	max-width: 100%;
 	display: block;
 	margin-left: auto;
