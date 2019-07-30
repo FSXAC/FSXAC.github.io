@@ -4,6 +4,9 @@ title: Testing page
 use_math: true
 ---
 
+{% include flashcard2_css.html %}
+{% include reveal_css.html %}
+
 {% capture pre1 %}
 Assets are grouped into classes with single accounts, the classes get depreciated together. Different classes have different depreciation rate.
 {% endcapture %}
@@ -23,8 +26,6 @@ Where $$d$$ is the CCA rate (depends on the asset class), $$\text{UCC}_n$$ is th
 {% include reveal.html pre=pre1 body=body1 id="creepah" %}
 
 ---
-
-{% include flashcard2_css.html %}
 
 {% include flashcard2.html front="Turn around" back="Look at what you see" %}
 
