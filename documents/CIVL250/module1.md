@@ -1,6 +1,7 @@
 ---
 title: "Introduction to Sustainable Development"
-date: 2019-05-11
+created: 2019-05-11
+date: 2019-07-30
 categories: CIVL 250
 use_math: true
 ---
@@ -8,11 +9,11 @@ use_math: true
 - toc
 {:toc}
 
-
+Sustainability as an idea has existed for a long time, but there is a growing focus on **sustainable development** since the 1950s due to rapid increase of population, wealth, and health for all countries.
 
 ## Drivers
 
-Sustainability as an idea has existed for a long time, but there is a growing focus on **sustainable development** since the 1950s due to rapid increase of population, wealth, and health for all countries.
+The main drivers for sustainable development are due to rapidly economic growth in all countries. The main drivers are increasing population and increasing consumption per capita. Both of which will place an impact on society.
 
 {% capture vid1 %}
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jbkSRLYSojo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -20,11 +21,11 @@ Sustainability as an idea has existed for a long time, but there is a growing fo
 {% include reveal_css.html %}
 {% include reveal.html pre="Video on rapid growth of countries." body=vid1 %}
 
-### Increasing Population
+### Driver: Increasing Population
 
 Because of better health, there exists a world population growth. It is estimated that the world population will reach 10 billion by the year 2055.
 
-### Increasing Per Capita Consumption
+### Driver: Increasing Per Capita Consumption
 
 Because of better wealth, people are consuming more resources. Canadians have one of the highest per-capita consumption rates. The **per capita material footprint** is the the sum of extracted material (typically non renewable) required for each person.
 
@@ -54,24 +55,23 @@ The UN created 17 **sustainable development goals (SDGs)** where each goal has w
 
 **Carrying capacity** is the number of people who can be supported over a long period of time. Living within the carrying capacity depends on:
 
-- the amount of resources available in the ecosystem
-- the amount of resources consumed by each individual within the population
-
-The current global bio-capacity is ==1.7 hectares per person==.
+- The amount of resources available in the ecosystem
+- The amount of resources consumed by each individual within the population
 
 **Biocapacity** is the productivity of land areas such as forests, croplands, fisheries, and land for absorbing human waste.
+
+- Current estimated biocapacity: <mark>1.7 hectares per person</mark>.
 
 **Ecological footprint (EF)** measures the current human demand on earth's ecosystems and natural resources. EF provides an estimate of the area of biologically productive land and sea to *sustainably* support human activities. The unit is [*area/year*]. The method of calculating EF is outlined [here](https://www.footprintnetwork.org/resources/data/)[^ef-method].
 
 **Ecological deficit** is when the total ecological footprint is greater than the total biocapacity of the area available to that population.
 
+- Current global average EF is <mark>2.6 hectares per person</mark>.
 - For Canada, we need to reduce our EF by 4 hectares in order to be long-term sustainable.
 
-**Natural capital** is the natural resources on Earth's biosphere that provide ecosystem goods and services imperative for survival and well-being[^nc]. Like financial capital, the idea is that we use the what we have in a way to ensure abundance of capital is maintained or increased over time.
+**Natural capital** is the natural resources on Earth's biosphere that provide ecosystem goods and services imperative for survival and well-being [^nc]. Like financial capital, the idea is that we use the what we have in a way to ensure abundance of capital is maintained or increased over time.
 
 ## Climate Change
-
-### Background
 
 To reduce the worst-case impacts of the climate change, we need to reduce our GHG emissions significantly to limit.  There is a need to limit the average global temperature increase to 1.5 degrees Celsius before 2030.
 
@@ -115,13 +115,13 @@ Sometimes we express how impactful a GHG is by quantifying them in terms of $$\c
 
 Biodiversity loss is considered as significant as climate change. They are important because humans cannot survive without healthy and resilient ecosystems.
 
-**Biological diversity** (**biodiversity**) refers to the variety of specifies and ecosystems[^bd]. They have three components:
+**Biological diversity** (**biodiversity**) refers to the variety of specifies and ecosystems [^bd] as three components:
 
 1. Ecosystem diversity
 2. Species diversity
 3. Genetic diversity
 
-**Biodiversity loss** occurs even with absence of humans but happen at a low rate and do not result in gene pool or ecosystem loss.  However, recently we are seeing mass extinction that are actively caused by humans.
+**Biodiversity loss** occurs even with absence of humans but happen at a low rate and do not result in gene pool or ecosystem loss. However, recently we are seeing mass extinction that are actively caused by humans.
 
 ### Causes
 
@@ -133,7 +133,7 @@ Climate change is considered the main cause of biodiversity. Other significant h
 
 ### Impacts
 
-Biodiversity losses could lead to, but not limited to, some of the following[^bdloss]:
+Biodiversity losses could lead to, but not limited to, some of the following [^bdloss]:
 
 - Reduced crop yields, wood production on plantations, and fisheries.
 - Weaker resistance ecosystems to invasive species.
@@ -144,7 +144,7 @@ Ultimately, biodiversity loss leads to lower quality of ecosystems humans need t
 
 ### Ecosystems Services
 
-A healthy ecosystem supports humans physically, mentally, and socioeconomically. The support is called **ecosystems services**. They are services of:
+A healthy ecosystem supports or provides benefits humans physically, mentally, and socioeconomically. The support is called **ecosystems services**. They are services of:
 
 - Air & water purification
 - Waste decomposition
@@ -154,8 +154,6 @@ A healthy ecosystem supports humans physically, mentally, and socioeconomically.
 - Noise control
 - Aesthetics & culture
 - Raw materials & products
-
-
 
 [^1]: United Nation - Sustainable Development Agenda: [https://www.un.org/sustainabledevelopment/development-agenda/](https://www.un.org/sustainabledevelopment/development-agenda/)
 [^2]: United Nation - Sustainable Development Goals: [https://sustainabledevelopment.un.org/sdgs](https://sustainabledevelopment.un.org/sdgs)

@@ -342,7 +342,6 @@
     entries:
     - title: 'Module 1: Sustainable Development'
       link: '/documents/CIVL250/module1'
-      flag: draft
     - title: 'Module 2: Critical Skills'
       link: '/documents/CIVL250/module2'
       flag: draft
