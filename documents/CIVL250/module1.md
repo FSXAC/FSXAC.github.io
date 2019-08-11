@@ -58,7 +58,7 @@ The UN created 17 **sustainable development goals (SDGs)** where each goal has w
 - The amount of resources available in the ecosystem
 - The amount of resources consumed by each individual within the population
 
-**Biocapacity** is the productivity of land areas such as forests, croplands, fisheries, and land for absorbing human waste.
+**Biocapacity** is the *productivity* of land areas such as forests, croplands, fisheries, and land for absorbing human waste.
 
 - Current estimated biocapacity: <mark>1.7 hectares per person</mark>.
 
@@ -121,7 +121,9 @@ Biodiversity loss is considered as significant as climate change. They are impor
 2. Species diversity
 3. Genetic diversity
 
-**Biodiversity loss** occurs even with absence of humans but happen at a low rate and do not result in gene pool or ecosystem loss. However, recently we are seeing mass extinction that are actively caused by humans.
+**Biodiversity loss** occurs even with absence of humans but happen at a low rate and do not result in gene pool or ecosystem loss. About 60% of the animal population have been lost since 1970 due to human activities.
+
+![1565547179085](assets/module1/1565547179085.png)
 
 ### Causes
 
@@ -163,3 +165,28 @@ A healthy ecosystem supports or provides benefits humans physically, mentally, a
 [^bd]: BioDivCanada: [https://biodivcanada.chm-cbd.net/?lang=en&n=DABC84B3-1](https://biodivcanada.chm-cbd.net/?lang=en&n=DABC84B3-1))
 [^bdloss]: Nature.com - Biodiversity Loss and Its Impact on Humanity: [https://www.nature.com/articles/nature11148](https://www.nature.com/articles/nature11148).
 
+---
+
+**Review**
+
+- Three major trends occurred in the global community since 1948 are:
+  1. Population increased drastically
+  2. Average level of health increased
+  3. Average level of wealth increased
+- Total material footprint in NA is **lower** in 2010 compared to 2008.
+- Recall IPAT is impact, population, affluence, technology; then GHG emissions = number of people &times; kg of goods used per person &times; **GHG emissions per kg of goods**.
+- Working definition of *sustainability* need to consider:
+  - Development
+  - Needs
+  - Future impacts
+- *Carrying capacity* and *biocapacity* are similar in that they both are used within the context of sustainable development and both accounts for an area of land.
+  - *Carrying capacity* is “how much” people fits in an area.
+  - *Biocapacity* is area of land for sustained productivity.
+- Canadians need to reduce 4 global hectares in ecological footprint (EF).
+- Mitigation of climate change is attempt to delay and avoid it; adaptation is developing and adapting to what happens during and after climate change.
+  - Adaptations already happening: e.g. flood barriers, improved drainage, and evacuations from low sea-level areas.
+- Nationally Determined Contributions (NDC) is contribution of a country to cut down GHG emissions.
+  - Canada to cut 30% below 2005 levels by 2030.
+- Three components of biodiversity: **ecosystem**, **species**, **genetics**.
+- 60% of animal population lost due to human activities since 1970s.
+- 

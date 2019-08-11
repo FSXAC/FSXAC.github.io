@@ -8,7 +8,7 @@ categories: CIVL 250
 
 It is very common to measure the carbon footprint simply as the tonnes of atmospheric Green House Gases (GHGs) emitted into the atmosphere by a particular activity or organization.  In this case, the unit of measure is
 
-> tons
+> tons CO<sub>2</sub>e
 
 ### Question 2
 

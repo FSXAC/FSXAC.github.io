@@ -344,7 +344,6 @@
       link: '/documents/CIVL250/module1'
     - title: 'Module 2: Critical Skills'
       link: '/documents/CIVL250/module2'
-      flag: draft
     - title: 'Module 3: Systems & Sustainability'
       link: '/documents/CIVL250/module3'
       flag: draft
@@ -384,6 +383,22 @@
         link: /documents/CIVL250/quiz5
       - enum: 6
         link: /documents/CIVL250/quiz6
+    # - title: "Review Module"
+    #   gruop::
+    #   - enum: 1
+    #     link: /documents/CIVL250/review1
+    #   - enum: 2
+    #     link: /documents/CIVL250/review2
+    #   - enum: 3
+    #     link: /documents/CIVL250/review3
+    #   - enum: 4
+    #     link: /documents/CIVL250/review4
+    #   - enum: 5
+    #     link: /documents/CIVL250/review5
+    #   - enum: 6
+    #     link: /documents/CIVL250/review6
+    #   - enum: 7
+    #     link: /documents/CIVL250/review7
   - course_num: 'APSC 101'
     course_name: 'Intro to Engineering II'
     date: 2016-07-17

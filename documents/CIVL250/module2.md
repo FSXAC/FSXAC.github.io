@@ -1,22 +1,12 @@
 ---
 title: "Critical Skills"
-date: 2019-05-11
+created: 2019-05-11
+date: 2019-08-10
 categories: CIVL 250
-watermark: DRAFT
 ---
 
 - toc
 {:toc}
-*By the end of this week, you are able to:*
-
-- [x] explain the unique role of engineering in sustainable development
-- [x] describe and identify the components of argumentation
-- [x] apply these components in your discussions and elsewhere
-- [x] describe the term "self-regulated learning" and explain the value of self-regulated learning within a professional context.
-- [ ] describe the term "metacognition" and apply the fishbone diagram to support decision-making in a complex problem. 
-
-
-
 ## Engineering Professionalism
 
 Engineers are obligated to the code of ethics. Engineers are obligated to consider sustainability in everything we do.
@@ -79,3 +69,17 @@ Self regulated learning is the possession of the skills needed to learn and gain
 - Adapt future method based on what’s learned.
 
 ## Metacognition
+
+**Metacognition** is the awareness of one’s thought or learning process.
+
+Use the **fishbone** diagram for structed brainstorm to cover a wide breadth of reasons grouped by main categories. Each category has a rank of impact towards the final goal on the right.
+
+![1565545258991](assets/module2/1565545258991.png)
+
+---
+
+**Review**
+
+- Five sustainability guidelines: **maintain, integrate, develop, collaborate, assess**.
+- Argumentation enables exploration of ideas and lead to temporary agreement on resolution to open-ended question.
+- Four components of arguments: **claim, reason, evidence, inferences/warrants**.
