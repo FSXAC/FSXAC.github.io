@@ -7,32 +7,32 @@ watermark: DRAFT
 
 - toc
 {:toc}
-**Checklist** (temporary):
+*By the end of this module, you are able to:*
 
-- [x] simple vs. complex systems
-- [x] Cartesian/reductionism thinking vs. systems thinking
-- [x] Apply systems thinking
-- [x] Complexity science on complex systems
-- [x] Resiliency theory
-- [x] Adaptive cycle
-- [ ] Concept maps
-- [x] Causal loop diagrams
-- [x] Built environment vs. natural environment
-- [ ] Urban ecology
+- [x] distinguish between simple and complex systems
+- [x] describe the difference between Cartesian Thinking and Systems Thinking
+- [x] apply systems thinking
+- [x] Describe what Complexity Science tells us about complex systems 
+- [x] Describe Resiliency Theory
+- [x] Define the Adaptive Cycle and use it to describe a built system
+- [x] read and create concept maps
+- [x] read causal loop diagrammes
+- [ ] compare and contrast the built environment and the natural environment
+- [ ] explain the significance of the field of urban ecology to engineering
 
 ## Systems Theory
 
 ### Systems Thinking
 
-Traditional engineering thinking involves breaking a bigger problem down into smaller constituent components. The assumption is that as long as the smaller components are resolved, the bigger problem gets resolved too. This is **reductionism** or **Cartesian thinking**.
+**Cartesian thinking** is traditional engineering thinking which involves breaking a bigger problem down into smaller constituent components (**reductionism**). The assumption is that as long as the smaller components are resolved, the bigger problem gets resolved too.
 
 This approach do not always work. One component may affect another component in a system that might not be obvious. i.e. a set of traffic lights at an intersection may affects traffic flow from nearby intersections.
 
-**Systems thinking** is about understanding the context for which a network of variables and subcomponents interact with each other. (==todo==: WIP definition).
+**Systems thinking** is about understanding the context for which a network of variables and subcomponents interact with each other by examining the inter-component relationship and input/outputs. The **systems approach** starts with *complex system theory* and allow enables analysis of a subsystem while retaining the larger picture the subsystem is part of.
 
 ### Simple vs. Complex Systems
 
-Systems are a group of components that are working together. A collection of components is a system when:
+**Systems** are a group of components that are working together. A collection of components is a system when:
 
 - There are identifiable *discrete elements*.
 - The elements are interacting with each other.
@@ -56,7 +56,7 @@ Three common properties of complex systems:
 
 Systems without a leader/controller are **self-organizing**. The macroscopic behavior from simple rules are called **emergent**. In a nut shell: [How Stupid Things Become Smart Together](https://www.youtube.com/watch?v=16W7c0mb-rE)[^1].
 
-> A human brain is an example --- The interaction of neurons and synapses in our brain is relative simple, and we can simulate it. But on a scale of billions, we can have consciousness, personality, emotions, etc. These are emergent and macroscopic behaviors.
+> A human brain is an example --- The interaction of neurons and synapses in our brain is relative simple, and we can simulate it. But on a scale of billions, we can have consciousness, personality, emotions, etc.. These are emergent and macroscopic behaviors.
 
 ## Resiliency
 
@@ -99,13 +99,14 @@ A positive feedback loop is two positive (+) references which is inherently unst
 
 ## Concept Map
 
+Concept maps are constructed in four steps:
 
+1. Compose a focus question.
+2. Create a ranked list of concepts.
+3. Construct a preliminary concept map.
+4. Add cross-links to show relationship.
 
-## Bio vs. Techno
-
-
-
-## Urban Ecology
+## Built vs. Natural Systems
 
 
 
@@ -115,3 +116,26 @@ A positive feedback loop is two positive (+) references which is inherently unst
 [^2]: Brian Walker - The best explanation to resilience: <https://www.youtube.com/watch?v=tXLMeL5nVQk>
 [^3]: <http://www.resalliance.org/panarchy>
 
+---
+
+**Review**
+
+- **Reductionism** is the foundation of traditional engineering practice.
+- Any living organism is generally considered **complex system**.
+- Complex systems have three common properties:
+  1. Consists of networks of individual elements governed by simple rules.
+  2. Information and signals are produced and processed internally and externally.
+  3. Chang behavior through learning or evolution (adaptation).
+- **Emergent behavior** is self-organized (often unpredictable) behavior without a controller or leader that is the result of many elements following simple rules.
+- Four stages of the adaptive cycle:
+  1. **Rapid growth (r)** when resources are abundant. (fast)
+  2. **Conservation (K)** when resources run out, system is less flexible. (slow)
+  3. **Release/Disturbance (&Omega;)** causes system to collapse. (fast)
+  4. **Reorganization (&alpha;)** after the collapse to achieve change or innovation. (fast)
+- Four steps to creating a concept map:
+  1. Compose a focus question.
+  2. Create a ranked list of concepts.
+  3. Construct a preliminary map with the listed concepts.
+  4. Add cross-links to show relationships.
+- Causal loop diagrams have “+” or “-” associated with each arrow to indicate positive feedback or negative feedback.
+- Causal loop diagram’s most distinguishing feature is **feedback loops**.
