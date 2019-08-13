@@ -39,7 +39,7 @@ defaults:
       nav_active: /documents
       use_category_instead_of_name: true
       show_footer: false
-      show_navigation: false
+      # show_navigation: false
   - scope:
       path: ""
       type: "photos"

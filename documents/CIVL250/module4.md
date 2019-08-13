@@ -88,29 +88,35 @@ Urban development is challenging due to dense population which makes (mega)citie
 
 The CRF aims to understand the complexity of cities and the drivers that contribute to resiliency. There are four main dimensions to a resilient city, each with three drivers.
 
-1. ##### Health & Well Being
+#### Dimension 1: Health & Well Being
 
-   1. **Basic needs satisfied**: all have access to basic resource needed to survive (food, water, sanitation, energy, and shelter).
-   2. **Support livelihood and employment**: have diverse career, investment, and social welfare opportunities; adequate skills, training, and labor policies.
-   3. **Public health**: effective public healthcare.
+1. **Basic needs satisfied**: all have access to basic resource needed to survive (food, water, sanitation, energy, and shelter).
+2. **Support livelihood and employment**: have diverse career, investment, and social welfare opportunities; adequate skills, training, and labor policies.
+3. **Public health**: effective public healthcare.
 
-2. ##### Economy & Society
+#### Dimension 2: Economy & Society
 
-   1. **Promote cohesive and engaged communities**: collective identity and mutual support; encouraging diversity, tolerance/inclusion for other cultures.
-   2. **Social stability, security, and justice**: comprehensive law enforcement to ensure safety and justice.
-   3. **Foster economic prosperity**: availability of funding; diverse economy; attract business investments.
+1. **Promote cohesive and engaged communities**: collective identity and mutual support; encouraging diversity, tolerance/inclusion for other cultures.
+2. **Social stability, security, and justice**: comprehensive law enforcement to ensure safety and justice.
+3. **Foster economic prosperity**: availability of funding; diverse economy; attract business investments.
 
-3. ##### Leadership & Strategy
+#### Dimension 3: Leadership & Strategy
 
-   1. **Encourage leadership and effective management**: strong leadership, cross-sector communication, and evidence-based decision-making.
-   2. **Broad range of stakeholders**: everyone is informed and involved in the city; communication between the government and public is timely.
-   3. **Foster long-term and integrated planning**: align sectoral plans and projects to city’s vision and appropriately address city’s needs.
+1. **Encourage leadership and effective management**: strong leadership, cross-sector communication, and evidence-based decision-making.
+2. **Broad range of stakeholders**: everyone is informed and involved in the city; communication between the government and public is timely.
+3. **Foster long-term and integrated planning**: align sectoral plans and projects to city’s vision and appropriately address city’s needs.
 
-4. ##### Infrastructure & Environment
+#### Dimension 4: Infrastructure & Environment
 
-   1. **Provide or enhance protective assets**: provide or maintain protective assets, natural or built, such as sea walls or wetlands.
-   2. **Ensure critical services continuity**: actively manage and enhance natural and man-made resources.
-   3. **Reliable communication and mobility**: free flow of people, information, and goods.
+1. **Provide or enhance protective assets**: provide or maintain protective assets, natural or built, such as sea walls or wetlands.
+2. **Ensure critical services continuity**: actively manage and enhance natural and man-made resources.
+3. **Reliable communication and mobility**: free flow of people, information, and goods.
+
+
+
+### Rotterdam Case Study
+
+
 
 ### Planet Scale Resiliency
 
