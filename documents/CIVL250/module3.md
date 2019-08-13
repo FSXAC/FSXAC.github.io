@@ -210,8 +210,9 @@ We consider the dynamic feedback between the nested systems inside the urban eco
 - Causal loop diagrams have “+” or “-” associated with each arrow to indicate positive feedback or negative feedback.
 - Causal loop diagram’s most distinguishing feature is **feedback loops**.
 - Case study: *Health and walkability* - four evident feedback loops:
-  1. Better physical health &#8633; More walking frequency and decisions to choose walking
-  2. More walking frequency &#8633; More built environments for walking (sidewalks, services, etc.)
-  3. More walking frequency &#8633; Better perception of built environment (discovery, available destinations, etc.).
-  4. Better physical health &#8633; Better perception of built environment (perception of distance, safety, etc.)
+  1. Better physical health &#8651; More walking frequency and decisions to choose walking
+  2. More walking frequency &#8651; More built environments for walking (sidewalks, services, etc.)
+  3. More walking frequency &#8651; Better perception of built environment (discovery, available destinations, etc.).
+  4. Better physical health &#8651; Better perception of built environment (perception of distance, safety, etc.)
 - Humans are fundamental elements within the urban ecology.
+
