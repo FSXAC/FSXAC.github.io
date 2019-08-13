@@ -1,47 +1,116 @@
 ---
 title: Sustainable Cities
-date: 2019-05-24
+created: 2019-05-24
+date: 2019-08-12
 categories: CIVL 250
 watermark: DRAFT
 ---
 
 - toc
 {:toc}
+*By the end of this week, you will be able to:*
+
+- [x] describe cities as urban ecologies
+- [x] explain strategies that begin to integrate the primary components of the urban ecology
+- [ ] discuss the strengths and weaknesses of megacities
+- [ ] define urban resiliency and describe a specific example of the  interdependency of the built, natural, and social sub-systems within a  city
 
 ## Components of the Urban Ecology
 
-## Urban Intrustructure
+Within an urban ecology there are three primary subsystems:
 
-Urban development is challenging because population density is high. Which makes cities vulnerable to:
+1. The built environment.
+2. Urban social systems.
+3. The bio-physical environment.
+
+Built environment could be infrastructure systems. The streets are at the lowest level of systems nested in larger urban systems:
+
+![1565673362251](assets/module4/1565673362251.png)
+
+![1565673393833](assets/module4/1565673393833.png)
+
+![1565673409207](assets/module4/1565673409207.png)
+
+The urban social systems are made of urban societies brought together by a variety of different socio-economic, national, and professional cultures. Communities such as neighborhoods, organizations, clubs, businesses are social systems that influence peoples’ behaviors.
+
+Peoples’ behaviors also impact built systems and bio-physical systems within the urban ecology. E.g. a large demand for electric cars in the neighborhood prompts the city to install electric chargers (built structure) and reduces gas-car emissions and noise (bio-physical).
+
+### Livability
+
+**Livability** is the quality of interactions between people and the urban environment.
+
+Indicators of livability:
+
+- Air quality
+- Walkability
+- Working conditions
+- Cultural activities
+- Sports activities
+- Volunteerism in communities
+- Housing affordability
+
+Vancouver, BC has been recognized as one of the most livable cities in the world.
+
+### Ecosystem Services in Cities
+
+Recall [module 1](/documents/CIVL250/module1), ecosystem services are benefits healthy ecosystems provide in an urban environment. 
+
+**Bats in Bristol**: Bats provide benefits such as reducing the mosquito population in urban areas. Brightly lit areas create a barrier which makes bats less likely to move from tree to tree; thus impacting the health of the bat population and hindering the benefits from bats.
+
+**Birds in Vancouver**: Birds are important to eliminate insects and urban pests such as rats. Vancouver created [Bird Strategy](https://vancouver.ca/parks-recreation-culture/vancouver-bird-strategy.aspx) aiming to create an attractive and supportive urban environment to native birds.
+
+## Urban Infrastructure
+
+**Megacities** are very large cities with population &gt; 10 million people. Due to urbanization, there increasing number of megacities.  
+
+Urban development is challenging due to dense population which makes (mega)cities vulnerable to these concerns associated with climate change and biodiversity loss:
 
 - Disease epidemics
 - Criminal activities
 - Loss of affordable housing
-- Social dysfunction
-
-And also
-
-- Natural disasters such as Earth quakes
-- Increased airborne particulates from wild fires
+- Social dysfunction/riots
+- Natural disasters such as earthquakes
+- Increased airborne particulates from wildfires
 - Flooding and drought
 - Intense storms
-- Higher sea level
-  - Loss of underground infrastructure
-  - Salinization of soil and aquifiers
-- Decrease in agriculture producitivity 
+- Rise in sea level
+- Loss of underground infrastructure
+- Salinization of soil and aquifers
+- Decrease in agriculture productivity
 
 ### Resiliency in Cities
 
-**Resiliency** is the means to adapt and be flexible to change.
+**Resiliency** is the means for the society in an urban environment to survive, adapt, and grow under chronic or acute stress. Increasing resiliency of cities and systems such as infrastructure systems is an effective strategy to reduce cities' vulnerabilities.
 
-Increasing resiliency of cities and systems such as infrastructure systems is an effective strategy to reduce citie's vulnerabilities.
+**Integrated plans** address and responds to the challenges effectively.
 
-These are the four main dimensions to a resilient city:
+### City Resilience Framework
 
-1. Health & Well Being
-2. Economy & Society
-3. Leadership & Strategy
-4. Infrastructure & Environment
+The CRF aims to understand the complexity of cities and the drivers that contribute to resiliency. There are four main dimensions to a resilient city, each with three drivers.
+
+1. ##### Health & Well Being
+
+   1. **Basic needs satisfied**: all have access to basic resource needed to survive (food, water, sanitation, energy, and shelter).
+   2. **Support livelihood and employment**: have diverse career, investment, and social welfare opportunities; adequate skills, training, and labor policies.
+   3. **Public health**: effective public healthcare.
+
+2. ##### Economy & Society
+
+   1. **Promote cohesive and engaged communities**: collective identity and mutual support; encouraging diversity, tolerance/inclusion for other cultures.
+   2. **Social stability, security, and justice**: comprehensive law enforcement to ensure safety and justice.
+   3. **Foster economic prosperity**: availability of funding; diverse economy; attract business investments.
+
+3. ##### Leadership & Strategy
+
+   1. **Encourage leadership and effective management**: strong leadership, cross-sector communication, and evidence-based decision-making.
+   2. **Broad range of stakeholders**: everyone is informed and involved in the city; communication between the government and public is timely.
+   3. **Foster long-term and integrated planning**: align sectoral plans and projects to city’s vision and appropriately address city’s needs.
+
+4. ##### Infrastructure & Environment
+
+   1. **Provide or enhance protective assets**: provide or maintain protective assets, natural or built, such as sea walls or wetlands.
+   2. **Ensure critical services continuity**: actively manage and enhance natural and man-made resources.
+   3. **Reliable communication and mobility**: free flow of people, information, and goods.
 
 ### Planet Scale Resiliency
 
@@ -107,3 +176,17 @@ Ecosystem approach considers both direct and indirect effects.
 ### Ecosystem Approach
 
 ## Green Buildings
+
+
+
+
+
+---
+
+**Review**
+
+- Three primary sub-systems within the urban ecology:
+  1. The built environment/infrastructure.
+  2. Urban social systems/societies.
+  3. The bio-physical environment/ecosystem services.
+- **Livability** is the quality of interaction between people and the urban environment.
