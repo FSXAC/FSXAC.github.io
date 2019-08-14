@@ -1,12 +1,20 @@
 ---
 title: Sustainable Cities
 created: 2019-05-24
-date: 2019-08-13
+date: 2019-08-12
 categories: CIVL 250
+watermark: DRAFT
 ---
 
 - toc
 {:toc}
+*By the end of this week, you will be able to:*
+
+- [x] describe cities as urban ecologies
+- [x] explain strategies that begin to integrate the primary components of the urban ecology
+- [ ] discuss the strengths and weaknesses of megacities
+- [ ] define urban resiliency and describe a specific example of the  interdependency of the built, natural, and social sub-systems within a  city
+
 ## Components of the Urban Ecology
 
 Within an urban ecology there are three primary subsystems:
@@ -53,7 +61,7 @@ Recall [module 1](/documents/CIVL250/module1), ecosystem services are benefits h
 
 ## Urban Infrastructure
 
-**Megacities** are very large cities with population &gt; 10 million people. Due to urbanization, there increasing number of megacities.  Megacities are vulnerable to disruptions because they’re often located near river deltas or coastlines.
+**Megacities** are very large cities with population &gt; 10 million people. Due to urbanization, there increasing number of megacities.  
 
 Urban development is challenging due to dense population which makes (mega)cities vulnerable to these concerns associated with climate change and biodiversity loss:
 
@@ -173,120 +181,66 @@ To ensure we are within the boundary, we began retrofitting urban environments f
 
 ## Resiliency in Urban System Design
 
-Using **ecosystem approach** to resilient design that challenges linear thinking, it helps us understand multitude of interactions that exists in an urban system. 
+`todo`
+
+Ecosystem approach considers both direct and indirect effects.
+
+> Ecosystem approach:
+> - is a new perspective that challenges linear way of thinking.
+> - helps us makes sense of the multitude of interactions that exist within a city.
+> - helps us support through engineering design, the successful management of the individual elements of the larger city so as to benefits the elements as well as the city as a whole.
+> - calls on us to develop awareness to both direct and indirect relationships and interactions that can exist between different elements in a city.
+> - calls to understand that elements exist at different physical scales.
+> - compels us to constantly be aware of interactions between subsystems within larger systems.
+> - leads to analysis of infrastructure elements within its broader context
+>   - flow of material, energy, and information in built & natural systems
+>   - influence at different scales
+>   - life-cycle of infrastructure (elements)
+
+`todo` (prof's response):
+
+> Hi Muchen,
+>
+> Thanks for asking for more clarification. I'm sure many students are thinking the same thing. 
+>
+> So, this approach asks that we think of urban infrastructure through the lens of, or from the perspective of, complex systems theory.
+>
+> More specifically, when thinking about urban infrastructure and urban systems generally (i.e. when thinking about the urban ecology), be aware of:
+>
+> - the existence of systems
+>
+> - multiple scales (physical scales, time scales, organization scales, etc)
+>
+> - direct and indirect relationships (also called "interdependencies") between components within systems, and between sub-systems (e.g. health & transportation. another classic is water & energy) 
+>
+> - system boundaries
+>
+> - the flow of materials, energy, and information across system boundaries
+>
+> - system change and the role of life-cycles - i.e. complex systems are continually learningresiliency
+>   A systems thinker observes the behaviour of systems and how the behaviour changes over time. S/he looks for "leverage points" in systems where interventions can be made that will likely result in the system moving to desirable behaviour. (Good parenting is often cited as an example of systems thinking!) 
+>
+> - resiliency
+>
+> A systems thinker observes the behaviour of systems and how the behaviour changes over time. S/he looks for "leverage points" in systems where interventions can be made that will likely result in the system moving to desirable behaviour. (Good parenting is often cited as an example of systems thinking!) 
+>
+> The ecosystem approach requires that we take time to observe, reflect, and consider consequences of actions, always with an awareness of possible unintended consequences. In essence, I see it as a management stance enabling at least the temporary achievement of specific goals related to environmental stewardship and sustainability. 
+>
+> James Kay and others have shown us that the ecosystem approach to urban systems has a solid scientific foundation enabling us to bridge the gaps between the built environment, social systems, and the bio-physical world, so that we can effectively strive for sustainability. While examples of the ecosystem approach to urban systems exist, we are all still learning about the details of what this approach really means. 
+>
+> Hope this helps and please ask for more clarity as you see fit. 
+>
+> Best regards,
+>
+> Dr. S.
 
 ### Ecosystem Approach
 
-The theoretical basis for the ecosystem approach to urban infrastructure design is *complex systems theory*. Specifically, in the context of urban infrastructure design, we are aware of:
-
-- 🚥 Existence of systems and subsystems.
-- 🌎 Multiple scales (physical, time, etc.)
-- 💞 Direct or indirect relationships/impacts (interdependencies) between elements inside a system, as well as between subsystems or larger systems.
-- ♻️ Life-cycle of elements (e.g. infrastructure).
-- 🔀 System boundaries and the flow of material, energy, and information.
-- 🔄 Systems are continually learning.
-- 🌊 Resiliency of the system (e.g. 7 qualities of resilient cities)
-
-The ecosystem approach requires time to observe, reflect, and consider the consequences of actions, always with an awareness of possible unintended consequences.
-
-<!--The ecosystem approach to infrastructure design involves consideration of the context of the design (e.g. the bio-physical context, the political context, cultural context, economic context and so on), as well as both the short and long term impacts of the design, and the direct and indirect impacts of the design. It also necessitates awareness of the systems in which the infrastructure is embedded (including the ecological, geographic, climatic systems, and the different levels of social and economic systems). finally, the ecosystem approach necessitates the considerations of the entire life cycle of the infrastructure. These considerations influence the goals of the infrastructure design.-->
-
-> *“James Kay and others have shown us that the ecosystem approach to urban systems has a solid scientific foundation enabling us to bridge the gaps between the built environment, social systems, and the bio-physical world, so that we can effectively strive for sustainability. While examples of the ecosystem approach to urban systems exist, we are all still learning about the details of what this approach really means. ”*
-
-### Ecosystem Approach at UBC
-
-John Madden is the Director of Sustainability and Engineering for UBC Vancouver campus operation. According to Madden:
-
-- Storm water rather being a separate system, it should be integrated in city designs; 
+`todo`
 
 ## Green Buildings
 
-Converting traditional buildings to “green” or “high performance” buildings achieves GHG emission reduction (climate change mitigation).
-
-### Integrative Design Process
-
-The **integrative design process (IDP)** is a highly collaborative and interactive *design process* based on systems thinking to design green buildings. 
-
-The IDP consists of 7+1 stages:
-
-1. Design preparation
-2. Evaluation
-3. Conceptual design
-4. Schematic design
-5. Design development
-6. Construction documents
-7. Bidding and construction
-8. Occupancy, operations, and performance (post-occupancy) 
-
-### Key Aspects of The IDP
-
-The three key aspects of the integrative design processes are design goals, IDP stakeholders, and design <dfn title="intense final effort made to complete a solution to a given architectural problem">charette</dfn>.
-
-#### Design Goals
-
-Design goals for different projects relate to the following five categories:
-
-- **Energy**: usage reduction and generation of energy for the building.
-- **Water**: usage reduction and capture of water.
-- **Material**: use of recycled and locally produced materials.
-- **Site**: optimal use of the building site.
-- **Indoor quality**: optimal indoor quality (air quality ,sound quality, social environment, aesthetics, etc.) for occupants.
-
-#### People In The IDP
-
-The composition, structure, and member roles of the integrated design team is adapted to each project. The team consist of **core project team members** and **additional members**. Team members represent different design disciplines.
-
-The core team (managers, engineers, experts, specialists, architects) is responsible for identifying and summoning additional members as required by the project.
-
-Additional members (ecologists, occupant representatives, agents, community, etc.) are brought in for a short period provide input to the design process. 
-
-#### Design Charette
-
-An intensive planning session where owners, designers, and stakeholders of the project collaborate to create an overarching vision for the project.
-
-## Green Buildings Certifications
-
-To ensure that developers delivers the true “green” and “high-performance” buildings, certifications processes are developed.
-
-### LEED
-
-**Leadership in Environment and Energy Design (LEED)** process is based on a credit system in several categories. For new construction and major renovations, the categories considers:
-
-- Location and transportation
-- Sustainable sites
-- Water efficiency
-- Energy & atmosphere
-- Material & resources
-- Indoor environment quality
-- Innovation
-- Regional priority
-- (Integrative process)
-
-<!--Impact categories that makes up the LEED scoring framework:-->
-
-<!--1. 🌎 Reverse contribution to global climate change.-->
-<!--2. 💓 Enhance individual human health and well-being.-->
-<!--3. 💧 Protect and restore water resources.-->
-<!--4. 🐝 Protect, enhance, and restore biodiversity & ecosystem services.-->
-<!--5. ♻️ Promote sustainable & regenerative material resource cycles.-->
-<!--6. 💵 Build a greener economy.-->
-<!--7. ♿ Enhance social equity.-->
-
-UBC has several LEED certified buildings: Life-Science Building, new Pharmacy Building, and CIRS.
-
-### LBC
-
-**Living Building Challenge (LBC)** is another building certification system. There are seven attributes explored in LBC certification process:
-
-1. Site integrity
-2. Net zero water
-3. Net zero energy
-4. Health: promote health for occupants such as welcoming stairways.
-5. Materials: safe and locally sourced materials
-6. Equity
-7. Beauty: aesthetics
-
-Gift shop at Vancouver’s Van Dusen Gardens is certified by the LBC.
+`todo`
 
 
 
@@ -296,13 +250,11 @@ Gift shop at Vancouver’s Van Dusen Gardens is certified by the LBC.
 
 **Review**
 
-- Megacities are vulnerable because they’re often near river deltas or coastlines.
 - Three primary sub-systems within the urban ecology:
   1. The built environment/infrastructure.
   2. Urban social systems/societies.
   3. The bio-physical environment/ecosystem services.
 - **Livability** is the quality of interaction between people and the urban environment.
-- After a specific strategy is established, a city generally then collects baseline data relevant to the strategy.
 - Significant challenges for city sustainability:
   - Disease epidemics
   - Criminal activities
@@ -335,11 +287,3 @@ Gift shop at Vancouver’s Van Dusen Gardens is certified by the LBC.
   - Nitrogen flow
   - Phosphorus flow
   - Climate change
-- The ecosystem approach to infrastructure design involves consideration of:
-  - Context of the design (e.g. the bio-physical context, the political context, cultural context, economic context).
-  - Short and long term impacts of the design.
-  - The direct and indirect impacts of the design.
-  - Awareness of the systems in which the infrastructure is embedded (including the ecological, geographic, climatic systems, and the different levels of social and economic systems).
-  - Entire life cycle of the infrastructure. These considerations influence the goals of the infrastructure design.
-- “Green” certification process we learned are LEED and LBC.
-- The criterions for LBC are: site integrity, net zero water, net zero energy, health, materials, equity, and beauty.

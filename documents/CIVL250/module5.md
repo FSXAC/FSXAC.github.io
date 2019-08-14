@@ -8,17 +8,6 @@ watermark: DRAFT
 
 - toc
 {:toc}
-*By the end of this week, you are able to:*
-
-
-- [x] Explain what is meant by decoupling material consumption
-- [x] Using examples, define and describe Biomimicry in engineering design
-- [ ] Describe a the Kalundborg case study of industrial ecology
-- [ ] Explain the term "circular economy" and the relationship between the circular economy and the construction industry
-- [ ] Understand and explain LCAs, including the four stages of a formal LCA.
-
-
-
 
 ## Material Resources & Productivity
 
@@ -32,7 +21,7 @@ watermark: DRAFT
 4. Distribution: energy use, and produce packaging
 5. Retail: energy use
 6. Use: water and energy use
-7. End of life: ecotoxity from landfill, which leads to poorer health
+7. End of life: ecotoxicity from landfill, which leads to poorer health
 
 ### Material Consumption
 
@@ -117,68 +106,111 @@ Here are some of the consumer products that follow biomimicry:
 
 Here are some of the construction products that follow biomimicry:
 
-**Self-Healing Concrete**
+**Self-Healing Concrete**: Concrete is known to deteriorate over time. Self-healing concrete uses microfibers to fill in cracks. A chemical reaction occurs similar to ones found in seashells and renews the concreate strength.
 
-Concrete is known to deteriorate over time. Self-healing concrete uses microfibers to fill in cracks. A chemical reaction occurs similar to ones found in seashells and renews the concreate strength.
+**MAP Cement Process**: Mineralization via Aqueous Precipitation (MAP) process for making cement is inspired by coral polyps, which cuts CO<sub>2</sub> emissions.
 
 ## Industrial Ecology
 
+In industrial ecology, we think factory as an organism, and set of factories and human activities as ecosystem.
+
 ### Kalundborg Symbiosis
 
-Biggest companies in Kalundborg participate in the industrial ecology where the waste of one company becomes the material of another. The result is close to net-zero waste and increased economic growth.
-
-> `todo` 
->
-> *from quiz*
->
-> Collaboration to utilize each other's waste products to form a closed system. The by product of one company is the material of another company (output becomes input).
->
-> Environment as foundation, and increases economic prosperity because it's cheaper to re-use materials.
+Biggest companies in Kalundborg participate in Kalundborg symbiosis, a collaboration of companies buy and sell waste from each other in a **closed cycle** of materials. By-products from one company becomes another company’s material. The result benefits the environment, and increases economic prosperity due to low cost of reusing materials.
 
 ### Industrial Ecology in Cities
 
-Idea of industrial ecology can be applied to cities to monitor energy and material flow in and out of the city.
+Idea of industrial ecology can be applied to cities in **Material Flow Analysis (MFA)** to assess energy and material flow in and out of the city. MFA is more complex due to cities’ variation and unpredictable activities. 
+
+Once MFA is conducted, we can identify possible synergies for waste to be reused.
 
 ## The Circular Economy
 
+![1565823510035](assets/1565823510035.png){:width="540px"}
+
+**Circular economy** mimics biological cycles. It suggests three focuses:
+
+1. **Eliminating waste** from resource and material processing, thus “closing the loop”.
+2. **Minimizing input** of new materials via **reuse**, **reduce**, and **recycle**.
+3. **Adopt renewable energy** to support human activities.
+
+### Principles of Circular Economy
+
+1. **Design to minimize** externalities (waste and pollution such as toxic substances, GHGs, etc.).
+2. **Keep** existing assets at highest value and in use.
+   - Design for re-use, recycle, and remanufacturing to keep materials circling in the economy.
+3. **Regenerate** natural systems.
+   - Enhances natural capital by encouraging flow of nutrients (e.g. soil).
+
 ### Denmark Real Estate Case Study
 
+The Danish construction sector applied the three principles of circular economy in construction and real estates. Three opportunities are identified:
+
+1. Industrialized production and 3D printing of building modules.
+2. Sharing and multi-purposing buildings.
+3. Reuse and high-value recycling of components and materials. (This opportunity is difficult due to not enough capabilities and skills, and lack of information across the value chain)
 
 
-Vancouver projects to become zero-waste city by <mark>2040</mark>. Currently, a website will educate where different kinds of waste should go so that materials are properly disposed and recycled. Vancouver rate has recycle rate of 94%; 6% loss are due to contamination.
+
+### Vancouver Zero Waste
+
+Vancouver projects to become zero-waste city by <mark>2040</mark>. Currently, a website will educate where different kinds of waste should go so that materials are properly disposed and recycled in the waste-stream. Vancouver rate has recycle rate of 94%; 6% loss are due to contamination.
 
 
 
-## Construction Waste
+### Construction Waste
 
 ![1565760865306](assets/module5/1565760865306.png)
 
-The construction industry uses the most materials worldwide so we need to consider recycling and reusing construction waste to cut down material consumption and GHG emissions.
+The construction industry uses the most materials worldwide so we need to consider recycling and reusing construction waste to cut down material consumption and GHG emissions. Concrete and cement are one of the largest contributors to GHG emissions. One way to reduce emission is to replace portions of cement with other waste products such as slag.
+
+
 
 ### Reusable and Recyclable Materials
 
 **Recycled aggregates**: aggregates and debris from demolitions can be reused for building foundations, concrete, and asphalt; cutting down a project’s footprint.
 
-**Asphalt rubber**
+**Asphalt rubber**: can be used in asphalt as aggregate.
 
-**Metals**
+**Recycled metals**: used for reinforcements; should be reused because mining is difficult and resource is finite.
 
-**Rebar**
-
-
+**Rebar**: should be reused because manufacturing of rebar emits lots of GHGs.
 
 
 
 ## The Life-Cycle-Assessment Methodology
 
+**Life Cycle Assessment (LCA)** is a material flow analysis based on product’s life-cycle to determine the environmental impact of a product over the lifetime (“product” could also be process, building, or system). LCA allows us to understand the material inflow and outflow related to the product and how it impacts the ecosystem.
+
+The life-cycle stage for a product could be generalized to: raw materials &rarr; manufacturing &rarr; transportation &rarr; distribution &rarr; product-use &rarr; end of life.
+
 Formal LCA follows four steps:
 
-1. Goal and scope (purpose, boundaries affected, and functional unit)
+1. Goal & scope (purpose, boundaries affected, and functional unit)
 2. Definition inventory (inflows and outflows)
 3. Impact assessment (classify eco-impacts)
 4. Interpretation
 
+### Goal & Scope
 
+The first phase of LCA is to define the goal and scope. Some of the questions asked during this phase may be:
+
+- “What is the purpose of this analysis?”
+- “What are the functional units to be assessed?”
+- “Who is going to use the result of the analysis?”
+- “What decisions will we make based on the results of the analysis?”
+
+### Inventory Analysis
+
+Impact analysis involves identifying and measuring the input and output (materials, energy, water, and pollutant) to each life-cycle stage. Often times when a comparison is made, we perform the analysis over the entire life cycle of the product while ensuring data collection methodologies are standardized.
+
+### Impact Assessment
+
+Each of the flow in the inventory analysis stage is categorized into one of the impact classifications (using Eco-Indicator 99 methodology).
+
+### Interpretation
+
+Organize the findings from previous steps for decision making. Often interpretation is simultaneously performed during each of the previous stages.
 
 ---
 
@@ -205,3 +237,10 @@ Formal LCA follows four steps:
   4. Integrate development with growth
   5. Resource efficient
   6. Use life-friendly chemistry
+- Fundamental foci of the circular economy:
+  - Regenerate natural systems
+  - Eliminate waste & pollution
+  - Reduce, reuse, recycle, and use renewables
+- Worldwide, the construction sector is the highest industrial user of materials.
+- 
+
