@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Sustainable Development"
 created: 2019-05-11
-date: 2019-07-30
+date: 2019-08-13
 categories: CIVL 250
 use_math: true
 ---
@@ -81,7 +81,7 @@ UN Intergovernmental Panel on Climate Change (IPCC) works together to develop a 
 
 The Paris Agreement was adopted by 195 countries in December 2015 at International Agreement on Climate Change (COP 21).  The key agreements are:
 
-- Limit the average surface global temperature increase to below 2^o^C
+- Limit the average surface global temperature increase to below 2&#176;C
 - Countries committed to make **nationally determined contributions (NDC)** to pursue goals.
 - Commit to regularly report national emission, progress, and undergo international review.
 - Mobilize $100B to help poorer countries by 2020-2025.
@@ -185,8 +185,13 @@ A healthy ecosystem supports or provides benefits humans physically, mentally, a
 - Canadians need to reduce 4 global hectares in ecological footprint (EF).
 - Mitigation of climate change is attempt to delay and avoid it; adaptation is developing and adapting to what happens during and after climate change.
   - Adaptations already happening: e.g. flood barriers, improved drainage, and evacuations from low sea-level areas.
+- Five goals set during COP 21 (The Paris Agreement)
+  - Limit temperature increase to below 2&#176;C.
+  - Commit to NDC.
+  - Report emissions and progress.
+  - Help poorer countries with $.
+  - New mechanisms to reduce emissions.
 - Nationally Determined Contributions (NDC) is contribution of a country to cut down GHG emissions.
   - Canada to cut 30% below 2005 levels by 2030.
 - Three components of biodiversity: **ecosystem**, **species**, **genetics**.
 - 60% of animal population lost due to human activities since 1970s.
-- 

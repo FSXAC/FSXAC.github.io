@@ -125,7 +125,7 @@ Simple systems can nest inside complex systems. Such hierarchy exists in our **t
 
 ### Built Systems
 
-![](assets/module3/1565667474126.png)
+![](assets/module3/1565667474126.png){:width="300px"}
 
 The smallest systems are simple and are predictable. The larger systems are complex.
 
@@ -136,7 +136,7 @@ The smallest systems are simple and are predictable. The larger systems are comp
 
 ### Natural Systems
 
-![](assets/module3/1565667800853.png)
+![](assets/module3/1565667800853.png){:width="300px"}
 
 We care about comparing built and natural systems because:
 
