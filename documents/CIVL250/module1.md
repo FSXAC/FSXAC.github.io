@@ -47,9 +47,9 @@ Some of the impacts we observe today are:
 
 ## Definitions
 
-The definition of **sustainable development**, according to United Nations[^1] is:
+The working definition of **sustainable development**, according to United Nations[^1] is:
 
-> *Development that meets the needs of the present without compromising the needs of future generations to meet their own needs.*
+> *Developments involving systems thinking that meets the needs of the present while providing society, environment, and economy wellness without compromising the needs of future generations to meet their own needs.*
 
 The UN created 17 **sustainable development goals (SDGs)** where each goal has well defined *targets* and *indicators*. They can be found on [UN sustainable development website](https://sustainabledevelopment.un.org/)[^2].
 
