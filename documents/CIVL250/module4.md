@@ -220,7 +220,7 @@ The IDP consists of 7+1 stages:
 
 ### Key Aspects of The IDP
 
-The three key aspects of the integrative design processes are design goals, IDP stakeholders, and design <dfn title="intense final effort made to complete a solution to a given architectural problem">charette</dfn>.
+The three key aspects of the integrative design processes are design goals, IDP stakeholders, and design <dfn definition="intense final effort made to complete a solution to a given architectural problem">charette</dfn>.
 
 #### Design Goals
 
