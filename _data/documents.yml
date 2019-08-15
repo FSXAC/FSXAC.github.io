@@ -352,10 +352,8 @@
       link: '/documents/CIVL250/module5'
     - title: 'Module 6: Least Developed Countries'
       link: '/documents/CIVL250/module6'
-      flag: draft
     - title: 'Module 7: Leading Sustainability'
       link: '/documents/CIVL250/module7'
-      flag: draft
     - title: 'SRL'
       group:
         - enum: 1
