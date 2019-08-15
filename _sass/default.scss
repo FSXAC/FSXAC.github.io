@@ -28,7 +28,7 @@ li.nav-item { color: black; }
 .dl-horizontal > dt { text-align: right; }
 .dl-horizontal > dd { margin-bottom: 0; }
 @media (max-width: 768px) {
-    .dl-horizontal > dt { text-align: left; margin-top: .4em; }
+	.dl-horizontal > dt { text-align: left; margin-top: .4em; }
 }
 
 /* Make footer more spacious */
@@ -41,7 +41,25 @@ p { margin: .5em 0; }
 a { color: #0050C9; }
 a:hover { color: #A92626; }
 
-/* Extra small button */
+/* Buttons */
+.btn { position:relative; overflow: hidden; transform: translate3d(0,0,0); }
+.btn::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	background-image: radial-gradient(circle,#000 10%,transparent 10.01%);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	transform: scale(10,10);
+	opacity: 0;
+	transition: ease-out transform .5s, opacity .5s;
+}
+.btn:active::after { transform: scale(0,0); opacity: 0.2; transition: 0s; }
 .btn-xs { padding: 0 .25em; font-size: 0.9em; }
 
 /* Blog texts */
