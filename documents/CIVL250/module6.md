@@ -71,7 +71,7 @@ Ethical considerations are significant in humanitarian work because it's easy fo
 - Interdependence not dependence. 
 - Lack of universal truth; consider contextual details.
 
-#### 2. :medal_military: Non-Maleficence and Beneficence
+#### 2.​ :weary: Non-Maleficence and Beneficence
 
 - Intention to avoid negligence and needless harm; minimize negative impact.
 - Actions should promote well-being of others.
