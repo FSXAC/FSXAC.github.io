@@ -241,5 +241,4 @@ Organize the findings from previous steps for decision making. Often interpretat
   - Eliminate waste & pollution
   - Reduce, reuse, recycle, and use renewables
 - Worldwide, the construction sector is the highest industrial user of materials.
-- 
 
