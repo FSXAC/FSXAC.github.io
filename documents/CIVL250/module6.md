@@ -1,6 +1,7 @@
 ---
 title: 'Engineering & The Least Developed Countries'
-date: 2019-06-04
+date: 2019-08-14
+created: 2019-06-04
 categories: CIVL 250
 ---
 
@@ -54,38 +55,33 @@ One organization of humanitarian engineering is *Engineering Without Boarders*.
 
 ### Wicked Problems
 
-Sustainability/humanitarian problems are often unique, a symptom of another problem, and never-ending. These can be called "wicked" problems. To deal with this, try:
+Sustainability/humanitarian problems are often unique, a symptom of another problem, and never-ending. These can be called "wicked" problems. We focus on three intellectual frameworks
 
-- Interdisciplinary cooperation
-- System thinking
-- Iterative thinking
+1. Interdisciplinary cooperation/thinking.
+2. System thinking.
+3. Iterative thinking.
 
 ### Ethical Frameworks
 
-### Failure
-
-
-
-## Engineering Projects in LDCs
 Ethical considerations are significant in humanitarian work because it's easy for wealthy people to take advantage of those in need. We focus on four ethics frameworks.
 
-#### :blue_heart: Ethics of Care
+#### 1​. :blue_heart: Ethics of Care
 
 - There are vulnerable and less-vulnerable people, those who are less vulnerable should help those who are more vulnerable.
 - Interdependence not dependence. 
 - Lack of universal truth; consider contextual details.
 
-#### :medal_military: Non-Maleficence and Beneficence
+#### 2. :medal_military: Non-Maleficence and Beneficence
 
 - Intention to avoid negligence and needless harm; minimize negative impact.
 - Actions should promote well-being of others.
 - Discourages selfish behavior.
 
-#### :arrows_counterclockwise: Ethical Pluralism
+#### 3. :rainbow: Ethical Pluralism
 
 - There are many theories of moral norms (what is right/wrong) which may be incompatible or incommensurable with one's personal moral norms.
 
-#### :ribbon: Feminism
+#### 4. :ribbon: Feminism
 
 - More equal rights and legal protection for women.
 - Promote power sharing, leadership, and collaborative work to establish respect and acceptance for diversity.
@@ -102,35 +98,13 @@ Publish failures: EWB publishes a public failure report. This affects funding fr
 
 There are **the seven questions** to sustainability that can help us start assessing the projects. The questions are:
 
-#### 1. Engagement​ :speech_balloon:
-
-> Are engagement processes in place and working effectively?
-
-#### 2. People :family:
-
-> Will people's well-being be maintained or improved?
-
-#### 3. Environment :ocean:
-
-> Is the integrity of the environment assured over the long term?
-
-#### 4. Economy :money_with_wings:
-
-> Is the economic viability of the project or operation assured, and will the economy of the community and beyond be better off as a result?
-
-#### 5. Traditional and Non-market Activities :house_with_garden:
-
-> Are traditional and non-market activities in the community and surrounding area accounted for in a way that is acceptable to the local people?
-
-#### 6. Institutional Arrangements and Governance :briefcase:
-
-> Are rules, incentives, programs, and capacities in place to address or operational consequences?
-
-#### 7. Synthesis and Continuous Learning :repeat:
-
-> Does a full synthesis show that the net result will be positive or negative in the long term, and will there be periodic reassessments?
-
----
+1. :speech_balloon: **Engagement**: Are engagement processes in place and working effectively?
+2. :family: **People**: Will people's well-being be maintained or improved?
+3. :ocean: **Environment**: Is the integrity of the environment assured over the long term?
+4. :money_with_wings: **Economy**: Is the economic viability of the project or operation assured, and will the economy of the community and beyond be better off as a result?
+5. :house: **Traditional and Non-Market Activities**: Are traditional and non-market activities in the community and surrounding area accounted for in a way that is acceptable to the local people?
+6. :bell: **Institution Arrangements and Governance**: Are rules, incentives, programs, and capacities in place to address consequences?
+7. :arrows_counterclockwise: **Synthesis and Continuous Learning**: Does a full synthesis show that the net result will be positive or negative in the long term, and will there be periodic reassessments.
 
 ### The Framework
 
@@ -145,3 +119,20 @@ e=>operation: Metrics
 a(right)->b(right)->c(right)->d(right)->e
 ```
 
+---
+
+**Review**
+
+- UN describes LDC by 3 criterions:
+  1. Quality of human assets (education, health).
+  2. Economic vulnerability (exports, productivity).
+  3. Income per capita.
+- Humanitarian engineering problem requires these 3 intellectual frameworks:
+  1. Iterative thinking.
+  2. Systems thinking.
+  3. Interdisciplinary thinking.
+- Humanitarian engineering problems require these 4 ethical frameworks:
+  1. Ethics of care.
+  2. Non-maleficence and beneficence.
+  3. Ethical purism.
+  4. Feminism.
