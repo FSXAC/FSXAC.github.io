@@ -2,6 +2,7 @@
 title: W19 Assignment 1
 date: 2019-09-07
 use_math: true
+categories: ASTR 200
 ---
 
 Muchen He - **44638154**

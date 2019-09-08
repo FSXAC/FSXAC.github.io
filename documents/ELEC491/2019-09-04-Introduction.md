@@ -2,7 +2,7 @@
 title: Capstone Introduction
 date: 2019-09-04
 updated: 2019-09-04
-
+categories: ELEC 491
 ---
 
 - toc

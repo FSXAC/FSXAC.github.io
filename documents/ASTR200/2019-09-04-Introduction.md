@@ -2,6 +2,7 @@
 title: Introduction
 date: 2019-09-04
 updated: 2019-09-07
+categories: ASTR 200
 ---
 
 ## Units
