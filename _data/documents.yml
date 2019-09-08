@@ -362,7 +362,7 @@
     - title: 'Assignments'
       group:
         - enum: 1
-          link: '#'
+          link: '/documents/ASTR200/asn1'
   - course_num: 'CIVL 200, CIVL 250'
     course_name: 'Engineering and Sustainable Development'
     date: 2019-08-15
