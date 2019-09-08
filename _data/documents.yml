@@ -1,5 +1,15 @@
 - category: Electrical
   courses:
+  - course_num: 'ELEC 491'
+    course_name: 'Capstone Project for EE'
+    date: 2019-09-06
+    entries:
+    - title: 'Intro to Capstone Project'
+      link: '/documents/ELEC491/2019-09-04-Introduction'
+    - title: 'NDA and IP'
+      link: '/documents/ELEC491/2019-09-06-NDA'
+    - title: 'Professionalism'
+      link: '/documents/ELEC491/2019-09-06-professionalism'
   - course_num: 'ELEC 311'
     course_name: 'Electromagnetic Fields and Waves'
   - course_num: 'ELEC 315'
@@ -170,6 +180,12 @@
       link: '/documents/ELEC291/Project2'
 - category: Computer
   courses:
+  - course_num: 'CPEN 411'
+    course_name: 'Computer Architecture'
+    date: 2019-09-06
+    entries:
+    - title: 'Introduction'
+      link: '/documents/CPEN411/2019-09-05-Introduction'
   - course_num: 'CPEN 311'
     course_name: 'Digital Systems Design'
     date: 2019-04-02
@@ -336,6 +352,17 @@
         link: '/documents/MECH431/asn2'
       - enum: 3
         link: '/documents/MECH431/asn3'
+  - course_num: 'ASTR 200'
+    date: 2019-09-06
+    entries:
+    - title: 'Introduction'
+      link: '/documents/ASTR200/2019-09-04-Introduction'
+    - title: 'Angles'
+      link: '/documents/ASTR200/2019-09-06-Angles'
+    - title: 'Assignments'
+      group:
+        - enum: 1
+          link: '#'
   - course_num: 'CIVL 200, CIVL 250'
     course_name: 'Engineering and Sustainable Development'
     date: 2019-08-15
