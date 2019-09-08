@@ -18,6 +18,7 @@ $$
 $$
 
 Then to find the arc length, we use the radius of Earth, which is $R_\oplus$=6371 km.
+
 $$
 \begin{aligned}
 d&=\theta r\\
