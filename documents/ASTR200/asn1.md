@@ -1,7 +1,11 @@
 ---
 title: W19 Assignment 1
 date: 2019-09-07
+use_math: true
 ---
+
+Muchen He - **44638154**
+
 
 ## 1. Angles Big and Small
 
