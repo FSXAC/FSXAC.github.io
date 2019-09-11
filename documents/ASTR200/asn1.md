@@ -1,6 +1,9 @@
 ---
 title: W19 Assignment 1
 date: 2019-09-07
+updated: 2019-09-11
+categories: ASTR 200
+use_math: true
 ---
 
 ## 1. Angles Big and Small
