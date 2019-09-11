@@ -17,6 +17,7 @@ $$
 $$
 
 Then to find the arc length, we use the radius of Earth, which is $R_\oplus$=6371 km.
+
 $$
 \begin{aligned}
 d&=\theta r\\
@@ -89,6 +90,7 @@ $$
 $$
 
 Venus is an inferior planet. So we’re solving for the “inner” sideral period; the “outer” sideral period is Earth’s so it’s simply 1.
+
 $$
 \begin{aligned}
 \frac{1}{1.5986\text{ yr}}&=\frac{1}{P_\text{inner}}-1\\
@@ -96,7 +98,9 @@ P_\text{inner}&=\left(\frac{1}{1.5986\text{ yr}}+1\right)^{-1}\\
 &=\boxed{0.6255 \text{ yr}}
 \end{aligned}
 $$
+
 Mars is a superior planet. So we are solving for the “outer” sideral period. Identical procedure:
+
 $$
 \begin{aligned}
 \frac{1}{2.1338\text{ yr}}&=1-\frac{1}{P_\text{outer}}\\
@@ -104,6 +108,7 @@ P_\text{outer}&=\left(1-\frac{1}{2.1338\text{ yr}}\right)^{-1}\\
 &=\boxed{1.882 \text{ yr}}
 \end{aligned}
 $$
+
 The sidereal orbital period of Venus and Mars respectively is **0.6255 years or 228.5 days**, and **1.882 years or 687.4 days**.
 
 ---
@@ -111,9 +116,11 @@ The sidereal orbital period of Venus and Mars respectively is **0.6255 years or 
 *__(b)__ Which of the superior planets has the shortest synodic period, and why?*
 
 Using the relationship between sideral and synodic period from above, and simplifying for superior planets, we get
+
 $$
 P_{\text{syn}_\text{superior}}=\frac{P_\text{outer}}{P_\text{outer}-1}
 $$
+
 To obtain the shortest synodic period, There must be a great difference in sideral period of Earth and the superior planet. In other words, in this case, we’re look for a planet with the longest sideral period, or the planet that orbits farthest away from center.
 
 At the time of writing, the superior *planet* that has the shortest synodic period is **Neptune**.
@@ -121,10 +128,6 @@ At the time of writing, the superior *planet* that has the shortest synodic peri
 ---
 
 *__(c)__ A certain asteroid is 1 au from the Sun at perihelion and 5 au from the Sun at aphelion. Find the semi-major axis, eccentricity, and semi-minor axis of its orbit. Include a sketch of the geometry.*
-
-
-
-
 
 
 ## 3. Calculus Refresher
