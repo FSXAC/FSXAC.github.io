@@ -1,11 +1,7 @@
 ---
 title: W19 Assignment 1
 date: 2019-09-07
-use_math: true
 ---
-
-Muchen He - **44638154**
-
 
 ## 1. Angles Big and Small
 
@@ -18,7 +14,6 @@ $$
 $$
 
 Then to find the arc length, we use the radius of Earth, which is $R_\oplus$=6371 km.
-
 $$
 \begin{aligned}
 d&=\theta r\\
@@ -54,11 +49,80 @@ The solid degrees that covers the full celestial sphere is **720 square degrees*
 
 *__(c)__ You have a telescope with a CCD detector that has a square field of view of 4 square arcminutes. How many pointings of the telescope will be needed to cover an area of 6 degrees by 10 degrees?*
 
+Assume that we’re looking at the celestial sphere.
 
+Assume that our CCD detector is a square sensor such that the field of view of 4 square arcminutes is 2 arcminutes for horizontal and vertical field of view.
+
+Then we convert 2 arcminutes to degrees:
+
+$$
+2\small{\text{arcmin}}\times\frac{1\deg}{60\small{\text{arcmin}}}=0.0\bar 3 \deg
+$$
+
+That means we for each frame, we can cover 0.03 degrees by 0.03 degrees. Which means:
+
+$$
+\frac{6\deg}{0.0333\deg}=180\\
+\frac{10\deg}{0.0333\deg}=300
+$$
+
+It takes 180 and 300 pointings respectively to cover 6 degrees by 10 degrees area. Therefore, the total number of pointings required is
+
+$$
+180\times300=\boxed{54,000}
+$$
+
+We need **54,000** pointings to cover an area of 6 degrees by 10 degrees.
 
 ## 2. Solar System Basics
 
-`todo`
+*__(a)__ The observed orbital synodic periods of Venus and Mars and 583.9 days and 779.9 days, respectively. Calculate their sidereal periods.*
+
+Assume 1 year is exactly 365.25 days. Then Venus has an orbital synodic period of 1.5986 years, and Mars has an orbital synodic period of 2.1338 years. Synodic means that this is the time interval for the planet to repeat a configuration with respect to Earth.
+
+To calculate the sidereal period, we use the relationship
+$$
+\frac{1}{P_\text{syn}}=\frac{1}{P_\text{inner}}-\frac{1}{P_\text{outer}}
+$$
+
+Venus is an inferior planet. So we’re solving for the “inner” sideral period; the “outer” sideral period is Earth’s so it’s simply 1.
+$$
+\begin{aligned}
+\frac{1}{1.5986\text{ yr}}&=\frac{1}{P_\text{inner}}-1\\
+P_\text{inner}&=\left(\frac{1}{1.5986\text{ yr}}+1\right)^{-1}\\
+&=\boxed{0.6255 \text{ yr}}
+\end{aligned}
+$$
+Mars is a superior planet. So we are solving for the “outer” sideral period. Identical procedure:
+$$
+\begin{aligned}
+\frac{1}{2.1338\text{ yr}}&=1-\frac{1}{P_\text{outer}}\\
+P_\text{outer}&=\left(1-\frac{1}{2.1338\text{ yr}}\right)^{-1}\\
+&=\boxed{1.882 \text{ yr}}
+\end{aligned}
+$$
+The sidereal orbital period of Venus and Mars respectively is **0.6255 years or 228.5 days**, and **1.882 years or 687.4 days**.
+
+---
+
+*__(b)__ Which of the superior planets has the shortest synodic period, and why?*
+
+Using the relationship between sideral and synodic period from above, and simplifying for superior planets, we get
+$$
+P_{\text{syn}_\text{superior}}=\frac{P_\text{outer}}{P_\text{outer}-1}
+$$
+To obtain the shortest synodic period, There must be a great difference in sideral period of Earth and the superior planet. In other words, in this case, we’re look for a planet with the longest sideral period, or the planet that orbits farthest away from center.
+
+At the time of writing, the superior *planet* that has the shortest synodic period is **Neptune**.
+
+---
+
+*__(c)__ A certain asteroid is 1 au from the Sun at perihelion and 5 au from the Sun at aphelion. Find the semi-major axis, eccentricity, and semi-minor axis of its orbit. Include a sketch of the geometry.*
+
+
+
+
+
 
 ## 3. Calculus Refresher
 
