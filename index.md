@@ -15,8 +15,9 @@ header:
   color: transparent
   text_color: black
   text:
-  - A fourth year EE student at UBC.
-  - Currently on an 8-month co-op term Intel of Canada as FPGA Emulation Platform intern. I've previously worked at Electronic Arts - BioWare and VitalMechanics.
+  - A fourth(fifth) year EE student at UBC.
+  - Currently studying and working on my Capstone project.
+  - I previously worked at Intel, EA BioWare, and VitalMechanics.
   - <i class="text-muted" id="my-facts"></i>
 ---
 
