@@ -5,8 +5,8 @@
   end: "Aug 2019"
   duration: "8 months"
   doings:
-  - "(WIP) Wrote Python application with terminal UI for developers to use.",
-  - "Wrote Python and shell script for process automation.",
+  - "(WIP) Wrote Python application with terminal UI for developers to use."
+  - "Wrote Python and shell script for process automation."
   - "Configured TeamCity for automatic testing and deployment of team-use software."
   - "Interpreted feature requests and managed software feature releases."
   - "Composed release notes and technical documentation/specs."
