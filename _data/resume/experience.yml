@@ -5,12 +5,12 @@
   end: "Aug 2019"
   duration: "8 months"
   doings:
-  - "(WIP) Wrote Python application with terminal UI for developers to use."
-  - "Wrote Python and shell script for process automation."
-  - "Configured TeamCity for automatic testing and deployment of team-use software."
-  - "Interpreted feature requests and managed software feature releases."
-  - "Composed release notes and technical documentation/specs."
-  - "Provided technical support for clients who used the software I developed."
+  - "Wrote Python application with terminal UI for developers to remotely interface with FPGAs"
+  - "Wrote Python and shell script for process automation"
+  - "Configured TeamCity for automatic testing and deployment of team-use software which reduced deployment time from 1 day to 30 minutes."
+  - "Interpreted feature requests and managed software feature releases"
+  - "Composed release notes and technical documentation/specs"
+  - "Provided technical support for clients who used the software I developed"
   tech:
   - tcsh + bash
   - Python
@@ -34,13 +34,13 @@
   position: "Teaching Assistant"
   location: "Vancouver BC"
   start: "Jan 2018"
-  end: ""
+  end: "present"
   duration: ""
   doings:
   - "Assisted students to learn C programming by responding to students' in-class questions in a clear and simple manner"
   - "Supervised students in programming labs and marked lab submissions using an automated script I wrote in Python"
-  - "(WIP) Wrote technical documents and provided comprehensive online support via Piazza."
-  - "(WIP) Provided technical support for students with macOS"
+  - "Wrote technical documents and provided comprehensive online support via Piazza"
+  - "Provided technical support for students with macOS"
   tech:
   - C
   - Python
