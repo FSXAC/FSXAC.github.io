@@ -131,7 +131,7 @@ The orbiting speed for when the comit at perihelion, aphelion, and on the semi-m
 We need to find the ratio of kinetic energy:
 
 $$
-\frac{E_{k_{pe}}}{E_{k_{ap}}}=\frac{\cancel{0.5}\cancel {m} v_{pe}^2}{\cancel{0.5}\cancel{m}v_{pe}^2}
+\frac{E_{k_{pe}}}{E_{k_{ap}}}=\frac{0.5m v_{pe}^2}{0.5mv_{ap}^2}=\frac{v_{pe}^2}{v_{ap}^2}
 $$
 
 Which is just the ratio of the orbiting speed squared.
@@ -204,7 +204,59 @@ M_\text{jup}&=\frac{4\pi^2}{GP^2}a^3\\
 \end{aligned}
 $$
 
-The mass of Jupiter is **1.989&times;10<sup>27</sup> kg**, which is 1000 times more massive than Earth, but 1000 times less massive than the Sun.
+The mass of Jupiter is **1.989&times;10<sup>27</sup> kg**.
 
 ## 3. Orbits and More Approximations
 
+*__(a)__ Consider a satellite in a circular, low-Earth orbit, where the satellite’s elevation h about the Earth’s surface is $h\ll R_\oplus$. Show that the orbital period $P$ for such a satellite is approximately $R=C(1+3h/2R_\oplus)$. What is the numerical constant $C$ in minutes?* 
+
+Let’s start with the period of a circular orbit. The speed of a given circular orbit is:
+$$
+v_c=\sqrt{\frac{GM_\oplus}{R_\oplus+h}}
+$$
+And assume that the circumference / total arc length of a full revolution is:
+$$
+2\pi(R_\oplus+h)
+$$
+Period is given by:
+$$
+time=distance/speed\\
+P=\frac{2\pi(R_\oplus+h)}{\sqrt{\frac{GM_\oplus}{R_\oplus+h}}}
+$$
+Simplifying a bit, and I’m assigning the variable $\zeta$ to the constant part:
+$$
+\begin{aligned}
+P&=\underbrace{\frac{2\pi}{\sqrt{GM_\oplus}}}_\zeta(R_\oplus+h)\sqrt{R_\oplus+h}\\
+&=\zeta R_\oplus\left(1+\frac{h}{R_\oplus}\right)\sqrt{R_\oplus}\left(\sqrt{1+\frac{h}{R_\oplus}}\right)\\
+&=\zeta R_\oplus^{3/2}\left(1+\frac{h}{R_\oplus}\right)^{3/2}
+\end{aligned}
+$$
+We can see that there is a binomial series, so we can approximate the value using Taylor expansion for binomial series. Suppose $x=h/R_\oplus$, and let $\alpha=3/2$, then the expansion is:
+$$
+(1+x)^\alpha=\sum_{n=0}{\alpha \choose n}x^n=1+\alpha x+\frac{\alpha(\alpha-1)}{2!}x^2+\dots
+$$
+We can just approximate by truncating everything after the linear term ($\alpha x$). So:
+$$
+\begin{aligned}
+(1+x)^\alpha&=1+\alpha x\\
+\left(1+\frac{h}{R_\oplus}\right)^{\frac{3}{2}}&=1+\frac{3}{2}\frac{h}{R_\oplus}
+\end{aligned}
+$$
+Now plugging everything back:
+$$
+\begin{aligned}
+P&=\zeta R_\oplus^{\frac{3}{2}}\left(1+\frac{3h}{2R_\oplus}\right)\\
+&=\underbrace{\left(\frac{2\pi R_\oplus^{\frac{3}{2}}}{\sqrt{GM_\oplus}}\right)}_C\left(1+\frac{3h}{2R_\oplus}\right)
+\end{aligned}
+$$
+Computing for $C$, we get 5070 seconds or **84.5 minutes**.
+
+---
+
+*__(b)__ What is the orbital period for a low-lunar orbit, as was used by the Apollo command modules?*
+
+According to Wikipedia [^1], the low lunar orbit is about 100km above the moon’s surface. And they have a orbital period of about **2 hours**.
+
+
+
+[^1]: Lunar Orbit: <https://en.wikipedia.org/wiki/Lunar_orbit>

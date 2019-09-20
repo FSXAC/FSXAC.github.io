@@ -5,7 +5,6 @@ updated: 2019-09-11
 created: 2019-09-07
 categories: ASTR 200
 use_math: true
-categories: ASTR 200
 ---
 
 Muchen He - **44638154**

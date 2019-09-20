@@ -68,9 +68,9 @@ The total energy of an elliptical obrit per unit mass is:
 $$
 E=-GM/2a
 $$
-We can rearrange for vis-viva equation:
+We can rearrange for **vis-viva equation**:
 $$
-v^2=GM(2/r-1/a)
+v^2=GM\left(\frac{2}{r}-\frac{1}{a}\right)
 $$
 There are limiting cases:
 
