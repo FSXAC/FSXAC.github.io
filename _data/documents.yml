@@ -357,12 +357,27 @@
     entries:
     - title: 'Introduction'
       link: '/documents/ASTR200/2019-09-04-Introduction'
+    - title: 'Units'
+      link: '/documents/ASTR200/2019-09-04-Units'
     - title: 'Angles'
       link: '/documents/ASTR200/2019-09-06-Angles'
+    - title: 'The Celestial Sphere'
+      link: '/documents/ASTR200/2019-09-09'
+    - title: 'Celestial Mechanics'
+      link: '/documents/ASTR200/2019-09-09-celestial-mechanics'
+      flag: draft
+    - title: 'Astrodynamics'
+      link: '/documents/ASTR200/2019-09-13-astrodynamics'
+      flag: draft
+    - title: 'The Solar System'
+      link: '/documents/ASTR200/2019-09-16-solar-systems'
+      flag: draft
     - title: 'Assignments'
       group:
         - enum: 1
           link: '/documents/ASTR200/asn1'
+        - enum: 2
+          link: '/documents/ASTR200/asn2'
   - course_num: 'CIVL 200, CIVL 250'
     course_name: 'Engineering and Sustainable Development'
     date: 2019-08-15
