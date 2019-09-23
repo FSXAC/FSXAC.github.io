@@ -1,8 +1,14 @@
 - category: Electrical
   courses:
+  - course_num: 'ELEC 402'
+    course_name: 'VLSI'
+    date: 2019-09-25
+    entries:
+    - title: 'Project 1: FSM Report'
+      link: '/documents/ELEC402/proj1'
   - course_num: 'ELEC 491'
     course_name: 'Capstone Project for EE'
-    date: 2019-09-06
+    date: 2019-09-16
     entries:
     - title: 'Intro to Capstone Project'
       link: '/documents/ELEC491/2019-09-04-Introduction'
