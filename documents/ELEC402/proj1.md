@@ -24,6 +24,30 @@ Lastly, the shutter speed is in multiples of clock cycles. In real life, shutter
 
 ## State Transition Diagram
 
+## Modules
+
+This section outlines the modules that make up this FSM.
+
+### DFF
+
+For the sake of simplification and abstraction, I created separate D-Flip-Flop modules that I could use. The intention is to not have too many `always_ff` in a single file, which could be confusing.
+
+The implementation is straightforward. D equals Q on rising clock edge. The input to the module is D, Q, clock, and reset. We can also use the *parameter* to specify the bus width (1 bit wide by default).
+
+The DFF modules are for storing aperture and shutter settings.
+
+### Aperture and Shutter Decoder
+
+The settings for aperture and shutter is enumerated as a number between 0-7 (3 bits). But we need to decode this into usable values for calculation and number of cycles to wait for the shutter. 
+
+The aperture decoder takes in the aperture settings and output the “aperture multiplier”.
+
+The shutter decoder takes in the shutter settings and output number of cycles we need for exposure.
+
+### Shutter Countdown Module
+
+SCD (Shutter Countdown) module is a simple implementation of a countdown module. The input is clock, reset, number of cycles, write enable, and countdown enable. To set the number of cycles, we need to ensure write enable is on. To run the countdown, turn “countdown enable” (`cd_en`) to HIGH. It outputs a high “done” signal when the countdown finished.
+
 ## Block Diagram of FSM
 
 ## Test-Bench
