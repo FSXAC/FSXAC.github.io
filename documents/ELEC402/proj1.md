@@ -1,5 +1,5 @@
 ---
-title: "Project 1 - FSM"
+title: "Project 1 Report - FSM"
 date: 2019-09-23
 categories: ELEC 402
 ---
@@ -24,6 +24,24 @@ Lastly, the shutter speed is in multiples of clock cycles. In real life, shutter
 
 ## State Transition Diagram
 
+![1569300928009](assets/proj1/1569300928009.png)
+
+The machine starts in the “reset state” which is the state named “idle”. Here the FSM will not do anything until the user presses the power button (named `power_btn`). Then the FSM will default into aperture priority mode state (A). From here, we can cycle through the different operating modes.
+
+When the FSM is “powered on” (in one of “A”, “M”, or “S” states), pulsing `power_btn` will make FSM return to the idle state. We use a flip flop to keep track of previous state so we can return to it.
+
+Depending on which mode, we can press the corresponding buttons to increment or decrement camera settings (see *Descriptions* section on how it works). 
+
+Pressing the shutter button (`shutter_btn`) will tell the FSM to “take a picture”. Necessary data is calculated and stored. Then we go into the “wait” state where we wait for the “photo” to expose. How long we wait depends on the shutter speed. 
+
+Lastly, when we’re done, we output the data from the FSM, and return to the previous **operating mode** state.
+
+### State Transition Diagram with Output Signals
+
+Here is the previous diagram except with the output signals of the FSM to the datapath as well as to the external of the device.
+
+![1569301142807](assets/proj1/1569301142807.png)
+
 ## Modules
 
 This section outlines the modules that make up this FSM.
@@ -46,12 +64,110 @@ The shutter decoder takes in the shutter settings and output number of cycles we
 
 ### Shutter Countdown Module
 
-SCD (Shutter Countdown) module is a simple implementation of a countdown module. The input is clock, reset, number of cycles, write enable, and countdown enable. To set the number of cycles, we need to ensure write enable is on. To run the countdown, turn “countdown enable” (`cd_en`) to HIGH. It outputs a high “done” signal when the countdown finished.
+<img src="assets/proj1/1569301715855.png" alt="1569301715855" style="zoom:50%;" />
+
+SCD (Shutter Countdown) module is a simple implementation of a countdown module. The input is clock, reset, number of cycles, write enable, and countdown enable. To set the number of cycles, we need to ensure write enable is on. To run the countdown, turn “countdown enable” (`scd_cd_en`) to HIGH. It outputs a high “done” signal when the countdown finished.
 
 ## Block Diagram of FSM
 
-## Test-Bench
+**See the extra attached file for code and implementation**.
 
-## Block Diagram of Test-Bench
+The top level FSM encloses all the previously mentioned modules. The *FSM Core* is the module that encapsulates the main “combinational-sequential-combinational” state-transition and state memory logic. The *FSM Core* is an “implicit” synthesized from the `always` blocks.
+
+Here are all the modules used:
+
+![1569302322354](assets/proj1/1569302322354.png)
+
+Here’s how they’re connected within the top-level FSM wrapper module:
+
+![1569303676908](assets/proj1/1569303676908.png)
+
+## Test Bench
+
+**See the extra attached file for test bench code and tests implementation**.
+
+We make a separate test bench module that match that wraps the input and output of the finite state machine. In the test bench, we simulate all kinds of user input testing. All combinations of input is tested to ensure that our FSM don’t end up in an undefined state.
+
+### Block Diagram of Test Bench
+
+![1569304425674](assets/proj1/1569304425674.png)
 
 ## Simulation Results
+
+### Basic
+
+#### Reset & Power Button
+
+![1569304688387](assets/proj1/1569304688387.png)
+
+Notice that the first time power button is pressed we go from `ST_IDLE` state to `ST_APERTURE_PRIORITY` state. The second time the power button is pressed, we go back to `ST_IDLE` state.
+
+#### Ignore Input
+
+While in `ST_IDLE` state, any input except for power button should affect the FSM.
+
+![1569304863044](assets/proj1/1569304863044.png)
+
+#### Mode Increment & Decrement
+
+Cycling through the different shooting modes should be working.
+
+![1569304975267](assets/proj1/1569304975267.png)
+
+![1569304994080](assets/proj1/1569304994080.png)
+
+#### Aperture Increment & Decrement
+
+Pressing or holding down the f-stop increment or decrement button should change the f-stop setting. But once we have reached the maximum or minimum value, it should not cycle around (unlike modes).
+
+![1569305099065](assets/proj1/1569305099065.png)
+
+While in aperture priority mode, we also need to ignore all inputs from shutter speed settings. Nothing should happen if the signal `shutter_inc` or `shutter_dec` is activated. Notice in the below waveform that shutter setting did not change (which is good).
+
+![1569305196235](assets/proj1/1569305196235.png)
+
+#### Shutter Speed Increment & Decrement
+
+Same as aperture / f-stop.
+
+![1569305281988](assets/proj1/1569305281988.png)
+
+#### Manual Mode
+
+Both f-stop and shutter speed can be override in this mode.
+
+![1569305330075](assets/proj1/1569305330075.png)
+
+### Manual Mode “Photo” Tests
+
+These photo tests simulates taking a “photo” where the `shutter_btn` is pressed.
+
+#### Test 1: 2 Cycle Shutter Speed
+
+![1569305439803](assets/proj1/1569305439803.png)
+
+In this test, the shutter speed is set to the fastest (2-cycles); aperture is set to smallest (x1 multiplier); the input sensor value is 42. Therefore the output is just 2-cycles &times; 42 = 82.
+
+#### Test 2: 2 Cycle Shutter Speed Wide Aperture Test
+
+Same as test 1, except aperture is wider (lower f-stop setting). Notice that given the sensor input of 100, we get output of 25600, which is expected.
+
+![1569305589912](assets/proj1/1569305589912.png)
+
+#### Test 3: Slowest Shutter Speed
+
+In this test, we set the shutter speed to the lowest setting (512 cycles). With aperture set to widest (x128 multiplier) and sensor input of 1, we get the expected output of 32768. And we indeed waited 512 cycles for the shutter to open and expose.
+
+![1569305723365](assets/proj1/1569305723365.png)
+
+#### Test 4: Fastest Shutter Burst Mode
+
+Modern digital cameras have burst-mode: where user holds down the shutter button and the camera will continue to take pictures as often as possible until the shutter button is released. This test tests that this FSM also have burst-mode. The output result and state transition is nominal.
+
+![1569305892950](assets/proj1/1569305892950.png)
+
+### Aperture Priority & Shutter Priority “Photo” Tests
+
+I won’t go into too much detail for the remaining tests. They’re just the same tests as described above except in aperture priority mode (A) and shutter priority mode (S). The results of the simulation and tests are nominal.
+
+![1569306065221](assets/proj1/1569306065221.png)
