@@ -38,9 +38,24 @@ Lastly, when we’re done, we output the data from the FSM, and return to the pr
 
 ### State Transition Diagram with Output Signals
 
-Here is the previous diagram except with the output signals of the FSM to the datapath as well as to the external of the device.
+Here is the previous diagram except with the output signals of the FSM to the datapath as well as to the external of the device. I provided two separate diagrams to avoid clutter.
 
-![1569301142807](assets/proj1/1569301142807.png)
+![](assets/proj1/1569301142807.png)
+
+### State Descriptions
+
+- **IDLE**: The reset state. This is equivalent to the camera being put into suspension mode for power saving. The FSM should not accept any input except for the power button.
+- **A (Aperture Priority)**: This is the main mode state for operating in aperture priority. In this state, the user only changes aperture/f-stop settings. At the same time, the FSM automatically sets the shutter speed (in *Calc S* state).
+- **S (Shutter Priority)**: This is the main mode state for operating in shutter priority. In this state, the user only changes the shutter speed settings. Similarly, the FSM automatically compensates by adjusting f-stop automatically (in *Calc A* state).
+- **M (Manual)**: This is the main mode state for operating in manual mode. The user can adjust both f-stop and shutter speed settings. Furthermore, the FSM does not do anything automatic.
+- **F+ (Increase F-Stop)**: This state increments the f-stop settings.
+- **F- (Decrease F-Stop)**: This state decrements the f-stop settings.
+- **S+ (Increase Shutter Speed)**: This state increases the shutter speed and we need to wait more cycles.
+- **S- (Decrease Shutter Speed)**: This state decreases the shutter speed.
+- **Calc S**: Compute the automatic compensation for the shutter speed when we are in aperture priority mode.
+- **Calc A**: Compute the automatic compensation for the f-stop when we are in shutter priority mode.
+- **WAIT**: A state that waits for exposure. The slower the shutter speed, the longer we stay in this state. When the shutter countdown is finished, we transition to *Done* state.
+- **DONE**: This state computes the final signal value, and turns on the output valid signal.
 
 ## Modules
 
