@@ -295,7 +295,7 @@ void part1(void)
 		printf("| %d | %.4f |\n", iterations, eccentric_anomaly);
 	}
 
-	printf("E_{%d} = %.4f rad\n", iterations, eccentric_anomaly);
+	printf("E_%d = %.4f rad\n", iterations, eccentric_anomaly);
 }
 
 int main(void)
