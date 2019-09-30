@@ -90,6 +90,9 @@ dfn:hover::after { opacity: 1; top: 1.8em; }
 #c-content h1, #c-content h2, h1.bold, h2.bold { letter-spacing: -1px; word-spacing: 2px; }
 #c-content h3 { margin: .5em 0; }
 
+// UBC handin top part
+#c-content #ubc-handin { display: none; }
+
 // TOC
 #c-content #markdown-toc li { list-style: none; line-height: 1.1; }
 #c-content #markdown-toc > li > a { font-weight: bold; line-height: 1.35; }
@@ -177,6 +180,9 @@ nav.navbar.sticky-top { box-shadow: 0px 4px 6px 0 #00000033; }
 	.jumbotron { background-color: transparent !important; }
 	.jumbotron .text-light { color: black !important; }
 	footer { display: none; }
+
+	// Turn on hand in information
+	#c-content #ubc-handin { display: block; }
 }
 
 // Tabular numerials

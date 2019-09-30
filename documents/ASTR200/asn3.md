@@ -5,6 +5,7 @@ updated: 2019-09-29
 created: 2019-09-29
 categories: ASTR 200
 use_math: true
+ubc_handin: true
 ---
 
 ## 1. Orbital Changes
@@ -261,7 +262,6 @@ So when the planet is at periapsis, the planet is very hot at 594K and emits pea
 
 ### Code Used for Problem 2 Part 1
 
-{% raw %}
 ```c
 #include <stdio.h>
 #include <math.h>
@@ -358,4 +358,3 @@ int main(void)
 	part2();
 }
 ```
-{% endraw %}

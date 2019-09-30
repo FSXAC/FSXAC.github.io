@@ -5,9 +5,8 @@ updated: 2019-09-11
 created: 2019-09-07
 categories: ASTR 200
 use_math: true
+ubc_handin: true
 ---
-
-Muchen He - **44638154**
 
 ## 1. Angles Big and Small
 

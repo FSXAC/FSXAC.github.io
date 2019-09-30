@@ -2,9 +2,8 @@
 title: "Project 1 Report - FSM"
 date: 2019-09-23
 categories: ELEC 402
+ubc_handin: true
 ---
-
-Muchen He - **44638154**
 
 This report specifies the finite state machine (FSM) I built for ELEC 402 project 1. 
 

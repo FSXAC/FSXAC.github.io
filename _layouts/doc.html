@@ -9,6 +9,7 @@ div.footnotes { border-top: 1px solid; }
 
 <header class="pt-5 pb-3">
 	<div class="container narrow">
+		{% if page.ubc_handin %}{% include ubc_handin %}{% endif %}
 		{% if page.categories != empty %}
 			<small style="letter-spacing: 2px">
 			{% for category in page.categories %}

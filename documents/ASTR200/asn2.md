@@ -5,9 +5,8 @@ updated: 2019-09-17
 created: 2019-09-15
 categories: ASTR 200
 use_math: true
+ubc_handin: true
 ---
-
-Muchen He - **44638154**
 
 ## 1. Comet Hale-Bopp
 
