@@ -8,7 +8,7 @@ use_math: true
 ubc_handin: true
 ---
 
-## 1. Orbital Changes
+## 1. Orbital Changes 🪐
 
 *A small particle of mass $m$ is on a circular orbit of radius $R$ around a much larger mass $M$. Suppose that the speed of mass $m$ is suddenly increased (in the same direction) by a factor $\alpha > 1$, that is, $\vec v _\text{final}=\alpha \vec v_\text{initial}$.*
 
@@ -43,7 +43,7 @@ q=a(1-e)=\boxed{R}\\
 e=1-\frac{R}{a}=1-\frac{R}{\frac{R}{2-\alpha^2}}=\boxed{\alpha^2-1}
 $$
 
-The semi-minor axis is derived by pythogreas theorem, since we already did that for assignment 1, I will jump into using the equation:
+The semi-minor axis is derived by Pythagorean theorem, since we already did that for assignment 1, I will jump into using the equation:
 
 $$
 \begin{aligned}
@@ -68,7 +68,7 @@ $$
 
 *__(b)__ There is a maximum value of $\alpha$ for which this is a sensible problem. Why is that, and what is the maximum value of $\alpha$?*
 
-Because the geometry of the elliptical orbit is a conic section – a section cut of a cone shape. Given enough $\alpha$. the “tilt of the slice” will be a parabola and then a hyperbola (see figure below – source: [voer.edu.vn](http://voer.edu.vn/c/rotation-of-axes/166e8432/66fe1fe0)). In physical sense, if we incerase $\alpha$, our particle velocity would be so great that it would reach the **escape velocity**, and it will escape the orbit.
+Because the geometry of the elliptical orbit is a conic section – a section cut of a cone shape. Given enough $\alpha$. the “tilt of the slice” will be a parabola and then a hyperbola (see figure below – source: [voer.edu.vn](http://voer.edu.vn/c/rotation-of-axes/166e8432/66fe1fe0)). In physical sense, if we increase $\alpha$, our particle velocity would be so great that it would reach the **escape velocity**, and it will escape the orbit.
 
 <img src="assets/asn3/download.jpg" alt="Precalculus: Rotation of Axes - VOER" style="zoom:67%;" />
 
@@ -141,7 +141,7 @@ As the graph clearly shows, there is a significant discrepancy between the eccen
 
 
 
-## 3. Temperature Changes in an Eccentric Orbit
+## 3. Temperature Changes in an Eccentric Orbit 🌗
 
 *The planet HD 20782b orbits HD 20782, a G3V star with mass 1.05 times that of the Sun and luminosity 1.25 times that*
 *of the Sun. The planet's orbit has a semi-major axis of 1.397 au, an orbital period of 597 days, and an eccentricity of 0.956. The planet's mass is about 2 times that of Jupiter and you may assume its albedo is similar to that of Jupiter at about 0.5.*
@@ -219,7 +219,7 @@ $$
 > \end{aligned}
 > $$
 > 
-> Cool. We can proceed.
+> 👌 Cool. We can proceed.
 
 Plugging in all the values we calculated so far, where $\sigma$ is Stefan-Boltzmann consant. The constant that replaces the 279K is **294.5K**:
 
@@ -232,7 +232,7 @@ $$
 
 *__(c)__ Assuming that there no signicant internal heating from the planet, determine its temperature and the wavelength of peak emission at both periapsis and apoapsis. In what part of the spectrum do these wavelengths fall?*
 
-**At Periapsis:** the planet’s distance from the star is only 0.0615au. The tempearture is **594K**.
+**At Periapsis:** the planet’s distance from the star is only 0.0615au. The temperature is **594K**. 🔥
 $$
 T_{p_{pe}}=294.5\text{K}(1-(0.5))\frac{1}{\sqrt{0.0615}}=\boxed{594 \text{K}}
 $$
@@ -242,8 +242,7 @@ $$
 \lambda_{p_{pe}}=\frac{2.9\times 10^3 \mu\text{m}}{T}=\frac{2.9\times 10^3 \mu\text{m}}{594}=\boxed{4.884\mu\text{m}}
 $$
 
-**At Apoapsis:** the planet’s distance from the star is 2.7325au. The temperature is **89.1K**.
-
+**At Apoapsis:** the planet’s distance from the star is 2.7325au. The temperature is **89.1K**. ⛄
 $$
 T_{p_{ap}}=294.5\text{K}(1-(0.5))\frac{1}{\sqrt{2.7325}}=\boxed{89.1 \text{K}}
 $$
