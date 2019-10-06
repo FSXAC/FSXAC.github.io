@@ -2,10 +2,12 @@
   courses:
   - course_num: 'ELEC 402'
     course_name: 'VLSI'
-    date: 2019-09-25
+    date: 2019-10-06
     entries:
     - title: 'Project 1: FSM Report'
       link: '/documents/ELEC402/proj1'
+    - title: 'Project 2: FSM Synthesis Report'
+      link: '/documents/ELEC402/proj2'
   - course_num: 'ELEC 491'
     course_name: 'Capstone Project for EE'
     date: 2019-09-16
