@@ -79,9 +79,11 @@ E_\text{photon}=13.6-6.04\text{eV}=7.56\text{eV}
 $$
 
 Using Planck’s equation: $E_\text{photon}=hc/\lambda$, we can obtain the wavelength $\lambda$:
+
 $$
 \lambda=\frac{E_\text{photon}}{hc}=164.0\times 10^{-9}\text{m}
 $$
+
 The photon emitted when an electron jumps from energy state n=3 to n=2 has a wavelength of **164nm**.
 
 
