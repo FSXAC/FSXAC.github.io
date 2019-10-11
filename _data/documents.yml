@@ -386,6 +386,10 @@
           link: '/documents/ASTR200/asn1'
         - enum: 2
           link: '/documents/ASTR200/asn2'
+        - enum: 3
+          link: '/documents/ASTR200/asn3'
+        - enum: 4
+          link: '/documents/ASTR200/asn4'
   - course_num: 'CIVL 200, CIVL 250'
     course_name: 'Engineering and Sustainable Development'
     date: 2019-08-15
