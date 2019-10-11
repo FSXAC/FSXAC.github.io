@@ -175,7 +175,7 @@ $$
 
 On the RV graph for the star, when the RV is peaked (either top or bottom) it means that the star is moving towards or away from us (the observer). So we should get the orbit velocity from those points.
 
-![1570774312286](assets/asn4/1570774312286.png)
+<img src="assets/asn4/1570774312286.png" alt="1570774312286" style="zoom:50%;" />
 
 Sampling from the graph, we are able to get about 2 decimal places of precision. When the star is at a point in the orbit such that it’s coming straight towards the observer, the observed RV is -21.93 km/s. When the star is at a point in the orbit such that it’s going straight away from the observer, the observed RV is -21.79 km/s. 
 
