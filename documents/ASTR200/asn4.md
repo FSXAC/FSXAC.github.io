@@ -61,6 +61,7 @@ r_1=a_0 \frac{(1)^2}{2}=2.65\times 10^{-11}\text{m}
 $$
 
 **Ground state energy when n=1**:
+
 $$
 E_1=-13.6\text{eV}\frac{2^2}{1}=-54.4\text{eV}
 $$
