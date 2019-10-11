@@ -1,6 +1,6 @@
 ---
 title: W19 Assignment 4
-date: 2019-10-09
+date: 2019-10-11
 categories: ASTR 200
 use_math: true
 ubc_handin: true
@@ -33,7 +33,7 @@ $$
 For a general atom with Z protons, the equation becomes:
 
 $$
-\boxed{r_{z,n}=\frac{4\pi \epsilon_0 \hbar^2}{\mu e^2 Z}n^2 = \frac{a_0}{Z}\cdot n^2}
+r_{z,n}=\frac{4\pi \epsilon_0 \hbar^2}{\mu e^2 Z}n^2 = \frac{a_0}{Z}\cdot n^2
 $$
 
 Similarly, the energy derived in the textbook for the hydrogen atom is:
@@ -45,9 +45,8 @@ $$
 Also generalizing for atom with Z protons:
 
 $$
-\boxed{E_n=-\frac{\mu e^4 Z^2}{32\pi^2\epsilon_0^2\hbar^2n^2}=-13.6\text{eV}\frac{Z^2}{n^2}}
+E_n=-\frac{\mu e^4 Z^2}{32\pi^2\epsilon_0^2\hbar^2n^2}=-13.6\text{eV}\frac{Z^2}{n^2}
 $$
-
 
 ---
 
@@ -62,7 +61,6 @@ r_1=a_0 \frac{(1)^2}{2}=2.65\times 10^{-11}\text{m}
 $$
 
 **Ground state energy when n=1**:
-
 $$
 E_1=-13.6\text{eV}\frac{2^2}{1}=-54.4\text{eV}
 $$
@@ -81,15 +79,9 @@ E_\text{photon}=13.6-6.04\text{eV}=7.56\text{eV}
 $$
 
 Using Planck’s equation: $E_\text{photon}=hc/\lambda$, we can obtain the wavelength $\lambda$:
-
-<div class="omni-calculator" data-calculator="physics/photon-energy" data-width="300" data-config='{"wavelength":{"unitDefault":"nm","advanced":false,"locked":false},"frequency":{"advanced":true},"energy":{"default":"7.56","unitDefault":"eV","locked":true}}' data-currency="CAD" data-show-row-controls="false" data-version="3" data-t="1570778284824">
-  <div class="omni-calculator-header">Photon Energy Calculator</div>
-  <div class="omni-calculator-footer">
-    <a href="https://www.omnicalculator.com/physics/photon-energy" target="_blank"><img alt="Omni" class="omni-calculator-logo" src="https://cdn.omnicalculator.com/embed/omni-calculator-logo-long.svg" /></a>
-  </div>
-</div>
-<script async src="https://cdn.omnicalculator.com/sdk.js"></script>
-
+$$
+\lambda=\frac{E_\text{photon}}{hc}=164.0\times 10^{-9}\text{m}
+$$
 The photon emitted when an electron jumps from energy state n=3 to n=2 has a wavelength of **164nm**.
 
 
@@ -108,14 +100,7 @@ $$
 \end{aligned}
 $$
 
-Suppose $N_0=1$, then by definition $N=0.5$ after 49.44&times;10<sup>9</sup> years. So:
-
-$$
-0.5=e^{-\lambda \cdot 49.44\times10^9} \implies
-\lambda=-\frac{\ln(0.5)}{49.44\times 10^9}=1.402\times 10^{-11}\text{yr}^{-1}
-$$
-
-Using the relationship above, we also get this value for $\lambda$:
+Using the relationship above, we get $\lambda$:
 
 $$
 \lambda=\frac{-\ln 1/2}{49.44\times 10^{9}} =1.402\times 10^{-11}\text{yr}^{-1}
