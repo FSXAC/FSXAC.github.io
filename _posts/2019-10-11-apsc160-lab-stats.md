@@ -21,15 +21,15 @@ This page will be updated for each labs.
 
 **Lab 1**: by this point, I was only in section L1T (Thursday 12:00-14:00) and L1D (Friday 16:00-18:00).
 
-![1570840412209](assets/1570840412209.png)
+![1570840412209](/assets/blog/apsc160/1570840412209.png)
 
 **Lab 2**: Lab 2 features if/else branching. The lab section L1K showed that their version is the easiest.
 
-![1570840448406](assets/1570840448406.png)
+![1570840448406](assets/blog/apsc160/1570840448406.png)
 
 **Lab 3**: Lab 3 is a bit harder, it consists of drawing grid of numbers using nested *while* loops.
 
-![1570840588898](assets/1570840588898.png)
+![1570840588898](assets/blog/apsc160/1570840588898.png)
 
 **Lab 4**:
 
@@ -41,7 +41,7 @@ TBD
 
 Since lab 2, I’ve developed a custom program in Python that runs on my phone using *Pythonista* to perform the counting and logging for when a student submits their lab. The app automatically appends log entry to a *.txt* file.
 
-<img src="assets/1570813361974.png" alt="1570813361974" style="zoom:25%;" />
+<img src="assets/blog/apsc160/1570813361974.png" alt="1570813361974" style="zoom:25%;" />
 
 
 
