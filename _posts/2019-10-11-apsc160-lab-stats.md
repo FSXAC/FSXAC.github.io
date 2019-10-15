@@ -1,6 +1,6 @@
 ---
 title: "APSC 160 Lab Statistics"
-date: 2019-10-11
+date: 2019-10-14
 categories: APSC
 
 author: Muchen He
@@ -15,7 +15,7 @@ Here are some of the statistics I’ve collected for the APSC 160 labs. Because 
 
 This page will be updated for each labs.
 
-
+<!-- excerpt -->
 
 ## Results
 
@@ -25,11 +25,11 @@ This page will be updated for each labs.
 
 **Lab 2**: Lab 2 features if/else branching. The lab section L1K showed that their version is the easiest.
 
-![1570840448406](assets/blog/apsc160/1570840448406.png)
+![1570840448406](/assets/blog/apsc160/1570840448406.png)
 
 **Lab 3**: Lab 3 is a bit harder, it consists of drawing grid of numbers using nested *while* loops.
 
-![1570840588898](assets/blog/apsc160/1570840588898.png)
+![1570840588898](/assets/blog/apsc160/1570840588898.png)
 
 **Lab 4**:
 
@@ -41,7 +41,7 @@ TBD
 
 Since lab 2, I’ve developed a custom program in Python that runs on my phone using *Pythonista* to perform the counting and logging for when a student submits their lab. The app automatically appends log entry to a *.txt* file.
 
-<img src="assets/blog/apsc160/1570813361974.png" alt="1570813361974" style="zoom:25%;" />
+<img src="/assets/blog/apsc160/1570813361974.png" alt="1570813361974" style="zoom:25%;" />
 
 
 
