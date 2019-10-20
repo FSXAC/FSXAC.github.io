@@ -1,7 +1,7 @@
 ---
 categories: APSC 160
 title: Final Review
-date: 2018-03-11
+date: 2019-10-17
 use_math: true
 ---
 
@@ -77,7 +77,7 @@ Some for special ones are:
 
 #### Order of Operation
 
-The order of operation follows standard math (BEDMAS / PEDMAS); the order of operation can be specified using parenthesis `()` just like in Math.
+The order of operation follows standard math (PEDMAS); the order of operation can be specified using parenthesis `()` just like in Math.
 
 #### Integer Division
 
@@ -96,7 +96,7 @@ Put `(double)` in front of an expression or variable to evaluate that expression
 > ```c
 > int x = 5;
 > int y = 7;
-> double z = (double) (5 / 7); // !!! 5/7 is integer division - which happened first
+> double z = (double) (x / 7); // !!! x/7 is integer division - which happened first
 > ```
 >
 > Code version 2 (corrected):
@@ -162,22 +162,24 @@ Use `scanf()` to take user input. The format specifier has the same usage as `pr
 | A and B | A and B both must be true for the outcome to be true | `A && B` |
 | A or B | either A or B can be true for the outcome to be true | `A || B` |
 | not A | A must be false for the outcome to be true | `!A` |
+| A is B | value of A equals to value of B | `A == B` |
+| A is not B | value of A does not equal to value of B | `A != B` |
+| A is less than B | value of A is strictly less than the value of B | `A < B` |
+| A is less than or equal to B | value of A is less than or equal to the value of B | `A <= B` |
 
 ### Branch
 
-To have conditional part of the program execute, we need *branching*. This can be done using `if/else`.
-
-Note that `if`/`else if`/`else` statements only execute the line of code following it unless braces `{}` are in place.
+To have conditional part of the program execute, we need *branching*. This can be done using `if/else if/else`.
 
 > **Example**:
 >
 > ```c
 > if (x > 10) {
->     printf("Yes");
+>      printf("Yes");
 > } else if (x < -10) {
->     printf("No");
+>      printf("No");
 > } else {
->     printf("Meh");
+>      printf("Meh");
 > }
 > ```
 >
@@ -197,8 +199,8 @@ A while loop should be used when we want to loop based on a **condition**.
 >
 > ```c
 > while (x > 5) {
->     // do something here
->     x--;
+>      // do something here
+>      x--;
 > }
 > ```
 >
@@ -214,8 +216,8 @@ This is very similar to the [while loop](#While-Loop) except that it will execut
 >
 > ```c
 > do {
->     // some code
->     x--;
+>      // some code
+>      x--;
 > } (while x > 5)
 > ```
 
@@ -225,18 +227,31 @@ The do-while loop can sometimes come in handy.
 
 #### For Loop
 
-Use this if the number of iteration is known. For-loops are generally useful when dealing with [arrays](#Array).
+Use this if the number of iteration is known. For-loops are generally useful when dealing with [arrays](#Array). To set up a for-loop, we need to specify three things:
+
+1. Initial conditions
+2. Looping conditions
+3. Increment / post
+
+The syntax goes like this (notice the semicolon `;`):
+
+```c
+for (/* initial */; /* loop condition */; /* increment */)
+{
+    /* Code to loop here */
+}
+```
 
 >**Example**:
 >
 >```c
 >int apples = 10;
->for (int i = 0; i < 10; i++) {
->    // do something here
+>for (int i = 0; i < apples; i++) {
+>  // do something here
 >}
 >```
 >
->Note that we don't need to have an explicit increment/decrement commands inside the loop.
+>When we first enter the for-loop, we define a new variable `i` and set it to 0. This variable can only be used inside this for-loop. Next, we check if `i < apples`, like a while-loop, as long as this condition is true, we will keep looping. Lastly, `i++` increments `i` **after** each loop.
 
 ## File IO
 
@@ -298,6 +313,14 @@ Use `fscanf` to read from file. The syntax is the same as `scanf` *except* that 
 > Function `fscanf` returns the number of elements read. If it returns 0 when we expect something, then either the format specifier is wrong, the file has wrong data, or we have reached the end of the file. Hence the `while` loop.
 
 ## Functions
+
+Functions help reduce repetition in code by wrapping a sequence of code. Functions take in parameters from the caller, and output values using return values.
+
+```c
+
+```
+
+
 
 ## Arrays
 
