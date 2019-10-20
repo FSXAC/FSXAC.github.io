@@ -2,7 +2,7 @@
   courses:
   - course_num: 'ELEC 402'
     course_name: 'VLSI'
-    date: 2019-10-06
+    date: 2019-10-19
     entries:
     - title: 'MOS Part 1'
       link: '/documents/ELEC402/mos-1.pdf'
@@ -280,7 +280,7 @@
     course_name: 'Data Structures & Algorithms'
   - course_num: 'APSC 160'
     course_name: 'Computation in Engineering Design'
-    date: 2018-03-11
+    date: 2018-10-19
     entries:
     - title: 'Final Review'
       link: '/documents/APSC160/APSC-160-Final-Review'
