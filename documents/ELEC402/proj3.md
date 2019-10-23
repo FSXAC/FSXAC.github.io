@@ -3,6 +3,7 @@ title: "Project 3 - Assignment"
 date: 2019-10-21
 categories: ELEC 402
 ubc_handin: true
+use_math: true
 ---
 
 - toc
