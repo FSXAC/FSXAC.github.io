@@ -42,11 +42,13 @@ We substitute:
 - V<sub>T</sub> is 0.4 V.
 
 Isolate and solving for W:
+
 $$
 W=\frac{L\times\frac{V_{DD}-V_{OL}}{R_L}}{\left(\frac{\mu_n C_{ox}}{1+\frac{V_{DS}}{E_c L}}\right)\left(V_{GS}-V_T-\frac{V_{DS}}{2}\right)V_{DS}}
 $$
 
 Note that the centimeter (cm) cancels out when we multiply &mu;<sub>n</sub> and C<sub>ox</sub>. So we do the rest of the calculations with &mu;m as the unit for length.
+
 $$
 \begin{aligned}
 W&=\frac{0.1\times\frac{1.2-0.1}{10\times 10^3}}{\left(\frac{270\times 1.6\times 10^{-6}}{1+\frac{0.1}{(0.6)(0.1)}}\right)\left(1.2-0.4-\frac{0.1}{2}\right)0.1}
@@ -56,6 +58,7 @@ W&=\frac{0.1\times\frac{1.2-0.1}{10\times 10^3}}{\left(\frac{270\times 1.6\times
 &=0.396~\mathrm{\mu m}
 \end{aligned}
 $$
+
 The width of the NMOS transistor for the resistive-load inverter is **0.4 &mu;m**.
 
 ### Saturated-Enhancement-Load Inverter
@@ -63,11 +66,13 @@ The width of the NMOS transistor for the resistive-load inverter is **0.4 &mu;m*
 Let’s denote the top transistor as *L* for *load*, and the bottom transistor as *I* for *inverting*. The top NMOS gate voltage is tied with V<sub>DD</sub>, so it is always operating in saturation. The bottom transistor is still operating in linear mode.
 
 Again, we start by equating the current of the top transistor with the bottom transistor: I<sub>DS<sub>L</sub></sub> = I <sub>DS<sub>I</sub></sub>.
+
 $$
 \frac{W_I}{L_I}\cdot \frac{\mu_n C_{ox}}{1+\frac{V_{DS_I}}{E_C L_I}}\cdot\left(V_{GS_I}-V_T-\frac{V_{DS_I}}{2}\right)V_{DS_I}
 =
 W_L v_{sat}C_{ox}\cdot\frac{(V_{GS_L}-V_T)^2}{(V_{GS_L}-V_T)E_CL_L}
 $$
+
 Where we substitute:
 
 - V<sub>GS<sub>I</sub></sub> is just V<sub>in</sub>.
@@ -82,6 +87,7 @@ $$
 
 
 Also note that in order to use v<sub>sat</sub> = 8&times;10<sup>6</sup> cm/s, we need to convert this to &mu;m/s, so we multiply the RHS of the equation by 1&times;10<sup>-4</sup>.
+
 $$
 W_I=\frac{(0.1)(0.1) (8\times 10^6)\cdot\frac{(1.2-0.1-0.4)^2}{(1.2-0.1-0.4)(6)(0.1)}}{\frac{(270) }{1+\frac{0.1}{(6)(0.1)}}\cdot\left(1.2-0.4-\frac{0.1}{2}\right)0.1}\times 10^{-4}\\
 W_I=0.17~\mathrm{\mu m}
@@ -92,6 +98,7 @@ $$
 In this case the gate voltage for the load transistor is 0.4 V higher than V<sub>DD</sub> so the maximum output can be V<sub>DD</sub>. But because the gate voltage is also higher, the top transistor is less-saturated.
 
 Using the exact same equation as above, we use 1.6 - V<sub>out</sub> instead for V<sub>GS<sub>L</sub></sub>. But V<sub>in</sub> (for the bottom NMOS) remains at V<sub>DD</sub> of 1.2 V.
+
 $$
 W_I=\frac{(0.1)(0.1) (8\times 10 ^6)\cdot\frac{(1.6 - 0.1-0.4)^2}{(1.6 - 0.1-0.4)(6)(0.1)}}{\frac{270}{1+\frac{0.1}{(6)(0.1)}}\cdot\left(1.2-0.4-\frac{0.1}{2}\right)0.1}\times 10^{-4}\\
 W_I=0.328~\mathrm{\mu m}
@@ -153,6 +160,44 @@ Running the DC sweep on V<sub>in</sub> from 0V to 1.2V (V<sub>DD</sub>) gets us 
 
 <img src="assets/proj3/1571803424475.png" alt="1571803424475" style="zoom:80%;" />
 
+First model on CAD:
+
+<img src="assets/proj3/q3sch.png" alt="q3sch" style="zoom: 67%;" />
+
+To take multiple samples, I fix V<sub>2</sub> to some value (0V, 0.2V, 0.4V, etc.). And then perform a DC sweep for V<sub>1</sub> from 0 V to 1.2 V. For each trial, V<sub>T</sub> is where the current I<sub>DS</sub> begin to rise: see below sample calculation and plot. I’m using 1 &mu;A as a threshold to determine the V<sub>T</sub>.
+
+![q3plot1](assets/proj3/q3plot1.png)
+
+Here’s a table of data for V<sub>T</sub> using different V<sub>2</sub> values:
+
+| V<sub>2</sub> [V] | V<sub>T</sub> [V] |
+| ----------------- | ----------------- |
+| 0.0               | 0.419             |
+| 0.2               | 0.645             |
+| 0.4               | 0.870             |
+| 0.6               | 1.092             |
+| 0.8               | 1.313             |
+
+Using the data collected above, we can compute for the body-effect coefficient $\gamma$:
+
+$$
+V_T = V_{T_0}+\gamma(\sqrt{V_{SB}+\vert2\phi_F\vert}-\sqrt{\vert2\phi_F\vert})
+$$
+
+Where V<sub>T<sub>0</sub></sub> is 0.4 V, V<sub>SB</sub> is just V<sub>2</sub>, and 2&phi;<sub>F</sub> is 0.88V.
+
+V<sub>T<sub>0</sub></sub> is when the second term is zero. Since $\gamma$ and $2\phi_F$ is non-zero, the only case is when V<sub>SB</sub> is 0. Which gives us **V<sub>T<sub>0</sub></sub>=0.419 V**.
+
+I used *Excel* to compute the other data where V<sub>SB</sub>=V<sub>2</sub> is not zero:
+
+| V<sub>2</sub> [V] | V<sub>T</sub> [V] | Body-Effect Coefficient [V<sup>&frac12;</sup>] $\gamma=\frac{V_T-V_{T_0}}{\sqrt{V_{SB}+\vert 2\phi_F\vert}-\sqrt{\vert 2\phi_F\vert}}$ |
+| ----------------- | ----------------- | ------------------------------------------------------------ |
+| 0.2               | 0.645             | 0.12                                                         |
+| 0.4               | 0.870             | 0.23                                                         |
+| 0.6               | 1.092             | 0.32                                                         |
+| 0.8               | 1.313             | 0.41                                                         |
+
+The **body-efficient coefficient** $\gamma$ varies with the voltage across source and bulk and it ranges between **0.12 and 0.41**.
 
 
 ## 4. MOS Capacitances
@@ -166,20 +211,25 @@ Running the DC sweep on V<sub>in</sub> from 0V to 1.2V (V<sub>DD</sub>) gets us 
 *Compute the worst case gate capacitance per unit width, C<sub>g</sub> in units of fF/&mu;m. Estimate C<sub>GS</sub>, C<sub>GD</sub> and C<sub>GB</sub> in linear, saturation, and cutoff, including overlap effects.*
 
 Let’s first find the oxide capacitance, which is a function of the thickness of the oxide layer.
+
 $$
 C_{ox}=\frac{\epsilon_{ox}}{t_{ox}}
 $$
+
 Where $\epsilon_{ox}$ is the silicon dioxide relative permissibility multiplied by the permissibility of free-space: $3.9\epsilon_0$. And the thickness $t_{ox}$ is  40 angstroms, or 40&times;10<sup>-10</sup> m.
 
 Plugging in the values, we get values $C_{ox}=8.63$ F/&mu;m<sup>2</sup>.
 
 Then the gate capacitance is simply multiplication by the length L:
+
 $$
 C_g=C_{ox}L=(8.63)(0.18)=1.55~\mathrm{fF/\mu m}
 $$
+
 Since the thickness of the gate, T<sub>poly</sub> is not given, we assume that the fringe capacitance is negligible (C<sub>f</sub> = 0).
 
-The overlap capacitance for each overlap is given by the oxide capacitance multiplied by how much is overlapped (lateral diffusion L<sub>D</sub>=22 nm). 
+The overlap capacitance for each overlap is given by the oxide capacitance multiplied by how much is overlapped (lateral diffusion L<sub>D</sub>=22 nm).
+
 $$
 C_{ol}=C_{ox}L_D=(8.63)(0.022)=0.19~\mathrm{fF/\mu m}
 $$
@@ -187,10 +237,13 @@ $$
 ---
 
 The total gate capacitance (which need us to multiply the numbers we got earlier with the width W) is
+
 $$
 C_G=C_g W=(1.55)(0.9)=1.4~\mathrm{fF}
 $$
+
 The total overlap capacitance for each overlap is
+
 $$
 C_{OL}=C_{ol}W=(0.19)(0.9)=0.17~\mathrm{fF}
 $$
@@ -208,6 +261,7 @@ The capacitances broken down into the three parts: gate-source, gate-drain, and 
 ### Junction Capacitance
 
 First, we calculate the voltage asymptote: &phi;<sub>B</sub>.
+
 $$
 \begin{aligned}
 \phi_B&=\frac{kT}{q}\ln\left\vert\frac{N_AN_D}{n_i^2}\right\vert\\
@@ -215,7 +269,9 @@ $$
 &=0.93~\text V
 \end{aligned}
 $$
+
 Next, the zero-bias junction capacitance, where &epsilon;<sub>si</sub> is the pure silicon permissibility at 11.7&epsilon;<sub>0</sub>:
+
 $$
 \begin{aligned}
 C_{j_0}&=\sqrt{\frac{\epsilon_{si} q}{2\phi_B}\cdot\frac{N_AN_B}{N_A+N_B}}\\
@@ -223,7 +279,9 @@ C_{j_0}&=\sqrt{\frac{\epsilon_{si} q}{2\phi_B}\cdot\frac{N_AN_B}{N_A+N_B}}\\
 &=0.517~\mathrm{fF/\mu m^2}
 \end{aligned}
 $$
+
 Lastly, to get C<sub>j</sub>, we multiply the per-area capacitance with the area: which is the bottom plate and the side walls.
+
 $$
 \begin{aligned}
 C_j&=C_{j_0}(Y+2x_j)\\
@@ -235,25 +293,30 @@ $$
 ### Drain Junction Capacitance
 
 To calculate the junction capacitance, the formula is
+
 $$
 C_J=\frac{C_{j}W}{\left(1-\frac{V_J}{\phi_B}\right)^m}
 $$
+
 Where A is the area, V<sub>J</sub> is the voltage across the junction, and m is &frac12;. 
 
 When V<sub>D</sub> is 1.8V the voltage across the junction is the voltage of the bulk subtract the drain voltage:
+
 $$
 V_J = V_B-V_D=-1.8~\mathrm V
 $$
+
 Plugging in, we get
+
 $$
 C_J=\frac{(0.72)(0.9)}{\left(1-\frac{-1.8}{0.93}\right)}=0.222~\mathrm{fF}
 $$
+
 When V<sub>D</sub> is 0, the junction voltage is 0. So junction capacitance is simply
+
 $$
 C_J=C_jW=(0.72)(0.9)=0.651~\mathrm{fF}
 $$
-
-
 
 
 ## 5. NOR Gate
@@ -291,13 +354,17 @@ Now the switching voltage **V<sub>S</sub> = 0.588V** has shifted to the left.
 ### Theory
 
 “How much stronger the NMOS is to the PMOS” can be described by the factor $\chi$:
+
 $$
 \chi=\sqrt{\frac{W_N}{E_{CN}L_{N}}\frac{E_{CP}L_P}{W_P}}
 $$
+
 And the switching voltage is given by:
+
 $$
 V_s=\frac{V_{DD}-\vert V_{TP}\vert + \chi V_{TN}}{1+\chi}
 $$
+
 So let’s find the threshold voltage first. Since the bulk of the PMOS are connected to V<sub>DD</sub> and the bulk of the NMOS are connected to ground, V<sub>SB</sub> = 0 for both, and therefore V<sub>T</sub> is 0.4V.
 
 The two extreme cases are: if only one input is switching, and if all inputs are tied as one. Any behavior of the gate (in terms of the VTC) is bracketed between these two cases.
@@ -315,10 +382,12 @@ The resulting (simplified) circuit is a single-input inverter:
 Compared to a standard inverter where the PMOS is suppose to have the double the width that of NMOS, we have 4 times the width. Meaning that the pull-up PMOS is much “stronger”. In other words, $\chi$ is smaller. Thus, we expect the VTC to shift to the right &rarr;.
 
 Switching voltage:
+
 $$
 \chi=\sqrt{\frac{W}{6}\frac{24}{4W}}=1\\
 V_s=\frac{(1.2)-\vert -0.4\vert + (1)(0.4)}{1+1}=\frac{1.2}{2}=0.6~\text V
 $$
+
 **Case 2: all inputs tied:**
 
 Shorting all the inputs together and using the same simplification used for case 1, we get the following equivalent single-input inverter (adding resistances: 4W and 4W in series makes 2W; W and W in parallel makes 2W):
@@ -328,6 +397,7 @@ Shorting all the inputs together and using the same simplification used for case
 Now compared to the standard inverter, NMOS is now much stronger than PMOS (since it should’ve been half the size).  So $\chi$ is larger, and we expect the VTC to shift to the left.
 
 Switching voltage:
+
 $$
 \chi=\sqrt{\frac{2W}{6}\frac{24}{2W}}=\sqrt{4}=2\\
 V_s=\frac{(1.2)-\vert -0.4\vert + (2)(0.4)}{1+2}=\frac{1.6}{3}=0.53~\text V
@@ -360,6 +430,7 @@ Where the slope equals to -1 is where input voltage is 0.257V and 0.733V for low
 Next, by inspecting from the graph, the output low and high voltage are: **V<sub>OL</sub> = 0.044V** and **V<sub>OH</sub> = 1.023V**.
 
 Finally, we have all the values to compute the noise margin:
+
 $$
 NM_L=V_{IL}-V_{OL}=0.257-0.044=0.213~\text V\\
 NM_H=V_{OH}-V_{IH}=1.023-0.732=0.290~\text V
