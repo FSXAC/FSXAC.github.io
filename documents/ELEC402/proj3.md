@@ -12,7 +12,7 @@ ubc_handin: true
 
 *In the circuit of Figure below, design the widths of the pull-down transistors so that V<sub>OL</sub>=0.1 V. (All transistors are minimum size, L = 0.1 &mu;m. Explain the results.*
 
-![1571682132908](assets/1571682132908.png)
+![1571682132908](assets/proj3/1571682132908.png)
 
 Since the diagrams don’t show how the transistor bulk are connected/biased, we can assume that there is no body-bias; and V<sub>T</sub> = V<sub>T0</sub> = 0.4 V.
 
@@ -101,7 +101,7 @@ $$
 
 The resistive-load inverter is able to have a output voltage all the way up to V<sub>DD</sub> which is good. But the resistor is cumbersome in digital design, and often means slower and bigger circuit. The size of the transistor thus is also relatively large at **0.4 &mu;m**.
 
-Usin	g the saturated-enhancement-load inverter, we no longer need the resistor. However, the maximum output voltage (high) is limited to V<sub>DD</sub> - V<sub>T</sub>. The trade-off is compensated with the small transistor size: at only **0.2 &mu;m**.
+Using the saturated-enhancement-load inverter, we no longer need the resistor. However, the maximum output voltage (high) is limited to V<sub>DD</sub> - V<sub>T</sub>. The trade-off is compensated with the small transistor size: at only **0.2 &mu;m**.
 
 Lastly, we bias the gate voltage of the load NMOS exactly V<sub>T</sub> higher to obtain a maximum high output voltage of V<sub>DD</sub>. But the result is we use a substantially larger transistor: at **0.3 &mu;m**.
 
@@ -109,9 +109,11 @@ Lastly, we bias the gate voltage of the load NMOS exactly V<sub>T</sub> higher t
 
 ## 2. Buffer
 
-<img src="assets/1571695910245.png" alt="1571695910245" style="zoom:80%;" />
+<img src="assets/proj3/1571695910245.png" alt="1571695910245" style="zoom:80%;" />
 
-The design presented in the diagram is a **buffer** or voltage follower or something like the *redstone repeater* from *Minecraft*. Because the PMOS is the pull-down device, V<sub>OL</sub> is at least V<sub>T<sub>P</sub></sub>, the threshold voltage from the PMOS. Similarly, because the NMOS is used as a pull-up device, V<sub>OH</sub> is at most V<sub>DD</sub> - V<sub>T<sub>N</sub></sub>.
+The design presented in the diagram is a **buffer** or voltage follower or something like the *Redstone repeater* from *Minecraft*. 
+
+Output swing: because the PMOS is the pull-down device, V<sub>OL</sub> is at least V<sub>T<sub>P</sub></sub>, the threshold voltage from the PMOS. Similarly, because the NMOS is used as a pull-up device, V<sub>OH</sub> is at most V<sub>DD</sub> - V<sub>T<sub>N</sub></sub>.
 
 ### DC Voltage Transfer Characteristics
 
@@ -122,13 +124,34 @@ The design presented in the diagram is a **buffer** or voltage follower or somet
 
 Notice that positive edge characteristics is different from negative edge, therefore we have hysteresis. It looks like this:
 
-<img src="assets/1571697473988.png" alt="1571697473988" style="zoom:67%;" />
+<img src="assets/proj3/1571697473988.png" alt="1571697473988" style="zoom:67%;" />
 
 ### Gain
 
+Theoretically, the gain should be close to 1 as output voltage follows input voltage. However, this is not a valid gate because it fails the following requirements:
+
+- :x: High gain region is not between low gain regions.
+- :x: Gain is higher than 1 for high gain region.
+- :x: Low output is not below V<sub>IL</sub>.
+- :x: High output is not above V<sub>IL</sub>.
+
+In additional to lack of noise-rejection, this design also lack regenerative properties.
+
 ### CAD
 
+Below is the schematic. Since the bulk connection is not specified from the diagram. The bulk of the NMOS is connected to ground, and the bulk of the PMOS is connected to V<sub>DD</sub>.
+
+![q2sch](assets/proj3/q2sch.png)
+
+Running the DC sweep on V<sub>in</sub> from 0V to 1.2V (V<sub>DD</sub>) gets us the follow VTC plot. I also took the derivative of the green curve (VTC curve) so we can see that there exists hysteresis more clearly. The plot is a bit different from what I expected.
+
+![q2plot](assets/proj3/q2plot.png)
+
+
+
 ## 3. Body Effect Factor
+
+<img src="assets/proj3/1571803424475.png" alt="1571803424475" style="zoom:80%;" />
 
 
 
@@ -136,7 +159,7 @@ Notice that positive edge characteristics is different from negative edge, there
 
 *Consider the layout in the figure below implemented in a 180nm technology. Assume that the transistor has W=900nm, L=180m, and a source/drain dimension Y=800nm and a lateral diffusion of 22nm. Let tox = 40 Å.*
 
-<img src="assets/1571697975914.png" alt="1571697975914" style="zoom:67%;" />
+<img src="assets/proj3/1571697975914.png" alt="1571697975914" style="zoom:67%;" />
 
 ### Gate and Overlap Capacitances
 
@@ -235,6 +258,109 @@ $$
 
 ## 5. NOR Gate
 
+*Calculate Vs of 2-input NOR gates when one input is switching and with both inputs tied together. The device sizes are W<sub>P</sub> = 24λ and W<sub>N</sub> = 6λ. Use Cadence to find results when switching only input A, AB together. Results for two inputs switched separately vary slightly. Explain the discrepancy between theory and simulation.*
 
+First, I modelled the NOR gate in CAD. Note that I left the width property of the PMOS and NMOS as variable `WP` and `WN`. Here, we are using &lambda; = 100nm.
+
+<img src="assets/proj3/q5nor.png" alt="q5nor" style="zoom:67%;" />
+
+### Only Switching Input A
+
+Next, I created the test-bench for just switching input A:
+
+<img src="assets/proj3/q5nor_tb.png" alt="q5nor_tb" style="zoom: 50%;" />
+
+I setup the DC sweep analysis for *Vin* from 0V to 1.2V (V<sub>DD</sub>). Here is the voltage transfer characteristics (VTC):
+
+![q5plot_a](assets/proj3/q5plot_a.png)
+
+The switching voltage **V<sub>S</sub> = 0.642V**.
+
+### Tied Inputs A  & B
+
+Now I modify the test-bench such that the input A and B are tied up together:
+
+<img src="assets/proj3/q5nor_tb_2.png" alt="q5nor_tb_2" style="zoom:75%;" />
+
+And here is the corresponding VTC plot:
+
+![q5plot_ab](assets/proj3/q5plot_ab.png)
+
+Now the switching voltage **V<sub>S</sub> = 0.588V** has shifted to the left.
+
+### Theory
+
+“How much stronger the NMOS is to the PMOS” can be described by the factor $\chi$:
+$$
+\chi=\sqrt{\frac{W_N}{E_{CN}L_{N}}\frac{E_{CP}L_P}{W_P}}
+$$
+And the switching voltage is given by:
+$$
+V_s=\frac{V_{DD}-\vert V_{TP}\vert + \chi V_{TN}}{1+\chi}
+$$
+So let’s find the threshold voltage first. Since the bulk of the PMOS are connected to V<sub>DD</sub> and the bulk of the NMOS are connected to ground, V<sub>SB</sub> = 0 for both, and therefore V<sub>T</sub> is 0.4V.
+
+The two extreme cases are: if only one input is switching, and if all inputs are tied as one. Any behavior of the gate (in terms of the VTC) is bracketed between these two cases.
+
+**Case 1: only A is switching**:
+
+As per standard CMOS design, for a NOR gate, the PMOS would be 4 times larger than the NMOS. However, because the MOS connected to B never switches and is grounded — the B-PMOS is a short, and B-NMOS is an open circuit.
+
+The resulting (simplified) circuit is a single-input inverter:
+
+<img src="assets/proj3/1571801549965.png" alt="1571801549965" style="zoom: 67%;" />
+
+> Note that in the diagram, I used “W” to show relative size of the NMOS and PMOS. To fit the problem description, W is equivalent to 6&lambda;.
+
+Compared to a standard inverter where the PMOS is suppose to have the double the width that of NMOS, we have 4 times the width. Meaning that the pull-up PMOS is much “stronger”. In other words, $\chi$ is smaller. Thus, we expect the VTC to shift to the right &rarr;.
+
+Switching voltage:
+$$
+\chi=\sqrt{\frac{W}{6}\frac{24}{4W}}=1\\
+V_s=\frac{(1.2)-\vert -0.4\vert + (1)(0.4)}{1+1}=\frac{1.2}{2}=0.6~\text V
+$$
+**Case 2: all inputs tied:**
+
+Shorting all the inputs together and using the same simplification used for case 1, we get the following equivalent single-input inverter (adding resistances: 4W and 4W in series makes 2W; W and W in parallel makes 2W):
+
+<img src="assets/proj3/1571801817433.png" alt="1571801817433" style="zoom:67%;" />
+
+Now compared to the standard inverter, NMOS is now much stronger than PMOS (since it should’ve been half the size).  So $\chi$ is larger, and we expect the VTC to shift to the left.
+
+Switching voltage:
+$$
+\chi=\sqrt{\frac{2W}{6}\frac{24}{2W}}=\sqrt{4}=2\\
+V_s=\frac{(1.2)-\vert -0.4\vert + (2)(0.4)}{1+2}=\frac{1.6}{3}=0.53~\text V
+$$
+
+### Discrepancy
+
+The calculated switching voltages are smaller compared to the voltage measured from the simulation. I suspect it’s because there exists unaccounted body-effect. This could change the threshold voltage V<sub>T</sub> and thus change the switching voltage V<sub>s</sub>. V<sub>T</sub> of 0.56 V would gives us closer number to the one obtained from simulation.
 
 ## 6. Inverter Noise Margin
+
+*Using the following schematic and Cadence simulations find NM<sub>H</sub> and NM<sub>L</sub>*.
+
+<img src="assets/proj3/1571786768287.png" alt="1571786768287" style="zoom:67%;" />
+
+**Note:** for this problem, because the CAD library doesn’t allow sizes less than 120nm, we will use L=100nm for both NMOS, W=120nm for top NMOS, and W=1 &mu;m for bottom NMOS.
+
+Here is the schematic of the the saturated-enhanced inverter cell view:
+
+<img src="assets/proj3/q6schematic.png" alt="q6schematic" style="zoom:67%;" />
+
+Here is the VTC plot of this circuit, DC sweeping the signal `INPUT` from 0.0V to V<sub>DD</sub> (1.2V). The green curve is the `OUTPUT` signal.
+
+![q6plot](assets/proj3/q6plot.png)
+
+To find the noise margin, we must first find V<sub>IL</sub>, and V<sub>HH</sub> which corresponds to the positions on the green curve where the slope is -1. We can find the slope by taking the derivative of the graph (in blue).
+
+Where the slope equals to -1 is where input voltage is 0.257V and 0.733V for low and high, respectively. Thus, **V<sub>IL</sub> = 0.257V** and **V<sub>IH</sub> = 0.732V**.
+
+Next, by inspecting from the graph, the output low and high voltage are: **V<sub>OL</sub> = 0.044V** and **V<sub>OH</sub> = 1.023V**.
+
+Finally, we have all the values to compute the noise margin:
+$$
+NM_L=V_{IL}-V_{OL}=0.257-0.044=0.213~\text V\\
+NM_H=V_{OH}-V_{IH}=1.023-0.732=0.290~\text V
+$$
