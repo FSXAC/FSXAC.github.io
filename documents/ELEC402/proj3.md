@@ -188,14 +188,18 @@ Where V<sub>T<sub>0</sub></sub> is 0.4 V, V<sub>SB</sub> is just V<sub>2</sub>, 
 
 V<sub>T<sub>0</sub></sub> is when the second term is zero. Since $\gamma$ and $2\phi_F$ is non-zero, the only case is when V<sub>SB</sub> is 0. Which gives us **V<sub>T<sub>0</sub></sub>=0.419 V**.
 
-I used *Excel* to compute the other data where V<sub>SB</sub>=V<sub>2</sub> is not zero:
+I used *Excel* to compute the other data where V<sub>SB</sub>=V<sub>2</sub> is not zero and using the formula:
 
-| V<sub>2</sub> [V] | V<sub>T</sub> [V] | Body-Effect Coefficient [V<sup>&frac12;</sup>] $\gamma=\frac{V_T-V_{T_0}}{\sqrt{V_{SB}+\vert 2\phi_F\vert}-\sqrt{\vert 2\phi_F\vert}}$ |
-| ----------------- | ----------------- | ------------------------------------------------------------ |
-| 0.2               | 0.645             | 0.12                                                         |
-| 0.4               | 0.870             | 0.23                                                         |
-| 0.6               | 1.092             | 0.32                                                         |
-| 0.8               | 1.313             | 0.41                                                         |
+$$
+\gamma=\frac{V_T-V_{T_0}}{\sqrt{V_{SB}+\vert 2\phi_F\vert}-\sqrt{\vert 2\phi_F\vert}}
+$$
+
+| V<sub>2</sub> [V] | V<sub>T</sub> [V] | Body-Effect Coefficient [V<sup>&frac12;</sup>] |
+| ----------------- | ----------------- | ---------------------------------------------- |
+| 0.2               | 0.645             | 0.12                                           |
+| 0.4               | 0.870             | 0.23                                           |
+| 0.6               | 1.092             | 0.32                                           |
+| 0.8               | 1.313             | 0.41                                           |
 
 The **body-efficient coefficient** $\gamma$ varies with the voltage across source and bulk and it ranges between **0.12 and 0.41**.
 
