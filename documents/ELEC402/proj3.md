@@ -82,6 +82,7 @@ Where we substitute:
 - V<sub>GS<sub>L</sub></sub> is V<sub>DD</sub> - V<sub>out</sub>.
 
 Isolate for W<sub>I</sub>:
+
 $$
 W_I=\frac{L_IW_L v_{sat}C_{ox}\cdot\frac{(V_{GS_L}-V_T)^2}{(V_{GS_L}-V_T)E_CL_L}}{\frac{\mu_n C_{ox}}{1+\frac{V_{DS_I}}{E_C L_I}}\cdot\left(V_{GS_I}-V_T-\frac{V_{DS_I}}{2}\right)V_{DS_I}}\times 10^{-4}
 $$
@@ -257,11 +258,11 @@ $$
 
 The capacitances broken down into the three parts: gate-source, gate-drain, and gate-bulk is as follows:
 
-|                    |         Cutoff | [fF] |                           Saturation | [fF] |                               Linear | [fF] |
-| ------------------ | -------------: | ---- | -----------------------------------: | ---- | -----------------------------------: | ---- |
-| **V<sub>GS</sub>** | C<sub>OL</sub> | 0.17 | &frac23;C<sub>G</sub>+C<sub>OL</sub> | 1.10 | &frac12;C<sub>G</sub>+C<sub>OL</sub> | 0.87 |
-| **V<sub>GD</sub>** | C<sub>OL</sub> | 0.17 |                       C<sub>OL</sub> | 0.17 | &frac12;C<sub>G</sub>+C<sub>OL</sub> | 0.87 |
-| **V<sub>GB</sub>** |  C<sub>G</sub> | 1.40 |                                    - | 0.00 |                                    - | 0.00 |
+|                    |         Cutoff | [fF] |                    Saturation | [fF] |                               Linear | [fF] |
+| ------------------ | -------------: | ---- | ----------------------------: | ---- | -----------------------------------: | ---- |
+| **V<sub>GS</sub>** | C<sub>OL</sub> | 0.17 | ⅔C<sub>G</sub>+C<sub>OL</sub> | 1.10 | &frac12;C<sub>G</sub>+C<sub>OL</sub> | 0.87 |
+| **V<sub>GD</sub>** | C<sub>OL</sub> | 0.17 |                C<sub>OL</sub> | 0.17 | &frac12;C<sub>G</sub>+C<sub>OL</sub> | 0.87 |
+| **V<sub>GB</sub>** |  C<sub>G</sub> | 1.40 |                             - | 0.00 |                                    - | 0.00 |
 
 ### Junction Capacitance
 
