@@ -12,31 +12,32 @@
   - "Python"
   - "NCurses"
   - "C/C++"
+  - "C#"
   - Jekyll/Liquid
   - "SystemVerilog"
-  - "LaTeX"
   - "JavaScript"
+  - "LaTeX"
   - "HTML/CSS"
   - "MATLAB"
-  - "GLSL"
-  - "Processing"
-  - "Java"
+  - "Shader"
+  - "Java/Processing"
   - "8051 Assembly"
 - verb: Build
   skills:
   - "3D Printer"
-  - "CNC Machine"
+  - "CNC Mill"
   - "Soldering Iron/SMT"
   - "Probe/Oscilloscope"
 - verb: Utilize
   skills:
-  - "git/Perforce"
-  - Continous integration
+  - "Git/Perforce"
+  - "TeamCity CI"
+  - "Autodesk CAD Suite"
   - "Quartus/ModelSim"
-  - "Autodesk Suite"
+  - "Cadence CAD/Simulation"
   - "Solidworks"
-  - "SimuLink"
   - "Adobe Suite"
+  - "SimuLink"
 - verb: Create
   skills:
   - "Technical documentation"
