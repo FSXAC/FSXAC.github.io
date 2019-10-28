@@ -9,24 +9,28 @@
 # 4 - C++
 
 - theme: 0
+  name: formal
   skills: 'Skills'
   exp: 'Experience'
   proj: 'Projects'
   likes: 'Hobbies & Activities'
   rand: 
 - theme: 1
+  name: experimental
   skills: 'I Can'
   exp: 'I Was'
   proj: 'I Made'
   likes: 'I Like'
   rand: 'I would like a job please.'
 - theme: 2
+  name: gamer
   skills: Abilities
   exp: EXP
   proj: Inventory
   likes: Buffs
   rand: 
 - theme: 3
+  name: python
   skills: '<span style="font-family: monospace">def getSkills():</span>'
   exp: '<span style="font-family: monospace">def getExperience():</span>'
   proj: '<span style="font-family: monospace">def getProjects():</span>'
@@ -35,12 +39,14 @@
 
 # Not very good
 - theme: 4
+  name: c++
   skills: '<span style="font-family: monospace">char* get_skills() {</span>'
   exp: '<span style="font-family: monospace">};<br/>char* get_experience() {</span>'
   proj: '<span style="font-family: monospace">};<br/>char* get_projects() {</span>'
   likes: '<span style="font-family: monospace">};<br/>char* get_hobbies() {</span>'
   rand: '<span style="font-family: monospace">};</span>'
 - theme: 5
+  name: 'comments'
   skills: '<span style="font-family: monospace">/* skills */</span>'
   exp: '<span style="font-family: monospace">/* experience */</span>'
   proj: '<span style="font-family: monospace">/* projects */</span>'
@@ -49,6 +55,7 @@
 
 # Meh
 - theme: 6
+  name: 'javascript'
   skills: '<span style="font-family: monospace">var skills = {</span>'
   exp: '<span style="font-family: monospace">};<br/>var experiences = {</span>'
   proj: '<span style="font-family: monospace">};<br/>var projs = {</span>'

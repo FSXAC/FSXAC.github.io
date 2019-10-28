@@ -1,10 +1,22 @@
 ---
 author: Muchen He
+
+title: Resume
+permalink: /resume
+
 layout: default
 nav_active: /resume
 header:
   color: '#123'
   gradient: 'linear-gradient(105deg, rgba(17,34,51,1) 0%, rgba(12,57,105,1) 100%);'
+  text:
+  - '<a href="/resume/customize" class="btn btn-outline-light">Customize</a>'
+
+heading_theme_index: 0
+heading_uppercase: true
+projs_display_tech_used: false
+experience_max_display: 4
+proj_max_display: 8
 ---
 
 <style>
@@ -45,12 +57,18 @@ ul { list-style-type: square; }
 	<div class="thickside">
 		<table>
 			<tbody>
-				{% for verb in site.data.resume.skills %}
-				<td class="thinline">
-					<h3>{{ verb.verb | capitalize }}</h3>
-					<p>{{ verb.skills | join: ', ' }}</p>
-				</td>
-				{% endfor %}
+				<tr>
+					{% for verb in site.data.resume.skills %}
+					<td><h3>{{ verb.verb | capitalize }}</h3></td>
+					{% endfor %}
+				</tr>
+				<tr>
+					{% for verb in site.data.resume.skills %}
+					<td class="thinline">
+						<p>{{ verb.skills | join: ', ' }}</p>
+					</td>
+					{% endfor %}
+				</tr>
 			</tbody>
 		</table>
 	</div>
