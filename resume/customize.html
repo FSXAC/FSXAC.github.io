@@ -10,7 +10,7 @@ header:
   color: '#123'
   gradient: 'linear-gradient(105deg, rgba(17,34,51,1) 0%, rgba(125,57,85,1) 100%);'
   text:
-  - 'Use this page to customize the resume'
+  - 'Use this page to customize the resume <span class="badge badge-secondary">Beta</span>'
   - '<div class="btn-group mt-3" role="group" aria-label="..."><button id="settingsBtn" type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#resume-settings-modal">Settings</button><button id="resume-print-btn" type="button" class="btn btn-outline-success">Build and Print</button></div>'
 ---
 
@@ -221,13 +221,16 @@ ul { list-style-type: square; }
 
 <!-- Wrapper placeholder -->
 <div id="preview-wrapper-ph" class="text-center">
-    <h3 class="display-4 my-5">Click on "Settings" to begin</h3>
+    <p class="lead my-5">Click on "Settings" to begin</p>
 </div>
 
 
 <script>
 $(document).ready(()=> {
     $('#resume-settings-save-btn').on('click', updateResumeSettings);
+    $('#resume-print-btn').on('click', ()=>{
+        window.print();
+    });
 });
 
 function updateResumeSettings() {
