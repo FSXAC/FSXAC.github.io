@@ -12,7 +12,7 @@
   - "Composed release notes and technical documentation/specs"
   - "Provided technical support for clients who used the software I developed"
   tech:
-  - tcsh + bash
+  - Linux
   - Python
   - TeamCity CI
 - company: "Electronic Arts - BioWare"

@@ -29,10 +29,10 @@ ul { list-style-type: square; }
 .thinline { line-height: 1.2; }
 .thinline p { margin-top: 0; margin-bottom: 0; }
 .proj-dates.dark { 
-    background: #111;
-    color: white;
-    padding: 0 .5em;
-    border-radius: 5px;
+	background: #111;
+	color: white;
+	padding: 0 .5em;
+	border-radius: 5px;
 }
 
 #resume-settings-modal form p, #resume-settings-modal form p label { margin-top: 0; margin-bottom: 0; }
@@ -43,56 +43,61 @@ ul { list-style-type: square; }
 </style>
 
 <div class="modal fade" id="resume-settings-modal" tabindex="-1" role="dialog" aria-labelledby="settingsModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Resume Settings</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="modal-body">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2>Resume Settings</h2>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
 
-                <h3>Header</h3>
-                <form>
-                    <p><label><input type="checkbox" id="header-name-uppercase-select" checked="checked">&nbsp;Name uppercase</label></p>
-                    <p><label><input type="checkbox" id="header-show-phone-select" checked="checked">&nbsp;Show phone number</label></p>
-                    <p><label><input type="checkbox" id="header-alt-gpa-format-select">&nbsp;Show GPA in x.xx format</label></p>
-                    <p><label><input type="checkbox" id="header-show-grad-year-select" checked="checked">&nbsp;Show graduating year</label></p>
-                </form>
-                <hr>
+				<h3>Header</h3>
+				<form>
+					<p><label><input type="checkbox" id="header-name-uppercase-select" checked="checked">&nbsp;Name uppercase</label></p>
+					<p><label><input type="checkbox" id="header-show-phone-select" checked="checked">&nbsp;Show phone number</label></p>
+					<p><label><input type="checkbox" id="header-alt-gpa-format-select">&nbsp;Show GPA in x.xx format</label></p>
+					<p><label><input type="checkbox" id="header-show-grad-year-select" checked="checked">&nbsp;Show graduating year</label></p>
+				</form>
+				<hr>
 
-                <h3>Layout</h3>
-                <form>
-                    <p>
-                        Heading text style:
-                        <select id="heading-text-style-select" name="heading-text-style">
-                            {% assign i = 0 %}
-                            {% for skills_header in site.data.resume.header_titles %}
-                            <option value="heading-style-{{ i }}">{{ i }} - {{ skills_header.name }}</option>
-                            {% assign i = i | plus: 1 %}
-                            {% endfor %}
-                        </select>
-                    </p>
-                    <p><label><input type="checkbox" id="header-text-uppercase-select" checked="checked">&nbsp;Heading text uppercase</label></p>
-                </form>
+				<h3>Layout</h3>
+				<form>
+					<p>
+						Heading text style:
+						<select id="heading-text-style-select" name="heading-text-style">
+							{% assign i = 0 %}
+							{% for skills_header in site.data.resume.header_titles %}
+							<option value="heading-style-{{ i }}">{{ i }} - {{ skills_header.name }}</option>
+							{% assign i = i | plus: 1 %}
+							{% endfor %}
+						</select>
+					</p>
+					<p><label><input type="checkbox" id="header-text-uppercase-select" checked="checked">&nbsp;Heading text uppercase</label></p>
+				</form>
 
-                <hr>
-                <h3>Printing</h3>
-                <form>
-                    Font size: 
-                    <select id="printFontSizeSelect" name="fontSize">
-                        <option value="default">Default</option>
-                        <option value="default+">Default+</option>
-                        <option value="medium">Medium</option>
-                        <option value="large">Large</option>
-                    </select>
-                </form>
-            </div>
+				<h3>Content</h3>
+				<form>
+					<p><label><input type="checkbox" id="content-show-likes-select" checked="checked">&nbsp;Show likes/hobbies</label></p>
+				</form>
 
-            <div class="modal-footer">
-                <button id="resume-settings-save-btn" type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
-            </div>
-        </div>
-    </div>
+				<hr>
+				<h3>Printing</h3>
+				<form>
+					Font size: 
+					<select id="printFontSizeSelect" name="fontSize">
+						<option value="default">Default</option>
+						<option value="default+">Default+</option>
+						<option value="medium">Medium</option>
+						<option value="large">Large</option>
+					</select>
+				</form>
+			</div>
+
+			<div class="modal-footer">
+				<button id="resume-settings-save-btn" type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+			</div>
+		</div>
+	</div>
 </div>
 
 <!-- wrapper div for controlling visibility -->
@@ -110,40 +115,40 @@ ul { list-style-type: square; }
 </div>
 
 <div id='resume-skills'>
-    <h2>
-        {% assign i = 0 %}
-        {% for skills_header in site.data.resume.header_titles %}
-        <span class="heading-text-multistyle heading-style-{{ i }}">{{ site.data.resume.header_titles[i].skills }}</span>
-        {% assign i = i | plus: 1 %}
-        {% endfor %}
-    </h2>
-    <div class="thickside">
-        <table>
-            <tbody>
-                <tr>
-                    {% for verb in site.data.resume.skills %}
-                    <td><h3>{{ verb.verb | capitalize }}</h3></td>
-                    {% endfor %}
-                </tr>
-                <tr>
-                    {% for verb in site.data.resume.skills %}
-                    <td class="thinline">
-                        <p>{{ verb.skills | join: ', ' }}</p>
-                    </td>
-                    {% endfor %}
-                </tr>
-            </tbody>
-        </table>
-    </div>
+	<h2>
+		{% assign i = 0 %}
+		{% for skills_header in site.data.resume.header_titles %}
+		<span class="heading-text-multistyle heading-style-{{ i }}">{{ site.data.resume.header_titles[i].skills }}</span>
+		{% assign i = i | plus: 1 %}
+		{% endfor %}
+	</h2>
+	<div class="thickside">
+		<table>
+			<tbody>
+				<tr>
+					{% for verb in site.data.resume.skills %}
+					<td><h3>{{ verb.verb | capitalize }}</h3></td>
+					{% endfor %}
+				</tr>
+				<tr>
+					{% for verb in site.data.resume.skills %}
+					<td class="thinline">
+						<p>{{ verb.skills | join: ', ' }}</p>
+					</td>
+					{% endfor %}
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </div>    
 
 <div id="resume-experience">
 	<h2>
-        {% assign i = 0 %}
-        {% for skills_header in site.data.resume.header_titles %}
-        <span class="heading-text-multistyle heading-style-{{ i }}">{{ site.data.resume.header_titles[i].exp }}</span>
-        {% assign i = i | plus: 1 %}
-        {% endfor %}
+		{% assign i = 0 %}
+		{% for skills_header in site.data.resume.header_titles %}
+		<span class="heading-text-multistyle heading-style-{{ i }}">{{ site.data.resume.header_titles[i].exp }}</span>
+		{% assign i = i | plus: 1 %}
+		{% endfor %}
 	</h2>
 	<div class="thickside">
 		{% assign i = 0 %}
@@ -168,11 +173,11 @@ ul { list-style-type: square; }
 
 <div id="resume-projects">
 	<h2>
-        {% assign i = 0 %}
-        {% for skills_header in site.data.resume.header_titles %}
-        <span class="heading-text-multistyle heading-style-{{ i }}">{{ site.data.resume.header_titles[i].proj }}</span>
-        {% assign i = i | plus: 1 %}
-        {% endfor %}
+		{% assign i = 0 %}
+		{% for skills_header in site.data.resume.header_titles %}
+		<span class="heading-text-multistyle heading-style-{{ i }}">{{ site.data.resume.header_titles[i].proj }}</span>
+		{% assign i = i | plus: 1 %}
+		{% endfor %}
 	</h2>
 	<div class="row thickside">
 		{% assign i = 0 %}
@@ -193,11 +198,11 @@ ul { list-style-type: square; }
 
 <div id="resume-hobbies">
 	<h2>
-	    {% assign i = 0 %}
-        {% for skills_header in site.data.resume.header_titles %}
-        <span class="heading-text-multistyle heading-style-{{ i }}">{{ site.data.resume.header_titles[i].likes }}</span>
-        {% assign i = i | plus: 1 %}
-        {% endfor %}
+		{% assign i = 0 %}
+		{% for skills_header in site.data.resume.header_titles %}
+		<span class="heading-text-multistyle heading-style-{{ i }}">{{ site.data.resume.header_titles[i].likes }}</span>
+		{% assign i = i | plus: 1 %}
+		{% endfor %}
 	</h2>
 	<div class="thickside">
 		<div class="thinline">
@@ -208,71 +213,81 @@ ul { list-style-type: square; }
 
 
 <h2>
-    {% assign i = 0 %}
-    {% for skills_header in site.data.resume.header_titles %}
-        {% if site.data.resume.header_titles[i].rand %}
-            <span class="heading-text-multistyle heading-style-{{ i }}">{{ site.data.resume.header_titles[i].rand }}</span>
-        {% endif %}
-    {% assign i = i | plus: 1 %}
-    {% endfor %}
+	{% assign i = 0 %}
+	{% for skills_header in site.data.resume.header_titles %}
+		{% if site.data.resume.header_titles[i].rand %}
+			<span class="heading-text-multistyle heading-style-{{ i }}">{{ site.data.resume.header_titles[i].rand }}</span>
+		{% endif %}
+	{% assign i = i | plus: 1 %}
+	{% endfor %}
 </h2>
 
 </div>
 
 <!-- Wrapper placeholder -->
 <div id="preview-wrapper-ph" class="text-center">
-    <p class="lead my-5">Click on "Settings" to begin</p>
+	<p class="lead my-5">Click on "Settings" to begin</p>
 </div>
 
 
 <script>
 $(document).ready(()=> {
-    $('#resume-settings-save-btn').on('click', updateResumeSettings);
-    $('#resume-print-btn').on('click', ()=>{
-        window.print();
-    });
+	$('#resume-settings-save-btn').on('click', updateResumeSettings);
+	$('#resume-print-btn').on('click', ()=>{
+		window.print();
+	});
 });
 
 function updateResumeSettings() {
-    
-    // Obtain header settings
-    const IS_NAME_UPPERCASE = $('#header-name-uppercase-select').prop('checked');
-    const IS_VISIBLE_PHONE = $('#header-show-phone-select').prop('checked');
-    const IS_ALTERNATE_GPA = $('#header-alt-gpa-format-select').prop('checked');
-    const IS_VISIBLE_GRAD_YEAR = $('#header-show-grad-year-select').prop('checked');
-    
-    // Apply header settings
-    $('#data-fullname').css('text-transform', IS_NAME_UPPERCASE ? 'uppercase' : '');
-    if (IS_VISIBLE_PHONE) {
-        $('#data-phone').show()
-    } else {
-        $('#data-phone').hide();
-    }
-    if (IS_ALTERNATE_GPA) {
-        $('#data-gpa-alt').show();
-        $('#data-gpa').hide();
-    } else {
-        $('#data-gpa-alt').hide();
-        $('#data-gpa').show();
-    }
-    if (IS_VISIBLE_GRAD_YEAR) {
-        $('#data-grad').show()
-    } else {
-        $('#data-grad').hide();
-    }
-    
-    // Obtain layout information
-    const HEADING_TEXT_STYLE = $('#heading-text-style-select option:selected').val();
-    const IS_HEADING_UPPERCASE = $('#header-text-uppercase-select').prop('checked');
+	
+	// Obtain header settings
+	const IS_NAME_UPPERCASE = $('#header-name-uppercase-select').prop('checked');
+	const IS_VISIBLE_PHONE = $('#header-show-phone-select').prop('checked');
+	const IS_ALTERNATE_GPA = $('#header-alt-gpa-format-select').prop('checked');
+	const IS_VISIBLE_GRAD_YEAR = $('#header-show-grad-year-select').prop('checked');
+	
+	// Apply header settings
+	$('#data-fullname').css('text-transform', IS_NAME_UPPERCASE ? 'uppercase' : '');
+	if (IS_VISIBLE_PHONE) {
+		$('#data-phone').show()
+	} else {
+		$('#data-phone').hide();
+	}
+	if (IS_ALTERNATE_GPA) {
+		$('#data-gpa-alt').show();
+		$('#data-gpa').hide();
+	} else {
+		$('#data-gpa-alt').hide();
+		$('#data-gpa').show();
+	}
+	if (IS_VISIBLE_GRAD_YEAR) {
+		$('#data-grad').show()
+	} else {
+		$('#data-grad').hide();
+	}
+	
+	// Obtain layout information
+	const HEADING_TEXT_STYLE = $('#heading-text-style-select option:selected').val();
+	const IS_HEADING_UPPERCASE = $('#header-text-uppercase-select').prop('checked');
 
-    // Apply layout information
-    $('.heading-text-multistyle:not(' + HEADING_TEXT_STYLE + ')').hide();
-    $('.heading-text-multistyle.' + HEADING_TEXT_STYLE).show();
-    $('.heading-text-multistyle').css('text-transform', IS_HEADING_UPPERCASE ? 'uppercase' : '');
+	// Apply layout information
+	$('.heading-text-multistyle:not(' + HEADING_TEXT_STYLE + ')').hide();
+	$('.heading-text-multistyle.' + HEADING_TEXT_STYLE).show();
+	$('.heading-text-multistyle').css('text-transform', IS_HEADING_UPPERCASE ? 'uppercase' : '');
 
-    // Show preview and remove placeholder
-    $('#preview-wrapper').show();
-    $('#preview-wrapper-ph').hide();
+	// Get content settings
+	const IS_HOBBIES_VISIBLE = $('#content-show-likes-select').prop('checked');
+
+	// Apply content settings
+	if (IS_HOBBIES_VISIBLE)
+		$('#resume-hobbies').show();
+	else
+		$('#resume-hobbies').hide();
+
+	// Show preview and remove placeholder
+	$('#preview-wrapper').show();
+	$('#preview-wrapper-ph').hide();
+
 }
 
 </script>
