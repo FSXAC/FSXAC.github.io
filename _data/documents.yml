@@ -2,7 +2,7 @@
   courses:
   - course_num: 'ELEC 402'
     course_name: 'VLSI'
-    date: 2019-10-19
+    date: 2019-11-01
     entries:
     - title: 'MOS Part 1'
       link: '/documents/ELEC402/mos-1.pdf'
@@ -28,6 +28,8 @@
       link: '/documents/ELEC402/proj1'
     - title: 'Project 2: FSM Synthesis Report'
       link: '/documents/ELEC402/proj2'
+    - title: 'Project 3: MOSFET Assignment'
+      link: '/documents/ELEC402/proj3'
   - course_num: 'ELEC 491'
     course_name: 'Capstone Project for EE'
     date: 2019-09-16
@@ -208,12 +210,12 @@
       link: '/documents/ELEC291/Project2'
 - category: Computer
   courses:
-  - course_num: 'CPEN 411'
-    course_name: 'Computer Architecture'
-    date: 2019-09-06
-    entries:
-    - title: 'Introduction'
-      link: '/documents/CPEN411/2019-09-05-Introduction'
+  # - course_num: 'CPEN 411'
+  #   course_name: 'Computer Architecture'
+  #   date: 2019-09-06
+  #   entries:
+  #   - title: 'Introduction'
+  #     link: '/documents/CPEN411/2019-09-05-Introduction'
   - course_num: 'CPEN 311'
     course_name: 'Digital Systems Design'
     date: 2019-04-02
@@ -274,10 +276,10 @@
         link: '/documents/CPEN311/ps4.pdf'
       - enum: 5
         link: '/documents/CPEN311/ps5.pdf'
-  - course_num: 'CPEN 211'
-    course_name: 'Microcomputers'
-  - course_num: 'CPSC 259'
-    course_name: 'Data Structures & Algorithms'
+  # - course_num: 'CPEN 211'
+  #   course_name: 'Microcomputers'
+  # - course_num: 'CPSC 259'
+  #   course_name: 'Data Structures & Algorithms'
   - course_num: 'APSC 160'
     course_name: 'Computation in Engineering Design'
     date: 2018-10-19
@@ -292,16 +294,16 @@
     entries:
     - title: 'Final Review'
       link: '/documents/MATH220/FinalReview'
-  - course_num: 'MATH 264'
-    course_name: 'Vector Calculus'
-  - course_num: 'MATH 256'
-    course_name: 'Differential Equations'
-  - course_num: 'MATH 253'
-    course_name: 'Multivariate Calculus'
-  - course_num: 'MATH 101'
-    course_name: 'Calculus II'
-  - course_num: 'MATH 100'
-    course_name: 'Calculus I'
+  # - course_num: 'MATH 264'
+  #   course_name: 'Vector Calculus'
+  # - course_num: 'MATH 256'
+  #   course_name: 'Differential Equations'
+  # - course_num: 'MATH 253'
+  #   course_name: 'Multivariate Calculus'
+  # - course_num: 'MATH 101'
+  #   course_name: 'Calculus II'
+  # - course_num: 'MATH 100'
+  #   course_name: 'Calculus I'
 - category: Others
   courses:
   - course_num: 'MECH 431'
@@ -478,9 +480,13 @@
       link: '/documents/APSC101/rainwater.pdf'
   - course_num: 'APSC 100'
     course_name: 'Intro to Engineering I'
-    date: 2015-12-02
+    date: 2019-11-01
     entries:
-    - title: 'Letter to Future Students'
+    - title: 'Module 2: Site C Presentation'
+      link: 'https://1drv.ms/p/s!Alk5PGqd6dMsgcYArvP8DYDvL5Fnhw?e=0cM6st'
+    - title: 'Module 3: CAD and Technical Memo'
+      link: 'https://1drv.ms/b/s!Alk5PGqd6dMsgccABCjgqXr6f8hUHw'
+    - title: 'Module 4: Letter to Future Students'
       link: '/documents/APSC100/Letter.pdf'
   - course_num: 'Coursera ML'
     course_name: 'Intro to Machine Learning'
@@ -488,4 +494,4 @@
     entries:
     - title: 'Course Notes'
       link: '/documents/misc/stanford_ml'
-      flag: draft
+      flag: shelved

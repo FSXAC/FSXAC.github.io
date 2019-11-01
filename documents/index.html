@@ -110,6 +110,8 @@ header:
 		<span class="badge badge-secondary">draft</span>
 		{% elsif entry.flag == 'new' %}
 		<span class="badge badge-success">new</span>
+		{% elsif entry.flag %}
+		<span class="badge badge-outline-dark">{{ entry.flag }}</span>
 		{% endif %}
 
 		</li>
