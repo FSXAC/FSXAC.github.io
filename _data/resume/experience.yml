@@ -7,7 +7,7 @@
   doings:
   - "Wrote Python application with terminal UI for developers to remotely interface with FPGAs"
   - "Wrote Python and shell script for process automation"
-  - "Configured TeamCity for automatic testing and deployment of team-use software which reduced deployment time from 1 day to 30 minutes."
+  - "Configured TeamCity for automatic testing and deployment of team-use software which reduced deployment time from 1 day to 30 minutes"
   - "Interpreted feature requests and managed software feature releases"
   - "Composed release notes and technical documentation/specs"
   - "Provided technical support for clients who used the software I developed"

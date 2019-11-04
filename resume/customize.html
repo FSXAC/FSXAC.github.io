@@ -73,10 +73,27 @@ ul { list-style-type: square; }
 						</select>
 					</p>
 					<p><label><input type="checkbox" id="header-text-uppercase-select" checked="checked">&nbsp;Heading text uppercase</label></p>
-				</form>
-
+                </form>
+                <hr>
+    
 				<h3>Content</h3>
 				<form>
+                    <p>Number of work experience to show:&nbsp;
+                        <select name="num-work-exp" id="content-num-work-exp">
+                            {% assign i = 0 %}
+                            {% for x in site.data.resume.experience %}
+                            <option value="{{ i | plus: 1 }}">{{ i | plus: 1 }}</option>
+                            {% assign i = i | plus: 1 %}
+                            {% endfor %}
+                        </select>
+                    </p>
+                    <p>Number of projects to show:&nbsp;
+                        <select name="num-projs" id="content-num-projs">
+                            {% for i in (1..4) %}
+                            <option value="{{ i | times: 4 }}">{{ i | times: 4 }}</option>
+                            {% endfor %}
+                        </select>
+                    </p>
 					<p><label><input type="checkbox" id="content-show-likes-select" checked="checked">&nbsp;Show likes/hobbies</label></p>
 				</form>
 
@@ -150,7 +167,7 @@ ul { list-style-type: square; }
 		{% assign i = i | plus: 1 %}
 		{% endfor %}
 	</h2>
-	<div class="thickside">
+	<div id="work-exp-container" class="thickside">
 		{% assign i = 0 %}
 		{% for exp in site.data.resume.experience %}
 			<div id="exp-{{ i }}" class="thinline">
@@ -179,15 +196,16 @@ ul { list-style-type: square; }
 		{% assign i = i | plus: 1 %}
 		{% endfor %}
 	</h2>
-	<div class="row thickside">
+	<div id="projs-container" class="row thickside">
 		{% assign i = 0 %}
 		{% for project in site.data.projects %}
 			{% if project.worthy %}
 				<div id="proj-{{ i }}" class="col-3 pl-0 pr-1 thinline project-type-{{ project.type | lowercase }}"">
 					<h3>{% if project.name_short %}<span class="proj-name-short">{{ project.name_short }}{% endif %}<span class="proj-name-full">{{ project.name }}</span></h3>
 					<p><small class="proj-dates">{{ project.dates.end | date: "%b %Y" }}</small></p>
-					<p class="proj-desc">{{ project.description }}</p>
-					<small><span id="proj-tech-used-prepend"></span><em>{{ project.tech | join: ', ' | truncatewords: 12 }}</em></small>
+                    <p class="proj-desc">{{ project.description }}</p>
+                    {% assign proj_techs = project.tech | slice:0, 6 %}
+					<small><span id="proj-tech-used-prepend" class="lead"></span><em>{{ proj_techs | array_to_sentence_string }}</em></small>
 				</div>
 				{% assign i = i | plus: 1 %}
 			{% endif %}
@@ -276,9 +294,31 @@ function updateResumeSettings() {
 	$('.heading-text-multistyle').css('text-transform', IS_HEADING_UPPERCASE ? 'uppercase' : '');
 
 	// Get content settings
+    const NUM_WORK_EXP_SHOWN = $('#content-num-work-exp option:selected').val();
+    const NUM_PROJECTS_SHOWN = $('#content-num-projs option:selected').val();
 	const IS_HOBBIES_VISIBLE = $('#content-show-likes-select').prop('checked');
 
 	// Apply content settings
+    let workContainerChildren = $('#work-exp-container').children();
+    for (let i = 0; i < workContainerChildren.length; i++) {
+        let $workChild = $(workContainerChildren[i]);
+        
+        if (i < NUM_WORK_EXP_SHOWN){
+            $workChild.show();
+        } else {
+            $workChild.hide();
+        }
+    }
+    let projsContainerChildren = $('#projs-container').children();
+    for (let i = 0; i < projsContainerChildren.length; i++) {
+        let $projChild = $(projsContainerChildren[i]);
+        
+        if (i < NUM_PROJECTS_SHOWN){
+            $projChild.show();
+        } else {
+            $projChild.hide();
+        }
+    }
 	if (IS_HOBBIES_VISIBLE)
 		$('#resume-hobbies').show();
 	else
