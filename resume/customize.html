@@ -66,7 +66,7 @@ ul { list-style-type: square; }
 						Heading text style:
 						<select id="heading-text-style-select" name="heading-text-style">
 							{% assign i = 0 %}
-							{% for skills_header in site.data.resume.header_titles %}
+                            {% for skills_header in site.data.resume.header_titles %}
 							<option value="heading-style-{{ i }}">{{ i }} - {{ skills_header.name }}</option>
 							{% assign i = i | plus: 1 %}
 							{% endfor %}
@@ -82,7 +82,7 @@ ul { list-style-type: square; }
                         <select name="num-work-exp" id="content-num-work-exp">
                             {% assign i = 0 %}
                             {% for x in site.data.resume.experience %}
-                            <option value="{{ i | plus: 1 }}">{{ i | plus: 1 }}</option>
+                            <option value="{{ i | plus: 1 }}" {% if forloop.last %}selected="selected"{% endif %}>{{ i | plus: 1 }}</option>
                             {% assign i = i | plus: 1 %}
                             {% endfor %}
                         </select>
@@ -90,7 +90,7 @@ ul { list-style-type: square; }
                     <p>Number of projects to show:&nbsp;
                         <select name="num-projs" id="content-num-projs">
                             {% for i in (1..4) %}
-                            <option value="{{ i | times: 4 }}">{{ i | times: 4 }}</option>
+                            <option value="{{ i | times: 4 }}" {% if forloop.last %}selected="selected"{% endif %}>{{ i | times: 4 }}</option>
                             {% endfor %}
                         </select>
                     </p>
@@ -116,9 +116,6 @@ ul { list-style-type: square; }
 		</div>
 	</div>
 </div>
-
-<!-- wrapper div for controlling visibility -->
-<div id="preview-wrapper" style="display:none">
 
 <div id='resume-header' style='display:flex;justify-content: center;'>
 	<div style="text-align:right;border-right:5px solid black" class='pr-2'>
@@ -240,20 +237,14 @@ ul { list-style-type: square; }
 	{% endfor %}
 </h2>
 
-</div>
-
-<!-- Wrapper placeholder -->
-<div id="preview-wrapper-ph" class="text-center">
-	<p class="lead my-5">Click on "Settings" to begin</p>
-</div>
-
-
 <script>
 $(document).ready(()=> {
 	$('#resume-settings-save-btn').on('click', updateResumeSettings);
 	$('#resume-print-btn').on('click', ()=>{
 		window.print();
 	});
+
+    updateResumeSettings();
 });
 
 function updateResumeSettings() {
