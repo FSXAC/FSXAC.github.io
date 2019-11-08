@@ -29,7 +29,7 @@ m(x)&=\rho(x)\mathop{dV}\\
 \end{aligned}
 $$
 
-Then we can integrate from $x=0\rarr r$ to get the mass inside the radius $r$.
+Then we can integrate from x = 0 &rarr; r to get the mass inside the radius $r$.
 
 $$
 \begin{aligned}
