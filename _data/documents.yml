@@ -2,7 +2,7 @@
   courses:
   - course_num: 'ELEC 402'
     course_name: 'VLSI'
-    date: 2019-11-01
+    date: 2019-11-11
     entries:
     - title: 'MOS Part 1'
       link: '/documents/ELEC402/mos-1.pdf'
@@ -30,6 +30,8 @@
       link: '/documents/ELEC402/proj2'
     - title: 'Project 3: MOSFET Assignment'
       link: '/documents/ELEC402/proj3'
+    - title: 'Project 4: CMOS Assignment'
+      link: '/documents/ELEC402/proj4'
   - course_num: 'ELEC 491'
     course_name: 'Capstone Project for EE'
     date: 2019-09-16
