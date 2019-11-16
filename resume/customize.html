@@ -204,7 +204,7 @@ ul { list-style-type: square; }
 		{% for project in site.data.projects %}
 			{% if project.worthy %}
 				<div id="proj-{{ i }}" class="col-3 pl-0 pr-1 thinline project-type-{{ project.type | lowercase }}"">
-					<h3>{% if project.name_short %}<span class="proj-name-short">{{ project.name_short }}{% endif %}<span class="proj-name-full">{{ project.name }}</span></h3>
+					<h3><span class="proj-name-short">{{ project.name_short }}</span><span class="proj-name-full">{{ project.name }}</span></h3>
 					<p><small class="proj-dates">{{ project.dates.end | date: "%b %Y" }}</small></p>
 					<p class="proj-desc">{{ project.description }}</p>
 					{% assign proj_techs = project.tech | slice:0, 6 %}
