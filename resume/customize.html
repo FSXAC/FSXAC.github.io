@@ -94,7 +94,9 @@ ul { list-style-type: square; }
 							{% endfor %}
 						</select>
 					</p>
+					<p><label><input type="checkbox" id="content-exp-tech-used" checked="checked">&nbsp;Show technology used for work experiences</label></p>
 					<p><label><input type="checkbox" id="content-proj-fullname" checked="checked">&nbsp;Use full names for projects</label></p>
+					<p><label><input type="checkbox" id="content-proj-tech-used" checked="checked">&nbsp;Show technology used for projects</label></p>
 					<p><label><input type="checkbox" id="content-show-likes-select" checked="checked">&nbsp;Show likes/hobbies</label></p>
 				</form>
 
@@ -180,6 +182,9 @@ ul { list-style-type: square; }
 						<li>{{ do }}.</li>
 					{% endfor %}
 				</ul>
+				{% assign exp_techs = exp.tech | slice:0, 6 %}
+				<!-- TODO: exp-tech-used-prepend is unsued -->
+				<small class="exp-tech-used"><span id="exp-tech-used-prepend" class="lead"></span><em>{{ exp_techs | array_to_sentence_string }}</em></small>
 			</div>
 			{% assign i = i | plus: 1 %}
 		{% endfor %}
@@ -203,7 +208,8 @@ ul { list-style-type: square; }
 					<p><small class="proj-dates">{{ project.dates.end | date: "%b %Y" }}</small></p>
 					<p class="proj-desc">{{ project.description }}</p>
 					{% assign proj_techs = project.tech | slice:0, 6 %}
-					<small><span id="proj-tech-used-prepend" class="lead"></span><em>{{ proj_techs | array_to_sentence_string }}</em></small>
+					<!-- TODO: proj-tech-used-prepend is unsued -->
+					<small class="proj-tech-used"><span id="proj-tech-used-prepend" class="lead"></span><em>{{ proj_techs | array_to_sentence_string }}</em></small>
 				</div>
 				{% assign i = i | plus: 1 %}
 			{% endif %}
@@ -280,8 +286,10 @@ function updateResumeSettings() {
 	// Get content settings
 	const NUM_WORK_EXP_SHOWN = $('#content-num-work-exp option:selected').val();
 	const NUM_PROJECTS_SHOWN = $('#content-num-projs option:selected').val();
-	const IS_PROJ_FULLNAME = $('#content-proj-fullname').val();
+	const IS_PROJ_FULLNAME = $('#content-proj-fullname').prop('checked');
 	const IS_HOBBIES_VISIBLE = $('#content-show-likes-select').prop('checked');
+	const IS_SHOWING_EXP_TECH_USED = $('#content-exp-tech-used').prop('checked');
+	const IS_SHOWING_PROJ_TECH_USED = $('#content-proj-tech-used').prop('checked');
 
 	// Apply content settings
 	let workContainerChildren = $('#work-exp-container').children();
@@ -311,6 +319,18 @@ function updateResumeSettings() {
 		$('.proj-name-full').hide();
 		$('.proj-name-short').show();
 	}
+
+	if (IS_SHOWING_EXP_TECH_USED) {
+		$('.exp-tech-used').show();
+	} else {
+		$('.exp-tech-used').hide();
+	}
+	if (IS_SHOWING_PROJ_TECH_USED) {
+		$('.proj-tech-used').show();
+	} else {
+		$('.proj-tech-used').hide();
+	}
+
 	if (IS_HOBBIES_VISIBLE)
 		$('#resume-hobbies').show();
 	else
