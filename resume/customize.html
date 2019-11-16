@@ -94,6 +94,7 @@ ul { list-style-type: square; }
 							{% endfor %}
 						</select>
 					</p>
+					<p><label><input type="checkbox" id="content-proj-fullname" checked="checked">&nbsp;Use full names for projects</label></p>
 					<p><label><input type="checkbox" id="content-show-likes-select" checked="checked">&nbsp;Show likes/hobbies</label></p>
 				</form>
 
@@ -199,7 +200,6 @@ ul { list-style-type: square; }
 			{% if project.worthy %}
 				<div id="proj-{{ i }}" class="col-3 pl-0 pr-1 thinline project-type-{{ project.type | lowercase }}"">
 					<h3>{% if project.name_short %}<span class="proj-name-short">{{ project.name_short }}{% endif %}<span class="proj-name-full">{{ project.name }}</span></h3>
-					<!-- TODO: add option to toggle between short name and full name -->
 					<p><small class="proj-dates">{{ project.dates.end | date: "%b %Y" }}</small></p>
 					<p class="proj-desc">{{ project.description }}</p>
 					{% assign proj_techs = project.tech | slice:0, 6 %}
@@ -280,6 +280,7 @@ function updateResumeSettings() {
 	// Get content settings
 	const NUM_WORK_EXP_SHOWN = $('#content-num-work-exp option:selected').val();
 	const NUM_PROJECTS_SHOWN = $('#content-num-projs option:selected').val();
+	const IS_PROJ_FULLNAME = $('#content-proj-fullname').val();
 	const IS_HOBBIES_VISIBLE = $('#content-show-likes-select').prop('checked');
 
 	// Apply content settings
@@ -302,6 +303,13 @@ function updateResumeSettings() {
 		} else {
 			$projChild.hide();
 		}
+	}
+	if (IS_PROJ_FULLNAME) {
+		$('.proj-name-full').show();
+		$('.proj-name-short').hide();
+	} else {
+		$('.proj-name-full').hide();
+		$('.proj-name-short').show();
 	}
 	if (IS_HOBBIES_VISIBLE)
 		$('#resume-hobbies').show();
