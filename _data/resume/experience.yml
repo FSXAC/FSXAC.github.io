@@ -5,16 +5,15 @@
   end: "Aug 2019"
   duration: "8 months"
   doings:
-  - "Wrote Python application with terminal UI for developers to remotely interface with FPGAs"
-  - "Wrote Python and shell script for process automation"
-  - "Configured TeamCity for automatic testing and deployment of team-use software which reduced deployment time from 1 day to 30 minutes"
-  - "Interpreted feature requests and managed software feature releases"
-  - "Composed release notes and technical documentation/specs"
-  - "Provided technical support for clients who used the software I developed"
+  - "Developed terminal application with easy and quick UI for clients and other developers to remotely interface with FPGAs"
+  - "Configured automatic testing and deployment of internal software and reduced time takes to release a version from 1 day to 30 minutes"
+  - "Created custom scripts to automate development processes such as verifying the integrity of project files against a manifest"
+  - "Interpreted feature requests and managed software feature releases with release notes and documentations for hundreds of users."
+  # - "Provided technical support for clients who used the software I developed"
   tech:
-  - Linux
   - Python
   - TeamCity CI
+  - Linux
 - company: "Electronic Arts - BioWare"
   position: "UI/UX Programmer Co-op on Anthem"
   location: "Edmonton AB"

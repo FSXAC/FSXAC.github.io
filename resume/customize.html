@@ -124,7 +124,7 @@ ul { list-style-type: square; }
 	</div>
 	<div class='ml-2'>
 		<p style='line-height:1em; margin-top:.6em'>i@muchen.ca&nbsp;<span id="data-phone">&times;&nbsp;(778) 952-9222</span><br />Vancouver/Edmonton, Canada</p>
-		<p class='text-muted'><span id="data-gpa-alt">4.00</span><span id="data-gpa">90%</span> GPA<span id="data-grad"> &times; Graduating May 2020</span></p>
+		<p class='text-muted'><span id="data-gpa">85%</span> GPA<span id="data-grad"> &times; Graduating May 2020</span></p>
 	</div>
 </div>
 
@@ -252,7 +252,6 @@ function updateResumeSettings() {
 	// Obtain header settings
 	const IS_NAME_UPPERCASE = $('#header-name-uppercase-select').prop('checked');
 	const IS_VISIBLE_PHONE = $('#header-show-phone-select').prop('checked');
-	const IS_ALTERNATE_GPA = $('#header-alt-gpa-format-select').prop('checked');
 	const IS_VISIBLE_GRAD_YEAR = $('#header-show-grad-year-select').prop('checked');
 	
 	// Apply header settings
@@ -261,13 +260,6 @@ function updateResumeSettings() {
 		$('#data-phone').show()
 	} else {
 		$('#data-phone').hide();
-	}
-	if (IS_ALTERNATE_GPA) {
-		$('#data-gpa-alt').show();
-		$('#data-gpa').hide();
-	} else {
-		$('#data-gpa-alt').hide();
-		$('#data-gpa').show();
 	}
 	if (IS_VISIBLE_GRAD_YEAR) {
 		$('#data-grad').show()
