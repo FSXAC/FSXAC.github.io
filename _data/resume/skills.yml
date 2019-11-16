@@ -7,39 +7,42 @@
 # Each "verb" set of skills will be populated 
 # into a table column
 
-- verb: code
+- verb: Code
   skills:
   - "Python"
-  - "NCurses"
   - "C/C++"
   - "C#"
+  - "Verilog"
+  - "JavaScript/Node.js"
   - Jekyll/Liquid
-  - "SystemVerilog"
-  - "JavaScript"
-  - "LaTeX"
-  - "HTML/CSS"
-  - "MATLAB"
-  - "Shader"
+  - "NCurses"
   - "Java/Processing"
-  - "8051 Assembly"
+  - "HTML/CSS"
+  - "R"
+  - "MATLAB"
+  - "Assembly"
 - verb: Build
   skills:
   - "3D Printer"
-  - "CNC Mill"
-  - "Soldering Iron/SMT"
+  - "Microcontrollers"
+  - "Raspberry PI"
+  - "FPGA"
+  - "Circuit Analysis"
   - "Probe/Oscilloscope"
-- verb: Utilize
+  - "CNC Mill"
+  # - "Soldering Iron/SMT"
+- verb: Work
   skills:
   - "Git/Perforce"
   - "TeamCity CI"
   - "Autodesk CAD Suite"
-  - "Quartus/ModelSim"
-  - "Cadence CAD/Simulation"
-  - "Solidworks"
   - "Adobe Suite"
-  - "SimuLink"
+  - "Solidworks"
+  - "Quartus/ModelSim"
+  - "MATLAB SimuLink"
+  - "Cadence CAD/Simulation"
 - verb: Create
   skills:
-  - "Technical documentation"
+  - "Technical documentation (MD, LaTeX)"
   - "Detailed notes and instruction manual"
   - "Organized Wikis"

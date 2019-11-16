@@ -26,7 +26,7 @@ h2 { margin-top: .5em; }
 h3 { padding-top: .4em; }
 ul { list-style-type: square; }
 .thickside { border-left: 5px solid black;margin-left: 2px;padding-left: .5em; }
-.thinline { line-height: 1.2; }
+.thinline { line-height: 1.2; vertical-align: top; }
 .thinline p { margin-top: 0; margin-bottom: 0; }
 .proj-dates.dark { 
 	background: #111;
@@ -66,34 +66,34 @@ ul { list-style-type: square; }
 						Heading text style:
 						<select id="heading-text-style-select" name="heading-text-style">
 							{% assign i = 0 %}
-                            {% for skills_header in site.data.resume.header_titles %}
+							{% for skills_header in site.data.resume.header_titles %}
 							<option value="heading-style-{{ i }}">{{ i }} - {{ skills_header.name }}</option>
 							{% assign i = i | plus: 1 %}
 							{% endfor %}
 						</select>
 					</p>
 					<p><label><input type="checkbox" id="header-text-uppercase-select" checked="checked">&nbsp;Heading text uppercase</label></p>
-                </form>
-                <hr>
-    
+				</form>
+				<hr>
+	
 				<h3>Content</h3>
 				<form>
-                    <p>Number of work experience to show:&nbsp;
-                        <select name="num-work-exp" id="content-num-work-exp">
-                            {% assign i = 0 %}
-                            {% for x in site.data.resume.experience %}
-                            <option value="{{ i | plus: 1 }}" {% if forloop.last %}selected="selected"{% endif %}>{{ i | plus: 1 }}</option>
-                            {% assign i = i | plus: 1 %}
-                            {% endfor %}
-                        </select>
-                    </p>
-                    <p>Number of projects to show:&nbsp;
-                        <select name="num-projs" id="content-num-projs">
-                            {% for i in (1..4) %}
-                            <option value="{{ i | times: 4 }}" {% if forloop.last %}selected="selected"{% endif %}>{{ i | times: 4 }}</option>
-                            {% endfor %}
-                        </select>
-                    </p>
+					<p>Number of work experience to show:&nbsp;
+						<select name="num-work-exp" id="content-num-work-exp">
+							{% assign i = 0 %}
+							{% for x in site.data.resume.experience %}
+							<option value="{{ i | plus: 1 }}" {% if forloop.last %}selected="selected"{% endif %}>{{ i | plus: 1 }}</option>
+							{% assign i = i | plus: 1 %}
+							{% endfor %}
+						</select>
+					</p>
+					<p>Number of projects to show:&nbsp;
+						<select name="num-projs" id="content-num-projs">
+							{% for i in (1..4) %}
+							<option value="{{ i | times: 4 }}" {% if forloop.last %}selected="selected"{% endif %}>{{ i | times: 4 }}</option>
+							{% endfor %}
+						</select>
+					</p>
 					<p><label><input type="checkbox" id="content-show-likes-select" checked="checked">&nbsp;Show likes/hobbies</label></p>
 				</form>
 
@@ -199,9 +199,10 @@ ul { list-style-type: square; }
 			{% if project.worthy %}
 				<div id="proj-{{ i }}" class="col-3 pl-0 pr-1 thinline project-type-{{ project.type | lowercase }}"">
 					<h3>{% if project.name_short %}<span class="proj-name-short">{{ project.name_short }}{% endif %}<span class="proj-name-full">{{ project.name }}</span></h3>
+					<!-- TODO: add option to toggle between short name and full name -->
 					<p><small class="proj-dates">{{ project.dates.end | date: "%b %Y" }}</small></p>
-                    <p class="proj-desc">{{ project.description }}</p>
-                    {% assign proj_techs = project.tech | slice:0, 6 %}
+					<p class="proj-desc">{{ project.description }}</p>
+					{% assign proj_techs = project.tech | slice:0, 6 %}
 					<small><span id="proj-tech-used-prepend" class="lead"></span><em>{{ proj_techs | array_to_sentence_string }}</em></small>
 				</div>
 				{% assign i = i | plus: 1 %}
@@ -244,7 +245,7 @@ $(document).ready(()=> {
 		window.print();
 	});
 
-    updateResumeSettings();
+	updateResumeSettings();
 });
 
 function updateResumeSettings() {
@@ -277,31 +278,31 @@ function updateResumeSettings() {
 	$('.heading-text-multistyle').css('text-transform', IS_HEADING_UPPERCASE ? 'uppercase' : '');
 
 	// Get content settings
-    const NUM_WORK_EXP_SHOWN = $('#content-num-work-exp option:selected').val();
-    const NUM_PROJECTS_SHOWN = $('#content-num-projs option:selected').val();
+	const NUM_WORK_EXP_SHOWN = $('#content-num-work-exp option:selected').val();
+	const NUM_PROJECTS_SHOWN = $('#content-num-projs option:selected').val();
 	const IS_HOBBIES_VISIBLE = $('#content-show-likes-select').prop('checked');
 
 	// Apply content settings
-    let workContainerChildren = $('#work-exp-container').children();
-    for (let i = 0; i < workContainerChildren.length; i++) {
-        let $workChild = $(workContainerChildren[i]);
-        
-        if (i < NUM_WORK_EXP_SHOWN){
-            $workChild.show();
-        } else {
-            $workChild.hide();
-        }
-    }
-    let projsContainerChildren = $('#projs-container').children();
-    for (let i = 0; i < projsContainerChildren.length; i++) {
-        let $projChild = $(projsContainerChildren[i]);
-        
-        if (i < NUM_PROJECTS_SHOWN){
-            $projChild.show();
-        } else {
-            $projChild.hide();
-        }
-    }
+	let workContainerChildren = $('#work-exp-container').children();
+	for (let i = 0; i < workContainerChildren.length; i++) {
+		let $workChild = $(workContainerChildren[i]);
+		
+		if (i < NUM_WORK_EXP_SHOWN){
+			$workChild.show();
+		} else {
+			$workChild.hide();
+		}
+	}
+	let projsContainerChildren = $('#projs-container').children();
+	for (let i = 0; i < projsContainerChildren.length; i++) {
+		let $projChild = $(projsContainerChildren[i]);
+		
+		if (i < NUM_PROJECTS_SHOWN){
+			$projChild.show();
+		} else {
+			$projChild.hide();
+		}
+	}
 	if (IS_HOBBIES_VISIBLE)
 		$('#resume-hobbies').show();
 	else
