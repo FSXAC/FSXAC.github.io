@@ -3,7 +3,8 @@
 # This data is used both by the projects page
 # as well as the resume page
 
-- name: Messenger Visualizer
+- name: FB Messenger Visualizer
+  name_short: FB Visualizer
   dates:
     start: 2018-01-01
     end: 2019-03-01
@@ -21,6 +22,7 @@
   worthy: true
   thumbnail: img/fbvis.jpg
 - name: 2-DOF Motorized Laser Controller
+  name_short: 2D Laser Controller
   dates:
     start: 2018-01-01
     end: 2018-04-01
@@ -67,14 +69,13 @@
     project page: https://www.muchen.ca/FPGAMandelbrot
   worthy: true
   thumbnail: img/mandelbrot.jpg
-- name: Automark
+- name: Fast Grader
   dates:
     start: 2017-12-01
     end: 2018-01-01
   type: code
-  description: Desktop app used to help grading lab submissions more efficiently.
-    Programmed in Python using Qt, runs on Windows, Mac, and Liunx, and features dockable
-    UI.
+  description: Desktop app used to help grading C programming lab submissions more efficiently.
+    Runs cross-platform and features dockable UI.
   scope: independent
   tech:
   - Python 3
@@ -115,7 +116,7 @@
     start: 2017-09-01
     end: 2017-09-01
   type: code
-  description: Web application with realtime database and authentication to keep track
+  description: Web application with real-time database and authentication to keep track
     of sleep statistics, featuring beautifully animated front-end.
   details: Created at Lumohacks 2017
   scope: hack
@@ -126,6 +127,7 @@
   - Andrew Yan
   tech:
   - Firebase
+  - Android SDK
   - p5.js
   - chart.js
   links:
@@ -146,7 +148,7 @@
   - p5.js
   links:
     website: https://www.muchen.ca/CircuitDraw/
-  worthy: true
+  worthy: false
   thumbnail: img/circuitdraw.jpg
 - name: DIY 3D Printer
   dates:
@@ -189,15 +191,15 @@
   - Oscilloscope
   links:
     read report: /documents/ELEC291/Project2
-  worthy: true
+  worthy: false
   thumbnail: img/magtrackrobot.jpg
-- name: Game with Custom Serial Controller
+- name: 3D Game with DIY Serialized Game Controller
   dates:
     start: 2017-04-01
     end: 2017-04-01
   type: elec
-  description: DIY game controller with microcontroller that communicates via serial
-    to a 3D game programmed in Processing.
+  description: DIY game controller using custom microcontroller that communicates via serial
+    with a 3D game programmed in Processing.
   details: 'Physical devices are mounted to give feedback from the game: a fan is
     attached that spins faster as the player moves faster in game; a speaker buzzes
     when the player takes damage in the game.'
@@ -235,7 +237,7 @@
   - Signal generator
   links:
     read report: /documents/ELEC291/Project1
-  worthy: true
+  worthy: false
   thumbnail: 
 - name: Temperature Monitor
   dates:
@@ -250,7 +252,7 @@
   tech:
   - 8051 Assembly
   - AT89 Microcontroller
-  worthy: true
+  worthy: false
   thumbnail: 
 - name: Ticker LCD with Music
   dates:
@@ -263,17 +265,17 @@
   tech:
   - 8051 Assembly
   - AT89 Microcontroller
-  worthy: true
+  worthy: false
   thumbnail: 
 - name: InsectNN
   dates:
     start: 2016-12-01
     end: 2016-12-01
   type: code
-  description: Simulation of navigation using a neural network.
+  description: Simulation of a simple insect with antennae staying on a road using a shallow neural network.
   scope: independent
   tech:
-  - Processing
+  - Processing 3
   worthy: true
   thumbnail: 
 - name: Simple RISC Machine
@@ -289,9 +291,10 @@
   - Quartus II
   - ModelSim
   - SystemVerilog
-  worthy: true
+  worthy: false
   thumbnail: 
 - name: SmartRocket Evolution Simulator
+  name_short: Evolution Sim
   dates:
     start: 2016-09-01
     end: 2016-09-01
@@ -300,7 +303,7 @@
   scope: independent
   tech:
   - p5.js
-  worthy: true
+  worthy: false
   thumbnail: 
 - name: Minesweeper in C
   dates:
@@ -311,7 +314,7 @@
   scope: independent
   tech:
   - C
-  worthy: true
+  worthy: false
   thumbnail: 
 - name: Rainwater Harvesting System
   dates:
@@ -372,16 +375,18 @@
   - Autodesk Revit
   thumbnail: 
 - name: FPV Racing Quadcopter / Drone
+  name_short: FPV Drone
   dates:
     start: 2015-02-01
     end: 2015-05-01
   type: elec
-  description: <abbr title="First Persion View">FPV</abbr> drone built by myself and
-    has live video feedback via 5.8GHz radio transmission.
+  description: DIY <abbr title="First Persion View">FPV</abbr> 250mm drone with live video feedback via 5.8GHz radio transmission.
+    Capable of reaching up to 60km/h for 10 minutes.
   scope: independent
   tech:
-  - Arduino
+  - Naze32 Cleanflight
   - BLDC Motors
+  - 2.4/5.8 GHz radio
   - Electronic tools
   - LiPo Batteries
   worthy: true
