@@ -146,7 +146,7 @@ ul { list-style-type: square; }
 </div>
 
 {% if site.data.resume.header_titles[page.heading_theme_index].rand %}
-<h2>
+<h2 class="resume-rand">
 	{% if page.h2.uppercase %}
 	{{ site.data.resume.header_titles[page.heading_theme_index].rand | upcase }}
 	{% else %}

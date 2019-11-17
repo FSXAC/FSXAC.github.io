@@ -98,6 +98,7 @@ ul { list-style-type: square; padding-inline-start: 1.5em; }
 					<p><label><input type="checkbox" id="content-proj-fullname" checked="checked">&nbsp;Use full names for projects</label></p>
 					<p><label><input type="checkbox" id="content-proj-tech-used" checked="checked">&nbsp;Show technology used for projects</label></p>
 					<p><label><input type="checkbox" id="content-show-likes-select" checked="checked">&nbsp;Show likes/hobbies</label></p>
+					<p><label><input type="checkbox" id="content-show-random-lastline" checked="checked">&nbsp;Show random line</label></p>
 				</form>
 
 				<hr>
@@ -234,7 +235,7 @@ ul { list-style-type: square; padding-inline-start: 1.5em; }
 </div>
 
 
-<h2>
+<h2 class="resume-rand">
 	{% assign i = 0 %}
 	{% for skills_header in site.data.resume.header_titles %}
 		{% if site.data.resume.header_titles[i].rand %}
@@ -290,6 +291,7 @@ function updateResumeSettings() {
 	const IS_HOBBIES_VISIBLE = $('#content-show-likes-select').prop('checked');
 	const IS_SHOWING_EXP_TECH_USED = $('#content-exp-tech-used').prop('checked');
 	const IS_SHOWING_PROJ_TECH_USED = $('#content-proj-tech-used').prop('checked');
+	const IS_SHOWING_RAND_LASTLINE = $('#content-show-random-lastline').prop('checked');
 
 	// Apply content settings
 	let workContainerChildren = $('#work-exp-container').children();
@@ -330,11 +332,15 @@ function updateResumeSettings() {
 	} else {
 		$('.proj-tech-used').hide();
 	}
-
 	if (IS_HOBBIES_VISIBLE)
 		$('#resume-hobbies').show();
 	else
 		$('#resume-hobbies').hide();
+	if (IS_SHOWING_RAND_LASTLINE)
+		$('.resume-rand').show();
+	else
+		$('.resume-rand').hide();
+		
 
 	// Show preview and remove placeholder
 	$('#preview-wrapper').show();
