@@ -38,7 +38,7 @@
   doings:
   - "Provided assistance and tutoring to engineering students learning C during lectures and office hours"
   - "Supervised programming labs and wrote a custom grading program using Python and reduced grading time by 75%"
-  - "Provided comprehensive technical support for students with 100% resolve rate and wrote technical documents on instructions and guides"
+  - "Provided technical support for students with 100% resolve rate and created professional tutorial documents and videos"
   tech:
   - C
   - Python
@@ -51,7 +51,7 @@
   duration: "4 months"
   doings:
   - "Developed applications in Qt GUI Framework using C++ and JavaScript using the MVP design pattern"
-  - "Programmed interactive 3D viewers with JavaScript and Three.js integrated with Adobe Illustrator API; wrote realistic shaders in WebGL"
+  - "Programmed interactive 3D viewers using JavaScript, Three.js, and Adobe Illustrator API; wrote realistic shaders in WebGL"
   tech:
   - Qt
   - QML

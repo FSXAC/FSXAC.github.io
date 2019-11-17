@@ -13,7 +13,7 @@
   skills: 'Skills'
   exp: 'Experience'
   proj: 'Projects'
-  likes: 'Hobbies & Activities'
+  likes: 'Interests & Hobbies'
   rand: 
 - theme: 1
   name: experimental
@@ -48,9 +48,9 @@
 - theme: 5
   name: 'comments'
   skills: '<span style="font-family: monospace">/* skills */</span>'
-  exp: '<span style="font-family: monospace">/* experience */</span>'
+  exp: '<span style="font-family: monospace">/* work experience */</span>'
   proj: '<span style="font-family: monospace">/* projects */</span>'
-  likes: '<span style="font-family: monospace">/* extra */</span>'
+  likes: '<span style="font-family: monospace">/* interests & hobbies */</span>'
   rand: '<span style="font-family: monospace">return 0;</span>'
 
 # Meh
