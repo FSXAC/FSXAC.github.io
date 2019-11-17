@@ -24,7 +24,7 @@ h1, h2, h3 { font-weight: bold; }
 h2, h3 { margin-bottom: 0; line-height: 1; }
 h2 { margin-top: .5em; }
 h3 { padding-top: .4em; }
-ul { list-style-type: square; }
+ul { list-style-type: square; padding-inline-start: 1.5em; }
 .thickside { border-left: 5px solid black;margin-left: 2px;padding-left: .5em; }
 .thinline { line-height: 1.2; vertical-align: top; }
 .thinline p { margin-top: 0; margin-bottom: 0; }
@@ -184,7 +184,7 @@ ul { list-style-type: square; }
 				</ul>
 				{% assign exp_techs = exp.tech | slice:0, 6 %}
 				<!-- TODO: exp-tech-used-prepend is unsued -->
-				<small class="exp-tech-used"><span id="exp-tech-used-prepend" class="lead"></span><em>{{ exp_techs | array_to_sentence_string }}</em></small>
+				<small class="exp-tech-used text-muted"><em>{{ exp_techs | array_to_sentence_string }}</em></small>
 			</div>
 			{% assign i = i | plus: 1 %}
 		{% endfor %}
@@ -209,7 +209,7 @@ ul { list-style-type: square; }
 					<p class="proj-desc">{{ project.description }}</p>
 					{% assign proj_techs = project.tech | slice:0, 6 %}
 					<!-- TODO: proj-tech-used-prepend is unsued -->
-					<small class="proj-tech-used"><span id="proj-tech-used-prepend" class="lead"></span><em>{{ proj_techs | array_to_sentence_string }}</em></small>
+					<small class="proj-tech-used text-muted"><em>{{ proj_techs | array_to_sentence_string }}</em></small>
 				</div>
 				{% assign i = i | plus: 1 %}
 			{% endif %}

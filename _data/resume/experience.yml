@@ -5,7 +5,7 @@
   end: "Aug 2019"
   duration: "8 months"
   doings:
-  - "Developed terminal application with easy and quick UI for clients and other developers to remotely interface with FPGAs"
+  - "Developed terminal application with easy-to-use UI for clients and other developers to remotely interface with FPGAs"
   - "Configured automatic testing and deployment of internal software and reduced time takes to release a version from 1 day to 30 minutes"
   - "Created custom scripts to automate development processes such as verifying the integrity of project files against a manifest"
   - "Interpreted feature requests and managed software feature releases with release notes and documentations for hundreds of users."
@@ -21,10 +21,10 @@
   end: "Dec 2018"
   duration: "8 months"
   doings:
-  - "Added and improved UI and engine code in Frostbite engine and upcoming game Anthem using C++"
-  - "Developed entities for UI/UX artists and scripters; strong teamwork and communication demonstrated with consolidated specifications"
-  - "Wrote Python upgrade scripts to modify and validate XML and game asset files in bulk"
-  - "Investigated bugs related to UI, keyboard/mouse inputs and developed robust solutions"
+  - "Wrote C++ that improved Frostbite engine's UI/UX components for the game <i>Anthem</i>"
+  - "Wrote Python upgrade scripts to modify and validate hundreds of XML and game asset files in seconds"
+  - "Investigated bugs related to UI, keyboard/mouse inputs, and Origin API and developed robust solutions"
+  - "Developed entities for UI/UX artists and scripters; demonstrated strong teamwork and communication"
   tech:
   - C++
   - Python
@@ -34,12 +34,11 @@
   location: "Vancouver BC"
   start: "Jan 2018"
   end: "present"
-  duration: ""
+  duration: "8 months"
   doings:
-  - "Assisted students to learn C programming by responding to students' in-class questions in a clear and simple manner"
-  - "Supervised students in programming labs and marked lab submissions using an automated script I wrote in Python"
-  - "Wrote technical documents and provided comprehensive online support via Piazza"
-  - "Provided technical support for students with macOS"
+  - "Provided assistance and tutoring to engineering students learning C during lectures and office hours"
+  - "Supervised programming labs and marked lab submissions using a custom program I wrote in Python which reduced time taken by 75%"
+  - "Provided comprehensive technical support for students with 100% resolve rate and wrote technical documents on instructions and guides"
   tech:
   - C
   - Python
@@ -51,9 +50,8 @@
   end: "Aug 2017"
   duration: "4 months"
   doings:
-  - "Developed applications in Qt GUI Framework using C++ and JavaScript"
-  - "Maintained clean code that follows MVC software structure"
-  - "Programmed interactive 3D viewers with JavaScript and Three.js; wrote realistic shaders in WebGL"
+  - "Developed applications in Qt GUI Framework using C++ and JavaScript using the MVP design pattern"
+  - "Programmed interactive 3D viewers with JavaScript and Three.js integrated with Adobe Illustrator API; wrote realistic shaders in WebGL"
   tech:
   - Qt
   - QML
