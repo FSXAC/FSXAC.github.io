@@ -6,9 +6,9 @@
   duration: "8 months"
   doings:
   - "Developed terminal application with easy-to-use UI for clients and other developers to remotely interface with FPGAs"
-  - "Configured automatic testing and deployment of internal software and reduced time takes to release a version from 1 day to 30 minutes"
+  - "Configured automatic testing and deployment of internal software and reduced the delay of each release from 1 day to 30 minutes"
   - "Created custom scripts to automate development processes such as verifying the integrity of project files against a manifest"
-  - "Interpreted feature requests and managed software feature releases with release notes and documentations for hundreds of users."
+  - "Interpreted feature requests and managed software feature releases with release notes and documentations for hundreds of users"
   # - "Provided technical support for clients who used the software I developed"
   tech:
   - Python
@@ -37,7 +37,7 @@
   duration: "8 months"
   doings:
   - "Provided assistance and tutoring to engineering students learning C during lectures and office hours"
-  - "Supervised programming labs and marked lab submissions using a custom program I wrote in Python which reduced time taken by 75%"
+  - "Supervised programming labs and wrote a custom grading program using Python and reduced grading time by 75%"
   - "Provided comprehensive technical support for students with 100% resolve rate and wrote technical documents on instructions and guides"
   tech:
   - C
