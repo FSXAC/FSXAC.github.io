@@ -3,6 +3,8 @@ author: Muchen He
 title: Facebook Messenger Formatting Syntax
 date: 2019-05-29
 categories: other
+header:
+    teaser: "/assets/blog/messenger/bigmath.jpg"
 ---
 
 Here is a collection of useful formatting *tricks* (that's a clickbait word -- it's more just syntax) that you can use in Facebook's Messenger app.

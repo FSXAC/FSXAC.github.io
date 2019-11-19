@@ -31,7 +31,7 @@ defaults:
       layout: post
       excerpt_separator: <!-- excerpt -->
       nav_active: /blog
-      permalink: /:categories/:year/:title/
+      permalink: /blog/:year/:title/
   - scope:
       path: "documents"
     values:

@@ -9,6 +9,8 @@ nav_active: /blog
 tags:
   - apsc160
   - UBC
+header:
+  teaser: "/assets/blog/apsc160/1571116234186.png"
 ---
 
 Here are some of the statistics I’ve collected for the APSC 160 labs. Because I only run the lab sections L1T, L1K, L1O, and L1D (for the first term). I only have the statistics for these sections.
