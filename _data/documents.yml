@@ -490,6 +490,12 @@
       link: 'https://1drv.ms/b/s!Alk5PGqd6dMsgccABCjgqXr6f8hUHw'
     - title: 'Module 4: Letter to Future Students'
       link: '/documents/APSC100/Letter.pdf'
+  - course_num: 'SWED 100'
+    course_name: 'Elemetary Swedish I'
+    date: 2019-11-24
+    entries:
+    - title: '<i>En Man Som Heter Ove</i> skrivläxa'
+      link: /documents/SWED100/2019-11-24-ove
   - course_num: 'Coursera ML'
     course_name: 'Intro to Machine Learning'
     date: 2016-06-25
