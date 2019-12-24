@@ -27,45 +27,56 @@ header:
 ---
 
 <style>
+:root {
+	--card-bg-color: #fff;
+	--card-sep-color: #000a;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--card-bg-color: #000;
+		--card-sep-color: #fff4;
+	}
+}
+
 .card {
     width: 100%;
     margin-bottom: 12px;
-    border: none;
-    /* box-shadow: 0 4px 6px 0 #00000033; */
+	border: none;
+	background-color: var(--card-bg-color);
 }
 .card-header {
     background-color: transparent;
     border-bottom: none;
 }
 .card-body {
-    border-top: 1px solid rgba(0, 0, 0, 0.8);
+    border-top: 1px solid var(--card-sep-color);
     padding: 0;
-    padding-top: .5em;
+	padding-top: .5em;
+	
 }
 .card-body .list-group .list-group-item {
     border: none;
     padding: 0;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden;
+	overflow: hidden;
+	background-color: var(--card-bg-color);
 }
 .card-body .list-group .list-group-item .badge {
     margin-left: .5em;
 }
 
 .card-body .list-group .list-group-item .btn-entry {
-	border: 1px solid #0050c9;
-	color: #0050c9;
+	border: 1px solid var(--link-color);
+	color: var(--link-color);
 	margin-top: .1em;
 	margin-bottom: .1em;
 }
 .card-body .list-group .list-group-item .btn-entry:hover {
-	/* border-color: #A92626;
+	border-color: var(--link-hover-color);
 	color: white;
-	background-color: #A92626; */
-	border-color: #0050c9;
-	color: white;
-	background-color: #0050c9;
+	background-color: var(--link-hover-color);
 }
 
 .card-gutter-sizer { width: 0; }
