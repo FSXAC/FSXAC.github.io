@@ -32,6 +32,7 @@ div.narrow { max-width: 900px; }
 li.nav-item.active a { border-bottom: 2px solid var(--text-color); }
 li.nav-item { color: var(--text-color); }
 .navbar-brand { font-weight: bold; padding: 0; color: var(--text-color); }
+.navbar-brand:hover { color: var(--text-color); }
 .navbar-mh .navbar-nav .nav-link { color: var(--text-color); }
 .navbar-mh {
 	// Custom navbar style
