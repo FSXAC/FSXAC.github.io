@@ -13,7 +13,6 @@ titlebar: Home
 header:
   image: '/assets/img/avatar-new-small.jpg'
   color: transparent
-  text_color: black
   text:
   - A fourth(fifth) year EE student at UBC.
   - Currently studying and working on my Capstone project.

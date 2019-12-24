@@ -13,9 +13,9 @@
 # - text: Logbook
 #   url: /logbook
 #   desc: Logging of my mind and thoughts... for debugging purposes.
-- text: Photos
-  url: /photos
-  desc: A weekly journal of my personal photography as a hobby.
+# - text: Photos
+#   url: /photos
+#   desc: A weekly journal of my personal photography as a hobby.
 - text: Projects
   url: /projects
   desc: My personal and collaborative project showcase.
