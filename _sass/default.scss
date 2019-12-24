@@ -7,17 +7,6 @@
 	--link-hover-color: #A92626;
 }
 
-/* Dark mode colors */
-@media (prefers-color-scheme: dark) {
-	:root {
-		--bg-color: #000;
-		--text-color: #eee;
-		--nav-bg-color: #111;
-		--link-color: rgb(74, 125, 201);
-		--link-hover-color: rgb(199, 91, 91);
-	}
-}
-
 /* Page style */
 html { font-size: 16px; }
 body {
@@ -125,12 +114,12 @@ dfn:hover::after { opacity: 1; top: 1.8em; }
 #c-content #markdown-toc li { list-style: none; line-height: 1.1; }
 #c-content #markdown-toc > li > a { font-weight: bold; line-height: 1.35; }
 #c-content ul#markdown-toc { padding: 0; margin: 2em 0; }
-#c-content table { word-break: initial; border-bottom: 3px solid black; margin-top: 1em; margin-bottom: 1em; }
+#c-content table { word-break: initial; border-bottom: 3px solid var(--text-color); margin-top: 1em; margin-bottom: 1em; }
 #c-content table.full-width { width: 100%; }
 #c-content table.centered { margin-left: auto; margin-right: auto; }
-#c-content table tr { border-top: 1px solid black; margin: 0; padding: 0; }
+#c-content table tr { border-top: 1px solid var(--text-color); margin: 0; padding: 0; }
 #c-content table tr:first-child { border-top: 0px; }
-#c-content table tr th { font-weight: bold; border: 0; border-bottom: 3px solid black; text-align: left; }
+#c-content table tr th { font-weight: bold; border: 0; border-bottom: 3px solid var(--text-color); text-align: left; }
 #c-content table tr th, #c-content table tr td { padding: 0.25em 1em; }
 
 // Checkbox
@@ -215,3 +204,24 @@ nav.navbar.sticky-top { box-shadow: 0px 4px 6px 0 #00000033; }
 
 // Tabular numerials
 .numeric { font-variant-numeric: tabular-nums; }
+
+/* Dark mode colors */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg-color: #000;
+		--text-color: #eee;
+		--nav-bg-color: #111;
+		--link-color: rgb(74, 125, 201);
+		--link-hover-color: rgb(199, 91, 91);
+	}
+
+	#c-content pre.highlight { box-shadow: 0 .5rem 1rem rgba(120,120,120,.6); }
+	#c-content pre.highlight span.nb { color: #fff; }
+	#c-content pre.highlight span.n { color: #fff; }
+	#c-content pre.highlight span.p { color: #999; }
+	#c-content pre.highlight span.ow { color: #999; }
+	#c-content pre.highlight span.na { color: #26f; }
+	#c-content pre.highlight span.nc { color: #26f; }
+	#c-content pre.highlight span.nf { color: #26f; }
+	#c-content pre.highlight span.c, #c-content pre.highlight span.c1, #c-content pre.highlight span.cm { color: #229120; background: #3e463a60; }
+}
