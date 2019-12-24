@@ -163,3 +163,4 @@ _site/
 .sass-cache/
 .sass-cache/c1f3819d47be52d76414d72d4d164f98579b716f/main.scssc
 Gemfile.lock
+.jekyll-cache/
