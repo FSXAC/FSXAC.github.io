@@ -5,6 +5,7 @@
 	--nav-bg-color: #f8f9fa;
 	--link-color: #0050C9;
 	--link-hover-color: #A92626;
+	--frosted-glass-brightness: 1.4;
 }
 
 /* Page style */
@@ -36,7 +37,8 @@ li.nav-item { color: var(--text-color); }
 .navbar-mh .navbar-nav .nav-link { color: var(--text-color); }
 .navbar-mh {
 	// Custom navbar style
-	background-color: var(--nav-bg-color);
+	backdrop-filter: blur(10px) contrast(0.75) brightness(var(--frosted-glass-brightness));
+	-webkit-backdrop-filter: blur(10px) contrast(0.75) brightness(var(--frosted-glass-brightness));
 }
 .navbar-mh .navbar-toggler-icon {
 	background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(120,120,120,0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
@@ -189,7 +191,7 @@ iframe { display: block; margin-left: auto; margin-right: auto; margin-bottom: 1
 .navbar-toggler { padding: 0; border: none; }
 
 // Sticky nav bar has depth using shadows
-nav.navbar.sticky-top { box-shadow: 0px 4px 6px 0 #00000033; }
+nav.navbar.sticky-top { box-shadow: 0px 2px 3px 0 #00000033; }
 
 // Print override
 @media print {
@@ -214,6 +216,7 @@ nav.navbar.sticky-top { box-shadow: 0px 4px 6px 0 #00000033; }
 		--nav-bg-color: #111;
 		--link-color: rgb(74, 125, 201);
 		--link-hover-color: rgb(199, 91, 91);
+		--frosted-glass-brightness: 0.5;
 	}
 
 	#c-content pre.highlight { box-shadow: 0 .5rem 1rem rgba(120,120,120,.6); }
