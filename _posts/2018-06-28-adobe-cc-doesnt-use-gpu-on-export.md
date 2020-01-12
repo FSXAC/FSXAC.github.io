@@ -13,6 +13,8 @@ header:
   teaser: /assets/blog/teaser/lightroom.jpg
   overlay_image: /assets/blog/default.jpg
   overlay_filter: 0.4
+
+published: false
 ---
 
 Noted:
