@@ -24,6 +24,7 @@ header:
   text:
   - This page contains academic related notes and documents. I try to fill-in as much content as I can from the courses I've taken. ⚠ Only use content from this page as reference material and always uphold academic integrity.
   - Please feel free to contact me if there are any mistakes. Alternatively, since this website is also open-source on GitHub, I'm always open to issues and pull requests. &#x1F44C;
+  - <input type="text" id="searchField" onkeyup="searchFunc()" placeholder="Search...">
 ---
 
 <style>
@@ -37,6 +38,16 @@ header:
 		--card-bg-color: #000;
 		--card-sep-color: #fff4;
 	}
+}
+
+#searchField {
+	border: none;
+	background-color: transparent;
+	border-bottom: 1px dotted var(--text-color);
+	color: var(--text-color);
+	margin-top: .8em;
+	font-size: 1.5em;
+	font-weight: lighter;
 }
 
 .card {
@@ -108,7 +119,7 @@ header:
 		<ul class='list-group list-group-flush'>
 
 		{% for entry in course.entries %}
-		<li class='list-group-item'>
+		<lBi class='list-group-item'>
 		{% if entry.group %}
 			{{ entry.title }}
 			{% for enum_entry in entry.group %}
@@ -126,7 +137,7 @@ header:
 		<span class="badge badge-warning">{{ entry.flag }}</span>
 		{% endif %}
 
-		</li>
+		</lBi>
 		{% endfor %}
 
 		</ul>
@@ -145,4 +156,43 @@ $('.card-grid').masonry({
     gutter: '.card-gutter-sizer',
     percentPosition: true
 });
+
+function searchFunc() {
+	let searchInput = document.getElementById('searchField');
+	let searchVal = searchInput.value.toLowerCase();
+
+	let allCards = document.getElementsByClassName('card');
+	for (let i = 0; i < allCards.length; i++) {
+
+		let cardHeader = allCards[i].getElementsByClassName('card-header')[0];
+
+		if (cardHeader.innerHTML.toLowerCase().includes(searchVal)) {
+			allCards[i].style.display = 'flex';
+		} else {
+			allCards[i].style.display = 'none';
+		}
+	}
+
+	// check if card grid is empty
+	let cardGrids = document.getElementsByClassName('card-grid');
+	for (let i = 0; i < cardGrids.length; i++) {
+		let cards = cardGrids[i].getElementsByClassName('card');
+		let display = false;
+		for (let j = 0; j < cards.length; j++) {
+			if (cards[j].style.display !== 'none') {
+				display = true;
+			}
+		}
+		if (display) {
+			cardGrids[i].previousElementSibling.style.display = 'block'
+			cardGrids[i].style.display = 'block';
+		} else {
+			cardGrids[i].previousElementSibling.style.display = 'none'
+			cardGrids[i].style.display = 'none';
+		}
+	}
+
+	// Reload masonry layout
+	$('.card-grid').masonry('layout');
+}
 </script>
