@@ -24,7 +24,7 @@ header:
   text:
   - This page contains academic related notes and documents. I try to fill-in as much content as I can from the courses I've taken. ⚠ Only use content from this page as reference material and always uphold academic integrity.
   - Please feel free to contact me if there are any mistakes. Alternatively, since this website is also open-source on GitHub, I'm always open to issues and pull requests. &#x1F44C;
-  - <input type="text" id="searchField" onkeyup="searchFunc()" placeholder="Search...">
+  - '<span id="searchFieldIcon">&#128270;</span><input type="text" id="searchField" onkeyup="searchFunc()" placeholder="Search...">'
 ---
 
 <style>
@@ -48,6 +48,9 @@ header:
 	margin-top: .8em;
 	font-size: 1.5em;
 	font-weight: lighter;
+}
+#searchFieldIcon {
+	font-size: 1.5em;
 }
 
 .card {
@@ -195,4 +198,16 @@ function searchFunc() {
 	// Reload masonry layout
 	$('.card-grid').masonry('layout');
 }
+
+$(document).ready(function() {
+	// alert('hi');
+	let regex = /\/documents\/?#\?(.+)/g;
+	let url = window.location.href;
+	let match = decodeURI(regex.exec(url)[1]);
+
+	console.log(match);
+
+	document.getElementById('searchField').value = match;
+	searchFunc();
+});
 </script>
