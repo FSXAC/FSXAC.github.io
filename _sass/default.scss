@@ -6,6 +6,7 @@
 	--link-color: #0050C9;
 	--link-hover-color: #A92626;
 	--frosted-glass-brightness: 1.4;
+	--light-background: #ccc;
 }
 
 /* Page style */
@@ -193,6 +194,14 @@ iframe { display: block; margin-left: auto; margin-right: auto; margin-bottom: 1
 // Sticky nav bar has depth using shadows
 nav.navbar.sticky-top { box-shadow: 0px 2px 3px 0 #00000033; }
 
+// Rough highlighter
+code.highlighter-rouge {
+	padding: 0 3px;
+	border-radius: 3px;
+	color: var(--text-color);
+	background-color: var(--light-background);
+}
+
 // Print override
 @media print {
 	#c-content { font-size: 20px !important; }
@@ -208,7 +217,7 @@ nav.navbar.sticky-top { box-shadow: 0px 2px 3px 0 #00000033; }
 // Tabular numerials
 .numeric { font-variant-numeric: tabular-nums; }
 
-/* Dark mode colors */
+/* Dark mode CSS */
 @media (prefers-color-scheme: dark) {
 	:root {
 		--bg-color: #000;
@@ -217,15 +226,25 @@ nav.navbar.sticky-top { box-shadow: 0px 2px 3px 0 #00000033; }
 		--link-color: rgb(74, 125, 201);
 		--link-hover-color: rgb(199, 91, 91);
 		--frosted-glass-brightness: 0.5;
+		--light-background: #222;
 	}
 
 	#c-content pre.highlight { box-shadow: 0 .5rem 1rem rgba(120,120,120,.6); }
 	#c-content pre.highlight span.nb { color: #fff; }
 	#c-content pre.highlight span.n { color: #fff; }
+	#c-content pre.highlight span.kn { color: #fff; }
+	#c-content pre.highlight span.m { color: #fff; }
+	#c-content pre.highlight span.nn { color: #fff; }
 	#c-content pre.highlight span.p { color: #999; }
 	#c-content pre.highlight span.ow { color: #999; }
 	#c-content pre.highlight span.na { color: #26f; }
 	#c-content pre.highlight span.nc { color: #26f; }
 	#c-content pre.highlight span.nf { color: #26f; }
+	#c-content pre.highlight span.nd { color: rgb(78, 216, 250); }
+	#c-content pre.highlight span.nl { color: rgb(78, 216, 250); }
+	#c-content pre.highlight span.no { color: rgb(78, 216, 250); }
+	#c-content pre.highlight span.py { color: rgb(209, 124, 212); }
 	#c-content pre.highlight span.c, #c-content pre.highlight span.c1, #c-content pre.highlight span.cm { color: #229120; background: #3e463a60; }
+
+	img { opacity: 0.8; }
 }
