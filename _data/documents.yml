@@ -1,7 +1,7 @@
 - category: Electrical
   courses:
   - course_num: 'ELEC 400M'
-    course_name: 'Intro Machine Learning for EE'
+    course_name: 'Intro to Machine Learning for EE'
     date: 2020-01-22
     entries:
       - title: 'Introduction'
