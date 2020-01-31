@@ -29,6 +29,14 @@
   proj: Inventory
   likes: Buffs
   rand: 
+- theme: 3a
+  name: python-colored
+  skills: '<span style="font-family: monospace"><b style="color:#a63">def</b> <span style="color:navy">getSkills</span>():</span>'
+  exp: '<span style="font-family: monospace"><b style="color:#a63">def</b> <span style="color:navy">getExperience</span>():</span>'
+  proj: '<span style="font-family: monospace"><b style="color:#a63">def</b> <span style="color:navy">getProjects</span>():</span>'
+  likes: '<span style="font-family: monospace"><b style="color:#a63">def</b> <span style="color:navy">getHobbies</span>():</span>'
+  rand: '<span style="font-family: monospace">sys.exit(0)</span>'
+
 - theme: 3
   name: python
   skills: '<span style="font-family: monospace">def getSkills():</span>'
