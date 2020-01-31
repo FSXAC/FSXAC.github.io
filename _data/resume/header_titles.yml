@@ -15,13 +15,20 @@
   proj: 'Projects'
   likes: 'Interests & Hobbies'
   rand: 
-- theme: 1
+- theme: 1a
   name: experimental
   skills: 'I Can'
   exp: 'I Was'
   proj: 'I Made'
   likes: 'I Like'
   rand: 'I would like a job please.'
+- theme: 1b
+  name: experimental-2
+  skills: 'My skills'
+  exp: 'I worked as'
+  proj: 'Personal projects'
+  likes: 'In my spare time'
+  rand: 'Thanks.'
 - theme: 2
   name: gamer
   skills: Abilities
