@@ -244,12 +244,12 @@
       flag: wip
     - title: 'SRAM'
       link: '/documents/CPEN412/2020-01-20-Static-Memory-(SRAM)'
-      flag: new
     - title: 'Asynchronous DRAM'
       link: '/documents/CPEN412/2020-01-27-DRAM'
-      flag: new
     - title: 'Synchronous DRAM'
       link: '/documents/CPEN412/2020-01-29-Synchronous-DRAM'
+    - title: 'Non-Volatile Memory'
+      link: '/documents/CPEN412/2020-02-03-Non-Volatile-Memory-Technology'
       flag: new
   # - course_num: 'CPEN 411'
   #   course_name: 'Computer Architecture'
