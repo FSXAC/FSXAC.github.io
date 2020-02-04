@@ -256,7 +256,7 @@
     - title: 'Synchronous DRAM'
       link: '/documents/CPEN412/2020-01-29-Synchronous-DRAM'
     - title: 'Non-Volatile Memory'
-      link: '/documents/CPEN412/2020-02-03-Non-Volatile-Memory-Technology'
+      link: '/documents/CPEN412/2020-02-03-NVM'
       flag: new
   # - course_num: 'CPEN 411'
   #   course_name: 'Computer Architecture'
