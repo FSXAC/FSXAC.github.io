@@ -14,15 +14,17 @@
         link: '/documents/ELEC400M/4-linreg.pdf'
       - title: 'Linear Logistic Regression'
         link: '/documents/ELEC400M/5-logit.pdf'
-        flag: new
       - title: 'Gradient Descent'
         link: '/documents/ELEC400M/6-gd.pdf'
-        flag: new
       - title: 'Stochastic Gradient Descent'
         link: '/documents/ELEC400M/7-sdc.pdf'
-        flag: new
       - title: 'Linear Model & Multiclass Logistic Regression'
         link: '/documents/ELEC400M/8-linmod.pdf'
+      - title: 'Non-Linear Transformations'
+        link: '/documents/ELEC400M/9-nlinxform.pdf'
+        flag: new
+      - title: 'Perception Neural Network'
+        link: '/documents/ELEC400M/10-nn.pdf'
         flag: new
   - course_num: 'ELEC 402'
     course_name: 'VLSI'
