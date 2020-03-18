@@ -26,7 +26,7 @@ header:
 
 <div class="collapse" id="collapseExample">
 <div class="alert alert-warning" role="alert">
-Exercise <a href="https://www.ottawapublichealth.ca/en/public-health-topics/self-isolation-instructions-for-novel-coronavirus-covid-19.aspx">Social-Distancing</a>. Flatten the curve.
+Please, for the sake of health and safety, stay home and exercise <a href="https://www.ottawapublichealth.ca/en/public-health-topics/self-isolation-instructions-for-novel-coronavirus-covid-19.aspx">Social-Distancing</a>. Flatten the curve!
 </div>
 </div>
 
