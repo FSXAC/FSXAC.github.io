@@ -12,7 +12,11 @@
 <link rel="stylesheet" href="/assets/fonts/Suisse/styleA.css">
 <link rel="stylesheet" href="/assets/css/default.css">
 {% for line in page.extra_css %}{{ line }}{% endfor %}
+{% if page.full_jquery %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+{% else %}
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+{% endif %}
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 {% if page.use_math %}{% include mathjax %}{% endif %}
 {% for line in page.extra_js %}{{ line }}{% endfor %}
