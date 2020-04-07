@@ -75,6 +75,7 @@ ul { list-style-type: square; padding-inline-start: 1.5em; }
 						</select>
 					</p>
 					<p><label><input type="checkbox" id="header-text-uppercase-select" checked="checked">&nbsp;Heading text uppercase</label></p>
+					<p><label><input type="checkbox" id="header-text-random-lastline">&nbsp;Show random line</label></p>
 				</form>
 				<hr>
 	
@@ -100,7 +101,6 @@ ul { list-style-type: square; padding-inline-start: 1.5em; }
 					<p><label><input type="checkbox" id="content-proj-fullname">&nbsp;Use full names for projects</label></p>
 					<p><label><input type="checkbox" id="content-proj-tech-used" checked="checked">&nbsp;Show technology used for projects</label></p>
 					<p><label><input type="checkbox" id="content-show-likes-select" checked="checked">&nbsp;Show likes/hobbies</label></p>
-					<p><label><input type="checkbox" id="content-show-random-lastline">&nbsp;Show random line</label></p>
 				</form>
 
 				<hr>
@@ -293,7 +293,7 @@ function updateResumeSettings() {
 	const IS_HOBBIES_VISIBLE = $('#content-show-likes-select').prop('checked');
 	const IS_SHOWING_EXP_TECH_USED = $('#content-exp-tech-used').prop('checked');
 	const IS_SHOWING_PROJ_TECH_USED = $('#content-proj-tech-used').prop('checked');
-	const IS_SHOWING_RAND_LASTLINE = $('#content-show-random-lastline').prop('checked');
+	const IS_SHOWING_RAND_LASTLINE = $('#header-text-random-lastline').prop('checked');
 
 	// Apply content settings
 	let workContainerChildren = $('#work-exp-container').children();

@@ -9,6 +9,8 @@ title: I am Muchen He
 # Title
 titlebar: Home
 
+full_jquery: true
+
 # Header
 header:
   image: '/assets/img/avatar-new-small.jpg'
@@ -19,6 +21,16 @@ header:
   - I previously worked at Intel, EA BioWare, and VitalMechanics.
   - <i class="text-muted" id="my-facts"></i>
 ---
+
+<a class="btn btn-lg btn-outline-warning" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" onclick="toggleExpand()">😷</a>
+
+<div class="collapse" id="collapseExample">
+<div class="alert alert-warning" role="alert">
+Please, for the sake of health and safety, stay home and exercise <a href="https://www.ottawapublichealth.ca/en/public-health-topics/self-isolation-instructions-for-novel-coronavirus-covid-19.aspx">Social-Distancing</a>. Flatten the curve!
+</div>
+</div>
+
+<div class="my-3"></div>
 
 ## Index
 
@@ -53,5 +65,11 @@ header:
 
 <script src="/assets/js/facts.js"></script>
 <script>
-makeRandomMessage('my-fact', 'my-facts')
+makeRandomMessage('my-fact', 'my-facts');
+function toggleExpand() {
+  function toggleExpandDo() {
+    $('body').animate({letterSpacing: "10px"}, 1000, "swing");
+  }
+  setTimeout(toggleExpandDo, 250);
+}
 </script>
