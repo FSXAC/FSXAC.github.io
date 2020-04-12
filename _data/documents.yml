@@ -356,6 +356,16 @@
   #   course_name: 'Calculus I'
 - category: Others
   courses:
+  - course_num: 'APSC 450'
+    course_name: 'Engineering Ethics and Professionalism'
+    date: 2020-04-11
+    entries:
+    - title: 'Week 2'
+      link: '/documents/APSC450/Week-2'
+    - title: 'Week 3'
+      link: '/documents/APSC450/Week-3'
+    - title: 'Week 4'
+      link: '/documents/APSC450/Week-4'
   - course_num: 'MECH 431'
     course_name: 'Engineering Economics'
     date: 2018-07-22
