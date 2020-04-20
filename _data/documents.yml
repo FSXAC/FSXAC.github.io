@@ -1,5 +1,11 @@
 - category: Electrical
   courses:
+  - course_num: 'ELEC 441'
+    course_name: 'Control Systems II',
+    date: 2020-04-19
+    entries:
+      - title: 'Project Report',
+        link: '/documents/ELEC441/report'
   - course_num: 'ELEC 400M'
     course_name: 'Intro to Machine Learning for EE'
     date: 2020-01-22
