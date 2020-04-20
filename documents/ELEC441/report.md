@@ -1,6 +1,6 @@
 ---
-title: Paper Machine Moisture Contro
-date: 2020-04-17
+title: Paper Machine Moisture Control
+date: 2020-04-19
 categories: ELEC 441
 ubc_handin: true
 use_math: true
