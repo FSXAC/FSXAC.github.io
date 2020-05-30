@@ -1,0 +1,25 @@
+default:
+  - title: "E-mail"
+    link: "mailto:i@muchen.ca"
+    text: "i@muchen.ca"
+  - title: "GitHub"
+    link: "https://www.github.com/FSXAC"
+    text: "FSXAC"
+  # - title: "LinkedIn"
+  #   link: "https://www.linkedin.com/in/muchen-he-6a3716b3/"
+  #   text: "Link"
+social:
+  - title: "Instagram"
+    link: "https://www.instagram.com/muchen.he/"
+    text: "@muchen.he"
+  - title: "Steam"
+    link: "#"
+    text: "fsxaircanada01"
+  - title: "TikTok"
+    link: "https://www.tiktok.com/@muchen.he"
+    text: "@muchen.he"
+  - title: "YouTube"
+    link: "#"
+    text: "Muchen"
+  
+

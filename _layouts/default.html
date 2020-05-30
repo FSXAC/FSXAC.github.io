@@ -3,7 +3,7 @@ layout: basic
 ---
 
 <header>
-<div class="container">
+<!-- <div class="container">
     {% if page.header.image %}<img class="rounded-circle shadow my-4" src="{{ page.header.image }}" alt="{{ page.header.image }}">{% endif %}
     {% if page.header.text_color %}<h1 class="display" style="color: {{ page.header.text_color }}">{% else %}<h1 class="display">{% endif %}
         {{ page.title }}
@@ -14,7 +14,7 @@ layout: basic
         </p>
     {% endfor %}
     {% for extra in page.header.extra %}{{ extra }}{% endfor %}
-</div>
+</div> -->
 </header>
 <div id='main' class="container">
 	{{ content }}
