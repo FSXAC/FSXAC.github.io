@@ -1,7 +1,5 @@
 ---
 # Standard front matter stuff
-author: Muchen He
-date: 2019-03-23
 layout: default
 title: I am Muchen He
 
