@@ -1,13 +1,15 @@
+# Basic config
 url: https://www.muchen.ca
 
+# Markdown settings
 markdown: kramdown
-
 kramdown:
   auto_ids: true
   enable_coderay: false
   hard_wrap: false
   input: GFM
 
+# Styling
 sass:
   style: compressed
 
