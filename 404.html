@@ -1,26 +1,18 @@
 ---
-layout: default
+layout: basic
 title: 404 Not Found
-
-# Custom stuff
-# Title
 titlebar: 404
 
-# Header
-header:
-  color: 'darkred'
-  gradient: 'linear-gradient(170deg, rgba(64,0,0,1) 0%, rgba(139,0,0,1) 100%)'
-  text_color: white
-  text:
-  - The page that you're looking for does not exist.
-  - <a class="btn btn-outline-light" href="/">Go back to civilization?</a>
+show_navigation: false
+show_footer: false
 ---
 
+<div style="text-align: center; padding-top: 20%;">
+  <h1 style="font-size: 800%; font-weight: lighter;">404</h1>
+  <p>The page you're looking for no longer exist, or have never existed.</p>
+  <a href="/" class="btn btn-outline-quaternary">Go back to civilization</a>
+</div>
+
 <style>
-a.btn-outline-light {
-	color: white;
-}
-a.btn-outline-light:hover {
-	color: darkred;
-}
+
 </style>

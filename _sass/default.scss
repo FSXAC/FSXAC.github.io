@@ -1,10 +1,4 @@
 /* Color Theme Swatches in Hex */
-$COLOR_THEME_1: #0460D9;
-$COLOR_THEME_2: #0476D9;
-$COLOR_THEME_3: #1E3E59;
-$COLOR_THEME_4: #F24F13;
-$COLOR_THEME_5: #F2F2F2;
-
 :root {
 	--theme-bg: #f2f2f2;
 	--theme-primary: #0460d9;
@@ -14,8 +8,6 @@ $COLOR_THEME_5: #F2F2F2;
 
 	--text-color: #000;
 	--text-color-disabled: #0006;
-	--link-color: $COLOR_THEME_1;
-	--link-hover-color: $COLOR_THEME_4;
 	--frosted-glass-brightness: 1.25;
 	--light-background: #ccc;
 }
@@ -24,7 +16,7 @@ $COLOR_THEME_5: #F2F2F2;
 html { font-size: 16px; }
 body {
 	cursor: default;
-	font-family: "Suisse Intl", Helvetica, "Microsoft Yahei", sans-serif;
+	font-family: "suisse intl", sans-serif;
 	line-height: 1.5;
 	color: var(--text-color);
 	background-color: var(--theme-bg);
@@ -43,8 +35,8 @@ h5 { font-size: 1.15em; }
 .navbar-mh .navbar-nav .nav-link:hover { color: var(--theme-quaternary); }
 li.nav-item.active .nav-link { color: var(--text-color); border-bottom: 3px solid var(--text-color); }
 .navbar-mh {
-	backdrop-filter: blur(16px) contrast(0.5) brightness(var(--frosted-glass-brightness));
-	-webkit-backdrop-filter: blur(16px) contrast(0.5) brightness(var(--frosted-glass-brightness));
+	backdrop-filter: blur(20px) contrast(0.5) brightness(var(--frosted-glass-brightness));
+	-webkit-backdrop-filter: blur(20px) contrast(0.5) brightness(var(--frosted-glass-brightness));
 }
 .navbar-mh .navbar-toggler-icon {
 	background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(120,120,120,0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
@@ -85,6 +77,26 @@ a:hover { color: var(--theme-quaternary); }
 }
 .btn:active::after { transform: scale(0,0); opacity: 0.2; transition: 0s; }
 .btn-xs { padding: 0 .25em; font-size: 0.9em; }
+
+/* Button colors */
+.btn-outline-primary {
+	color: var(--theme-primary);
+	border-color: var(--theme-primary);
+}
+.btn-outline-primary:hover {
+	color: var(--theme-bg);
+	background-color: var(--theme-primary);
+	border-color: var(--theme-primary);
+}
+.btn-outline-quaternary {
+	color: var(--theme-quaternary);
+	border-color: var(--theme-quaternary);
+}
+.btn-outline-quaternary:hover {
+	color: var(--theme-bg);
+	background-color: var(--theme-quaternary);
+	border-color: var(--theme-quaternary);
+}
 
 // /* Definitions */
 // dfn { border-bottom: 1px #ddd dotted; cursor:help; position: relative; }
@@ -223,13 +235,16 @@ a:hover { color: var(--theme-quaternary); }
 /* Dark mode CSS */
 @media (prefers-color-scheme: dark) {
 	:root {
-		--bg-color: #000;
-		--text-color: #eee;
-		--nav-bg-color: #111;
-		--link-color: rgb(74, 125, 201);
-		--link-hover-color: rgb(199, 91, 91);
-		--frosted-glass-brightness: 0.5;
-		--light-background: #222;
+		--theme-bg: #080808;
+		--theme-primary: #0460d9;
+		--theme-secondary: #0476d9;
+		--theme-tertiary: #1e3e59;
+		--theme-quaternary: #f24f13;
+
+		--text-color: #f8f8f8;
+		--text-color-disabled: #fff6;
+		--frosted-glass-brightness: 0.4;
+		--light-background: #ccc;
 	}
 
 	#c-content pre.highlight { box-shadow: 0 .5rem 1rem rgba(120,120,120,.6); }
