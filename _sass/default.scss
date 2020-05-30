@@ -1,10 +1,21 @@
-/* Constant color (light) */
+/* Color Theme Swatches in Hex */
+$COLOR_THEME_1: #0460D9;
+$COLOR_THEME_2: #0476D9;
+$COLOR_THEME_3: #1E3E59;
+$COLOR_THEME_4: #F24F13;
+$COLOR_THEME_5: #F2F2F2;
+
 :root {
+	--theme-bg: #f2f2f2;
+	--theme-primary: #0460d9;
+	--theme-secondary: #0476d9;
+	--theme-tertiary: #1e3e59;
+	--theme-quaternary: #f24f13;
+
 	--text-color: #000;
-	--bg-color: #fdfdfd;
-	--nav-bg-color: #f8f9fa;
-	--link-color: #0050C9;
-	--link-hover-color: #A92626;
+	--text-color-disabled: #0006;
+	--link-color: $COLOR_THEME_1;
+	--link-hover-color: $COLOR_THEME_4;
 	--frosted-glass-brightness: 1.4;
 	--light-background: #ccc;
 }
@@ -16,7 +27,7 @@ body {
 	font-family: "Suisse Intl", Helvetica, "Microsoft Yahei", sans-serif;
 	line-height: 1.5;
 	color: var(--text-color);
-	background-color: var(--bg-color);
+	background-color: var(--theme-bg);
 }
 
 /* Header text custom font sizes */
@@ -28,13 +39,10 @@ h4 { font-size: 1.25em; }
 h5 { font-size: 1.15em; }
 
 /* Nav bar */
-li.nav-item.active a { border-bottom: 2px solid var(--text-color); }
-li.nav-item { color: var(--text-color); }
-// .navbar-brand { font-weight: bold; padding: 0; color: var(--text-color); }
-// .navbar-brand:hover { color: var(--text-color); }
-.navbar-mh .navbar-nav .nav-link { color: var(--text-color); }
+.navbar-mh .navbar-nav .nav-link { color: var(--text-color-disabled); }
+.navbar-mh .navbar-nav .nav-link:hover { color: var(--theme-quaternary); }
+li.nav-item.active .nav-link { color: var(--text-color); border-bottom: 3px solid var(--text-color); }
 .navbar-mh {
-	// Custom navbar style
 	backdrop-filter: blur(16px) contrast(0.5) brightness(var(--frosted-glass-brightness));
 	-webkit-backdrop-filter: blur(16px) contrast(0.5) brightness(var(--frosted-glass-brightness));
 }
@@ -42,43 +50,41 @@ li.nav-item { color: var(--text-color); }
 	background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(120,120,120,0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
 }
 
-// /* Make dictionaries align better */
-// .dl-horizontal > dt { text-align: right; }
-// .dl-horizontal > dd { margin-bottom: 0; }
-// @media (max-width: 768px) {
-// 	.dl-horizontal > dt { text-align: left; margin-top: .4em; }
-// }
+/* Make dictionaries align better */
+.dl-horizontal > dt { text-align: right; }
+.dl-horizontal > dd { margin-bottom: 0; }
+@media (max-width: 768px) { .dl-horizontal > dt { text-align: left; margin-top: .4em; } }
 
-// /* Make footer more spacious */
-// footer { margin: 2em 0; }
+/* Make footer more spacious */
+footer { margin: 2em 0; }
 
-// /* Paragraph vertical spacing */
-// p { margin: .5em 0; }
+/* Paragraph vertical spacing */
+p { margin: .5em 0; }
 
-// /* Increase anchor color contrast */
-// a { color: var(--link-color); }
-// a:hover { color: var(--link-hover-color); }
+/* Increase anchor color contrast */
+a { color: var(--theme-secondary); }
+a:hover { color: var(--theme-quaternary); }
 
-// /* Buttons */
-// .btn { position:relative; overflow: hidden; transform: translate3d(0,0,0); }
-// .btn::after {
-// 	content: "";
-// 	display: block;
-// 	position: absolute;
-// 	width: 100%;
-// 	height: 100%;
-// 	top: 0;
-// 	left: 0;
-// 	pointer-events: none;
-// 	background-image: radial-gradient(circle,#000 10%,transparent 10.01%);
-// 	background-repeat: no-repeat;
-// 	background-position: 50%;
-// 	transform: scale(10,10);
-// 	opacity: 0;
-// 	transition: ease-out transform .5s, opacity .5s;
-// }
-// .btn:active::after { transform: scale(0,0); opacity: 0.2; transition: 0s; }
-// .btn-xs { padding: 0 .25em; font-size: 0.9em; }
+/* Buttons */
+.btn { position:relative; overflow: hidden; transform: translate3d(0,0,0); }
+.btn::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	background-image: radial-gradient(circle,#000 10%,transparent 10.01%);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	transform: scale(10,10);
+	opacity: 0;
+	transition: ease-out transform .5s, opacity .5s;
+}
+.btn:active::after { transform: scale(0,0); opacity: 0.2; transition: 0s; }
+.btn-xs { padding: 0 .25em; font-size: 0.9em; }
 
 // /* Definitions */
 // dfn { border-bottom: 1px #ddd dotted; cursor:help; position: relative; }
