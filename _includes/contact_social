@@ -1,0 +1,10 @@
+<a class="btn btn-outline-primary btn-xs mt-3" data-toggle="collapse" href="#social-media-collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Show social media links &#x1f174;</a>
+<div class="collapse" id="social-media-collapse">
+	<h2>Social Media</h2>
+	<dl class="row dl-horizontal">
+		{% for item in site.data.contact.social %}
+		<dt class="col-md-2">{{ item.title }}</dt>
+		<dd class="col-md-10"><a href="{{ item.link }}">{{ item.text }}</a></dd>
+		{% endfor %}
+	</dl>
+</div>

@@ -1,13 +1,15 @@
 /* Color Theme Swatches in Hex */
 :root {
-	--theme-bg: #f2f2f2;
-	--theme-primary: #0460d9;
-	--theme-secondary: #0476d9;
-	--theme-tertiary: #1e3e59;
-	--theme-quaternary: #f24f13;
 
-	--text-color: #000;
+	--theme-light: #f2f2f2;
+	--theme-primary: #ff6600;
+	--theme-dark: #101010;
+	
+	--theme-bg: var(--theme-light);
+	--text-color: var(--theme-dark);
 	--text-color-disabled: #0006;
+	--link-color: #0050C9;
+	--link-hover-color: #A92626;
 	--frosted-glass-brightness: 1.25;
 	--light-background: #ccc;
 }
@@ -23,9 +25,10 @@ body {
 }
 
 /* Header text custom font sizes */
+h1, h2, h3, h4 { font-weight: bold; }
 h1 { font-size: 3em; line-height: 1.05; }
 h1.display { font-weight: 300; line-height: 1.2; }
-h2 { font-size: 2em; line-height: 1.2; }
+h2 { font-size: 1.75em; line-height: 1.2; }
 h3 { font-size: 1.5em; line-height: 1.3; }
 h4 { font-size: 1.25em; }
 h5 { font-size: 1.15em; }
@@ -33,7 +36,7 @@ h5 { font-size: 1.15em; }
 /* Nav bar */
 .navbar-mh .navbar-nav .nav-link { color: var(--text-color-disabled); }
 .navbar-mh .navbar-nav .nav-link:hover { color: var(--theme-quaternary); }
-li.nav-item.active .nav-link { color: var(--text-color); border-bottom: 3px solid var(--text-color); }
+li.nav-item.active .nav-link { color: var(--text-color); border-bottom: 3px solid var(--theme-primary); }
 .navbar-mh {
 	backdrop-filter: blur(20px) contrast(0.5) brightness(var(--frosted-glass-brightness));
 	-webkit-backdrop-filter: blur(20px) contrast(0.5) brightness(var(--frosted-glass-brightness));
@@ -54,8 +57,8 @@ footer { margin: 2em 0; }
 p { margin: .5em 0; }
 
 /* Increase anchor color contrast */
-a { color: var(--theme-secondary); }
-a:hover { color: var(--theme-quaternary); }
+a { color: var(--link-color); }
+a:hover { color: var(--link-hover-color); }
 
 /* Buttons */
 .btn { position:relative; overflow: hidden; transform: translate3d(0,0,0); }
@@ -88,14 +91,12 @@ a:hover { color: var(--theme-quaternary); }
 	background-color: var(--theme-primary);
 	border-color: var(--theme-primary);
 }
-.btn-outline-quaternary {
-	color: var(--theme-quaternary);
-	border-color: var(--theme-quaternary);
-}
-.btn-outline-quaternary:hover {
-	color: var(--theme-bg);
-	background-color: var(--theme-quaternary);
-	border-color: var(--theme-quaternary);
+
+/* Limit narrow width of container */
+@media (min-width: 992px) {
+    .container{
+        max-width: 800px;
+    }
 }
 
 // /* Definitions */
@@ -200,14 +201,11 @@ a:hover { color: var(--theme-quaternary); }
 // // Fix math in lists
 // #c-content li .MJXc-display { display: inline; margin: inherit; }
 
-// // Default selected style override
-// ::selection { background: #4488ff44; }
+// Default selected style override
+::selection { background: #ffa84444; }
 
-// // Make navbar toggler less busy
-// .navbar-toggler { padding: 0; border: none; }
-
-// // Sticky nav bar has depth using shadows
-// nav.navbar.sticky-top { box-shadow: 0px 2px 3px 0 #00000033; }
+// Make navbar toggler less busy
+.navbar-toggler { padding: 0; border: none; }
 
 // // Rough highlighter
 // code.highlighter-rouge {
@@ -236,10 +234,6 @@ a:hover { color: var(--theme-quaternary); }
 @media (prefers-color-scheme: dark) {
 	:root {
 		--theme-bg: #080808;
-		--theme-primary: #0460d9;
-		--theme-secondary: #0476d9;
-		--theme-tertiary: #1e3e59;
-		--theme-quaternary: #f24f13;
 
 		--text-color: #f8f8f8;
 		--text-color-disabled: #fff6;
