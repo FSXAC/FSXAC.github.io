@@ -1,31 +1,21 @@
 ---
-author: Muchen He
 layout: default
 title: Documents
 description: A collection of course notes and more
 
-# Additional includes
-extra_js:
-- <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" crossorigin="anonymous"></script>
-
-titlebar: Document
 nav_active: /documents
 permalink: /documents
 
 use_category_instead_of_name: false
 show_footer: true
 show_navigation: true
-
-# Header
-header:
-  color: '#324'
-  text_color: white
-  gradient: 'linear-gradient(131deg, rgba(69,95,181,1) 0%, rgba(158,12,95,1) 100%);'
-  text:
-  - This page contains academic related notes and documents. I try to fill-in as much content as I can from the courses I've taken. ⚠ Only use content from this page as reference material and always uphold academic integrity.
-  - Please feel free to contact me if there are any mistakes. Alternatively, since this website is also open-source on GitHub, I'm always open to issues and pull requests. &#x1F44C;
-  - '<span id="searchFieldIcon">&#128270;</span><input type="text" id="searchField" onkeyup="searchFunc()" placeholder="Search...">'
 ---
+
+This page contains academic related notes and documents. I try to fill-in as much content as I can from the courses I've taken. ⚠ Only use content from this page as reference material and always uphold academic integrity.
+
+Please feel free to contact me if there are any mistakes. Alternatively, since this website is also open-source on GitHub, I'm always open to issues and pull requests. &#x1F44C;
+
+<span id="searchFieldIcon">&#128270;&nbsp;</span><input type="text" id="searchField" onkeyup="searchFunc()" placeholder="Search...">
 
 <style>
 :root {
@@ -43,50 +33,33 @@ header:
 #searchField {
 	border: none;
 	background-color: transparent;
-	border-bottom: 1px dotted white;
-	color: white;
+	border-bottom: 1px dotted var(--text-color);
+	color: var(--text-color);
 	margin-top: .8em;
-	font-size: 1.5em;
-	font-weight: lighter;
 }
 #searchFieldIcon {
-	font-size: 1.5em;
+	font-size: 1.25em;
 }
 
-.card {
-    width: 100%;
-    margin-bottom: 12px;
-	border: none;
-	background-color: var(--card-bg-color);
-}
-.card-header {
-    background-color: transparent;
-    border-bottom: none;
-}
-.card-body {
-    border-top: 1px solid var(--card-sep-color);
-    padding: 0;
-	padding-top: .5em;
-	
-}
+.card { width: 100%; margin-bottom: 1em; border: none; background: transparent; }
+.card-header { background-color: transparent; border-bottom: none; }
+.card-body { padding: 0; }
 .card-body .list-group .list-group-item {
-    border: none;
+	border: none;
     padding: 0;
     white-space: nowrap;
     text-overflow: ellipsis;
 	overflow: hidden;
-	background-color: var(--card-bg-color);
+	margin: 0;
+	background: transparent;
 }
-.card-body .list-group .list-group-item .badge {
-    margin-left: .5em;
-}
-
 .card-body .list-group .list-group-item .btn-entry {
 	border: 1px solid var(--link-color);
 	color: var(--link-color);
 	margin-top: .1em;
 	margin-bottom: .1em;
 }
+
 .card-body .list-group .list-group-item .btn-entry:hover {
 	border-color: var(--link-hover-color);
 	color: white;
@@ -102,6 +75,19 @@ header:
 	.card { width: 49%; }
     .card-gutter-sizer { width: 2%; }
 }
+
+.flag-draft {
+	border-left: 2px solid gray;
+	padding-left: 0.25em;
+}
+.flag-new {
+	border-left: 2px solid green;
+	padding-left: 0.25em;
+}
+.flag-other {
+	border-left: 2px solid gold;
+	padding-left: 0.25em;
+}
 </style>
 
 {% for category in site.data.documents %}
@@ -115,32 +101,33 @@ header:
 	<div id="{{ course.course_num | replace: ' ', '-'}}" class="card p-0">
 	<div class="card-header p-0">
 		<small>{{ course.course_num | upcase }}</small>
-		<h3>{{ course.course_name }}</h3>
+		<h4>{{ course.course_name }}</h4>
 		<!-- <small>Last updated {{ course.date | default: 'never' }}</small> -->
 	</div>
 	<div class="card-body">
 		<ul class='list-group list-group-flush'>
 
 		{% for entry in course.entries %}
-		<lBi class='list-group-item'>
-		{% if entry.group %}
-			{{ entry.title }}
-			{% for enum_entry in entry.group %}
-			<a class="btn btn-xs btn-entry" href="{{ enum_entry.link }}">{{ enum_entry.enum }}</a>
-			{% endfor %}
-		{% else %}
-		<a href="{{ entry.link }}">{{ entry.title }}</a>
-		{% endif %}
 
-		{% if entry.flag == 'draft' %}
-		<span class="badge badge-secondary">draft</span>
-		{% elsif entry.flag == 'new' %}
-		<span class="badge badge-success">new</span>
-		{% elsif entry.flag %}
-		<span class="badge badge-warning">{{ entry.flag }}</span>
-		{% endif %}
+		<li class='list-group-item'>
+			{% if entry.group %}
+				{{ entry.title }}
+				{% for enum_entry in entry.group %}
+					<a class="btn btn-xs btn-entry" href="{{ enum_entry.link }}">{{ enum_entry.enum }}</a>
+				{% endfor %}
+			{% else %}
+				{% if entry.flag == 'draft' %}
+					<a href="{{ entry.link }}" class="flag-draft" title="{{ entry.flag }} - {{ entry.title }}">{{ entry.title }}</a>
+				{% elsif entry.flag == 'new' %}
+					<a href="{{ entry.link }}" class="flag-new" title="{{ entry.flag }} - {{ entry.title }}">{{ entry.title }}</a>
+				{% elsif entry.flag %}
+					<a href="{{ entry.link }}" class="flag-other" title="{{ entry.flag }} - {{ entry.title }}">{{ entry.title }}</a>
+				{% else %}
+					<a href="{{ entry.link }}" title="{{ entry.title }}">{{ entry.title }}</a>
+				{% endif %}
+			{% endif %}
+		</li>
 
-		</lBi>
 		{% endfor %}
 
 		</ul>
@@ -152,7 +139,7 @@ header:
 </section>
 {% endfor %}
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" crossorigin="anonymous"></script>
 <script>
 $('.card-grid').masonry({
     itemSelector: '.card',
