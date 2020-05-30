@@ -22,23 +22,25 @@ img.teaser {
 }
 </style>
 
-{% for post in site.posts %}
-<div class="post-entry my-4">
+# Blog
 
-<h2>{{ post.title }}</h2>
+Occasional memory dump of various things. 
+
+<a href="/archive" class="btn btn-default btn-outline-primary">Archive</a>
+
+{% for post in site.posts %}
+<div class="post-entry py-4">
 <div class="row">
-  <div class="col-md-3 col-lg-2">
+  <div class="col-md-4">
     <a href="{{ post.url }}"><img class="teaser shadow mb-2 mr-2" src="{{ post.header.teaser | default: '/assets/img/logo2019-128.jpg' }}" alt="..."></a>
   </div>
-  <div class="col-md-9 col-lg-10">
-    <p>Published {{ post.date | date: "%Y-%m-%d" }}</p>
-    <p>{{ post.excerpt | strip_html }}</p>
-    <a class="btn btn-outline-dark btn-sm" href="{{ post.url }}">Read more &rarr;</a>
+  <div class="col-8">
+    <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.excerpt | strip_html }}
+      <a href="{{ post.url }}">Read more &rarr;</a>
+    </p>
   </div>
 </div>
 </div>
-<hr>
 {% endfor %}
-
-<a href="/archive" class="btn btn-default btn-outline-dark">Archive</a>
-<a href="/archive2" class="btn btn-default btn-outline-dark">Categories</a>
