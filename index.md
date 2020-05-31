@@ -16,14 +16,39 @@ full_jquery: true
 #   - <i class="text-muted" id="my-facts"></i>
 ---
 
+<style>
+#headshot-img {
+    background-image: url("/assets/img/light-512.jpeg");
+    background-size: cover;
+    width: 100%;
+    max-width: 256px;
+    margin-bottom: 2em;
+}
+#headshot-img::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+@media (prefers-color-scheme: dark) {
+    #headshot-img {
+        background-image: url("/assets/img/dark-512.jpeg");
+    }
+}
+</style>
 
-<h1 style="font-size: 800%; font-weight: bold">Hi,</h1>
-
-My name is Muchen and welcome to my website.
-
-I am a upcoming graduate student pursuing a Masters in Applied Science at the University of British Columbia in the *Computer-Structures-Group*. 
-
-Here, you will find my projects, blogs, and my course notes. This website is statically generated with *Jekyll* and hosted on *GitHub Pages*.
+<div class="row">
+    <div class="col-md-4">
+        <div id="headshot-img"></div>
+        <!-- <img src="/assets/img/light.jpg"> -->
+    </div>
+    <div class="col-md-8">
+    <h1 style="font-size: 800%; font-weight: bold">Hi,</h1>
+    {% capture intro %}
+    {% include intro.md %}
+    {% endcapture %}
+    {{ intro | markdownify }}
+    </div>
+</div>
 
 <div class="my-5"></div>
 

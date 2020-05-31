@@ -5,16 +5,15 @@ default:
   - title: "GitHub"
     link: "https://www.github.com/FSXAC"
     text: "FSXAC"
-  # - title: "LinkedIn"
-  #   link: "https://www.linkedin.com/in/muchen-he-6a3716b3/"
-  #   text: "Link"
-social:
+  - title: "LinkedIn"
+    link: "https://www.linkedin.com/in/muchen-he-6a3716b3/"
+    text: "Link"
   - title: "Instagram"
     link: "https://www.instagram.com/muchen.he/"
     text: "@muchen.he"
-  - title: "Steam"
-    link: "#"
-    text: "fsxaircanada01"
+  # - title: "Steam"
+  #   link: "#"
+  #   text: "fsxaircanada01"
   - title: "TikTok"
     link: "https://www.tiktok.com/@muchen.he"
     text: "@muchen.he"
@@ -22,4 +21,3 @@ social:
     link: "#"
     text: "Muchen"
   
-
