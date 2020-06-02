@@ -56,9 +56,12 @@ show_footer: true
 	.flag-draft { text-decoration: line-through; }
 	</style>
 
-This page contains academic related notes and documents. I try to fill-in as much content as I can from the courses I've taken. ⚠ Only use content from this page as reference material and always uphold academic integrity.
+# 📓
+{: .display-1}
 
-Please feel free to contact me if there are any mistakes. Alternatively, since this website is also open-source on GitHub, I'm always open to issues and pull requests. &#x1F44C;
+This page contains my notes/documents/reports for the courses I've taken. I try to fill in as much as possible but there is still lots missing. Please only use content from this page as reference material for studying. I do not condomn cheating!
+
+Please feel free to contact me if there are any mistakes. Alternatively, since this website is also open-source on GitHub, I'm always open to issues and pull requests.
 
 <span id="searchFieldIcon">&#128270;&nbsp;</span><input type="text" id="searchField" onkeyup="searchFunc()" placeholder="Search...">
 
@@ -72,6 +75,7 @@ Please feel free to contact me if there are any mistakes. Alternatively, since t
 	{% if course.entries %}
 	<div id="{{ course.course_num | replace: ' ', '-'}}" class="card p-0">
 	<div class="card-header p-0">
+		<p class="m-0" style="font-size: 2em;">{{ course.emoji }}</p>
 		<small>{{ course.course_num | upcase }}</small>
 		<h6><b>{{ course.course_name }}</b></h6>
 		<!-- <small>Last updated {{ course.date | default: 'never' }}</small> -->

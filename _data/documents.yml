@@ -2,12 +2,14 @@
   courses:
   - course_num: 'ELEC 441'
     course_name: 'Control Systems II'
+    emoji: 🎛
     date: 2020-04-19
     entries:
       - title: 'Project Report'
         link: '/documents/ELEC441/report'
   - course_num: 'ELEC 400M'
     course_name: 'Intro to Machine Learning for EE'
+    emoji: 🧠
     date: 2020-01-22
     entries:
       - title: 'Introduction'
@@ -34,6 +36,7 @@
         flag: new
   - course_num: 'ELEC 402'
     course_name: 'VLSI'
+    emoji: 🔬
     date: 2019-11-11
     entries:
     - title: 'MOS Part 1'
@@ -66,6 +69,7 @@
       link: '/documents/ELEC402/proj4'
   - course_num: 'ELEC 491'
     course_name: 'Capstone Project for EE'
+    emoji: 💼
     # date: 2019-09-16
     # entries:
     # - title: 'Intro to Capstone Project'
@@ -76,10 +80,13 @@
     #   link: '/documents/ELEC491/2019-09-06-professionalism'
   - course_num: 'ELEC 311'
     course_name: 'Electromagnetic Fields and Waves'
+    emoji: 📡
   - course_num: 'ELEC 315'
     course_name: 'Materials and Devices'
+    emoji: ⚛
   - course_num: 'ELEC 391'
     course_name: 'Electrical Project Studio II'
+    emoji: 🛠
     date: 2018-04-07
     entries:
     # - title: 'Getting Started'
@@ -104,6 +111,7 @@
       link: '/documents/ELEC391/demo3.pdf'
   - course_num: 'ELEC 301'
     course_name: 'Electronic Circuits'
+    emoji: 🎙
     date: 2017-12-17
     entries:
     - title: 'Chapter 1-7'
@@ -162,6 +170,7 @@
       link: '/documents/ELEC301/MP4.pdf'
   - course_num: 'ELEC 321'
     course_name: 'Stochastic Signals and Systems'
+    emoji: 🎲
     date: 2018-03-14
     entries:
     - title: 'Probability'
@@ -210,6 +219,7 @@
       link: '/documents/ELEC321/review'
   - course_num: 'ELEC 341'
     course_name: 'Systems and Control'
+    emoji: 🎚
     date: 2019-03-30
     entries:
     - title: 'Week 1'
@@ -236,6 +246,7 @@
     course_name: 'Engineering Electromagnetics'
   - course_num: 'ELEC 291'
     course_name: 'Electrical Design Studio I'
+    emoji: 🔧
     date: 2019-03-08
     entries:
     - title: 'Project 1 - Reflow Oven Controller'
@@ -246,6 +257,7 @@
   courses:
   - course_num: 'CPEN 412'
     course_name: 'Microcomputer System Design'
+    emoji: 💻
     date: 2020-01-31
     entries:
     - title: 'Intro to Memory'
@@ -274,6 +286,7 @@
   #     link: '/documents/CPEN411/2019-09-05-Introduction'
   - course_num: 'CPEN 311'
     course_name: 'Digital Systems Design'
+    emoji: 🗃
     date: 2019-04-02
     entries:
     - title: 'Combinational Logic'
@@ -338,6 +351,7 @@
   #   course_name: 'Data Structures & Algorithms'
   - course_num: 'APSC 160'
     course_name: 'Computation in Engineering Design'
+    emoji: 🤖
     date: 2018-10-19
     entries:
     - title: 'Final Review'
@@ -346,6 +360,7 @@
   courses:
   - course_num: 'MATH 220'
     course_name: 'Mathematical Proofs'
+    emoji: ⬛️
     date: 2017-12-17
     entries:
     - title: 'Final Review'
@@ -365,6 +380,7 @@
   - course_num: 'APSC 450'
     course_name: 'Engineering Ethics and Professionalism'
     date: 2020-04-11
+    emoji: 👩‍💼
     entries:
     - title: 'Week 2'
       link: '/documents/APSC450/Week-2'
@@ -375,6 +391,7 @@
   - course_num: 'MECH 431'
     course_name: 'Engineering Economics'
     date: 2018-07-22
+    emoji: 📈
     entries:
     - title: 'General Economic Concepts'
       link: '/documents/MECH431/Lesson 2'
@@ -451,6 +468,7 @@
   - course_num: 'ASTR 200'
     course_name: 'Frontiers of Astrophysics'
     date: 2019-09-06
+    emoji: 💫
     entries:
     - title: 'Introduction'
       link: '/documents/ASTR200/2019-09-04-Introduction'
@@ -482,6 +500,7 @@
   - course_num: 'CIVL 200, CIVL 250'
     course_name: 'Engineering and Sustainable Development'
     date: 2019-08-15
+    emoji: 🌳
     entries:
     - title: 'Module 1: Sustainable Development'
       link: '/documents/CIVL250/module1'
@@ -540,6 +559,7 @@
   - course_num: 'APSC 101'
     course_name: 'Intro to Engineering II'
     date: 2016-07-17
+    emoji: 👷‍♂️
     entries:
     - title: 'Final Review'
       link: '/documents/APSC101/apsc'
@@ -548,6 +568,7 @@
   - course_num: 'APSC 100'
     course_name: 'Intro to Engineering I'
     date: 2019-11-01
+    emoji: 👷‍♀️
     entries:
     - title: 'Module 2: Site C Presentation'
       link: 'https://1drv.ms/p/s!Alk5PGqd6dMsgcYArvP8DYDvL5Fnhw?e=0cM6st'
@@ -558,6 +579,7 @@
   - course_num: 'SWED 100, SWED 110'
     course_name: 'Elemetary Swedish I, II'
     date: 2019-11-24
+    emoji: 🇸🇪
     entries:
     - title: '<i>En Man Som Heter Ove</i> (2015) skrivläxa'
       link: /documents/SWED/2019-11-24-ove
@@ -570,3 +592,4 @@
     - title: 'Course Notes'
       link: '/documents/misc/stanford_ml'
       flag: shelved
+    emoji: 🧮

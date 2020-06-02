@@ -1,24 +1,23 @@
 ---
 # Standard front matter stuff
 author: Muchen He
-date: 2019-06-18
 layout: default
+
 title: Projects
 titlebar: Projects
 nav_active: /projects
-header:
-  color: '#835'
-  text_color: white
-  gradient: 'linear-gradient(45deg, rgba(12,80,70,1) 14%, rgba(95,154,194,1) 100%);'
-  text:
-  - This page contains projects that I've created or contributed to. They are ordered reverse-chronicalogically.
-  - The filter below to filter through different types of projects.
 ---
 
 <style>
 .project-item img { width: 100% }
 .project-item p.tech { line-height: 1.15; }
 </style>
+
+# ⭐️
+{: .display-1}
+
+This page contains projects that I've created or contributed to. They are ordered reverse-chronicalogically. (This page also needs to be updated ._.)
+
 
 <div class="row">
 {% for project in site.data.projects %}

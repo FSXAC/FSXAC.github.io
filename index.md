@@ -39,7 +39,6 @@ full_jquery: true
 <div class="row">
     <div class="col-md-4">
         <div id="headshot-img"></div>
-        <!-- <img src="/assets/img/light.jpg"> -->
     </div>
     <div class="col-md-8">
     <h1 style="font-size: 800%; font-weight: bold">Hi,</h1>

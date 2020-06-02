@@ -1,7 +1,7 @@
 - text: 'About'
   url: /
   desc: You are here.
-- text: '&#x1F171;log'
+- text: 'Blog'
   url: /blog
   desc: Just writing my thoughts down occasionally. 
 - text: Documents

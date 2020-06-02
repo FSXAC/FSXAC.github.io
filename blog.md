@@ -18,11 +18,12 @@ img.teaser {
   width: 100%;
   height: 100%;
   max-height: 200px;
-  object-fit: cover;
+  object-fit: covser;
 }
 </style>
 
-# Blog
+# 💻
+{: .display-1}
 
 Occasional memory dump of various things. 
 
