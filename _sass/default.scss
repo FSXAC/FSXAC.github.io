@@ -58,8 +58,8 @@ li.nav-item .nav-link { padding-left: .5em; }
 footer { margin: 2em 0; }
 
 /* Increase anchor color contrast */
-a { color: var(--link-color); }
-a:hover { color: var(--link-hover-color); }
+a { color: var(--link-color); text-decoration: none; }
+a:hover { color: var(--theme-primary); text-decoration: none;}
 
 /* Buttons */
 .btn { position:relative; overflow: hidden; transform: translate3d(0,0,0); }

@@ -5,90 +5,62 @@ description: A collection of course notes and more
 
 nav_active: /documents
 permalink: /documents
-
-use_category_instead_of_name: false
 show_footer: true
-show_navigation: true
 ---
+
+<style>	
+	#searchField {
+		border: none;
+		background-color: transparent;
+		border-bottom: 1px dotted var(--text-color);
+		color: var(--text-color);
+		margin-top: .8em;
+	}
+	#searchFieldIcon { font-size: 1.25em; }
+	
+	.card { width: 100%; margin-bottom: 1em; border: none; background: transparent; }
+	.card-header { background-color: transparent; border-bottom: none; }
+	.card-body { padding: 0; }
+	.card-body .list-group .list-group-item {
+		border: none;
+		padding: 0;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		margin: 0;
+		background: transparent;
+	}
+	.card-body .list-group .list-group-item .btn-entry {
+		border: 1px solid var(--link-color);
+		color: var(--link-color);
+		margin-top: .1em;
+		margin-bottom: .1em;
+		transition: none;
+	}
+	.card-body .list-group .list-group-item .btn-entry:hover {
+		border-color: var(--theme-primary);
+		color: white;
+		background-color: var(--theme-primary);
+	}
+	
+	.card-gutter-sizer { width: 0; }
+	@media screen and (min-width: 992px) {
+		.card { width: 32%; }
+		.card-gutter-sizer { width: 2%; }
+	}
+	@media screen and (min-width: 768px) and (max-width: 992px) {
+		.card { width: 49%; }
+		.card-gutter-sizer { width: 2%; }
+	}
+	
+	.flag-draft { text-decoration: line-through; }
+	</style>
 
 This page contains academic related notes and documents. I try to fill-in as much content as I can from the courses I've taken. ⚠ Only use content from this page as reference material and always uphold academic integrity.
 
 Please feel free to contact me if there are any mistakes. Alternatively, since this website is also open-source on GitHub, I'm always open to issues and pull requests. &#x1F44C;
 
 <span id="searchFieldIcon">&#128270;&nbsp;</span><input type="text" id="searchField" onkeyup="searchFunc()" placeholder="Search...">
-
-<style>
-:root {
-	--card-bg-color: #fff;
-	--card-sep-color: #000a;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--card-bg-color: #000;
-		--card-sep-color: #fff4;
-	}
-}
-
-#searchField {
-	border: none;
-	background-color: transparent;
-	border-bottom: 1px dotted var(--text-color);
-	color: var(--text-color);
-	margin-top: .8em;
-}
-#searchFieldIcon {
-	font-size: 1.25em;
-}
-
-.card { width: 100%; margin-bottom: 1em; border: none; background: transparent; }
-.card-header { background-color: transparent; border-bottom: none; }
-.card-body { padding: 0; }
-.card-body .list-group .list-group-item {
-	border: none;
-    padding: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-	overflow: hidden;
-	margin: 0;
-	background: transparent;
-}
-.card-body .list-group .list-group-item .btn-entry {
-	border: 1px solid var(--link-color);
-	color: var(--link-color);
-	margin-top: .1em;
-	margin-bottom: .1em;
-}
-
-.card-body .list-group .list-group-item .btn-entry:hover {
-	border-color: var(--link-hover-color);
-	color: white;
-	background-color: var(--link-hover-color);
-}
-
-.card-gutter-sizer { width: 0; }
-@media screen and (min-width: 992px) {
-    .card { width: 32%; }
-    .card-gutter-sizer { width: 2%; }
-}
-@media screen and (min-width: 768px) and (max-width: 992px) {
-	.card { width: 49%; }
-    .card-gutter-sizer { width: 2%; }
-}
-
-.flag-draft {
-	border-left: 2px solid gray;
-	padding-left: 0.25em;
-}
-.flag-new {
-	border-left: 2px solid green;
-	padding-left: 0.25em;
-}
-.flag-other {
-	border-left: 2px solid gold;
-	padding-left: 0.25em;
-}
-</style>
 
 {% for category in site.data.documents %}
 <section>
@@ -101,7 +73,7 @@ Please feel free to contact me if there are any mistakes. Alternatively, since t
 	<div id="{{ course.course_num | replace: ' ', '-'}}" class="card p-0">
 	<div class="card-header p-0">
 		<small>{{ course.course_num | upcase }}</small>
-		<h4>{{ course.course_name }}</h4>
+		<h6><b>{{ course.course_name }}</b></h6>
 		<!-- <small>Last updated {{ course.date | default: 'never' }}</small> -->
 	</div>
 	<div class="card-body">
@@ -117,7 +89,7 @@ Please feel free to contact me if there are any mistakes. Alternatively, since t
 				{% endfor %}
 			{% else %}
 				{% if entry.flag == 'draft' %}
-					<a href="{{ entry.link }}" class="flag-draft" title="{{ entry.flag }} - {{ entry.title }}">{{ entry.title }}</a>
+					<a href="{{ entry.link }}" class="flag-draft" title="{{ entry.flag }} - {{ entry.title }}" disabled>{{ entry.title }}</a>
 				{% elsif entry.flag == 'new' %}
 					<a href="{{ entry.link }}" class="flag-new" title="{{ entry.flag }} - {{ entry.title }}">{{ entry.title }}</a>
 				{% elsif entry.flag %}
