@@ -10,7 +10,7 @@
 	--text-color-disabled: #0006;
 	--link-color: #0050C9;
 	--link-hover-color: #A92626;
-	--frosted-glass-brightness: 1.5;
+	--frosted-glass-brightness: 1.0;
 	--light-background: #ccc;
 }
 
@@ -42,8 +42,8 @@ li.nav-item .nav-link { padding-left: .5em; }
 	li.nav-item.active .nav-link { border-left: none; border-bottom: 3px solid var(--theme-primary); }
 }
 .navbar-mh {
-	backdrop-filter: blur(20px) contrast(0.75) brightness(var(--frosted-glass-brightness));
-	-webkit-backdrop-filter: blur(20px) contrast(0.75) brightness(var(--frosted-glass-brightness));
+	backdrop-filter: blur(20px) brightness(var(--frosted-glass-brightness));
+	-webkit-backdrop-filter: blur(20px) brightness(var(--frosted-glass-brightness));
 }
 .navbar-mh .navbar-toggler-icon {
 	background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(120,120,120,0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
