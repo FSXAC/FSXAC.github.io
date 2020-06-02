@@ -32,7 +32,7 @@ header:
 	{% if project.thumbnail %}<img src="{{ project.thumbnail }}" alt="{{ project.name }} thumbnail">{% endif %}
 	<p>{{ project.description }}</p>
 	{% for link in project.links %}
-		<a class="btn btn-sm btn-outline-dark" href="{{ link[1] }}">{{ link[0] | capitalize }}</a>
+		<a class="btn btn-xs btn-outline-primary" href="{{ link[1] }}">{{ link[0] | capitalize }}</a>
 	{% endfor %}
 	<p title="Tech used" class="text-muted tech"><small>{{ project.tech | join: ', ' }}</small></p>
 	</div>

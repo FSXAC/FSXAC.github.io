@@ -19,9 +19,9 @@
 - text: Projects
   url: /projects
   desc: My personal and collaborative project showcase.
-- text: Resume
-  url: /resume
-  desc: My resume is statically generated to HTML. Then I export it as PDF for other uses.
+# - text: Resume
+#   url: /resume
+#   desc: My resume is statically generated to HTML. Then I export it as PDF for other uses.
 # - text: Toolbox
 #   url: /toolbox
 #   desc: Collection of useful (not really) in-browser apps.
