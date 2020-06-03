@@ -22,7 +22,7 @@ img.teaser {
 }
 </style>
 
-# 💻
+# ☕️
 {: .display-1}
 
 Occasional memory dump of various things. 
