@@ -1,19 +1,6 @@
 ---
-# Standard front matter stuff
 layout: default
-title: I am Muchen He
-titlebar: Home
-full_jquery: true
-
-# Header
-# header:
-#   image: '/assets/img/avatar-new-small.jpg'
-#   color: transparent
-#   text:
-#   - A fourth(fifth) year EE student at UBC.
-#   - Currently studying and working on my Capstone project.
-#   - I previously worked at Intel, EA BioWare, and VitalMechanics.
-#   - <i class="text-muted" id="my-facts"></i>
+title: Home
 ---
 
 <style>

@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Blog
-titlebar: Blog
 
 nav_active: /blog
 permalink: /blog

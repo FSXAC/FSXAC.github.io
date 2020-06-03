@@ -4,7 +4,6 @@ author: Muchen He
 layout: default
 
 title: Projects
-titlebar: Projects
 nav_active: /projects
 ---
 

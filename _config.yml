@@ -1,5 +1,12 @@
-# Basic config
+# Build config
+incremental: true
+
+# Site config
+title: "Muchen He"
+description: "Website showcasing Muchen's projects and school notes."
 url: https://www.muchen.ca
+author: Muchen He
+logo: "/assets/img/light-512.jpeg"
 
 # Markdown settings
 markdown: kramdown
@@ -15,15 +22,14 @@ sass:
 
 # Plugins
 plugins:
-  - jemoji
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Defaults
 defaults:
   - scope: # default for everything across the site
       path: ""
     values:
-      author: Muchen He
       show_navigation: true
       show_footer: true
   - scope: # stuff under _posts folder
@@ -41,7 +47,6 @@ defaults:
       nav_active: /documents
       use_category_instead_of_name: true
       show_footer: false
-      # show_navigation: false
   - scope:
       path: ""
       type: "photos"
