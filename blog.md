@@ -15,9 +15,14 @@ header:
 <style>
 img.teaser {
   width: 100%;
-  height: 100%;
-  max-height: 200px;
-  object-fit: covser;
+  max-height: 350px;
+  background-color: #fff;
+  object-fit: cover;
+}
+@media (min-width: 768px) {
+  img.teaser {
+    max-height: 200px;
+  }
 }
 </style>
 
@@ -34,7 +39,7 @@ Occasional memory dump of various things.
   <div class="col-md-4">
     <a href="{{ post.url }}"><img class="teaser shadow mb-2 mr-2" src="{{ post.header.teaser | default: '/assets/img/logo2019-128.jpg' }}" alt="..."></a>
   </div>
-  <div class="col-8">
+  <div class="col-md-8">
     <small>{{ post.date | date: "%Y-%m-%d" }}</small>
     <h2>{{ post.title }}</h2>
     <p>{{ post.excerpt | strip_html }}
