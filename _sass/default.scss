@@ -36,8 +36,8 @@ h5 { font-size: 1.15em; }
 /* Nav bar */
 .navbar-mh .navbar-nav .nav-link { color: var(--text-color-disabled); }
 .navbar-mh .navbar-nav .nav-link:hover { color: var(--theme-primary); }
-li.nav-item.active .nav-link { color: var(--text-color); border-left: 5px solid var(--theme-primary); }
-li.nav-item .nav-link { padding-left: .5em; }
+li.nav-item.active .nav-link { color: var(--text-color); border-color: var(--theme-primary); }
+li.nav-item .nav-link { border-left: 5px solid transparent; padding-left: .5em; }
 @media (min-width: 768px) {
 	li.nav-item.active .nav-link { border-left: none; border-bottom: 3px solid var(--theme-primary); }
 }
