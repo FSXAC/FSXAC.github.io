@@ -3,6 +3,7 @@
 
 	--theme-light: #f2f2f2;
 	--theme-primary: #ff6600;
+	--theme-primary-dark: #dd5500;
 	--theme-dark: #101010;
 	
 	--theme-bg: var(--theme-light);
@@ -95,8 +96,8 @@ a:hover { color: var(--theme-primary); text-decoration: none;}
 	border-color: var(--theme-primary);
 }
 .btn-primary:hover {
-	background-color: var(--theme-primary);
-	border-color: var(--theme-primary);
+	background-color: var(--theme-primary-dark);
+	border-color: var(--theme-primary-dark);
 }
 .btn-outline-primary {
 	color: var(--theme-primary);
