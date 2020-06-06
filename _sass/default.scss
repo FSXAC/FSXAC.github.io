@@ -47,12 +47,12 @@ li.nav-item .nav-link { border-left: 5px solid transparent; padding-left: .5em; 
 
 /* Frosted glass effect */
 .glass {
-	backdrop-filter: blur(16px) brightness(var(--frosted-glass-brightness));
-	-webkit-backdrop-filter: blur(16px) brightness(var(--frosted-glass-brightness));
+	backdrop-filter: blur(20px) brightness(var(--frosted-glass-brightness));
+	-webkit-backdrop-filter: blur(20px) brightness(var(--frosted-glass-brightness));
 }
 .glass-dark {
-	backdrop-filter: blur(16px) brightness(0.5);
-	-webkit-backdrop-filter: blur(16px) brightness(0.5);
+	backdrop-filter: blur(20px) brightness(0.5);
+	-webkit-backdrop-filter: blur(20px) brightness(0.5);
 }
 
 /* Make dictionaries align better */
@@ -89,6 +89,15 @@ a:hover { color: var(--theme-primary); text-decoration: none;}
 .btn-xs { padding: 0 .25em; font-size: 0.9em; }
 
 /* Button colors */
+.btn-primary {
+	color: var(--theme-bg);
+	background-color: var(--theme-primary);
+	border-color: var(--theme-primary);
+}
+.btn-primary:hover {
+	background-color: var(--theme-primary);
+	border-color: var(--theme-primary);
+}
 .btn-outline-primary {
 	color: var(--theme-primary);
 	border-color: var(--theme-primary);
@@ -116,26 +125,24 @@ pre.highlight span.c, #c-content pre.highlight span.c1, #c-content pre.highlight
 pre.highlight span.gi { color: #49c1a1; background-color: #4cd6a822; }
 pre.highlight span.gd { color: #a2221f; background-color: #c4444f22; }
 
-// /* Definitions */
-// dfn { border-bottom: 1px #ddd dotted; cursor:help; position: relative; }
-// dfn::after {
-// 	content: attr(definition);
-// 	display: inline;
-// 	position: absolute;
-// 	top: 1em;
-// 	left: 0;
-// 	opacity: 0;
-// 	pointer-events: none;
-// 	font-style: normal;
-// 	padding: .8em;
-// 	font-size: .8em;
-// 	line-height: 120%;
-// 	background: #fff;
-// 	box-shadow: 0 0.2rem 0.4rem 0 rgba(0,0,0,.15);
-// 	transition: opacity .2s, top .2s;
-// }
-// dfn:hover { z-index: 2; }
-// dfn:hover::after { opacity: 1; top: 1.8em; }
+/* Definitions */
+dfn { border-bottom: 1px var(--text-color) dotted; cursor:help; position: relative; }
+dfn::after {
+	@extend .glass;
+	content: attr(definition);
+	display: inline;
+	position: absolute;
+	top: 1em;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	font-style: normal;
+	padding: 1em;
+	border-radius: 8px;
+	transition: opacity .2s, top .2s;
+}
+dfn:hover { z-index: 2; }
+dfn:hover::after { opacity: 1; top: 2em; }
 
 /* Blog texts */
 #c-content h1, #c-content h2, h1.bold, h2.bold { letter-spacing: -1px; word-spacing: 2px; }
