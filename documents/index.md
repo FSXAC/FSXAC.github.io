@@ -166,11 +166,10 @@ $(document).ready(function() {
 	// alert('hi');
 	let regex = /\/documents\/?#\?(.+)/g;
 	let url = window.location.href;
-	let match = decodeURI(regex.exec(url)[1]);
-
-	console.log(match);
-
-	document.getElementById('searchField').value = match;
-	searchFunc();
+	let matches = regex.exec(url);
+	if (matches) {
+		document.getElementById('searchField').value = matches[1];
+		searchFunc()
+	}
 });
 </script>

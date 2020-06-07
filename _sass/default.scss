@@ -11,7 +11,9 @@
 	--text-color-disabled: #0006;
 	--link-color: #0050C9;
 	--link-hover-color: #A92626;
-	--frosted-glass-brightness: 1.0;
+
+	--glass-ct: 0.25;
+	--glass-br: 1.54;
 	--light-background: #ddd;
 }
 
@@ -48,12 +50,12 @@ li.nav-item .nav-link { border-left: 5px solid transparent; padding-left: .5em; 
 
 /* Frosted glass effect */
 .glass {
-	backdrop-filter: blur(20px) brightness(var(--frosted-glass-brightness));
-	-webkit-backdrop-filter: blur(20px) brightness(var(--frosted-glass-brightness));
+	backdrop-filter: blur(16px) contrast(var(--glass-ct)) brightness(var(--glass-br));
+	-webkit-backdrop-filter: blur(16px) contrast(var(--glass-ct)) brightness(var(--glass-br));
 }
 .glass-dark {
-	backdrop-filter: blur(20px) brightness(0.5);
-	-webkit-backdrop-filter: blur(20px) brightness(0.5);
+	backdrop-filter: blur(16px) brightness(0.5);
+	-webkit-backdrop-filter: blur(16px) brightness(0.5);
 }
 
 /* Make dictionaries align better */
@@ -241,7 +243,8 @@ code.highlighter-rouge {
 
 		--text-color: #f8f8f8;
 		--text-color-disabled: #fff6;
-		--frosted-glass-brightness: 0.7;
+		--glass-ct: 0.95;
+		--glass-br: 0.56;
 		--light-background: #333;
 	}
 	pre.highlight { color: #aaa; }

@@ -1,5 +1,5 @@
 # Build config
-incremental: true
+incremental: false
 
 # Site config
 title: "Muchen He"
