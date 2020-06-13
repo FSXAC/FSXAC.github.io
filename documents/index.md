@@ -70,9 +70,9 @@ Please feel free to contact me if there are any mistakes. Alternatively, since t
 <h2 class='mt-4'>{{ category.category }}</h2>
 <div class="card-grid">
 <div class="card-gutter-sizer"></div>
-{% assign courses = category.courses %}
+{% assign courses = category.courses | sort: 'course_num' %}
 {% for course in courses %}
-	{% if course.entries %}
+	{% unless course.disabled %}
 	<div id="{{ course.course_num | replace: ' ', '-'}}" class="card p-0">
 	<div class="card-header p-0">
 		<p class="m-0" style="font-size: 2em;">{{ course.emoji }}</p>
@@ -109,7 +109,7 @@ Please feel free to contact me if there are any mistakes. Alternatively, since t
 		</ul>
 	</div>
 	</div>
-	{% endif %}
+	{% endunless %}
 {% endfor %}
 </div>
 </section>

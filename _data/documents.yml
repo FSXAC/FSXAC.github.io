@@ -70,7 +70,9 @@
   - course_num: 'ELEC 491'
     course_name: 'Capstone Project for EE'
     emoji: 💼
-    # date: 2019-09-16
+    date: 2019-09-16
+    # TODO: replace this with project deliverables
+    disabled: true
     # entries:
     # - title: 'Intro to Capstone Project'
     #   link: '/documents/ELEC491/2019-09-04-Introduction'
@@ -83,7 +85,7 @@
     emoji: 📡
   - course_num: 'ELEC 315'
     course_name: 'Materials and Devices'
-    emoji: ⚛
+    emoji: 🔋
   - course_num: 'ELEC 391'
     course_name: 'Electrical Project Studio II'
     emoji: 🛠
@@ -197,12 +199,12 @@
       link: '/documents/ELEC321/Part2-5'
     - title: 'Markov Processes'
       link: '/documents/ELEC321/Part2-6'
-    # - title: 'Part 2.7 (Least Square Estimate)'
-    #   link: '/documents/ELEC321/Part2-7'
-    #   flag: draft
-    # - title: 'Part 2.8 (MMSE)'
-    #   link: '/documents/ELEC321/Part2-8'
-    #   flag: draft
+    - title: 'Part 2.7 (Least Square Estimate)'
+      link: '/documents/ELEC321/Part2-7'
+      flag: draft
+    - title: 'Part 2.8 (MMSE)'
+      link: '/documents/ELEC321/Part2-8'
+      flag: draft
     - title: 'Tutorial'
       group:
       - enum: 1
@@ -230,20 +232,24 @@
       link: '/documents/ELEC341/week3'
     - title: 'Week 4 - Electro-Mechanical Equivalences'
       link: '/documents/ELEC341/week4'
-    # - title: 'MATLAB Tutorial'
-    #   link: '/documents/ELEC341/matlab'
+    - title: 'MATLAB Tutorial'
+      link: '/documents/ELEC341/matlab'
     - title: 'Design Project Part 1 Report'
       link: '/documents/ELEC341/ELEC341-Project1.pdf'
     - title: 'Design Project Part 2 Report'
       link: '/documents/ELEC341/ELEC341-Project2.pdf'
   - course_num: 'ELEC 342'
     course_name: 'Electro-Mechanical Energy Conversion'
+    emoji: 🚖
   - course_num: 'ELEC 201'
     course_name: 'Circuit Analysis I'
+    emoji: 💡
   - course_num: 'ELEC 202'
     course_name: 'Circuit Analysis II'
+    emoji: ⚡️
   - course_num: 'ELEC 211'
     course_name: 'Engineering Electromagnetics'
+    emoji: 🧲
   - course_num: 'ELEC 291'
     course_name: 'Electrical Design Studio I'
     emoji: 🔧
@@ -278,12 +284,19 @@
     - title: 'Non-Volatile Memory'
       link: '/documents/CPEN412/2020-02-03-NVM'
       flag: new
-  # - course_num: 'CPEN 411'
-  #   course_name: 'Computer Architecture'
-  #   date: 2019-09-06
-  #   entries:
-  #   - title: 'Introduction'
-  #     link: '/documents/CPEN411/2019-09-05-Introduction'
+  - course_num: 'CPEN 411'
+    course_name: 'Computer Architecture'
+    emoji: 📐
+    date: 2019-09-06
+    entries:
+    - title: 'Introduction'
+      link: '/documents/CPEN411/2019-09-05-Introduction'
+    - title: 'SimpleScalar'
+      link: '/documents/CPEN411/2019-09-09-SimpleScaler-Introduction'
+    - title: 'Memory Technologies'
+      link: '/documents/CPEN411/2019-09-10-Memory-Technologies'
+    - title: 'RISC-V'
+      link: '/documents/CPEN411/2019-09-10-RISC-V'
   - course_num: 'CPEN 311'
     course_name: 'Digital Systems Design'
     emoji: 🗃
@@ -345,10 +358,12 @@
         link: '/documents/CPEN311/ps4.pdf'
       - enum: 5
         link: '/documents/CPEN311/ps5.pdf'
-  # - course_num: 'CPEN 211'
-  #   course_name: 'Microcomputers'
-  # - course_num: 'CPSC 259'
-  #   course_name: 'Data Structures & Algorithms'
+  - course_num: 'CPEN 211'
+    course_name: 'Microcomputers'
+    emoji: 📱
+  - course_num: 'CPSC 259'
+    course_name: 'Data Structures & Algorithms'
+    emoji: 🔄
   - course_num: 'APSC 160'
     course_name: 'Computation in Engineering Design'
     emoji: 🤖
@@ -381,6 +396,7 @@
     course_name: 'Engineering Ethics and Professionalism'
     date: 2020-04-11
     emoji: 👩‍💼
+    disabled: true
     entries:
     - title: 'Week 2'
       link: '/documents/APSC450/Week-2'
@@ -465,6 +481,13 @@
         link: '/documents/MECH431/asn2'
       - enum: 3
         link: '/documents/MECH431/asn3'
+  - course_num: 'APSC 411'
+    course_name: 'Co-op Placement 5'
+    date: 2019-06-30
+    disabled: true
+    entries:
+    - title: 'Report'
+      link: 'APSC411/2019-06-28-report'
   - course_num: 'ASTR 200'
     course_name: 'Frontiers of Astrophysics'
     date: 2019-09-06
