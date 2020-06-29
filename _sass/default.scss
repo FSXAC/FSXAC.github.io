@@ -21,7 +21,7 @@
 html { font-size: 16px; }
 body {
 	cursor: default;
-	font-family: "suisse intl", sans-serif;
+	font-family: "suisse intl", -apple-system, BlinkMacSystemFont, sans-serif;
 	line-height: 1.25;
 	color: var(--text-color);
 	background-color: var(--theme-bg);
@@ -56,6 +56,10 @@ li.nav-item .nav-link { border-left: 5px solid transparent; padding-left: .5em; 
 .glass-dark {
 	backdrop-filter: blur(16px) brightness(0.5);
 	-webkit-backdrop-filter: blur(16px) brightness(0.5);
+}
+.glass-light {
+	backdrop-filter: blur(16px) brightness(1.2);
+	-webkit-backdrop-filter: blur(16px) brightness(1.2);
 }
 
 /* Make dictionaries align better */
@@ -114,7 +118,7 @@ a:hover { color: var(--theme-primary); text-decoration: none;}
 /* Limit narrow width of container */
 @media (min-width: 992px) {
     .container{
-        max-width: 800px;
+        max-width: 900px;
     }
 }
 

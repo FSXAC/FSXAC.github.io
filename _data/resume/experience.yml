@@ -1,5 +1,5 @@
-- company: "Intel Corporation"
-  position: "FPGA Emulation Platform Co-op"
+- company: "Intel"
+  position: "FPGA Engineering Co-op"
   location: "Vancouver BC"
   start: "Jan 2019"
   end: "Aug 2019"
@@ -14,8 +14,8 @@
   - Python
   - TeamCity CI
   - Linux
-- company: "Electronic Arts - BioWare"
-  position: "UI/UX Programmer Co-op on Anthem"
+- company: "EA BioWare"
+  position: "UI/UX Developer Co-op"
   location: "Edmonton AB"
   start: "May 2018"
   end: "Dec 2018"
@@ -29,11 +29,11 @@
   - C++
   - Python
   - Frostbite Engine
-- company: "UBC Computer Science"
+- company: "UBC"
   position: "Teaching Assistant"
   location: "Vancouver BC"
-  start: "Jan 2018 - Apr 2018; Sep 2019"
-  end: "present"
+  start: "Jan 2018"
+  end: "May 2020"
   duration: "8 months"
   doings:
   - "Provided assistance and tutoring to engineering students learning C during lectures and office hours"
@@ -43,31 +43,31 @@
   - C
   - Python
   - Virtual machines
-- company: "Vital Mechanics Research Inc."
-  position: "Software Developer Co-op"
-  location: "Vancouver BC"
-  start: "May 2017"
-  end: "Aug 2017"
-  duration: "4 months"
-  doings:
-  - "Developed applications in Qt GUI Framework using C++ and JavaScript using the MVP design pattern"
-  - "Programmed interactive 3D viewers using JavaScript, Three.js, and Adobe Illustrator API; wrote realistic shaders in WebGL"
-  tech:
-  - Qt
-  - QML
-  - C++
-  - JavaScript
-  - Adobe Plugin API
-- company: "U of A Computer Science"
-  position: "High School Software Intern"
-  location: "Edmonton AB"
-  start: "Jun 2014"
-  end: "Aug 2014"
-  duration: "2 months"
-  doings:
-  - "Developed Android tablet game based on Box2D engine in Java and Android SDK"
-  - "Implemented haptic and audio feedback and physics-enabled obstacles"
-  - "Presented talk on project specifications, goals, and experiences"
-  tech:
-  - Android SDK
-  - Java
+# - company: "Vital Mechanics Research Inc."
+#   position: "Software Developer Co-op"
+#   location: "Vancouver BC"
+#   start: "May 2017"
+#   end: "Aug 2017"
+#   duration: "4 months"
+#   doings:
+#   - "Developed applications in Qt GUI Framework using C++ and JavaScript using the MVP design pattern"
+#   - "Programmed interactive 3D viewers using JavaScript, Three.js, and Adobe Illustrator API; wrote realistic shaders in WebGL"
+#   tech:
+#   - Qt
+#   - QML
+#   - C++
+#   - JavaScript
+#   - Adobe Plugin API
+# - company: "U of A Computer Science"
+#   position: "High School Software Intern"
+#   location: "Edmonton AB"
+#   start: "Jun 2014"
+#   end: "Aug 2014"
+#   duration: "2 months"
+#   doings:
+#   - "Developed Android tablet game based on Box2D engine in Java and Android SDK"
+#   - "Implemented haptic and audio feedback and physics-enabled obstacles"
+#   - "Presented talk on project specifications, goals, and experiences"
+#   tech:
+#   - Android SDK
+#   - Java

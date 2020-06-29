@@ -28,7 +28,7 @@ title: Home
         <div id="headshot-img"></div>
     </div>
     <div class="col-md-8">
-    <h1 style="font-size: 800%; font-weight: bold">Hi,</h1>
+    <h1 class="display-1">Hi</h1>
     {% capture intro %}
     {% include intro.md %}
     {% endcapture %}
