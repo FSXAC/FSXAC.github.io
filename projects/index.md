@@ -21,7 +21,7 @@ nav_active: /projects
 # ⭐️
 {: .display-1}
 
-This page contains projects that I've created or contributed to. They are ordered reverse-chronicalogically. (This page also needs to be updated ._.)
+This page contains projects that I've created or contributed to. They are ordered reverse-chronologically. (This page also needs to be updated ._.)
 
 <div class="row">
 {% assign projects = site.data.projects | sort: "dates.end" | reverse %}

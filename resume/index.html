@@ -8,8 +8,8 @@ nav_active: /resume
 <style>
 .neucard {
 	border-radius: 12px;
-	background: #ffffff44;
-	box-shadow:  12px 12px 40px #d9d9d9, 
+	background: #f2f2f2;
+	box-shadow:  12px 12px 40px #cecece, 
 				-12px -12px 40px #ffffff;
 	padding: .5em 1em;
 	margin-bottom: 1.5em;
@@ -25,6 +25,14 @@ h2 { border-bottom: 1px solid #ddd; margin-bottom: .4em; font-size: 1.5em;}
 span.sk { padding: .1em .25em; border-radius: 3px; background-color: #d9d9d9; color: #222; }
 div.re-content { font-size: 14px; }
 @media (min-width: 768px) { div.col-md-4 { padding-right: 0; } }
+
+@media (prefers-color-scheme: dark) {
+	.neucard {
+	background: #080808;
+	box-shadow:  12px 12px 40px #000000, 
+				-12px -12px 40px #151515;
+}
+}
 </style>
 
 <div class="my-4"></div>
@@ -33,8 +41,7 @@ div.re-content { font-size: 14px; }
 	<div class="col-md-4">
 		<div class="re-content" style="text-align: center;">
 			<div>
-				<img src="/assets/img/light-512.jpeg" alt="face" style="max-width: 128px; border-radius: 50%; box-shadow:  12px 12px 40px #d9d9d9, 
-				-12px -12px 40px #ffffff;" >
+				<img class="neucard" src="/assets/img/light-512.jpeg" alt="face" style="max-width: 128px; border-radius: 50%; background: none; border:none; padding: 0" >
 				<h1 style="font-size: 2.5em">Muchen He</h1>
 				<p>M.A.Sc Student at the University of British Columbia</p>
 			</div>
