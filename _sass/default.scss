@@ -5,6 +5,7 @@
 	--theme-primary: #ff6600;
 	--theme-primary-dark: #dd5500;
 	--theme-dark: #101010;
+	--theme-text: #fff;
 	
 	--theme-bg: var(--theme-light);
 	--text-color: var(--theme-dark);
@@ -15,6 +16,9 @@
 	--glass-ct: 0.25;
 	--glass-br: 1.54;
 	--light-background: #ddd;
+
+	--theme-shadow-min: #cecece;
+	--theme-shadow-max: #ffffff;
 }
 
 /* Page style */
@@ -22,7 +26,7 @@ html { font-size: 16px; }
 body {
 	cursor: default;
 	font-family: "suisse intl", -apple-system, BlinkMacSystemFont, sans-serif;
-	line-height: 1.25;
+	line-height: 1.35;
 	color: var(--text-color);
 	background-color: var(--theme-bg);
 }
@@ -42,7 +46,17 @@ h5 { font-size: 1.15em; }
 li.nav-item.active .nav-link { color: var(--text-color); border-color: var(--theme-primary); }
 li.nav-item .nav-link { border-left: 5px solid transparent; padding-left: .5em; }
 @media (min-width: 768px) {
-	li.nav-item.active .nav-link { border-left: none; border-bottom: 3px solid var(--theme-primary); }
+	li.nav-item.active .nav-link {
+		border-left: none;
+		// border-bottom: 3px solid var(--theme-primary);
+		background-color: var(--theme-primary);
+		color: #fff;
+		border-radius: 7px;
+		box-shadow: 0 5px 10px 0 rgba(255,102,0,.2),0 8px 8px 0 rgba(255,102,0,.2),0 4px 4px 0 rgba(255,102,0,.2),0 2px 2px 0 rgba(255,102,0,.2),0 1px 1px 0 rgba(255,102,0,.2);
+	}
+	li.nav-item.active .nav-link:hover {
+		color: #fff;
+	}
 }
 .navbar-mh .navbar-toggler-icon {
 	background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(120,120,120,0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
@@ -62,6 +76,16 @@ li.nav-item .nav-link { border-left: 5px solid transparent; padding-left: .5em; 
 	-webkit-backdrop-filter: blur(16px) brightness(1.2);
 }
 
+/* Neuemorphism box shadow */
+.neuemorph-shadow {
+	background: var(--theme-bg);
+	box-shadow:  16px 16px 33px var(--theme-shadow-min), 
+				 -16px -16px 33px var(--theme-shadow-max);
+}
+.neuemorph-primary {
+	box-shadow: 0 5px 10px 0 rgba(255,102,0,.2),0 8px 8px 0 rgba(255,102,0,.2),0 4px 4px 0 rgba(255,102,0,.2),0 2px 2px 0 rgba(255,102,0,.2),0 1px 1px 0 rgba(255,102,0,.2);
+}
+
 /* Make dictionaries align better */
 .dl-horizontal > dt { text-align: right; }
 .dl-horizontal > dd { margin-bottom: 0; }
@@ -71,8 +95,8 @@ li.nav-item .nav-link { border-left: 5px solid transparent; padding-left: .5em; 
 footer { margin: 2em 0; }
 
 /* Increase anchor color contrast */
-a { color: var(--link-color); text-decoration: none; }
-a:hover { color: var(--theme-primary); text-decoration: none;}
+a { color: var(--link-color); text-decoration: none; transition: all .1s ease; }
+a:hover { color: var(--theme-primary); text-decoration: none; }
 
 /* Buttons */
 .btn { position:relative; overflow: hidden; transform: translate3d(0,0,0); }
@@ -97,7 +121,8 @@ a:hover { color: var(--theme-primary); text-decoration: none;}
 
 /* Button colors */
 .btn-primary {
-	color: var(--theme-bg);
+	@extend .neuemorph-primary;
+	color: var(--theme-text);
 	background-color: var(--theme-primary);
 	border-color: var(--theme-primary);
 }
@@ -110,7 +135,7 @@ a:hover { color: var(--theme-primary); text-decoration: none;}
 	border-color: var(--theme-primary);
 }
 .btn-outline-primary:hover {
-	color: var(--theme-bg);
+	color: var(--theme-text);
 	background-color: var(--theme-primary);
 	border-color: var(--theme-primary);
 }
@@ -126,7 +151,13 @@ a:hover { color: var(--theme-primary); text-decoration: none;}
 #ubc-handin { display: none; }
 
 // Code fences
-pre.highlight { margin-bottom: 1.5em; padding: 1em; line-height: 1.2em; border: 1px solid #888; border-radius: 3px; }
+pre.highlight { padding: 1em; line-height: 1.2em;
+	@extend .neuemorph-shadow;
+	margin-top: 1em;
+	margin-bottom: 2em;
+	border-radius: 10px; 
+}
+
 pre.highlight span.mi, pre.highlight span.mf { color: blue; }
 pre.highlight span.c, #c-content pre.highlight span.c1, #c-content pre.highlight span.cm { font-style: italic; color: #20921f; background: #dbf3cd60; }
 pre.highlight span.gi { color: #49c1a1; background-color: #4cd6a822; }
@@ -250,6 +281,9 @@ code.highlighter-rouge {
 		--glass-ct: 0.95;
 		--glass-br: 0.56;
 		--light-background: #333;
+
+		--theme-shadow-min: #030303;
+		--theme-shadow-max: #0d0d0d;
 	}
 	pre.highlight { color: #aaa; }
 	pre.highlight span.c, #c-content pre.highlight span.c1, #c-content pre.highlight span.cm { color: #229120; background: #3e463a60; }

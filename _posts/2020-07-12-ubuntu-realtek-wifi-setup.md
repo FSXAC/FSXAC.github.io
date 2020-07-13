@@ -2,6 +2,10 @@
 title: Installing Realtek Wireless Driver for Ubuntu on a Desktop PC
 date: 2020-07-12
 categories: [Linux]
+header:
+   teaser: "https://lh3.googleusercontent.com/pw/ACtC-3dOr4LNoXx_H6c1SBvV1FNnqpw_ppZdpaTHAfaNYavGQPmDq2DPaJUSZ5sFGqM_3XWG_H_aYKfvgqSTh_48gcjr93ccvGespDDaEiwTXTsV1DX3XbvTqxk35SxJZrIRAKR6OpOLykASRHg7_ddJYFM=w880-h476-no?authuser=1"
+   overlay_image: "https://lh3.googleusercontent.com/pw/ACtC-3dOr4LNoXx_H6c1SBvV1FNnqpw_ppZdpaTHAfaNYavGQPmDq2DPaJUSZ5sFGqM_3XWG_H_aYKfvgqSTh_48gcjr93ccvGespDDaEiwTXTsV1DX3XbvTqxk35SxJZrIRAKR6OpOLykASRHg7_ddJYFM=w880-h476-no?authuser=1"
+
 ---
 
 Recently I did a fresh install of Ubuntu (actually Kubuntu) 20.04 on my desktop PC. Unfortunately, my PC motherboard (Gigabyte Z370) does not have any built in wireless or bluetooth chipset, and somehow I need to get internet working. Also I live in a place where there is no ethernet ports, which makes the process more difficult. So, I use one of the cheap USB WiFi adapter I bought from Amazon. It uses Realtec RTL8811CU chipset. 
@@ -99,6 +103,6 @@ Finally, upon clicking on the little network symbol on the menu bar I was so hap
 [^1]: <https://support.speedify.com/article/565-tethered-iphone-linux>
 [^2]: <https://www.windowscentral.com/how-set-and-manage-network-bridge-connection-windows-10a>
 [^3]: <https://askubuntu.com/questions/1162974/wireless-usb-adapter-0bdac811-realtek-semiconductor-corp>
-[^4]: <ttps://github.com/brektrou/rtl8821CU.git>
+[^4]: <https://github.com/brektrou/rtl8821CU.git>
 
 

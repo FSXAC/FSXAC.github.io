@@ -18,6 +18,8 @@ img.teaser {
   max-height: 350px;
   background-color: #fff;
   object-fit: cover;
+  border-radius: 16px;
+
 }
 @media (min-width: 768px) {
   img.teaser {
@@ -37,7 +39,7 @@ Occasional memory dump of various things.
 <div class="post-entry py-4">
 <div class="row">
   <div class="col-md-4">
-    <a href="{{ post.url }}"><img class="teaser shadow mb-2 mr-2" src="{{ post.header.teaser | default: '/assets/img/logo2019-128.jpg' }}" alt="..."></a>
+    <a href="{{ post.url }}"><img class="teaser neuemorph-shadow mb-2 mr-2" src="{{ post.header.teaser | default: '/assets/img/logo2019-128.jpg' }}" alt="..."></a>
   </div>
   <div class="col-md-8">
     <small>{{ post.date | date: "%Y-%m-%d" }}</small>
