@@ -36,6 +36,7 @@ This page contains projects that I've created or contributed to. They are ordere
 	<a class="btn btn-xs btn-primary" href="{{ link[1] }}">{{ link[0] | capitalize }}</a>
 	{% endfor %}
 </div>
+
 {% endif %}
 {% endfor %}
 </div>

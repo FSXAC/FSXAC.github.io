@@ -24,10 +24,10 @@ title: Home
 </style>
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 float-md-left">
         <div id="headshot-img"></div>
     </div>
-    <div class="col-md-8">
+    <div class="col">
     <h1 class="display-1">Hi</h1>
     {% capture intro %}
     {% include intro.md %}

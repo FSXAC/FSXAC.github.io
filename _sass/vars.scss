@@ -1,0 +1,20 @@
+:root {
+	--theme-light: #f2f2f2;
+	--theme-primary: #ff6600;
+	--theme-primary-dark: #dd5500;
+	--theme-dark: #101010;
+	--theme-text: #fff;
+	
+	--theme-bg: var(--theme-light);
+	--text-color: var(--theme-dark);
+	--text-color-disabled: #0006;
+	--link-color: #0050C9;
+	--link-hover-color: #A92626;
+
+	--glass-ct: 0.25;
+	--glass-br: 1.54;
+	--light-background: #ddd;
+
+	--theme-shadow-min: #cecece;
+	--theme-shadow-max: #ffffff;
+}

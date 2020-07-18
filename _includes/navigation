@@ -3,14 +3,14 @@
 		<a href="/" class="navbar-brand" style="font-weight: bold; color: inherit">Muchen He</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 		<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-			<ul class='navbar-nav'>
+			<ul class='navbar-nav my-1'>
 				{% for link in site.data.navigation %}
 				{% assign current = false %}
 				{% if page.url == link.url or page.nav_active == link.url %}
 				{% assign current = true %}
 				{% endif %}
-				<li class='nav-item mx-2 {% if current %}active{% endif %}'>
-					<a class="nav-link py-1" href="{{ link.url }}">{{ link.text }}{% if current %}<span
+				<li class='nav-item {% if current %}active{% endif %}'>
+					<a class="nav-link" href="{{ link.url }}">{{ link.text }}{% if current %}<span
 							class="sr-only">(current)</span>{% endif %}</a>
 				</li>
 				{% endfor %}

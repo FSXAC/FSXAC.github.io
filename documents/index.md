@@ -25,8 +25,8 @@ show_footer: true
 		border: none;
 		padding: 0;
 		white-space: nowrap;
-		text-overflow: ellipsis;
-		overflow: hidden;
+		/* text-overflow: ellipsis; */
+		/* overflow: hidden; */
 		margin: 0;
 		background: transparent;
 	}
@@ -81,11 +81,11 @@ Please feel free to contact me if there are any mistakes. Alternatively, since t
 		<!-- <small>Last updated {{ course.date | default: 'never' }}</small> -->
 	</div>
 	<div class="card-body">
-		<ul class='list-group list-group-flush'>
+		<ul class="list-group list-group-flush">
 
 		{% for entry in course.entries %}
 
-		<li class='list-group-item'>
+		<li class="list-group-item text-truncate">
 			{% if entry.group %}
 				{{ entry.title }}
 				{% for enum_entry in entry.group %}

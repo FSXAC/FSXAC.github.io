@@ -1,0 +1,13 @@
+/* Frosted glass effect */
+.glass {
+	backdrop-filter: blur(16px) contrast(var(--glass-ct)) brightness(var(--glass-br));
+	-webkit-backdrop-filter: blur(16px) contrast(var(--glass-ct)) brightness(var(--glass-br));
+}
+.glass-dark {
+	backdrop-filter: blur(16px) brightness(0.5);
+	-webkit-backdrop-filter: blur(16px) brightness(0.5);
+}
+.glass-light {
+	backdrop-filter: blur(16px) brightness(1.2);
+	-webkit-backdrop-filter: blur(16px) brightness(1.2);
+}

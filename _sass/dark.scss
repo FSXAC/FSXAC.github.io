@@ -1,0 +1,15 @@
+@media (prefers-color-scheme: dark) {
+	:root {
+		--theme-bg: #080808;
+
+		--text-color: #f8f8f8;
+		--text-color-disabled: #fff6;
+		--glass-ct: 0.95;
+		--glass-br: 0.56;
+		--light-background: #333;
+
+		--theme-shadow-min: #030303;
+		--theme-shadow-max: #0d0d0d;
+	}
+	img { opacity: 0.8; }
+}
