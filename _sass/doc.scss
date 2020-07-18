@@ -31,7 +31,10 @@ ul#markdown-toc { padding: 0; margin: 2em 0; }
 // Footnotes / references
 #c-content div.footnotes { margin-top: 2em; padding-top: 0.25em; }
 #c-content div.footnotes::before { content: "References"; font-weight: bold; }
-#c-content a.footnote { background-color: #f0f0f0; padding: 1px 3px; border-radius: 3px; margin: 0 1px; }
+#c-content div.footnotes p { margin-bottom: 0; }
+#c-content a.footnote { margin: 0 2px; }
+#c-content a.footnote::before { content: "[" }
+#c-content a.footnote::after { content: "]" }
 
 // Fix math in lists
 #c-content li .MJXc-display { display: inline; margin: inherit; }

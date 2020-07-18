@@ -29,26 +29,6 @@ background:linear-gradient(170deg, #406177 0%, #001624 100%);
 	</div>
 </header>
 
-<div id='c-content' class="container">
+<div id='c-content' class="container my-5">
 	{{ content }}
-</div>
-
-<div class="container">
-	<hr>
-	<div class="post-navigation justify-content-between row" aria-label="Post navigation">
-		<div class="col-6 float-left">
-			{% if page.previous.url %}
-			<small><b>&laquo; Previous</b></small>
-			<br>
-			<a href="{{page.previous.url}}">{{page.previous.title}}</a>
-			{% endif %}
-		</div>
-		<div class='col-6' style="text-align:right">
-			{% if page.next.url %}
-			<small><b>Next &raquo;</b></small>
-			<br>
-			<a href="{{page.next.url}}">{{page.next.title}}</a>
-			{% endif %}
-		</div>
-	</div>
 </div>
