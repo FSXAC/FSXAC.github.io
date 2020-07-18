@@ -24,7 +24,7 @@ title: Home
 </style>
 
 <div class="row">
-    <div class="col-md-4 float-md-left">
+    <div class="col-md-4 float-left">
         <div id="headshot-img"></div>
     </div>
     <div class="col">
