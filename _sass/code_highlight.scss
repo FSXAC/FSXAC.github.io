@@ -7,24 +7,24 @@ div.highlighter-rouge {
 
 // Rouge code fence
 div.highlighter-rouge div.highlight::before {
-  content: "code";
-
+  content: ">_";
   display: inline-block;
   padding: .2rem 1rem;
   font-size: 80%;
   font-weight: bold;
-  background: linear-gradient(45deg, var(--theme-primary-dark), var(--theme-primary));
   position: relative;
   top: -19px;
   width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: linear-gradient(45deg, var(--theme-dark), var(--theme-light));
   color: var(--theme-light);
-  border-top-left-radius: .5em;
-  border-top-right-radius: .5em;
 }
 
 
-.language-shell div.highlight::before {
-  content: "shell" !important
+div.highlighter-rouge.language-shell div.highlight::before {
+  content: ">_";
+  background: linear-gradient(45deg, var(--theme-primary-dark), var(--theme-primary));
 }
 
 div.highlight {
