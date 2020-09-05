@@ -1,12 +1,41 @@
 @import "neuemorph";
 
-pre, pre.highlight {
-  @extend .neuemorph-shadow;
-  padding: 1em;
-  line-height: 1.2;
-  margin-top: 1em;
+div.highlighter-rouge {
+  margin-top: 2em;
   margin-bottom: 2em;
-  border-radius: 10px;
+}
+
+// Rouge code fence
+div.highlighter-rouge div.highlight::before {
+  content: "code";
+
+  display: inline-block;
+  padding: .2rem 1rem;
+  font-size: 80%;
+  font-weight: bold;
+  background: linear-gradient(45deg, var(--theme-primary-dark), var(--theme-primary));
+  position: relative;
+  top: -19px;
+  width: 100%;
+  color: var(--theme-light);
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+}
+
+
+.language-shell div.highlight::before {
+  content: "shell" !important
+}
+
+div.highlight {
+  @extend .neuemorph-shadow;
+  line-height: 1.2;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+pre, pre.highlight {
+  padding: 0 1em 1em 1em;
 }
 
 // Rough highlighter
