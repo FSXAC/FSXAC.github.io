@@ -106,4 +106,6 @@ The hard work is done. Now it’s time to put them together.
 
 ## 4. Setting the Dynamic Wallpaper
 
+Once the website has processed the wallpaper stack, there is a download button to 
+
 ## Conclusion
