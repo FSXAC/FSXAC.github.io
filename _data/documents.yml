@@ -39,6 +39,10 @@
     emoji: 🔬
     date: 2019-11-11
     entries:
+    - title: "Tutorial 0: CAD Tools Access"
+      link: "/documents/ELEC402/t0"
+    - title: "Tutorial 1: ModelSim & SystemVerilog"
+      link: "/documents/ELEC402/t1"
     - title: 'MOS Part 1'
       link: '/documents/ELEC402/mos-1.pdf'
     - title: 'MOS Part 2'
