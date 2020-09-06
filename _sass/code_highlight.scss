@@ -17,8 +17,7 @@ div.highlighter-rouge div.highlight::before {
   width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  // background: linear-gradient(45deg, var(--theme-dark), var(--theme-light));
-  background: var(--theme-dark);
+  background: #444;
   color: var(--theme-light);
 }
 
@@ -28,9 +27,8 @@ div.highlighter-rouge.language-shell div.highlight::before {
   background: linear-gradient(45deg, var(--theme-primary-dark), var(--theme-primary));
 }
 
-div.highlighter-rouge.language-verilog div.highlight::before {
-  content: "SystemVerilog";
-}
+div.highlighter-rouge.language-verilog div.highlight::before { content: "SystemVerilog"; }
+div.highlighter-rouge.language-tcl div.highlight::before { content: "TCL"; }
 
 div.highlight {
   @extend .neuemorph-shadow;

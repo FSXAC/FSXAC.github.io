@@ -43,6 +43,8 @@
       link: "/documents/ELEC402/t0"
     - title: "Tutorial 1: ModelSim & SystemVerilog"
       link: "/documents/ELEC402/t1"
+    - title: "Tutorial 2: RTL Compiler Synthesis"
+      link: "/documents/ELEC402/t2"
     - title: 'MOS Part 1'
       link: '/documents/ELEC402/mos-1.pdf'
     - title: 'MOS Part 2'

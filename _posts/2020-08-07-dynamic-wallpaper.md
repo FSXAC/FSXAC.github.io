@@ -7,7 +7,7 @@ date: 2020-08-01
 
 Ever since the release of macOS Mojave (macOS 10.14), dynamic wallpapers have become one of my favourite things about the OS aethetics. How it works is that the wallpaper dynamically changes based on current time or sun positions using a set of images, typically taken at the same location with the same viewpoint, but at a different time. These set of images are packed into a single multi-frame .HEIC file with added metadata such as GPS or time information used to determine when to transition to the next image. 
 
-<!--Excerpt-->
+<!-- excerpt -->
 
 - toc
 {:toc}
