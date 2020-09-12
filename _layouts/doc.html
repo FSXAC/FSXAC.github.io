@@ -5,6 +5,7 @@ layout: basic
 <style>
 h2 { border-bottom: 1px dotted var(--text-color); }
 div.footnotes { border-top: 1px solid; }
+{% if page.use_heading_number %}{% include heading_number %}{% endif %}
 </style>
 
 <header class="pt-5 pb-3">

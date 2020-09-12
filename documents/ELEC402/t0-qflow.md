@@ -2,6 +2,7 @@
 title: "Tutorial 0 - QFlow Installation on Ubuntu"
 date: 2020-09-12
 categories: [ELEC 402]
+use_heading_number: true
 ---
 
 This document walks through the procedure required to setup [*Qflow* — An end-to-end digital synthesis flow for ASIC designs](http://opencircuitdesign.com/qflow/index.html).
