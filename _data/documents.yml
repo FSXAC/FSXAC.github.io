@@ -41,6 +41,8 @@
     entries:
     - title: "Tutorial 0: CAD Tools Access"
       link: "/documents/ELEC402/t0"
+    - title: "Tutorial 0: Installing QFlow"
+      link: "/documents/ELEC402/t0-qflow"
     - title: "Tutorial 1: ModelSim & SystemVerilog"
       link: "/documents/ELEC402/t1"
     - title: "Tutorial 2: RTL Compiler Synthesis"
