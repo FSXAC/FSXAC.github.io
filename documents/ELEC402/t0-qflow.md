@@ -269,9 +269,108 @@ make
 sudo make install
 ```
 
+## (Extra) Installing *iVerilog*
+
+**Note**: *This part is optional.* If you want to use ModelSim, you can skip this section
+
+The official *Qflow* tutorial uses Icarius Verilog (iVerilog) to simulate synthesized and layout Verilog. This section goes over how to install this.
+
+First go and clone the iVerilog repository:
+
+```shell
+# starting from your home directory (~)
+
+
+git clone https://github.com/steveicarus/iverilog.git
+
+cd iverilog
+```
+
+Checkout the latest stable version:
+
+```shell
+git checkout v10_3
+```
+
+Install required libraries in Linux system (you may skip this step, or you may need to install more things — see what error messages comes up and follow it).
+
+```shell
+sudo apt install autoconf gperf -y
+sudo apt install flex -y
+sudo apt install bison -y
+```
+
+Configure, build, and install on your Linux machine:
+
+```shell
+sh autoconf.sh
+./configure
+make
+sudo make install
+```
+
+Also note that I personally don’t have any experience using *iVerilog*, so use at your own discretion.
+
+## (Extra) Installing *Dinotrace*
+
+*Dinotrace* is a program used to view waveforms from simulations (such as *iVerilog*).
+
+To install, follow the `README.md` from their [GitHub page](https://github.com/veripool/dinotrace):
+
+```shell
+# starting from your home directory (~)
+
+# Install prerequisits
+sudo apt install perl
+
+# Clone git repo
+git clone https://github.com/veripool/dinotrace.git
+cd dinotrace
+
+# Checkout stable version
+git checkout stable
+git pull
+
+# Configure and build
+autoconf
+./configure
+make
+
+# Test
+./dinotrace traces/ascii.tra
+
+# Install
+sudo make install
+```
+
+## (Extra) Installing *IRSIM*
+
+While *ModelSim* and *iVerilog* simulator can be used to simulate the RTL functionalities of a design, the *IRSIM* “switch-level” simulator can simulate a bit more realistic than the ideal.
+
+Installation is very similar to that of [*magic*](#installing-magic).
+
+```shell
+# starting from your home directory (~)
+
+# Clone git repo
+git clone https://github.com/RTimothyEdwards/irsim.git
+cd irsim
+
+# Checkout stable version
+git checkout irsim-9.7
+
+# Configure, build, and install
+./configure
+make
+sudo make install
+```
+
+
+
 ## Conclusion
 
 👏 All done! Hopefully at this point all installing were successful, and you may move on to running a tutorial workflow. Take a look at both the following tutorials:
 
-- [Official *qflow* GUI workflow tutorial](http://opencircuitdesign.com/qflow/index.html). (2019)
+- ~~[Official *qflow* GUI workflow tutorial](http://opencircuitdesign.com/qflow/index.html). (2019)~~
 - [ELEC 402 *qflow* workflow tutorial](t2-qflow). (2020) (TODO)
+
