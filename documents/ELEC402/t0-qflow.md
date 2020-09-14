@@ -18,6 +18,9 @@ This document walks through the procedure required to setup [*Qflow* — An end-
 - **qrouter** for detailed routing
 - **magic** for viewing, extraction, design-rule-checking (DRC)
 - **netgen** for Layout-Versus-Schematic (LVS) verification
+- (optional) **Icarus Verilog** is an alterntive to ModelSim to simulate Verilog testbenches
+- (optional) **Dinotrace** is an alternative to ModelSim to view waveforms
+- (optional) **IRSim** is an alternative to to ModelSim to simulate RTL more realistically (note: *magic* and *Dinotrace* must be installed for this)
 
 While simplfied steps to install these tools are located on their perspective website, I personally found a lot of other dependencies that are required but not listed. So the purpose of this tutorial is to also cover those. The intended audience is anyone (such as students) who wants to install these tools on their own computer.
 
