@@ -1,6 +1,6 @@
 ---
 title: "Tutorial 0 - QFlow Installation on Ubuntu"
-date: 2020-09-12
+date: 2020-09-14
 categories: [ELEC 402]
 ---
 
