@@ -47,34 +47,34 @@
       link: "/documents/ELEC402/t1"
     - title: "Tutorial 2: RTL Compiler Synthesis"
       link: "/documents/ELEC402/t2"
-    - title: 'MOS Part 1'
-      link: '/documents/ELEC402/mos-1.pdf'
-    - title: 'MOS Part 2'
-      link: '/documents/ELEC402/mos-2.pdf'
-    - title: 'MOS Capacitances'
-      link: '/documents/ELEC402/mos-cap.pdf'
-    - title: 'Noise Margin'
-      link: '/documents/ELEC402/noise-margin.pdf'
-      flag: draft
-    - title: 'Resistive-Load Inverter'
-      link: '/documents/ELEC402/resistive-inverter.pdf'
-      flag: draft
-    - title: 'CMOS Inverter'
-      link: '/documents/ELEC402/cmos-inverter.pdf'
-      flag: draft
-    - title: 'Delay'
-      link: '/documents/ELEC402/delay.pdf'
-      flag: draft
-    - title: 'Static CMOS Combinational Logic'
-      link: '/documents/ELEC402/static-cmos-comb-logic.pdf'
-    - title: 'Project 1: FSM Report'
-      link: '/documents/ELEC402/proj1'
-    - title: 'Project 2: FSM Synthesis Report'
-      link: '/documents/ELEC402/proj2'
-    - title: 'Project 3: MOSFET Assignment'
-      link: '/documents/ELEC402/proj3'
-    - title: 'Project 4: CMOS Assignment'
-      link: '/documents/ELEC402/proj4'
+    # - title: 'MOS Part 1'
+    #   link: '/documents/ELEC402/mos-1.pdf'
+    # - title: 'MOS Part 2'
+    #   link: '/documents/ELEC402/mos-2.pdf'
+    # - title: 'MOS Capacitances'
+    #   link: '/documents/ELEC402/mos-cap.pdf'
+    # - title: 'Noise Margin'
+    #   link: '/documents/ELEC402/noise-margin.pdf'
+    #   flag: draft
+    # - title: 'Resistive-Load Inverter'
+    #   link: '/documents/ELEC402/resistive-inverter.pdf'
+    #   flag: draft
+    # - title: 'CMOS Inverter'
+    #   link: '/documents/ELEC402/cmos-inverter.pdf'
+    #   flag: draft
+    # - title: 'Delay'
+    #   link: '/documents/ELEC402/delay.pdf'
+    #   flag: draft
+    # - title: 'Static CMOS Combinational Logic'
+    #   link: '/documents/ELEC402/static-cmos-comb-logic.pdf'
+    # - title: 'Project 1: FSM Report'
+    #   link: '/documents/ELEC402/proj1'
+    # - title: 'Project 2: FSM Synthesis Report'
+    #   link: '/documents/ELEC402/proj2'
+    # - title: 'Project 3: MOSFET Assignment'
+    #   link: '/documents/ELEC402/proj3'
+    # - title: 'Project 4: CMOS Assignment'
+    #   link: '/documents/ELEC402/proj4'
   - course_num: 'ELEC 491'
     course_name: 'Capstone Project for EE'
     emoji: 💼
