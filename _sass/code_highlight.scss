@@ -29,6 +29,8 @@ div.highlighter-rouge.language-shell div.highlight::before {
 
 div.highlighter-rouge.language-verilog div.highlight::before { content: "SystemVerilog"; }
 div.highlighter-rouge.language-tcl div.highlight::before { content: "TCL"; }
+div.highlighter-rouge.language-json div.highlight::before { content: "JSON"; }
+div.highlighter-rouge.language-makefile div.highlight::before { content: "Makefile"; }
 
 div.highlight {
   @extend .neuemorph-shadow;
