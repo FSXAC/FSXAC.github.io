@@ -1,5 +1,5 @@
 ---
-title: How to use GDB with VSCode
+title: How to use GDB with VS Code
 author: Muchen He
 date: 2020-11-04
 categories: [CPEN 411]

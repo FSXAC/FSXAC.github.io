@@ -305,6 +305,8 @@
       link: '/documents/CPEN411/2019-09-10-Memory-Technologies'
     - title: 'RISC-V'
       link: '/documents/CPEN411/2019-09-10-RISC-V'
+    - title: 'VS Code Debugging'
+      link: '/documents/CPEN411/vscode-debug'
   - course_num: 'CPEN 311'
     course_name: 'Digital Systems Design'
     emoji: 🗃
