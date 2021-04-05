@@ -10,12 +10,12 @@
 <link rel="stylesheet" href="/assets/css/default.css">
 </head>
 <body>
-{% if page.show_navigation %}{% include navigation %}{% endif %}
+{% if page.show_navigation %}{% include navigation.html %}{% endif %}
 {% if page.watermark %}{% include watermark.html text=page.watermark %}{% endif %}
 {{ content }}
 {% if page.show_footer %}{% include footer.html %}{% endif %}
 {% if page.use_poppers %}<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>{% endif %}
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-{% if page.use_math %}{% include mathjax %}{% endif %}
+{% if page.use_math %}{% include mathjax.html %}{% endif %}
 </body>
 </html>

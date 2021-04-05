@@ -115,7 +115,7 @@ Please feel free to contact me if there are any mistakes. Alternatively, since t
 </section>
 {% endfor %}
 
-{% include jquery %}
+{% include jquery.html %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" crossorigin="anonymous"></script>
 <script>
 $('.card-grid').masonry({

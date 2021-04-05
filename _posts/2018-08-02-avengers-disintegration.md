@@ -10,8 +10,7 @@ tags:
   - processing
   - avengers
 
-extra_js:
-- <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+use_math: true
 
 header:
   teaser: /assets/blog/teaser/disintegrate.jpg
