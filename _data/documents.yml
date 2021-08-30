@@ -1,9 +1,10 @@
 - category: Electrical
   courses:
   - course_num: 'CRWR 213'
-    course_name: ''
+    course_name: 'Introduction to Writing for the New Media'
+    emoji: ✍️
     entries:
-      - title: 'Podcast'
+      - title: 'Podcasting Script'
         link: '/documents/CRWR213/podcast'
   - course_num: 'ELEC 441'
     course_name: 'Control Systems II'
