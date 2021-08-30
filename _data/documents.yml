@@ -1,5 +1,10 @@
 - category: Electrical
   courses:
+  - course_num: 'CRWR 213'
+    course_name: ''
+    entries:
+      - title: 'Podcast'
+        link: '/documents/CRWR213/podcast'
   - course_num: 'ELEC 441'
     course_name: 'Control Systems II'
     emoji: 🎛
