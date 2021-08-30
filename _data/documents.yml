@@ -1,11 +1,5 @@
 - category: Electrical
   courses:
-  - course_num: 'CRWR 213'
-    course_name: 'Introduction to Writing for the New Media'
-    emoji: ✍️
-    entries:
-      - title: 'Podcasting Script'
-        link: '/documents/CRWR213/podcast'
   - course_num: 'ELEC 441'
     course_name: 'Control Systems II'
     emoji: 🎛
@@ -408,6 +402,12 @@
   #   course_name: 'Calculus I'
 - category: Others
   courses:
+  - course_num: 'CRWR 213'
+    course_name: 'Introduction to Writing for the New Media'
+    emoji: ✍️
+    entries:
+      - title: 'Podcasting Script'
+        link: '/documents/CRWR213/podcast'
   - course_num: 'APSC 450'
     course_name: 'Engineering Ethics and Professionalism'
     date: 2020-04-11
