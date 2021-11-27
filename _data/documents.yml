@@ -406,8 +406,8 @@
     course_name: 'Stress and Strategies to Promote Well Being'
     emoji: 🧘🏻
     entries:
-    	- title: 'Creative Assignment'
-	  link: '/documents/NURS180/creative'
+      - title: 'Creative Assignment'
+        link: '/documents/NURS180/creative'
   - course_num: 'CRWR 213'
     course_name: 'Introduction to Writing for the New Media'
     emoji: ✍️
