@@ -402,6 +402,12 @@
   #   course_name: 'Calculus I'
 - category: Others
   courses:
+  - course_num: 'NURS 180'
+    course_name: 'Stress and Strategies to Promote Well Being'
+    emoji: 🧘🏻
+    entries:
+    	- title: 'Creative Assignment'
+	  link: '/documents/NURS180/creative'
   - course_num: 'CRWR 213'
     course_name: 'Introduction to Writing for the New Media'
     emoji: ✍️
