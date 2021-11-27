@@ -40,14 +40,15 @@ What about the face data? I wrote another program to plot their appearences in m
 
 ![](test.png)
 
-Along with my written journals Finally, I also track my daily mood from the scale of 1-5, represented on the next image from red to green dot:
-
+Along with my written journals Finally, I also track my daily mood from the scale of 1-5, represented on the next image from red to green dot: <span style="color:rgb(255, 0, 25)">⬤</span><span style="color:rgb(255, 145, 0)">⬤</span><span style="color:rgb(250, 200, 0)">⬤</span><span style="color:rgb(188, 200, 80)">⬤</span><span style="color:rgb(80, 220, 140)">⬤</span>. It gives me the option to correlate this data with all my journal entries and photos in my library -- giving me a recall on exactly how I felt that day. 
 
 ![](daylio.png)
 
+
+
 ---
 
-Grounding myself in data is a way for me to reduce stress -- perhaps because for me forgetting things and being uncertain is one of my biggest fears (especially considering you won't even know you had forgotten it). 
+Grounding myself in data is a way for me to reduce stress -- perhaps because for me forgetting things and being uncertain is one of my biggest fears (especially considering you won't even know you had forgotten it). Given these *very*-technical ways of looking at myself, I'm experimenting using what I'm good at (programming, visualizing data) to have a different perspective on my self-care.
 
 The programs I wrote myself are open-source and free to use: <https://github.com/FSXAC/PhotoStats>
 
