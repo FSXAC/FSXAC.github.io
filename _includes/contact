@@ -1,4 +1,3 @@
-<p>You can reach me via:</p>
 <table>
 	<tbody>
 		{% for item in site.data.contact.default %}

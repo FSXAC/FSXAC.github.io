@@ -1,6 +1,10 @@
 
 @import "vars";
 
+html {
+    font-size: 18px;
+}
+
 body {
     cursor: default;
     color: var(--text-color);
@@ -52,7 +56,7 @@ h1.heading {
     }
 	.navbar-mh .nav-item.active .nav-link:hover {
         color: var(--theme-text);
-        background-color: var(--theme-primary-dark);
+        background-color: var(--theme-primary);
         box-shadow: 0 8px 8px 0 rgba(0,0,0,0),0 4px 4px 0 rgba(0,0,0,.0),0 2px 2px 0 var(--theme-shadow-tint)
 	}
 }
@@ -66,7 +70,7 @@ h1.heading {
 @media (max-width: 768px) { .dl-horizontal > dt { text-align: left; margin-top: .4em; } }
 
 /* Make footer more spacious */
-footer { margin: 2em 0; }
+footer { margin: 2em 0; font-size: 80%;}
 
 
 /* Increase anchor color contrast */
