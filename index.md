@@ -1,41 +1,38 @@
 ---
 layout: default
 title: Home
+show_footer: false
 ---
 
 <style>
-#headshot-img {
-    background-image: url("/assets/img/light-512.jpeg");
-    background-size: cover;
+.decorative-bg {
+    z-index: -1;
+    position: absolute;
     width: 100%;
-    max-width: 256px;
-    margin-bottom: 2em;
-}
-#headshot-img::after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-}
-@media (prefers-color-scheme: dark) {
-    #headshot-img {
-        background-image: url("/assets/img/dark-512.jpeg");
-    }
 }
 </style>
-
-<div class="row">
-    <div class="col-md-4 float-left">
-        <div id="headshot-img"></div>
+<script src="https://kit.fontawesome.com/c83e37f840.js" crossorigin="anonymous"></script>
+<div class="row my-5">
+    <div class="col-md-4">
+    <h2 class="display-2 float-md-end" style="font-family: MHDiary">Hello!</h2>
     </div>
     <div class="col">
-    <h1 class="display-1">Hi</h1>
     {% capture intro %}
     {% include intro.md %}
     {% endcapture %}
     {{ intro | markdownify }}
+
+    <div class="my-5"></div>
+        <p><strong>Contacts</strong></p>
+        <p>
+        {% for item in site.data.contact.default %}
+            {% if item.icon %}
+            <i class="{{ item.icon }}"></i>
+            {% else %}
+            <i>{{ item.title }}</i>
+            {% endif %}
+            <a href="{{ item.link }}">{{ item.text }}</a>&nbsp;
+        {% endfor %}
+        </p>
     </div>
 </div>
-
-<div class="my-5"></div>
-
-{% include contact %}

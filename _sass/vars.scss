@@ -1,14 +1,15 @@
 :root {
-	--theme-light: #f2f2f2;
-	--theme-primary: #ff6600;
-	--theme-primary-dark: #dd5500;
-	--theme-dark: #101010;
+	--theme-light: white;
+	--theme-dark: black;
+	--theme-primary: #4292c6;
+	--theme-primary-dark: #084594;
+	--theme-shadow-tint: rgba(66, 146, 198, 0.2);
 	--theme-text: #fff;
 	
 	--theme-bg: var(--theme-light);
 	--text-color: var(--theme-dark);
 	--text-color-disabled: #0006;
-	--link-color: #0050C9;
+	--link-color: var(--theme-primary);
 	--link-hover-color: #A92626;
 
 	--glass-ct: 0.25;
