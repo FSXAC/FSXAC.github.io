@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Homepage
 show_footer: false
 ---
 

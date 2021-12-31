@@ -3,9 +3,15 @@ incremental: false
 
 # Site config
 title: "Muchen He"
-description: "Website showcasing Muchen's projects and school notes."
+description: "Muchen's Website"
 url: https://www.muchen.ca
 author: Muchen He
+social:
+  name: Muchen He
+  links:
+    - https://github.com/FSXAC
+    - https://instagram.com/muchen.he
+
 logo: "/assets/img/light-512.jpeg"
 
 # Markdown settings
