@@ -5,7 +5,7 @@ date: 2020-08-01
 
 > Note: this post is WIP
 
-Ever since the release of macOS Mojave (macOS 10.14), dynamic wallpapers have become one of my favourite things about the OS aethetics. How it works is that the wallpaper dynamically changes based on current time or sun positions using a set of images, typically taken at the same location with the same viewpoint, but at a different time. These set of images are packed into a single multi-frame .HEIC file with added metadata such as GPS or time information used to determine when to transition to the next image. 
+Since macOS Mojave (macOS 10.14), dynamic wallpapers have become one of my favourite things about the OS aethetics. How it works is that the wallpaper dynamically changes based on current time or sun positions using a set of images, typically taken at the same location with the same viewpoint, but at a different time. These set of images are packed into a single multi-frame .HEIC file with added metadata such as GPS or time information used to determine when to transition to the next image. 
 
 <!-- excerpt -->
 
@@ -18,7 +18,7 @@ While traditional “dynamic” wallpapers exist where a folder of images can cy
 
 In this post, I will provide a step-by-step guide to creating custom 24-hour cycle (or day/night cycle) dynamic wallpapers for macOS.
 
-![macOS Desktop Wallpaper System Preferences](assets/0-macos.png)
+![macOS Desktop Wallpaper System Preferences](/assets/dynamicwallpaper/0-macos.jpg)
 
 ## 1. Tools and Requirements
 
@@ -38,51 +38,51 @@ We will then export each scene as a different image, and upload all of them to a
 
 - Here, from my Photos library, I picked a dramatic photo taken by Jackson Lake, WYO. The hard edges of the horizon and mountain lines should make the sky replacement process mostly automatic.
 
-  ![Picking photos from the Photos library](assets/2-select.png)
+  ![Picking photos from the Photos library](/assets/dynamicwallpaper/2-select.jpg)
 
 - Next, I open this photo in *Luminar 4*. Any photo manipulator like Photoshop or Pixelmator should work fine.
 
-  ![Opening the photo to be edited in Luminar](assets/3-edit.png)
+  ![Opening the photo to be edited in Luminar](/assets/dynamicwallpaper/3-edit.jpg)
 
 - In Luminar, apply any post-processing edits are needed. For my image, I increased the contrast and structure sliders to make the mountains look more dramatic; I also increased vibrance and dehaze sliders to make the distant sceneries and clouds “pop”. Here is a before/after comparision:
 
-  ![Editing the base photo in Luminar](assets/4-day.png)
+  ![Editing the base photo in Luminar](/assets/dynamicwallpaper/4-day.jpg)
   
 - Once we’re happy with the edits, export it as a JPEG.
 
-  ![Exporting the day time image as a JPEG](assets/5-day-export.png)
+  ![Exporting the day time image as a JPEG](/assets/dynamicwallpaper/5-day-export.jpg)
 
 ### 🌓 Part Two: Night
 
 - Now let’s create the **night version** of the same photo. I go to the *Creative* tab in Luminar and apply the *AI Sky Replacement* tool.
 
-  ![Sky Replacement tool under the Creative tab in Luminar](assets/6-sky-replacement.png)
+  ![Sky Replacement tool under the Creative tab in Luminar](/assets/dynamicwallpaper/6-sky-replacement.jpg)
 
 - In this case I’ve chosen the “Starry Sky 2” as a replacement. Open up the *Advanced Settings* panel and use the *Sky Global* slider to refine the threshold of where Luminar thinks the sky is. Also notice that its own scene relighting did a fairly good job of matching the colors fo the lake and the mountains with the sky. Use the *Relight Scene* slider to adjust how much AI relighting are to be applied. Increase the *Atmospheric Haze* slider to have the contrast in the stars match roughly to the distant scenery.
 
-  ![AI Sky Replacement Initial Result](assets/7-night.png)
+  ![AI Sky Replacement Initial Result](/assets/dynamicwallpaper/7-night.jpg)
 
 - Go back to the *Essentials* tab and adjust exposure so that the scene looks realistic. I applied a -4 EV exposure and decreased contrast.
 
-  ![Further exposure adjustment for the night-time image](assets/8-night.png)
+  ![Further exposure adjustment for the night-time image](/assets/dynamicwallpaper/8-night.jpg)
 
 - Here is a before/after comparision of the edits we just did. I think it’s pretty convincing 😛.
 
-  ![Day/night comparison](assets/9-night-compare.png)
+  ![Day/night comparison](/assets/dynamicwallpaper/9-night-compare.jpg)
 
 - Just like the day-time image, export the edit as a *different* JPEG file.
 
-  ![Export the edit of the night-time photo](assets/10-night-export.png)
+  ![Export the edit of the night-time photo](/assets/dynamicwallpaper/10-night-export.jpg)
 
 ### 🌇 Part Three: Dusk
 
 - First, lets undo the edit we have done for the night-time image by going to the *History* tab in Luminar, and select the action right before the *AI Sky Replacement*. Since Luminar (like Lightroom), is a non-destructive editor, this will bring us back to when we just exported the day-time image.
 
-  ![Use the edit history to revert our changes](assets/11-history.png)
+  ![Use the edit history to revert our changes](/assets/dynamicwallpaper/11-history.jpg)
 
 - After that, we do the same thing we did with the night-time image but instead replace the sky with a dramatic sunrise or sunset sky. Here I am using “Dramatic Sunset 4”. I also adjusted the white balance so that the photo has a pink tint to it. Here is the result:
 
-  ![Dusk photo compared](assets/12-dusk.png)
+  ![Dusk photo compared](/assets/dynamicwallpaper/12-dusk.jpg)
 
 - Of course, export photo as JPEG just like before.
 
@@ -94,7 +94,7 @@ The hard work is done. Now it’s time to put them together.
 
   > From my experience, the website work the best using Chrome.
 
-  ![Photo upload to Dynamic Wallpaper Club](assets/13-upload.png)
+  ![Photo upload to Dynamic Wallpaper Club](/assets/dynamicwallpaper/13-upload.jpg)
 
 - In the left sidebar, we can select the dynamic wallpaper to either “Sun” mode or “Time” mode. In “Sun” mode, the dynamic wallpaper state is driven by its builtin GPS location data as well as the time the picture was captured. I chose “Time” mode so I can manually enter the time. For more information, checkout the  [docs page](https://www.dynamicwallpaper.club/docs).
 
@@ -102,7 +102,7 @@ The hard work is done. Now it’s time to put them together.
 
 - Hit “Create” button on the left side to submit job to queue. Shortly after, the dynamic wallpaper should be available for download inc .HEIC format.
 
-  ![Create dynamic wallpaper button](assets/14-create.png)
+  ![Create dynamic wallpaper button](/assets/dynamicwallpaper/14-create.jpg)
 
 ## 4. Setting the Dynamic Wallpaper
 

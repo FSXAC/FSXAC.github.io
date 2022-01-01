@@ -77,7 +77,7 @@ footer { margin: 2em 0; font-size: 80%;}
 
 /* Increase anchor color contrast */
 a { color: var(--link-color); text-decoration: none; transition: all .1s ease; }
-a:hover { color: var(--theme-primary); text-decoration: none; }
+a:hover { color: var(--theme-primary-dark); }
 
 // UBC handin top part
 #ubc-handin { display: none; }
