@@ -11,21 +11,21 @@ min-height:300px;
 background:linear-gradient(170deg, #406177 0%, #001624 100%);
 {% endif %}
 ">
-	<div class="container py-2 glass-dark" style="border-radius: 1em;">
-		{% if page.categories != empty %}
-		<small class="text-light" style="letter-spacing: 2px">
-			{% for category in page.categories %}
-			{{ category | upcase }}{% unless forloop.last %}, {% endunless %}
-			{% endfor %}
-		</small>
-		{% endif %}
+<div class="container p-3 glass-dark" style="border-radius: var(--round-radius);">
+	{% if page.categories != empty %}
+	<small class="text-light" style="letter-spacing: 2px">
+		{% for category in page.categories %}
+		{{ category | upcase }}{% unless forloop.last %}, {% endunless %}
+		{% endfor %}
+	</small>
+	{% endif %}
 
-		<h1 class="display text-light">{{ page.title }}</h1>
-		<p class="text-light m-0 mt-5">Published {{ page.date | date: "%Y-%m-%d" }}</p>
-		<small class="text-light m-0">
-			{% assign words = content | number_of_words %}
-			{% if words < 360 %}1 min{% else %}{{ words | divided_by:180 }}&nbsp;min{% endif %}&nbsp;read
-		</small>
+	<h4 class="text-light">{{ page.title }}</h4>
+	<p class="mt-4 mb-2 pb-3 text-light">
+		<span class="float-start">Published {{ page.date | date: "%Y-%m-%d" }}</span>
+		{% assign words = content | number_of_words %}
+		<span class="float-end">{% if words < 360 %}1 min{% else %}{{ words | divided_by:180 }}&nbsp;min{% endif %}&nbsp;read</span>
+	</p>
 	</div>
 </header>
 

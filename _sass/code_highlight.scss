@@ -197,6 +197,10 @@ code.highlighter-rouge {
 }
 
 @media (prefers-color-scheme: dark) {
+  div.highlighter-rouge div.highlight {
+    background-color: #222;
+  }
+
   .highlight {
     color: #faf6e4;
   }

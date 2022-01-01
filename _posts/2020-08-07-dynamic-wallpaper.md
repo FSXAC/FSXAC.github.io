@@ -1,6 +1,9 @@
 ---
 title: Creating Custom Day/Night Cycle Dynamic Wallpaper for macOS Under 30 Minutes
 date: 2020-08-01
+header:
+  teaser: /assets/blog/dynamicwallpaper/teaser.jpg
+  overlay_image: /assets/blog/dynamicwallpaper/teaser.jpg
 ---
 
 > Note: this post is WIP
