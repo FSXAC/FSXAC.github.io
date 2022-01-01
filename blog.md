@@ -4,12 +4,6 @@ title: Blog
 
 nav_active: /blog
 permalink: /blog
-
-header:
-  color: '#FC2'
-  gradient: 'linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%)'
-  text_color: black
-  text: Occasional memory dump.
 ---
 
 <style>
@@ -29,7 +23,7 @@ img.teaser {
 </style>
 
 # ☕️
-{: .display-1}
+{: .display-1 }
 
 Occasional memory dump of various things. The <a href="/archive">Archive</a> lists all blog posts in reverse-chronological order.
 
