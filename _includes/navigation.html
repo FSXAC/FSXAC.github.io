@@ -1,9 +1,14 @@
 <div class="d-flex justify-content-center">
 	<a href="/"><h1 class="heading handwrite">Muchen He</h1></a>
 </div>
-<nav class="navbar navbar-mh navbar-expand">
+<nav class="navbar navbar-mh navbar-expand-sm">
 	<div class="container">
-		<div class="navbar-collapse justify-content-center">
+		<a class="navbar-brand handwrite" href="/" style="font-size: 2em; color: initial; margin-top: 6px">Muchen He</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 			<ul class='navbar-nav my-1'>
 				{% for link in site.data.navigation %}
 				{% assign current = false %}
@@ -18,4 +23,3 @@
 		</div>
 	</div>
 </nav>
-{% include pride.html %}
