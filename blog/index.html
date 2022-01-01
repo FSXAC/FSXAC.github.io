@@ -25,7 +25,7 @@ nav_active: /blog
 # ☕️
 {: .display-1 .center }
 
-Occasional memory dump of various things. The <a href="/archive">Archive</a> lists all blog posts in reverse-chronological order.
+Occasional memory dump of various things. The <a href="/blog/archive">Archive</a> lists all blog posts in reverse-chronological order.
 {% endcapture %}
 
 {{ md | markdownify }}
@@ -53,17 +53,10 @@ Occasional memory dump of various things. The <a href="/archive">Archive</a> lis
 
 {% if paginator.total_pages > 1 %}
 <nav aria-label="blog pagination">
-<ul class="pagination justify-content-start">
-  <li class="page-item {% if paginator.previous_page %}{% else %}disabled{% endif %}">
-    <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}" tabindex="-1">Previous</a>
-  </li>
+<ul class="pagination justify-content-center">
   {% for page in (1..paginator.total_pages) %}
-    <li class="page-item {% if page == paginator.page %}disabled{% endif %}"><a class="page-link" href=" {% if page == 1 %}{{ '/blog' | relative_url }}{% else %}{{ site.paginate_path | relative_url | replace: ':num', page }}{% endif %}">{{ page }}</a></li>
+    <li class="mx-2 {% if page == paginator.page %}disabled{% endif %}"><a href="{% if page == 1 %}{{ '/blog' | relative_url }}{% else %}{{ site.paginate_path | relative_url | replace: ':num', page }}{% endif %}">{{ page }}</a></li>
   {% endfor %}
-
-  <li class="page-item {% if paginator.next_page %}{% else %}disabled{% endif %}">
-    <a class="page-link" href="{{ paginator.next_page_path | relative_url }}">Next</a>
-  </li>
 </ul>
 </nav>
 {% endif %}
