@@ -15,11 +15,11 @@ Sustainability as an idea has existed for a long time, but there is a growing fo
 
 The main drivers for sustainable development are due to rapidly economic growth in all countries. The main drivers are increasing population and increasing consumption per capita. Both of which will place an impact on society.
 
-{% capture vid1 %}
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jbkSRLYSojo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-{% endcapture %}
-{% include reveal_css.html %}
-{% include reveal.html pre="Video on rapid growth of countries." body=vid1 %}
+
+> Video on rapid growth of countries.
+>
+> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jbkSRLYSojo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ### Driver: Increasing Population
 

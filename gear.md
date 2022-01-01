@@ -4,9 +4,6 @@ date: 2020-06-12
 layout: default
 ---
 
-# Gear
-{:.no_toc}
-
 This page outlines the hardware/software and other things I use regularly. 
 
 - toc
@@ -14,9 +11,9 @@ This page outlines the hardware/software and other things I use regularly.
 
 ## Laptop
 
-I use a MacBook Pro 13 inch 2019 i5 base model with touchbar 75% of the time to get my work done. Apps/software I use:
+I use a MacBook Pro 13 inch M1 2020 nearly all of the time to get my work done. Apps/software I use:
 
-- *Terminal* (default app) for many programming related tasks, I use *zsh* with *Oh-My-Zsh* plugin.
+- *iTerm 2* for many programming related tasks, I use *zsh* with *Oh-My-Zsh* plugin.
 - *Visual Studio Code* for writing code and LaTeX.
 - *Typora* for <dfn definition="What you see is what you get">WYSIWYG</dfn> Markdown editing. This is the app I use for most of my school notes as one can write their own CSS to customize Markdown and UI styles however they like.
 - *Adobe Lightroom Classic CC* for photo editing and RAW processing.
@@ -40,6 +37,7 @@ For more powerful tasks (which is not that common) such as gaming, rendering, an
 - *HTC Vive* VR headset.
 - *Dell S2716DG* 144 Hz WQHD monitor.
 - *Sony WH-1000 MX3* noise cancelling headphones.
+- *Apple Magic Trackpad*
 - *Logitech MX Anywhere 2S* bluetooth mouse.
 
 ## Tablet

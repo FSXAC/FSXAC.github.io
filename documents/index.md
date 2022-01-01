@@ -25,10 +25,9 @@ show_footer: true
 		border: none;
 		padding: 0;
 		white-space: nowrap;
-		/* text-overflow: ellipsis; */
-		/* overflow: hidden; */
 		margin: 0;
 		background: transparent;
+		color: inherit;
 	}
 	.card-body .list-group .list-group-item .btn-entry {
 		border: 1px solid var(--link-color);

@@ -5,27 +5,6 @@ use_math: true
 ---
 
 {% include flashcard2_css.html %}
-{% include reveal_css.html %}
-
-{% capture pre1 %}
-Assets are grouped into classes with single accounts, the classes get depreciated together. Different classes have different depreciation rate.
-{% endcapture %}
-
-{% capture body1 %}
-Assets may be added to or subtracted from accounts each year.
-
-CCA for any year $$n$$ is given as:
-
-$$
-\text{CCA}_n=\text{UCC}_n\times d
-$$
-
-Where $$d$$ is the CCA rate (depends on the asset class), $$\text{UCC}_n$$ is the **undepreciated capital cost** or book value (BV) of the asset class eligible for depreciation for year $$n$$.
-{% endcapture %}
-
-{% include reveal.html pre=pre1 body=body1 id="creepah" %}
-
----
 
 {% include flashcard2.html front="Turn around" back="Look at what you see" %}
 

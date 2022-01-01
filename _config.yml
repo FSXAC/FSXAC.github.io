@@ -54,14 +54,6 @@ defaults:
       nav_active: /documents
       use_category_instead_of_name: true
       show_footer: false
-  - scope:
-      path: ""
-      type: "photos"
-    values:
-      nav_active: /photos
-      permalink: /photos/:year/:title
-      use_lightbox: true
-      excerpt_separator: <!-- excerpt -->
 
 # Collections config
 collections:
