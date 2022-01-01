@@ -5,19 +5,13 @@ html { font-size: 18px }
 
 // Change bootstrap width
 .container {
-    max-width: 600px !important;
+    max-width: 630px !important;
 }
 
 body {
     cursor: default;
     color: var(--text-color);
 	background-color: var(--theme-bg);
-}
-
-/* Limit narrow width of container */
-@media (min-width: 992px) {
-    .container{ max-width: 900px; }
-    
 }
 
 // Nav and header
@@ -29,6 +23,7 @@ body {
 }
 
 .handwrite { font-family: 'MHDiary'; }
+.center { text-align: center; }
 h1.handwrite { font-size: 4em; }
 h2.handwrite { font-size: 3em; }
 h3.handwrite { font-size: 2.4em; }
@@ -38,10 +33,6 @@ p.handwrite { font-size: 120%; }
     margin-top: 50px;
     color: var(--text-color);
     font-size: 80px;
-}
-h5, h6 {
-    margin-top: 1em;
-    font-weight: bold;
 }
 
 .navbar-mh .navbar-nav .nav-link { color: var(--text-color-disabled); }
@@ -67,7 +58,7 @@ h5, h6 {
     }
 	.navbar-mh .nav-item.active .nav-link:hover {
         color: var(--theme-text);
-        background-color: var(--theme-primary);
+        background-color: var(--theme-primary-dark);
         box-shadow: 0 8px 8px 0 rgba(0,0,0,0),0 4px 4px 0 rgba(0,0,0,.0),0 2px 2px 0 var(--theme-shadow-tint)
 	}
 }
@@ -103,13 +94,10 @@ input.task-list-item-checkbox { margin-right: .4em; position: relative; top: .1e
 // Blockquote
 blockquote {
     @extend .neuemorph-shadow;
-    border-radius: 10px;
-    // margin-left: 1em;
-    margin-top: 1em;
-	margin-bottom: 2em;
+    border-radius: var(--round-radius);
+    margin-top: 2em;
+	margin-bottom: 2.5em;
 	padding: 1em;
-	// border-left: 5px solid var(--theme-primary);
-	// font-style: italic;
 }
 blockquote p:first-child { margin-top: initial; }
 blockquote p:last-child { margin-bottom: initial; }

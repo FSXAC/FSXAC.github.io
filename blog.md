@@ -7,40 +7,32 @@ permalink: /blog
 ---
 
 <style>
-img.teaser {
+.teaser {
   width: 100%;
-  max-height: 350px;
+  height: 375px;
   background-color: #fff;
-  object-fit: cover;
-  border-radius: 16px;
-
-}
-@media (min-width: 768px) {
-  img.teaser {
-    max-height: 200px;
-  }
+  background-size: cover;
+  background-position: center; 
+  border-radius: var(--round-radius);
+  padding-bottom: 3px;
 }
 </style>
 
 # ☕️
-{: .display-1 }
+{: .display-1 .center }
 
 Occasional memory dump of various things. The <a href="/archive">Archive</a> lists all blog posts in reverse-chronological order.
 
 {% for post in site.posts %}
 <div class="post-entry py-4">
-<div class="row gx-5">
-  <div class="col-md-4">
-    <a href="{{ post.url }}"><img class="teaser neuemorph-shadow mb-2 mr-2" src="{{ post.header.teaser | default: '/assets/img/logo2019-128.jpg' }}" alt="..."></a>
-  </div>
-  <div class="col-md-8">
-    <small>{{ post.date | date: "%Y-%m-%d" }}</small>
-    <h2>{{ post.title }}</h2>
-    <p>{{ post.excerpt | strip_html }}
-      <br>
-      <a href="{{ post.url }}">Read more &rarr;</a>
+  <p class="mb-1"><small>{{ post.date | date: "%Y-%m-%d" }}</small></p>
+  <a href="{{ post.url }}">
+  <h6>{{ post.title }}</h6>
+  <div class="neuemorph-shadow teaser mb-2 mr-2" style="background-image: url({{ post.header.teaser | default: '/assets/img/logo2019-128.jpg' }}) "></div>
+  </a>
+    <p class="mt-4">{{ post.excerpt | strip_html }}
+      &nbsp;
+      <a href="{{ post.url }}">Read&nbsp;more&nbsp;&rarr;</a>
     </p>
-  </div>
-</div>
 </div>
 {% endfor %}

@@ -2,7 +2,7 @@
 	--theme-light: white;
 	--theme-dark: black;
 	--theme-primary: #4292c6;
-	--theme-primary-dark: #084594;
+	--theme-primary-dark: #3182bd;
 	--theme-shadow-tint: rgba(66, 146, 198, 0.2);
 	--theme-text: #fff;
 	
@@ -16,6 +16,10 @@
 	--glass-br: 1.54;
 	--light-background: #ddd;
 
+	// Shadow variables
 	--theme-shadow-min: #cecece;
 	--theme-shadow-max: #ffffff;
+
+	// Details
+	--round-radius: 8px;
 }

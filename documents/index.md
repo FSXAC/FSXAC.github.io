@@ -45,21 +45,23 @@ show_footer: true
 	
 	.card-gutter-sizer { width: 0; }
 	@media screen and (min-width: 992px) {
-		.card { width: 32%; }
+		.card { width: 49%; }
 		.card-gutter-sizer { width: 2%; }
 	}
 	@media screen and (min-width: 768px) and (max-width: 992px) {
-		.card { width: 49%; }
-		.card-gutter-sizer { width: 2%; }
+		.card { width: 98%; }
+		.card-gutter-sizer { width: 1%; }
 	}
 	
 	.flag-draft { text-decoration: line-through; }
 	</style>
 
 # 📓
-{: .display-1}
+{: .center .display-1}
 
-This page contains my notes/documents/reports for the courses I've taken. I try to fill in as much as possible but there is still lots missing. Please only use content from this page as reference material for studying. I do not condomn cheating!
+This page contains my notes/documents/reports for the courses I've taken.
+I try to fill in as much as possible but there is still lots missing.
+Please only use content from this page as reference material for studying.
 
 Please feel free to contact me if there are any mistakes. Alternatively, since this website is also open-source on GitHub, I'm always open to issues and pull requests.
 
@@ -72,7 +74,7 @@ Please feel free to contact me if there are any mistakes. Alternatively, since t
 <div class="card-gutter-sizer"></div>
 {% assign courses = category.courses | sort: 'course_num' %}
 {% for course in courses %}
-	{% unless course.disabled %}
+	{% if course.entries %}
 	<div id="{{ course.course_num | replace: ' ', '-'}}" class="card p-0">
 	<div class="card-header p-0">
 		<p class="m-0" style="font-size: 2em;">{{ course.emoji }}</p>
@@ -109,7 +111,7 @@ Please feel free to contact me if there are any mistakes. Alternatively, since t
 		</ul>
 	</div>
 	</div>
-	{% endunless %}
+	{% endif %}
 {% endfor %}
 </div>
 </section>

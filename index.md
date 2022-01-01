@@ -14,7 +14,7 @@ show_footer: false
 <script src="https://kit.fontawesome.com/c83e37f840.js" crossorigin="anonymous"></script>
 <div class="row my-5">
     <!-- <div class="col-md-4"> -->
-    <h2 class="handwrite" style="text-align: center;">☺ Hello!</h2>
+    <h2 class="handwrite center">☺ Hello!</h2>
     <!-- </div>
     <div class="col"> -->
     {% capture intro %}

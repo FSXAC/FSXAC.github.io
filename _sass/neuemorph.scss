@@ -1,6 +1,5 @@
 /* Neuemorphism box shadow */
 .neuemorph-shadow {
 	background: var(--theme-bg);
-	box-shadow:  16px 16px 33px var(--theme-shadow-min), 
-				 -16px -16px 33px var(--theme-shadow-max);
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }

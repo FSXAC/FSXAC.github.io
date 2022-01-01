@@ -1,7 +1,7 @@
 .btn-xs { padding: 0 .25em; font-size: 0.9em; }
 /* Button colors */
 .btn-primary {
-    box-shadow: 0 8px 8px 0 rgba(255,102,0,.2),0 4px 4px 0 rgba(255,102,0,.2),0 2px 2px 0 rgba(255,102,0,.2);
+    box-shadow: 0 8px 8px 0 var(--theme-shadow-tint),0 4px 4px 0 var(--theme-shadow-tint),0 2px 2px 0 var(--theme-shadow-tint);
     transition: all 0.2s ease-out;
 	color: var(--theme-text);
 	background-color: var(--theme-primary);
@@ -10,7 +10,7 @@
 .btn-primary:hover {
 	background-color: var(--theme-primary-dark);
     border-color: var(--theme-primary-dark);
-    box-shadow: 0 8px 8px 0 rgba(255,102,0,.0),0 4px 4px 0 rgba(255,102,0,.0),0 2px 2px 0 rgba(255,102,0,.2);
+    box-shadow: 0 8px 8px 0 rgba(0,0,0,0),0 4px 4px 0 rgba(0,0,0,.0),0 2px 2px 0 var(--theme-shadow-tint)
 }
 .btn-outline-primary {
 	color: var(--theme-primary);

@@ -1,8 +1,8 @@
 @import "neuemorph";
 
 div.highlighter-rouge {
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 2.8em;
+  margin-bottom: 2.5em;
 }
 
 // Rouge code fence
@@ -15,8 +15,8 @@ div.highlighter-rouge div.highlight::before {
   position: relative;
   top: -19px;
   width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: var(--round-radius);
+  border-top-right-radius: var(--round-radius);
   background: #444;
   color: var(--theme-light);
 }
@@ -35,12 +35,12 @@ div.highlighter-rouge.language-makefile div.highlight::before { content: "Makefi
 div.highlight {
   @extend .neuemorph-shadow;
   line-height: 1.2;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: var(--round-radius);
+  border-bottom-right-radius: var(--round-radius);
 }
 
 pre, pre.highlight {
-  padding: 0 1em 1em 1em;
+  padding: 0 1em 1.5em 1em;
 }
 
 // Rough highlighter
