@@ -3,7 +3,12 @@
 #c-content h3 { margin: .5em 0; }
 
 // TOC
+#markdown-toc::before {
+    font-weight: bold;
+    content: "Table of Contents";
+}
 #markdown-toc li { list-style: none; line-height: 1.1; }
+#markdown-toc li:first-child { padding-top: .5em;}
 #markdown-toc > li > a { font-weight: bold; line-height: 1.35; }
 ul#markdown-toc { padding: 0; margin: 2em 0; }
 
