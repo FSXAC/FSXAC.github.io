@@ -1,8 +1,11 @@
 
 @import "vars";
 
-html {
-    font-size: 18px;
+html { font-size: 18px }
+
+// Change bootstrap width
+.container {
+    max-width: 700px !important;
 }
 
 body {
@@ -25,12 +28,20 @@ body {
     font-style: normal;
 }
 
-h1.heading {
-    font-family: 'MHDiary';
+.handwrite { font-family: 'MHDiary'; }
+h1.handwrite { font-size: 4em; }
+h2.handwrite { font-size: 3em; }
+h3.handwrite { font-size: 2.4em; }
+p.handwrite { font-size: 120%; }
+.heading {
     margin-bottom: 0;
     margin-top: 1em;
     color: var(--text-color);
     font-size: 80px;
+}
+h5, h6 {
+    margin-top: 1em;
+    font-weight: bold;
 }
 
 .navbar-mh .navbar-nav .nav-link { color: var(--text-color-disabled); }
@@ -40,7 +51,7 @@ h1.heading {
     padding-left: 1.5em;
 }
 .navbar-mh .nav-item.active .nav-link { color: var(--text-color); border-color: var(--theme-primary); }
-.navbar-mh { border-bottom: rgba(0,0,0,0.04); }
+.navbar-mh { margin-top: -1.5em; margin-bottom: 1em; }
 @media (min-width: 768px) {
     .navbar-mh .nav-item .nav-link {
         padding: .5em .7em;

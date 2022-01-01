@@ -14,7 +14,7 @@ show_footer: false
 <script src="https://kit.fontawesome.com/c83e37f840.js" crossorigin="anonymous"></script>
 <div class="row my-5">
     <div class="col-md-4">
-    <h2 class="display-2 float-md-end" style="font-family: MHDiary">Hello!</h2>
+    <h2 class="handwrite" style="text-align: center;">☺ Hello!</h2>
     </div>
     <div class="col">
     {% capture intro %}
@@ -23,16 +23,16 @@ show_footer: false
     {{ intro | markdownify }}
 
     <div class="my-5"></div>
-        <p><strong>Contacts</strong></p>
-        <p>
+    <h6>Contact</h6>
+    <p>
         {% for item in site.data.contact.default %}
-            {% if item.icon %}
-            <i class="{{ item.icon }}"></i>
-            {% else %}
-            <i>{{ item.title }}</i>
-            {% endif %}
-            <a href="{{ item.link }}">{{ item.text }}</a>&nbsp;
+        {% if item.icon %}
+        <i class="{{ item.icon }}"></i>
+        {% else %}
+        <i>{{ item.title }}</i>
+        {% endif %}
+        <a href="{{ item.link }}">{{ item.text }}</a>&nbsp;
         {% endfor %}
-        </p>
+    </p>
     </div>
 </div>
