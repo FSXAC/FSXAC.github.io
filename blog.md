@@ -28,7 +28,7 @@ Occasional memory dump of various things. The <a href="/archive">Archive</a> lis
   <p class="mb-1"><small>{{ post.date | date: "%Y-%m-%d" }}</small></p>
   <a href="{{ post.url }}">
   <h6>{{ post.title }}</h6>
-  <div class="neuemorph-shadow teaser mb-2 mr-2" style="background-image: url({{ post.header.teaser | default: '/assets/img/logo2019-128.jpg' }}) "></div>
+  <div class="neuemorph-shadow teaser mb-2 mr-2" style="background-image: url({{ post.header.teaser | default: '/assets/img/grey.jpg' }}) "></div>
   </a>
     <p class="mt-4">{{ post.excerpt | strip_html }}
       &nbsp;

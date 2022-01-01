@@ -37,33 +37,22 @@ p.handwrite { font-size: 120%; }
 
 .navbar-mh .navbar-nav .nav-link { color: var(--text-color-disabled); }
 .navbar-mh .navbar-nav .nav-link:hover { color: var(--theme-primary); }
-.navbar-mh .nav-item .nav-link { 
-    border-left: 5px solid transparent;
-    padding-left: 1.5em;
+.navbar-mh .nav-item .nav-link {
+    padding: .5em .7em;
+    border: none;
+    margin: 0 .5em;
 }
-.navbar-mh .nav-item.active .nav-link { color: var(--text-color); border-color: var(--theme-primary); }
-.navbar-mh { margin-top: -1.5em; margin-bottom: 1em; }
-@media (min-width: 768px) {
-    .navbar-mh .nav-item .nav-link {
-        padding: .5em .7em;
-        border: none;
-        margin: 0 .5em;
-    }
-	.navbar-mh .nav-item.active .nav-link {
-		background-color: var(--theme-primary);
-		color: var(--theme-text);
-		border-radius: 7px;
-        box-shadow: 0 8px 8px 0 var(--theme-shadow-tint),0 4px 4px 0 var(--theme-shadow-tint),0 2px 2px 0 var(--theme-shadow-tint);
-        transition: all 0.2s ease-out;
-    }
-	.navbar-mh .nav-item.active .nav-link:hover {
-        color: var(--theme-text);
-        background-color: var(--theme-primary-dark);
-        box-shadow: 0 8px 8px 0 rgba(0,0,0,0),0 4px 4px 0 rgba(0,0,0,.0),0 2px 2px 0 var(--theme-shadow-tint)
-	}
+.navbar-mh .nav-item.active .nav-link {
+    background-color: var(--theme-primary);
+    color: var(--theme-text);
+    border-radius: 7px;
+    box-shadow: 0 8px 8px 0 var(--theme-shadow-tint),0 4px 4px 0 var(--theme-shadow-tint),0 2px 2px 0 var(--theme-shadow-tint);
+    transition: all 0.2s ease-out;
 }
-.navbar-mh .navbar-toggler-icon {
-	background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(120,120,120,0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+.navbar-mh .nav-item.active .nav-link:hover {
+    color: var(--theme-text);
+    background-color: var(--theme-primary-dark);
+    box-shadow: 0 8px 8px 0 rgba(0,0,0,0),0 4px 4px 0 rgba(0,0,0,.0),0 2px 2px 0 var(--theme-shadow-tint)
 }
 
 /* Make dictionaries align better */
