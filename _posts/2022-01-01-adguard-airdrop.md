@@ -1,6 +1,8 @@
 ---
 title: AirDrop not working? AdGuard installed? Here's the Workaround
 date: 2022-01-01
+header:
+  teaser: /assets/blog/teaser/airdrop-adguard.jpg
 ---
 
 AirDrop is a feature of the Apple ecosystem that allows easy file transfer across devices. 
