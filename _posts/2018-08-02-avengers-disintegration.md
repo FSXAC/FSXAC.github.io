@@ -11,9 +11,7 @@ tags:
   - avengers
 
 use_math: true
-
-header:
-  teaser: /assets/blog/teaser/disintegrate.jpg
+image: /assets/blog/teaser/disintegrate.jpg
 ---
 
 In this small project, my objective is to take an input image and disintegrate it into particles. I will be using [Processing 3](https://processing.org/) because it's easy to do quick graphical interactives and I'm familiar with it.

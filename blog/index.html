@@ -38,10 +38,8 @@ Occasional memory dump of various things. The <a href="/blog/archive">Archive</a
     </small></p>
   <a href="{{ post.url }}">
     <h5>{{ post.title }}</h5>
-    <!-- <div class="neuemorph-shadow teaser mb-2 mr-2" style="background-image: url({{ post.header.teaser | default: '/assets/img/grey.jpg' }}) "></div> -->
-
-    {% if post.header.teaser %}
-    <div class="neuemorph-shadow teaser mb-4 mr-2" style="background-image: url({{ post.header.teaser }})"></div>
+    {% if post.image %}
+    <div class="neuemorph-shadow teaser mb-4 mr-2" style="background-image: url({{ post.image }})"></div>
     {% endif %}
   </a>
   <p>{{ post.excerpt | strip_html | truncate: 140 }}

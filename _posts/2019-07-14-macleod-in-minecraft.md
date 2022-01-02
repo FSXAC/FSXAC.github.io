@@ -4,8 +4,8 @@ title: UBC Macleod Building in Minecraft
 date: 2019-07-27
 categories: [projects, gaming]
 tag: [minecraft, survival, architecture, UBC]
+image: /assets/blog/teaser/macleodmc.jpg
 header:
-  teaser: /assets/blog/teaser/macleodmc.jpg
   overlay_image: /assets/blog/2019-07-14_13.56.00.png
   overlay_filter: 0.5
 use_lightbox: true

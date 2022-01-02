@@ -9,8 +9,8 @@ nav_active: /blog
 tags:
   - adobe
   - lightroom
+image: /assets/blog/teaser/lightroom.jpg
 header:
-  teaser: /assets/blog/teaser/lightroom.jpg
   overlay_image: /assets/blog/default.jpg
   overlay_filter: 0.4
 

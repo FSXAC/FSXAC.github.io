@@ -9,8 +9,7 @@ tags:
   - google
   - app
   - drive
-header:
-  teaser: /assets/blog/teaser/gdrive1.png
+image: /assets/blog/teaser/gdrive1.png
 
 published: false
 ---

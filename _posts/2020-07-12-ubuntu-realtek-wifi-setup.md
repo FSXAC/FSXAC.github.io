@@ -2,8 +2,8 @@
 title: Installing Realtek Wireless Driver for Ubuntu on a Desktop PC
 date: 2020-07-12
 categories: [Linux]
+image: "https://lh3.googleusercontent.com/pw/ACtC-3dOr4LNoXx_H6c1SBvV1FNnqpw_ppZdpaTHAfaNYavGQPmDq2DPaJUSZ5sFGqM_3XWG_H_aYKfvgqSTh_48gcjr93ccvGespDDaEiwTXTsV1DX3XbvTqxk35SxJZrIRAKR6OpOLykASRHg7_ddJYFM=w880-h476-no?authuser=1"
 header:
-   teaser: "https://lh3.googleusercontent.com/pw/ACtC-3dOr4LNoXx_H6c1SBvV1FNnqpw_ppZdpaTHAfaNYavGQPmDq2DPaJUSZ5sFGqM_3XWG_H_aYKfvgqSTh_48gcjr93ccvGespDDaEiwTXTsV1DX3XbvTqxk35SxJZrIRAKR6OpOLykASRHg7_ddJYFM=w880-h476-no?authuser=1"
    overlay_image: "https://lh3.googleusercontent.com/pw/ACtC-3dOr4LNoXx_H6c1SBvV1FNnqpw_ppZdpaTHAfaNYavGQPmDq2DPaJUSZ5sFGqM_3XWG_H_aYKfvgqSTh_48gcjr93ccvGespDDaEiwTXTsV1DX3XbvTqxk35SxJZrIRAKR6OpOLykASRHg7_ddJYFM=w880-h476-no?authuser=1"
 
 ---

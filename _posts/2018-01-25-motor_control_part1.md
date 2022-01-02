@@ -10,8 +10,8 @@ tags:
   - 3d_printing
   - cad
   - control
+image: /assets/blog/teaser/motor1.jpg
 header:
-  teaser: /assets/blog/teaser/motor1.jpg
   overlay_image: https://lh3.googleusercontent.com/P-9ReVAwoVg9t-_LgWj-NjVJzEXnl0fHvYb1Ks4vlZ9PyYugyrJd-X0xSqG8JdXLez-Agp3wbO-fYJJgcWfCZZ2nup8b2L27Ieo3ebCKdGfrPmM39z_9usPKbzNPSZKAj_7gdt3zEvfIhpqR5m4BSxu3LoSJRVis-51sB4DLgB-eEIgoTAI493jtv-idBoCzhB7W3UaIQl4ZV33lkBIxdEeFancc-QyTER3LYKeKYbaUcmFknt3E4x4N-CozQvYBocO2d-9pLLRXW0ZD79lmE87tsEiaYMtdaql3AIQ-WI-LIdMELZknkKgFThWxjgdF1P7FWuDvcY_nngdk88JkkIWS19qGYmyYEfZlC4ahpPdiOCAIZCTjrEAXdJxUwzZrVUb357h4TyhHhPcMuTfz0xzMdKmt7g2N8AI6nQJOS7CVsDqSwm0phNocZ6hBX8r9ifGN2yzT1Pac-N9EtY11Pm0ef2cvEloiM9nBlnaEHrnNB8HbYYcbO6hhjmUb8sfT0FBIX38q2h1FzcJKzWs05Up1Kx2Cav8x2h_7EV7ZihuUJHFBTU1c9JUKUuQrxovppxPyyQ0EidMMjsOUkjk2mNc2WuERMc1_t2lJhG6Ej9C_D6xkM8h9ncWBMOn_v5RO73T8uhg_pirB1DNoGd72IEbzycAuq_fAXA=w1268-h783-no
   overlay_filter: 0.5
 ---

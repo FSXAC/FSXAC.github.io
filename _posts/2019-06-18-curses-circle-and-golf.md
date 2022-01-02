@@ -4,8 +4,8 @@ title: Curses, Circle, and Golf
 date: 2019-06-18
 categories: projects
 tag: [programming, project, python, curses, code golf]
+image: /assets/blog/circlegolf.jpg
 header:
-  teaser: /assets/blog/circlegolf.jpg
   overlay_image: /assets/blog/circlegolf.jpg
   overlay_filter: 0.8
 ---

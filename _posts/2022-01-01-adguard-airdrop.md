@@ -1,12 +1,11 @@
 ---
 title: AirDrop not working? AdGuard installed? Here's the Workaround
 date: 2022-01-01
-header:
-  teaser: /assets/blog/teaser/airdrop-adguard.jpg
+image: /assets/blog/teaser/airdrop-adguard.jpg
 ---
 
 AirDrop is a feature of the Apple ecosystem that allows easy file transfer across devices. 
-But for the last couple of months I just couldn't figure out why I cannot send files from my Mac to my other Apple devices.
+But for the last couple of months I just couldn't figure out why I cannot send files from my Mac to my other Apple devices.<!-- excerpt -->
 I could receive using AirDrop just fine -- which indicates it's not an issue with bluetooth or WiFi on my Mac.
 
 I've tried everything that a Google search might suggest, turning WiFi, bluetooth, computer off and on, doing updates etc.

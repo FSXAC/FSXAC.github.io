@@ -15,8 +15,9 @@ tags:
   - fractal
   - mandelbrot
 
+image: /assets/blog/teaser/fract.jpg
+
 header:
-  teaser: /assets/blog/teaser/fract.jpg
   overlay_image: /assets/blog/fract.jpg
   overlay_filter: 0.8
 
