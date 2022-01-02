@@ -1,6 +1,6 @@
 @media (prefers-color-scheme: dark) {
 	:root {
-		--theme-bg: #080808;
+		--theme-bg: var(--theme-dark);
 
 		--text-color: #f8f8f8;
 		--text-color-disabled: #fff6;
