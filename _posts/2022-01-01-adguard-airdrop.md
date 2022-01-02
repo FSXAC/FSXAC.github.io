@@ -13,7 +13,7 @@ Then I realized this has to be a network issue, so I started looking through all
 How AdGuard works is that it essentially sets up a local mini-VPN such that network traffic flow through here.
 This is where AdGuard blocks ads before websites gets rendered on the browser.
 
-However, recently it's been noted [^1] that AirDrop affects Apple Bourjour service -- a network service that powers AirDrop.
+However, recently it's been noted [^1][^2] that AirDrop affects Apple Bourjour service -- a network service that powers AirDrop.
 Luckily, there is a workaroud:
 
 1. Open the AdGuard settings panel (either through the app, or the browser extension) by clicking on the gear icon.
@@ -30,3 +30,4 @@ But it's been weeks since the patch and I still haven't gotten my update (I inst
 Thanks for reading!
 
 [^1]: [Incompatibility with AirDrop on macOS Monterey](https://github.com/AdguardTeam/AdguardForMac/issues/973)
+[^2]: [AirDrop not working with AdGuard](https://forum.adguard.com/index.php?threads/airdrop-not-working-with-adguard.45314/)
