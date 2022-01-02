@@ -1,9 +1,12 @@
 - text: 'About'
   url: /
   desc: You are here.
+# - text: Projects
+#   url: /projects
+#   desc: My personal and collaborative project showcase.
 - text: 'Blog'
   url: /blog
-  desc: Just writing my thoughts down occasionally. 
+  desc: Just writing my thoughts down occasionally.
 - text: Documents
   url: /documents
   desc: Notes and documents from school work.
@@ -19,9 +22,6 @@
 # - text: Photo
 #   url: /photo
 #   desc: Photography portfolio.
-- text: Projects
-  url: /projects
-  desc: My personal and collaborative project showcase.
 # - text: Resume
 #   url: /resume
 #   desc: My resume is statically generated to HTML. Then I export it as PDF for other uses.
