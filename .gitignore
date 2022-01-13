@@ -165,3 +165,6 @@ _site/
 Gemfile.lock
 .jekyll-cache/
 .jekyll-metadata
+
+# Ignore drafts
+_drafts/*

@@ -269,6 +269,13 @@
       link: '/documents/ELEC291/Project2'
 - category: Computer
   courses:
+  - course_num: 'CPEN 212'
+    course_name: 'Computing Systems'
+    emoji: 💻
+    date: 2022-01-13
+    entries:
+    - title: 'Week 1'
+      link: '/documents/CPEN212/week1'
   - course_num: 'CPEN 412'
     course_name: 'Microcomputer System Design'
     emoji: 💻

@@ -10,7 +10,7 @@ updated: 2022-01-13
 
 Let's start with a hello-world type program written in ARM assembly:
 
-```assembly
+```armasm
 .text
 .global_start
 _start:
@@ -88,7 +88,7 @@ The instruction is a set of instructions the CPU/processor runs on. There are ma
 
 ### Processor State
 
-In a CPU there are usually general-purpose registers used to store things. They are *architecturally visible* -- i.e. can be used in programming.
+The processor state can be described by its register values. In a CPU there are usually general-purpose registers used to store things. They are *architecturally visible* -- i.e. can be used in programming.
 
 <img src="assets/Week 1/2022-01-13 14-24-04.png" alt="2022-01-13 14-24-04" style="zoom:50%;" />
 
@@ -102,4 +102,33 @@ There are also vector and floating-point registers on modern CPUs that are more 
 In ARMv8 (Aarch64) there is also the **stack pointer register (xzr/sp)** but it's not used like a regular register. If attempted to be read, the hardware will intercept and returns a 0.
 
 Additionally there are other registers that may or may not be architecturally visible but can be used for useful things such as performance measuring, sleep, clocks, etc.
+
+### Instructions
+
+Instructions can be thought of state-transitions of processor states. For example, consider an addition instruction in ARM assembly:
+
+```armasm
+add x0, x8, x2, lsl #2
+```
+
+This really means: "x0 &larr; x8 + (x2 << 2)" which is take the value of x2, and left-shift it by 2 bits (multiply by 4) and addit to x8, then store it in x0, where x0, x2, and x8 are CPU registers.
+
+We also need ways to control how we want to do state-transition, we can do this using comparison and branch instructions. Consider:
+
+```armasm
+cmp x0, x1
+beq, SOMEWHERE
+```
+
+Here, we compare if the value of x0 and x1 is the same (`beq` stands for *branch if equal*), if it is, then jump to SOMEWHERE (another instruction).
+
+### Memory Instructions
+
+Now we know we have some hardware registers and some instructions to do computation on the registers. Typically processors have some large amount of memories connected to it. We often need to load inputs from memory, do some computation, and store it back to the memory. Thus, we have **load** and **store** instructions that facilates this.
+
+Consider this load instruction:
+
+```armasm
+mov rax, [rdi]
+```
 

@@ -7,7 +7,7 @@ div.highlighter-rouge {
 
 // Rouge code fence
 div.highlighter-rouge div.highlight::before {
-  content: ">_";
+  content: "...";
   display: inline-block;
   padding: .2rem 1rem;
   font-size: 80%;
@@ -31,6 +31,8 @@ div.highlighter-rouge.language-verilog div.highlight::before { content: "SystemV
 div.highlighter-rouge.language-tcl div.highlight::before { content: "TCL"; }
 div.highlighter-rouge.language-json div.highlight::before { content: "JSON"; }
 div.highlighter-rouge.language-makefile div.highlight::before { content: "Makefile"; }
+div.highlighter-rouge.language-armasm div.highlight::before { content: "ARM"; }
+div.highlighter-rouge.language-c\+\+ div.highlight::before { content: "C++"; }
 
 div.highlight {
   @extend .neuemorph-shadow;
@@ -64,8 +66,8 @@ code.highlighter-rouge {
   font-weight: bold;
 }
 .highlight .err {
-  color: #a61717;
-  background-color: #e3d2d2;
+  // color: #a61717;
+  // background-color: #e3d2d2;
 }
 .highlight .gr {
   color: #aa0000;
