@@ -78,7 +78,7 @@ This is the difference between static and dynamic dispatch. For `bar()` function
 
 ## ISA
 
-From the assembly code above, clearly this is a language that has some level of abstraction. The **instruction set architecture (ISA)** helps define this abstraction/
+From the assembly code above, clearly this is a language that has some level of abstraction. The **instruction set architecture (ISA)** helps define this abstraction.
 
 The instruction is a set of instructions the CPU/processor runs on. There are mainly three components:
 
@@ -129,6 +129,19 @@ Now we know we have some hardware registers and some instructions to do computat
 Consider this load instruction:
 
 ```armasm
-mov rax, [rdi]
+ldr x0, [x1]
 ```
 
+This loads the address value stored in x1 from memory and puts the result into register x0.
+
+### Register vs. Memory
+
+Both register and memory stores data, and they're both index onto a table (register-file (RF) for registers and memory for memory). So why do we have two types? What are the differences?
+
+While registers sits closer to the processor, has a fast access, but extremely small, the main *architectural difference* is that register index **must be** encoded into the instruction. The implication is that: **we must know which registers to use statically (during compile)**. Whereas memory addresses can be **computered at runtime**.
+
+### Memory Consistency Model
+
+Another part of ISA is the memory consistency model. Memory consistency implies that memory instructions are executed consistently. In practice, processors execute instructions out-of-order to be efficient. For example, one instruction might be stalled on something, but the following instruction can be executed, so let it execute first.
+
+The question is, can we reorder load instructions?
