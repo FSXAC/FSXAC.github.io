@@ -32,8 +32,8 @@ div.highlighter-rouge.language-tcl div.highlight::before { content: "TCL"; }
 div.highlighter-rouge.language-json div.highlight::before { content: "JSON"; }
 div.highlighter-rouge.language-makefile div.highlight::before { content: "Makefile"; }
 div.highlighter-rouge.language-armasm div.highlight::before { content: "ARM"; }
-div.highlighter-rouge.language-x86asm div.highlight::before { content: "ARM"; }
 div.highlighter-rouge.language-c\+\+ div.highlight::before { content: "C++"; }
+div.highlighter-rouge.language-nasm div.highlight::before { content: "x86"; }
 
 div.highlight {
   @extend .neuemorph-shadow;
