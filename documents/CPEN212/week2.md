@@ -98,7 +98,7 @@ In practice, typically *some* registers are saved by callee and anything else mu
 
 > **Example**: consider this following function that follows the callee-saved convenction in x86 assembly:
 >
-> ```assembly
+> ```nasm
 > myfunction:
 > 	push	rbp
 > 	mov		rbp, rsp
@@ -157,7 +157,7 @@ We want to write some code to print some strings to the screen. We write and uti
 
 So let's start with:
 
-```assembly
+```nasm
 section .text
 
 global _start
@@ -180,7 +180,7 @@ bye db "goodbye, cruel world...", 10, 0
 
 The print function is:
 
-```assembly
+```nasm
 print:
     push rdi
     call len
@@ -199,7 +199,7 @@ print:
 
 Here is the len function:
 
-```assembly
+```nasm
 len:
     push rbx
     xor  rbx, rbx
