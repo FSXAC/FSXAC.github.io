@@ -100,15 +100,16 @@ In practice, typically *some* registers are saved by callee and anything else mu
 >
 > ```nasm
 > myfunction:
-> 	push	rbp
-> 	mov		rbp, rsp
-> 	sub 	rsp, 48
-> 	
-> 	...
-> 	
-> 	mov 	rsp, rbp
-> 	pop		rbp
-> 	ret
+>     push  rbp
+>     mov   rbp, rsp
+>     sub   rsp, 48
+>
+>     ; body of function
+>     ...
+>   
+>     mov   rsp, rbp
+>     pop   rbp
+>     ret
 > ```
 >
 > Upon entering the function, we push the base-pointer/frame pointer (`rbp`), then we put the return address on the stack.
