@@ -6,6 +6,8 @@ updated: 2022-01-13
 
 
 
+Original slides/talk from Mieszko Lis.
+
 ### How Software Interact with Hardware System?
 
 Let's start with a hello-world type program written in ARM assembly:
