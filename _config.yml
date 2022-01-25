@@ -59,6 +59,10 @@ defaults:
       nav_active: /documents
       use_category_instead_of_name: true
       show_footer: false
+  - scope:
+      path: "documents/CPEN212"
+    values:
+      image: "documents/CPEN212/assets/teaser.jpg"
 
 # Collections config
 collections:
