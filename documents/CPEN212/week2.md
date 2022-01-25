@@ -1,7 +1,7 @@
 ---
 title: Week 2
 date: 2022-01-18
-updated: 2022-01-20
+updated: 2022-01-25
 ---
 
 
@@ -564,3 +564,58 @@ If there are multiple inheritances (i.e. a derived class `dog` that is both an `
 
 Then we simply merge the virtual functions as part of `dog`'s' vtable. If it happens that the `dog` object is casted to a `swimmer` object, then we can have a second `vtable` pointer that points to a `vtable` as if it's of type `swimmer`.
 
+
+
+### Traits / Interface
+
+One thing implication of *vtable* is that it enables *trait* -- where a derived class can be extended to perform a different behaviour.
+
+For example, given a `Dog` class, we can *extend* its behaviour without modifying the original class definition:
+
+```rust
+struct Dog { age: 132, name: String }
+
+trait Named ( fn say_name(&self); }
+impl Named for Dog { fn say_name(&self) ( println!("{}", self. name )} }
+
+trait Swimmer { fn swim(&self); }
+impl Swimmer for Dog { fn swim(&self) { println! ("swimming") } }
+```
+
+
+
+### Closures
+
+IN a real computer, there are thigns happening all the time such as events and interrupts. Typically, there are functions for handling this event, and those are *closures*.
+
+Consider this snippet of code in Go
+
+```go
+func addTo(x int) func(int) int {
+  return func(y int) int {
+    return x + y
+  }
+}
+
+func main() {
+  add2 := addTo(2)
+  fmt.Println(add2(7))
+}
+```
+
+The function `addTo` returns a function/closure. So in this case, we call the function `addTo` to create a new function called `add2`, then we can call `add2` function to produce 9 (since 7 is the parameter).
+
+Same thing in Haskell:
+
+```haskell
+let add2 = (2 +)
+in print (add 2 7)
+```
+
+This might be useful because it can be used for higher-order functions like map (applying the same function to a list of objects), event listeners, data hiding (e.g. in jQuery). We can use closures to do lazy-evaluation (we call the function and assign to the variable, but the runtime system don't evaluate it until the variable is actually needed).
+
+
+
+## Abstractions on Indirect Jumps Summary
+
+So far we saw function calls, function returns and its calling conventions. We also learned ad-hoc polymorphism to enable object-oriented programming and inherietances, interfaces, and traits. Lastly, we saw how this enables closures.
