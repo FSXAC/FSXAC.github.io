@@ -32,7 +32,7 @@ Let's take a look at a typical output of the command `top` which outputs a list 
 
 Let's consider an example where we are playing CSGO:
 
-`insert library API interaction`
+`TODO: insert library API interaction`
 
 Notice that both our program (CSGO) and library (e.g. libc) interact with the CPU and memory.
 
@@ -50,7 +50,29 @@ We're playing CSGO and we're moving the mouse and the keyboard. How does the har
 
 What we want is **interrupt**: whenever some external event (such as a click) happens, we want to *interrupt* the current process and run some interrupt service routine (ISR). 
 
-`insert interrupt and signal slide`
+`TODO: insert interrupt and signal slide`
 
-The kernel is capable of accepting interrupts, and the kernel can propagate a *signal* back to the application layer.
+The kernel is capable of accepting interrupts, and the kernel can propagate a *signal* back to the application layer. The libraries can issue some callback function to our process to do some stuff (e.g. firing a gun).
+
+Some signals we might be familiar with include:
+
+- SIGTERM: terminate the program
+- SIGKILL: kill the program (less graceful)
+- SIGSEGV: segment fault
+
+`TODO: insert interrupt callback`
+
+
+
+## OS Kernel
+
+The kernel is the core of the OS. It's the interface between the bare metal hardware and the processes we run on top of it. As we just learned, it manages interrupts/signals and calls/syscalls.
+
+More importantly, the kernel provides basic abstractions over hardware. For example, the kernel and the hardware together manages virtual memory (setting up page tables, address layout). 
+
+In every processes' address space, there is always a region mapped for kernel.
+
+Lastly, the kernel always runs at an **elevated privilege level** -- which means it can pretty much do anything it wants in the computer.
+
+
 
