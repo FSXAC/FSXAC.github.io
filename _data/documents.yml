@@ -280,6 +280,10 @@
       link: '/documents/CPEN212/week2'
     - title: 'Week 3'
       link: '/documents/CPEN212/week3'
+    - title: 'Week 4'
+      link: '/documents/CPEN212/week4'
+    - title: 'Week 7'
+      link: '/documents/CPEN212/week7'
   - course_num: 'CPEN 412'
     course_name: 'Microcomputer System Design'
     emoji: 💻
