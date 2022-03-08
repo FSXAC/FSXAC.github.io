@@ -2,7 +2,6 @@
 title: Week 7
 date: 2022-03-03
 updated: 2022-02-03
-image: assets/week7/CleanShot 2022-03-03 at 14.42.47@2x.png
 ---
 
 # Processes and Threads
@@ -33,7 +32,7 @@ Let's take a look at a typical output of the command `top` which outputs a list 
 
 Let's consider an example where we are playing CSGO:
 
-`TODO: insert library API interaction`
+![CleanShot 2022-03-08 at 14.12.35@2x](assets/week7/CleanShot 2022-03-08 at 14.12.35@2x.png)
 
 Notice that both our program (CSGO) and library (e.g. libc) interact with the CPU and memory.
 
@@ -51,7 +50,7 @@ We're playing CSGO and we're moving the mouse and the keyboard. How does the har
 
 What we want is **interrupt**: whenever some external event (such as a click) happens, we want to *interrupt* the current process and run some interrupt service routine (ISR). 
 
-`TODO: insert interrupt and signal slide`
+![CleanShot 2022-03-08 at 14.12.35@2x](assets/week7/CleanShot 2022-03-08 at 14.12.35@2x.png)
 
 The kernel is capable of accepting interrupts, and the kernel can propagate a *signal* back to the application layer. The libraries can issue some callback function to our process to do some stuff (e.g. firing a gun).
 
@@ -60,8 +59,6 @@ Some signals we might be familiar with include:
 - SIGTERM: terminate the program
 - SIGKILL: kill the program (less graceful)
 - SIGSEGV: segment fault
-
-`TODO: insert interrupt callback`
 
 
 
@@ -79,7 +76,7 @@ Lastly, the kernel always runs at an **elevated privilege level** -- which means
 
 This model of process abstraction allows us to run lots of processes in parallel:
 
-`TODO: insert many processes slide`
+![CleanShot 2022-03-08 at 14.13.09@2x](assets/week7/CleanShot 2022-03-08 at 14.13.09@2x.png)
 
 These processes won't interfere with each other because they have their own virtual memory space.
 
