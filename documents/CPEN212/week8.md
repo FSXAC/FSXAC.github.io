@@ -3,20 +3,27 @@ title: Week 8
 date: 2022-03-08
 ---
 
-> Note: this is a draft document
+> Note: this is a draft document; will probably be updated thursday
 
 Lecture and slide by Mieszko Lis.
+
+
+
+- toc
+{:toc}
+
+
 
 # Processes Continued
 
 Recall **process abstraction**:
 
-- A process is a single instance of a program, and is unique and identified by it's process ID (PID)
+- A process is a single instance of a program, and is unique and identified by it's process ID (PID)
 - Each process thinks it has the whole computer resources to itself -- supported by virtual memory system, who makes this illusion of address space.
 - The OS kernel schedules processes on limited hardware via **context switch**
 - *threads* are like processes but share same address space
 
-### Time-Sharing
+## Time-Sharing
 
 Suppose we have two cores, but six processes (A-F), how do we run all the processes seemingly concurrently.
 
@@ -26,7 +33,7 @@ Every time step (e.g. during a timer interrupt), we delegate the compute resourc
 
 
 
-### Process Details
+## Process Details
 
 Recall: Every process has a **parent**, except PID 1 which is started by kernel during boot. Processes can also create **children** and need to wait for them to finish.
 
@@ -42,7 +49,7 @@ Recall: Every process has a **parent**, except PID 1 which is started by kernel 
 
 
 
-Let's answer the above questions from the bottom. 
+To answer the above questions, we need to see what happens from the bottom of the stack.
 
 ![CleanShot 2022-03-08 at 14.22.22@2x](assets/week8/CleanShot 2022-03-08 at 14.22.22@2x.png)
 
@@ -67,7 +74,7 @@ We cannot use the standard control flow we know and love to handle these excepti
 
 
 
-### Hardware Exceptions
+# Hardware Exceptions
 
 `insert flow arrow slide`
 
@@ -84,9 +91,9 @@ There are two types of exceptions:
 
 
 
-#### Exception Handler Privilege Levels
+## Privilege Levels
 
-Recall in previous lecture, we learned that processes have privilege levels -- some processes are more "entitled" than other processes. CPU has multiple privilege levels (e.g. 0 == kernel, ..., 3 == user applications).
+Recall in previous lecture, we learned that processes have privilege levels -- some processes are more "entitled" than other processes. CPU has multiple privilege levels (e.g. 0 == kernel, ..., 3 == user applications).
 
 Some instructions need kernel privilege level. Trying to execute these instructions with lower privilege results in a hardware fault (e.g. illegal instruction).
 
@@ -105,7 +112,7 @@ Exception handlers needs more permission than user-processes since:
 >
 > - The **syscall** transfer the control from the program to the kernel to do something -- in this case writes to the terminal/screen. 
 > - The **sysret** transfers the control back to the program -- where it proceeds to do its thing.
-> - This is an example of **synchronous exception**. Since there is no external events that triggered this.
+> - This is an example of **synchronous exception**. Since there is no external events that triggered this.
 
 > **Example: Page fault**
 >
@@ -113,7 +120,7 @@ Exception handlers needs more permission than user-processes since:
 >
 > - Suppose we're running some app and it hits a page fault. As a programmer/user we don't even know if page fault happened (except it's slightly slower). 
 > - Upon page fault, we go into a page fault handler that swaps in the page from disk.
-> - This is also an example of **synchronous exception**. This is still not an external event because the page fault happened due to an memory instruction. If this instruciton wans't there, the exception woudln't have happened.
+> - This is also an example of **synchronous exception**. This is still not an external event because the page fault happened due to an memory instruction. If this instruciton wans't there, the exception woudln't have happened.
 
 > **Example: Context Switch**
 >
@@ -121,7 +128,7 @@ Exception handlers needs more permission than user-processes since:
 >
 > - Processes control flow is interrupted by some timer interrupt, where we switch to some exception handler
 > - Upon completion of exception handler, we might return to a different process
-> - This is an example of **async exception** since the exception occured due to the timer
+> - This is an example of **async exception** since the exception occured due to the timer
 
 > **Example: Illegal Memory Access**
 >
@@ -130,15 +137,15 @@ Exception handlers needs more permission than user-processes since:
 > - Process tries to access some illegal memory
 > - Protection fault triggers and we go to some exception handler
 > - Process will be killed, and we might return from exception handler to a different process
-> - This is another example of **sync exception** 
+> - This is another example of **sync exception** 
 
 
 
-### Exception Abstractions
+## Exception Abstractions
 
 So far we understand that:
 
-- HArdware intrrupt running program
+- Hardware intrrupt running program
 - and excpeiton handlers (ISR) transfer control to/from OS
 - what happens during ISR depends on exception type
 
@@ -160,12 +167,12 @@ When we call `sysret`
 
 
 
-### Exception Observations
+## Exception Observations
 
 - syscall has a single entry point; the syscall exception handler has to decide what to do (read, write, etc.) based on value of `rax`
 - page fault and keypresses cannot have a single entry point -- because the handler NEEDS to know what happened. The hardware needs to know a head of time which handler to call. We need to look up the type of exception in a table (Exception vector table)
 
-### Exception Vector Table
+## Exception Vector Table
 
 There is a table somewhere in memory that is known to the processor called **exception vector table** that outlines "for *this* exception, there is *this* address for a handler."
 
@@ -175,13 +182,11 @@ Example: page fault exception type has a number 14, protection fault has 13.
 
 
 
-### Exception Entry and Return
-
-(in x86-64)
+## Exception Entry and Return
 
 Upon exception entry, we switch to another stack (at some known address). We save the original stack pointer, rflags, and rip by pushing it to our current stack. We raise privilge level and then jump the handler code via exception table. 
 
-This is liek a syscall but we jump to a diferent stack.
+This is like a *syscall* but we jump to a different stack.
 
 Upon return, everything is just undone (like a function call).
 
@@ -191,5 +196,37 @@ Upon return, everything is just undone (like a function call).
 
 How does a breakpoint trap the execution to stop at where it needs to stop? (Hint: the word "trap").
 
-The fast way to do this is a **hardware breakpoints** -- the hardware can support a few breakpoints that help stopping execution at a few designated instruction addresses. (e.g.  registers `DR0`, `DR1`, ...)
+The fast way to do this is a **hardware breakpoints** -- the hardware can support a few breakpoints that help stopping execution at a few designated instruction addresses. (e.g.  registers `DR0`, `DR1`, ...). When the PC (`rip` register) matches one of these breakpoint addresses, it can trigger an exception -- who hands control back to the debugger.
 
+Hardware breakpoints only works for a *few* breakpoints (typically 4). If we want more breakpoints, we need to use...
+
+**Software breakpoints** replaces the instruction at the breakpoint with a **trap** instruction. The trap instruction is guaranteed to trigger an exception, where we can then hand control back to the debugger.
+
+
+
+## Exception during Exception, Inception?
+
+<img src="assets/week8/CleanShot 2022-03-08 at 15.10.26@2x.png" alt="CleanShot 2022-03-08 at 15.10.26@2x" style="zoom:25%;" />
+
+Exception handler **masks** exceptions -- so that other exception cannot occur. 
+
+Interrupts hardware so that we can ensure future exceptions are not lost. Once the original exception is handled,d we can re-enable the exception. Some part of handlers re-entrant (e.g. for clean up)
+
+Some exceptions cannot be masked (NMIs). One example is illegal instructions -- the processor literally cannot do anything else -- so it can't be masked.
+
+
+
+## Hardware Exceptions vs Java (and Friends) Exceptions
+
+In hardware exceptions:
+
+- CPU interrupts the program, the program doesn't know it's been interrupted
+- Run at escalated privilege level
+- Serviced by OS kernel (handlers are part of the kernel)
+
+In Java (and friends) exceptions:
+
+- It's literally just a *jump*, and not much else (dissapointingly)
+- The control transfer here is *non-local* (?),
+- But the key difference is that the program is **not** interrupted and we're still inside the program.
+- No special hardware or OS involvement. 
