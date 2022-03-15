@@ -112,7 +112,7 @@ At a low level, the file abstraction is also encoding-agnostic. Only the program
 
 ## File Operations & Interfaces
 
-### Syscall Interface
+### `syscall` Interface
 
 The syscall interface is an OS-level specifical. This means it's **not portable** since it depends on which OS you're on. There exists standards like POSIX that enable interchangeability.
 
@@ -132,7 +132,7 @@ The OS only cares about **bytes** and not even semantically -- it doesn't know a
 
 Every file interaction has to interact with kernel. If we have a higher-level interface (e.g. a web browser that loads a file), under the hood it would still have to ask the kernel.
 
-### LibC Interface
+### `libc` Interface
 
 This is a step higher than syscall interface, and is implemented on top of the syscall interface. This is nice because we can write code using *libc* and it's portable across systems.
 
@@ -151,11 +151,33 @@ int fflush(FILE *fp);
 
 It's generally unsafe for syscall handlers. And the changes are **buffered** in a separate buffer structure. The buffer is only *flushed* to the actual file when the buffer is full (or when flush is called).
 
-**Q**: why do we buffer things?
+**Q**: why do we buffer things? See [File Buffering](#file-buffering)
 
 
 
-### File Buffer
+### `libc` ↔ `syscall` interaction
+
+`insert diagram`
+
+Suppose our code uses the *libc* library, then when we use `fgetc()` function to read from file. The function actually performs a *syscall* to the kernel to read the file into the buffer.
+
+
+
+## File Buffering
+
+**Analogy**: suppose an delivery airplane can hold 10,000 packages, it takes an hour each to prepare the plane for loading and deloading. But once it is prepared, it only takes 1 second to load/unload each package.
+
+So back to our file example, having a buffer allows us to **amortize** the latency to write to a file. We can fill a buffer and write *once* (in a *flush* call), instead of having our disk (e.g. spin up/down for a hard drive -- which takes a long time) for every write call.
+
+Buffer is not exclusive to files, it's actually used everywhere -- in the kernel, on the disks.
+
+Buffers are typically **transparent** in theory, as in, the user/applications doesn't know that buffers exist.
+
+**Problem**: It gets complicated if we want guarantee about when I/O actually happens. What if we try to write data to disk, but suddenly the disk loses power out while data is still in the buffer? Furthermore if the disk fails, the write's error is delayed while data is sitting in the buffer.
+
+
+
+
 
 
 
