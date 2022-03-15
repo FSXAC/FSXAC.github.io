@@ -18,6 +18,8 @@ On a very simple defiition: it's a collection of data that we can open, view, wr
 - a file is just a **sequence of bytes** -- where it's stored is not specified
 - **everything** is a file; obviously everything on disk (text files, movies, etc.) are files, but so are directories (folders), disks, terminals, interface to peripheral devices (e.g TTY), and processes.
 
+This abstraction boils down to: **a file is a sequence of bytes** and that we the only operation we have on the file is **reading the next character** (if there is one).
+
 So what isn't a file (in unix)? Files *might* be on disk, but it could live on RAM or nowhere at all. Files might have a path and names, but they might not.
 
 For example, when we "pipe" the output of one program to another (e.g. grep), both programs treat the input/output as a file, but this "file" doesn't exist anywhere.
@@ -47,7 +49,7 @@ At a low level, the file abstraction is also encoding-agnostic. Only the program
 
 > **Example**: processes and their executables in the memory space (and only exist in memory) can be examined as a file
 >
-> ```
+> ```shell
 > xxd -p /proc/self/exe
 > ```
 > 
@@ -116,8 +118,6 @@ At a low level, the file abstraction is also encoding-agnostic. Only the program
 
 The syscall interface is an OS-level specifical. This means it's **not portable** since it depends on which OS you're on. There exists standards like POSIX that enable interchangeability.
 
-Let's assume we have a file that is abstracted as a sequence of bytes.
-
 Files have **file descriptors** -- a set of small bytes that identify open files.
 
 Possible operations are:
@@ -141,10 +141,8 @@ Instead of having file descriptors, instead of have **file pointers** and **stre
 As it implements on top of syscall, we have functions that facilitate similar tasks:
 
 ```c
-int fclose(FILE *stream);
+FILE *fopen(const char *filename, const char *mode)
 int fclose(FILE *fp);
-int fputs (const char *string, FILE *fp);
-int fseek(FILE *fp, long int offset, int whence);
 int fflush(FILE *fp);
 /* more ... */
 ```
@@ -177,7 +175,56 @@ Buffers are typically **transparent** in theory, as in, the user/applications d
 
 
 
+## Reading A File
+
+If we use the abstraction where file is a sequence of bytes and we can only read the next bytes. Then we must track the position of where we are currently reading/writing:
+
+`insert diagram`
+
+The position act as an index for us to access bytes from a file, but doesn't allow random access (it's more like a cassette tape where we can only seek back and forward).
+
+**Note**: not all devices are seekable (for example, terminal devices or peripherals like keyboard cannot be seeked).
 
 
 
+> **Example**:
+>
+> Consider the following code that uses `syscall` in C:
+>
+> ```c
+> uint8_t buf[10];
+> int fd = open("/dev/random", O_RDONLY);
+> ssize_t n = read(fd, buf, 10);
+> close(fd);
+> ```
+>
+> Where:
+>
+> - O_RDONLY specifies read only mode for file descriptor
+> - Upon calling `read` we specify the file descriptor, and put it in the buffer `buf`, and we read 10 bytes (why?)
 
+## Writing To File
+
+> **Note**: draft from this point on... to be finished...
+
+> **Example**:
+>
+> ```c
+> /* todo: insert code */
+> ```
+>
+> Where
+>
+> - O_CREAT specifies we should create the file if doesn't exist
+> - 0600 is file permissions in octal
+> - Can we use 10 instead of n1 in write? No because we don't actually know the length/size of n1 at compile-time
+
+## Error Reporting
+
+We saw that `read`/`write` operations return number of bytes actually read/written. 
+
+- Can be smaller than what we expected
+- Can be 0 on end-of file
+- Can be -1 if there was an error.
+
+How do we know what **kind** of error when an error occurs? We can check `errno` global variable and compare it against a set of predefined values: e.g. ENOENT, EACCES, EINTR, etc.
