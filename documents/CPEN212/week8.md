@@ -1,9 +1,8 @@
 ---
 title: Week 8
 date: 2022-03-08
+updated: 2022-03-14
 ---
-
-> Note: this is a draft document; will probably be updated thursday
 
 Lecture and slide by Mieszko Lis.
 
@@ -27,7 +26,7 @@ Recall **process abstraction**:
 
 Suppose we have two cores, but six processes (A-F), how do we run all the processes seemingly concurrently.
 
-`TODO: insert slide`
+![CleanShot 2022-03-14 at 16.58.35](assets/week8/CleanShot 2022-03-14 at 16.58.35.png)
 
 Every time step (e.g. during a timer interrupt), we delegate the compute resource to a different process.
 
@@ -76,7 +75,7 @@ We cannot use the standard control flow we know and love to handle these excepti
 
 # Hardware Exceptions
 
-`insert flow arrow slide`
+<img src="assets/week8/CleanShot 2022-03-14 at 16.59.12.png" alt="CleanShot 2022-03-14 at 16.59.12" style="zoom:50%;" />
 
 Upon a hardware exception, we pause the original process control flow and execute some exception handler -- typical part of the kernel code. Once handled, we resume the original process flow.
 
@@ -104,11 +103,13 @@ Exception handlers needs more permission than user-processes since:
 - they often need to access the hardware directly
 - they might need to switch / update page table (e.g. during page fault exception handler)
 
+**Note** privilege level is different from *priority*: that privilege level dictates whether if a process is entitled to carry out certain operations (e.g. interacting with hardware), but priority influences time-sharing scheduling: i.e. how much time/resources a process gets.
+
 
 
 > **Example: Syscall**
 >
-> `todo: insert syscall control flow`
+> ![CleanShot 2022-03-14 at 17.00.31](assets/week8/CleanShot 2022-03-14 at 17.00.31.png)
 >
 > - The **syscall** transfer the control from the program to the kernel to do something -- in this case writes to the terminal/screen. 
 > - The **sysret** transfers the control back to the program -- where it proceeds to do its thing.
@@ -116,7 +117,7 @@ Exception handlers needs more permission than user-processes since:
 
 > **Example: Page fault**
 >
-> `todo: page fault graph`
+> ![CleanShot 2022-03-14 at 17.00.51](assets/week8/CleanShot 2022-03-14 at 17.00.51.png)
 >
 > - Suppose we're running some app and it hits a page fault. As a programmer/user we don't even know if page fault happened (except it's slightly slower). 
 > - Upon page fault, we go into a page fault handler that swaps in the page from disk.
@@ -124,7 +125,7 @@ Exception handlers needs more permission than user-processes since:
 
 > **Example: Context Switch**
 >
-> `todo: context swtich graph`
+> ![CleanShot 2022-03-14 at 17.01.14](assets/week8/CleanShot 2022-03-14 at 17.01.14.png)
 >
 > - Processes control flow is interrupted by some timer interrupt, where we switch to some exception handler
 > - Upon completion of exception handler, we might return to a different process
@@ -132,7 +133,7 @@ Exception handlers needs more permission than user-processes since:
 
 > **Example: Illegal Memory Access**
 >
-> `todo: illegal memory access`
+> ![CleanShot 2022-03-14 at 17.01.28](assets/week8/CleanShot 2022-03-14 at 17.01.28.png)
 >
 > - Process tries to access some illegal memory
 > - Protection fault triggers and we go to some exception handler
@@ -178,7 +179,7 @@ There is a table somewhere in memory that is known to the processor called **exc
 
 Example: page fault exception type has a number 14, protection fault has 13. 
 
-`insert slide for exception vectors`
+![CleanShot 2022-03-14 at 17.04.24](assets/week8/CleanShot 2022-03-14 at 17.04.24.png)
 
 
 
@@ -230,3 +231,184 @@ In Java (and friends) exceptions:
 - The control transfer here is *non-local* (?),
 - But the key difference is that the program is **not** interrupted and we're still inside the program.
 - No special hardware or OS involvement. 
+
+
+
+---
+
+# Process Management
+
+We know that processes can be organized in a tree -- because parents can launch children processes. 
+
+From the kernel perspective, there are two piece of implementation to carry such management:
+
+1. **`fork`**: a system call that takes current process and makes a copy (replicates a memory image).
+
+   (In Linux, a more general call, **clone** does the same thing but also generalizes to threads)
+
+2. **`execve`**: a system call that replaces current program with another. 
+
+If we want to spawn another process, we need to first **fork**, then we replace one of the copies with another program we want to run with **execve** (*fork-and-exec*).
+
+## Fork
+
+Fork is a system call that returns a new process ID for the child process upon success:
+
+```c
+pid_t fork(void);
+```
+
+**Note**: `fork` returns -1 if the fork fails and cannot create a child process.
+
+The cloned child process is **exact duplicate** of the parent, but it has its own virtual memory space.
+
+> **Example**: consider following C code:
+>
+> ```c
+> int main() {
+>   pid_t p = fork();
+>   printf("p: %d, my PID: %d, parent PID: %d\n", p, getpid(), getppid())
+> }
+> ```
+>
+> Where `getpid()` gets current process's PID and `getppid()` gets parent PID. In practice, one should always check for errors when we're forking (but for brevity is ignored in this example code).
+>
+> ---
+>
+> **Q:** how many lines does it print?
+>
+> Since when we called `fork` everything gets copied, including program flow, so `printf` is called twice -- once in the parent, once in the child. Suppose here's the output:
+>
+> ```
+> p: 2, my PID: 1, parent PID: 0
+> p: 0, my PID: 2, parent PID: 1
+> ```
+>
+> We can tell that the first line comes from the parent, since `p` -- the return value from calling `fork` is a child PID and that the child's parent PID is `1` on the second line.
+>
+> **Note:** the order this occurs is not defined. We cannot assume that parent/child comes first. We **must** look at the PIDs to determine child/parent relationship.
+
+We can use child processes for **concurrent processing**, e.g. use a seperate child process for each instance of web server connection.
+
+## Controlling Children
+
+When we spawn child process, both parent and child continue to run. This raises several issues:
+
+- What happens when a child finishes/dies?
+- How will the parent know?
+
+If a child dies, we have to clean up. Consider the following code, if the code is in a child process, it will print "child":
+
+```c
+int main() {
+  pid_t p = fork();
+  if (p == 0) {
+    printf("child\n");
+  } else {
+    while(1);
+  }
+}
+```
+
+Once we run this,  the child immediately finishes but upon inspecting list of processes we see that the child process still exists with status **`Z+`**:
+
+```
+$ ps X grep spawn2
+507925 pts/3 R+ 0:03 ./spawn2
+507926 pts/3 Z+ 0:00 [spawn2] <defunct>
+```
+
+The child process is now a **zombie**: no code is running but the process still exists. We need to cleanup, and must be **reaped** by the parent (via `waitpid`). If the parent dies before the child process dies, then it will be reaped by the `init` process (or next level parent process).
+
+### Waitpid
+
+**`waitpid`** is a system call we can utilize to reap child processes. Here is its API:
+
+```c
+pid_t waitpid(pid_t pid, int *wstatus, int options)
+```
+
+Where
+
+- `pid` is the child PID
+- `wstatus` is child exit details; we can use this output parameter to extract information about child exit detail and status to the parent.
+- `options` has some options about the call. E.g. we might just want to check on the status of children processes without killing (see manual)
+
+## Spawn Another Program
+
+We use the system call **`execve`** to replace a copied process with a different one; here is its API:
+
+```c
+int execve(const char *pathname, char *const argv[], char *const envp[]);
+```
+
+Where
+
+- `pathname` is the path to the program we want to run/spawn,
+- `argv` is a list of command-line arguments,
+- `envp` is the environment (environment variables, etc.),
+- and returns -1 if `execve` fails, and doesn't return if the call suceeds -- since the newly spawned process replaced the current process in memory.
+
+The program arguments and the environment are arrays of strings to be provided to each process. While arguments can vary specifically from process to process, environment is expected to be **persistent** (same to all programs).
+
+We can use child processes for **concurrent processing**, e.g. use a seperate child process for each instance of web server connection.
+
+> **Example**: spawning a child process that echos hello world.
+>
+> ```c
+> int main() {
+>   char *args[] = {
+>     "/bin/echo",
+>     "hello",
+>     "world",
+>     "\0" /* could be NULL here */
+>   };
+>   
+>   pid_t p1 = fork();
+>   
+>   /* In practice, do error check */
+>   if (p1 == 0) {
+>     execve(args[0], args, environ); ⓵
+>   } else {
+>     pid_t _ = waitpid(p1, NULL, 0); ②
+>     printf("parent: child died\n");
+>     while(1);
+>   }
+> }
+> ```
+>
+> This outputs:
+>
+> ```
+> hello world
+> parent: child died
+> ```
+>
+> ---
+>
+> We started with the parent; then we called `fork` and got an exact copy of the parent process. Upon running `execve` (1) we replaced the child memory space with new data -- including new binary for the program we spawned.
+>
+> In the parent process, we can query the status of the child process (2), and when we the process dies, `waitpid` returns and the parents print the message.
+
+
+
+## Signals
+
+So far our parent process is hanging on `waitpid` when it's interested in child process's signals. But what if we want the parent process to continue doing other work and **be notified** when child exists?
+
+We need to use **signals** -- which is a way for kernel/processes to notify processes. Signals are mediated by the kernel because it's unsafe to have exception handlers in user-code (since exception handlers require elevated privileges).
+
+Kernel or process takes action depending on the signal. The signals `KILL` and `STOP` are always handled by the kernel, and other signals can be caught by having *signal handlers* in programs.
+
+A list of UNIX signals can be found here: [POSIX signals](https://en.wikipedia.org/wiki/Signal_(IPC)#POSIX_signals).
+
+
+
+### Sending Signals
+
+For a `kill` signal, we just need to call the `kill` command and specify the PID. The kill signal will then be handled by the kernel -- kind of like an exception handler.
+
+
+
+### Catching Signals
+
