@@ -1,3 +1,156 @@
+- category: Computer
+  courses:
+  - course_num: 'CPEN 212'
+    course_name: 'Computing Systems'
+    emoji: 💻
+    date: 2022-01-13
+    entries:
+    - title: 'Week 1'
+      link: '/documents/CPEN212/week1'
+    - title: 'Week 2'
+      link: '/documents/CPEN212/week2'
+    - title: 'Week 3'
+      link: '/documents/CPEN212/week3'
+    - title: 'Week 4'
+      link: '/documents/CPEN212/week4'
+    - title: 'Week 7'
+      link: '/documents/CPEN212/week7'
+    - title: 'Week 8'
+      link: '/documents/CPEN212/week8'
+    - title: 'Week 9'
+      link: '/documents/CPEN212/week9'
+  - course_num: 'CPEN 412'
+    course_name: 'Microcomputer System Design'
+    emoji: 💻
+    date: 2020-01-31
+    entries:
+    - title: 'Intro to Memory'
+      link: '/documents/CPEN412/2020-01-06-Lecture-1-Introduction'
+    - title: '68000 CPU Memory Interface'
+      link: '/documents/CPEN412/2020-01-09-Lecture-2'
+    - title: 'Full Address Decoding'
+      link: '/documents/CPEN412/2020-01-13-Lecture-3'
+    - title: 'Partial Address Decoding'
+      link: '#'
+      flag: wip
+    - title: 'SRAM'
+      link: '/documents/CPEN412/2020-01-20-Static-Memory-(SRAM)'
+    - title: 'Asynchronous DRAM'
+      link: '/documents/CPEN412/2020-01-27-DRAM'
+    - title: 'Synchronous DRAM'
+      link: '/documents/CPEN412/2020-01-29-Synchronous-DRAM'
+    - title: 'Non-Volatile Memory'
+      link: '/documents/CPEN412/2020-02-03-NVM'
+      flag: new
+  - course_num: 'CPEN 411'
+    course_name: 'Computer Architecture'
+    emoji: 📐
+    date: 2019-09-06
+    entries:
+    - title: 'Introduction'
+      link: '/documents/CPEN411/2019-09-05-Introduction'
+    - title: 'SimpleScalar'
+      link: '/documents/CPEN411/2019-09-09-SimpleScaler-Introduction'
+    - title: 'Memory Technologies'
+      link: '/documents/CPEN411/2019-09-10-Memory-Technologies'
+    - title: 'RISC-V'
+      link: '/documents/CPEN411/2019-09-10-RISC-V'
+    - title: 'VS Code Debugging'
+      link: '/documents/CPEN411/vscode-debug'
+  - course_num: 'CPEN 311'
+    course_name: 'Digital Systems Design'
+    emoji: 🗃
+    date: 2019-04-02
+    entries:
+    - title: 'Combinational Logic'
+      link: '/documents/CPEN311/SS1A'
+    - title: 'Sequential Logic'
+      link: '/documents/CPEN311/SS1B'
+    - title: 'Finite State Machine'
+      link: '/documents/CPEN311/SS2A'
+    - title: 'Hierarchy'
+      link: '/documents/CPEN311/SS2B'
+    - title: 'Synthesizable Verilog'
+      link: '/documents/CPEN311/SS3'
+    - title: 'Datapath I'
+      link: '/documents/CPEN311/SS4'
+    - title: 'Datapath II'
+      link: '/documents/CPEN311/SS5'
+    - title: 'Datapath III'
+      link: '/documents/CPEN311/SS6'
+    - title: 'Loops, Generate, and Tristates'
+      link: '/documents/CPEN311/SS7'
+    - title: 'On-Chip Debug'
+      link: '/documents/CPEN311/SS8'
+    - title: 'Fractional Numbers'
+      link: '/documents/CPEN311/SS9'
+    - title: 'FPGA Architecture'
+      link: '/documents/CPEN311/SS10'
+    - title: 'Debugging Techniques'
+      link: '/documents/CPEN311/SS10X'
+    - title: 'On-Board Memory'
+      link: '/documents/CPEN311/SS11'
+    - title: 'System-on-Chip'
+      link: '/documents/CPEN311/SS12'
+    - title: 'Circuit Timing'
+      link: '/documents/CPEN311/SS13'
+    - title: 'Circuit Timing II'
+      link: '/documents/CPEN311/SS14'
+    - title: 'Metastability'
+      link: '/documents/CPEN311/SS15'
+    - title: 'Power'
+      link: '/documents/CPEN311/SS16'
+    - title: 'High Level Synthesis'
+      link: '/documents/CPEN311/SS17X'
+    - title: 'Asynchronous Logic'
+      link: '/documents/CPEN311/SS17'
+    - title: 'Asynchronous Datapath'
+      link: '/documents/CPEN311/SS18'
+    - title: 'Problem Set'
+      group:
+      - enum: 1
+        link: '/documents/CPEN311/ps1'
+      - enum: 2
+        link: '/documents/CPEN311/ps2'
+      - enum: 3
+        link: '/documents/CPEN311/ps3'
+      - enum: 4
+        link: '/documents/CPEN311/ps4.pdf'
+      - enum: 5
+        link: '/documents/CPEN311/ps5.pdf'
+  - course_num: 'CPEN 211'
+    course_name: 'Microcomputers'
+    emoji: 📱
+  - course_num: 'CPSC 259'
+    course_name: 'Data Structures & Algorithms'
+    emoji: 🔄
+  - course_num: 'APSC 160'
+    course_name: 'Computation in Engineering Design'
+    emoji: 🤖
+    date: 2018-10-19
+    entries:
+    - title: 'Final Review'
+      link: '/documents/APSC160/APSC-160-Final-Review'
+  - course_num: 'CPEN 512'
+    course_name: 'Parallel Computing'
+    emoji: 🐜
+    entries:
+    - title: 'Hwatcha Architecture'
+      link: 'https://www.icloud.com/iclouddrive/007cE1sE8AOGNZi2yyEQZPcxA#hwacha'
+    - title: 'Project BrainWave'
+      link: 'https://www.icloud.com/iclouddrive/0a950ABOFdLPIKNvXpiAYMeuw#brainwave'
+    - title: 'Course Project: Hough Transform GPU Acceleration'
+      link: 'https://www.icloud.com/iclouddrive/05acmnRKDyFX6cuDidkYxjxyw#Hough_Presentation'
+    - title: 'Course Project: Hough Transform GPU Acceleration'
+      link: "https://www.icloud.com/iclouddrive/004h2jLPZdDJge0S8wZeMeHAA#Report"
+  - course_num: 'EECE 570'
+    course_name: 'Fundamentals of Visual Computing (Computer Vision)'
+    emoji: 👁
+    entries:
+    - title: 'Adversarial Attacks on DNNs using Poses'
+      link: 'https://www.icloud.com/iclouddrive/067fw9eBDTP8cG0gfqPT7uJ7w#presentation'
+    - title: 'Course Project: Sketch2Slides'
+      link: 'https://www.icloud.com/iclouddrive/047jv662ADeWZzcTZ61Dwnsyw#report'
 - category: Electrical
   courses:
   - course_num: 'ELEC 441'
@@ -267,139 +420,6 @@
       link: '/documents/ELEC291/Project1'
     - title: 'Project 2 - Magnetic Field Tracking Robot'
       link: '/documents/ELEC291/Project2'
-- category: Computer
-  courses:
-  - course_num: 'CPEN 212'
-    course_name: 'Computing Systems'
-    emoji: 💻
-    date: 2022-01-13
-    entries:
-    - title: 'Week 1'
-      link: '/documents/CPEN212/week1'
-    - title: 'Week 2'
-      link: '/documents/CPEN212/week2'
-    - title: 'Week 3'
-      link: '/documents/CPEN212/week3'
-    - title: 'Week 4'
-      link: '/documents/CPEN212/week4'
-    - title: 'Week 7'
-      link: '/documents/CPEN212/week7'
-    - title: 'Week 8'
-      link: '/documents/CPEN212/week8'
-    - title: 'Week 9'
-      link: '/documents/CPEN212/week9'
-  - course_num: 'CPEN 412'
-    course_name: 'Microcomputer System Design'
-    emoji: 💻
-    date: 2020-01-31
-    entries:
-    - title: 'Intro to Memory'
-      link: '/documents/CPEN412/2020-01-06-Lecture-1-Introduction'
-    - title: '68000 CPU Memory Interface'
-      link: '/documents/CPEN412/2020-01-09-Lecture-2'
-    - title: 'Full Address Decoding'
-      link: '/documents/CPEN412/2020-01-13-Lecture-3'
-    - title: 'Partial Address Decoding'
-      link: '#'
-      flag: wip
-    - title: 'SRAM'
-      link: '/documents/CPEN412/2020-01-20-Static-Memory-(SRAM)'
-    - title: 'Asynchronous DRAM'
-      link: '/documents/CPEN412/2020-01-27-DRAM'
-    - title: 'Synchronous DRAM'
-      link: '/documents/CPEN412/2020-01-29-Synchronous-DRAM'
-    - title: 'Non-Volatile Memory'
-      link: '/documents/CPEN412/2020-02-03-NVM'
-      flag: new
-  - course_num: 'CPEN 411'
-    course_name: 'Computer Architecture'
-    emoji: 📐
-    date: 2019-09-06
-    entries:
-    - title: 'Introduction'
-      link: '/documents/CPEN411/2019-09-05-Introduction'
-    - title: 'SimpleScalar'
-      link: '/documents/CPEN411/2019-09-09-SimpleScaler-Introduction'
-    - title: 'Memory Technologies'
-      link: '/documents/CPEN411/2019-09-10-Memory-Technologies'
-    - title: 'RISC-V'
-      link: '/documents/CPEN411/2019-09-10-RISC-V'
-    - title: 'VS Code Debugging'
-      link: '/documents/CPEN411/vscode-debug'
-  - course_num: 'CPEN 311'
-    course_name: 'Digital Systems Design'
-    emoji: 🗃
-    date: 2019-04-02
-    entries:
-    - title: 'Combinational Logic'
-      link: '/documents/CPEN311/SS1A'
-    - title: 'Sequential Logic'
-      link: '/documents/CPEN311/SS1B'
-    - title: 'Finite State Machine'
-      link: '/documents/CPEN311/SS2A'
-    - title: 'Hierarchy'
-      link: '/documents/CPEN311/SS2B'
-    - title: 'Synthesizable Verilog'
-      link: '/documents/CPEN311/SS3'
-    - title: 'Datapath I'
-      link: '/documents/CPEN311/SS4'
-    - title: 'Datapath II'
-      link: '/documents/CPEN311/SS5'
-    - title: 'Datapath III'
-      link: '/documents/CPEN311/SS6'
-    - title: 'Loops, Generate, and Tristates'
-      link: '/documents/CPEN311/SS7'
-    - title: 'On-Chip Debug'
-      link: '/documents/CPEN311/SS8'
-    - title: 'Fractional Numbers'
-      link: '/documents/CPEN311/SS9'
-    - title: 'FPGA Architecture'
-      link: '/documents/CPEN311/SS10'
-    - title: 'Debugging Techniques'
-      link: '/documents/CPEN311/SS10X'
-    - title: 'On-Board Memory'
-      link: '/documents/CPEN311/SS11'
-    - title: 'System-on-Chip'
-      link: '/documents/CPEN311/SS12'
-    - title: 'Circuit Timing'
-      link: '/documents/CPEN311/SS13'
-    - title: 'Circuit Timing II'
-      link: '/documents/CPEN311/SS14'
-    - title: 'Metastability'
-      link: '/documents/CPEN311/SS15'
-    - title: 'Power'
-      link: '/documents/CPEN311/SS16'
-    - title: 'High Level Synthesis'
-      link: '/documents/CPEN311/SS17X'
-    - title: 'Asynchronous Logic'
-      link: '/documents/CPEN311/SS17'
-    - title: 'Asynchronous Datapath'
-      link: '/documents/CPEN311/SS18'
-    - title: 'Problem Set'
-      group:
-      - enum: 1
-        link: '/documents/CPEN311/ps1'
-      - enum: 2
-        link: '/documents/CPEN311/ps2'
-      - enum: 3
-        link: '/documents/CPEN311/ps3'
-      - enum: 4
-        link: '/documents/CPEN311/ps4.pdf'
-      - enum: 5
-        link: '/documents/CPEN311/ps5.pdf'
-  - course_num: 'CPEN 211'
-    course_name: 'Microcomputers'
-    emoji: 📱
-  - course_num: 'CPSC 259'
-    course_name: 'Data Structures & Algorithms'
-    emoji: 🔄
-  - course_num: 'APSC 160'
-    course_name: 'Computation in Engineering Design'
-    emoji: 🤖
-    date: 2018-10-19
-    entries:
-    - title: 'Final Review'
-      link: '/documents/APSC160/APSC-160-Final-Review'
 - category: Mathematics
   courses:
   - course_num: 'MATH 220'

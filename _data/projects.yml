@@ -3,6 +3,38 @@
 # This data is used both by the projects page
 # as well as the resume page
 
+- name: 'Sketch2Slides'
+  dates:
+    start: 2020-10-01
+    end: 2020-12-28
+  ongoing: false
+  type: code, computer
+  mot: course
+  description: "A MATLAB script to automatically scan and convert drawn content to PowerPoint slides. The image processing pipeline makes use of Hough transform, morphological operations, and accurate colour correction. The automation outputs a fully-functional .pptx file."
+  worthy: true,
+  tech: [MATLAB, Python]
+  links:
+    GitHub: "https://github.com/FSXAC/Sketch2Slides"
+    # Project Presentation: "#"
+    Project Presentation (Video): "https://www.youtube.com/watch?v=PIDL-t2zeuI"
+    Report: "https://www.icloud.com/iclouddrive/047jv662ADeWZzcTZ61Dwnsyw#report"
+
+- name: Hough Transform with GPU Acceleration, MPI, and OpenCL
+  dates:
+    start: 2020-10-01
+    end: 2020-12-28
+  ongoing: false
+  type: code, computer
+  mot: course
+  description: Exploring parallel-computing techniques, including CUDA on Nvidia GPU, OpenCL, and Open MPI to accelerate Hough transform to detect lines in an image. Resulting in <strong>50 &times;</strong> speedup compared to serial/baseline implementation.
+  tech: [C, Open MPI, OpenCL, CUDA]
+  worthy: true
+  thumbnail: "https://raw.githubusercontent.com/FSXAC/CPEN512/master/hough/img/ipad512.jpg"
+  links:
+    GitHub: "https://github.com/FSXAC/CPEN512/tree/master/hough"
+    Project Presentation: "https://www.icloud.com/iclouddrive/05acmnRKDyFX6cuDidkYxjxyw#Hough_Presentation"
+    Report: "https://www.icloud.com/iclouddrive/004h2jLPZdDJge0S8wZeMeHAA#Report"
+
 - name: Augmented Reality Minesweeper
   dates:
     start: 2020-05-01
