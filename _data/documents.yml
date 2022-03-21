@@ -131,9 +131,22 @@
     entries:
     - title: 'Final Review'
       link: '/documents/APSC160/APSC-160-Final-Review'
+  - course_num: 'CPEN 511'
+    course_name: 'Advanced Computer Architecture'
+    emoji: 🔑
+    date: 2021-04-01
+    entries:
+    - title: 'Eyeriss'
+      link: 'https://www.icloud.com/iclouddrive/0fe9ySwbPZ07EgkLZVv99fLWg#P1_-_Eyeriss'
+    - title: 'Log-Based Transactional Memory'
+      link: 'https://www.icloud.com/iclouddrive/00dYN-mM_pxCqztM4B34mq-tQ#P2_-_LogTM'
+    - title: 'Final Project Report'
+      link: 'https://www.icloud.com/iclouddrive/05foRRqUBLTSlmQq80lDEqxEQ#Project_Report_2021'
+    
   - course_num: 'CPEN 512'
     course_name: 'Parallel Computing'
     emoji: 🐜
+    date: 2020-12-28
     entries:
     - title: 'Hwatcha Architecture'
       link: 'https://www.icloud.com/iclouddrive/007cE1sE8AOGNZi2yyEQZPcxA#hwacha'
@@ -146,11 +159,13 @@
   - course_num: 'EECE 570'
     course_name: 'Fundamentals of Visual Computing (Computer Vision)'
     emoji: 👁
+    date: 2020-12-28
     entries:
     - title: 'Adversarial Attacks on DNNs using Poses'
       link: 'https://www.icloud.com/iclouddrive/067fw9eBDTP8cG0gfqPT7uJ7w#presentation'
     - title: 'Course Project: Sketch2Slides'
       link: 'https://www.icloud.com/iclouddrive/047jv662ADeWZzcTZ61Dwnsyw#report'
+
 - category: Electrical
   courses:
   - course_num: 'ELEC 441'

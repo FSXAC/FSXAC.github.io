@@ -3,12 +3,41 @@
 # This data is used both by the projects page
 # as well as the resume page
 
+- name: 'PhotoStats'
+  dates:
+    start: 2021-04-01
+    end: 2022-02-01
+  ongoing: true
+  type: code, data
+  mot: independent
+  description: "Python script that interpolates macOS Photos library statistics and image metadata; produces data visualizations including heatmap, GPS heatmap, and chord diagrams"
+  tech: [Python, Processing, d3.js, p5.js]
+  worthy: true
+  links:
+    Web demo: '#'
+  
+
+- name: 'FutureGazer'
+  dates:
+    start: 2021-02-01
+    end: 2021-05-01
+  ongoing: false
+  type: code, computer, research
+  mot: course
+  worthy: true
+  description: "Gaze-tracking user study; team of three; animated avatar in video conferencing to study participation, engagement, focus, and attention"
+  tech: [Processing]
+  links:
+    Video Presentation: "#"
+    Project report: "#"
+
+
 - name: 'Sketch2Slides'
   dates:
     start: 2020-10-01
     end: 2020-12-28
   ongoing: false
-  type: code, computer
+  type: code, computer, research
   mot: course
   description: "A MATLAB script to automatically scan and convert drawn content to PowerPoint slides. The image processing pipeline makes use of Hough transform, morphological operations, and accurate colour correction. The automation outputs a fully-functional .pptx file."
   worthy: true,
@@ -24,7 +53,7 @@
     start: 2020-10-01
     end: 2020-12-28
   ongoing: false
-  type: code, computer
+  type: code, computer, research
   mot: course
   description: Exploring parallel-computing techniques, including CUDA on Nvidia GPU, OpenCL, and Open MPI to accelerate Hough transform to detect lines in an image. Resulting in <strong>50 &times;</strong> speedup compared to serial/baseline implementation.
   tech: [C, Open MPI, OpenCL, CUDA]
