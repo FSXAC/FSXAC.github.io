@@ -1,0 +1,36 @@
+- school: Unviersity of British Columbia
+  degree: Bachelor of Applied Science (+Co-op)
+  major: Electrical Engineering
+  start: 2015
+  end: 2020
+  gpa: 86%
+  affiliations:
+  - ECESS
+  - ThunderBots
+  courses:
+  - Machine Learning
+  - Data Structures and Algorithms
+  - Computer Architecture
+  - Computer Systems
+  - VLSI Design
+  - Control Theory
+  - Digital Logic Design
+  - Signals and Systems
+  - Mathematical Proofs
+
+- school: University of British Columbia
+  degree: Master of Applied Science (Thesis)
+  major: Computer Engineering
+  start: 2020
+  end: 2022
+  gpa: N/A
+  affiliations:
+  courses:
+  - Computer Vision
+  - Advanced Computer Architecture
+  - Parallel and Configurable Computing
+  - Trustworthy Machine Learning
+  - Human Computer Interfaces
+
+
+  

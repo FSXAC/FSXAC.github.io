@@ -6,73 +6,144 @@ nav_active: /resume
 ---
 
 <style>
-.neucard {
-	border-radius: 12px;
-	background: #f2f2f2;
-	box-shadow:  12px 12px 40px #cecece, 
-				-12px -12px 40px #ffffff;
-	padding: .5em 1em;
-	margin-bottom: 1.5em;
+.resume-container {
+	max-width: 8.5in;
+	margin: 0 auto;
+	border:1px solid black;
+	font-size: 14px;
 }
-.neucard-inverse {
-	border-radius: 12px;
-	background: #ffffff;
-	box-shadow: inset 12px 12px 40px #d9d9d9, 
-				inset -12px -12px 40px #ffffff;
+h1.name {
+	font-size: 50px;
 }
-h1, h2, h3 { font-weight: lighter }
-h2 { border-bottom: 1px solid #ddd; margin-bottom: .4em; font-size: 1.5em;}
-span.sk { padding: .1em .25em; border-radius: 3px; background-color: #d9d9d9; color: #222; }
-div.re-content { font-size: 14px; }
-@media (min-width: 768px) { div.col-md-4 { padding-right: 0; } }
 
-@media (prefers-color-scheme: dark) {
-	.neucard {
-	background: #080808;
-	box-shadow:  12px 12px 40px #000000, 
-				-12px -12px 40px #151515;
+.skill-category {
+	font-weight: bold;
 }
+
+/* Jobs */
+ul.work {
+    list-style: none;
+    padding: 0px;
+}
+
+ul.work li:before
+{
+    content: '➤';
+    margin: 0;
+	margin-right: .5em;
+}
+li.work p {
+	display: inline;
+}
+
+img.company-logo {
+	width: 32px;
+	height: 32px;
 }
 </style>
 
+
+<!-- This is to end previous div container -->
+</div>
+
+
+
 <div class="my-4"></div>
 
-<div class="row">
-	<div class="col-md-4">
-		<div class="re-content" style="text-align: center;">
-			<div>
-				<img class="neucard" src="/assets/img/light-512.jpeg" alt="face" style="max-width: 128px; border-radius: 50%; background: none; border:none; padding: 0" >
-				<h1 style="font-size: 2.5em">Muchen He</h1>
-				<p>M.A.Sc Student at the University of British Columbia</p>
-			</div>
-			<!-- <div style="text-align: right;">
-				<p>i@muchen.ca</p>
-				<p>(778) 952-9222</p>
-				<p>Vancouver, Canada</p>
-			</div> -->
-		</div>
+<div class="resume-container">
+
+{% assign metadata = site.data.resume.metadata | first %}
+<div>
+<h1 class="name">Muchen He</h1>
+<p>
+	Graduate student at UBC working on computer architecture security
+	and hardware performance simulation.
+</p>
+<p>
+	{% for item in site.data.contact.default %}
+	{% if item.icon %}
+	{% if item.show_resume %}
+	<i class="{{ item.icon }}"></i>
+	<a href="{{ item.link }}">{{ item.text }}</a>&nbsp;
+	{% endif %}
+	{% endif %}
+	{% endfor %}
+</p>
+</div>
 		
 		
-		<div class="neucard">
-			<h2>Skills</h2>
-			<div class="re-content" style="line-height: 1.7">
-				{% for skill in site.data.resume.skills_new %}
-				<span class="sk">{{ skill }}</span>
-				{% endfor %}
-			</div>
-		</div>
-	
-	
-		<div class="neucard">
-			<h2>Education</h2>
-			<div class="re-content">
-				<p>B.A.Sc in Electrical Engineering</p>
-				<p>University of British Columbia</p>
-				<p>2015-2020</p>
-			</div>
-		</div>
+<section>
+<h2>Skills</h2>
+
+<div>
+{% for skill_category in site.data.resume.skills %}
+<p>
+<span class="skill-category">{{ skill_category.category }}</span>:
+{% for skill in skill_category.skills %}
+<span>{{ skill }}</span>
+{% endfor %}
+</p>
+{% endfor %}
+</div>
+</section>
+
+<section>
+<h2>Education</h2>
+
+<div>
+<!-- Liquid tag to iterate in reverse -->
+{% for education in site.data.resume.education | reverse %}
+<div>
+<p>{{ education.school }}</p>
+<p>{{ education.degree }}</p>
+<p>{{ education.start }}-{{ education.end }}</p>
+<p>{{ education.gpa }}</p>
+<p>
+{% for course in education.courses %}
+{{ course }}
+{% endfor %}
+</p>
+
+</div>
+{% endfor %}
+
+</div>
+</section>
+
+
+<section>
+<h2>Experience</h2>
+{% assign company = "" %}
+<div>
+	{% for job in site.data.resume.work %}
+	{% assign prev_company = company %}
+	{% assign company = job.company %}
+	<div>
+
+		{% if prev_company != company %}
+		<p>
+			<img class="company-logo" src="{{ job.thumbnail }}" alt="{{ job.company }}">
+			{{ job.company }}
+		</p>
+		{% endif %}
+		<p>{{ job.title }}</p>
+		<p>{{ job.start }}-{{ job.end }} ({{ job.duration }})</p>
 	</div>
-	
+	<div>
+		{% if job.description %}
+		<p>{{ job.description | markdownify }}</p>
+		{% endif %}
+		<ul class="work">
+			{% for task in job.doings %}
+			<li class="work">{{ task | markdownify }}</li>
+			{% endfor %}
+		</ul>
+	</div>
+	{% endfor %}
+</div>
+</section>
+
+<!-- 
 	<div class="col-md-8">
 		
 		<div class="neucard">
@@ -136,4 +207,7 @@ div.re-content { font-size: 14px; }
 		<p class="text-muted">{{ site.data.resume.likes | join: ', ' }}</p>
 		</div>
 	</div>
-</div>
+</div> -->
+
+
+<script src="https://kit.fontawesome.com/c83e37f840.js" crossorigin="anonymous"></script>
