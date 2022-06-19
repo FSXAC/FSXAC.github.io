@@ -7,16 +7,18 @@
   - C
   - C++
   - Swift
-  - Lua
   - Processing (Java)
-  - (System)Verilog
+  - Lua
+  - SystemVerilog
   - ARM assembly
+  - Linux
   - Git
 - category: Web + Data
   skills:
-  - JavaScript/Node.js
-  - Jekyll
+  - JavaScript
+  - Jekyll+Liquid
   - HTML+CSS
+  - Bootstrap
   - p5.js
   - d3.js
   - R
@@ -24,8 +26,13 @@
 - category: Prototyping
   skills:
   - gem5
-  - Autodesk Inventor
-  - Microcontrollers
+  - 3D CAD (Inventor, Solidworks)
   - FPGA
   - ModelSim
   - Encounter
+- category: Documentation
+  skills:
+  - LaTeX
+  - Jupyter
+  - Markdown
+  - Final Cut Pro + Motion
