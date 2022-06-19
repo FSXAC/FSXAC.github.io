@@ -7,6 +7,9 @@
 - text: 'Blog'
   url: /blog
   desc: Just writing my thoughts down occasionally.
+- text: CV
+  url: /cv
+  desc: Education and work experience
 - text: Documents
   url: /documents
   desc: Notes and documents from school work.

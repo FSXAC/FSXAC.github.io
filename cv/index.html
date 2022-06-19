@@ -1,8 +1,9 @@
 ---
-title: Resume
-permalink: /resume
+title: CV
+permalink: /cv
 layout: default
-nav_active: /resume
+nav_active: /cv
+show_footer: false
 ---
 
 <style>
@@ -134,6 +135,11 @@ img.company-logo {
 
 	/* Hide footer */
 	footer { 
+		display: none;
+	}
+
+	/* Do not show in print */
+	.display-only {
 		display: none;
 	}
 
@@ -321,5 +327,6 @@ img.company-logo {
 <p class="secondary">{{ site.data.resume.likes | join: ', ' }}</p>
 </section>
 
+<div class="my-4 py-4 display-only"></div>
 
 <script src="https://kit.fontawesome.com/c83e37f840.js" crossorigin="anonymous"></script>
