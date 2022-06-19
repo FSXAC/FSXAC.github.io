@@ -1,3 +1,17 @@
+- school: University of British Columbia
+  thumbnail: "https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_100_100/0/1568742934345?e=1663804800&v=beta&t=Rhzb-Ej_lTXBFZqUTWJOttOeCjQUJf39PK6-ZN7OwnM"
+  degree: M.A.Sc
+  major: Computer Engineering
+  start: 2020
+  end: present
+  affiliations:
+  courses:
+  - Advanced Computer Architecture
+  - Parallel and Configurable Computing
+  - Trustworthy Machine Learning
+  - Human Computer Interfaces
+  - Computer Vision
+
 - school: Unviersity of British Columbia
   thumbnail: "https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_100_100/0/1568742934345?e=1663804800&v=beta&t=Rhzb-Ej_lTXBFZqUTWJOttOeCjQUJf39PK6-ZN7OwnM"
   degree: B.A.Sc
@@ -17,18 +31,4 @@
   - VLSI Design
   - Control Theory
   - Mathematical Proofs
-
-- school: University of British Columbia
-  thumbnail: "https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_100_100/0/1568742934345?e=1663804800&v=beta&t=Rhzb-Ej_lTXBFZqUTWJOttOeCjQUJf39PK6-ZN7OwnM"
-  degree: M.A.Sc
-  major: Computer Engineering
-  start: 2020
-  end: 2022
-  affiliations:
-  courses:
-  - Advanced Computer Architecture
-  - Parallel and Configurable Computing
-  - Trustworthy Machine Learning
-  - Human Computer Interfaces
-  - Computer Vision
 
