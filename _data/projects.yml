@@ -36,7 +36,7 @@
   mot: course
   worthy: true
   description: "Gaze-tracking user study; team of three; animated avatar in video conferencing to study participation, engagement, focus, and attention"
-  brief: "3D-based video conferencing system that tracks user gaze; User study shows boost in participation and engagement."
+  brief: "3D video conferencing system that tracks user gaze; User study shows boost in participation and engagement."
   tech: [Processing]
   links:
     Video Presentation: "#"
@@ -106,7 +106,7 @@
   ongoing: false
   type: code, electrical
   description: As machine learning is employed in more portable and remote devices, programmable digital circuits such as field-programmable-gate-arrays (FPGAs) are attractive given the speed and flexibility they provide. In this project, we explored integrating an object detection model (YOLOv2) onto a portable package with an FPGA, camera, and processor. To demonstrate its portability, the system is mounted to a drone, showcasing its potential deployability in remote or highly-portable situations. This project won the UBC APSC Capstone Faculty Award.
-  brief: "Integrated an object detection model (YOLOv2) onto a portable package with an FPGA."
+  brief: "Integrated YOLOv2 object detector onto a portable package with an FPGA."
   mot: course
   thumbnail: "https://hn0txg.bn.files.1drv.com/y4mxyIEmQI_QTnbEYu7niptt4zI8k4upo7H_MoZ0NOdARTUEFktVn2RF-PR2twgrMNji_ldvDfvLxk0e9XNPB4VHvk6Kch1JG3fK9UY040x9UTUbvK3WD4leyA_Z7mN2f0ZsyjiAOhboqBNh0NwcNXmKa-N4szJTsc5VOGQATFSFXmI-z2k48YErz3pcDjAx_WyaziLvbbWD1PnTnxWHmaclw?width=660&height=343&cropmode=none"
   worthy: true

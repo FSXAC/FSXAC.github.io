@@ -7,9 +7,12 @@
     start: "Jul 2020"
     end: "present"
     duration: "2 yrs"
-    description: "<b>Thesis</b>: novel mitigation architectures to defend against Spectre, Meltdown, and cache side channel attacks while preserving the performance of speculative execution in a CPU."
+    description: "<b>Thesis</b>: novel mitigation architectures to counter against Spectre, Meltdown, and cache side channel attacks while preserving the performance of speculative execution in a CPU."
     doings:
-    - Research 
+    - Explored state-of-the-art speculative execution attacks and cache side channel attacks.
+    - Identified key insights that aid in the design of performant architecture that is superior than prior defenses.
+    - Implemented prototype in the cycle-accurate gem5 simulator and devised experiments to obtain key metrics.
+    - Evaluated the effectiveness and the performance of the mitigation using PARSEC and SPEC2017 benchmarks.
     tech:
     - gem5 (C++, Python)
     - ARM assembly
@@ -23,7 +26,7 @@
     duration: "1 yr 9 mos"
     description: "Teaching assistant for VLSI design (ELEC 402) and Electrical Engineering Project Course (ELEC 291)"
     doings:
-    - "Created technical documentation on industry CAD tools"
+    - "Created technical documentation on industry CAD tools like Encounter, Virtuoso, ModelSim, and Q-Flow."
     - "Hosted and moderated office hours, tutorials, and Piazza"
     - "Evaluated and graded student project demonstrations and report submissions"
     tech:
@@ -40,9 +43,8 @@
     end: "Aug 2021"
     duration: "1 yr"
     doings:
-    - Assisted in transition of course materials to an online platform (PrarieLearn).
-    - Created lecture and tutorial videos.
-    - Created worksheet and quiz questions and auto-grader scripts in C and Python.
+    - Assisted course transitioning to an online platform and produced informative course content including lecture videos.
+    - Created test problems and the auto-grader scripts in C and Python.
     tech:
     - Python
     - Docker
@@ -55,7 +57,7 @@
     start: "Jan 2018"
     end: "May 2020"
     duration: "2 yr 5 mos"
-    description: "Assisted in courses: introduction to programming in C (APSC 160), motors and control systems project course (ELEC 391)."
+    description: "Assisted in courses: introduction to programming in C, motors and control systems project course"
     doings:
     - Supervised and assisted lab and electrical shop activities.
     - Lectured and provided explanation of requested topics including C, MATLAB, control systems, 
@@ -92,8 +94,8 @@
     doings:
     - Developed terminal tools for engineers to remotely interface with FPGAs.
     - Configured TeamCity CI and automated testing and deployment of internal software, reduced the delay of each release from 1 day to 30 minutes.
-    - Automated development processes such as verifying the integrity of project files against a manifest, and manage booking allocations.
-    - Written and released technical documentation for newly added tools and features.
+    - Scripted automated tasks to verifying the project directory integrity.
+    - Written and released technical documentation for changes and added features.
   - company: 'EA BioWare'
     thumbnail: "https://media-exp1.licdn.com/dms/image/C560BAQGePyMiXbMmsg/company-logo_100_100/0/1636403662889?e=1663804800&v=beta&t=7nIsjUayaV_Dsh_Q9wV7mL2AGw7sR0ZEp1H2gJ1pwEI"
     title: 'Associate Developer (Co-op)'
@@ -114,5 +116,5 @@
     end: 'Aug 2017'
     duration: '4 mos'
     doings:
-    - Developed applications in Qt GUI Framework using C++ and JavaScript using the MVP design pattern.
-    - Programmed interactive 3D viewers using JavaScript, Three.js, and Adobe Illustrator API; wrote realistic shaders in WebGL.
+    - Developed application UI and implemented UX designer feature requests with Qt, C++, JavaScript, and three.js.
+    - Programmed WebGL to deliver interactive 3D viewers.
