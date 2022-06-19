@@ -1,7 +1,7 @@
 # This file contains the content that populates the
 # "skills" or "I can" section of the resume
 
-- category: Software
+- category: Programming
   skills:
   - Python
   - C
@@ -12,15 +12,20 @@
   - (System)Verilog
   - ARM assembly
   - Git
-- category: Web
+- category: Web + Data
   skills:
   - JavaScript/Node.js
-  - Jekyll/Liquid
-  - HTML/CSS
+  - Jekyll
+  - HTML+CSS
   - p5.js
-  - d3.js (data visualization)
-- category: Hardware
+  - d3.js
+  - R
+  - MATLAB
+- category: Prototyping
   skills:
-  - gem5 (Architectural modelling)
-  - FPGA
+  - gem5
+  - Autodesk Inventor
   - Microcontrollers
+  - FPGA
+  - ModelSim
+  - Encounter

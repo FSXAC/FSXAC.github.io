@@ -16,7 +16,7 @@ default:
     show_resume: true
   - title: "LinkedIn"
     link: "https://www.linkedin.com/in/muchen-he-6a3716b3/"
-    text: "fsxac"
+    text: "FSXAC"
     icon: "fab fa-linkedin"
     show_resume: true
   - title: "Instagram"

@@ -1,6 +1,7 @@
 - school: Unviersity of British Columbia
-  degree: Bachelor of Applied Science (+Co-op)
-  major: Electrical Engineering
+  thumbnail: "https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_100_100/0/1568742934345?e=1663804800&v=beta&t=Rhzb-Ej_lTXBFZqUTWJOttOeCjQUJf39PK6-ZN7OwnM"
+  degree: B.A.Sc
+  major: Electrical Engineering w/ Co-op Program
   start: 2015
   end: 2020
   gpa: 86%
@@ -8,29 +9,26 @@
   - ECESS
   - ThunderBots
   courses:
-  - Machine Learning
-  - Data Structures and Algorithms
   - Computer Architecture
-  - Computer Systems
-  - VLSI Design
-  - Control Theory
+  - Data Structures and Algorithms
+  - Machine Learning
   - Digital Logic Design
   - Signals and Systems
+  - VLSI Design
+  - Control Theory
   - Mathematical Proofs
 
 - school: University of British Columbia
-  degree: Master of Applied Science (Thesis)
+  thumbnail: "https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_100_100/0/1568742934345?e=1663804800&v=beta&t=Rhzb-Ej_lTXBFZqUTWJOttOeCjQUJf39PK6-ZN7OwnM"
+  degree: M.A.Sc
   major: Computer Engineering
   start: 2020
   end: 2022
-  gpa: N/A
   affiliations:
   courses:
-  - Computer Vision
   - Advanced Computer Architecture
   - Parallel and Configurable Computing
   - Trustworthy Machine Learning
   - Human Computer Interfaces
+  - Computer Vision
 
-
-  
