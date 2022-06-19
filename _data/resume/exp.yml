@@ -24,11 +24,11 @@
     start: "Sep 2020"
     end: "May 2022"
     duration: "1 yr 9 mos"
-    description: "Teaching assistant for VLSI design (ELEC 402) and Electrical Engineering Project Course (ELEC 291)"
+    description: "Teaching assistant for VLSI design (ELEC 402) and Electrical Engineering Project Course (ELEC 291)."
     doings:
-    - "Created technical documentation on industry CAD tools like Encounter, Virtuoso, ModelSim, and Q-Flow."
-    - "Hosted and moderated office hours, tutorials, and Piazza"
-    - "Evaluated and graded student project demonstrations and report submissions"
+    - Created technical documentation on industry CAD tools like Encounter, Virtuoso, ModelSim, and Q-Flow.
+    - Hosted and moderated office hours, tutorials, and Piazza.
+    - Evaluated and graded student project demonstrations and report submissions.
     tech:
     - Cadence Encounter
     - Cadence Virtuoso
@@ -57,10 +57,10 @@
     start: "Jan 2018"
     end: "May 2020"
     duration: "2 yr 5 mos"
-    description: "Assisted in courses: introduction to programming in C, motors and control systems project course"
+    description: "Assisted in courses: introduction to programming in C, motors and control systems project course."
     doings:
     - Supervised and assisted lab and electrical shop activities.
-    - Lectured and provided explanation of requested topics including C, MATLAB, control systems, 
+    - Lectured and provided explanation of requested topics including C, MATLAB, control systems.
     - Provided C, MATLAB, and control systems during lectures, labs, and office hours.
     - Wrote shell and Python scripts and automated grading tasks and reduced grading time by 75%.
     - Wrote technical support documentation and created tutorial videos for course content.
