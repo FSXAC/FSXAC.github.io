@@ -14,10 +14,7 @@ show_footer: false
 <script src="https://kit.fontawesome.com/c83e37f840.js" crossorigin="anonymous"></script>
 
 <div class="row my-5">
-    <!-- <div class="col-md-4"> -->
     <h2 class="handwrite center">☺ Hello!</h2>
-    <!-- </div>
-    <div class="col"> -->
     {% capture intro %}
     {% include intro.md %}
     {% endcapture %}
@@ -27,6 +24,9 @@ show_footer: false
     <h6>Contact</h6>
     <p>
         {% for item in site.data.contact.default %}
+        {% unless item.show_homepage %}
+        {% continue %}
+        {% endunless %}
         {% if item.icon %}
         <i class="{{ item.icon }}"></i>
         {% else %}
@@ -35,5 +35,4 @@ show_footer: false
         <a href="{{ item.link }}">{{ item.text }}</a>&nbsp;
         {% endfor %}
     </p>
-    <!-- </div> -->
 </div>
