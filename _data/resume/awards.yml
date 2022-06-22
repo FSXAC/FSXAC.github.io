@@ -1,4 +1,4 @@
-- name: 'NSERC CGS-M'
+- name: 'NSERC CGS-Masters'
   date: '2021'
   description: 'Proposed a new method for defending against transient attacks via cache side channels.'
   amount: $17,500

@@ -1,0 +1,11 @@
+<section>
+    <h2>Honors & Awards</h2>
+    <div class="spaced-list">
+        {% for award in site.data.resume.awards %}
+        <p>
+            <strong>{{ award.name }}</strong>,
+            <span class="secondary">{{ award.date }}</span>
+        </p>
+        {% endfor %}
+    </div>
+</section>

@@ -29,9 +29,6 @@ show_footer: false
 	margin: 0 auto;
 	font-size: 9pt;
 	line-height: 1.1;
-
-
-	/* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 .resume-container p {
 	margin: 0;
@@ -50,21 +47,19 @@ h1.name {
 	margin-bottom: 0;
 }
 h2 {
-	font-size: 1.7em;
+	font-size: 1.5em;
 	font-weight: bold;
 	color: var(--body-accent-color);
-	margin-bottom: 0;
+	margin-bottom: 0.2em;
 	margin-top: 1em;
+	line-height: 1.0;
 }
 h3.title {
 	font-size: 1.2em;
 	font-weight: bold;
 	margin-bottom: 0;
 }
-h3.title span.edu-school {
-	font-weight: lighter;
-}
-span.company {
+span.company, span.school {
 	font-weight: bold;
 }
 
@@ -72,6 +67,14 @@ div.info {
 	margin-left: 9px;
 	border-left: 2px solid #ccc;
 	padding-left: 16px;
+}
+
+div.spaced-list p {
+	margin-top: 4px;
+}
+
+div.spaced-list p:first-child {
+	margin-top: 0;
 }
 
 .secondary {
@@ -97,9 +100,6 @@ p.job-location, p.school-grades {
 }
 
 .skill-category-label {
-	font-weight: bold;
-}
-span.edu-school {
 	font-weight: bold;
 }
 
@@ -156,10 +156,6 @@ img.company-logo {
 	}
 
 	/* Ensure that page break only occurs between blocks of content */
-	/* .resume-container section {
-		page-break-inside: avoid;
-	} */
-
 	.resume-container .exp-entry {
 		page-break-inside: avoid;
 	}
@@ -178,164 +174,25 @@ img.company-logo {
 
 <div class="resume-container">
 
-<section>
-<h1 class="name">Muchen He</h1>
-<p class="secondary">
-	Graduate student at UBC working on computer architecture security
-	and hardware performance simulation,
-	with an interest in the full stack of computing
-	from CPU registers to human-computer-interactions.
-</p>
-<p class="contact">
-	{% for item in site.data.contact.default %}
-	{% if item.icon %}
-	{% if item.show_resume %}
-	<i class="{{ item.icon }}"></i>
-	<a href="{{ item.link }}">{{ item.text }}</a>&nbsp;
-	{% endif %}
-	{% endif %}
-	{% endfor %}
-</p>
-</section>
-		
-		
-<section>
-<h2>Skills</h2>
+{% include cv/intro.html %}
 
-<div>
-{% for skill_category in site.data.resume.skills %}
-<p class="skill-category">
-	<span class="skill-category-label">{{ skill_category.category }}</span>:
-	{{ skill_category.skills | join: ', ' }}
-</p>
-{% endfor %}
-</div>
-</section>
+<div class="row">
+	<div class="col-sm-3">
+		{% include cv/skills.html %}
+		{% include cv/awards.html %}
+		{% include cv/certs.html %}
+		{% include cv/interests.html %}
 
-<section>
-<h2>Education</h2>
-
-<div>
-
-{% for education in site.data.resume.education | reverse %}
-<div>
-	<h3 class="title">
-		<img class="company-logo" src="{{ education.thumbnail }}" alt="{{ education.school }} logo">
-		<span class="edu-degree">{{ education.degree }}</span>
-		<span class="edu-major">{{ education.major }}</span>
-	</h3>
-	<div class="info">
-		<div class="info-meta">
-			<p">
-				<span class="edu-school">{{ education.school }}</span>,
-				{{ education.start }}-{{ education.end }}
-				{% if education.gpa %}
-				<span class="school-grades">({{ education.gpa }})</span>
-				{% endif %}
-			</p>
-		</div>
-		<div class="info-desc">
-			<p class="secondary">{{ education.courses | join: ', ' }}</p>
-		</div>
+	</div>
+	<div class="col-sm-9">
+		{% include cv/education.html %}
+		{% include cv/exp.html %}
+		{% include cv/projects.html %}
 	</div>
 </div>
-{% endfor %}
-
-</div>
-</section>
-
-{% for exp in site.data.resume.exp %}
-<section>
-<h2>{{ exp.type }} Experience</h2>
-{% assign company = "" %}
-
-{% for job in exp.entries %}
-{% assign prev_company = company %}
-{% assign company = job.company %}
-<div class="exp-entry">
-	<h3 class="title">
-		<img class="company-logo" src="{{ job.thumbnail }}" alt="{{ job.company }}">
-		{{ job.title }}
-	</h3>
-
-	<div class="info">
-		<div class="info-meta">
-			<!-- <h4 class="company">{{ job.company }}</h4> -->
-			<p>
-				<span class="company">{{ job.company }}</span>,
-				{{ job.start }}-{{ job.end }} ({{ job.duration }}),
-				<span class="job-location">{{ job.location }}</span>
-			</p>
-		</div>
-		<div class="info-desc secondary">
-			{% if job.description %}
-			<p>{{ job.description }}</p>
-			{% endif %}
-			<ul class="work">
-				{% for task in job.doings %}
-				<li class="work">{{ task }}</li>
-				{% endfor %}
-			</ul>
-		</div>
-	</div>
-</div>
-{% endfor %}
-</section>
-{% endfor %}
 
 
-<section>
-<h2>Honors & Awards</h2>
-<div>
-	{% for award in site.data.resume.awards %}
-	<p>
-		<strong>{{ award.name }}</strong>,
-		<span class="secondary">{{ award.date }}</span>
-	</p>
-	{% endfor %}
-</div>
-</section>
 
-
-<section>
-<h2>Certifications</h2>
-<div>
-	{% for cert in site.data.resume.certifications %}
-	<p>
-		<span class="cert-name"><strong>{{ cert.name }}</strong></span>,
-		<span class="secondary">{{ cert.date }}</span>
-	</p>
-	{% endfor %}
-</div>
-</section>
-
-<section>
-<h2>Technical Projects</h2>
-
-<div>
-	{% for project in site.data.projects %}
-	{% if project.worthy %}
-	<p>
-		<strong>{{ project.name }}</strong>,
-		<span class="secondary">
-			{{ project.dates.end | date: "%Y" }}:
-			{% if project.brief %}
-			{{ project.brief }}
-			{% else if project.description %}
-			{{ project.description }}
-			{% else %}
-			{% endif %}
-		</span>
-	</p>
-	{% endif %}
-	{% endfor %}
-</div>
-</section>
-
-<section>
-<h2>Extracurricular Interests</h2>
-<p class="secondary">{{ site.data.resume.likes | join: ', ' }}</p>
-</section>
 
 <div class="my-4 py-4 display-only"></div>
 
