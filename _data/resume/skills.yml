@@ -11,8 +11,9 @@
   - Lua
   - SystemVerilog
   - ARM assembly
+  - gdb
   - Linux
-  - Git
+  - git
 - category: Web + Data
   skills:
   - JavaScript
