@@ -22,9 +22,9 @@
 # - text: Photos
 #   url: /photos
 #   desc: A weekly journal of my personal photography as a hobby.
-# - text: Photo
-#   url: /photo
-#   desc: Photography portfolio.
+- text: Photos
+  url: /photos
+  desc: Photography portfolio.
 # - text: Resume
 #   url: /resume
 #   desc: My resume is statically generated to HTML. Then I export it as PDF for other uses.

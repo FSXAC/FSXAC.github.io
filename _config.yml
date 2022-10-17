@@ -63,6 +63,11 @@ defaults:
       path: "documents/CPEN212"
     values:
       image: "documents/CPEN212/assets/teaser.jpg"
+  - scope:
+      type: "photos"
+    values:
+      layout: photo
+      nav_active: /photos
 
 # Collections config
 collections:
