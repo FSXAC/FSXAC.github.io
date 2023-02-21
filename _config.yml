@@ -12,11 +12,9 @@ social:
     - https://github.com/FSXAC
     - https://instagram.com/muchen.he
 
-logo: "/assets/img/Logo2019small.png"
-
 # Paginate blog
-paginate: 8
-paginate_path: "/blog/page:num/"
+# paginate: 8
+# paginate_path: "/blog/page:num/"
 
 # Markdown settings
 markdown: kramdown
@@ -36,6 +34,9 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-paginate
+
+exclude:
+  - archive/
 
 # Defaults
 defaults:

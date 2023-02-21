@@ -168,3 +168,5 @@ Gemfile.lock
 
 # Ignore drafts
 _drafts/*
+
+archive/*

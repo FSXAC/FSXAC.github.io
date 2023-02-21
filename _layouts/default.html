@@ -1,7 +1,59 @@
----
-layout: basic
----
-
-<div id='main' class="container">
-	{{ content }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+{% seo %}
+<link rel="icon" href="/favicon.ico" type="image/x-icon">	
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="/assets/css/default.css">
+</head>
+<header>
+{% if page.show_navigation %}{% include navigation.html %}{% endif %}
+</header>
+<body>
+{% if page.watermark %}
+<div style="position: fixed; z-index: -1; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%);">
+<p style="color: rgba(0,0,0,0.1); font-size:6em; transform:rotate(315deg); -webkit-transform:rotate(315deg); font-family: serif">
+{{ page.watermark }}
+</p>
 </div>
+{% endif %}
+<div id='main' class="container">
+{{ content }}
+</div>
+{% if page.show_footer %}
+<div class="container my-3 mt-5">
+<footer>
+<small>
+<p class="mb-0">Copyright &COPY; 2023 Muchen He</p>
+<p>
+This work is licensed under a <a rel="license"
+href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CreativeCommons
+Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+<a href="/privacy">Privacy Policy</a>
+</p>
+</small>
+</footer>
+</div>
+{% endif %}
+{% if page.use_poppers %}<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>{% endif %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+{% if page.use_math %}
+<script>
+MathJax = {
+    tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+        fontCache: 'global'
+    }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+{% endif %}
+</body>
+</html>
