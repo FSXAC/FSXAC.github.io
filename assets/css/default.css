@@ -29,12 +29,13 @@
 }
 
 body {
-    padding: 2em 1em 1em;
+    /* padding: 2em 1em 1em; */
     cursor: default;
     color: var(--text-color);
 	background-color: var(--theme-bg);
     overflow-x: hidden;
-    font-family: 'Courier New', Courier, monospace
+    /* font-family: 'Courier New', Courier, monospace */
+    font-family: 'Roboto', sans-serif;
 }
 
 /* // Nav and header */
@@ -46,11 +47,11 @@ body {
 } */
 
 /* .handwrite { font-family: 'MHDiary'; } */
-.center { text-align: center; }
+/* .center { text-align: center; }
 h1.handwrite { font-size: 4em; }
 h2.handwrite { font-size: 3em; }
 h3.handwrite { font-size: 2.4em; }
-p.handwrite { font-size: 120%; }
+p.handwrite { font-size: 120%; } */
 .heading {
     margin-bottom: 0;
     margin-top: 50px;
@@ -58,7 +59,11 @@ p.handwrite { font-size: 120%; }
     font-size: 80px;
 }
 
-.glow-btn {
+h1, h2, h3, .display {
+    font-family: 'Gloock', serif;
+}
+
+/* .glow-btn {
     background-color: var(--theme-primary);
     color: var(--theme-text);
     border-radius: 7px;
@@ -69,7 +74,7 @@ p.handwrite { font-size: 120%; }
     color: var(--theme-text);
     background-color: var(--theme-primary-dark);
     box-shadow: 0 8px 8px 0 rgba(0,0,0,0),0 4px 4px 0 rgba(0,0,0,.0),0 2px 2px 0 var(--theme-shadow-tint)
-}
+} */
 
 .navbar-mh .navbar-nav .nav-link { color: var(--text-color-disabled); }
 .navbar-mh .navbar-nav .nav-link:hover { color: var(--theme-primary); }

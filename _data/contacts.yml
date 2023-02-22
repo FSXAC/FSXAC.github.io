@@ -1,0 +1,54 @@
+default:
+  - title: "E-mail"
+    link: "mailto:i@muchen.ca"
+    text: "i@muchen.ca"
+    icon: "fas fa-envelope"
+    show_resume: true
+    show_homepage: true
+  - title: "E-mail"
+    link: "mailto:mhe@ece.ubc.ca"
+    text: "mhe@ece.ubc.ca"
+    icon: "fas fa-envelope"
+    show_resume: true
+    show_homepage: false
+  - title: "GitHub"
+    link: "https://www.github.com/FSXAC"
+    text: "FSXAC"
+    icon: "fab fa-github"
+    show_resume: true
+    show_homepage: true
+  - title: "LinkedIn"
+    link: "https://www.linkedin.com/in/muchen-he-6a3716b3/"
+    text: "FSXAC"
+    icon: "fab fa-linkedin"
+    show_resume: true
+    show_homepage: true
+  - title: "muchen.ca"
+    link: "https://muchen.ca"
+    text: "muchen.ca"
+    icon: "fas fa-globe"
+    show_resume: true
+    show_homepage: false
+  - title: "Instagram"
+    link: "https://www.instagram.com/muchen.he/"
+    text: "@muchen.he"
+    icon: "fab fa-instagram"
+    show_resume: false
+    show_homepage: true
+socials:
+  - title: "Instagram"
+    link: "https://www.instagram.com/muchen.he/"
+    text: "@muchen.he"
+    show_homepage: false
+  - title: "Steam"
+    link: "#"
+    text: "fsxaircanada01"
+    show_homepage: false
+  - title: "TikTok"
+    link: "https://www.tiktok.com/@muchen.he"
+    text: "@muchen.he"
+    show_homepage: false
+  - title: "YouTube"
+    link: "#"
+    text: "Muchen"
+    show_homepage: false
