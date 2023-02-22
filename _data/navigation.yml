@@ -1,9 +1,6 @@
 - text: 'Home'
   url: /
   desc: You are here.
-# - text: Projects
-#   url: /projects
-#   desc: My personal and collaborative project showcase.
 - text: 'Blog'
   url: /blog
   desc: Just writing my thoughts down occasionally.
@@ -19,9 +16,12 @@
 # - text: Logbook
 #   url: /logbook
 #   desc: Logging of my mind and thoughts... for debugging purposes.
-# - text: Photos
-#   url: /photos
-#   desc: A weekly journal of my personal photography as a hobby.
+- text: Projects
+  url: /projects
+  desc: My personal and collaborative project showcase.
+- text: Photos
+  url: /photos
+  desc: A weekly journal of my personal photography as a hobby.
 # - text: Photos
 #   url: /photos
 #   desc: Photography portfolio.
