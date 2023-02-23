@@ -29,18 +29,10 @@ permalink: /documents
 		color: inherit;
 	}
 	.card-body .list-group .list-group-item .btn-entry {
-		/* border: 1px solid var(--link-color); */
-		/* color: var(--link-color); */
 		margin-top: .1em;
 		margin-bottom: .1em;
-		/* transition: none; */
 	}
-	.card-body .list-group .list-group-item .btn-entry:hover {
-		/* border-color: var(--theme-primary); */
-		/* color: white; */
-		/* background-color: var(--theme-primary); */
-	}
-	
+
 	.card-gutter-sizer { width: 0; }
 	@media screen and (min-width: 992px) {
 		.card { width: 49%; }
@@ -57,10 +49,8 @@ permalink: /documents
 # Documents
 
 This page contains my notes/documents/reports for the courses I've taken.
-I try to fill in as much as possible but there is still lots missing.
-Please only use content from this page as reference material for studying.
-
-Please feel free to contact me if there are any mistakes. Alternatively, since this website is also open-source on GitHub, I'm always open to issues and pull requests.
+I try to fill in as much as possible but there is a lot missing.
+Oh and I'm only human and there may be mistakes; so only use content from this page as reference material. You've been warned.
 
 <span id="searchFieldIcon">&#128270;&nbsp;</span><input type="text" id="searchField" onkeyup="searchFunc()" placeholder="Search...">
 
@@ -72,17 +62,15 @@ Please feel free to contact me if there are any mistakes. Alternatively, since t
 {% assign courses = category.courses | sort: 'course_num' %}
 {% for course in courses %}
 	{% if course.entries %}
-	<div id="{{ course.course_num | replace: ' ', '-'}}" class="card p-0">
+	<div id="{{ course.course_num | replace: ' ', '-'}}" class="card p-0 col-6">
 	<div class="box me-3 mb-1">
 		<div style="float: left; border-right: 1px solid #bbb;" class="pe-2 me-2"><span style="font-size: 2em;">{{ course.emoji }}</span></div>
-		<h6><b>{{ course.course_name }}</b></h6>
+		<p class="mb-0"><b>{{ course.course_name }}</b></p>
 		<small>{{ course.course_num | upcase }}, {{ course.date | default: 'never' }}</small>
 	</div>
-	<div class="card-body ps-2">
+	<div class="card-body ps-1 mb-4">
 		<ul class="list-group list-group-flush">
-
 		{% for entry in course.entries %}
-
 		<li class="list-group-item text-truncate">
 			{% if entry.group %}
 				{{ entry.title }}
@@ -101,9 +89,7 @@ Please feel free to contact me if there are any mistakes. Alternatively, since t
 				{% endif %}
 			{% endif %}
 		</li>
-
 		{% endfor %}
-
 		</ul>
 	</div>
 	</div>
@@ -114,7 +100,7 @@ Please feel free to contact me if there are any mistakes. Alternatively, since t
 {% endfor %}
 
 {% include jquery.html %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script>
 $('.card-grid').masonry({
     itemSelector: '.card',

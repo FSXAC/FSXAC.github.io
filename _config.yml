@@ -53,13 +53,13 @@ defaults:
   #     excerpt_separator: <!-- excerpt -->
   #     nav_active: /blog
   #     permalink: "/blog/:year/:title/"
-  # - scope:
-  #     path: "documents"
-  #   values:
-  #     layout: doc
-  #     nav_active: /documents
-  #     use_category_instead_of_name: true
-  #     show_footer: false
+  - scope:
+      path: "documents"
+    values:
+      layout: doc
+      nav_active: /documents
+      # use_category_instead_of_name: true
+      # show_footer: false
   # - scope:
   #     path: "documents/CPEN212"
   #   values:
