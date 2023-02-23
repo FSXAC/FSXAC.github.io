@@ -103,24 +103,23 @@ a:hover {
     color: #40916C;
 }
 
-
-.navcontainer {
-	padding-left: 0.2em;
-	padding-right: 0.2em;
-}
-
 .navitem {
 	max-width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: .3em;
-	padding-right: .3em;
 }
 .navitem a {
 	/* font-family: Gloock, serif; */
 	color: inherit;
 	width: 100%;
 }
+
+.box {
+    border: 0.5px solid #222;
+	border-radius: 0;
+    background: #fff;
+    box-shadow: 2px 2px #bbb;
+    padding: .15rem .6rem 0;
+}
+
 .btn {
 	border: 0.5px solid #222;
 	border-radius: 0;

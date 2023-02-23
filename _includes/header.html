@@ -3,9 +3,9 @@
 </div>
 {% if page.show_navigation %}
 <nav class="navbar no-print">
-	<div class="container navcontainer">
+	<div class="container px-1">
 		{% for link in site.data.navigation %}
-		<div class="navitem col-4 col-sm-2 mb-2 {% if page.url == link.url or page.nav_active == link.url %}active{% endif %}">
+		<div class="navitem col-4 col-sm-2 mb-2 mx-auto px-2 {% if page.url == link.url or page.nav_active == link.url %}active{% endif %}">
 			<a class="btn {% if link.disabled %}disabled{% endif %}" href="{{ link.url }}" {% if current %}aria-current="page"{% endif %}>{{ link.text }}</a>
 		</div>
 		{% endfor %}

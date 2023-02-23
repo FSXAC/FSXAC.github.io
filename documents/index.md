@@ -2,19 +2,18 @@
 layout: default
 title: Documents
 description: A collection of course notes and more
-
 nav_active: /documents
 permalink: /documents
-show_footer: true
 ---
 
 <style>	
 	#searchField {
-		border: none;
-		background-color: transparent;
-		border-bottom: 1px dotted var(--text-color);
+		/* border: none; */
+		/* background-color: transparent; */
+		/* border-bottom: 1px dotted var(--text-color); */
 		color: var(--text-color);
 		margin-top: .8em;
+		border: 1px solid black;
 	}
 	#searchFieldIcon { font-size: 1.25em; }
 	
@@ -30,16 +29,16 @@ show_footer: true
 		color: inherit;
 	}
 	.card-body .list-group .list-group-item .btn-entry {
-		border: 1px solid var(--link-color);
-		color: var(--link-color);
+		/* border: 1px solid var(--link-color); */
+		/* color: var(--link-color); */
 		margin-top: .1em;
 		margin-bottom: .1em;
-		transition: none;
+		/* transition: none; */
 	}
 	.card-body .list-group .list-group-item .btn-entry:hover {
-		border-color: var(--theme-primary);
-		color: white;
-		background-color: var(--theme-primary);
+		/* border-color: var(--theme-primary); */
+		/* color: white; */
+		/* background-color: var(--theme-primary); */
 	}
 	
 	.card-gutter-sizer { width: 0; }
@@ -55,8 +54,7 @@ show_footer: true
 	.flag-draft { text-decoration: line-through; }
 	</style>
 
-# 📓
-{: .center .display-1}
+# Documents
 
 This page contains my notes/documents/reports for the courses I've taken.
 I try to fill in as much as possible but there is still lots missing.
@@ -75,13 +73,12 @@ Please feel free to contact me if there are any mistakes. Alternatively, since t
 {% for course in courses %}
 	{% if course.entries %}
 	<div id="{{ course.course_num | replace: ' ', '-'}}" class="card p-0">
-	<div class="card-header p-0">
-		<p class="m-0" style="font-size: 2em;">{{ course.emoji }}</p>
-		<small>{{ course.course_num | upcase }}</small>
+	<div class="box me-3 mb-1">
+		<div style="float: left; border-right: 1px solid #bbb;" class="pe-2 me-2"><span style="font-size: 2em;">{{ course.emoji }}</span></div>
 		<h6><b>{{ course.course_name }}</b></h6>
-		<!-- <small>Last updated {{ course.date | default: 'never' }}</small> -->
+		<small>{{ course.course_num | upcase }}, {{ course.date | default: 'never' }}</small>
 	</div>
-	<div class="card-body">
+	<div class="card-body ps-2">
 		<ul class="list-group list-group-flush">
 
 		{% for entry in course.entries %}
@@ -165,7 +162,6 @@ function searchFunc() {
 }
 
 $(document).ready(function() {
-	// alert('hi');
 	let regex = /\/documents\/?#\?(.+)/g;
 	let url = window.location.href;
 	let matches = regex.exec(url);
