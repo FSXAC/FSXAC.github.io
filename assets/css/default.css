@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --theme-light: white;
     --theme-dark: #16181c;
     --theme-primary: #4292c6;
@@ -17,12 +17,12 @@
     --light-background: #ddd;
 
     /* Shadow */
-    --theme-shadow-min: #cecece;
-    --theme-shadow-max: #ffffff;
+    /* --theme-shadow-min: #cecece;
+    --theme-shadow-max: #ffffff; */
 
     /* Boxes */
-    --round-radius: 8px;
-}
+    /* --round-radius: 8px; */
+/* } */ */
 
 /* print */
 @media print {
@@ -43,7 +43,9 @@ body {
     /* padding: 2em 1em 1em; */
     cursor: default;
     color: var(--text-color);
-    background-color: var(--theme-bg);
+    /* background-color: var(--theme-bg); */
+    /* background-color: #f3f6f0; */
+    background-color: #fff;
     overflow-x: hidden;
     /* font-family: 'Courier New', Courier, monospace */
     font-family: 'Roboto', sans-serif;
@@ -86,16 +88,75 @@ h3 {
 
 a {
     /* color: var(--link-color); */
-    color: inherit;
-    text-decoration: underline;
-    text-decoration-color: red;
+    /* color: inherit; */
+    /* text-decoration: underline; */
+    /* text-decoration-color: red; */
     /* text-decoration: none; */
+    color: inherit;
+    /* color: #40916C; */
 }
 
 a:hover {
     /* color: var(--theme-primary-dark); */
     /* text-decoration: underline; */
     color: red;
+    color: #40916C;
+}
+
+
+.navcontainer {
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+
+.navitem {
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: .3em;
+	padding-right: .3em;
+}
+.navitem a {
+	/* font-family: Gloock, serif; */
+	color: inherit;
+	width: 100%;
+}
+.btn {
+	border: 0.5px solid #222;
+	border-radius: 0;
+	padding: .15rem .6rem 0;
+	/* height: 2rem; */
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	background: #fff;
+	box-shadow: 2px 2px #bbb;
+	transition: none;
+	color: black;
+}
+
+.btn.disabled {
+    box-shadow: none;
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.btn:hover {
+	/* background: rgb(245, 200, 111); */
+	background: #40916C;
+	box-shadow: 2px 2px #666;
+	border-color: black;
+	color: white;
+}
+
+.navitem.active .btn {
+	background: #ccc;
+	/* border-color: #888; */
+	/* color: #fff; */
+	box-shadow: inset 2px 2px #666;
+	
+	/* Reset all transitions */
 }
 
 
@@ -149,13 +210,13 @@ footer {
 /* Increase anchor color contrast */
 /* a { color: var(--link-color); text-decoration: none; transition: all .1s ease; }
 a:hover { color: var(--theme-primary-dark); } */
-.page-link {
+/* .page-link {
     color: var(--link-color);
 }
 
 .page-link:hover {
     color: var(--theme-primary-dark);
-}
+} */
 
 /* // UBC handin top part */
 #ubc-handin {

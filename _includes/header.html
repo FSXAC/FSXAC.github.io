@@ -6,63 +6,10 @@
 	<div class="container navcontainer">
 		{% for link in site.data.navigation %}
 		<div class="navitem col-4 col-sm-2 mb-2 {% if page.url == link.url or page.nav_active == link.url %}active{% endif %}">
-			<a class="btn" href="{{ link.url }}" {% if current %}aria-current="page"{% endif %}>{{ link.text }}</a>
+			<a class="btn {% if link.disabled %}disabled{% endif %}" href="{{ link.url }}" {% if current %}aria-current="page"{% endif %}>{{ link.text }}</a>
 		</div>
 		{% endfor %}
 	</div>
 </nav>
 
 {% endif %}
-
-<style>
-
-.navcontainer {
-	padding-left: 0.2em;
-	padding-right: 0.2em;
-}
-
-.navitem {
-	max-width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: .3em;
-	padding-right: .3em;
-}
-.navitem a {
-	/* font-family: Gloock, serif; */
-	color: inherit;
-	width: 100%;
-}
-.btn {
-	border: 0.5px solid #222;
-	border-radius: 0;
-	padding: .15rem .6rem 0;
-	/* height: 2rem; */
-	display: inline-block;
-	text-align: center;
-	vertical-align: middle;
-	white-space: nowrap;
-	background: #fff;
-	box-shadow: 2px 2px #bbb;
-	transition: none;
-	color: black;
-}
-
-.btn:hover {
-	background: rgb(245, 200, 111);
-	box-shadow: 2px 2px #666;
-	border-color: black;
-	color: black;
-}
-
-.navitem.active .btn {
-	background: #ccc;
-	/* border-color: #888; */
-	/* color: #fff; */
-	box-shadow: inset 1px 1px #666;
-	
-	/* Reset all transitions */
-}
-
-
-</style>

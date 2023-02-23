@@ -4,9 +4,11 @@
 - text: 'Blog'
   url: /blog
   desc: Just writing my thoughts down occasionally.
+  disabled: true
 - text: CV
   url: /cv
   desc: Education and work experience
+  disabled: true
 - text: Documents
   url: /documents
   desc: Notes and documents from school work.
@@ -19,9 +21,11 @@
 - text: Projects
   url: /projects
   desc: My personal and collaborative project showcase.
+  disabled: true
 - text: Photos
   url: /photos
   desc: A weekly journal of my personal photography as a hobby.
+  disabled: true
 # - text: Photos
 #   url: /photos
 #   desc: Photography portfolio.
