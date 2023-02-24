@@ -12,11 +12,9 @@ social:
     - https://github.com/FSXAC
     - https://instagram.com/muchen.he
 
-logo: "/assets/img/Logo2019small.png"
-
 # Paginate blog
-paginate: 8
-paginate_path: "/blog/page:num/"
+# paginate: 8
+# paginate_path: "/blog/page:num/"
 
 # Markdown settings
 markdown: kramdown
@@ -37,6 +35,9 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
+exclude:
+  - archive/
+
 # Defaults
 defaults:
   - scope: # default for everything across the site
@@ -48,26 +49,26 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: post
+      layout: doc
       excerpt_separator: <!-- excerpt -->
       nav_active: /blog
-      permalink: /blog/:year/:title/
+      permalink: "/blog/:year/:title/"
   - scope:
       path: "documents"
     values:
       layout: doc
       nav_active: /documents
-      use_category_instead_of_name: true
-      show_footer: false
-  - scope:
-      path: "documents/CPEN212"
-    values:
-      image: "documents/CPEN212/assets/teaser.jpg"
-  - scope:
-      type: "photos"
-    values:
-      layout: photo
-      nav_active: /photos
+      # use_category_instead_of_name: true
+      # show_footer: false
+  # - scope:
+  #     path: "documents/CPEN212"
+  #   values:
+  #     image: "documents/CPEN212/assets/teaser.jpg"
+  # - scope:
+  #     type: "photos"
+  #   values:
+  #     layout: photo
+  #     nav_active: /photos
 
 # Collections config
 collections:

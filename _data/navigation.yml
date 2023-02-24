@@ -1,15 +1,14 @@
-- text: 'About'
+- text: 'Home'
   url: /
   desc: You are here.
-# - text: Projects
-#   url: /projects
-#   desc: My personal and collaborative project showcase.
 - text: 'Blog'
   url: /blog
   desc: Just writing my thoughts down occasionally.
+  # disabled: false
 - text: CV
   url: /cv
   desc: Education and work experience
+  disabled: true
 - text: Documents
   url: /documents
   desc: Notes and documents from school work.
@@ -19,12 +18,17 @@
 # - text: Logbook
 #   url: /logbook
 #   desc: Logging of my mind and thoughts... for debugging purposes.
-# - text: Photos
-#   url: /photos
-#   desc: A weekly journal of my personal photography as a hobby.
+- text: Projects
+  url: /projects
+  desc: My personal and collaborative project showcase.
+  disabled: true
 - text: Photos
   url: /photos
-  desc: Photography portfolio.
+  desc: A weekly journal of my personal photography as a hobby.
+  disabled: true
+# - text: Photos
+#   url: /photos
+#   desc: Photography portfolio.
 # - text: Resume
 #   url: /resume
 #   desc: My resume is statically generated to HTML. Then I export it as PDF for other uses.

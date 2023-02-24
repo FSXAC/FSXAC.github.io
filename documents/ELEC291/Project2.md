@@ -469,7 +469,7 @@ Fairchild Semiconductor International Inc,”FQP13N06L N-Channel QFET MOSFET,”
 
 <figcaption class="figure figure-caption">Table E.1: Turn Test Data.</figcaption>
 
-#### Forward Consistency Test Data[^*]
+#### Forward Consistency Test Data[^8]
 
 | Trial | Straight           | Left               | Right              | 180                |
 | ----- | ------------------ | ------------------ | ------------------ | ------------------ |

@@ -1,14 +1,12 @@
 ---
 categories: APSC 160
-title: Final Review
+title: APSC 160 Final Review
 date: 2019-10-17
 use_math: true
 ---
 
 - toc
 {:toc}
-
-# APSC 160 Final Review
 
 ## Fundamentals
 

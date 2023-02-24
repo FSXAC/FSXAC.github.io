@@ -215,7 +215,7 @@ For them we programmed two separate pieces of code (`LM` and `Th` in the code be
 
 The problem was caused because timers 0 and 2 conflicted resulting in a program halt. Our solution to this problem was instead calling the *SendVoltage* function in the setup region of the FSM.
 
-```assembly
+```
 SendVoltage:
     jnb LM_TH, Th		; jump to Th initially
 LM: mov b,

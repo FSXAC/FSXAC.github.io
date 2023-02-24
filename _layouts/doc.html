@@ -1,27 +1,13 @@
 ---
-layout: basic
+layout: default
 ---
 
-<style>
-h2 { border-bottom: 1px dotted var(--text-color); }
-div.footnotes { border-top: 1px solid; }
-{% if page.use_heading_number %}{% include heading_number.css %}{% endif %}
-</style>
+<link rel="stylesheet" href="/assets/css/doc.css">
 
-<header class="pt-5 pb-3">
-	<div class="container narrow">
-		{% if page.ubc_handin %}{% include ubc_handin.html %}{% endif %}
-		{% if page.categories != empty %}
-			<small style="letter-spacing: 2px">
-			{% for category in page.categories %}
-				{{ category | upcase }}{% unless forloop.last %}, {% endunless %}
-				{% endfor %}
-			</small>
-		{% endif %}
-		<h1 class="bold">{{ page.title }}</h1>
-		<p class="m-0 pb-2">Updated {{ page.date | date: "%Y-%m-%d" }}</p>
-	</div>
-</header>
-<div id='c-content' class="container narrow" style="padding-bottom: 100px;">
-	{{ content }}
+<div class="my-4">
+<h1 class="mb-0">{{ page.title }}</h1>
+<p class="m-0 pb-2">Updated {{ page.date | date: "%Y-%m-%d" }}</p>
+</div>
+<div id="c-content">
+{{ content }}
 </div>

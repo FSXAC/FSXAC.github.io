@@ -1,0 +1,14 @@
+/* Images and figures */
+#c-content img:not(.emoji) { max-width: 100%; display: block; margin-left: auto; margin-right: auto; }
+#c-content .figure{ text-align: center; display: block; margin-top: 0; font-size: 0.9em; font-style: italic; }
+#c-content .mermaid { text-align: center; }
+
+/* Footnotes */
+#c-content div.footnotes { border-top: 1px solid; margin-top: 2em; padding-top: 0.25em; }
+#c-content div.footnotes::before { content: "References"; font-weight: bold; }
+#c-content div.footnotes p { margin-bottom: 0; }
+
+/* Footnote markers */
+#c-content a.footnote { margin: 0; text-decoration: none; }
+#c-content a.footnote::before { content: "[" }
+#c-content a.footnote::after { content: "]" }
