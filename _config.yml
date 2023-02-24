@@ -45,14 +45,14 @@ defaults:
     values:
       show_navigation: true
       show_footer: true
-  # - scope: # stuff under _posts folder
-  #     path: ""
-  #     type: "posts"
-  #   values:
-  #     layout: post
-  #     excerpt_separator: <!-- excerpt -->
-  #     nav_active: /blog
-  #     permalink: "/blog/:year/:title/"
+  - scope: # stuff under _posts folder
+      path: ""
+      type: "posts"
+    values:
+      layout: doc
+      excerpt_separator: <!-- excerpt -->
+      nav_active: /blog
+      permalink: "/blog/:year/:title/"
   - scope:
       path: "documents"
     values:

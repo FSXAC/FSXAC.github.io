@@ -4,7 +4,7 @@
 - text: 'Blog'
   url: /blog
   desc: Just writing my thoughts down occasionally.
-  disabled: true
+  # disabled: false
 - text: CV
   url: /cv
   desc: Education and work experience

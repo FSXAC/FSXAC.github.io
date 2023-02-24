@@ -1,0 +1,62 @@
+---
+layout: default
+title: Blog
+
+nav_active: /blog
+---
+
+<style>
+.teaser {
+  width: 100%;
+  height: 375px;
+  background-color: #fff;
+  background-size: cover;
+  background-position: center; 
+  border-radius: var(--round-radius);
+  padding-bottom: 3px;
+}
+@media (max-width: 574px) {
+  .teaser { height: 300px }
+}
+.badge { background-color: var(--light-background); color: var(--text-color); margin-left: .5em;}
+</style>
+
+{% capture md %}
+# ☕️
+{: .display-1 .center }
+
+Occasional memory dump of various things. The <a href="/blog/archive">Archive</a> lists all blog posts in reverse-chronological order.
+{% endcapture %}
+
+{{ md | markdownify }}
+
+{% for post in paginator.posts %}
+<div class="post-entry py-4">
+  <p class="mb-1"><small>
+      {{ post.date | date: "%Y-%m-%d" }}
+      {% for category in post.categories %}<span class="badge rounded-pill">{{ category | upcase }}</span>{% endfor %}
+    </small></p>
+  <a href="{{ post.url }}">
+    <h5>{{ post.title }}</h5>
+    {% if post.image %}
+    <div class="neuemorph-shadow teaser mb-4 mr-2" style="background-image: url({{ post.image }})"></div>
+    {% endif %}
+  </a>
+  <p>{{ post.excerpt | strip_html | truncate: 140 }}
+    &nbsp;
+    <a href="{{ post.url }}">Read&nbsp;more&nbsp;&rarr;</a>
+  </p>
+</div>
+{% endfor %}
+
+{% if paginator.total_pages > 1 %}
+<nav aria-label="blog pagination">
+<ul class="pagination justify-content-center">
+  {% for page in (1..paginator.total_pages) %}
+    <li class="mx-2 {% if page == paginator.page %}disabled{% endif %}"><a href="{% if page == 1 %}{{ '/blog' | relative_url }}{% else %}{{ site.paginate_path | relative_url | replace: ':num', page }}{% endif %}">{{ page }}</a></li>
+  {% endfor %}
+</ul>
+</nav>
+{% endif %}
+
+
