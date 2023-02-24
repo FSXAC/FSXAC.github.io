@@ -66,7 +66,7 @@ Oh and I'm only human and there may be mistakes; so only use content from this p
 	<div class="box me-3 mb-1">
 		<div style="float: left; border-right: 1px solid #bbb;" class="pe-2 me-2"><span style="font-size: 2em;">{{ course.emoji }}</span></div>
 		<p class="mb-0"><b>{{ course.course_name }}</b></p>
-		<small>{{ course.course_num | upcase }}, {{ course.date | default: 'never' }}</small>
+		<small>{{ course.course_num | upcase }}</small>
 	</div>
 	<div class="card-body ps-1 mb-4">
 		<ul class="list-group list-group-flush">

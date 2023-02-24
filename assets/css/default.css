@@ -1,3 +1,10 @@
+/* Vars */
+:root {
+    /* Fonts */
+    --f: 'Merriweather', sans-serif;
+    --hf: 'Gloock', serif;
+}
+
 /* print */
 @media print {
     .no-print {
@@ -15,10 +22,10 @@ html {
 
 body {
     cursor: default;
-    color: var(--text-color);
+    color: black;
     background-color: #fff;
     overflow-x: hidden;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--f);
 }
 
 h1,
@@ -27,7 +34,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Gloock', serif;
+    font-family: var(--hf);
     margin-bottom: 0.5em;
 }
 
