@@ -1,7 +1,7 @@
 /* Vars */
 :root {
     /* Fonts */
-    --f: 'Merriweather', sans-serif;
+    --f: 'Merriweather', serif;
     --hf: 'Gloock', serif;
 }
 
@@ -294,11 +294,13 @@ div.highlighter-rouge {
 }
 
 div.highlighter-rouge div.highlight::before {
-    content: "...";
+    content: ">";
     display: inline-block;
+    font-family: var(--bs-font-monospace);
     font-size: 80%;
     padding-left: 1em;
     padding-top: 2.5px;
+    padding-bottom: 2px;
     width: 100%;
     border-bottom: 1px solid #888;
     background: #ccc;
@@ -308,7 +310,6 @@ div.highlighter-rouge div.highlight::before {
 
 div.highlighter-rouge.language-shell div.highlight::before {
     content: "$_";
-    background: linear-gradient(45deg, var(--theme-primary-dark), var(--theme-primary));
 }
 
 div.highlighter-rouge.language-verilog div.highlight::before {

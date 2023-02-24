@@ -4,7 +4,6 @@ date: 2019-10-14
 categories: APSC
 
 author: Muchen He
-layout: post
 nav_active: /blog
 tags:
   - apsc160
