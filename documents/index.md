@@ -18,7 +18,6 @@ permalink: /documents
 	#searchFieldIcon { font-size: 1.25em; }
 	
 	.card { width: 100%; margin-bottom: 1em; border: none; background: transparent; }
-	.card-header { background-color: transparent; border-bottom: none; }
 	.card-body { padding: 0; }
 	.card-body .list-group .list-group-item {
 		border: none;
@@ -63,7 +62,7 @@ Oh and I'm only human and there may be mistakes; so only use content from this p
 {% for course in courses %}
 	{% if course.entries %}
 	<div id="{{ course.course_num | replace: ' ', '-'}}" class="card p-0 col-6">
-	<div class="box me-3 mb-1">
+	<div class="box me-3 mb-1 card-header">
 		<div style="float: left; border-right: 1px solid #bbb;" class="pe-2 me-2"><span style="font-size: 2em;">{{ course.emoji }}</span></div>
 		<p class="mb-0"><b>{{ course.course_name }}</b></p>
 		<small>{{ course.course_num | upcase }}</small>
