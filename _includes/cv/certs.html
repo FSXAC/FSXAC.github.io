@@ -1,0 +1,11 @@
+<section>
+    <h2>Certifications</h2>
+    <div class="spaced-list">
+        {% for cert in site.data.resume.certifications %}
+        <p>
+            <span class="cert-name"><strong>{{ cert.name }}</strong></span>,
+            <span class="secondary">{{ cert.date }}</span>
+        </p>
+        {% endfor %}
+    </div>
+</section>

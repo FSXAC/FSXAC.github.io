@@ -1,0 +1,187 @@
+---
+title: CV
+permalink: /cv
+layout: default
+nav_active: /cv
+show_footer: false
+---
+
+<style>
+
+/* Colors as variables */
+:root {
+	--body-text-color: #333;
+	--body-text-color-light: #666;
+	--body-accent-color: #333;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--body-text-color: #fff;
+		--body-text-color-light: #ccc;
+		--body-accent-color: #333;
+	}
+}
+
+.resume-container {
+	font-size: 9pt;
+	line-height: 1.1;
+}
+/* .resume-container p {
+	margin: 0;
+} */
+/* .resume-container a {
+	color: var(--body-accent-color);
+	text-decoration: none;
+} */
+
+/* h1.name {
+	font-size: 2.5em;
+	font-weight: bold;
+	margin-bottom: 0;
+} */
+h2 {
+	font-size: 1.5em;
+	/* font-weight: bold; */
+	color: var(--body-accent-color);
+	margin-bottom: 0.2em;
+	margin-top: 1em;
+	line-height: 1.0;
+}
+h3.title {
+	font-size: 1.2em;
+	/* font-weight: bold; */
+	margin-bottom: 0;
+}
+span.company, span.school {
+	/* font-weight: bold; */
+}
+
+div.info {
+	margin-left: 9px;
+	border-left: 1px solid #ccc;
+	padding-left: 16px;
+}
+
+div.spaced-list p {
+	margin-top: 4px;
+}
+
+div.spaced-list p:first-child {
+	margin-top: 0;
+}
+
+.secondary {
+	color: var(--body-text-color-light);
+}
+
+p.job-location, p.school-grades {
+	color: var(--body-text-color-light);
+	font-style: italic;
+}
+.exp-entry {
+	margin-bottom: 1em;
+}
+.info-meta {
+	position: relative;
+	top: -5px;
+}
+.info-desc {
+	margin-top: .25em;
+}
+
+.skill-category-label {
+	font-weight: bold;
+}
+
+/* Jobs */
+ul.work {
+    list-style: none;
+    padding: 0px;
+	margin-bottom: 0;
+}
+
+ul.work li:before
+{
+    content: '-';
+    margin: 0;
+	margin-right: .5em;
+}
+li.work p {
+	display: inline;
+}
+
+img.company-logo {
+	width: 1.3em;
+	height: 1.3em;
+	margin: 4px;
+	margin-left: 0;
+}
+
+/* Media query for print */
+@media print {
+
+	header {
+		display: none;
+	}
+
+	/* Hide the h1 heading at the top */
+	h1.heading {
+		display: none;
+	}
+
+	/* Hide navigation */
+	.navbar-nav, .navbar {
+		display: none;
+	}
+
+	/* Hide footer */
+	footer { 
+		display: none;
+	}
+
+	/* Do not show in print */
+	.display-only {
+		display: none;
+	}
+
+	.resume-container {
+		background-color: #fff;
+		color: #333;
+	}
+
+	/* Ensure that page break only occurs between blocks of content */
+	.resume-container .exp-entry {
+		page-break-inside: avoid;
+	}
+
+	h2, h3, h4 {
+		page-break-after: avoid;
+	}
+}
+</style>
+
+
+<div class="resume-container">
+
+{% include cv/intro.html %}
+
+<div class="row">
+	<div class="col-sm-3 order-last order-sm-first">
+		{% include cv/skills.html %}
+		{% include cv/awards.html %}
+		{% include cv/certs.html %}
+		{% include cv/interests.html %}
+
+	</div>
+	<div class="col-sm-9">
+		{% include cv/education.html %}
+		{% include cv/exp.html %}
+		{% include cv/projects.html %}
+	</div>
+</div>
+
+<div class="my-4 py-4 display-only"></div>
+
+<script src="https://kit.fontawesome.com/c83e37f840.js" crossorigin="anonymous"></script>

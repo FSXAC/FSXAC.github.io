@@ -9,6 +9,12 @@ default:
     link: "mailto:mhe@ece.ubc.ca"
     text: "mhe@ece.ubc.ca"
     icon: "fas fa-envelope"
+    show_resume: false
+    show_homepage: false
+  - title: "E-mail"
+    link: "mailto:muchen.he@solidigm.com"
+    text: "muchen.he@solidigm.com"
+    icon: "fas fa-envelope"
     show_resume: true
     show_homepage: false
   - title: "GitHub"

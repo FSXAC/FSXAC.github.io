@@ -1,0 +1,578 @@
+# This contains the data about the projects I've created
+
+# This data is used both by the projects page
+# as well as the resume page
+
+- name: 'Bit Flip Attacks on DNNs'
+  dates:
+    start: 2022-04-25
+    end: 2022-01-31
+  description: 'Surveyed the literature for attacks and defense of deep neural networks that utilize bit flip to directly perturb the network weights.'
+  brief: 'Literature survey for DNN attacks and defenses that uses bit flips to perturb network parameters.'
+  mot: course
+  worthy: True
+
+- name: 'PhotoStats'
+  dates:
+    start: 2021-04-01
+    end: 2022-02-01
+  ongoing: true
+  type: code, data
+  mot: independent
+  description: "Python script that interpolates macOS Photos library statistics and image metadata; produces data visualizations including heatmap, GPS heatmap, and chord diagrams"
+  brief: "Novel data visualization of macOS Photos library statistics and image metadata."
+  tech: [Python, Processing, d3.js, p5.js]
+  worthy: true
+  links:
+    Web demo: '#'
+  
+
+- name: 'FutureGazer'
+  dates:
+    start: 2021-02-01
+    end: 2021-05-01
+  ongoing: false
+  type: code, computer, research
+  mot: course
+  worthy: true
+  description: "Gaze-tracking user study; team of three; animated avatar in video conferencing to study participation, engagement, focus, and attention"
+  brief: "3D video conferencing system that tracks user gaze; User study shows boost in participation and engagement."
+  tech: [Processing]
+  links:
+    Video Presentation: "#"
+    Project report: "#"
+
+
+- name: 'Sketch2Slides'
+  dates:
+    start: 2020-10-01
+    end: 2020-12-28
+  ongoing: false
+  type: code, computer, research
+  mot: course
+  description: "A MATLAB script to automatically scan and convert drawn content to PowerPoint slides. The image processing pipeline makes use of Hough transform, morphological operations, and accurate colour correction. The automation outputs a fully-functional .pptx file."
+  brief: "Automated conversion of drawn content to PowerPoint slides."
+  worthy: true,
+  tech: [MATLAB, Python]
+  links:
+    GitHub: "https://github.com/FSXAC/Sketch2Slides"
+    # Project Presentation: "#"
+    Project Presentation (Video): "https://www.youtube.com/watch?v=PIDL-t2zeuI"
+    Report: "https://www.icloud.com/iclouddrive/047jv662ADeWZzcTZ61Dwnsyw#report"
+
+- name: Hough Transform Hardware Acceleration
+  dates:
+    start: 2020-10-01
+    end: 2020-12-28
+  ongoing: false
+  type: code, computer, research
+  mot: course
+  description: Exploring parallel-computing techniques, including CUDA on Nvidia GPU, OpenCL, and Open MPI to accelerate Hough transform to detect lines in an image. Resulting in <strong>50 &times;</strong> speedup compared to serial/baseline implementation.
+  brief: "Parallel-computing implementation (CUDA on Nvidia GPU, OpenCL, and Open MPI) that accelerates Hough transform to detect lines in an image."
+  tech: [C, Open MPI, OpenCL, CUDA]
+  worthy: true
+  thumbnail: "https://raw.githubusercontent.com/FSXAC/CPEN512/master/hough/img/ipad512.jpg"
+  links:
+    GitHub: "https://github.com/FSXAC/CPEN512/tree/master/hough"
+    Project Presentation: "https://www.icloud.com/iclouddrive/05acmnRKDyFX6cuDidkYxjxyw#Hough_Presentation"
+    Report: "https://www.icloud.com/iclouddrive/004h2jLPZdDJge0S8wZeMeHAA#Report"
+
+- name: Augmented Reality Minesweeper
+  dates:
+    start: 2020-05-01
+    end: 2020-06-01
+  ongoing: true
+  type: code, game
+  mot: independent
+  description: A Minesweeper-type game except implemented in Augmented Reality (AR), which allows the mine field to be augmented realistically over real surfaces.
+  tech: [Swift, ARKit, RealityKit, XCode]
+  worthy: false
+
+- name: Lab Tracker iOS App
+  dates:
+    start: 2019-09-01
+    end: 2020-06-01
+  ongoin: true
+  type: code
+  mot: independent
+  description: A simple Swift app written for iOS as a way for me to learn iOS development with Swift. It allows me to do my TA duties for APSC 160 easier by tracking and logging activities during a lab section.
+  tech: [Swift, UIKit, XCode]
+  worthy: false
+
+- name: Object Detection with FPGA Drone
+  dates:
+    start: 2019-10-01
+    end: 2020-05-01
+  ongoing: false
+  type: code, electrical
+  description: As machine learning is employed in more portable and remote devices, programmable digital circuits such as field-programmable-gate-arrays (FPGAs) are attractive given the speed and flexibility they provide. In this project, we explored integrating an object detection model (YOLOv2) onto a portable package with an FPGA, camera, and processor. To demonstrate its portability, the system is mounted to a drone, showcasing its potential deployability in remote or highly-portable situations. This project won the UBC APSC Capstone Faculty Award.
+  brief: "Integrated YOLOv2 object detector onto a portable package with an FPGA."
+  mot: course
+  thumbnail: "https://hn0txg.bn.files.1drv.com/y4mxyIEmQI_QTnbEYu7niptt4zI8k4upo7H_MoZ0NOdARTUEFktVn2RF-PR2twgrMNji_ldvDfvLxk0e9XNPB4VHvk6Kch1JG3fK9UY040x9UTUbvK3WD4leyA_Z7mN2f0ZsyjiAOhboqBNh0NwcNXmKa-N4szJTsc5VOGQATFSFXmI-z2k48YErz3pcDjAx_WyaziLvbbWD1PnTnxWHmaclw?width=660&height=343&cropmode=none"
+  worthy: true
+  tech: [FPGA, Raspberry Pi, C, Python, JavaScript, Autodesk Inventor, APM 2.6, Electronic Tools, 2.4/5.8 GHz Radio]
+  contributors: [Peter Deutsch, Muchen He, Arthur Hsueh, Meng Wang, Ardell Wilson]
+  links:
+    GitHub: https://github.com/Capstone-Skynet
+
+- name: FB Messenger Visualizer
+  name_short: FB Visualizer
+  dates:
+    start: 2018-01-01
+    end: 2019-03-01
+  ongoing: True
+  type: code
+  description: An animated visualizer that visualizes entire Facebook messages archive
+    in chronological order. Where people are drawn as nodes and exchange of messages
+    are drawn as as beams of light.
+  brief: "Novel animation visualization of Facebook messages archive"
+  mot: independent
+  tech:
+  - Processing 3
+  - Python 3
+  links:
+    GitHub Page: https://www.muchen.ca/FBVis
+  worthy: true
+  thumbnail: img/fbvis.jpg
+
+- name: Motorized Laser Pointer
+  name_short: 2D Laser Controller
+  dates:
+    start: 2018-01-01
+    end: 2018-04-01
+  type: elec
+  description: Built and programmed PID controllers in C++ and MATLAB for 2-DOF spherical
+    wrist controlled laser pointers that draws shapes, using DC commutating motors
+    built from scratch.
+  brief: "Built and programmed PID controllers in C++ and MATLAB for 2-DOF spherical wrist controlled laser pointers."
+  contributors: [Muchen He, Leo Liu, LuFei Liu, Wenoa Teves]
+  tech: [Arduino, C++, SolidWorks, Autodesk Inventor, MATLAB, SimuLink, Altium Designer, 3D Printer, Laser Cutter, Waterjet, Node.js, p5.js, Electronic Tools]
+  links:
+    Blog 1: /elec/2018/motor_control_part1/
+    Blog 2: /elec/2018/motor_control_part2/
+    Report: /documents/ELEC391/demo3.pdf
+  worthy: true
+  thumbnail: img/elec391.jpg
+
+- name: VGACoreSim
+  dates:
+    start: 2018-02-01
+    end: 2018-02-01
+  type: code
+  description: Interactive browser app for simulating the FPGA VGA-core where user
+    can input custom drawing scripts.
+  mot: independent
+  tech:
+  - p5.js
+  links:
+    project page: https://www.muchen.ca/VGACoreSim
+  thumbnail: img/vgacoresim.jpg
+
+- name: Mandelbrot Set on FPGA
+  name_short: FPGA Fractal
+  dates:
+    start: 2018-02-01
+    end: 2018-02-01
+  type: elec
+  description: An interactive Mandelbrot Set fractal via VGA on the DE1-SoC FPGA development
+    board written in SystemVerilog.
+  brief: "Interactive fractal on FPGA written in SystemVerilog."
+  mot: independent
+  tech:
+  - SystemVerilog
+  - DE1-SoC FPGA Dev. Board
+  - Quartus II Synthesizer
+  - ModelSim
+  links:
+    project page: https://www.muchen.ca/FPGAMandelbrot
+  worthy: true
+  thumbnail: img/mandelbrot.jpg
+
+- name: Fast Grader
+  dates:
+    start: 2017-12-01
+    end: 2018-01-01
+  type: code
+  description: Desktop app used to help grading C programming lab submissions more efficiently.
+    Runs cross-platform and features dockable UI.
+  brief: "Desktop app that helps grading coding assignments more efficiently."
+  mot: independent
+  tech:
+  - Python 3
+  - Qt
+  links:
+    project page: https://www.github.com/FSXAC/Automark
+  worthy: true
+  thumbnail: img/automark.jpg
+
+- name: SLS 3D Printer System Model
+  dates:
+    start: 2017-10-01
+    end: 2017-12-01
+  type: design
+  description: A Selective Laser Sintering 3D printer designed and accurately modelled
+    in MATLAB and SimuLink. Controlled via tuned PID controller and maximized print
+    speed and minimized error.
+  mot: course
+  tech:
+  - MATLAB
+  - SimuLink
+  links:
+    Report part 1: /documents/ELEC341/ELEC341-Project1.pdf
+    Report part 2: /documents/ELEC341/ELEC341-Project2.pdf
+  thumbnail: img/elec341.jpg
+
+- name: FWView
+  dates:
+    start: 2017-10-01
+    end: 2017-11-01
+  type: code
+  description: 3D simulation visualizer for Thunderbot's physics based firmware simulator.
+  mot: independent
+  tech:
+  - Processing 3
+  - Python 3
+  thumbnail: img/fwview.jpg
+
+- name: Sleep Logger
+  dates:
+    start: 2017-09-01
+    end: 2017-09-01
+  type: code
+  description: Web application with real-time database and authentication to keep track
+    of sleep statistics, featuring beautifully animated front-end.
+  brief: "Web-app with real-time database and authentication to keep track of sleep statistics."
+  details: Created at Lumohacks 2017
+  mot: hack
+  contributors:
+  - Muchen He
+  - Nishat Gupta
+  - Christel Nicolas
+  - Andrew Yan
+  tech:
+  - Firebase
+  - Android SDK
+  - p5.js
+  - chart.js
+  links:
+    website: http://glacial-stream-85429.herokuapp.com/
+  worthy: true
+  thumbnail: img/lumohacks17.jpg
+
+- name: CircuitDraw
+  dates:
+    start: 2017-07-01
+    end: 2017-08-01
+  type: code
+  description: Circuit drawing web app with has all basic electrical components and
+    features saving and reloading circuits.
+  details: Include basic components such as resistors, capacitors, diodes, OP-AMPs,
+    and IC chips.
+  mot: independent
+  tech:
+  - p5.js
+  links:
+    website: https://www.muchen.ca/CircuitDraw/
+  worthy: false
+  thumbnail: img/circuitdraw.jpg
+
+- name: DIY 3D Printer
+  dates:
+    start: 2017-05-01
+    end: 2017-06-01
+  type: mech
+  description: ''
+  mot: independent
+  tech:
+  - Soldering iron
+  - multimeter
+  thumbnail: 
+
+- name: Magnetic Field Tracking Robot
+  name_short: Mag. Field Robot
+  dates:
+    start: 2017-04-01
+    end: 2017-04-01
+  type: elec
+  description: Microcontroller robot that follows magnetic field generated by a wire;
+    can be wirelessly controlled via the magnetic field.
+  brief: "Microcontroller robot that follows magnetic field generated by a wire."
+  details: A stash of electronics, a pile of mechanical parts, a pair of microcontrollers,
+    a repository of code, a team of six, and over two weeks of sleepless nights.
+  mot: course
+  contributors:
+  - Scott Beauleau
+  - Muchen He
+  - Geoff Goodwin-Wilson
+  - LuFei Liu
+  - Larry Liu
+  - Wenoa Teves
+  tech:
+  - AVR
+  - 8051 Assembly
+  - C
+  - Make
+  - Circuit prototyping
+  - Soldering iron
+  - multimeter
+  - Signal generator
+  - Oscilloscope
+  links:
+    read report: /documents/ELEC291/Project2
+  worthy: true
+  thumbnail: img/magtrackrobot.jpg
+
+- name: 3D Game with DIY Serialized Game Controller
+  dates:
+    start: 2017-04-01
+    end: 2017-04-01
+  type: elec
+  description: DIY game controller using custom microcontroller that communicates via serial
+    with a 3D game programmed in Processing.
+  brief: 3D racing game with DIY controls.
+  details: 'Physical devices are mounted to give feedback from the game: a fan is
+    attached that spins faster as the player moves faster in game; a speaker buzzes
+    when the player takes damage in the game.'
+  mot: independent
+  tech:
+  - Oscilloscope
+  - H-Bridge
+  - Soldering iron
+  - Processing
+  - SPI Protocol
+  worthy: true
+  thumbnail: 
+
+- name: Reflow Oven Controller
+  dates:
+    start: 2017-03-01
+    end: 2017-03-01
+  type: elec
+  description: Microcontroller powered SMT reflow oven controller that follows a temperature
+    profile.
+  mot: course
+  contributors:
+  - Scott Beauleau
+  - Muchen He
+  - Geoff Goodwin-Wilson
+  - LuFei Liu
+  - Larry Liu
+  - Wenoa Teves
+  tech:
+  - 8051 Assembly
+  - AT89 Microcontroller
+  - Thermocouple
+  - OP-AMP
+  - Soldering iron
+  - Oscilloscope
+  - Signal generator
+  links:
+    read report: /documents/ELEC291/Project1
+  worthy: false
+  thumbnail: 
+
+- name: Temperature Monitor
+  dates:
+    start: 2017-03-01
+    end: 2017-03-01
+  type: elec
+  description: Microcontroller controlled temperature monitor using temperature sensor
+    and ADC, serialized output is visualized in Processing.
+  details: Also features a LED strip that shows temperature reading and an alarm that
+    goes off when the temperature is too high.
+  mot: independent
+  tech:
+  - 8051 Assembly
+  - AT89 Microcontroller
+  worthy: false
+  thumbnail: 
+
+- name: Ticker LCD with Music
+  dates:
+    start: 2017-01-01
+    end: 2017-01-01
+  type: elec
+  description: First project using AT89 microcontrollers, used memory access, timers,
+    and interrputs to make looping animation and music.
+  mot: independent
+  tech:
+  - 8051 Assembly
+  - AT89 Microcontroller
+  worthy: false
+  thumbnail: 
+
+- name: InsectNN
+  dates:
+    start: 2016-12-01
+    end: 2016-12-01
+  type: code
+  description: Simulation of a simple insect with antennae staying on a road using a shallow neural network.
+  brief: Simple insect simulator with path tracking using a neural network.
+  mot: independent
+  tech:
+  - Processing 3
+  worthy: true
+  thumbnail: 
+
+- name: Simple RISC Machine
+  dates:
+    start: 2016-10-01
+    end: 2016-11-01
+  type: elec
+  description: Reduced-Instruction-Set-Computer CPU created using System Verilog HDL.
+    Runs basic OS programmed in ARM assembly.
+  mot: independent
+  tech:
+  - ARM Assembly
+  - Quartus II
+  - ModelSim
+  - SystemVerilog
+  worthy: false
+  thumbnail: 
+
+- name: SmartRocket Evolution Simulator
+  name_short: Evolution Sim
+  dates:
+    start: 2016-09-01
+    end: 2016-09-01
+  type: code
+  description: ''
+  mot: independent
+  tech:
+  - p5.js
+  worthy: false
+  thumbnail: 
+
+- name: Minesweeper in C
+  dates:
+    start: 2016-07-01
+    end: 2016-07-01
+  type: code
+  description: ''
+  mot: independent
+  tech:
+  - C
+  worthy: false
+  thumbnail: 
+
+- name: Rainwater Harvesting System
+  dates:
+    start: 2016-04-01
+    end: 2016-04-01
+  type: design
+  description: Obtaining the best configuration for a rainwater harvetsting system
+    design to maximize user satisfaction.
+  mot: course
+  tech:
+  - Microsoft Excel
+  - C
+  thumbnail: 
+
+- name: Autonomous Claw
+  dates:
+    start: 2016-01-01
+    end: 2016-01-01
+  type: mech
+  description: Arduino powered, custom made alumium chasis, autonomous operation to
+    pick up objects.
+  mot: course
+  tech:
+  - Arduino
+  - SolidWorks
+  - Autodesk Inventor
+  - Shop tools
+  thumbnail: 
+
+- name: Adaptive Device for Disabled
+  dates:
+    start: 2015-11-01
+    end: 2015-11-01
+  type: design
+  description: Designed guitar picking accessory for the disabled and written technical
+    documentation.
+  mot: course
+  tech:
+  - SolidWorks
+  - Autodesk Inventor
+  thumbnail: 
+
+- name: Cardboard Chair
+  dates:
+    start: 2015-10-01
+    end: 2015-10-01
+  type: design
+  description: Foldable cardboard chair that supports up to 200 pounds.
+  mot: course
+  tech:
+  - Autodesk Inventor
+  thumbnail: 
+
+- name: Architecture Project
+  dates:
+    start: 2015-06-01
+    end: 2015-06-01
+  type: design
+  description: ''
+  mot: course
+  tech:
+  - Autodesk Revit
+  thumbnail: 
+
+- name: FPV Racing Quadcopter / Drone
+  name_short: FPV Drone
+  dates:
+    start: 2015-02-01
+    end: 2015-05-01
+  type: elec
+  description: DIY <dfn definition="First Persion View">FPV</dfn> 250 mm drone with live video feedback via 5.8GHz radio transmission.
+    Capable of reaching up to 60km/h for 10 minutes.
+  mot: independent
+  tech:
+  - Naze32 Cleanflight
+  - BLDC Motors
+  - 2.4/5.8 GHz radio
+  - Electronic tools
+  - LiPo Batteries
+  worthy: false
+  thumbnail: 
+
+- name: Provincial Skills Canada 2015
+  dates:
+    start: 2015-05-01
+    end: 2015-05-01
+  type: design
+  description: ''
+  details: Won 2nd Place
+  mot: competition
+  tech:
+  - Autodesk Inventor
+  - Precision Tools
+  thumbnail: 
+
+- name: Arduino Exploration
+  dates:
+    start: 2014-11-01
+    end: 2014-12-01
+  type: code
+  description: Experimented with tinkering and building using Arduino microcontrollers.
+    I made various small projects using photo-sensors, servo motors, speakes, and
+    LCD. I also wrote journals to keep track of my learning progress.
+  mot: independent
+  tech:
+  - Arduino
+  - C
+  thumbnail: img/arduino_lg.webp
+
+- name: Microscope CAD
+  dates:
+    start: 2014-06-01
+    end: 2014-06-01
+  type: design
+  description: Reverse engineered a microscope assembly by precisely measuring the
+    parts and replicating them in Autodesk Inventor in 3D. I also produced standard
+    part drawings and parts list.
+  mot: independent
+  tech:
+  - Autodesk Inventor
+  - Precision Tools
+  thumbnail: img/microscope_md.webp
