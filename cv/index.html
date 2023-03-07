@@ -25,7 +25,7 @@ show_footer: false
 
 	.resume-container {
 		font-size: 9pt;
-		line-height: 1.1;
+		/* line-height: 1.1; */
 	}
 
 
@@ -39,7 +39,7 @@ show_footer: false
 
 	h3.title {
 		font-size: 1.2em;
-		margin-bottom: 0;
+		/* margin-bottom: 0; */
 	}
 
 	/* div.info {
@@ -82,14 +82,14 @@ show_footer: false
 	/* Jobs */
 	ul.work {
 		list-style: none;
-		padding: 0px;
-		margin-bottom: 0;
+		/* padding: 0px; */
+		/* margin-bottom: 0; */
 	}
 
 	ul.work li:before {
 		content: '-';
-		margin: 0;
-		margin-right: .5em;
+		/* margin: 0;
+		margin-right: .5em; */
 	}
 
 	li.work p {
@@ -148,7 +148,7 @@ show_footer: false
 {% capture introduction %}
 <section style="border-bottom: 1px solid black;">
 	<h1 class="my-0">Muchen He</h1>
-	<p>
+	<p class="mb-1">
 		<!-- Graduate student at UBC working on computer architecture security
 	and hardware performance simulation,
 	with an interest in the full stack of computing
@@ -227,19 +227,20 @@ show_footer: false
 		{% for education in site.data.resume.education | reverse %}
 		<div>
 			<h3 class="title my-1">
-				<span class="edu-degree">{{ education.degree }}</span>
-				<span class="edu-major">{{ education.major }}</span>
+				<span class="school float-end">{{ education.school }}</span>
+				<span class="edu-degree">
+					{{ education.degree }}&nbsp;{{ education.major }}
+				</span>
 			</h3>
 			<div class="info">
 				<div class="info-meta">
-					<p">
-						<span class="school">{{ education.school }}</span>,
+					<p>
 						{{ education.start }}-{{ education.end }}
-						</p>
+					</p>
 				</div>
-				<div class="info-desc">
+				<!-- <div class="info-desc">
 					<p class="secondary">{{ education.courses | join: ', ' }}</p>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		{% endfor %}
@@ -248,30 +249,24 @@ show_footer: false
 {% endcapture %}
 
 {% capture experience %}
-{% for exp in site.data.resume.exp %}
 <section>
-	<h2>{{ exp.type }} Experience</h2>
-	{% assign company = "" %}
-
-	{% for job in exp.entries %}
-	{% assign prev_company = company %}
-	{% assign company = job.company %}
+	<h2>Experience</h2>
+	{% for job in site.data.resume.exp.entries %}
 	<div class="exp-entry">
 		<h3 class="title my-1">
-			<!-- <img class="company-logo" src="{{ job.thumbnail }}" alt="{{ job.company }}"> -->
-			{{ job.title }}
+			<span class="company float-end">{{ job.company }}</span>
+			<span class="position">{{ job.title }}</span>
 		</h3>
 
 		<div class="info">
 			<div class="info-meta">
 				<!-- <h4 class="company">{{ job.company }}</h4> -->
 				<p>
-					<span class="company">{{ job.company }}</span>,
 					{{ job.start }}-{{ job.end }},
 					<span class="job-location">{{ job.location }}</span>
 				</p>
 			</div>
-			<div class="info-desc secondary">
+			<!-- <div class="info-desc secondary">
 				{% if job.description %}
 				<p>{{ job.description }}</p>
 				{% endif %}
@@ -280,12 +275,11 @@ show_footer: false
 					<li class="work">{{ task }}</li>
 					{% endfor %}
 				</ul>
-			</div>
+			</div> -->
 		</div>
 	</div>
 	{% endfor %}
 </section>
-{% endfor %}
 {% endcapture %}
 
 {% capture projects %}
@@ -295,15 +289,15 @@ show_footer: false
 		{% for project in site.data.projects %}
 		{% if project.worthy %}
 		<p>
-			<strong>{{ project.name }}</strong>,
+			{{ project.name }},
 			<span class="secondary">
-				{{ project.dates.end | date: "%Y" }}:
+				<!-- {{ project.dates.end | date: "%Y" }}:
 				{% if project.brief %}
 				{{ project.brief }}
 				{% else if project.description %}
 				{{ project.description }}
 				{% else %}
-				{% endif %}
+				{% endif %} -->
 			</span>
 		</p>
 		{% endif %}
