@@ -6,7 +6,6 @@
     location: "Vancouver BC"
     start: "Jul 2020"
     end: "present"
-    duration: "2 yrs"
     description: "<b>Thesis</b>: novel mitigation architectures to counter against Spectre, Meltdown, and cache side channel attacks while preserving the performance of speculative execution in a CPU."
     doings:
     - Explored state-of-the-art speculative execution attacks and cache side channel attacks.
@@ -23,7 +22,6 @@
     location: "Vancouver BC"
     start: "Sep 2020"
     end: "May 2022"
-    duration: "1 yr 9 mos"
     description: "Teaching assistant for VLSI design (ELEC 402) and Electrical Engineering Project Course (ELEC 291)."
     doings:
     - Created technical documentation on industry CAD tools like Encounter, Virtuoso, ModelSim, and Q-Flow.
@@ -41,7 +39,6 @@
     location: "Vancouver BC"
     start: "Sep 2020"
     end: "Aug 2021"
-    duration: "1 yr"
     doings:
     - Assisted course transitioning to an online platform and produced informative course content including lecture videos.
     - Created test problems and the auto-grader scripts in C and Python.
@@ -56,7 +53,6 @@
     location: "Vancouver BC"
     start: "Jan 2018"
     end: "May 2020"
-    duration: "2 yr 5 mos"
     description: "Assisted in courses: introduction to programming in C, motors and control systems project course."
     doings:
     - Supervised and assisted lab and electrical shop activities.
@@ -76,7 +72,6 @@
     location: 'Edmonton AB'
     start: 'Jun 2014'
     end: 'Jul 2014'
-    duration: '2 mos'
     doings:
     - Worked with University of Alberta SSRG to develop an Android tablet game in Java and Android SDK using the PhyDSL code generator.
     - Implemented haptic and audio feedback and physics-enabled obstacles using Android API.
@@ -90,7 +85,6 @@
     location: "Vancouver BC"
     start: "Jan 2019"
     end: "Aug 2019"
-    duration: "8 mos"
     doings:
     - Developed terminal tools for engineers to remotely interface with FPGAs.
     - Configured TeamCity CI and automated testing and deployment of internal software, reduced the delay of each release from 1 day to 30 minutes.
@@ -102,7 +96,6 @@
     location: 'Edmonton AB'
     start: 'May 2018'
     end: 'Dec 2018'
-    duration: '8 mos'
     doings:
     - Wrote C++ that improved Frostbite engine's UI/UX components for the game Anthem.
     - Wrote Python upgrade scripts to modify and validate hundreds of XML and game asset files in seconds.
@@ -114,7 +107,6 @@
     location: 'Vancouver BC'
     start: 'May 2017'
     end: 'Aug 2017'
-    duration: '4 mos'
     doings:
     - Developed application UI and implemented UX designer feature requests with Qt, C++, JavaScript, and three.js.
     - Programmed WebGL to deliver interactive 3D viewers.

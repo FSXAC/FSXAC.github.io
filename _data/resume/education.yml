@@ -1,7 +1,7 @@
 - school: University of British Columbia
   thumbnail: "https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_100_100/0/1568742934345?e=1663804800&v=beta&t=Rhzb-Ej_lTXBFZqUTWJOttOeCjQUJf39PK6-ZN7OwnM"
   degree: M.A.Sc.
-  major: Computer Engineering
+  major: Computer Engineering, Thesis-Based
   start: 2020
   end: present
   affiliations:
@@ -15,10 +15,9 @@
 - school: Unviersity of British Columbia
   thumbnail: "https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_100_100/0/1568742934345?e=1663804800&v=beta&t=Rhzb-Ej_lTXBFZqUTWJOttOeCjQUJf39PK6-ZN7OwnM"
   degree: B.A.Sc.
-  major: Electrical Engineering w/ Co-op Program
+  major: Electrical Engineering, Co-op Program, 86%
   start: 2015
   end: 2020
-  gpa: 86%
   affiliations:
   - ECESS
   - ThunderBots
