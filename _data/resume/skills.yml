@@ -1,0 +1,33 @@
+# This file contains the content that populates the
+# "skills" or "I can" section of the resume
+
+- category: Development
+  skills:
+  - Python
+  - C
+  - C++
+  - Java
+  - SystemVerilog
+  - UNIX
+  - git
+  - ASM
+  - Swift
+  - Lua
+  - JavaScript
+  - HTML+CSS
+  - Automation
+  - CI/CD
+  - R
+  - MATLAB
+- category: Hardware
+  skills:
+  - FPGA
+  - EDA CAD (Synopsys, Siemens)
+  - 3D CAD (Inventor, Solidworks)
+- category: Communication
+  skills:
+  - LaTeX
+  - Academic and Technical Writing
+  - Jupyter
+  - Markdown
+  - Final Cut Pro + Motion

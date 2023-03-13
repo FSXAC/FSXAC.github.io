@@ -1,0 +1,34 @@
+- school: University of British Columbia
+  thumbnail: "https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_100_100/0/1568742934345?e=1663804800&v=beta&t=Rhzb-Ej_lTXBFZqUTWJOttOeCjQUJf39PK6-ZN7OwnM"
+  degree: M.A.Sc.
+  major: Computer Engineering
+  start: 2020
+  end: present
+  affiliations:
+  courses:
+  - Advanced Computer Architecture
+  - Parallel and Configurable Computing
+  - Trustworthy Machine Learning
+  - Human Computer Interfaces
+  - Computer Vision
+  description: "Thesis: novel mitigation architectures to counter against Spectre, Meltdown, and cache side channel attacks while preserving the performance of speculative execution in a CPU."
+
+- school: Unviersity of British Columbia
+  thumbnail: "https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_100_100/0/1568742934345?e=1663804800&v=beta&t=Rhzb-Ej_lTXBFZqUTWJOttOeCjQUJf39PK6-ZN7OwnM"
+  degree: B.A.Sc.
+  major: Electrical Engineering
+  start: 2015
+  end: 2020
+  affiliations:
+  - ECESS
+  - ThunderBots
+  courses:
+  - Computer Architecture
+  - Data Structures and Algorithms
+  - Machine Learning
+  - Digital Logic Design
+  - Signals and Systems
+  - VLSI Design
+  - Control Theory
+  - Mathematical Proofs
+

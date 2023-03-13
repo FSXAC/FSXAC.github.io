@@ -1,0 +1,104 @@
+entries:
+- company: 'SK Hynix &mdash; Solidigm'
+  title: 'Firmware Development Engineer'
+  location: 'Vancouver BC'
+  start: 'Sep 2022'
+  end: 'present'
+- company: 'Intel Corporation'
+  thumbnail: "https://media-exp1.licdn.com/dms/image/C560BAQGpvWtEtj9oTQ/company-logo_100_100/0/1625151708870?e=1663804800&v=beta&t=lyNb7hI5JA4tgOmWCMGUYnyMSoKraEiuOy4BVYDNZCQ"
+  title: "FPGA Engineering (Co-op)"
+  location: "Vancouver BC"
+  start: "Jan 2019"
+  end: "Aug 2019"
+  doings:
+  - Developed terminal tools for FPGA workflows.
+  - Configured TeamCity CI for internal software and reduced release delay from 1 day to 30 minutes.
+  - Scripted automated tasks to verify project directory integrity.
+  - Authored technical documentation for changes and new features.
+  description: "Developed terminal tools for FPGA workflows, configured TeamCity CI to reduce release delay, scripted automated tasks to verify project integrity, and authored technical documentation for changes and new features."
+- company: 'Electronic Arts &mdash; BioWare'
+  thumbnail: "https://media-exp1.licdn.com/dms/image/C560BAQGePyMiXbMmsg/company-logo_100_100/0/1636403662889?e=1663804800&v=beta&t=7nIsjUayaV_Dsh_Q9wV7mL2AGw7sR0ZEp1H2gJ1pwEI"
+  title: 'Associate Developer (Co-op)'
+  location: 'Edmonton AB'
+  start: 'May 2018'
+  end: 'Dec 2018'
+  doings:
+  - Improved Frostbite engine's UI/UX for Anthem game with C++
+  - Wrote Python upgrade scripts to modify and validate XML and game assets.
+  - Investigated and resolved UI, keyboard/mouse input, and Origin API bugs.
+  - Collaborated with UI/UX artists and scripters to develop entities, demonstrating strong teamwork and communication skills.
+  description: "Developed game engine UI/UX with C++, scripted Python to modify and validate game assets, solved UI bugs, and collaborated with artists, showcasing strong teamwork and communication."
+- company: 'Vital Mechanics Research Inc.'
+  thumbnail: 'https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_100_100/0/1568742934345?e=1663804800&v=beta&t=Rhzb-Ej_lTXBFZqUTWJOttOeCjQUJf39PK6-ZN7OwnM'
+  title: 'Software Developer (Co-op)'
+  location: 'Vancouver BC'
+  start: 'May 2017'
+  end: 'Aug 2017'
+  doings:
+  - Developed application UI and implemented UX designer feature requests with Qt, C++, JavaScript, and three.js.
+  - Programmed WebGL to deliver interactive 3D viewers.
+  description: "Developed application UI and implemented UX designer feature requests using Qt, C++, JavaScript, and three.js. Programmed WebGL for interactive 3D viewers."
+- company: "University of British Columbia"
+  thumbnail: "https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_100_100/0/1568742934345?e=1663804800&v=beta&t=Rhzb-Ej_lTXBFZqUTWJOttOeCjQUJf39PK6-ZN7OwnM"
+  title: "Research Assistant"
+  location: "Vancouver BC"
+  start: "Jul 2020"
+  end: "present"
+  doings:
+  - Explored state-of-the-art speculative execution attacks and cache side channel attacks.
+  - Identified key insights that aid in the design of performant architecture that is superior than prior defenses.
+  - Implemented prototype in the cycle-accurate gem5 simulator and devised experiments to obtain key metrics.
+  - Evaluated the effectiveness and the performance of the mitigation using PARSEC and SPEC2017 benchmarks.
+  description: "Explored state-of-the-art speculative execution and cache side channel attacks. Identified key insights for designing high-performance architecture with superior defenses. Implemented a prototype in the cycle-accurate gem5 simulator and evaluated the effectiveness and performance of the mitigation using PARSEC and SPEC2017 benchmarks."
+  tech:
+  - gem5 (C++, Python)
+  - ARM assembly
+  - LaTeX
+- company: "University of British Columbia"
+  thumbnail: "https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_100_100/0/1568742934345?e=1663804800&v=beta&t=Rhzb-Ej_lTXBFZqUTWJOttOeCjQUJf39PK6-ZN7OwnM"
+  title: "Teaching Assistant"
+  location: "Vancouver BC"
+  start: "Jan 2018"
+  end: "May 2022"
+  doings:
+  - Created technical documentation on industry CAD tools including Encounter, Virtuoso, ModelSim, and Q-Flow.
+  - Provided technical assistance by hosting office hours, tutorials, and supervising laboratory and electrical shop activities.
+  - Automated grading tasks with shell and Python scripts, reducing grading time by 75%.
+  - Created tutorial videos and technical support documentation for course content.
+  description: "Created technical documentation on industry CAD tools (Encounter, Virtuoso, ModelSim, and Q-Flow). Provided technical assistance through hosting office hours, tutorials, and supervising lab and electrical shop activities. Automated grading tasks with shell and Python scripts, reducing grading time by 75%. Created tutorial videos and technical support documentation for course content."
+  tech:
+  - Cadence Encounter
+  - Cadence Virtuoso
+  - TCL
+  - Mentor Graphics ModelSim
+  - Q-Flow
+  - Python
+  - C
+  - Visual Studio
+  - Autodesk Inventor
+  - MATLAB+SimuLink
+- company: "University of British Columbia"
+  thumbnail: "https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_100_100/0/1568742934345?e=1663804800&v=beta&t=Rhzb-Ej_lTXBFZqUTWJOttOeCjQUJf39PK6-ZN7OwnM"
+  title: "Academic Assistant"
+  location: "Vancouver BC"
+  start: "Sep 2020"
+  end: "Aug 2021"
+  doings:
+  - Assisted course transitioning to an online platform and produced informative course content including lecture videos.
+  - Created test problems and the auto-grader scripts in C and Python.
+  tech:
+  - Python
+  - Docker
+  - C
+  - HTML+CSS
+  
+- company: 'University of Alberta'
+  thumbnail: 'https://media-exp1.licdn.com/dms/image/C560BAQHmUPyHKc9oUA/company-logo_100_100/0/1657048619835?e=1669852800&v=beta&t=Jm_IK6anl3_gTh5JwHoHsXIkOHzkavACBECtG74cxFc'
+  title: 'High School Intern'
+  location: 'Edmonton AB'
+  start: 'Jun 2014'
+  end: 'Jul 2014'
+  doings:
+  - Worked with University of Alberta SSRG to develop an Android tablet game in Java and Android SDK using the PhyDSL code generator.
+  - Implemented haptic and audio feedback and physics-enabled obstacles using Android API.
+  - Presented a poster talk on project specifications, goals, and experiences related to supervisor's research.

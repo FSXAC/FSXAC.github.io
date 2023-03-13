@@ -8,7 +8,7 @@
 - text: CV
   url: /cv
   desc: Education and work experience
-  disabled: true
+  disabled: false
 - text: Documents
   url: /documents
   desc: Notes and documents from school work.
