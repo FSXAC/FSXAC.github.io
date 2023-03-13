@@ -1,0 +1,11 @@
+body {
+    max-width: 900px;
+    /* margin-left: 100px; */
+    background-color: aquamarine;
+    padding: 20px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+html {
+    background-image: url("http://art.teleportacia.org/observation/vernacular/stars/ss058.jpg");
+}
