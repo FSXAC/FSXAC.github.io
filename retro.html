@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Muchen He :: About</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Muchen's page" />
+    <meta name="author" content="Muchen He" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- css -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/retro.css">
+</head>
+
+<body>
+    <header class="jumbotron jumbotron-fluid px-3 py-5">
+        <div class="container" style="text-align: center">
+            <img class="avatar mb-3" src="img/avatar-retro.jpg">
+            <h1 class="display-4 text-light">
+                <img src="http://www.wonder-tonic.com/geocitiesizer/images/spinningearth.gif" alt=""> Muchen He
+                <img src="http://www.wonder-tonic.com/geocitiesizer/images/spinningearth.gif" alt="">
+            </h1>
+            <p class="text-light">I am Muchen, currently in fourth year Electrical Engineering at The University of British Columbia.</p>
+            <img src="http://www.wonder-tonic.com/geocitiesizer/images/laptop-01.gif" alt="">
+            <p class="text-light">Currently on an 8-month co-op as FPGA engineering inten at Intel Corporation. Previously worked at EA - BioWare
+                on Anthem.</p>
+            <p class="text-light">I am an excellent electrical engineering student with proficient lab and hands-on skills with experience in software
+                development. Check out my
+                <a href="resume">resume</a> and
+                <a href="projects">projects page</a> for more details.</p>
+            <img src="https://media.tenor.com/images/aa104b2753b418858fceabe57cd4ca58/tenor.gif" alt="">
+        </div>
+    </header>
+    <img style="position: absolute; left: 940px; top: 700px;" src="http://www.netanimations.net/fire-under-construction-animation.gif"
+        alt="">
+    <img style="position: absolute; left: 900px; top: 600px;" src="https://www.picgifs.com/graphics/u/under-construction/graphics-under-construction-205618.gif"
+        alt="">
+    <div id='main' class="container">
+        <marquee style="color:red" behavior="scroll" direction="left">The index shows you the web pages you can go. You are currently on the index page :)</marquee>
+        <section>
+            <h2>Index</h2>
+            <dl class="row dl-horizontal">
+                <dt class="col-md-2">
+                    <a href="/">About</a>
+                </dt>
+                <dd class="col-md-10">You are here.</dd>
+                <dt class="col-md-2">
+                    <a href="/blog">Blog</a>
+                </dt>
+                <dd class="col-md-10">Some random blogs that I write once in a while.</dd>
+                <dt class="col-md-2">
+                    <a href="/documents">Documents</a>
+                    <img src="http://www.wonder-tonic.com/geocitiesizer/images/hot.gif" alt="">
+                </dt>
+                <dd class="col-md-10">School notes and documents.</dd>
+                <dt class="col-md-2">
+                    <a href="/gallery">Gallery</a>
+                    <img src="http://www.wonder-tonic.com/geocitiesizer/images/hot.gif" alt="">
+                </dt>
+                <dd class="col-md-10">Photography showcase from my Instagram.</dd>
+                <dt class="col-md-2">
+                    <a href="/projects">Projects</a>
+                    <img src="http://www.wonder-tonic.com/geocitiesizer/images/hot.gif" alt="">
+                </dt>
+                <dd class="col-md-10">Project showcase, including personal projects.</dd>
+                <dt class="col-md-2">
+                    <a href="/resume">Resume</a>
+                    <img src="http://www.wonder-tonic.com/geocitiesizer/images/hot.gif" alt="">
+                </dt>
+                <dd class="col-md-10">Skills and experiences.</dd>
+                <dt class="col-md-2">
+                    <a href="/tools">Toolbox</a>
+                </dt>
+                <dd class="col-md-10">A collection of useful in-browser apps</dd>
+            </dl>
+        </section>
+        <section>
+            <h2>Contacts</h2>
+            <img src="http://www.wonder-tonic.com/geocitiesizer/images/computer-01.gif" alt="">
+            <dl class="row dl-horizontal">
+                <dt class="col-md-2">Personal E-mail</dt>
+                <dd class="col-md-10">
+                    <a href="mailto:i@muchen.ca">i@muchen.ca</a>
+                </dd>
+                <dt class="col-md-2">School E-mail</dt>
+                <dd class="col-md-10">
+                    <a href="mailto:m.he@alumni.ubc.ca">m.he@alumni.ubc.ca</a>
+                </dd>
+                <dt class="col-md-2">GitHub</dt>
+                <dd class="col-md-10">
+                    <a href="https://www.github.com/FSXAC">FSXAC</a>
+                </dd>
+                <dt class="col-md-2">LinkedIn</dt>
+                <dd class="col-md-10">
+                    <a href="https://www.linkedin.com/in/muchen-he-6a3716b3/">Link</a>
+                </dd>
+            </dl>
+        </section>
+    </div>
+    <script>
+
+        const navs = ['About', 'Blog', 'Documents', 'Gallery', 'Projects', 'Resume', 'Sketches', 'Toolbox'];
+        const links = ['/', '/blog', '/documents', '/gallery', '/projects', '/resume', '/sketches', '/tools'];
+
+        const navbarBegin = `
+            <nav class="navbar sticky-top navbar-expand-md navbar-light bg-light">
+            <div class="container-fluid">
+            <marquee behavior="scroll" direction="left">Welcome to my web site!!!! u r visitor number {number}, enjoy ur stay :)</marquee>
+            <p>MENU:</p>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+        `.replace('{number}', Math.floor(Math.random() * 100));
+
+        const navbarOldStuff = `
+            </ul>
+            <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="/archive">Old stuff</a></li>
+            </ul>
+        `;
+
+        const navbarEnd = `
+            </div>
+            </div>
+            </nav>
+        `;
+
+        const current = "About";
+
+        var outHtml = navbarBegin;
+        for (var i = 0, l = navs.length; i < l; i++) {
+            outHtml += '<li class="nav-item';
+            if (current === navs[i]) outHtml += ' active';
+            outHtml += '"><a class="nav-link" href="';
+            outHtml += links[i];
+            outHtml += '">';
+            outHtml += navs[i];
+            if (current === navs[i]) outHtml += '<span class="sr-only">(current)</span>';
+            outHtml += '</a></li>';
+        }
+        outHtml += navbarEnd;
+        $('body').prepend(outHtml);
+
+
+        const date = new Date();
+        const footer = '<footer><small><p class="mb-0">Copyright © 2014-' + date.getFullYear() + ' Muchen He</p> \
+            This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. \
+            </small> \
+            <p style="text-align: center;"> \
+            <img src="http://www.wonder-tonic.com/geocitiesizer/images/counter.gif"> \
+            <img src="http://www.wonder-tonic.com/geocitiesizer/images/notepad.gif"> \
+            </p> \
+        </footer>';
+
+        $('#main').append(footer);
+    </script>
+</body>
+
+</html>
