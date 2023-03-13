@@ -8,7 +8,7 @@
     start: 2022-04-25
     end: 2022-01-31
   description: 'Surveyed the literature for attacks and defense of deep neural networks that utilize bit flip to directly perturb the network weights.'
-  brief: 'Literature survey for DNN attacks and defenses that uses bit flips to perturb network parameters.'
+  brief: 'Deep learning attacks literature survey.'
   mot: course
   worthy: True
 
@@ -20,7 +20,7 @@
   type: code, data
   mot: independent
   description: "Python script that interpolates macOS Photos library statistics and image metadata; produces data visualizations including heatmap, GPS heatmap, and chord diagrams"
-  brief: "Novel data visualization of macOS Photos library statistics and image metadata."
+  brief: "Novel data visualization of Apple Photos library metadata."
   tech: [Python, Processing, d3.js, p5.js]
   worthy: true
   links:
@@ -36,7 +36,7 @@
   mot: course
   worthy: true
   description: "Gaze-tracking user study; team of three; animated avatar in video conferencing to study participation, engagement, focus, and attention"
-  brief: "3D video conferencing system that tracks user gaze; User study shows boost in participation and engagement."
+  brief: "User study of gaze-tracking in video conferencing."
   tech: [Processing]
   links:
     Video Presentation: "#"
@@ -51,7 +51,7 @@
   type: code, computer, research
   mot: course
   description: "A MATLAB script to automatically scan and convert drawn content to PowerPoint slides. The image processing pipeline makes use of Hough transform, morphological operations, and accurate colour correction. The automation outputs a fully-functional .pptx file."
-  brief: "Automated conversion of drawn content to PowerPoint slides."
+  brief: "Hand-drawn content to PowerPoint slides."
   worthy: true,
   tech: [MATLAB, Python]
   links:
@@ -60,7 +60,7 @@
     Project Presentation (Video): "https://www.youtube.com/watch?v=PIDL-t2zeuI"
     Report: "https://www.icloud.com/iclouddrive/047jv662ADeWZzcTZ61Dwnsyw#report"
 
-- name: Hough Transform Hardware Acceleration
+- name: GPU HT
   dates:
     start: 2020-10-01
     end: 2020-12-28
@@ -68,7 +68,7 @@
   type: code, computer, research
   mot: course
   description: Exploring parallel-computing techniques, including CUDA on Nvidia GPU, OpenCL, and Open MPI to accelerate Hough transform to detect lines in an image. Resulting in <strong>50 &times;</strong> speedup compared to serial/baseline implementation.
-  brief: "Parallel-computing implementation (CUDA on Nvidia GPU, OpenCL, and Open MPI) that accelerates Hough transform to detect lines in an image."
+  brief: "Hough transform acceleration with GPU."
   tech: [C, Open MPI, OpenCL, CUDA]
   worthy: true
   thumbnail: "https://raw.githubusercontent.com/FSXAC/CPEN512/master/hough/img/ipad512.jpg"
@@ -99,14 +99,14 @@
   tech: [Swift, UIKit, XCode]
   worthy: false
 
-- name: Object Detection with FPGA Drone
+- name: Skynet
   dates:
     start: 2019-10-01
     end: 2020-05-01
   ongoing: false
   type: code, electrical
   description: As machine learning is employed in more portable and remote devices, programmable digital circuits such as field-programmable-gate-arrays (FPGAs) are attractive given the speed and flexibility they provide. In this project, we explored integrating an object detection model (YOLOv2) onto a portable package with an FPGA, camera, and processor. To demonstrate its portability, the system is mounted to a drone, showcasing its potential deployability in remote or highly-portable situations. This project won the UBC APSC Capstone Faculty Award.
-  brief: "Integrated YOLOv2 object detector onto a portable package with an FPGA."
+  brief: "Object detection with flying FPGA."
   mot: course
   thumbnail: "https://hn0txg.bn.files.1drv.com/y4mxyIEmQI_QTnbEYu7niptt4zI8k4upo7H_MoZ0NOdARTUEFktVn2RF-PR2twgrMNji_ldvDfvLxk0e9XNPB4VHvk6Kch1JG3fK9UY040x9UTUbvK3WD4leyA_Z7mN2f0ZsyjiAOhboqBNh0NwcNXmKa-N4szJTsc5VOGQATFSFXmI-z2k48YErz3pcDjAx_WyaziLvbbWD1PnTnxWHmaclw?width=660&height=343&cropmode=none"
   worthy: true
@@ -115,7 +115,7 @@
   links:
     GitHub: https://github.com/Capstone-Skynet
 
-- name: FB Messenger Visualizer
+- name: FBVis
   name_short: FB Visualizer
   dates:
     start: 2018-01-01
@@ -125,7 +125,7 @@
   description: An animated visualizer that visualizes entire Facebook messages archive
     in chronological order. Where people are drawn as nodes and exchange of messages
     are drawn as as beams of light.
-  brief: "Novel animation visualization of Facebook messages archive"
+  brief: "Novel animation visualization of chats."
   mot: independent
   tech:
   - Processing 3
@@ -144,7 +144,7 @@
   description: Built and programmed PID controllers in C++ and MATLAB for 2-DOF spherical
     wrist controlled laser pointers that draws shapes, using DC commutating motors
     built from scratch.
-  brief: "Built and programmed PID controllers in C++ and MATLAB for 2-DOF spherical wrist controlled laser pointers."
+  brief: "PID-controlled 2-DOF laser pointer."
   contributors: [Muchen He, Leo Liu, LuFei Liu, Wenoa Teves]
   tech: [Arduino, C++, SolidWorks, Autodesk Inventor, MATLAB, SimuLink, Altium Designer, 3D Printer, Laser Cutter, Waterjet, Node.js, p5.js, Electronic Tools]
   links:
@@ -168,15 +168,14 @@
     project page: https://www.muchen.ca/VGACoreSim
   thumbnail: img/vgacoresim.jpg
 
-- name: Mandelbrot Set on FPGA
-  name_short: FPGA Fractal
+- name: FPGA Fractal
   dates:
     start: 2018-02-01
     end: 2018-02-01
   type: elec
   description: An interactive Mandelbrot Set fractal via VGA on the DE1-SoC FPGA development
     board written in SystemVerilog.
-  brief: "Interactive fractal on FPGA written in SystemVerilog."
+  brief: "Interactive Mandelbrot Set fractal on FPGA."
   mot: independent
   tech:
   - SystemVerilog
@@ -195,7 +194,7 @@
   type: code
   description: Desktop app used to help grading C programming lab submissions more efficiently.
     Runs cross-platform and features dockable UI.
-  brief: "Desktop app that helps grading coding assignments more efficiently."
+  brief: "Automated C programming lab grading."
   mot: independent
   tech:
   - Python 3
@@ -234,14 +233,14 @@
   - Python 3
   thumbnail: img/fwview.jpg
 
-- name: Sleep Logger
+- name: Slapp
   dates:
     start: 2017-09-01
     end: 2017-09-01
   type: code
   description: Web application with real-time database and authentication to keep track
     of sleep statistics, featuring beautifully animated front-end.
-  brief: "Web-app with real-time database and authentication to keep track of sleep statistics."
+  brief: "Sleep tracking web app."
   details: Created at Lumohacks 2017
   mot: hack
   contributors:
@@ -294,9 +293,8 @@
     start: 2017-04-01
     end: 2017-04-01
   type: elec
-  description: Microcontroller robot that follows magnetic field generated by a wire;
-    can be wirelessly controlled via the magnetic field.
-  brief: "Microcontroller robot that follows magnetic field generated by a wire."
+  # description: Microcontroller robot that follows magnetic field generated by a wire;
+  #   can be wirelessly controlled via the magnetic field.
   details: A stash of electronics, a pile of mechanical parts, a pair of microcontrollers,
     a repository of code, a team of six, and over two weeks of sleepless nights.
   mot: course
@@ -319,7 +317,7 @@
   - Oscilloscope
   links:
     read report: /documents/ELEC291/Project2
-  worthy: true
+  worthy: false
   thumbnail: img/magtrackrobot.jpg
 
 - name: 3D Game with DIY Serialized Game Controller
@@ -340,7 +338,7 @@
   - Soldering iron
   - Processing
   - SPI Protocol
-  worthy: true
+  worthy: false
   thumbnail: 
 
 - name: Reflow Oven Controller
@@ -407,7 +405,7 @@
     end: 2016-12-01
   type: code
   description: Simulation of a simple insect with antennae staying on a road using a shallow neural network.
-  brief: Simple insect simulator with path tracking using a neural network.
+  brief: "Neural network path-finding simulation."
   mot: independent
   tech:
   - Processing 3

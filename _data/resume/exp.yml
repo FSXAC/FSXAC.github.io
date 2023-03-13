@@ -1,5 +1,5 @@
 entries:
-- company: 'SK Hynix Solidigm'
+- company: 'SK Hynix &mdash; Solidigm'
   title: 'Firmware Development Engineer'
   location: 'Vancouver BC'
   start: 'Sep 2022'
@@ -11,21 +11,23 @@ entries:
   start: "Jan 2019"
   end: "Aug 2019"
   doings:
-  - Developed terminal tools for engineers to remotely interface with FPGAs.
-  - Configured TeamCity CI and automated testing and deployment of internal software, reduced the delay of each release from 1 day to 30 minutes.
-  - Scripted automated tasks to verifying the project directory integrity.
-  - Written and released technical documentation for changes and added features.
-- company: 'EA BioWare'
+  - Developed terminal tools for FPGA workflows.
+  - Configured TeamCity CI for internal software and reduced release delay from 1 day to 30 minutes.
+  - Scripted automated tasks to verify project directory integrity.
+  - Authored technical documentation for changes and new features.
+  description: "Developed terminal tools for FPGA workflows, configured TeamCity CI to reduce release delay, scripted automated tasks to verify project integrity, and authored technical documentation for changes and new features."
+- company: 'Electronic Arts &mdash; BioWare'
   thumbnail: "https://media-exp1.licdn.com/dms/image/C560BAQGePyMiXbMmsg/company-logo_100_100/0/1636403662889?e=1663804800&v=beta&t=7nIsjUayaV_Dsh_Q9wV7mL2AGw7sR0ZEp1H2gJ1pwEI"
   title: 'Associate Developer (Co-op)'
   location: 'Edmonton AB'
   start: 'May 2018'
   end: 'Dec 2018'
   doings:
-  - Wrote C++ that improved Frostbite engine's UI/UX components for the game Anthem.
-  - Wrote Python upgrade scripts to modify and validate hundreds of XML and game asset files in seconds.
-  - Investigated bugs related to UI, keyboard/mouse inputs, and Origin API and developed robust solutions.
-  - Developed entities for UI/UX artists and scripters; demonstrated strong teamwork and communication.
+  - Improved Frostbite engine's UI/UX for Anthem game with C++
+  - Wrote Python upgrade scripts to modify and validate XML and game assets.
+  - Investigated and resolved UI, keyboard/mouse input, and Origin API bugs.
+  - Collaborated with UI/UX artists and scripters to develop entities, demonstrating strong teamwork and communication skills.
+  description: "Developed game engine UI/UX with C++, scripted Python to modify and validate game assets, solved UI bugs, and collaborated with artists, showcasing strong teamwork and communication."
 - company: 'Vital Mechanics Research Inc.'
   thumbnail: 'https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_100_100/0/1568742934345?e=1663804800&v=beta&t=Rhzb-Ej_lTXBFZqUTWJOttOeCjQUJf39PK6-ZN7OwnM'
   title: 'Software Developer (Co-op)'
@@ -35,18 +37,19 @@ entries:
   doings:
   - Developed application UI and implemented UX designer feature requests with Qt, C++, JavaScript, and three.js.
   - Programmed WebGL to deliver interactive 3D viewers.
+  description: "Developed application UI and implemented UX designer feature requests using Qt, C++, JavaScript, and three.js. Programmed WebGL for interactive 3D viewers."
 - company: "University of British Columbia"
   thumbnail: "https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_100_100/0/1568742934345?e=1663804800&v=beta&t=Rhzb-Ej_lTXBFZqUTWJOttOeCjQUJf39PK6-ZN7OwnM"
   title: "Research Assistant"
   location: "Vancouver BC"
   start: "Jul 2020"
   end: "present"
-  description: "<b>Thesis</b>: novel mitigation architectures to counter against Spectre, Meltdown, and cache side channel attacks while preserving the performance of speculative execution in a CPU."
   doings:
   - Explored state-of-the-art speculative execution attacks and cache side channel attacks.
   - Identified key insights that aid in the design of performant architecture that is superior than prior defenses.
   - Implemented prototype in the cycle-accurate gem5 simulator and devised experiments to obtain key metrics.
   - Evaluated the effectiveness and the performance of the mitigation using PARSEC and SPEC2017 benchmarks.
+  description: "Explored state-of-the-art speculative execution and cache side channel attacks. Identified key insights for designing high-performance architecture with superior defenses. Implemented a prototype in the cycle-accurate gem5 simulator and evaluated the effectiveness and performance of the mitigation using PARSEC and SPEC2017 benchmarks."
   tech:
   - gem5 (C++, Python)
   - ARM assembly
@@ -57,16 +60,12 @@ entries:
   location: "Vancouver BC"
   start: "Jan 2018"
   end: "May 2022"
-  description: "Teaching assistant for VLSI design (ELEC 402) and Electrical Engineering Project Course (ELEC 291)."
   doings:
-  - Created technical documentation on industry CAD tools like Encounter, Virtuoso, ModelSim, and Q-Flow.
-  - Hosted and moderated office hours, tutorials, and Piazza.
-  - Evaluated and graded student project demonstrations and report submissions.
-  - Supervised and assisted lab and electrical shop activities.
-  - Lectured and provided explanation of requested topics including C, MATLAB, control systems.
-  - Provided C, MATLAB, and control systems during lectures, labs, and office hours.
-  - Wrote shell and Python scripts and automated grading tasks and reduced grading time by 75%.
-  - Wrote technical support documentation and created tutorial videos for course content.
+  - Created technical documentation on industry CAD tools including Encounter, Virtuoso, ModelSim, and Q-Flow.
+  - Provided technical assistance by hosting office hours, tutorials, and supervising laboratory and electrical shop activities.
+  - Automated grading tasks with shell and Python scripts, reducing grading time by 75%.
+  - Created tutorial videos and technical support documentation for course content.
+  description: "Created technical documentation on industry CAD tools (Encounter, Virtuoso, ModelSim, and Q-Flow). Provided technical assistance through hosting office hours, tutorials, and supervising lab and electrical shop activities. Automated grading tasks with shell and Python scripts, reducing grading time by 75%. Created tutorial videos and technical support documentation for course content."
   tech:
   - Cadence Encounter
   - Cadence Virtuoso

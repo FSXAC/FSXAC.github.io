@@ -15,7 +15,7 @@ default:
     link: "mailto:muchen.he@solidigm.com"
     text: "muchen.he@solidigm.com"
     icon: "fas fa-envelope"
-    show_resume: true
+    show_resume: false
     show_homepage: false
   - title: "GitHub"
     link: "https://www.github.com/FSXAC"
