@@ -124,6 +124,12 @@
   - course_num: 'CPSC 259'
     course_name: 'Data Structures & Algorithms'
     emoji: 🔄
+    date: 2023-03-27
+    entries:
+    - title: 'Introduction to Data Structures'
+      link: '/documents/CPSC259/1-intro'
+    - title: 'Binary Search Trees'
+      link: '/documents/CPSC259/8a-bst'
   - course_num: 'APSC 160'
     course_name: 'Computation in Engineering Design'
     emoji: 🤖
