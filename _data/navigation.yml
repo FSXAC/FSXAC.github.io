@@ -18,10 +18,12 @@
 # - text: Logbook
 #   url: /logbook
 #   desc: Logging of my mind and thoughts... for debugging purposes.
-- text: Projects
-  url: /projects
-  desc: My personal and collaborative project showcase.
-  disabled: true
+# - text: Projects
+#   url: /projects
+#   desc: My personal and collaborative project showcase.
+#   disabled: true
+- text: Work Notes
+  url: /work
 - text: Photos
   url: /photos
   desc: A weekly journal of my personal photography as a hobby.
