@@ -214,15 +214,10 @@ iframe {
 
 /* Code (inline) */
 code.highlighter-rouge {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 0.9em;
-    padding: 0.1em 0.2em;
-    margin-left: 0.1em;
-    margin-right: 0.1em;
-    border-radius: 4px;
-    border: 1px solid #222;
+    padding: 0.07em 0.2em;
+    border: 1px dotted;
+    white-space: nowrap;
     color: inherit;
-    /* box-shadow: 2px 2px #999; */
 }
 
 /* toc */
