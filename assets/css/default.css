@@ -1,14 +1,37 @@
-/* Vars */
+/* MARK: Vars */
 :root {
     /* Fonts */
     --f: 'Merriweather', serif;
     --hf: 'Gloock', serif;
+
+    /* Colors */
+    --primary: #40916C;
+    --primary-light: #ebf4f0;
+    --stroke: #222;
+    --shadow: #bbb;
+    --shadow-dark: #666;
+    --text: #222;
+    --highlight: #F5C86F;
+    --bg: #fff;
 }
 
-/* print */
+/* MARK: print */
 @media print {
     .no-print {
         display: none;
+    }
+}
+
+/* MARK: night mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary: #40916C;
+        --primary-light: #ebf4f0;
+        --stroke: #ddd;
+        --shadow: #666;
+        --text: #ddd;
+        --highlight: #F5C86F;
+        --bg: #222;
     }
 }
 
@@ -16,16 +39,16 @@ html {
     font-size: 14px;
 }
 
-.container {
-    max-width: 7.5in;
-}
-
 body {
     cursor: default;
-    color: black;
-    background-color: #fff;
+    color: var(--text);
+    background-color: var(--bg);
     overflow-x: hidden;
     font-family: var(--f);
+}
+
+.container {
+    max-width: 7.5in;
 }
 
 h1,
@@ -55,30 +78,29 @@ a {
 }
 
 a:hover {
-    color: #40916C;
+    color: var(--primary);
 }
 
 .box {
-    border: 0.5px solid #222;
+    border: 0.5px solid var(--stroke);
     border-radius: 0;
     background: #fff;
-    box-shadow: 2px 2px #bbb;
+    box-shadow: 2px 2px var(--shadow);
     padding: .15rem .6rem;
 }
 
 .btn {
-    border: 0.5px solid #222;
+    border: 0.5px solid var(--stroke);
     border-radius: 0;
     padding: .15rem .6rem 0;
-    /* height: 2rem; */
     display: inline-block;
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
-    background: #fff;
-    box-shadow: 2px 2px #bbb;
+    background: var(--bg);
+    box-shadow: 2px 2px var(--shadow);
     transition: none;
-    color: black;
+    color: var(--text);
 }
 
 .btn.disabled {
@@ -88,10 +110,8 @@ a:hover {
 }
 
 .btn:hover {
-    /* background: rgb(245, 200, 111); */
-    background: #40916C;
-    box-shadow: 2px 2px #666;
-    border-color: black;
+    background: var(--primary);
+    box-shadow: 2px 2px var(--shadow-dark);
     color: white;
 }
 
@@ -105,8 +125,8 @@ a:hover {
 }
 
 .navitem.active .btn {
-    background: #ccc;
-    box-shadow: inset 2px 2px #666;
+    background: var(--shadow);
+    box-shadow: inset 2px 2px var(--shadow-dark);
 }
 
 .navitem.active .btn:hover {
@@ -172,8 +192,7 @@ table {
 
 /* // Default selected style override */
 ::selection {
-    /* background: #8884; */
-    background: #ebf4f0;
+    background: var(--primary-light);
 }
 
 input.task-list-item-checkbox {
@@ -187,11 +206,11 @@ blockquote {
     margin-top: 2em;
     margin-bottom: 2.5em;
     padding: 1em;
-    border: 1px solid #222;
+    border: 1px solid var(--stroke);
     border-left-width: 3px;
     border-radius: 0;
     background: #fff;
-    box-shadow: 2px 2px #bbb;
+    box-shadow: 2px 2px var(--shadow);
 }
 
 blockquote p:first-child {
@@ -208,7 +227,7 @@ iframe {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1em;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    box-shadow: 0 .5rem 1rem var(--shadow);
     max-width: 100%;
 }
 
@@ -249,7 +268,7 @@ ul#markdown-toc li::before {
     content: " ";
     position: absolute;
     width: 1px;
-    background-color: #222;
+    background-color: var(--stroke);
     top: 5px;
     bottom: -12px;
     left: -10px;
@@ -264,7 +283,7 @@ ul#markdown-toc li:only-child::before {
     content: " ";
     position: absolute;
     width: 1px;
-    background-color: #222;
+    background-color: var(--stroke);
     top: 5px;
     bottom: 7px;
     height: 7px;
@@ -277,7 +296,7 @@ ul#markdown-toc li::after {
     left: -10px;
     width: 10px;
     height: 1px;
-    background-color: #222;
+    background-color: var(--stroke);
     top: 12px;
 }
 
@@ -297,8 +316,8 @@ div.highlighter-rouge div.highlight::before {
     padding-top: 2.5px;
     padding-bottom: 2px;
     width: 100%;
-    border-bottom: 1px solid #888;
-    background: #ccc;
+    border-bottom: 1px solid var(--shadow-dark);
+    background: var(--shadow);
     color: var(--theme-light);
 }
 
@@ -340,11 +359,11 @@ div.highlighter-rouge.language-nasm div.highlight::before {
 }
 
 div.highlight {
-    border: 1px solid #222;
+    border: 1px solid var(--stroke);
     border-left-width: 3px;
     border-radius: 0;
     background: #fff;
-    box-shadow: 2px 2px #bbb;
+    box-shadow: 2px 2px var(--shadow);
     line-height: 1.2;
 }
 
@@ -556,250 +575,3 @@ pre.highlight {
 .highlight .w {
     color: #bbbbbb;
 }
-
-/* @media (prefers-color-scheme: dark) {
-    div.highlighter-rouge div.highlight {
-        background-color: #222;
-    }
-
-    .highlight {
-        color: #faf6e4;
-    }
-
-    .highlight .gl {
-        color: #dee5e7;
-        background-color: #4e5d62;
-    }
-
-    .highlight .gp {
-        color: #a8e1fe;
-        font-weight: bold;
-    }
-
-    .highlight .c,
-    .highlight .cd,
-    .highlight .cm,
-    .highlight .c1,
-    .highlight .cs {
-        color: #6c8b9f;
-        font-style: italic;
-    }
-
-    .highlight .cp {
-        color: #b2fd6d;
-        font-weight: bold;
-        font-style: italic;
-    }
-
-    .highlight .err {
-        color: #fefeec;
-        background-color: #cc0000;
-    }
-
-    .highlight .gr {
-        color: #cc0000;
-        font-weight: bold;
-        font-style: italic;
-    }
-
-    .highlight .k,
-    .highlight .kd,
-    .highlight .kv {
-        color: #f6dd62;
-        font-weight: bold;
-    }
-
-    .highlight .o,
-    .highlight .ow {
-        color: #4df4ff;
-        font-weight: bold;
-    }
-
-    .highlight .p,
-    .highlight .pi {
-        color: #4df4ff;
-    }
-
-    .highlight .gd {
-        color: #cc0000;
-    }
-
-    .highlight .gi {
-        color: #b2fd6d;
-    }
-
-    .highlight .ge {
-        font-style: italic;
-    }
-
-    .highlight .gs {
-        font-weight: bold;
-    }
-
-    .highlight .gt {
-        color: #dee5e7;
-        background-color: #4e5d62;
-    }
-
-    .highlight .kc {
-        color: #f696db;
-        font-weight: bold;
-    }
-
-    .highlight .kn {
-        color: #ffb000;
-        font-weight: bold;
-    }
-
-    .highlight .kp {
-        color: #ffb000;
-        font-weight: bold;
-    }
-
-    .highlight .kr {
-        color: #ffb000;
-        font-weight: bold;
-    }
-
-    .highlight .gh {
-        color: #ffb000;
-        font-weight: bold;
-    }
-
-    .highlight .gu {
-        color: #ffb000;
-        font-weight: bold;
-    }
-
-    .highlight .kt {
-        color: #b2fd6d;
-        font-weight: bold;
-    }
-
-    .highlight .no {
-        color: #b2fd6d;
-        font-weight: bold;
-    }
-
-    .highlight .nc {
-        color: #b2fd6d;
-        font-weight: bold;
-    }
-
-    .highlight .nd {
-        color: #b2fd6d;
-        font-weight: bold;
-    }
-
-    .highlight .nn {
-        color: #b2fd6d;
-        font-weight: bold;
-    }
-
-    .highlight .bp {
-        color: #b2fd6d;
-        font-weight: bold;
-    }
-
-    .highlight .ne {
-        color: #b2fd6d;
-        font-weight: bold;
-    }
-
-    .highlight .nl {
-        color: #ffb000;
-        font-weight: bold;
-    }
-
-    .highlight .nt {
-        color: #ffb000;
-        font-weight: bold;
-    }
-
-    .highlight .m,
-    .highlight .mf,
-    .highlight .mh,
-    .highlight .mi,
-    .highlight .il,
-    .highlight .mo,
-    .highlight .mb,
-    .highlight .mx {
-        color: #f696db;
-        font-weight: bold;
-    }
-
-    .highlight .ld {
-        color: #f696db;
-        font-weight: bold;
-    }
-
-    .highlight .ss {
-        color: #f696db;
-        font-weight: bold;
-    }
-
-    .highlight .s,
-    .highlight .sb,
-    .highlight .sd,
-    .highlight .s2,
-    .highlight .sh,
-    .highlight .sx,
-    .highlight .sr,
-    .highlight .s1 {
-        color: #fff0a6;
-        font-weight: bold;
-        background-color: #fff0a622;
-    }
-
-    .highlight .se {
-        color: #4df4ff;
-        font-weight: bold;
-    }
-
-    .highlight .sc {
-        color: #4df4ff;
-        font-weight: bold;
-    }
-
-    .highlight .si {
-        color: #4df4ff;
-        font-weight: bold;
-    }
-
-    .highlight .nb {
-        font-weight: bold;
-    }
-
-    .highlight .ni {
-        color: #999999;
-        font-weight: bold;
-    }
-
-    .highlight .w {
-        color: #BBBBBB;
-    }
-
-    .highlight .go {
-        color: #BBBBBB;
-    }
-
-    .highlight .nf {
-        color: #a8e1fe;
-    }
-
-    .highlight .py {
-        color: #a8e1fe;
-    }
-
-    .highlight .na {
-        color: #a8e1fe;
-    }
-
-    .highlight .nv,
-    .highlight .vc,
-    .highlight .vg,
-    .highlight .vi {
-        color: #a8e1fe;
-        font-weight: bold;
-    }
-} */
