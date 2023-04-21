@@ -61,7 +61,7 @@ defaults:
       nav_active: /documents
 
   - scope:
-      path: "_work_notes_2023"
+      path: "worknotes_2023"
     values:
       layout: doc
       # use_category_instead_of_name: true
@@ -76,10 +76,5 @@ defaults:
   #     layout: photo
   #     nav_active: /photos
 
-# Collections config
-collections:
-  work_notes_2023:
-    output: true
-    permalink: /:collection/:name
 
 use_image_as_brand: false
