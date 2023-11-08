@@ -1,49 +1,41 @@
+
+# ordered-list for entries; these are like the keys
 entries:
-- company: 'SK Hynix &mdash; Solidigm'
-  title: 'Firmware Development Engineer'
+- sk_2022_2023
+- ubc_research_2020_2022
+- ubc_ta_2018_2022
+- intel_2019
+- ea_bioware_2018
+- vital_mechanics_2017
+# - ubc_academic_2020_2021
+- ualberta_2014
+
+details:
+
+- id: sk_2022_2023
+  company: 'Solidigm'
+  title: 'Emulation Engineer'
   location: 'Vancouver BC'
   start: 'Sep 2022'
   end: 'present'
-- company: 'Intel Corporation'
-  thumbnail: "https://media-exp1.licdn.com/dms/image/C560BAQGpvWtEtj9oTQ/company-logo_100_100/0/1625151708870?e=1663804800&v=beta&t=lyNb7hI5JA4tgOmWCMGUYnyMSoKraEiuOy4BVYDNZCQ"
-  title: "FPGA Engineering (Co-op)"
-  location: "Vancouver BC"
-  start: "Jan 2019"
-  end: "Aug 2019"
   doings:
-  - Developed terminal tools for FPGA workflows.
-  - Configured TeamCity CI for internal software and reduced release delay from 1 day to 30 minutes.
-  - Scripted automated tasks to verify project directory integrity.
-  - Authored technical documentation for changes and new features.
-  description: "Developed terminal tools for FPGA workflows, configured TeamCity CI to reduce release delay, scripted automated tasks to verify project integrity, and authored technical documentation for changes and new features."
-- company: 'Electronic Arts &mdash; BioWare'
-  thumbnail: "https://media-exp1.licdn.com/dms/image/C560BAQGePyMiXbMmsg/company-logo_100_100/0/1636403662889?e=1663804800&v=beta&t=7nIsjUayaV_Dsh_Q9wV7mL2AGw7sR0ZEp1H2gJ1pwEI"
-  title: 'Associate Developer (Co-op)'
-  location: 'Edmonton AB'
-  start: 'May 2018'
-  end: 'Dec 2018'
-  doings:
-  - Improved Frostbite engine's UI/UX for Anthem game with C++
-  - Wrote Python upgrade scripts to modify and validate XML and game assets.
-  - Investigated and resolved UI, keyboard/mouse input, and Origin API bugs.
-  - Collaborated with UI/UX artists and scripters to develop entities, demonstrating strong teamwork and communication skills.
-  description: "Developed game engine UI/UX with C++, scripted Python to modify and validate game assets, solved UI bugs, and collaborated with artists, showcasing strong teamwork and communication."
-- company: 'Vital Mechanics Research Inc.'
-  thumbnail: 'https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_100_100/0/1568742934345?e=1663804800&v=beta&t=Rhzb-Ej_lTXBFZqUTWJOttOeCjQUJf39PK6-ZN7OwnM'
-  title: 'Software Developer (Co-op)'
-  location: 'Vancouver BC'
-  start: 'May 2017'
-  end: 'Aug 2017'
-  doings:
-  - Developed application UI and implemented UX designer feature requests with Qt, C++, JavaScript, and three.js.
-  - Programmed WebGL to deliver interactive 3D viewers.
-  description: "Developed application UI and implemented UX designer feature requests using Qt, C++, JavaScript, and three.js. Programmed WebGL for interactive 3D viewers."
-- company: "University of British Columbia"
-  thumbnail: "https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_100_100/0/1568742934345?e=1663804800&v=beta&t=Rhzb-Ej_lTXBFZqUTWJOttOeCjQUJf39PK6-ZN7OwnM"
+  - Executed pre-silicon traffic tests on a cycle-accurate hardware emulator with QEMU to verify RTL and firmware.
+  - Evaluated PCIe virtual IP and upgraded emulator tools, which enables a 30% increase in emulation speed.
+  - Developed USB-based debug proof-of-concept, leveraging ARM CoreSight IP for embedded debug and trace capabilities.
+  - Conducted debug of hardware and firmware on the emulator using Lauterbach CPU debugger, waveform analysis, and protocol analyzers.
+  - Streamlined build scripts, improved environment and tooling, and documented procedures, adding automations for efficiency.
+  description: 'Developed emulation infrastructure for SSD firmware development and controller designs. Developed USB debug proof of concept.'
+  thumbnail: 'https://media.licdn.com/dms/image/C560BAQHFq4J_Ht9wTQ/company-logo_100_100/0/1640817869133/solidigmtechnology_logo?e=1707350400&v=beta&t=fTF8B3tyB8KbYap17WAh0RCuUWN2WpF2ZgNmZscE12c'
+
+
+- id: ubc_research_2020_2022
+  company: "University of British Columbia"
+  thumbnail: "https://media.licdn.com/dms/image/C4D0BAQG_W55PABtPpQ/company-logo_100_100/0/1667933876022/bioware_logo?e=1707350400&v=beta&t=goGgctrmrWu6GXZ0n-dIMH36BGureLvANVBHjQ9Oz6M"
   title: "Research Assistant"
   location: "Vancouver BC"
   start: "Jul 2020"
-  end: "present"
+  end: "Oct 2022"
+  duration: "2 yrs 4 mos"
   doings:
   - Explored state-of-the-art speculative execution attacks and cache side channel attacks.
   - Identified key insights that aid in the design of performant architecture that is superior than prior defenses.
@@ -54,8 +46,11 @@ entries:
   - gem5 (C++, Python)
   - ARM assembly
   - LaTeX
-- company: "University of British Columbia"
-  thumbnail: "https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_100_100/0/1568742934345?e=1663804800&v=beta&t=Rhzb-Ej_lTXBFZqUTWJOttOeCjQUJf39PK6-ZN7OwnM"
+
+
+- id: ubc_ta_2018_2022
+  company: "University of British Columbia"
+  thumbnail: "https://media.licdn.com/dms/image/C4D0BAQG_W55PABtPpQ/company-logo_100_100/0/1667933876022/bioware_logo?e=1707350400&v=beta&t=goGgctrmrWu6GXZ0n-dIMH36BGureLvANVBHjQ9Oz6M"
   title: "Teaching Assistant"
   location: "Vancouver BC"
   start: "Jan 2018"
@@ -77,8 +72,53 @@ entries:
   - Visual Studio
   - Autodesk Inventor
   - MATLAB+SimuLink
-- company: "University of British Columbia"
-  thumbnail: "https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_100_100/0/1568742934345?e=1663804800&v=beta&t=Rhzb-Ej_lTXBFZqUTWJOttOeCjQUJf39PK6-ZN7OwnM"
+
+- id: intel_2019
+  company: 'Intel Corporation'
+  thumbnail: "https://media.licdn.com/dms/image/C560BAQGpvWtEtj9oTQ/company-logo_100_100/0/1630663244736/intel_corporation_logo?e=1707350400&v=beta&t=5nFKwckdpJD024UGYcr37TPsFt_b45i3bFFxRUEYFAY"
+  title: "FPGA Engineering (Co-op)"
+  location: "Vancouver BC"
+  start: "Jan 2019"
+  end: "Aug 2019"
+  doings:
+  - Developed terminal tools for FPGA workflows.
+  - Configured TeamCity CI for internal software and reduced release delay from 1 day to 30 minutes.
+  - Scripted automated tasks to verify project directory integrity.
+  - Authored technical documentation for changes and new features.
+  description: "Developed terminal tools for FPGA workflows, configured TeamCity CI to reduce release delay, scripted automated tasks to verify project integrity, and authored technical documentation for changes and new features."
+
+
+- id: ea_bioware_2018
+  company: 'Electronic Arts &mdash; BioWare'
+  thumbnail: "https://media.licdn.com/dms/image/C4D0BAQG_W55PABtPpQ/company-logo_100_100/0/1667933876022/bioware_logo?e=1707350400&v=beta&t=goGgctrmrWu6GXZ0n-dIMH36BGureLvANVBHjQ9Oz6M"
+  title: 'Associate Developer (Co-op)'
+  location: 'Edmonton AB'
+  start: 'May 2018'
+  end: 'Dec 2018'
+  doings:
+  - Improved Frostbite engine's UI/UX for Anthem game with C++
+  - Wrote Python upgrade scripts to modify and validate XML and game assets.
+  - Investigated and resolved UI, keyboard/mouse input, and Origin API bugs.
+  - Collaborated with UI/UX artists and scripters to develop entities, demonstrating strong teamwork and communication skills.
+  description: "Developed game engine UI/UX with C++, scripted Python to modify and validate game assets, solved UI bugs, and collaborated with artists, showcasing strong teamwork and communication."
+
+
+- id: vital_mechanics_2017
+  company: 'Vital Mechanics Research Inc.'
+  thumbnail: 'https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_100_100/0/1568742934345?e=1663804800&v=beta&t=Rhzb-Ej_lTXBFZqUTWJOttOeCjQUJf39PK6-ZN7OwnM'
+  title: 'Software Developer (Co-op)'
+  location: 'Vancouver BC'
+  start: 'May 2017'
+  end: 'Aug 2017'
+  doings:
+  - Developed application UI and implemented UX designer feature requests with Qt, C++, JavaScript, and three.js.
+  - Programmed WebGL to deliver interactive 3D viewers.
+  description: "Developed application UI and implemented UX designer feature requests using Qt, C++, JavaScript, and three.js. Programmed WebGL for interactive 3D viewers."
+
+
+- id: ubc_academic_2020_2021
+  company: "University of British Columbia"
+  thumbnail: "https://media.licdn.com/dms/image/C4D0BAQG_W55PABtPpQ/company-logo_100_100/0/1667933876022/bioware_logo?e=1707350400&v=beta&t=goGgctrmrWu6GXZ0n-dIMH36BGureLvANVBHjQ9Oz6M"
   title: "Academic Assistant"
   location: "Vancouver BC"
   start: "Sep 2020"
@@ -92,8 +132,9 @@ entries:
   - C
   - HTML+CSS
   
-- company: 'University of Alberta'
-  thumbnail: 'https://media-exp1.licdn.com/dms/image/C560BAQHmUPyHKc9oUA/company-logo_100_100/0/1657048619835?e=1669852800&v=beta&t=Jm_IK6anl3_gTh5JwHoHsXIkOHzkavACBECtG74cxFc'
+- id: ualberta_2014
+  company: 'University of Alberta'
+  thumbnail: 'https://media.licdn.com/dms/image/D560BAQHPwNDyV4VxbA/company-logo_100_100/0/1688497770011/university_of_alberta_logo?e=1707350400&v=beta&t=bKQkfa0zdG5WmMraat5E6dVXgPMGJam_fWd3pbKv-jk'
   title: 'High School Intern'
   location: 'Edmonton AB'
   start: 'Jun 2014'

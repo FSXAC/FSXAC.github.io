@@ -3,6 +3,15 @@
 # This data is used both by the projects page
 # as well as the resume page
 
+- name: 'FantôMiss'
+  dates:
+    start: 2022-04-01
+    end: 2022-12-01
+  description: 'A novel approach to mitigate Spectre cache side channel attacks by leveraging the cache indexing policy to prohibit access to speculative data.'
+  brief: 'Mitigating Spectre cache side channel attacks by leveraging cache indexing policy to prohibit access to speculative data.'
+  mot: research
+  worthy: True
+
 - name: 'Bit Flip Attacks on DNNs'
   dates:
     start: 2022-04-25
