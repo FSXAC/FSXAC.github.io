@@ -3,8 +3,8 @@
 entries:
 - sk_2022_2023
 - ubc_research_2020_2022
-- ubc_ta_2018_2022
 - intel_2019
+- ubc_ta_2018_2022
 - ea_bioware_2018
 - vital_mechanics_2017
 # - ubc_academic_2020_2021
@@ -19,7 +19,7 @@ details:
   start: 'Sep 2022'
   end: 'present'
   doings:
-  - Executed pre-silicon traffic tests on a cycle-accurate hardware emulator with QEMU to verify RTL and firmware.
+  - Executed pre-silicon traffic tests on Siemens Veloce&mdash;a cycle-accurate hardware emulator with QEMU to verify RTL and firmware.
   - Evaluated PCIe virtual IP and upgraded emulator tools, which enables a 30% increase in emulation speed.
   - Developed USB-based debug proof-of-concept, leveraging ARM CoreSight IP for embedded debug and trace capabilities.
   - Conducted debug of hardware and firmware on the emulator using Lauterbach CPU debugger, waveform analysis, and protocol analyzers.

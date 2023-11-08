@@ -6,7 +6,7 @@
   end: 2023
   affiliations:
   # description: "<em>Thesis</em>&colon; mitigation against Spectre and cache side channel attacks and CPU performance evaluation."
-  thesis: "Mitigation against Spectre and cache side channel attacks and CPU performance"
+  thesis: "Mitigation against Spectre and cache side channel attacks and CPU performance evaluation."
   # courses: Computer architecture, parallel and configurable computing
   # - Advanced Computer Architecture
   # - Parallel and Configurable Computing

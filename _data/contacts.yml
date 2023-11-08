@@ -21,13 +21,13 @@ default:
     link: "https://www.github.com/FSXAC"
     text: "FSXAC"
     icon: "fab fa-github"
-    show_resume: true
+    show_resume: false
     show_homepage: true
   - title: "LinkedIn"
     link: "https://www.linkedin.com/in/muchen-he-6a3716b3/"
     text: "FSXAC"
     icon: "fab fa-linkedin"
-    show_resume: true
+    show_resume: false
     show_homepage: true
   - title: "muchen.ca"
     link: "https://muchen.ca"
@@ -41,6 +41,17 @@ default:
     icon: "fab fa-instagram"
     show_resume: false
     show_homepage: true
+  - title: "Phone"
+    link: "tel:+17789529222"
+    text: "(778) 952-9222"
+    icon: "fas fa-mobile-alt"
+    show_resume: true
+  - title: "Address"
+    link: "https://maps.app.goo.gl/fYSAhFuNUjpQCkKU9"
+    text: "Vancouver BC"
+    icon: "fas fa-map-marker-alt"
+    # icon: "fas fa-globe-americas"
+    show_resume: true
 socials:
   - title: "Instagram"
     link: "https://www.instagram.com/muchen.he/"

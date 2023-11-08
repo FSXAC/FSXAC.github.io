@@ -7,179 +7,129 @@ show_footer: false
 ---
 
 <style>
-	/* Colors as variables */
+/* Colors as variables */
+:root {
+	--body-text-color: #333;
+	--body-text-color-light: #666;
+	--body-accent-color: #333;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
 	:root {
-		--body-text-color: #333;
-		--body-text-color-light: #666;
-		--body-accent-color: #333;
+		--body-text-color: #fff;
+		--body-text-color-light: #ccc;
+		--body-accent-color: #fff;
+	}
+}
+
+.resume-container {
+	font-size: 9pt;
+	/* line-height: 1.1; */
+}
+
+h1.name {
+	font-size: 2.0em;
+}
+
+h2 {
+	font-size: 1.5em;
+	color: var(--body-accent-color);
+	margin-bottom: 0.2em;
+	margin-top: 1em;
+	line-height: 1.0;
+}
+
+h3.title {
+	font-size: 1.2em;
+	/* margin-bottom: 0; */
+}
+
+.secondary {
+	color: var(--body-text-color-light);
+}
+
+/* Jobs */
+ul.work {
+	list-style: none;
+	padding: 0px;
+	list-style-position: inside;
+	padding-left: 9px;
+	text-indent: -9px;
+	margin-bottom: 0;
+}
+
+ul.work li:before {
+	content: '‣';
+	margin: 0;
+	margin-right: 5px;
+	padding-left: 0;
+}
+
+.compact {
+	line-height: 1.2;
+	/* margin: .75em 0; */
+}
+
+/* Media query for print */
+@media print {
+
+	/* html {
+		font-size: 10pt;
+	} */
+
+	.container {
+		max-width: 100%;
 	}
 
-	/* Dark mode */
-	@media (prefers-color-scheme: dark) {
-		:root {
-			--body-text-color: #fff;
-			--body-text-color-light: #ccc;
-			--body-accent-color: #fff;
-		}
+	header {
+		display: none;
+	}
+
+	/* Hide the h1 heading at the top */
+	h1.heading {
+		display: none;
+	}
+
+	/* Hide navigation */
+	.navbar-nav,
+	.navbar {
+		display: none;
+	}
+
+	/* Hide footer */
+	footer {
+		display: none;
 	}
 
 	.resume-container {
-		font-size: 9pt;
-		/* line-height: 1.1; */
+		background-color: #fff;
+		color: #333;
 	}
 
-	h1.name {
-		font-size: 2.0em;
+	/* Ensure that page break only occurs between blocks of content */
+	.resume-container .exp-entry {
+		page-break-inside: avoid;
 	}
 
-	h2 {
-		font-size: 1.5em;
-		color: var(--body-accent-color);
-		margin-bottom: 0.2em;
-		margin-top: 1em;
-		line-height: 1.0;
+	h2,
+	h3,
+	h4 {
+		page-break-after: avoid;
 	}
-
-	h3.title {
-		font-size: 1.2em;
-		/* margin-bottom: 0; */
-	}
-
-	/* div.info {
-		margin-left: 9px;
-		border-left: 1px solid #ccc;
-		padding-left: 16px;
-	} */
-
-	/* div.spaced-list p {
-		margin-top: 4px;
-	} */
-
-	/* div.spaced-list p:first-child {
-		margin-top: 0;
-	} */
-
-	.secondary {
-		color: var(--body-text-color-light);
-	}
-
-	/* p.job-location,
-	p.school-grades {
-		color: var(--body-text-color-light);
-		font-style: italic;
-	} */
-
-	/* .exp-entry {
-		margin-bottom: 1em;
-	} */
-
-	/* .info-meta {
-		position: relative;
-		top: -5px;
-	} */
-
-	/* .info-desc {
-		margin-top: .25em;
-	} */
-
-	/* Jobs */
-	ul.work {
-		list-style: none;
-		padding: 0px;
-		list-style-position: inside;
-		padding-left: 9px;
-		text-indent: -9px;
-		margin-bottom: 0;
-	}
-
-	ul.work li:before {
-		content: '‣';
-		margin: 0;
-		margin-right: 5px;
-		padding-left: 0;
-	}
-
-	.compact {
-		line-height: 1.2;
-		/* margin: .75em 0; */
-	}
-
-	/* li.work p {
-		display: inline;
-	} */
-
-	/* img.company-logo {
-		width: 1.3em;
-		height: 1.3em;
-		margin: 4px;
-		margin-left: 0;
-	} */
-
-	/* Media query for print */
-	@media print {
-
-		/* html {
-			font-size: 10pt;
-		} */
-
-		.container {
-			max-width: 100%;
-		}
-
-		header {
-			display: none;
-		}
-
-		/* Hide the h1 heading at the top */
-		h1.heading {
-			display: none;
-		}
-
-		/* Hide navigation */
-		.navbar-nav,
-		.navbar {
-			display: none;
-		}
-
-		/* Hide footer */
-		footer {
-			display: none;
-		}
-
-		.resume-container {
-			background-color: #fff;
-			color: #333;
-		}
-
-		/* Ensure that page break only occurs between blocks of content */
-		.resume-container .exp-entry {
-			page-break-inside: avoid;
-		}
-
-		h2,
-		h3,
-		h4 {
-			page-break-after: avoid;
-		}
-	}
+}
 </style>
 
 <!-- Components -->
 {% capture introduction %}
 <section style="border-bottom: 1px solid black;">
-	<h1 class="my-0 name">Muchen He</h1>
+	<h1 class="my-2 name">Muchen He</h1>
 	<p class="mb-1">
-		<!-- Graduate student at UBC working on computer architecture security
-	and hardware performance simulation,
-	with an interest in the full stack of computing
-	from CPU registers to human-computer-interactions. -->
-		<!-- Emulating ASIC designs at <a href="https://solidigm.com">Solidigm</a>. Computer
-		architecture graduate student at <a href="https://ubc.ca">UBC</a>. -->
-		<!-- Emulation Engineer at <a href="https://solidigm.com">Solidigm</a>, curious at heart, seeking opportunities to advance career in chip verification and architecture. -->
-		<!-- Currently an Emulation Engineer at <a href="https://solidigm.com">Solidigm</a>, where I take design HDL and firmware and validate (and sometimes debug) them. I am an avid learner and recently earned a Master's degree from <a href="https://ubc.ca">UBC</a>. I am always seeking opportunities to advance my career in chip verification and architecture. -->
-		<!-- Recent UBC graduate and Emulation Engineer at Solidigm, specializing in HDL design validation and firmware debugging. Keen on continual learning and teamwork to advance in hardware emulation. -->
-		Recent UBC Master's graduate with a background in computer architecture, and a keen interest in HDL design emulation and validation. My academic research experience complements my practical work, showcasing my commitment to continuous learning and problem-solving in the field.
-		
+		Accomplished early-career engineer and UBC Master's graduate with a
+		background in computer architecture, and a keen interest in HDL design
+		emulation and validation. My academic research experience complements
+		my practical work, showcasing my commitment to continuous learning and
+		problem-solving in the field.
 	</p>
 	<p class="contact my-2">
 		{% for item in site.data.contacts.default %}
@@ -198,10 +148,9 @@ show_footer: false
 {% capture skills %}
 <section>
 	<h2>Skills</h2>
-	<div class="spaced-list">
+	<div>
 		{% for skill_category in site.data.resume.skills %}
-		<p class="skill-category compact">
-			<!-- <span class="skill-category-label">{{ skill_category.category }}</span>: -->
+		<p class="compact mb-2">
 			{{ skill_category.skills | join: ', ' }}
 		</p>
 		{% endfor %}
@@ -213,9 +162,9 @@ show_footer: false
 {% capture awards %}
 <section>
 	<h2>Honors & Awards</h2>
-	<div class="spaced-list">
+	<div>
 		{% for award in site.data.resume.awards %}
-		<p class="compact">
+		<p class="compact mb-2">
 			{{ award.name }},
 			<span class="secondary">{{ award.date }}</span>
 		</p>
@@ -297,17 +246,12 @@ show_footer: false
 
 		<div class="info" style="border-top: 1px dotted black">
 			<div class="info-meta">
-				<!-- <h4 class="company">{{ job.company }}</h4> -->
 				<p class="mb-0">
 					{{ job.start }}-{{ job.end }},
 					<span class="job-location">{{ job.location }}</span>
 				</p>
 			</div>
 			<div class="info-desc secondary mb-3">
-				<!-- {% if job.description %}
-				<p>{{ job.description }}</p>
-				{% endif %} -->
-
 				<ul class="work">
 					{% for task in job.doings %}
 					<li class="work compact mb-1">{{ task }}</li>
@@ -327,9 +271,14 @@ show_footer: false
 		{% for project in site.data.projects %}
 		{% if project.worthy %}
 		<p class="compact mb-1">
-			{{ project.name }},
+			{{ project.name }}
 			<span class="secondary">
-				{{ project.dates.end | date: "%Y" }}{% if project.brief %}:&nbsp;{{ project.brief }}{% else if project.description %}:&nbsp;{{ project.description }}{% else %}.{% endif %}
+				{% if project.brief %}
+				&mdash;{{ project.brief }}
+				{% else if project.description %}
+				&mdash;{{ project.description }}
+				{% endif %}
+				({{ project.dates.end | date: "%Y" }})
 			</span>
 		</p>
 		{% endif %}
