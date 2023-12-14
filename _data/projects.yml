@@ -3,12 +3,19 @@
 # This data is used both by the projects page
 # as well as the resume page
 
+- name: 'Personal website'
+  dates:
+    start: 2016-01-01
+    end: ongoing
+  description: ..
+  brief: Hosting resume and tools like Routh-Hurwitz stablity calculator; built with Bootstrap and Jekyll; SEO; ~5k monthly visitors.
+
 - name: 'FantôMiss'
   dates:
     start: 2022-04-01
     end: 2022-12-01
   description: 'A novel approach to mitigate Spectre cache side channel attacks by leveraging the cache indexing policy to prohibit access to speculative data.'
-  brief: 'Mitigating Spectre cache side channel attacks by leveraging cache indexing policy to prohibit access to speculative data.'
+  brief: 'Mitigating Spectre cache side channel attacks by leveraging a novel cache indexing policy to prohibit access to speculative data.'
   mot: research
   worthy: True
 
@@ -45,7 +52,7 @@
   mot: course
   worthy: true
   description: "Gaze-tracking user study; team of three; animated avatar in video conferencing to study participation, engagement, focus, and attention"
-  brief: "User study of gaze-tracking in video conferencing."
+  brief: "User study of gaze-tracking + virtual avatars on Zoom."
   tech: [Processing]
   links:
     Video Presentation: "#"
@@ -60,7 +67,7 @@
   type: code, computer, research
   mot: course
   description: "A MATLAB script to automatically scan and convert drawn content to PowerPoint slides. The image processing pipeline makes use of Hough transform, morphological operations, and accurate colour correction. The automation outputs a fully-functional .pptx file."
-  brief: "Hand-drawn content to PowerPoint slides."
+  brief: "Automated hand-drawn content to PowerPoint slides."
   worthy: true,
   tech: [MATLAB, Python]
   links:
@@ -77,7 +84,7 @@
   type: code, computer, research
   mot: course
   description: Exploring parallel-computing techniques, including CUDA on Nvidia GPU, OpenCL, and Open MPI to accelerate Hough transform to detect lines in an image. Resulting in <strong>50 &times;</strong> speedup compared to serial/baseline implementation.
-  brief: "Hough transform acceleration with GPU."
+  brief: "GPU-accelerated Hough transform with OpenCL and CUDA."
   tech: [C, Open MPI, OpenCL, CUDA]
   worthy: true
   thumbnail: "https://raw.githubusercontent.com/FSXAC/CPEN512/master/hough/img/ipad512.jpg"
@@ -115,7 +122,7 @@
   ongoing: false
   type: code, electrical
   description: As machine learning is employed in more portable and remote devices, programmable digital circuits such as field-programmable-gate-arrays (FPGAs) are attractive given the speed and flexibility they provide. In this project, we explored integrating an object detection model (YOLOv2) onto a portable package with an FPGA, camera, and processor. To demonstrate its portability, the system is mounted to a drone, showcasing its potential deployability in remote or highly-portable situations. This project won the UBC APSC Capstone Faculty Award.
-  brief: "Object detection with flying FPGA."
+  brief: "FPGA real-time AI (object detection) onboard a multirotor drone."
   mot: course
   thumbnail: "https://hn0txg.bn.files.1drv.com/y4mxyIEmQI_QTnbEYu7niptt4zI8k4upo7H_MoZ0NOdARTUEFktVn2RF-PR2twgrMNji_ldvDfvLxk0e9XNPB4VHvk6Kch1JG3fK9UY040x9UTUbvK3WD4leyA_Z7mN2f0ZsyjiAOhboqBNh0NwcNXmKa-N4szJTsc5VOGQATFSFXmI-z2k48YErz3pcDjAx_WyaziLvbbWD1PnTnxWHmaclw?width=660&height=343&cropmode=none"
   worthy: true
@@ -134,7 +141,7 @@
   description: An animated visualizer that visualizes entire Facebook messages archive
     in chronological order. Where people are drawn as nodes and exchange of messages
     are drawn as as beams of light.
-  brief: "Novel animation visualization of chats."
+  brief: "Novel visualization and animation of Facebook chat history."
   mot: independent
   tech:
   - Processing 3
@@ -249,7 +256,7 @@
   type: code
   description: Web application with real-time database and authentication to keep track
     of sleep statistics, featuring beautifully animated front-end.
-  brief: "Sleep tracking web app."
+  brief: "Sleep tracking web app with real-time database."
   details: Created at Lumohacks 2017
   mot: hack
   contributors:

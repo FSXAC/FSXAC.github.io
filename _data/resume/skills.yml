@@ -8,15 +8,20 @@
   - OOP (C++, Java)
   - HDL (Verilog, SV)
   - FPGA / emulation
+  - USB
+  - PCIe
 
 - category: Development
   skills:
-  - Docker
-  - CI automation
+  - Linux
+  - CI,
+  - Automation
   - git
   - HTML+CSS
   - JavaScript
+  - Jekyll
   - Data visualization
+  - Docker
   # - R
   # - MATLAB
 # - category: Hardware
