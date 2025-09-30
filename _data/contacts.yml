@@ -47,7 +47,7 @@ default:
     icon: "fas fa-mobile-alt"
     show_resume: true
   - title: "Address"
-    link: "https://maps.app.goo.gl/fYSAhFuNUjpQCkKU9"
+    link: "https://www.google.com/maps/place/Vancouver,+BC/@49.2576178,-123.2890526,11z/data=!3m1!4b1!4m6!3m5!1s0x548673f143a94fb3:0xbb9196ea9b81f38b!8m2!3d49.2827291!4d-123.1207375!16zL20vMDgwaDI?entry=ttu&g_ep=EgoyMDI1MDkyOC4wIKXMDSoASAFQAw%3D%3D"
     text: "Vancouver BC"
     icon: "fas fa-map-marker-alt"
     # icon: "fas fa-globe-americas"

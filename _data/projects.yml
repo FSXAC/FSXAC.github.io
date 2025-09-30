@@ -10,6 +10,17 @@
   description: ..
   brief: Hosting resume and tools like Routh-Hurwitz stablity calculator; built with Bootstrap and Jekyll; SEO; ~5k monthly visitors.
 
+- name: ContactSheet
+  dates:
+    start: 2024-01-01
+    end: ongoing
+  description: A web-based film strip emulator and contact sheet generator.
+  brief: Web-based film strip emulator and contact sheet generator.
+  mot: independent
+  worthy: true
+  tech: [p5.js, JavaScript, HTML, CSS]
+  
+
 - name: 'FantôMiss'
   dates:
     start: 2022-04-01
