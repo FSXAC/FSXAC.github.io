@@ -1,17 +1,40 @@
-<div class="container mt-3">
-<a href="/" style="text-decoration: none; color: inherit;">
-	<h3 class="m-0 display">muchen&nbsp;牧辰</h3>
-</a>
-</div>
 {% if page.show_navigation %}
-<nav class="navbar no-print">
-	<div class="container px-1">
-		{% for link in site.data.navigation %}
-		<div class="navitem col-4 col-sm-2 mb-2 mx-auto px-2 {% if page.url == link.url or page.nav_active == link.url %}active{% endif %}">
-			<a class="btn {% if link.disabled %}disabled{% endif %}" href="{{ link.url }}" {% if current %}aria-current="page"{% endif %}>{{ link.text }}</a>
+<header class="editorial-header no-print">
+	<div class="container editorial-nav-container">
+		<div class="editorial-nav">
+			<a href="/" class="site-name">muchen&nbsp;牧辰</a>
+			<nav class="nav-links">
+				{% for link in site.data.navigation %}
+				{% unless link.disabled %}
+				<a href="{{ link.url }}" class="nav-link {% if page.url == link.url or page.nav_active == link.url %}active{% endif %}">{{ link.text }}</a>
+				{% endunless %}
+				{% endfor %}
+			</nav>
+			<button class="mobile-menu-toggle" aria-label="Menu">
+				<span class="menu-text">Menu</span>
+				<span class="menu-chevron">›</span>
+			</button>
 		</div>
-		{% endfor %}
 	</div>
-</nav>
-
+	<div class="mobile-menu">
+		<div class="container">
+			<div class="mobile-menu-header">
+				<button class="mobile-menu-close" aria-label="Close menu">×</button>
+			</div>
+			<nav class="mobile-nav-links">
+				{% for link in site.data.navigation %}
+				{% unless link.disabled %}
+				<a href="{{ link.url }}" class="mobile-nav-link {% if page.url == link.url or page.nav_active == link.url %}active{% endif %}">{{ link.text }}</a>
+				{% endunless %}
+				{% endfor %}
+			</nav>
+		</div>
+	</div>
+</header>
+{% else %}
+<div class="editorial-header-simple">
+	<div class="container editorial-nav-container">
+		<a href="/" class="site-name">muchen&nbsp;牧辰</a>
+	</div>
+</div>
 {% endif %}

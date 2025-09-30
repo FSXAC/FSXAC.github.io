@@ -60,5 +60,50 @@ MathJax = {
 src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
 {% endif %}
+
+<!-- Editorial Navigation JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuClose = document.querySelector('.mobile-menu-close');
+    const body = document.body;
+
+    if (menuToggle && mobileMenu && menuClose) {
+        // Open mobile menu
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.add('active');
+            mobileMenu.classList.add('active');
+            body.style.overflow = 'hidden';
+        });
+
+        // Close mobile menu
+        menuClose.addEventListener('click', function() {
+            menuToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            body.style.overflow = '';
+        });
+
+        // Close menu when clicking a link
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menuToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                body.style.overflow = '';
+            });
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                menuToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                body.style.overflow = '';
+            }
+        });
+    }
+});
+</script>
 </body>
 </html>
