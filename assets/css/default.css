@@ -37,6 +37,11 @@
 /* MARK: night mode */
 @media (prefers-color-scheme: dark) {
     :root {
+
+        --paper: #1a1a1a;
+        --ink: #e5e5e5;
+        --muted: #999;
+
         --primary: #917e40;
         --primary-light: #ebf4f0;
         --stroke: #ddd;
@@ -149,7 +154,7 @@ hr {
 .box {
     border: 0.5px solid var(--stroke);
     border-radius: 0;
-    background: #fff;
+    background: var(--paper);
     box-shadow: 2px 2px var(--shadow);
     padding: .15rem .6rem;
 }
@@ -211,12 +216,12 @@ hr {
     font-size: 1.75rem;
     font-weight: 400;
     text-decoration: none;
-    color: rgba(17, 17, 17, 0.9);
+    color: var(--ink);
     transition: color 0.2s ease;
 }
 
 .site-name:hover {
-    color: rgba(17, 17, 17, 1);
+    color: var(--ink);
     text-decoration: none;
 }
 
@@ -233,7 +238,7 @@ hr {
     font-size: 0.95rem;
     font-weight: 500;
     text-decoration: none;
-    color: rgba(17, 17, 17, 0.9);
+    color: var(--ink);
     position: relative;
     padding: 0.75rem 1rem 0.75rem 1.5rem;
     transition: color 0.2s ease;
@@ -244,7 +249,7 @@ hr {
 }
 
 .nav-link:hover {
-    color: rgba(17, 17, 17, 1);
+    color: var(--ink);
     text-decoration: none;
 }
 
@@ -276,7 +281,7 @@ hr {
     font-family: var(--f);
     font-size: 0.95rem;
     font-weight: 500;
-    color: rgba(17, 17, 17, 0.9);
+    color: var(--ink);
     align-items: center;
     gap: 0.25rem;
     padding: 0.5rem 0;
@@ -321,7 +326,7 @@ hr {
     font-family: var(--f);
     font-size: 1.5rem;
     font-weight: 400;
-    color: rgba(17, 17, 17, 0.9);
+    color: var(--ink);
     cursor: pointer;
     padding: 0.5rem;
 }
@@ -338,7 +343,7 @@ hr {
     font-size: 1.25rem;
     font-weight: 500;
     text-decoration: none;
-    color: rgba(17, 17, 17, 0.9);
+    color: var(--ink);
     padding: 1rem 0;
     min-height: 44px;
     display: flex;
@@ -347,7 +352,7 @@ hr {
 }
 
 .mobile-nav-link:hover {
-    color: rgba(17, 17, 17, 1);
+    color: var(--ink);
     text-decoration: none;
 }
 

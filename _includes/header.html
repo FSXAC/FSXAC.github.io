@@ -2,7 +2,7 @@
 <header class="editorial-header no-print">
 	<div class="container editorial-nav-container">
 		<div class="editorial-nav">
-			<a href="/" class="site-name">muchen&nbsp;牧辰</a>
+			<a href="/" class="site-name">{% include site_head.html %}</a>
 			<nav class="nav-links">
 				{% for link in site.data.navigation %}
 				{% unless link.disabled %}
