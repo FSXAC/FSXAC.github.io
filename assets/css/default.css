@@ -102,7 +102,7 @@ body {
 }
 
 .container {
-    max-width: 7.5in;
+    max-width: 8.0in;
 }
 
 h1,
@@ -476,9 +476,9 @@ table {
 }
 
 /* // Default selected style override */
-::selection {
+/* ::selection {
     background: var(--primary-light);
-}
+} */
 
 input.task-list-item-checkbox {
     margin-right: .4em;
