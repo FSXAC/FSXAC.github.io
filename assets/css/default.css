@@ -90,14 +90,23 @@ h3 {
 }
 
 a {
-    color: inherit;
+    color: var(--ink);
+    text-decoration-thickness: .08em;
+    text-underline-offset: .18em;
 }
 
 a:hover {
     color: var(--ink);
     background-color: var(--primary);
-    font-weight: bold;
 }
+
+hr {
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, .08);
+    margin: 3rem 0;
+}
+
+/* MARK: End */
 
 .box {
     border: 0.5px solid var(--stroke);
