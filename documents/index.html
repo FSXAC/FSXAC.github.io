@@ -6,44 +6,91 @@ nav_active: /documents
 permalink: /documents
 ---
 
-<style>	
-	#searchField {
-		/* border: none; */
-		/* background-color: transparent; */
-		/* border-bottom: 1px dotted var(--text-color); */
-		color: var(--text-color);
-		margin-top: .8em;
-		border: 1px solid black;
-	}
-	#searchFieldIcon { font-size: 1.25em; }
-	
-	.card { width: 100%; margin-bottom: 1em; border: none; background: transparent; }
-	.card-body { padding: 0; }
-	.card-body .list-group .list-group-item {
-		border: none;
-		padding: 0;
-		white-space: nowrap;
-		margin: 0;
-		background: transparent;
-		color: inherit;
-	}
-	.card-body .list-group .list-group-item .btn-entry {
-		margin-top: .1em;
-		margin-bottom: .1em;
-	}
+<style>
+/* Masonry layout for notes */
+.notes-grid {
+	column-count: 1;
+	column-gap: 1rem;
+	column-fill: balance;
+}
 
-	.card-gutter-sizer { width: 0; }
-	@media screen and (min-width: 992px) {
-		.card { width: 49%; }
-		.card-gutter-sizer { width: 2%; }
+.note-collection {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 1.5rem;
+	break-inside: avoid;
+	page-break-inside: avoid;
+	border: 0.5px solid var(--stroke);
+	/* border-left-width: 3px; */
+	border-radius: 0;
+	background: var(--paper);
+	/* box-shadow: 2px 2px var(--shadow); */
+	padding: 1rem;
+	vertical-align: top;
+}
+
+.note-collection h3 {
+	font-family: var(--hf);
+	font-size: 1.25rem;
+	margin: 0 0 0.25rem 0;
+	color: var(--ink);
+}
+
+.note-collection .muted {
+	color: var(--muted);
+	font-size: 0.9rem;
+	margin: 0 0 1rem 0;
+	font-style: italic;
+}
+
+.note-collection ul {
+	margin: 0;
+	padding-left: 1.25rem;
+}
+
+.note-collection li {
+	margin-bottom: 0.25rem;
+	line-height: 1.4;
+}
+
+/* Note: .note-collection link styles now handled by default.css */
+
+/* Flag styling */
+.flag-draft {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.flag-new {
+	position: relative;
+}
+
+.flag-new::after {
+	content: '●';
+	color: var(--primary);
+	font-size: 0.6rem;
+	vertical-align: middle;
+}
+
+.flag-other {
+	position: relative;
+}
+
+/* Responsive behavior */
+@media (min-width: 768px) {
+	.notes-grid {
+		column-count: 2;
 	}
-	@media screen and (min-width: 768px) and (max-width: 992px) {
-		.card { width: 98%; }
-		.card-gutter-sizer { width: 1%; }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+	.note-collection {
+		background: var(--paper);
+		border-color: var(--stroke);
 	}
-	
-	.flag-draft { text-decoration: line-through; }
-	</style>
+}
+</style>
 
 <h1>Course Notes & Docs</h1>
 
@@ -51,111 +98,51 @@ permalink: /documents
 I try to fill in as much as possible but there is a lot missing.
 Oh and I'm only human and there may be mistakes; so only use content from this page as reference material. You've been warned.
 </p>
+<p>
+The course numbers are based on the course codes at University of British Columbia.
+</p>
 
-<!-- <p>
-<span id="searchFieldIcon">&#128270;&nbsp;</span><input type="text" id="searchField" onkeyup="searchFunc()" placeholder="Search...">
-</p> -->
 
 {% for category in site.data.documents %}
 <section>
-<h2 class='mt-4'>{{ category.category }}</h2>
-<div class="card-grid">
-<div class="card-gutter-sizer"></div>
+<h2>{{ category.category }}</h2>
+<div class="notes-grid">
 {% assign courses = category.courses | sort: 'course_num' %}
 {% for course in courses %}
-	{% if course.entries %}
-	<div id="{{ course.course_num | replace: ' ', '-'}}" class="card p-0 col-6">
-	<div class="box me-3 mb-1 card-header">
-		<div style="float: left; border-right: 1px solid #bbb;" class="pe-2 me-2"><span style="font-size: 2em;">{{ course.emoji }}</span></div>
-		<p class="mb-0"><b>{{ course.course_name }}</b></p>
-		<small>{{ course.course_num | upcase }}</small>
-	</div>
-	<div class="card-body ps-1 mb-4">
-		<ul class="list-group list-group-flush">
+<div id="{{ course.course_num | replace: ' ', '-'}}" class="note-collection">
+	<h3>{{ course.course_num | upcase }}</h3>
+	<p class="muted">{{ course.course_name }}</p>
+
+	<div>
+		<ul>
 		{% for entry in course.entries %}
-		<li class="list-group-item text-truncate">
+		<li>
 			{% if entry.group %}
 				{{ entry.title }}
 				{% for enum_entry in entry.group %}
-					<a class="btn btn-xs btn-entry" href="{{ enum_entry.link }}">{{ enum_entry.enum }}</a>
+					<a class="btn" href="{{ enum_entry.link }}">{{ enum_entry.enum }}</a>
 				{% endfor %}
 			{% else %}
 				{% if entry.flag == 'draft' %}
-					<a href="{{ entry.link }}" class="flag-draft" title="{{ entry.flag }} - {{ entry.title }}" disabled>{{ entry.title }}</a>
-				{% elsif entry.flag == 'new' %}
-					<a href="{{ entry.link }}" class="flag-new" title="{{ entry.flag }} - {{ entry.title }}">{{ entry.title }}</a>
-				{% elsif entry.flag %}
-					<a href="{{ entry.link }}" class="flag-other" title="{{ entry.flag }} - {{ entry.title }}">{{ entry.title }}</a>
+					<a href="{{ entry.link }}" class="flag-draft" title="{{ entry.title }}">{{ entry.title }}</a>
 				{% else %}
 					<a href="{{ entry.link }}" title="{{ entry.title }}">{{ entry.title }}</a>
+					{% if entry.flag == 'new' %}
+						<span class="flag-new"></span>
+					{% elsif entry.flag %}
+						<span class="flag-other"></span>
+					{% endif %}
 				{% endif %}
 			{% endif %}
 		</li>
 		{% endfor %}
 		</ul>
 	</div>
-	</div>
-	{% endif %}
+</div>
+
 {% endfor %}
 </div>
 </section>
 {% endfor %}
 
 {% include jquery.html %}
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<script>
-$('.card-grid').masonry({
-    itemSelector: '.card',
-    gutter: '.card-gutter-sizer',
-    percentPosition: true
-});
-
-function searchFunc() {
-	let searchInput = document.getElementById('searchField');
-	let searchVal = searchInput.value.toLowerCase();
-
-	let allCards = document.getElementsByClassName('card');
-	for (let i = 0; i < allCards.length; i++) {
-
-		let cardHeader = allCards[i].getElementsByClassName('card-header')[0];
-
-		if (cardHeader.innerHTML.toLowerCase().includes(searchVal)) {
-			allCards[i].style.display = 'flex';
-		} else {
-			allCards[i].style.display = 'none';
-		}
-	}
-
-	// check if card grid is empty
-	let cardGrids = document.getElementsByClassName('card-grid');
-	for (let i = 0; i < cardGrids.length; i++) {
-		let cards = cardGrids[i].getElementsByClassName('card');
-		let display = false;
-		for (let j = 0; j < cards.length; j++) {
-			if (cards[j].style.display !== 'none') {
-				display = true;
-			}
-		}
-		if (display) {
-			cardGrids[i].previousElementSibling.style.display = 'block'
-			cardGrids[i].style.display = 'block';
-		} else {
-			cardGrids[i].previousElementSibling.style.display = 'none'
-			cardGrids[i].style.display = 'none';
-		}
-	}
-
-	// Reload masonry layout
-	$('.card-grid').masonry('layout');
-}
-
-$(document).ready(function() {
-	let regex = /\/documents\/?#\?(.+)/g;
-	let url = window.location.href;
-	let matches = regex.exec(url);
-	if (matches) {
-		document.getElementById('searchField').value = matches[1];
-		searchFunc()
-	}
-});
-</script>

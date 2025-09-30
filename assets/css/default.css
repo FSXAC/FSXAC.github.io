@@ -88,6 +88,29 @@
     .mobile-nav-link {
         border-bottom-color: rgba(229, 229, 229, 0.1);
     }
+    
+    /* Dark mode link adjustments */
+    a {
+        /* text-decoration-color: rgba(229, 229, 229, 0.3); */
+    }
+    
+    
+    .btn {
+        background: var(--paper);
+        color: var(--ink);
+        border-color: var(--stroke);
+    }
+    
+    .btn:hover {
+        background: var(--ink);
+        color: var(--paper);
+    }
+    
+    .btn-primary {
+        background: var(--ink);
+        color: var(--paper);
+        border-color: var(--ink);
+    }
 }
 
 
@@ -132,15 +155,18 @@ h3 {
     margin: 1.8rem 0 .5rem;
 }
 
+/* MARK: Link System - Editorial Minimalist */
 a {
     color: var(--ink);
-    text-decoration-thickness: .08em;
-    text-underline-offset: .18em;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    transition: all 0.15s ease;
 }
 
 a:hover {
     color: var(--ink);
-    /* background-color: var(--primary); */
+    text-decoration-color: var(--primary);
+    background-color: var(--primary);
 }
 
 hr {
@@ -159,30 +185,31 @@ hr {
     padding: .15rem .6rem;
 }
 
+/* Editorial buttons - clean, minimal */
 .btn {
-    border: 0.5px solid var(--stroke);
-    border-radius: 0;
-    padding: .15rem .6rem 0;
     display: inline-block;
+    /* padding: 0.5rem 1rem; */
+    padding: .15rem .6rem 0;
+    border: 1px solid var(--stroke);
+    border-radius: 0;
+    background: var(--paper);
+    color: var(--ink);
+    text-decoration: none;
+    font-family: var(--f);
+    font-size: 0.9rem;
+    font-weight: 500;
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
-    background: var(--bg);
-    box-shadow: 2px 2px var(--shadow);
-    transition: none;
-    color: var(--text);
-}
-
-.btn.disabled {
-    box-shadow: none;
-    opacity: 0.3;
-    cursor: not-allowed;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    letter-spacing: 0.01em;
 }
 
 .btn:hover {
     background: var(--primary);
-    box-shadow: 2px 2px var(--shadow-dark);
-    color: white;
+    color: var(--paper);
+    text-decoration: none;
 }
 
 /* MARK: Editorial Navigation */
@@ -220,11 +247,6 @@ hr {
     transition: color 0.2s ease;
 }
 
-.site-name:hover {
-    color: var(--ink);
-    text-decoration: none;
-}
-
 .nav-links {
     display: flex;
     align-items: center;
@@ -248,9 +270,10 @@ hr {
     align-items: center;
 }
 
-.nav-link:hover {
+.site-name:hover, .nav-link:hover {
     color: var(--ink);
     text-decoration: none;
+    background-color: inherit;
 }
 
 .nav-link:hover::before {
@@ -475,10 +498,6 @@ table {
     margin-right: auto;
 }
 
-/* // Default selected style override */
-/* ::selection {
-    background: var(--primary-light);
-} */
 
 input.task-list-item-checkbox {
     margin-right: .4em;
