@@ -1,0 +1,15 @@
+<div class="container no-print" style="margin-top: 100px; margin-bottom: 1em">
+    <footer>
+        <p><strong>Contact me @&nbsp;</strong>
+            {% for item in site.data.contacts.default %}
+            {% unless item.show_homepage %}
+            {% continue %}
+            {% endunless %}
+            <a style="min-width: 3em; margin-right: .5em" href="{{ item.link }}">{{ item.title }}</a>
+            {% endfor %}
+        </p>
+        <small>
+            <p class="mb-0"><span>Muchen He 2025</span></p>
+        </small>
+    </footer>
+</div>
