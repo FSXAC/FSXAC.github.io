@@ -1,18 +1,30 @@
 /* MARK: Vars */
 :root {
     /* Fonts */
-    --f: 'Merriweather', serif;
-    --hf: 'Gloock', serif;
+    --f: -apple-system,
+        BlinkMacSystemFont,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        system-ui,
+        "Segoe UI",
+        Roboto,
+        sans-serif;
+    --hf: "Instrument Serif", ui-serif, Georgia, " Times New Roman", serif;
 
     /* Colors */
-    --primary: #40916C;
+    --paper: #faf8f5;
+    --ink: #111;
+    --muted: #666;
+
+    --primary: #ffd300;
     --primary-light: #ebf4f0;
     --stroke: #222;
     --shadow: #bbb;
     --shadow-dark: #666;
-    --text: #222;
+    /* --text: #222; */
     --highlight: #F5C86F;
-    --bg: #fff;
+    /* --bg: #fff; */
 }
 
 /* MARK: print */
@@ -25,7 +37,7 @@
 /* MARK: night mode */
 @media (prefers-color-scheme: dark) {
     :root {
-        --primary: #40916C;
+        --primary: #917e40;
         --primary-light: #ebf4f0;
         --stroke: #ddd;
         --shadow: #666;
@@ -35,16 +47,15 @@
     }
 }
 
-html {
-    font-size: 14px;
-}
 
 body {
+    margin: 0;
+    font: 16px/1.65 var(--f);
     cursor: default;
-    color: var(--text);
-    background-color: var(--bg);
+    color: var(--ink);
+    background: var(--paper);
     overflow-x: hidden;
-    font-family: var(--f);
+    -webkit-font-smoothing: antialiased;
 }
 
 .container {
@@ -54,23 +65,28 @@ body {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
-    font-family: var(--hf);
-    margin-bottom: 0.5em;
+.display {
+    font-family: "Instrument Serif", ui-serif, Georgia, "Times New Roman", serif;
+    font-optical-sizing: auto;
+    letter-spacing: -0.01em;
+}
+h1 {
+    font-weight: 400;
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    line-height: .98;
+    margin: .2em 0 .4em;
+    text-wrap: balance;
 }
 
-h1,
-h2,
+h2 {
+    font-size: clamp(1.75rem, 3.5vw, 3rem);
+    line-height: 1.05;
+    margin: 2.2rem 0 .8rem;
+}
+
 h3 {
-    margin-top: 1.5em;
-}
-
-h4,
-h5,
-h6 {
-    margin-top: 1em;
+    font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+    margin: 1.8rem 0 .5rem;
 }
 
 a {
@@ -78,7 +94,9 @@ a {
 }
 
 a:hover {
-    color: var(--primary);
+    color: var(--ink);
+    background-color: var(--primary);
+    font-weight: bold;
 }
 
 .box {
@@ -221,7 +239,6 @@ blockquote p:last-child {
     margin-bottom: initial;
 }
 
-/* // Embedded iframes */
 iframe {
     display: block;
     margin-left: auto;
