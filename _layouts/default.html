@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="/assets/css/default.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&family=Gloock&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <header>
 {% include header.html %}
@@ -27,13 +27,7 @@
 {{ content }}
 </div>
 {% if page.show_footer %}
-<div class="container no-print" style="margin-top: 100px; margin-bottom: 1em">
-<footer style="border-top: 1px solid black; padding-top: 0.5em;">
-<small>
-<p class="mb-0"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a>&nbsp;<span>Muchen He 2023</span></p>
-</small>
-</footer>
-</div>
+{% include footer.html %}
 {% endif %}
 {% if page.use_poppers %}<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>{% endif %}
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
@@ -52,5 +46,50 @@ MathJax = {
 src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
 {% endif %}
+
+<!-- Editorial Navigation JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuClose = document.querySelector('.mobile-menu-close');
+    const body = document.body;
+
+    if (menuToggle && mobileMenu && menuClose) {
+        // Open mobile menu
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.add('active');
+            mobileMenu.classList.add('active');
+            body.style.overflow = 'hidden';
+        });
+
+        // Close mobile menu
+        menuClose.addEventListener('click', function() {
+            menuToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            body.style.overflow = '';
+        });
+
+        // Close menu when clicking a link
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menuToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                body.style.overflow = '';
+            });
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                menuToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                body.style.overflow = '';
+            }
+        });
+    }
+});
+</script>
 </body>
 </html>

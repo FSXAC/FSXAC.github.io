@@ -1,0 +1,148 @@
+---
+layout: default
+title: Documents
+description: A collection of course notes and more
+nav_active: /documents
+permalink: /documents
+---
+
+<style>
+/* Masonry layout for notes */
+.notes-grid {
+	column-count: 1;
+	column-gap: 1rem;
+	column-fill: balance;
+}
+
+.note-collection {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 1.5rem;
+	break-inside: avoid;
+	page-break-inside: avoid;
+	border: 0.5px solid var(--stroke);
+	/* border-left-width: 3px; */
+	border-radius: 0;
+	background: var(--paper);
+	/* box-shadow: 2px 2px var(--shadow); */
+	padding: 1rem;
+	vertical-align: top;
+}
+
+.note-collection h3 {
+	font-family: var(--hf);
+	font-size: 1.25rem;
+	margin: 0 0 0.25rem 0;
+	color: var(--ink);
+}
+
+.note-collection .muted {
+	color: var(--muted);
+	font-size: 0.9rem;
+	margin: 0 0 1rem 0;
+	font-style: italic;
+}
+
+.note-collection ul {
+	margin: 0;
+	padding-left: 1.25rem;
+}
+
+.note-collection li {
+	margin-bottom: 0.25rem;
+	line-height: 1.4;
+}
+
+/* Note: .note-collection link styles now handled by default.css */
+
+/* Flag styling */
+.flag-draft {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.flag-new {
+	position: relative;
+}
+
+.flag-new::after {
+	content: '●';
+	color: var(--primary);
+	font-size: 0.6rem;
+	vertical-align: middle;
+}
+
+.flag-other {
+	position: relative;
+}
+
+/* Responsive behavior */
+@media (min-width: 768px) {
+	.notes-grid {
+		column-count: 2;
+	}
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+	.note-collection {
+		background: var(--paper);
+		border-color: var(--stroke);
+	}
+}
+</style>
+
+<h1>Course Notes & Docs</h1>
+
+<p>This page contains my notes/documents/reports for the courses I've taken.
+I try to fill in as much as possible but there is a lot missing.
+Oh and I'm only human and there may be mistakes; so only use content from this page as reference material. You've been warned.
+</p>
+<p>
+The course numbers are based on the course codes at University of British Columbia.
+</p>
+
+
+{% for category in site.data.documents %}
+<section>
+<h2>{{ category.category }}</h2>
+<div class="notes-grid">
+{% assign courses = category.courses | sort: 'course_num' %}
+{% for course in courses %}
+<div id="{{ course.course_num | replace: ' ', '-'}}" class="note-collection">
+	<h3>{{ course.course_num | upcase }}</h3>
+	<p class="muted">{{ course.course_name }}</p>
+
+	<div>
+		<ul>
+		{% for entry in course.entries %}
+		<li>
+			{% if entry.group %}
+				{{ entry.title }}
+				{% for enum_entry in entry.group %}
+					<a class="btn" href="{{ enum_entry.link }}">{{ enum_entry.enum }}</a>
+				{% endfor %}
+			{% else %}
+				{% if entry.flag == 'draft' %}
+					<a href="{{ entry.link }}" class="flag-draft" title="{{ entry.title }}">{{ entry.title }}</a>
+				{% else %}
+					<a href="{{ entry.link }}" title="{{ entry.title }}">{{ entry.title }}</a>
+					{% if entry.flag == 'new' %}
+						<span class="flag-new"></span>
+					{% elsif entry.flag %}
+						<span class="flag-other"></span>
+					{% endif %}
+				{% endif %}
+			{% endif %}
+		</li>
+		{% endfor %}
+		</ul>
+	</div>
+</div>
+
+{% endfor %}
+</div>
+</section>
+{% endfor %}
+
+{% include jquery.html %}

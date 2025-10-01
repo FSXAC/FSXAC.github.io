@@ -118,9 +118,9 @@
         link: '/documents/CPEN311/ps4.pdf'
       - enum: 5
         link: '/documents/CPEN311/ps5.pdf'
-  - course_num: 'CPEN 211'
-    course_name: 'Microcomputers'
-    emoji: 📱
+  # - course_num: 'CPEN 211'
+  #   course_name: 'Microcomputers'
+  #   emoji: 📱
   - course_num: 'CPSC 259'
     course_name: 'Data Structures & Algorithms'
     emoji: 🔄
@@ -221,72 +221,72 @@
       link: "/documents/ELEC402/t1"
     - title: "Tutorial 2: RTL Compiler Synthesis"
       link: "/documents/ELEC402/t2"
-    # - title: 'MOS Part 1'
-    #   link: '/documents/ELEC402/mos-1.pdf'
-    # - title: 'MOS Part 2'
-    #   link: '/documents/ELEC402/mos-2.pdf'
-    # - title: 'MOS Capacitances'
-    #   link: '/documents/ELEC402/mos-cap.pdf'
-    # - title: 'Noise Margin'
-    #   link: '/documents/ELEC402/noise-margin.pdf'
-    #   flag: draft
-    # - title: 'Resistive-Load Inverter'
-    #   link: '/documents/ELEC402/resistive-inverter.pdf'
-    #   flag: draft
-    # - title: 'CMOS Inverter'
-    #   link: '/documents/ELEC402/cmos-inverter.pdf'
-    #   flag: draft
-    # - title: 'Delay'
-    #   link: '/documents/ELEC402/delay.pdf'
-    #   flag: draft
-    # - title: 'Static CMOS Combinational Logic'
-    #   link: '/documents/ELEC402/static-cmos-comb-logic.pdf'
-    # - title: 'Project 1: FSM Report'
-    #   link: '/documents/ELEC402/proj1'
-    # - title: 'Project 2: FSM Synthesis Report'
-    #   link: '/documents/ELEC402/proj2'
-    # - title: 'Project 3: MOSFET Assignment'
-    #   link: '/documents/ELEC402/proj3'
-    # - title: 'Project 4: CMOS Assignment'
-    #   link: '/documents/ELEC402/proj4'
+    - title: 'MOS Part 1'
+      link: '/documents/ELEC402/mos-1.pdf'
+    - title: 'MOS Part 2'
+      link: '/documents/ELEC402/mos-2.pdf'
+    - title: 'MOS Capacitances'
+      link: '/documents/ELEC402/mos-cap.pdf'
+    - title: 'Noise Margin'
+      link: '/documents/ELEC402/noise-margin.pdf'
+      flag: draft
+    - title: 'Resistive-Load Inverter'
+      link: '/documents/ELEC402/resistive-inverter.pdf'
+      flag: draft
+    - title: 'CMOS Inverter'
+      link: '/documents/ELEC402/cmos-inverter.pdf'
+      flag: draft
+    - title: 'Delay'
+      link: '/documents/ELEC402/delay.pdf'
+      flag: draft
+    - title: 'Static CMOS Combinational Logic'
+      link: '/documents/ELEC402/static-cmos-comb-logic.pdf'
+    - title: 'Project 1: FSM Report'
+      link: '/documents/ELEC402/proj1'
+    - title: 'Project 2: FSM Synthesis Report'
+      link: '/documents/ELEC402/proj2'
+    - title: 'Project 3: MOSFET Assignment'
+      link: '/documents/ELEC402/proj3'
+    - title: 'Project 4: CMOS Assignment'
+      link: '/documents/ELEC402/proj4'
   - course_num: 'ELEC 491'
     course_name: 'Capstone Project for EE'
     emoji: 💼
     date: 2019-09-16
     # TODO: replace this with project deliverables
     disabled: true
-    # entries:
-    # - title: 'Intro to Capstone Project'
-    #   link: '/documents/ELEC491/2019-09-04-Introduction'
-    # - title: 'NDA and IP'
-    #   link: '/documents/ELEC491/2019-09-06-NDA'
-    # - title: 'Professionalism'
-    #   link: '/documents/ELEC491/2019-09-06-professionalism'
-  - course_num: 'ELEC 311'
-    course_name: 'Electromagnetic Fields and Waves'
-    emoji: 📡
-  - course_num: 'ELEC 315'
-    course_name: 'Materials and Devices'
-    emoji: 🔋
+    entries:
+    - title: 'Intro to Capstone Project'
+      link: '/documents/ELEC491/2019-09-04-Introduction'
+    - title: 'NDA and IP'
+      link: '/documents/ELEC491/2019-09-06-NDA'
+    - title: 'Professionalism'
+      link: '/documents/ELEC491/2019-09-06-professionalism'
+  # - course_num: 'ELEC 311'
+  #   course_name: 'Electromagnetic Fields and Waves'
+  #   emoji: 📡
+  # - course_num: 'ELEC 315'
+  #   course_name: 'Materials and Devices'
+  #   emoji: 🔋
   - course_num: 'ELEC 391'
     course_name: 'Electrical Project Studio II'
     emoji: 🛠
     date: 2018-04-07
     entries:
-    # - title: 'Getting Started'
-    #   link: 'https://lcall3.github.io/lecture2/'
-    # - title: '3D Printing'
-    #   link: 'https://lcall3.github.io/lecture/3D-printing/'
-    # - title: 'Mechanical Design'
-    #   link: 'https://lcall3.github.io/lecture/Mechanical-Design/'
-    # - title: 'Milestone 1 Feedback'
-    #   link: 'https://lcall3.github.io/Demo1Feedback/'
-    # - title: 'Gears and Speed Reduction'
-    #   link: 'https://lcall3.github.io/Gears/'
-    # - title: 'Engineering Reports v Slide Deck'
-    #   link: 'https://lcall3.github.io/report-vs-slides/'
-    # - title: 'Milestone 2 Feedback'
-    #   link: 'https://lcall3.github.io/Demo2Feedback/'
+    - title: 'Getting Started'
+      link: 'https://lcall3.github.io/lecture2/'
+    - title: '3D Printing'
+      link: 'https://lcall3.github.io/lecture/3D-printing/'
+    - title: 'Mechanical Design'
+      link: 'https://lcall3.github.io/lecture/Mechanical-Design/'
+    - title: 'Milestone 1 Feedback'
+      link: 'https://lcall3.github.io/Demo1Feedback/'
+    - title: 'Gears and Speed Reduction'
+      link: 'https://lcall3.github.io/Gears/'
+    - title: 'Engineering Reports v Slide Deck'
+      link: 'https://lcall3.github.io/report-vs-slides/'
+    - title: 'Milestone 2 Feedback'
+      link: 'https://lcall3.github.io/Demo2Feedback/'
     - title: 'Milestone 2 Report'
       link: '/documents/ELEC391/demo2.pdf'
     - title: 'Milestone 2 Mechanical Drawings'
@@ -420,18 +420,18 @@
       link: '/documents/ELEC341/ELEC341-Project1.pdf'
     - title: 'Design Project Part 2 Report'
       link: '/documents/ELEC341/ELEC341-Project2.pdf'
-  - course_num: 'ELEC 342'
-    course_name: 'Electro-Mechanical Energy Conversion'
-    emoji: 🚖
-  - course_num: 'ELEC 201'
-    course_name: 'Circuit Analysis I'
-    emoji: 💡
-  - course_num: 'ELEC 202'
-    course_name: 'Circuit Analysis II'
-    emoji: ⚡️
-  - course_num: 'ELEC 211'
-    course_name: 'Engineering Electromagnetics'
-    emoji: 🧲
+  # - course_num: 'ELEC 342'
+  #   course_name: 'Electro-Mechanical Energy Conversion'
+  #   emoji: 🚖
+  # - course_num: 'ELEC 201'
+  #   course_name: 'Circuit Analysis I'
+  #   emoji: 💡
+  # - course_num: 'ELEC 202'
+  #   course_name: 'Circuit Analysis II'
+  #   emoji: ⚡️
+  # - course_num: 'ELEC 211'
+  #   course_name: 'Engineering Electromagnetics'
+  #   emoji: 🧲
   - course_num: 'ELEC 291'
     course_name: 'Electrical Design Studio I'
     emoji: 🔧
@@ -527,24 +527,24 @@
       link: '/documents/MECH431/Lesson 18'
     - title: 'Replacement Analysis'
       link: '/documents/MECH431/Lesson 20'
-    # - title: 'Conference'
-    #   group:
-    #   - enum: 1
-    #     link: '/documents/MECH431/ Conference 1'
-    #   - enum: 3
-    #     link: '/documents/MECH431/ Conference 3'
-    #   - enum: 4
-    #     link: '/documents/MECH431/ Conference 4'
-    #   - enum: 5
-    #     link: '/documents/MECH431/ Conference 5'
-    #   - enum: 6
-    #     link: '/documents/MECH431/ Conference 6'
-    #   - enum: 7
-    #     link: '/documents/MECH431/ Conference 7'
-    #   - enum: 8
-    #     link: '/documents/MECH431/ Conference 8'
-    #   - enum: 9
-    #     link: '/documents/MECH431/ Conference 9'
+    - title: 'Conference (Office Hours)'
+      group:
+      - enum: 1
+        link: '/documents/MECH431/Conference 1'
+      - enum: 3
+        link: '/documents/MECH431/Conference 3'
+      - enum: 4
+        link: '/documents/MECH431/Conference 4'
+      - enum: 5
+        link: '/documents/MECH431/Conference 5'
+      - enum: 6
+        link: '/documents/MECH431/Conference 6'
+      - enum: 7
+        link: '/documents/MECH431/Conference 7'
+      - enum: 8
+        link: '/documents/MECH431/Conference 8'
+      - enum: 9
+        link: '/documents/MECH431/Conference 9'
     - title: 'Practice'
       group:
       - enum: 2

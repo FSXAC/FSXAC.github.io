@@ -1,6 +1,7 @@
 
 # ordered-list for entries; these are like the keys
 entries:
+- intel_2023
 - sk_2022_2023
 - ubc_research_2020_2022
 - intel_2019
@@ -12,12 +13,26 @@ entries:
 
 details:
 
+- id: intel_2023
+  company: Intel Corporation
+  title: 'Emulation Engineer'
+  location: 'Vancouver BC'
+  start: 'Dec 2023'
+  end: 'Present'
+  doings:
+  - Emulation model build master; releases and release notes
+  - Design and verification CI/CD pipelines with GitHub Actions
+  - Top-level integration of IPs and subsystems
+  - Debug of hardware and firmware on the emulator
+  - Communicated with model customers, lead development of new features and transactor APIs
+
 - id: sk_2022_2023
   company: 'Solidigm'
   title: 'Emulation Engineer'
   location: 'Vancouver BC'
   start: 'Sep 2022'
-  end: 'present'
+  end: 'Dec 2023'
+  duration: '1 yr 4 mos'
   doings:
   - Executed pre-silicon traffic tests on Siemens Veloce&mdash;a cycle-accurate hardware emulator with QEMU to verify RTL and firmware.
   - Evaluated PCIe virtual IP and upgraded emulator tools, which enables a 30% increase in emulation speed.
@@ -104,7 +119,7 @@ details:
 
 
 - id: vital_mechanics_2017
-  company: 'Vital Mechanics Research Inc.'
+  company: 'VitalMechanics'
   thumbnail: 'https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_100_100/0/1568742934345?e=1663804800&v=beta&t=Rhzb-Ej_lTXBFZqUTWJOttOeCjQUJf39PK6-ZN7OwnM'
   title: 'Software Developer (Co-op)'
   location: 'Vancouver BC'

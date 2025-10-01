@@ -122,7 +122,7 @@ ul.work li:before {
 
 <!-- Components -->
 {% capture introduction %}
-<section style="border-bottom: 1px solid black;">
+<section style="border-bottom: 1px solid var(--ink);">
 	<h1 class="my-2 name">Muchen He</h1>
 	<p class="mb-1 compact">
 		Accomplished early-career engineer and UBC Master's graduate with a
@@ -143,8 +143,6 @@ ul.work li:before {
 	</p>
 </section>
 {% endcapture %}
-
-
 {% capture skills %}
 <section>
 	<h2>Skills</h2>
@@ -157,8 +155,6 @@ ul.work li:before {
 	</div>
 </section>
 {% endcapture %}
-
-
 {% capture awards %}
 <section>
 	<h2>Honors & Awards</h2>
@@ -186,19 +182,11 @@ ul.work li:before {
 	</div>
 </section>
 {% endcapture %}
-
-{% capture extracurricular %}
-<section>
-	<h2>Extracurricular Interests</h2>
-	<p class="secondary compact">{{ site.data.resume.likes | join: ', ' }}</p>
-</section>
-{% endcapture %}
-
 {% capture education %}
 <section>
 	<h2>Education</h2>
 	<div>
-		{% for education in site.data.resume.education | reverse %}
+		{% for education in site.data.resume.education %}
 		<div>
 			<strong class="title my-1">
 				<span class="school float-end">{{ education.school }}</span>
@@ -207,13 +195,7 @@ ul.work li:before {
 				</span>
 			</strong>
 			<div class="info">
-				<!-- <div class="info-meta">
-					<p class="mb-0">
-						{{ education.start }}-{{ education.end }}
-					</p>
-				</div> -->
 				<div class="info-desc mb-3">
-					<!-- <p class="secondary">{{ education.courses | join: ', ' }}</p> -->
 					{% if education.description %}
 					<p class="compact">{{ education.description }}</p>
 					{% endif %}
@@ -244,7 +226,7 @@ ul.work li:before {
 			<span class="position">{{ job.title }}</span>
 		</strong>
 
-		<div class="info" style="border-top: 1px dotted black">
+		<div class="info" style="border-top: 1px dotted var(--ink)">
 			<div class="info-meta">
 				<p class="mb-0">
 					{{ job.start }}-{{ job.end }},
@@ -298,7 +280,6 @@ ul.work li:before {
 			{{ skills }}
 			{{ awards }}
 			{{ certifications }}
-			<!-- {{ extracurricular }} -->
 		</div>
 
 		<div class="col-sm-9">

@@ -1,10 +1,11 @@
 - text: 'Home'
   url: /
   desc: You are here.
+  disabled: true
 - text: 'Blog'
   url: /blog
   desc: Just writing my thoughts down occasionally.
-  # disabled: false
+  disabled: true
 - text: CV
   url: /cv
   desc: Education and work experience
