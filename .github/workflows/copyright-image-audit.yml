@@ -1,0 +1,45 @@
+name: Copyright Image Audit
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+    branches:
+      - master
+      - main
+
+jobs:
+  audit-images:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Run copyright image scanner
+      id: scan
+      run: |
+        cd scripts
+        python3 copyright_image_scanner.py --ci-mode
+      continue-on-error: true
+    
+    - name: Check scan results
+      if: steps.scan.outcome == 'failure'
+      run: |
+        echo "⚠️ External image references detected!"
+        echo "Please review the scan results above and either:"
+        echo "1. Add trusted domains to scripts/safe_image_urls.txt, or"
+        echo "2. Replace external images with self-hosted alternatives"
+        exit 1
+    
+    - name: Success
+      if: steps.scan.outcome == 'success'
+      run: |
+        echo "✓ No potentially copyrighted external images found!"

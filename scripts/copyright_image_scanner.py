@@ -7,7 +7,10 @@ It identifies image links pointing to external sites (non-relative URLs) and off
 replace them with a local placeholder image.
 
 Usage:
-    python3 copyright_image_scanner.py
+    python3 copyright_image_scanner.py [--ci-mode]
+
+Options:
+    --ci-mode    Run in CI mode (non-interactive, exits with error if issues found)
 
 Interactive Commands:
     r    Replace all external image references with the placeholder
@@ -388,28 +391,39 @@ def perform_replacements(results: Dict[Path, List[ImageReference]]):
 
 def main():
     """Main entry point for the script."""
+    ci_mode = '--ci-mode' in sys.argv
+    
     print()
     print("Copyright Image Scanner")
     print("=" * 80)
     print()
     
+    if ci_mode:
+        print("Running in CI mode (non-interactive)")
+        print()
+    
     # Verify we're in the correct directory
     if not (REPO_ROOT / '.git').exists():
-        print("⚠ Warning: Not in a git repository root!")
-        print()
-        while True:
-            response = input("Continue anyway? (y/n): ").strip().lower()
-            if response == 'y':
-                break
-            elif response == 'n' or response == 'q':
-                print("Aborted.")
-                return
-            else:
-                print("Please enter 'y' to continue or 'n' to quit.")
+        if ci_mode:
+            print("⚠ Warning: Not in a git repository root!")
+            print("Continuing anyway in CI mode...")
+            print()
+        else:
+            print("⚠ Warning: Not in a git repository root!")
+            print()
+            while True:
+                response = input("Continue anyway? (y/n): ").strip().lower()
+                if response == 'y':
+                    break
+                elif response == 'n' or response == 'q':
+                    print("Aborted.")
+                    return
+                else:
+                    print("Please enter 'y' to continue or 'n' to quit.")
     
     # Verify placeholder image exists
     placeholder_path = REPO_ROOT / PLACEHOLDER_IMAGE
-    if not placeholder_path.exists():
+    if not placeholder_path.exists() and not ci_mode:
         print(f"⚠ Warning: Placeholder image not found at {placeholder_path}")
         print("Continuing scan, but replacement will use this path anyway.")
         print()
@@ -420,7 +434,32 @@ def main():
     # Print report
     print_report(results)
     
-    # Offer replacement
+    # CI mode: exit with error if issues found
+    if ci_mode:
+        if results:
+            total_refs = sum(len(refs) for refs in results.values())
+            print()
+            print("=" * 80)
+            print("CI CHECK FAILED")
+            print("=" * 80)
+            print()
+            print(f"Found {total_refs} external image reference(s) in {len(results)} file(s).")
+            print()
+            print("To resolve:")
+            print("  1. Add trusted domains/URLs to scripts/safe_image_urls.txt, or")
+            print("  2. Replace external images with self-hosted alternatives")
+            print()
+            sys.exit(1)
+        else:
+            print()
+            print("=" * 80)
+            print("✓ CI CHECK PASSED")
+            print("=" * 80)
+            print()
+            print("No potentially copyrighted external images found.")
+            sys.exit(0)
+    
+    # Interactive mode: offer replacement
     if results:
         print()
         print("Options:")
