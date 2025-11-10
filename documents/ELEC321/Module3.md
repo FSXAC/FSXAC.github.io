@@ -134,7 +134,7 @@ Properties of *CDF*:
 
 > **Example**:
 >
-> <img src="https://i.imgur.com/OBh4Jd9.png" height="300px">
+> <img src="/assets/img/placement-e.jpeg" height="300px">
 >
 > The random variable $$x$$ is quantified to probability as shown in $$f(x)$$. Also notice that the properties for *CDF* applies at the sum of the probability of *PMF* $$=1$$
 

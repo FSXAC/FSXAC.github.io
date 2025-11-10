@@ -30,7 +30,7 @@ While simplfied steps to install these tools are located on their perspective we
 
 ## Installing Tools Necessary to Install the Rest
 
-![I Used the Stones to  Destroy the Stones, Know Your Meme](https://i.kym-cdn.com/photos/images/facebook/001/534/991/18e.jpg)
+![I Used the Stones to  Destroy the Stones, Know Your Meme](/assets/img/placement-e.jpeg)
 
 Before we dive into installing the actual programs used in *Qflow*, we must install a few things that we need to download, configure, and build the programs.
 

@@ -103,7 +103,7 @@ With all that in mind, we may begin the algorithm:
 
 > **Example**: half normal distribution
 >
-> <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Half_normal_pdf.svg" height="240px">
+> <img src="/assets/img/placement-e.jpeg" height="240px">
 >
 > The half normal distribution function has the density $$f_X=\frac{2}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}$$. The inverse CDF is very difficult to find, so we use the A-R method.
 >

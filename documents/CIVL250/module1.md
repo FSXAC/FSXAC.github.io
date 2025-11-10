@@ -107,7 +107,7 @@ Sometimes we express how impactful a GHG is by quantifying them in terms of $$\c
 
 **Carbon footprint** describes the contribution of global warming of human activity. It is the land and sea required to sequester the equivalent CO<sub>2</sub> by human activity in *Global hectares*. The carbon footprint is a slice of the total ecological footprint.
 
-![img](https://www.footprintnetwork.org/content/uploads/2016/10/climate-carbonfootprint.png)[^cf]
+![img](/assets/img/placement-e.jpeg)[^cf]
 
 
 
