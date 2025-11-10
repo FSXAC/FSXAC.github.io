@@ -235,7 +235,7 @@ $$
 
 Consider the following plot of two random variables $$X$$ and $$Y$$. Where the red circles represent $$\mathbb E(Y\vert X=x)$$ and the red whiskers represents the variance $$\text{Var}(Y\vert X=x)$$. Then the blue circle is the overall mean $$\mathbb E(Y)$$ and the blue whisker is the overall variance $$\text{Var}(Y)$$.
 
-<img src="https://i.imgur.com/qGOrRWA.jpg" height="300px">
+<img src="/assets/img/placement-e.jpeg" height="300px">
 
 In this case, the **Total Variance** is given by
 

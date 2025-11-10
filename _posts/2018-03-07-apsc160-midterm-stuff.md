@@ -22,7 +22,7 @@ Here are some of the statistics I've found with a sample size of 100 students.
 
   > Interestingly, [Central Bureau of Statistics of Netherlands](https://www.cbs.nl/en-gb/news/2013/38/more-than-6-in-10-people-wear-glasses-or-contact-lenses) reports that 61% of population wears glasses or contacts, and 41% of population with age between 20 and 30 wears glasses. The number is around 32% for age between 16 and 20.
   >
-  > <img src="https://www.cbs.nl/-/media/imported/images/2013/35/e3849g1.gif?la=en-gb&hash=96B3FBD7D835F9617C1060FA64835C3D2C9FA332" style="text-align:center">
+  > <img src="/assets/img/placement-e.jpeg" style="text-align:center">
 
 - 11% wrote the exam with pen
 

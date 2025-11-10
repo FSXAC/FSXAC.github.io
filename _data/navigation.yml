@@ -27,6 +27,10 @@
   url: /photos
   desc: A weekly journal of my personal photography as a hobby.
   disabled: true
+- text: Fun
+  url: /fun
+  desc: A collection of fun and interesting things I found on the internet.
+  disabled: true
 # - text: Photos
 #   url: /photos
 #   desc: Photography portfolio.

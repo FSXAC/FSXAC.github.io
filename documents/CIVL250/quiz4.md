@@ -26,7 +26,7 @@ What is dematerialization and what needs to occur for it to happen?
 
 Here is the design framework typically used by engineers side-by-side with the framework used by experts in biomimicry:
 
-![Module 5 Lesson 2-5.png](https://canvas.ubc.ca/assessment_questions/1697252/files/4626244/download?verifier=W3GIcveHrqOPS3vCiVLl7XQjAs1Y7SPfCo9Y5HRr)
+![Module 5 Lesson 2-5.png](/assets/img/placement-e.jpeg)
 
 What are the similarities and differences between these to conceptualizations of design?
 
