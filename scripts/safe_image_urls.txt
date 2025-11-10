@@ -14,4 +14,16 @@
 
 # Add your trusted domains/URLs below:
 
+# Wikimedia Commons
+https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Mandelset_hires.png/512px-Mandelset_hires.png
 
+# Own Youtube thumbnails
+https://i.ytimg.com/vi/Pxsi9KEeb7E/maxresdefault.jpg
+
+# Own images hosted elsewhere
+https://lh3.googleusercontent.com/*
+
+
+# Zoom assets
+https://assets.zoom.us/generic-images/common-buttons-and-icons/filled/share-screen-button-green.png
+https://assets.zoom.us/generic-images/desktop-client/in-meeting/slides-as-virtual-background-button.png

@@ -7,10 +7,11 @@ It identifies image links pointing to external sites (non-relative URLs) and off
 replace them with a local placeholder image.
 
 Usage:
-    python3 copyright_image_scanner.py [--auto-replace]
+    python3 copyright_image_scanner.py
 
-Options:
-    --auto-replace    Automatically replace all external image references without prompting
+Interactive Commands:
+    r    Replace all external image references with the placeholder
+    q    Quit without making changes
 
 Safelist:
     Create a file at scripts/safe_image_urls.txt to specify trusted URLs/domains that
@@ -101,7 +102,7 @@ def is_external_url(url: str) -> bool:
 def is_safelisted(url: str, safelist: set) -> bool:
     """
     Check if a URL is in the safelist.
-    Supports exact matches and domain-based matching.
+    Supports exact matches, domain-based matching, and wildcards.
     """
     if not safelist:
         return False
@@ -112,16 +113,20 @@ def is_safelisted(url: str, safelist: set) -> bool:
     if url in safelist:
         return True
     
-    # Check for domain matches
+    # Check for pattern matches
     for safe_pattern in safelist:
-        # Simple domain matching
-        if safe_pattern in url:
-            return True
-        
-        # Wildcard pattern matching (e.g., *.example.com)
-        if safe_pattern.startswith('*.'):
-            domain = safe_pattern[2:]
-            if domain in url:
+        # Wildcard matching (e.g., https://example.com/*)
+        if '*' in safe_pattern:
+            # Convert pattern to regex
+            # Escape special regex chars except *
+            escaped = re.escape(safe_pattern).replace(r'\*', '.*')
+            # Anchor the pattern
+            regex_pattern = f'^{escaped}'
+            if re.match(regex_pattern, url):
+                return True
+        else:
+            # Simple substring matching for domains
+            if safe_pattern in url:
                 return True
     
     return False
@@ -339,10 +344,9 @@ def replace_in_file(file_path: Path, references: List[ImageReference]) -> int:
     return 0
 
 
-def perform_replacements(results: Dict[Path, List[ImageReference]], auto: bool = False):
+def perform_replacements(results: Dict[Path, List[ImageReference]]):
     """
     Perform replacements of external image URLs with the placeholder.
-    If auto is False, prompts the user for confirmation.
     """
     if not results:
         print("No external image references to replace.")
@@ -358,13 +362,6 @@ def perform_replacements(results: Dict[Path, List[ImageReference]], auto: bool =
     print(f"This will replace {total_refs} external image reference(s)")
     print(f"in {len(results)} file(s) with: /{PLACEHOLDER_IMAGE}")
     print()
-    
-    if not auto:
-        response = input("Do you want to proceed with the replacement? (yes/no): ").strip().lower()
-        if response not in ['yes', 'y']:
-            print("Replacement cancelled.")
-            return
-        print()
     
     total_replaced = 0
     files_modified = 0
@@ -391,8 +388,6 @@ def perform_replacements(results: Dict[Path, List[ImageReference]], auto: bool =
 
 def main():
     """Main entry point for the script."""
-    auto_replace = '--auto-replace' in sys.argv
-    
     print()
     print("Copyright Image Scanner")
     print("=" * 80)
@@ -401,10 +396,16 @@ def main():
     # Verify we're in the correct directory
     if not (REPO_ROOT / '.git').exists():
         print("⚠ Warning: Not in a git repository root!")
-        response = input("Continue anyway? (yes/no): ").strip().lower()
-        if response not in ['yes', 'y']:
-            print("Aborted.")
-            return
+        print()
+        while True:
+            response = input("Continue anyway? (y/n): ").strip().lower()
+            if response == 'y':
+                break
+            elif response == 'n' or response == 'q':
+                print("Aborted.")
+                return
+            else:
+                print("Please enter 'y' to continue or 'n' to quit.")
     
     # Verify placeholder image exists
     placeholder_path = REPO_ROOT / PLACEHOLDER_IMAGE
@@ -422,11 +423,22 @@ def main():
     # Offer replacement
     if results:
         print()
-        response = input("Do you want to replace these references? (yes/no): ").strip().lower()
-        if response in ['yes', 'y']:
-            perform_replacements(results, auto=auto_replace)
-        else:
-            print("No replacements made.")
+        print("Options:")
+        print("  [r] Replace all external image references")
+        print("  [q] Quit without making changes")
+        print()
+        
+        while True:
+            response = input("Enter your choice (r/q): ").strip().lower()
+            
+            if response == 'r':
+                perform_replacements(results)
+                break
+            elif response == 'q':
+                print("No replacements made. Exiting.")
+                break
+            else:
+                print("Invalid choice. Please enter 'r' to replace or 'q' to quit.")
     
     print()
     print("Done.")
