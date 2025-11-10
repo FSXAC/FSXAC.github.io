@@ -1,0 +1,17 @@
+# Safe Image URLs/Domains
+# This file contains URLs and domain patterns that should not be flagged
+# as potentially copyrighted content.
+#
+# Format:
+#   - One pattern per line
+#   - Lines starting with # are comments
+#   - Supports exact URLs, domain patterns, and wildcards
+#
+# Examples:
+#   https://example.com/specific-image.jpg    # Exact URL
+#   i.imgur.com                               # Domain pattern
+#   *.cloudfront.net                          # Wildcard pattern
+
+# Add your trusted domains/URLs below:
+
+

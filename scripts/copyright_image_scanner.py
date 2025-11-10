@@ -11,6 +11,21 @@ Usage:
 
 Options:
     --auto-replace    Automatically replace all external image references without prompting
+
+Safelist:
+    Create a file at scripts/safe_image_urls.txt to specify trusted URLs/domains that
+    should not be flagged. One pattern per line. Lines starting with # are comments.
+    
+    Examples:
+        # Trusted image hosting
+        i.imgur.com
+        images.unsplash.com
+        
+        # Specific image URL
+        https://example.com/images/licensed-photo.jpg
+        
+        # Wildcard domain
+        *.cloudfront.net
 """
 
 import os
@@ -23,6 +38,7 @@ from typing import List, Dict, Tuple
 # Configuration
 REPO_ROOT = Path(__file__).parent.parent.resolve()
 PLACEHOLDER_IMAGE = "assets/img/placement-e.jpeg"
+SAFELIST_FILE = REPO_ROOT / "scripts" / "safe_image_urls.txt"
 EXCLUDED_DIRS = {'.git', '_site', 'node_modules', '__pycache__', '.venv', 'venv'}
 FILE_EXTENSIONS = {'.md', '.html', '.htm', '.markdown'}
 
@@ -43,6 +59,34 @@ class ImageReference:
                 f"line={self.line_num}, type={self.match_type})")
 
 
+def load_safelist() -> set:
+    """
+    Load the safelist of URLs that should not be flagged.
+    The safelist file should contain one URL/domain pattern per line.
+    Lines starting with # are treated as comments.
+    Supports:
+      - Full URLs: https://example.com/image.jpg
+      - Domain patterns: example.com
+      - Wildcard patterns: *.example.com
+    """
+    safelist = set()
+    
+    if not SAFELIST_FILE.exists():
+        return safelist
+    
+    try:
+        with open(SAFELIST_FILE, 'r', encoding='utf-8') as f:
+            for line in f:
+                line = line.strip()
+                # Skip empty lines and comments
+                if line and not line.startswith('#'):
+                    safelist.add(line)
+    except (UnicodeDecodeError, PermissionError) as e:
+        print(f"Warning: Could not read safelist file: {e}")
+    
+    return safelist
+
+
 def is_external_url(url: str) -> bool:
     """
     Check if a URL is external (not a relative path).
@@ -54,10 +98,40 @@ def is_external_url(url: str) -> bool:
             url.startswith('//'))
 
 
-def scan_file(file_path: Path) -> List[ImageReference]:
+def is_safelisted(url: str, safelist: set) -> bool:
+    """
+    Check if a URL is in the safelist.
+    Supports exact matches and domain-based matching.
+    """
+    if not safelist:
+        return False
+    
+    url = url.strip()
+    
+    # Check for exact match
+    if url in safelist:
+        return True
+    
+    # Check for domain matches
+    for safe_pattern in safelist:
+        # Simple domain matching
+        if safe_pattern in url:
+            return True
+        
+        # Wildcard pattern matching (e.g., *.example.com)
+        if safe_pattern.startswith('*.'):
+            domain = safe_pattern[2:]
+            if domain in url:
+                return True
+    
+    return False
+
+
+def scan_file(file_path: Path, safelist: set) -> List[ImageReference]:
     """
     Scan a single file for external image references.
     Supports multiple formats: Markdown, HTML img tags, HTML longdesc attributes.
+    Only returns references that are not in the safelist.
     """
     references = []
     
@@ -73,7 +147,7 @@ def scan_file(file_path: Path) -> List[ImageReference]:
         md_pattern = r'!\[([^\]]*)\]\(([^)]+)\)'
         for match in re.finditer(md_pattern, line):
             url = match.group(2)
-            if is_external_url(url):
+            if is_external_url(url) and not is_safelisted(url, safelist):
                 references.append(ImageReference(
                     file_path, line_num, line.rstrip(), url, 'markdown'
                 ))
@@ -82,7 +156,7 @@ def scan_file(file_path: Path) -> List[ImageReference]:
         img_pattern = r'<img[^>]+src=["\']([^"\']+)["\']'
         for match in re.finditer(img_pattern, line, re.IGNORECASE):
             url = match.group(1)
-            if is_external_url(url):
+            if is_external_url(url) and not is_safelisted(url, safelist):
                 references.append(ImageReference(
                     file_path, line_num, line.rstrip(), url, 'html_img'
                 ))
@@ -91,7 +165,7 @@ def scan_file(file_path: Path) -> List[ImageReference]:
         longdesc_pattern = r'longdesc=["\']([^"\']+)["\']'
         for match in re.finditer(longdesc_pattern, line, re.IGNORECASE):
             url = match.group(1)
-            if is_external_url(url):
+            if is_external_url(url) and not is_safelisted(url, safelist):
                 references.append(ImageReference(
                     file_path, line_num, line.rstrip(), url, 'html_longdesc'
                 ))
@@ -101,7 +175,7 @@ def scan_file(file_path: Path) -> List[ImageReference]:
         match = re.match(yaml_pattern, line, re.IGNORECASE)
         if match:
             url = match.group(1)
-            if is_external_url(url):
+            if is_external_url(url) and not is_safelisted(url, safelist):
                 references.append(ImageReference(
                     file_path, line_num, line.rstrip(), url, 'yaml_frontmatter'
                 ))
@@ -110,7 +184,7 @@ def scan_file(file_path: Path) -> List[ImageReference]:
         thumbnail_pattern = r'thumbnail:\s*["\']?([^"\']+)["\']?'
         for match in re.finditer(thumbnail_pattern, line, re.IGNORECASE):
             url = match.group(1)
-            if is_external_url(url):
+            if is_external_url(url) and not is_safelisted(url, safelist):
                 references.append(ImageReference(
                     file_path, line_num, line.rstrip(), url, 'yaml_thumbnail'
                 ))
@@ -125,6 +199,14 @@ def scan_repository() -> Dict[Path, List[ImageReference]]:
     """
     print(f"Scanning repository: {REPO_ROOT}")
     print(f"Looking for files with extensions: {', '.join(FILE_EXTENSIONS)}")
+    
+    # Load safelist
+    safelist = load_safelist()
+    if safelist:
+        print(f"Loaded {len(safelist)} safe URL pattern(s) from safelist")
+    else:
+        print(f"No safelist found at {SAFELIST_FILE.relative_to(REPO_ROOT)}")
+        print("(Create this file to exclude trusted domains/URLs)")
     print()
     
     results = {}
@@ -142,7 +224,7 @@ def scan_repository() -> Dict[Path, List[ImageReference]]:
                 continue
             
             file_count += 1
-            references = scan_file(file_path)
+            references = scan_file(file_path, safelist)
             
             if references:
                 results[file_path] = references
