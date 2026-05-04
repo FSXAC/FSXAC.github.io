@@ -1,0 +1,481 @@
+---
+date: 2026-05-04
+title: "Self Assignment: Blokus Game"
+---
+
+# Blokus: A Software Design Lab
+
+> **Goal:** Build a fully playable Blokus game in p5.js with bot support.  
+> **Real goal:** Practice deliberate software architecture, data structure design, separation of concerns, and API-first thinking.
+
+---
+
+## Rules of Blokus (Reference)
+
+- 4 players, 20×20 board, each player has 21 polyomino pieces (1–5 cells).
+- First move: must cover the player's assigned corner.
+- Subsequent moves: the placed piece must be **diagonally adjacent** to at least one of your existing pieces, and **never edge-adjacent** to any of your own pieces. (Touching opponents' pieces edge-to-edge is fine.)
+- A player passes when they have no legal moves (or choose to).
+- Game ends when all players have passed consecutively.
+- Score: negative sum of remaining piece cells. Bonus +15 if you placed all pieces (+5 more if your last piece was the monomino).
+
+---
+
+## Phase 0 — Setup & Tooling
+
+**Objective:** Get a dev environment running before writing game logic.
+
+### Tasks
+1. Create the project folder structure. You decide the layout — but you must be able to justify every directory and file.
+2. Set up `index.html` that loads p5.js (CDN is fine) and your script files.
+3. Get a blank canvas rendering with `setup()` and `draw()`.
+4. Set up a way to serve locally (e.g., VS Code Live Server, `python -m http.server`, etc.).
+
+### Design Questions (answer before coding)
+- How will you organize your JS files? One mega-file, or modules? What are the tradeoffs of ES modules vs. script tags for a project this size?
+- How will you handle load order / dependencies between your files?
+
+### You're done when
+- You see a colored canvas in your browser.
+- You have a project structure you're not embarrassed by.
+
+---
+
+## Phase 1 — Piece Representation
+
+**Objective:** Design a data structure for Blokus pieces that supports rotation and flipping.
+
+### Tasks
+1. Define all 21 standard Blokus polyominoes. Decide on a representation. (Grid of booleans? List of coordinate offsets? Something else?)
+2. Implement **rotate 90° clockwise** and **flip (mirror)** transformations.
+3. For each piece, compute the set of **unique orientations** (after rotation/flip). Many pieces have symmetry — a 2×2 square has only 1 unique orientation, a straight line has 2, an L-shape has 4, etc.
+4. Write a way to visualize each piece and all its orientations (render them on the canvas as a debug/test view).
+
+### Architectural Hint — Coordinate Offsets
+
+A piece is defined well as a list of `[row, col]` offsets relative to an origin. For example, an L-tromino:
+
+```
+ X        → [[0,0], [1,0], [1,1]]
+ X X
+```
+
+This representation makes transformations clean:
+- **Rotate 90° CW:** `[r, c]` → `[c, -r]`
+- **Flip (horizontal mirror):** `[r, c]` → `[r, -c]`
+
+After any transform, you'll need to **normalize** — shift all coordinates so the minimum row and column are both 0. This is what lets you compare orientations.
+
+### Design Considerations
+- **Normalization:** After rotating/flipping, pieces may have negative coordinates or be offset. How do you normalize them so you can compare two orientations for equality?
+- **Equality:** How do you determine if two orientations are the "same"? String comparison of sorted coordinates? Deep array comparison? Hashing?
+- **Immutability:** Should `rotate()` mutate the piece or return a new one? What are the implications for your game loop and for undo functionality later?
+- **Identity:** Each of the 21 pieces needs a stable ID that persists across orientations. How do you track "which piece is this" separately from "what shape is it currently in"?
+
+### Architectural Hint — Orientation Count
+
+Applying rotate (4×) and flip (2×) gives up to 8 candidates per piece. After normalizing and deduplicating, the possible unique orientation counts are: **1, 2, 4, or 8.** Use these as a sanity check:
+
+| Piece | Expected unique orientations |
+|-------|-----------------------------|
+| O (2×2 square) | 1 |
+| I5 (straight line) | 2 |
+| T4 | 4 |
+| F (most asymmetric) | 8 |
+| **Total across all 21 pieces** | **91** |
+
+If your total doesn't sum to 91, you have a bug.
+
+### Traps to Avoid
+- Hardcoding all orientations manually. You'll make mistakes. Derive them.
+- Treating rotation as purely visual. The data must transform, not just the rendering.
+
+### You're done when
+- You can render all 21 pieces on the canvas.
+- You can cycle through all unique orientations of any piece and visually confirm correctness.
+- A piece with known symmetry (e.g., the 2×2 square) correctly reports 1 unique orientation.
+- The total number of unique orientations across all 21 pieces is **91**.
+
+---
+
+## Phase 2 — Board State & Rendering
+
+**Objective:** Represent and render the 20×20 board.
+
+### Tasks
+1. Design the board data structure.
+2. Render the board as a grid with gridlines.
+3. Hardcode a few pieces onto the board and render them in player colors.
+4. Highlight the four starting corners.
+
+### Architectural Hint — Board Data
+
+The board is a 20×20 grid. Each cell is either empty or occupied by a player. A flat representation works well:
+
+```js
+// null = empty, 0–3 = player index
+this.grid = Array(20).fill(null).map(() => Array(20).fill(null));
+```
+
+Keep `getCell(r, c)` and `isOnBoard(r, c)` as the primitive accessors — everything else builds on these. This indirection lets you swap the internal representation later (e.g., to a bitboard) without changing any callers.
+
+### Design Considerations
+- **Coordinate systems:** You'll have board coordinates (row, col) and pixel coordinates (x, y). Where does the conversion live? Who owns it? Keep this mapping in ONE place.
+- **Rendering strategy:** Do you redraw the entire board every frame, or only when state changes? p5.js defaults to continuous `draw()`, but Blokus is turn-based. Consider what's appropriate.
+- **Separation:** The board data structure should know NOTHING about pixels, colors, or rendering. Why? Because your bots will use the same board, and they don't care about pixels.
+
+### You're done when
+- You see a 20×20 grid with labeled corners.
+- Hardcoded pieces appear in correct colors at correct positions.
+- You can answer: "If I deleted all rendering code, would my board data structure still work perfectly?"
+
+---
+
+## Phase 3 — Placement Rules
+
+**Objective:** Implement the core rule engine — can a piece be placed at a given position?
+
+### Tasks
+1. Implement a `canPlace(piece, row, col, playerIndex)` function that checks ALL placement rules.
+2. Handle the first-move special case (must cover starting corner).
+3. Write test cases — manually construct board states and verify both legal and illegal placements.
+
+### The Rules (encode precisely)
+1. Every cell of the piece must be on the board (in bounds).
+2. Every cell must be empty.
+3. **First move:** at least one cell covers the player's starting corner.
+4. **Subsequent moves:** at least one cell of the piece is diagonally adjacent to an existing piece of the same player.
+5. **No cell** of the piece is edge-adjacent (up/down/left/right) to an existing piece of the same player.
+
+### Architectural Hint — Adjacency Helpers
+
+Placement rules boil down to checking neighbors. You'll reuse these offsets constantly:
+
+```js
+const EDGES    = [[-1,0],[1,0],[0,-1],[0,1]];       // up, down, left, right
+const CORNERS  = [[-1,-1],[-1,1],[1,-1],[1,1]];      // diagonals
+```
+
+For a candidate placement of `piece` at `(row, col)` by `playerIndex`, the check is roughly:
+
+```
+for each cell [r,c] in piece (offset by row,col):
+  ✗ if out of bounds
+  ✗ if cell occupied
+  ✗ if any EDGE neighbor is same player       ← "no edge-adjacency to self"
+  ✓ track if any CORNER neighbor is same player ← "need at least one diagonal to self"
+
+if first move: at least one cell must cover the starting corner
+else: at least one diagonal contact must have been found
+```
+
+### Design Considerations
+- **Who owns this logic?** The Board? A separate Rules/Validator module? Think about testability and reuse.
+- **Performance now vs. later:** A brute-force check is fine for human play. But bots will call this thousands of times per turn. Design the interface so you can optimize the internals later without changing callers.
+- **Error reporting:** Should `canPlace` return `true/false`, or return a reason for rejection? The latter is much more useful for debugging and for UI messaging. Consider returning `{ valid: bool, reason?: string }`.
+
+### You're done when
+- You can programmatically verify: a piece on an empty board at a starting corner → legal.
+- A piece edge-adjacent to the same player → illegal.
+- A piece diagonally adjacent to the same player, not edge-adjacent → legal.
+- A piece overlapping an existing piece → illegal.
+
+---
+
+## Phase 4 — Game State Machine
+
+**Objective:** Model the full game lifecycle: turns, passing, game-over, scoring.
+
+### Tasks
+1. Design a `GameState` that tracks: current player, each player's remaining pieces, move history, pass state.
+2. Implement turn advancement (including skipping players who have passed).
+3. Implement game-over detection.
+4. Implement scoring.
+
+### Design Considerations
+- **State vs. transitions:** Separate the *state* (data) from the *transitions* (actions that modify state). This is the core of state machine design. Your game state should be a plain data object; mutations happen through well-defined methods.
+- **Undo:** Will you support undo? If so, think about this NOW. Options: (a) store move history and rebuild from scratch, (b) store inverse operations, (c) make state immutable and keep a stack. Each has tradeoffs in complexity and performance.
+- **Serialization:** Design your game state so it's trivially serializable to JSON. No circular references. No DOM elements. No p5 objects. If you can `JSON.stringify(gameState)` and `JSON.parse()` it back to a working state, your design is clean.
+- **Separation from UI:** The game state should not import or reference anything from p5.js, the DOM, or the rendering layer. Why? Because bots will operate on this same state.
+
+### You're done when
+- You can simulate a short game programmatically (no UI) — place a few pieces, pass some turns, trigger game-over, compute scores.
+- `JSON.stringify(state)` → `JSON.parse()` → resume game works.
+
+---
+
+## Phase 5 — Interactive UI
+
+**Objective:** Make it playable by a human in the browser.
+
+### Tasks
+1. **Piece tray:** Show the current player's remaining pieces. Click to select.
+2. **Rotate/Flip controls:** Keyboard shortcuts and/or buttons.
+3. **Ghost preview:** On mouse hover over the board, show a semi-transparent preview of the piece at that position.
+4. **Validity feedback:** Ghost is green if placement is legal, red if not.
+5. **Click to place:** Commit the move on click (only if valid).
+6. **Turn indicator:** Show whose turn it is, in their color.
+7. **Game over screen:** Show final scores.
+
+### Design Considerations
+- **Input → Intent → Action:** Structure your input handling as a pipeline. Mouse/keyboard → determine what the user *intends* → validate → execute. Don't put game logic in your mouse handler.
+- **UI State vs. Game State:** The currently selected piece, the current rotation, the hover position — these are *UI state*, not game state. Keep them separate. Your game state should not know that a mouse exists.
+- **Responsiveness:** The board needs to fit in the browser window. How do you handle different screen sizes? Do you recompute cell size dynamically?
+
+### Traps to Avoid
+- Mixing pixel math into game logic.
+- Forgetting that pieces can be placed near board edges — your ghost preview must handle clipping.
+- Not giving clear visual feedback. The user should never wonder "why can't I place this here?"
+
+### You're done when
+- You can play a full 4-player hotseat game with correct rule enforcement.
+- Rotating, flipping, and previewing pieces feels smooth.
+- An illegal move is clearly communicated and blocked.
+
+---
+
+## Phase 6 — Legal Move Generator
+
+**Objective:** Enumerate all legal moves for a given player.
+
+### Tasks
+1. Implement `generateLegalMoves(board, playerIndex, remainingPieces) → Move[]`.
+2. Use this to detect "no moves available" → auto-pass.
+3. (Optional) Use this to highlight all valid placements for the selected piece.
+
+### Algorithm Sketch (think through this before coding)
+- Where can a piece *possibly* anchor? Not everywhere — only at positions diagonally adjacent to your existing pieces ("corner candidates").
+- For each remaining piece, for each orientation, for each cell in that orientation, try anchoring that cell at each corner candidate.
+- Filter by `canPlace()`.
+
+### Architectural Hint — Corner Candidates
+
+"Corner candidates" are cells that are:
+1. Empty
+2. Diagonally adjacent to at least one of your existing cells
+3. NOT edge-adjacent to any of your existing cells
+
+These are the only cells where a piece *could possibly* have a cell placed. This prunes the search space enormously — from 400 board cells to typically 10–40 candidates.
+
+For the first move, the only candidate is the player's starting corner cell.
+
+### Design Considerations
+- **Deduplication:** The same placement can be discovered through multiple anchor points. How do you avoid duplicates?
+- **Lazy vs. eager:** Do you generate ALL legal moves upfront, or generate them on-demand? For human use, you might only need to check "is THIS move legal". For bots, you need the full list. Design an interface that supports both.
+- **Memoization:** Corner candidates change only when a piece is placed. Can you cache them?
+
+### Performance Budget
+For human gameplay, this can take hundreds of milliseconds and nobody will notice. For bots evaluating thousands of positions — it matters. Don't optimize prematurely, but design the interface so you *can* optimize later.
+
+### You're done when
+- At any point in the game, you can print the number of legal moves available.
+- First move: the count should be in the hundreds (each piece × orientations × valid anchor positions on the corner).
+- Auto-pass works when a player truly has no moves.
+
+---
+
+## Phase 7 — Save / Load / Replay
+
+**Objective:** Serialize game state for debugging, testing, and replay.
+
+### Tasks
+1. Save current game state to JSON (download or localStorage).
+2. Load game state from JSON and resume.
+3. (Bonus) Replay mode: step through move history forward/backward.
+
+### Why This Matters
+- You WILL encounter bugs where "a move was allowed that shouldn't have been." Without save/load, reproducing this is painful.
+- Save/load is also how you'll create test fixtures for your bots.
+- This phase acts as a design validation — if serialization is hard, your data model has hidden coupling.
+
+### You're done when
+- You can save a mid-game state, refresh the browser, load it, and continue playing correctly.
+
+---
+
+## Phase 8 — Bot API
+
+**Objective:** Design the interface through which bots interact with the game. This is API design — you're building a contract.
+
+### Tasks
+1. Define a `BotAPI` class/object that wraps the game state and exposes a **read-only observation interface** and a **single action method**.
+2. Define a `Bot` interface/contract that all bots must implement.
+3. Wire it into the game loop: when it's a bot's turn, call the bot, apply its move, advance.
+
+### The Contract
+
+Think carefully about what a bot needs:
+- **See:** Board state, its own remaining pieces, opponents' remaining pieces, legal moves, scores, move history.
+- **Do:** Submit exactly one move (or pass) per turn.
+- **Not allowed to:** Modify the board directly, see other bots' internal state, take more than one action per turn.
+
+### Architectural Hint — API Shape
+
+The observation API should look something like a "snapshot" — everything a bot needs to make a decision, frozen in time:
+
+```js
+// What the bot receives (conceptually):
+{
+  board,                  // deep copy of grid[][]
+  myPieces,               // ['T4', 'L5', ...]  (IDs of remaining pieces)
+  opponentPieces,         // [['F','I5',...], [...], [...]]  per opponent
+  legalMoves,             // [{ pieceId, orientation, row, col }, ...]
+  scores,                 // [0, -12, -8, -3]  current scores
+  turnNumber,             // int
+  moveHistory,            // [{player, pieceId, row, col}, ...]
+}
+
+// What the bot returns:
+{ pieceId, orientationIndex, row, col }   // or null to pass
+```
+
+Notice: the bot never calls `board.place()` or `gameState.advance()`. It returns a *decision*, and the game engine validates and executes it. This is the key boundary.
+
+### Design Considerations
+- **Defensive copying:** If you hand the bot a reference to your board array, it could mutate it (accidentally or intentionally). Do you deep-copy? Use `Object.freeze()`? Return a proxy?
+- **Sync vs. async:** Should `chooseMove()` be synchronous or return a Promise? Async is more flexible (allows time limits, web workers) but adds complexity. Start with sync, design so async is possible later.
+- **Time limits:** Not needed yet, but think about how you'd add a per-turn time budget.
+- **Fairness:** Bots should get the same information a human player would see. No leaking of other players' remaining possible moves.
+
+### You're done when
+- You can write a trivial bot (random legal move) that plays a full game without crashing.
+- The bot interacts ONLY through the API — never touches game internals.
+- You can run 4 bots against each other with no human input and see a completed game.
+
+---
+
+## Phase 9 — Bot: Random
+
+**Objective:** Build the simplest possible bot as a baseline and API smoke test.
+
+### Tasks
+1. Get legal moves from API.
+2. Pick one at random.
+3. Submit it.
+
+### Why This Matters
+- If this bot crashes, your API has bugs.
+- This establishes a performance baseline: "a random bot scores X on average." Every future bot must beat this.
+- Run 100 games of 4 random bots. Record average scores. This is your first dataset.
+
+### You're done when
+- 4 random bots can play 100 games to completion without errors.
+- You have average score data.
+
+---
+
+## Phase 10 — Bot: Greedy (and Beyond)
+
+**Objective:** Build incrementally smarter bots.
+
+### Suggested progression (implement as many as you like):
+
+1. **Greedy (largest piece first):** Always play the piece with the most cells. Among ties, random.
+2. **Greedy (most corners created):** Pick the move that maximizes your future corner candidates.
+3. **Greedy (block opponents):** Pick moves that reduce opponents' corner candidates.
+4. **Minimax / expectimax:** Look ahead N turns. Warning: 4-player minimax is hard. Consider simplifying to "me vs. everyone else."
+5. **Monte Carlo Tree Search (MCTS):** Sample random playouts from each candidate move, pick the one with the highest win rate. This is particularly well-suited to Blokus.
+
+### Design Considerations
+- **Evaluation function:** What makes a board position "good"? Some things to consider weighting:
+  - Cells remaining (fewer = better, this is literally the score)
+  - Number of legal moves available (mobility = future options)
+  - Number of corner candidates (territory / expansion potential)
+  - Opponent's legal move count (deny their options)
+  - Distance of your pieces from board center vs. edges
+  
+  The interesting design question: how do you combine these into a single number? Linear combination? Weighted sum with tunable coefficients? This is where the art is.
+- **Cloning:** Bots that look ahead need to clone the game state. If `clone()` is expensive, your bot is slow. This is where Phase 4's design pays off (or doesn't).
+- **Profiling:** Use the browser's Performance devtools. Find where your bot spends its time. Is it move generation? Board cloning? Placement validation?
+
+### Tournament Mode (optional, but fun)
+- Build a harness that runs Bot A vs. Bot B vs. Bot C vs. Bot D over N games.
+- Track win rates, average scores, average game length.
+- Display results. This is your empirical feedback loop for bot quality.
+
+### You're done when
+- Your best bot consistently beats random.
+- You can articulate *why* it wins (not just "it scores higher").
+
+---
+
+## Bonus Challenges
+
+Pick any that interest you:
+
+- [ ] **Undo/redo** with full state restoration
+- [ ] **Replay viewer** with step-through controls
+- [ ] **2-player variant** (each player controls 2 colors, different starting corners)
+- [ ] **Network multiplayer** (WebSocket or WebRTC)
+- [ ] **Bitboard representation** — represent the board as BigInts and use bitwise operations for placement checks. Massive speedup for bots.
+- [ ] **Opening book** — analyze thousands of bot games to find strong opening sequences
+- [ ] **Heatmap overlay** — visualize which board cells are most contested
+- [ ] **Mobile-friendly** — touch controls for piece rotation and placement
+
+---
+
+## The 21 Blokus Pieces (Reference)
+
+Each player gets one copy of these polyominoes (cells = 1 to 5):
+
+```
+1-cell:  I1  ■
+
+2-cell:  I2  ■■
+
+3-cell:  I3  ■■■       L3  ■
+                           ■■
+
+4-cell:  I4  ■■■■      L4  ■        T4  ■■■     O4  ■■     S4  ■■
+                           ■             ■          ■■          ■■
+                           ■■
+
+5-cell:  I5  ■■■■■     L5  ■        Y5   ■      T5  ■■■    U5  ■■■
+                           ■            ■■           ■         ■ ■
+                           ■             ■           ■
+                           ■■            ■
+
+         F5   ■■       N5   ■■■     P5  ■■      V5  ■        W5  ■
+             ■■            ■■           ■■          ■            ■■
+              ■                         ■           ■■■           ■■
+
+         Z5  ■■           X5  ■
+              ■              ■■■
+              ■■              ■
+```
+
+---
+
+## General Design Principles to Keep in Mind
+
+1. **Separate what changes from what doesn't.** The rules of Blokus never change. The UI might. The bot strategies will. Design boundaries accordingly.
+
+2. **Make illegal states unrepresentable.** If a piece can't be placed off the board, the data structure shouldn't allow it — don't rely on runtime checks alone.
+
+3. **Test without the UI.** Every piece of logic (placement rules, move generation, scoring) should be testable by calling functions directly — no clicking required.
+
+4. **Data flows down, events flow up.** Game state → rendering (down). User input → game state mutation (up via well-defined actions). Never let the renderer modify game state.
+
+5. **Design for the second bot.** Your first bot is easy. If adding the second bot requires changing the game engine, your API boundary was wrong.
+
+6. **Premature optimization is the root of all evil, but know your hot paths.** Don't optimize move generation on Day 1. But don't design it so poorly that optimization is impossible on Day 20.
+
+7. **Boredom is signal.** If you're bored implementing something, it might be because the design is making it tedious. Refactor before pushing through.
+
+---
+
+## Suggested Timeline
+
+| Days | Phase | Milestone |
+|------|-------|-----------|
+| 1–2 | 0–1 | All 21 pieces defined, transformable, rendered |
+| 3–4 | 2–3 | Board renders, placement rules fully working |
+| 5–6 | 4 | Full game playable programmatically |
+| 7–9 | 5 | Playable in browser with full UI |
+| 10 | 6–7 | Move generator + save/load |
+| 11–12 | 8–9 | Bot API + random bot playing full games |
+| 13+ | 10 | Better bots, tournament, optimizations |
+
+---
+
+*The best way to learn architecture is to feel the pain of bad architecture. Don't be afraid to refactor. The first version will be wrong — that's the point.*
