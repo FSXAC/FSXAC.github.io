@@ -1,0 +1,74 @@
+---
+title: 简历
+permalink: /zh/cv/
+layout: default
+lang: zh-CN
+nav_active: /cv
+show_footer: false
+---
+
+<style>
+.resume-container { font-size: 9pt; }
+.resume-container h2 { font-size: 1.5em; color: var(--body-accent-color); margin: 1em 0 .2em; line-height: 1; }
+.resume-container h3.title { font-size: 1.2em; }
+.resume-container .secondary { color: var(--body-text-color-light); }
+.resume-container ul.work { list-style: none; padding: 0 0 0 9px; text-indent: -9px; margin-bottom: 0; }
+.resume-container ul.work li:before { content: '‣'; margin-right: 5px; }
+.resume-container .compact { line-height: 1.2; }
+@media print {
+	.resume-container { background-color: #fff; color: #333; }
+	.resume-container .exp-entry { page-break-inside: avoid; }
+	.resume-container h2, .resume-container h3 { page-break-after: avoid; }
+}
+</style>
+
+<div class="my-5 no-print"></div>
+<div class="resume-container">
+	<section style="border-bottom: 1px solid var(--ink);">
+		<h1 class="my-2 name">何牧辰</h1>
+		<p class="mb-1 compact">具有计算机体系结构背景的早期职业工程师及英属哥伦比亚大学硕士毕业生，专注于 HDL 设计、仿真与验证。</p>
+		<p class="contact my-2">
+			{% for item in site.data.contacts.default %}{% if item.icon and item.show_resume %}<i class="{{ item.icon }}"></i> <a href="{{ item.link }}">{{ item.text }}</a>&nbsp;{% endif %}{% endfor %}
+		</p>
+	</section>
+
+	<div class="row">
+		<div class="col-sm-3 order-last order-sm-first">
+			<h2>技能</h2>
+			<p class="compact">Python、C、汇编、C++、Java、Verilog、SystemVerilog、FPGA、仿真、USB、PCIe</p>
+			<p class="compact">Linux、CI/CD、自动化、Git、HTML/CSS、JavaScript、Jekyll、数据可视化、Docker</p>
+			<p class="compact">LaTeX、学术与技术写作、Jupyter、Markdown</p>
+			<h2>荣誉与奖项</h2>
+			<p class="compact">UBC APSC Capstone Faculty Award</p>
+			<h2>认证</h2>
+			<p class="compact">英属哥伦比亚大学电气与计算机工程硕士</p>
+		</div>
+
+		<div class="col-sm-9">
+			<h2>教育经历</h2>
+			<p class="compact"><strong>英属哥伦比亚大学</strong>　M.A.Sc. 电气与计算机工程，2023</p>
+			<p class="compact">论文：Spectre 与缓存侧信道攻击的缓解及 CPU 性能评估。</p>
+			<p class="compact"><strong>英属哥伦比亚大学</strong>　B.A.Sc. 电气工程，2020</p>
+
+			<h2>工作经历</h2>
+			{% assign jobs = "英特尔公司|仿真工程师|2023 年 12 月—至今|温哥华 BC|负责芯粒 IP 的顶层集成、仿真模型发布及发布说明|使用 GitHub Actions 设计验证 CI/CD 流水线|在仿真器上调试硬件与固件;Solidigm|仿真工程师|2022 年 9 月—2023 年 12 月|温哥华 BC|使用 Siemens Veloce 和 QEMU 执行流片前测试|评估 PCIe 虚拟 IP 并升级仿真工具，使仿真速度提升 30%|开发基于 USB 和 ARM CoreSight 的调试原型;英属哥伦比亚大学|研究助理|2020 年 7 月—2022 年 10 月|温哥华 BC|研究推测执行攻击与缓存侧信道攻击|在 gem5 周期精确模拟器中实现原型，并使用 PARSEC 与 SPEC2017 评估缓解方案;英属哥伦比亚大学|助教|2018 年 1 月—2022 年 5 月|温哥华 BC|为 Encounter、Virtuoso、ModelSim 和 Q-Flow 编写技术文档|通过办公时间、辅导课和实验室活动提供技术支持|使用 Shell 与 Python 自动化评分，将评分时间减少 75%;英特尔公司|FPGA 工程实习生|2019 年 1 月—2019 年 8 月|温哥华 BC|开发 FPGA 工作流终端工具|配置 TeamCity CI，将发布延迟从一天缩短至 30 分钟;EA BioWare|开发助理实习生|2018 年 5 月—2018 年 12 月|埃德蒙顿 AB|使用 C++ 改进 Anthem 游戏 Frostbite 引擎的 UI/UX|使用 Python 编写脚本修改并验证 XML 与游戏资源;VitalMechanics|软件开发实习生|2017 年 5 月—2017 年 8 月|温哥华 BC|使用 Qt、C++、JavaScript 和 three.js 开发应用界面|使用 WebGL 实现交互式 3D 查看器" | split: ";" %}
+			{% for job in jobs %}
+			{% assign fields = job | split: "|" %}
+			<div class="exp-entry">
+				<strong class="title my-1"><span class="company float-end">{{ fields[0] }}</span><span>{{ fields[1] }}</span></strong>
+				<div class="info" style="border-top: 1px dotted var(--ink)"><p class="mb-0">{{ fields[2] }}，<span class="job-location">{{ fields[3] }}</span></p><ul class="work secondary mb-3">{% for bullet in fields offset:4 %}<li class="work compact mb-1">{{ bullet }}</li>{% endfor %}</ul></div>
+			</div>
+			{% endfor %}
+
+			<h2>项目</h2>
+			<p class="compact">ContactSheet — 基于网页的胶片条模拟器和接触印相生成器（2024）</p>
+			<p class="compact">FantôMiss — 利用新型缓存索引策略防御 Spectre 缓存侧信道攻击（2022）</p>
+			<p class="compact">FutureGazer — Zoom 凝视追踪与虚拟头像用户研究（2021）</p>
+			<p class="compact">Sketch2Slides — 将手绘内容自动转换为 PowerPoint 幻灯片（2020）</p>
+			<p class="compact">GPU HT — 使用 OpenCL 和 CUDA 加速霍夫变换，获得 50 倍加速（2020）</p>
+			<p class="compact">Skynet — 搭载于多旋翼无人机的 FPGA 实时目标检测系统（2020）</p>
+		</div>
+	</div>
+</div>
+<div class="my-5 no-print"></div>
+<script src="https://kit.fontawesome.com/c83e37f840.js" crossorigin="anonymous"></script>

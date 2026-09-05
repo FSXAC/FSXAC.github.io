@@ -1,17 +1,25 @@
 - text: 'Home'
+  text_zh: '首页'
   url: /
+  url_zh: /zh/
   desc: You are here.
   disabled: true
 - text: 'Blog'
+  text_zh: '博客'
   url: /blog
+  url_zh: /zh/blog
   desc: Just writing my thoughts down occasionally.
   disabled: true
 - text: CV
+  text_zh: 简历
   url: /cv
+  url_zh: /zh/cv/
   desc: Education and work experience
   disabled: false
 - text: Documents
+  text_zh: 文档
   url: /documents
+  url_zh: /zh/documents
   desc: Notes and documents from school work.
 # - text: Gallery
 #   url: /gallery
@@ -20,15 +28,21 @@
 #   url: /logbook
 #   desc: Logging of my mind and thoughts... for debugging purposes.
 - text: Projects
+  text_zh: 项目
   url: /projects
+  url_zh: /zh/projects
   desc: My personal and collaborative project showcase.
   disabled: true
 - text: Photos
+  text_zh: 摄影
   url: /photos
+  url_zh: /zh/photos
   desc: A weekly journal of my personal photography as a hobby.
   disabled: true
 - text: Fun
+  text_zh: 趣味
   url: /fun
+  url_zh: /zh/fun
   desc: A collection of fun and interesting things I found on the internet.
   disabled: true
 # - text: Photos

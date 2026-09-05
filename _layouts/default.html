@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default: 'en' }}">
 <head>
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +11,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+{% if page.lang != "zh-CN" %}
+<script>
+(function () {
+    const path = window.location.pathname.replace(/\/+$/, '') || '/';
+    const isChinese = /^zh(?:-|$)/i.test(navigator.language || '');
+    const localizedPath = path === '/' ? '/zh/' : path === '/cv' ? '/zh/cv/' : null;
+    if (isChinese && localizedPath) {
+        window.location.replace(localizedPath + window.location.search + window.location.hash);
+    }
+}());
+</script>
+{% endif %}
 </head>
 <header>
 {% include header.html %}
