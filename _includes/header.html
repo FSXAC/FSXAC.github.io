@@ -6,7 +6,7 @@
 			<nav class="nav-links">
 				{% for link in site.data.navigation %}
 				{% unless link.disabled %}
-				<a href="{% if page.lang == 'zh-CN' and link.url_zh %}{{ link.url_zh }}{% else %}{{ link.url }}{% endif %}" class="nav-link {% if page.url == link.url or page.nav_active == link.url %}active{% endif %}">{% if page.lang == 'zh-CN' and link.text_zh %}{{ link.text_zh }}{% else %}{{ link.text }}{% endif %}</a>
+				<a href="{% if page.lang == 'zh-CN' and link.url_zh %}{{ link.url_zh }}{% else %}{{ link.url }}{% endif %}" class="nav-link {% if page.lang == 'zh-CN' and link.url_zh %}{% if page.url == link.url_zh %}active{% endif %}{% elsif page.url == link.url or page.nav_active == link.url %}active{% endif %}">{% if page.lang == 'zh-CN' and link.text_zh %}{{ link.text_zh }}{% else %}{{ link.text }}{% endif %}</a>
 				{% endunless %}
 				{% endfor %}
 			</nav>
@@ -24,7 +24,7 @@
 			<nav class="mobile-nav-links">
 				{% for link in site.data.navigation %}
 				{% unless link.disabled %}
-				<a href="{% if page.lang == 'zh-CN' and link.url_zh %}{{ link.url_zh }}{% else %}{{ link.url }}{% endif %}" class="mobile-nav-link {% if page.url == link.url or page.nav_active == link.url %}active{% endif %}">{% if page.lang == 'zh-CN' and link.text_zh %}{{ link.text_zh }}{% else %}{{ link.text }}{% endif %}</a>
+				<a href="{% if page.lang == 'zh-CN' and link.url_zh %}{{ link.url_zh }}{% else %}{{ link.url }}{% endif %}" class="mobile-nav-link {% if page.lang == 'zh-CN' and link.url_zh %}{% if page.url == link.url_zh %}active{% endif %}{% elsif page.url == link.url or page.nav_active == link.url %}active{% endif %}">{% if page.lang == 'zh-CN' and link.text_zh %}{{ link.text_zh }}{% else %}{{ link.text }}{% endif %}</a>
 				{% endunless %}
 				{% endfor %}
 			</nav>
